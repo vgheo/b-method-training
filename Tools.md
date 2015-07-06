@@ -20,11 +20,12 @@ Related links
 ### Context
 
 * vgheorgh@robucnw079 - ok
+```
   vgheorgh@ROBUCNW079 //robucsw111/RND/RD_DE_ESTW/L905/B_Method/shared/Project
   $ git init --bare test1.git
   Initialized empty Git repository in //robucsw111/RND/RD_DE_ESTW/L905/B_Method/sh
   ared/Project/test1.git/
-
+```
 * Adrian - NOK:
 ```
 T0164930@ROBUCDW201 //robucsw111/RND/RD_DE_ESTW/L905/b_method/shared/Project
@@ -35,5 +36,3 @@ shared/Project/test2.git/HEAD
 
 ### Related info
 [msysgit list - thread 1](https://groups.google.com/forum/#!topic/msysgit/kAYExfllAh4)
-
-.
