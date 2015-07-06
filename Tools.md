@@ -36,3 +36,4 @@ shared/Project/test2.git/HEAD
 ### Related info
 [msysgit list - thread 1](https://groups.google.com/forum/#!topic/msysgit/kAYExfllAh4)
 
+.
