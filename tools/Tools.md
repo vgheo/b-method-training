@@ -6,10 +6,11 @@ This file contains user notes for the various tools used in this project.
 We use markdown as the preferred format for documentation files.
 
 Tools:
+
 - Edit:
 	- Notepad++ 
 		- with md/GFM highlighting - not found		
-	- [Eclipse - Markdown]Editor(http://marketplace.eclipse.org/content/markdown-text-editor)
+	- [Eclipse - Markdown Editor](http://marketplace.eclipse.org/content/markdown-text-editor)
 		- install from [zip](http://sourceforge.net/projects/nodeclipse/files/update-site-archive/)
 		
 - View only
@@ -19,6 +20,7 @@ Tools:
 	
 Related links
 - [stackoverflow](http://stackoverflow.com/questions/9843609/view-markdown-files-offline)
+- [Markdown basics](https://help.github.com/articles/markdown-basics/)
 
 # git 
 
