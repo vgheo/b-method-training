@@ -5,13 +5,20 @@ This file contains user notes for the various tools used in this project.
 # Markdown / GFM
 We use markdown as the preferred format for documentation files.
 
-Recommended tools:
+Tools:
 - Edit:
-	- Notepad++ - with md/GFM highlightinh
-	- Chrome viewer plugin
+	- Notepad++ 
+		- with md/GFM highlighting - not found		
+	- [Eclipse - Markdown]Editor(http://marketplace.eclipse.org/content/markdown-text-editor)
+		- install from [zip](http://sourceforge.net/projects/nodeclipse/files/update-site-archive/)
+		
+- View only
+	- [Chrome viewer plugin](https://chrome.google.com/webstore/detail/markdown-preview/jmchmkecamhbiokiopfpnfgbidieafmd/related?hl=en-US)
+		- could NOT install (security issues?)
+
 	
 Related links
-- [stackoverflow ](http://stackoverflow.com/questions/9843609/view-markdown-files-offline)
+- [stackoverflow](http://stackoverflow.com/questions/9843609/view-markdown-files-offline)
 
 # git 
 
