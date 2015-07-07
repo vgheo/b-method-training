@@ -14,8 +14,23 @@ Tools:
 		- install from [zip](http://sourceforge.net/projects/nodeclipse/files/update-site-archive/)
 		
 - View only
-	- [Chrome viewer plugin](https://chrome.google.com/webstore/detail/markdown-preview/jmchmkecamhbiokiopfpnfgbidieafmd/related?hl=en-US)
-		- could NOT install (security issues?)
+	- Chrome viewer plugins
+		- [Markdown preview](https://chrome.google.com/webstore/detail/markdown-preview/jmchmkecamhbiokiopfpnfgbidieafmd/related?hl=en-US)
+			- (+) 
+		- [Markdown Preview Plus](https://chrome.google.com/webstore/detail/markdown-preview-plus/febilkbfcbhebfnokafefeacimjdckgl?hl=en-US)
+			- (+) auto reload
+			- (+) has GFM compatibility
+			- (+) renders properly list on next line after paragraph line
+		- [Markdown viewer](https://chrome.google.com/webstore/detail/markdown-viewer/ckkdlimhmcjmikdlpkmbgfkaikojcbjk?hl=en-US)
+			
+			
+			
+		
+NOTE chrome extension installation 
+- A) installation by IT only - alternate proxy
+- B) install by .crx file 
+	- repacked .crx files : `\\robucsw111\RND\RD_DE_ESTW\L905\Kits\chrome\`
+	- [repack instructions](https://productforums.google.com/forum/#!topic/chrome/g02KlhK12fU)
 
 	
 Related links
