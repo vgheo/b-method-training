@@ -1,14 +1,14 @@
 <Proof_Obligations>
-<Define merge="=" name="B definitions">
+<Define name="B definitions">
 <Nary_Pred op="&amp;" translate="((NAT) = (((0) .. (2147483647)))) &amp; ((INT) = (((-2147483647) .. (2147483647))))">
-<Exp_Comparison op="=">
+<Exp_Comparison op="=" translate="((NAT) = (((0) .. (2147483647))))">
 <Id value="NAT"/>
 <Binary_Exp op="..">
 <Integer_Literal value="0"/>
 <Id value="MAXINT"/>
 </Binary_Exp>
 </Exp_Comparison>
-<Exp_Comparison op="=">
+<Exp_Comparison op="=" translate="((INT) = (((-2147483647) .. (2147483647))))">
 <Id value="INT"/>
 <Binary_Exp op="..">
 <Id value="MININT"/>
@@ -17,15 +17,15 @@
 </Exp_Comparison>
 </Nary_Pred>
 </Define>
-<Define merge="=" name="ctx"/>
-<Define merge="=" name="seext"/>
-<Define merge="=" name="inv">
+<Define name="ctx"/>
+<Define name="seext"/>
+<Define name="inv">
 <Nary_Pred op="&amp;" translate="moving : POW( LIFT) &amp; current_floor : LIFT +-> ((ground_floor) .. (top_floor)) &amp; dom(current_floor) = LIFT &amp; ((current_floor) : (((LIFT) --> (((ground_floor) .. (top_floor)))))) &amp; dir : LIFT +-> DIRECTION &amp; dom(dir) = LIFT &amp; ((dir) : (((LIFT) --> (DIRECTION)))) &amp; ((in) : (((((ground_floor) .. (top_floor))) &lt;-> (DIRECTION)))) &amp; ((out) : (((LIFT) &lt;-> (((ground_floor) .. (top_floor)))))) &amp; not(((ground_floor) |-> (dn)) : in) &amp; not(((top_floor) |-> (up)) : in) &amp; ((((moving) &lt;&lt;| (((out) /\ (current_floor))))) = ({})) &amp; ((((in) /\ (ran(((moving) &lt;&lt;| (((current_floor) >&lt; (dir)))))))) = ({}))">
-<Exp_Comparison op="&lt;:" initialTag="moving : POW( LIFT)">
+<Exp_Comparison op="&lt;:" initialTag="moving : POW( LIFT)" translate="moving : POW( LIFT)">
 <Id tag="D:\Users\T0164919\bmethod\Atelier B free 4.2.1\Projects\LiftSys\bdp\Lift.bxml:1:5:1:1:1" typref="729739904" value="moving"/>
 <Id tag="D:\Users\T0164919\bmethod\Atelier B free 4.2.1\Projects\LiftSys\bdp\Lift.bxml:1:5:1:1:2" typref="729739904" value="LIFT"/>
 </Exp_Comparison>
-<Exp_Comparison op=":" initialTag="((current_floor) : (((LIFT) --> (((ground_floor) .. (top_floor))))))">
+<Exp_Comparison op=":" initialTag="((current_floor) : (((LIFT) --> (((ground_floor) .. (top_floor))))))" translate="current_floor : LIFT +-> ((ground_floor) .. (top_floor)) &amp; dom(current_floor) = LIFT &amp; ((current_floor) : (((LIFT) --> (((ground_floor) .. (top_floor))))))">
 <Id tag="D:\Users\T0164919\bmethod\Atelier B free 4.2.1\Projects\LiftSys\bdp\Lift.bxml:1:5:1:2:1" typref="834705157" value="current_floor"/>
 <Binary_Exp op="-->" typref="3960057236">
 <Id tag="D:\Users\T0164919\bmethod\Atelier B free 4.2.1\Projects\LiftSys\bdp\Lift.bxml:1:5:1:2:2:1" typref="729739904" value="LIFT"/>
@@ -35,14 +35,14 @@
 </Binary_Exp>
 </Binary_Exp>
 </Exp_Comparison>
-<Exp_Comparison op=":" initialTag="((dir) : (((LIFT) --> (DIRECTION))))">
+<Exp_Comparison op=":" initialTag="((dir) : (((LIFT) --> (DIRECTION))))" translate="dir : LIFT +-> DIRECTION &amp; dom(dir) = LIFT &amp; ((dir) : (((LIFT) --> (DIRECTION))))">
 <Id tag="D:\Users\T0164919\bmethod\Atelier B free 4.2.1\Projects\LiftSys\bdp\Lift.bxml:1:5:1:3:1" typref="1733510054" value="dir"/>
 <Binary_Exp op="-->" typref="1919973043">
 <Id tag="D:\Users\T0164919\bmethod\Atelier B free 4.2.1\Projects\LiftSys\bdp\Lift.bxml:1:5:1:3:2:1" typref="729739904" value="LIFT"/>
 <Id tag="D:\Users\T0164919\bmethod\Atelier B free 4.2.1\Projects\LiftSys\bdp\Lift.bxml:1:5:1:3:2:2" typref="2042919802" value="DIRECTION"/>
 </Binary_Exp>
 </Exp_Comparison>
-<Exp_Comparison op=":" initialTag="((in) : (((((ground_floor) .. (top_floor))) &lt;-> (DIRECTION))))">
+<Exp_Comparison op=":" initialTag="((in) : (((((ground_floor) .. (top_floor))) &lt;-> (DIRECTION))))" translate="((in) : (((((ground_floor) .. (top_floor))) &lt;-> (DIRECTION))))">
 <Id tag="D:\Users\T0164919\bmethod\Atelier B free 4.2.1\Projects\LiftSys\bdp\Lift.bxml:1:5:1:4:1" typref="3206142961" value="in"/>
 <Binary_Exp op="&lt;->" typref="1070595026">
 <Binary_Exp op=".." typref="3603043417">
@@ -52,7 +52,7 @@
 <Id tag="D:\Users\T0164919\bmethod\Atelier B free 4.2.1\Projects\LiftSys\bdp\Lift.bxml:1:5:1:4:2:2" typref="2042919802" value="DIRECTION"/>
 </Binary_Exp>
 </Exp_Comparison>
-<Exp_Comparison op=":" initialTag="((out) : (((LIFT) &lt;-> (((ground_floor) .. (top_floor))))))">
+<Exp_Comparison op=":" initialTag="((out) : (((LIFT) &lt;-> (((ground_floor) .. (top_floor))))))" translate="((out) : (((LIFT) &lt;-> (((ground_floor) .. (top_floor))))))">
 <Id tag="D:\Users\T0164919\bmethod\Atelier B free 4.2.1\Projects\LiftSys\bdp\Lift.bxml:1:5:1:5:1" typref="834705157" value="out"/>
 <Binary_Exp op="&lt;->" typref="3960057236">
 <Id tag="D:\Users\T0164919\bmethod\Atelier B free 4.2.1\Projects\LiftSys\bdp\Lift.bxml:1:5:1:5:2:1" typref="729739904" value="LIFT"/>
@@ -62,21 +62,21 @@
 </Binary_Exp>
 </Binary_Exp>
 </Exp_Comparison>
-<Exp_Comparison op="/:" initialTag="not(((ground_floor) |-> (dn)) : in)">
+<Exp_Comparison op="/:" initialTag="not(((ground_floor) |-> (dn)) : in)" translate="not(((ground_floor) |-> (dn)) : in)">
 <Binary_Exp op="|->" typref="1971943826">
 <Id tag="D:\Users\T0164919\bmethod\Atelier B free 4.2.1\Projects\LiftSys\bdp\Lift.bxml:1:5:1:6:1:1" typref="2701647786" value="ground_floor"/>
 <Id tag="D:\Users\T0164919\bmethod\Atelier B free 4.2.1\Projects\LiftSys\bdp\Lift.bxml:1:5:1:6:1:2" typref="2018955977" value="dn"/>
 </Binary_Exp>
 <Id tag="D:\Users\T0164919\bmethod\Atelier B free 4.2.1\Projects\LiftSys\bdp\Lift.bxml:1:5:1:6:2" typref="3206142961" value="in"/>
 </Exp_Comparison>
-<Exp_Comparison op="/:" initialTag="not(((top_floor) |-> (up)) : in)">
+<Exp_Comparison op="/:" initialTag="not(((top_floor) |-> (up)) : in)" translate="not(((top_floor) |-> (up)) : in)">
 <Binary_Exp op="|->" typref="1971943826">
 <Id tag="D:\Users\T0164919\bmethod\Atelier B free 4.2.1\Projects\LiftSys\bdp\Lift.bxml:1:5:1:7:1:1" typref="2701647786" value="top_floor"/>
 <Id tag="D:\Users\T0164919\bmethod\Atelier B free 4.2.1\Projects\LiftSys\bdp\Lift.bxml:1:5:1:7:1:2" typref="2018955977" value="up"/>
 </Binary_Exp>
 <Id tag="D:\Users\T0164919\bmethod\Atelier B free 4.2.1\Projects\LiftSys\bdp\Lift.bxml:1:5:1:7:2" typref="3206142961" value="in"/>
 </Exp_Comparison>
-<Exp_Comparison op="=" initialTag="((((moving) &lt;&lt;| (((out) /\ (current_floor))))) = ({}))">
+<Exp_Comparison op="=" initialTag="((((moving) &lt;&lt;| (((out) /\ (current_floor))))) = ({}))" translate="((((moving) &lt;&lt;| (((out) /\ (current_floor))))) = ({}))">
 <Binary_Exp op="&lt;&lt;|" typref="834705157">
 <Id tag="D:\Users\T0164919\bmethod\Atelier B free 4.2.1\Projects\LiftSys\bdp\Lift.bxml:1:5:1:8:1:1" typref="729739904" value="moving"/>
 <Binary_Exp op="/\" typref="834705157">
@@ -86,7 +86,7 @@
 </Binary_Exp>
 <EmptySet tag="D:\Users\T0164919\bmethod\Atelier B free 4.2.1\Projects\LiftSys\bdp\Lift.bxml:1:5:1:8:2" typref="3817003670"/>
 </Exp_Comparison>
-<Exp_Comparison op="=" initialTag="((((in) /\ (ran(((moving) &lt;&lt;| (((current_floor) >&lt; (dir)))))))) = ({}))">
+<Exp_Comparison op="=" initialTag="((((in) /\ (ran(((moving) &lt;&lt;| (((current_floor) >&lt; (dir)))))))) = ({}))" translate="((((in) /\ (ran(((moving) &lt;&lt;| (((current_floor) >&lt; (dir)))))))) = ({}))">
 <Binary_Exp op="/\" typref="3206142961">
 <Id tag="D:\Users\T0164919\bmethod\Atelier B free 4.2.1\Projects\LiftSys\bdp\Lift.bxml:1:5:1:9:1:1" typref="3206142961" value="in"/>
 <Unary_Exp op="ran" typref="3206142961">
@@ -103,9 +103,9 @@
 </Exp_Comparison>
 </Nary_Pred>
 </Define>
-<Define merge="=" name="ass"/>
-<Define merge="=" name="lprp">
-<Set>
+<Define name="ass"/>
+<Define name="lprp">
+<Set translate="LIFT: FIN(INTEGER) &amp; not(LIFT = {})">
 <Id tag="D:\Users\T0164919\bmethod\Atelier B free 4.2.1\Projects\LiftSys\bdp\Lift.bxml:1:1:1:1" typref="729739904" value="LIFT"/>
 </Set>
 <Set translate="((1..2)*{DIRECTION}): FIN(NATURAL*{DIRECTION}) &amp; not(((1..2)*{DIRECTION}) = {})">
@@ -130,10 +130,10 @@
 </Exp_Comparison>
 </Nary_Pred>
 </Define>
-<Define merge="=" name="inprp"/>
-<Define merge="=" name="inext"/>
-<Define merge="=" name="cst"/>
-<Proof_Obligation merge="=">
+<Define name="inprp"/>
+<Define name="inext"/>
+<Define name="cst"/>
+<Proof_Obligation>
 <Comment>Initialisation dans une machine abstraite</Comment>
 <Tag>Initialisation</Tag>
 <Tag>Invariant</Tag>
@@ -147,7 +147,7 @@
 <Local_Hyp num="1">
 <Nary_Pred op="&amp;"/>
 </Local_Hyp>
-<Simple_Goal merge="">
+<Simple_Goal>
 <Tag>Invariant is preserved</Tag>
 <Goal>
 <Binary_Pred op="=>">
@@ -158,9 +158,8 @@
 </Exp_Comparison>
 </Binary_Pred>
 </Goal>
-<Proof_State proofState="Proved(0)" methodList="pr" passList="Force(0),?"/>
 </Simple_Goal>
-<Simple_Goal merge="1">
+<Simple_Goal>
 <Tag>Invariant is preserved</Tag>
 <Goal>
 <Binary_Pred op="=>">
@@ -183,7 +182,7 @@
 </Binary_Pred>
 </Goal>
 </Simple_Goal>
-<Simple_Goal merge="2">
+<Simple_Goal>
 <Tag>Invariant is preserved</Tag>
 <Goal>
 <Binary_Pred op="=>">
@@ -203,7 +202,7 @@
 </Binary_Pred>
 </Goal>
 </Simple_Goal>
-<Simple_Goal merge="3">
+<Simple_Goal>
 <Tag>Invariant is preserved</Tag>
 <Goal>
 <Binary_Pred op="=>">
@@ -221,7 +220,7 @@
 </Binary_Pred>
 </Goal>
 </Simple_Goal>
-<Simple_Goal merge="4">
+<Simple_Goal>
 <Tag>Invariant is preserved</Tag>
 <Goal>
 <Binary_Pred op="=>">
@@ -239,7 +238,7 @@
 </Binary_Pred>
 </Goal>
 </Simple_Goal>
-<Simple_Goal merge="5">
+<Simple_Goal>
 <Tag>Invariant is preserved</Tag>
 <Goal>
 <Binary_Pred op="=>">
@@ -254,7 +253,7 @@
 </Binary_Pred>
 </Goal>
 </Simple_Goal>
-<Simple_Goal merge="6">
+<Simple_Goal>
 <Tag>Invariant is preserved</Tag>
 <Goal>
 <Binary_Pred op="=>">
@@ -269,7 +268,7 @@
 </Binary_Pred>
 </Goal>
 </Simple_Goal>
-<Simple_Goal merge="7">
+<Simple_Goal>
 <Tag>Invariant is preserved</Tag>
 <Goal>
 <Binary_Pred op="=>">
@@ -292,7 +291,7 @@
 </Binary_Pred>
 </Goal>
 </Simple_Goal>
-<Simple_Goal merge="8">
+<Simple_Goal>
 <Tag>Invariant is preserved</Tag>
 <Goal>
 <Binary_Pred op="=>">
@@ -326,7 +325,7 @@
 </Goal>
 </Simple_Goal>
 </Proof_Obligation>
-<Proof_Obligation merge="-">
+<Proof_Obligation>
 <Comment>Operations dans une machine abstraite</Comment>
 <Tag>Request_Floor</Tag>
 <Tag>INVARIANT</Tag>
@@ -370,7 +369,40 @@
 <Local_Hyp num="1">
 <Nary_Pred op="&amp;"/>
 </Local_Hyp>
-<Simple_Goal merge="0">
+<Simple_Goal>
+<Tag>Invariant is preserved</Tag>
+<Goal>
+<Binary_Pred op="=>">
+<Ref_Hyp num="1"/>
+<Exp_Comparison op=":" initialTag="((dir) : (((LIFT) --> (DIRECTION))))" goalTag="Invariant is preserved">
+<Id tag="D:\Users\T0164919\bmethod\Atelier B free 4.2.1\Projects\LiftSys\bdp\Lift.bxml:1:5:1:3:1" typref="1733510054" value="dir"/>
+<Binary_Exp op="-->" typref="1919973043">
+<Id tag="D:\Users\T0164919\bmethod\Atelier B free 4.2.1\Projects\LiftSys\bdp\Lift.bxml:1:5:1:3:2:1" typref="729739904" value="LIFT"/>
+<Id tag="D:\Users\T0164919\bmethod\Atelier B free 4.2.1\Projects\LiftSys\bdp\Lift.bxml:1:5:1:3:2:2" typref="2042919802" value="DIRECTION"/>
+</Binary_Exp>
+</Exp_Comparison>
+</Binary_Pred>
+</Goal>
+</Simple_Goal>
+<Simple_Goal>
+<Tag>Invariant is preserved</Tag>
+<Goal>
+<Binary_Pred op="=>">
+<Ref_Hyp num="1"/>
+<Exp_Comparison op=":" initialTag="((in) : (((((ground_floor) .. (top_floor))) &lt;-> (DIRECTION))))" goalTag="Invariant is preserved">
+<Id tag="D:\Users\T0164919\bmethod\Atelier B free 4.2.1\Projects\LiftSys\bdp\Lift.bxml:1:5:1:4:1" typref="3206142961" value="in"/>
+<Binary_Exp op="&lt;->" typref="1070595026">
+<Binary_Exp op=".." typref="3603043417">
+<Id tag="D:\Users\T0164919\bmethod\Atelier B free 4.2.1\Projects\LiftSys\bdp\Lift.bxml:1:5:1:4:2:1:1" typref="2701647786" value="ground_floor"/>
+<Id tag="D:\Users\T0164919\bmethod\Atelier B free 4.2.1\Projects\LiftSys\bdp\Lift.bxml:1:5:1:4:2:1:2" typref="2701647786" value="top_floor"/>
+</Binary_Exp>
+<Id tag="D:\Users\T0164919\bmethod\Atelier B free 4.2.1\Projects\LiftSys\bdp\Lift.bxml:1:5:1:4:2:2" typref="2042919802" value="DIRECTION"/>
+</Binary_Exp>
+</Exp_Comparison>
+</Binary_Pred>
+</Goal>
+</Simple_Goal>
+<Simple_Goal>
 <Tag>Invariant is preserved</Tag>
 <Goal>
 <Binary_Pred op="=>">
@@ -396,7 +428,37 @@
 </Binary_Pred>
 </Goal>
 </Simple_Goal>
-<Simple_Goal merge="1">
+<Simple_Goal>
+<Tag>Invariant is preserved</Tag>
+<Goal>
+<Binary_Pred op="=>">
+<Ref_Hyp num="1"/>
+<Exp_Comparison op="/:" initialTag="not(((ground_floor) |-> (dn)) : in)" goalTag="Invariant is preserved">
+<Binary_Exp op="|->" typref="1971943826">
+<Id tag="D:\Users\T0164919\bmethod\Atelier B free 4.2.1\Projects\LiftSys\bdp\Lift.bxml:1:5:1:6:1:1" typref="2701647786" value="ground_floor"/>
+<Id tag="D:\Users\T0164919\bmethod\Atelier B free 4.2.1\Projects\LiftSys\bdp\Lift.bxml:1:5:1:6:1:2" typref="2018955977" value="dn"/>
+</Binary_Exp>
+<Id tag="D:\Users\T0164919\bmethod\Atelier B free 4.2.1\Projects\LiftSys\bdp\Lift.bxml:1:5:1:6:2" typref="3206142961" value="in"/>
+</Exp_Comparison>
+</Binary_Pred>
+</Goal>
+</Simple_Goal>
+<Simple_Goal>
+<Tag>Invariant is preserved</Tag>
+<Goal>
+<Binary_Pred op="=>">
+<Ref_Hyp num="1"/>
+<Exp_Comparison op="/:" initialTag="not(((top_floor) |-> (up)) : in)" goalTag="Invariant is preserved">
+<Binary_Exp op="|->" typref="1971943826">
+<Id tag="D:\Users\T0164919\bmethod\Atelier B free 4.2.1\Projects\LiftSys\bdp\Lift.bxml:1:5:1:7:1:1" typref="2701647786" value="top_floor"/>
+<Id tag="D:\Users\T0164919\bmethod\Atelier B free 4.2.1\Projects\LiftSys\bdp\Lift.bxml:1:5:1:7:1:2" typref="2018955977" value="up"/>
+</Binary_Exp>
+<Id tag="D:\Users\T0164919\bmethod\Atelier B free 4.2.1\Projects\LiftSys\bdp\Lift.bxml:1:5:1:7:2" typref="3206142961" value="in"/>
+</Exp_Comparison>
+</Binary_Pred>
+</Goal>
+</Simple_Goal>
+<Simple_Goal>
 <Tag>Invariant is preserved</Tag>
 <Goal>
 <Binary_Pred op="=>">
@@ -423,7 +485,7 @@
 </Goal>
 </Simple_Goal>
 </Proof_Obligation>
-<Proof_Obligation merge="=">
+<Proof_Obligation>
 <Comment>Operations dans une machine abstraite</Comment>
 <Tag>Request_Lift</Tag>
 <Tag>INVARIANT</Tag>
@@ -489,7 +551,22 @@
 <Local_Hyp num="1">
 <Nary_Pred op="&amp;"/>
 </Local_Hyp>
-<Simple_Goal merge="1">
+<Simple_Goal>
+<Tag>Invariant is preserved</Tag>
+<Goal>
+<Binary_Pred op="=>">
+<Ref_Hyp num="1"/>
+<Exp_Comparison op=":" initialTag="((dir) : (((LIFT) --> (DIRECTION))))" goalTag="Invariant is preserved">
+<Id tag="D:\Users\T0164919\bmethod\Atelier B free 4.2.1\Projects\LiftSys\bdp\Lift.bxml:1:5:1:3:1" typref="1733510054" value="dir"/>
+<Binary_Exp op="-->" typref="1919973043">
+<Id tag="D:\Users\T0164919\bmethod\Atelier B free 4.2.1\Projects\LiftSys\bdp\Lift.bxml:1:5:1:3:2:1" typref="729739904" value="LIFT"/>
+<Id tag="D:\Users\T0164919\bmethod\Atelier B free 4.2.1\Projects\LiftSys\bdp\Lift.bxml:1:5:1:3:2:2" typref="2042919802" value="DIRECTION"/>
+</Binary_Exp>
+</Exp_Comparison>
+</Binary_Pred>
+</Goal>
+</Simple_Goal>
+<Simple_Goal>
 <Tag>Invariant is preserved</Tag>
 <Goal>
 <Binary_Pred op="=>">
@@ -515,7 +592,7 @@
 </Binary_Pred>
 </Goal>
 </Simple_Goal>
-<Simple_Goal merge="2">
+<Simple_Goal>
 <Tag>Invariant is preserved</Tag>
 <Goal>
 <Binary_Pred op="=>">
@@ -538,7 +615,7 @@
 </Binary_Pred>
 </Goal>
 </Simple_Goal>
-<Simple_Goal merge="3">
+<Simple_Goal>
 <Tag>Invariant is preserved</Tag>
 <Goal>
 <Binary_Pred op="=>">
@@ -561,7 +638,7 @@
 </Binary_Pred>
 </Goal>
 </Simple_Goal>
-<Simple_Goal merge="4">
+<Simple_Goal>
 <Tag>Invariant is preserved</Tag>
 <Goal>
 <Binary_Pred op="=>">
@@ -593,7 +670,7 @@
 </Goal>
 </Simple_Goal>
 </Proof_Obligation>
-<Proof_Obligation merge="=">
+<Proof_Obligation>
 <Comment>Operations dans une machine abstraite</Comment>
 <Tag>Continue_up</Tag>
 <Tag>INVARIANT</Tag>
@@ -673,7 +750,7 @@
 <Local_Hyp num="1">
 <Nary_Pred op="&amp;"/>
 </Local_Hyp>
-<Simple_Goal merge="0">
+<Simple_Goal>
 <Tag>Invariant is preserved</Tag>
 <Goal>
 <Binary_Pred op="=>">
@@ -705,7 +782,70 @@
 </Binary_Pred>
 </Goal>
 </Simple_Goal>
-<Simple_Goal merge="5">
+<Simple_Goal>
+<Tag>Invariant is preserved</Tag>
+<Goal>
+<Binary_Pred op="=>">
+<Ref_Hyp num="1"/>
+<Exp_Comparison op=":" initialTag="((dir) : (((LIFT) --> (DIRECTION))))" goalTag="Invariant is preserved">
+<Id tag="D:\Users\T0164919\bmethod\Atelier B free 4.2.1\Projects\LiftSys\bdp\Lift.bxml:1:5:1:3:1" typref="1733510054" value="dir"/>
+<Binary_Exp op="-->" typref="1919973043">
+<Id tag="D:\Users\T0164919\bmethod\Atelier B free 4.2.1\Projects\LiftSys\bdp\Lift.bxml:1:5:1:3:2:1" typref="729739904" value="LIFT"/>
+<Id tag="D:\Users\T0164919\bmethod\Atelier B free 4.2.1\Projects\LiftSys\bdp\Lift.bxml:1:5:1:3:2:2" typref="2042919802" value="DIRECTION"/>
+</Binary_Exp>
+</Exp_Comparison>
+</Binary_Pred>
+</Goal>
+</Simple_Goal>
+<Simple_Goal>
+<Tag>Invariant is preserved</Tag>
+<Goal>
+<Binary_Pred op="=>">
+<Ref_Hyp num="1"/>
+<Exp_Comparison op=":" initialTag="((in) : (((((ground_floor) .. (top_floor))) &lt;-> (DIRECTION))))" goalTag="Invariant is preserved">
+<Id tag="D:\Users\T0164919\bmethod\Atelier B free 4.2.1\Projects\LiftSys\bdp\Lift.bxml:1:5:1:4:1" typref="3206142961" value="in"/>
+<Binary_Exp op="&lt;->" typref="1070595026">
+<Binary_Exp op=".." typref="3603043417">
+<Id tag="D:\Users\T0164919\bmethod\Atelier B free 4.2.1\Projects\LiftSys\bdp\Lift.bxml:1:5:1:4:2:1:1" typref="2701647786" value="ground_floor"/>
+<Id tag="D:\Users\T0164919\bmethod\Atelier B free 4.2.1\Projects\LiftSys\bdp\Lift.bxml:1:5:1:4:2:1:2" typref="2701647786" value="top_floor"/>
+</Binary_Exp>
+<Id tag="D:\Users\T0164919\bmethod\Atelier B free 4.2.1\Projects\LiftSys\bdp\Lift.bxml:1:5:1:4:2:2" typref="2042919802" value="DIRECTION"/>
+</Binary_Exp>
+</Exp_Comparison>
+</Binary_Pred>
+</Goal>
+</Simple_Goal>
+<Simple_Goal>
+<Tag>Invariant is preserved</Tag>
+<Goal>
+<Binary_Pred op="=>">
+<Ref_Hyp num="1"/>
+<Exp_Comparison op="/:" initialTag="not(((ground_floor) |-> (dn)) : in)" goalTag="Invariant is preserved">
+<Binary_Exp op="|->" typref="1971943826">
+<Id tag="D:\Users\T0164919\bmethod\Atelier B free 4.2.1\Projects\LiftSys\bdp\Lift.bxml:1:5:1:6:1:1" typref="2701647786" value="ground_floor"/>
+<Id tag="D:\Users\T0164919\bmethod\Atelier B free 4.2.1\Projects\LiftSys\bdp\Lift.bxml:1:5:1:6:1:2" typref="2018955977" value="dn"/>
+</Binary_Exp>
+<Id tag="D:\Users\T0164919\bmethod\Atelier B free 4.2.1\Projects\LiftSys\bdp\Lift.bxml:1:5:1:6:2" typref="3206142961" value="in"/>
+</Exp_Comparison>
+</Binary_Pred>
+</Goal>
+</Simple_Goal>
+<Simple_Goal>
+<Tag>Invariant is preserved</Tag>
+<Goal>
+<Binary_Pred op="=>">
+<Ref_Hyp num="1"/>
+<Exp_Comparison op="/:" initialTag="not(((top_floor) |-> (up)) : in)" goalTag="Invariant is preserved">
+<Binary_Exp op="|->" typref="1971943826">
+<Id tag="D:\Users\T0164919\bmethod\Atelier B free 4.2.1\Projects\LiftSys\bdp\Lift.bxml:1:5:1:7:1:1" typref="2701647786" value="top_floor"/>
+<Id tag="D:\Users\T0164919\bmethod\Atelier B free 4.2.1\Projects\LiftSys\bdp\Lift.bxml:1:5:1:7:1:2" typref="2018955977" value="up"/>
+</Binary_Exp>
+<Id tag="D:\Users\T0164919\bmethod\Atelier B free 4.2.1\Projects\LiftSys\bdp\Lift.bxml:1:5:1:7:2" typref="3206142961" value="in"/>
+</Exp_Comparison>
+</Binary_Pred>
+</Goal>
+</Simple_Goal>
+<Simple_Goal>
 <Tag>Invariant is preserved</Tag>
 <Goal>
 <Binary_Pred op="=>">
@@ -737,7 +877,7 @@
 </Binary_Pred>
 </Goal>
 </Simple_Goal>
-<Simple_Goal merge="6">
+<Simple_Goal>
 <Tag>Invariant is preserved</Tag>
 <Goal>
 <Binary_Pred op="=>">
@@ -775,7 +915,7 @@
 </Goal>
 </Simple_Goal>
 </Proof_Obligation>
-<Proof_Obligation merge="=">
+<Proof_Obligation>
 <Comment>Operations dans une machine abstraite</Comment>
 <Tag>Continue_dn</Tag>
 <Tag>INVARIANT</Tag>
@@ -855,7 +995,7 @@
 <Local_Hyp num="1">
 <Nary_Pred op="&amp;"/>
 </Local_Hyp>
-<Simple_Goal merge="0">
+<Simple_Goal>
 <Tag>Invariant is preserved</Tag>
 <Goal>
 <Binary_Pred op="=>">
@@ -887,7 +1027,70 @@
 </Binary_Pred>
 </Goal>
 </Simple_Goal>
-<Simple_Goal merge="5">
+<Simple_Goal>
+<Tag>Invariant is preserved</Tag>
+<Goal>
+<Binary_Pred op="=>">
+<Ref_Hyp num="1"/>
+<Exp_Comparison op=":" initialTag="((dir) : (((LIFT) --> (DIRECTION))))" goalTag="Invariant is preserved">
+<Id tag="D:\Users\T0164919\bmethod\Atelier B free 4.2.1\Projects\LiftSys\bdp\Lift.bxml:1:5:1:3:1" typref="1733510054" value="dir"/>
+<Binary_Exp op="-->" typref="1919973043">
+<Id tag="D:\Users\T0164919\bmethod\Atelier B free 4.2.1\Projects\LiftSys\bdp\Lift.bxml:1:5:1:3:2:1" typref="729739904" value="LIFT"/>
+<Id tag="D:\Users\T0164919\bmethod\Atelier B free 4.2.1\Projects\LiftSys\bdp\Lift.bxml:1:5:1:3:2:2" typref="2042919802" value="DIRECTION"/>
+</Binary_Exp>
+</Exp_Comparison>
+</Binary_Pred>
+</Goal>
+</Simple_Goal>
+<Simple_Goal>
+<Tag>Invariant is preserved</Tag>
+<Goal>
+<Binary_Pred op="=>">
+<Ref_Hyp num="1"/>
+<Exp_Comparison op=":" initialTag="((in) : (((((ground_floor) .. (top_floor))) &lt;-> (DIRECTION))))" goalTag="Invariant is preserved">
+<Id tag="D:\Users\T0164919\bmethod\Atelier B free 4.2.1\Projects\LiftSys\bdp\Lift.bxml:1:5:1:4:1" typref="3206142961" value="in"/>
+<Binary_Exp op="&lt;->" typref="1070595026">
+<Binary_Exp op=".." typref="3603043417">
+<Id tag="D:\Users\T0164919\bmethod\Atelier B free 4.2.1\Projects\LiftSys\bdp\Lift.bxml:1:5:1:4:2:1:1" typref="2701647786" value="ground_floor"/>
+<Id tag="D:\Users\T0164919\bmethod\Atelier B free 4.2.1\Projects\LiftSys\bdp\Lift.bxml:1:5:1:4:2:1:2" typref="2701647786" value="top_floor"/>
+</Binary_Exp>
+<Id tag="D:\Users\T0164919\bmethod\Atelier B free 4.2.1\Projects\LiftSys\bdp\Lift.bxml:1:5:1:4:2:2" typref="2042919802" value="DIRECTION"/>
+</Binary_Exp>
+</Exp_Comparison>
+</Binary_Pred>
+</Goal>
+</Simple_Goal>
+<Simple_Goal>
+<Tag>Invariant is preserved</Tag>
+<Goal>
+<Binary_Pred op="=>">
+<Ref_Hyp num="1"/>
+<Exp_Comparison op="/:" initialTag="not(((ground_floor) |-> (dn)) : in)" goalTag="Invariant is preserved">
+<Binary_Exp op="|->" typref="1971943826">
+<Id tag="D:\Users\T0164919\bmethod\Atelier B free 4.2.1\Projects\LiftSys\bdp\Lift.bxml:1:5:1:6:1:1" typref="2701647786" value="ground_floor"/>
+<Id tag="D:\Users\T0164919\bmethod\Atelier B free 4.2.1\Projects\LiftSys\bdp\Lift.bxml:1:5:1:6:1:2" typref="2018955977" value="dn"/>
+</Binary_Exp>
+<Id tag="D:\Users\T0164919\bmethod\Atelier B free 4.2.1\Projects\LiftSys\bdp\Lift.bxml:1:5:1:6:2" typref="3206142961" value="in"/>
+</Exp_Comparison>
+</Binary_Pred>
+</Goal>
+</Simple_Goal>
+<Simple_Goal>
+<Tag>Invariant is preserved</Tag>
+<Goal>
+<Binary_Pred op="=>">
+<Ref_Hyp num="1"/>
+<Exp_Comparison op="/:" initialTag="not(((top_floor) |-> (up)) : in)" goalTag="Invariant is preserved">
+<Binary_Exp op="|->" typref="1971943826">
+<Id tag="D:\Users\T0164919\bmethod\Atelier B free 4.2.1\Projects\LiftSys\bdp\Lift.bxml:1:5:1:7:1:1" typref="2701647786" value="top_floor"/>
+<Id tag="D:\Users\T0164919\bmethod\Atelier B free 4.2.1\Projects\LiftSys\bdp\Lift.bxml:1:5:1:7:1:2" typref="2018955977" value="up"/>
+</Binary_Exp>
+<Id tag="D:\Users\T0164919\bmethod\Atelier B free 4.2.1\Projects\LiftSys\bdp\Lift.bxml:1:5:1:7:2" typref="3206142961" value="in"/>
+</Exp_Comparison>
+</Binary_Pred>
+</Goal>
+</Simple_Goal>
+<Simple_Goal>
 <Tag>Invariant is preserved</Tag>
 <Goal>
 <Binary_Pred op="=>">
@@ -919,7 +1122,7 @@
 </Binary_Pred>
 </Goal>
 </Simple_Goal>
-<Simple_Goal merge="6">
+<Simple_Goal>
 <Tag>Invariant is preserved</Tag>
 <Goal>
 <Binary_Pred op="=>">
@@ -957,7 +1160,7 @@
 </Goal>
 </Simple_Goal>
 </Proof_Obligation>
-<Proof_Obligation merge="=">
+<Proof_Obligation>
 <Comment>Operations dans une machine abstraite</Comment>
 <Tag>Stop_up</Tag>
 <Tag>INVARIANT</Tag>
@@ -1041,7 +1244,7 @@
 <Local_Hyp num="1">
 <Nary_Pred op="&amp;"/>
 </Local_Hyp>
-<Simple_Goal merge="">
+<Simple_Goal>
 <Tag>Invariant is preserved</Tag>
 <Goal>
 <Binary_Pred op="=>">
@@ -1057,9 +1260,23 @@
 </Exp_Comparison>
 </Binary_Pred>
 </Goal>
-<Proof_State proofState="Proved(0)" methodList="pr" passList="Force(0),?"/>
 </Simple_Goal>
-<Simple_Goal merge="2">
+<Simple_Goal>
+<Tag>Invariant is preserved</Tag>
+<Goal>
+<Binary_Pred op="=>">
+<Ref_Hyp num="1"/>
+<Exp_Comparison op=":" initialTag="((dir) : (((LIFT) --> (DIRECTION))))" goalTag="Invariant is preserved">
+<Id tag="D:\Users\T0164919\bmethod\Atelier B free 4.2.1\Projects\LiftSys\bdp\Lift.bxml:1:5:1:3:1" typref="1733510054" value="dir"/>
+<Binary_Exp op="-->" typref="1919973043">
+<Id tag="D:\Users\T0164919\bmethod\Atelier B free 4.2.1\Projects\LiftSys\bdp\Lift.bxml:1:5:1:3:2:1" typref="729739904" value="LIFT"/>
+<Id tag="D:\Users\T0164919\bmethod\Atelier B free 4.2.1\Projects\LiftSys\bdp\Lift.bxml:1:5:1:3:2:2" typref="2042919802" value="DIRECTION"/>
+</Binary_Exp>
+</Exp_Comparison>
+</Binary_Pred>
+</Goal>
+</Simple_Goal>
+<Simple_Goal>
 <Tag>Invariant is preserved</Tag>
 <Goal>
 <Binary_Pred op="=>">
@@ -1091,7 +1308,7 @@
 </Binary_Pred>
 </Goal>
 </Simple_Goal>
-<Simple_Goal merge="3">
+<Simple_Goal>
 <Tag>Invariant is preserved</Tag>
 <Goal>
 <Binary_Pred op="=>">
@@ -1120,7 +1337,7 @@
 </Binary_Pred>
 </Goal>
 </Simple_Goal>
-<Simple_Goal merge="4">
+<Simple_Goal>
 <Tag>Invariant is preserved</Tag>
 <Goal>
 <Binary_Pred op="=>">
@@ -1149,7 +1366,7 @@
 </Binary_Pred>
 </Goal>
 </Simple_Goal>
-<Simple_Goal merge="5">
+<Simple_Goal>
 <Tag>Invariant is preserved</Tag>
 <Goal>
 <Binary_Pred op="=>">
@@ -1178,7 +1395,7 @@
 </Binary_Pred>
 </Goal>
 </Simple_Goal>
-<Simple_Goal merge="6">
+<Simple_Goal>
 <Tag>Invariant is preserved</Tag>
 <Goal>
 <Binary_Pred op="=>">
@@ -1212,7 +1429,7 @@
 </Binary_Pred>
 </Goal>
 </Simple_Goal>
-<Simple_Goal merge="7">
+<Simple_Goal>
 <Tag>Invariant is preserved</Tag>
 <Goal>
 <Binary_Pred op="=>">
@@ -1255,7 +1472,7 @@
 </Goal>
 </Simple_Goal>
 </Proof_Obligation>
-<Proof_Obligation merge="=">
+<Proof_Obligation>
 <Comment>Operations dans une machine abstraite</Comment>
 <Tag>Stop_dn</Tag>
 <Tag>INVARIANT</Tag>
@@ -1339,7 +1556,7 @@
 <Local_Hyp num="1">
 <Nary_Pred op="&amp;"/>
 </Local_Hyp>
-<Simple_Goal merge="">
+<Simple_Goal>
 <Tag>Invariant is preserved</Tag>
 <Goal>
 <Binary_Pred op="=>">
@@ -1355,9 +1572,23 @@
 </Exp_Comparison>
 </Binary_Pred>
 </Goal>
-<Proof_State proofState="Proved(0)" methodList="pr" passList="Force(0),?"/>
 </Simple_Goal>
-<Simple_Goal merge="2">
+<Simple_Goal>
+<Tag>Invariant is preserved</Tag>
+<Goal>
+<Binary_Pred op="=>">
+<Ref_Hyp num="1"/>
+<Exp_Comparison op=":" initialTag="((dir) : (((LIFT) --> (DIRECTION))))" goalTag="Invariant is preserved">
+<Id tag="D:\Users\T0164919\bmethod\Atelier B free 4.2.1\Projects\LiftSys\bdp\Lift.bxml:1:5:1:3:1" typref="1733510054" value="dir"/>
+<Binary_Exp op="-->" typref="1919973043">
+<Id tag="D:\Users\T0164919\bmethod\Atelier B free 4.2.1\Projects\LiftSys\bdp\Lift.bxml:1:5:1:3:2:1" typref="729739904" value="LIFT"/>
+<Id tag="D:\Users\T0164919\bmethod\Atelier B free 4.2.1\Projects\LiftSys\bdp\Lift.bxml:1:5:1:3:2:2" typref="2042919802" value="DIRECTION"/>
+</Binary_Exp>
+</Exp_Comparison>
+</Binary_Pred>
+</Goal>
+</Simple_Goal>
+<Simple_Goal>
 <Tag>Invariant is preserved</Tag>
 <Goal>
 <Binary_Pred op="=>">
@@ -1389,7 +1620,7 @@
 </Binary_Pred>
 </Goal>
 </Simple_Goal>
-<Simple_Goal merge="3">
+<Simple_Goal>
 <Tag>Invariant is preserved</Tag>
 <Goal>
 <Binary_Pred op="=>">
@@ -1418,7 +1649,7 @@
 </Binary_Pred>
 </Goal>
 </Simple_Goal>
-<Simple_Goal merge="4">
+<Simple_Goal>
 <Tag>Invariant is preserved</Tag>
 <Goal>
 <Binary_Pred op="=>">
@@ -1447,7 +1678,7 @@
 </Binary_Pred>
 </Goal>
 </Simple_Goal>
-<Simple_Goal merge="5">
+<Simple_Goal>
 <Tag>Invariant is preserved</Tag>
 <Goal>
 <Binary_Pred op="=>">
@@ -1476,7 +1707,7 @@
 </Binary_Pred>
 </Goal>
 </Simple_Goal>
-<Simple_Goal merge="6">
+<Simple_Goal>
 <Tag>Invariant is preserved</Tag>
 <Goal>
 <Binary_Pred op="=>">
@@ -1510,7 +1741,7 @@
 </Binary_Pred>
 </Goal>
 </Simple_Goal>
-<Simple_Goal merge="7">
+<Simple_Goal>
 <Tag>Invariant is preserved</Tag>
 <Goal>
 <Binary_Pred op="=>">
@@ -1553,7 +1784,7 @@
 </Goal>
 </Simple_Goal>
 </Proof_Obligation>
-<Proof_Obligation merge="=">
+<Proof_Obligation>
 <Comment>Operations dans une machine abstraite</Comment>
 <Tag>Depart_up</Tag>
 <Tag>INVARIANT</Tag>
@@ -1613,7 +1844,7 @@
 <Local_Hyp num="1">
 <Nary_Pred op="&amp;"/>
 </Local_Hyp>
-<Simple_Goal merge="">
+<Simple_Goal>
 <Tag>Invariant is preserved</Tag>
 <Goal>
 <Binary_Pred op="=>">
@@ -1629,9 +1860,8 @@
 </Exp_Comparison>
 </Binary_Pred>
 </Goal>
-<Proof_State proofState="Proved(0)" methodList="pr" passList="Force(0),?"/>
 </Simple_Goal>
-<Simple_Goal merge="1">
+<Simple_Goal>
 <Tag>Invariant is preserved</Tag>
 <Goal>
 <Binary_Pred op="=>">
@@ -1663,7 +1893,70 @@
 </Binary_Pred>
 </Goal>
 </Simple_Goal>
-<Simple_Goal merge="6">
+<Simple_Goal>
+<Tag>Invariant is preserved</Tag>
+<Goal>
+<Binary_Pred op="=>">
+<Ref_Hyp num="1"/>
+<Exp_Comparison op=":" initialTag="((dir) : (((LIFT) --> (DIRECTION))))" goalTag="Invariant is preserved">
+<Id tag="D:\Users\T0164919\bmethod\Atelier B free 4.2.1\Projects\LiftSys\bdp\Lift.bxml:1:5:1:3:1" typref="1733510054" value="dir"/>
+<Binary_Exp op="-->" typref="1919973043">
+<Id tag="D:\Users\T0164919\bmethod\Atelier B free 4.2.1\Projects\LiftSys\bdp\Lift.bxml:1:5:1:3:2:1" typref="729739904" value="LIFT"/>
+<Id tag="D:\Users\T0164919\bmethod\Atelier B free 4.2.1\Projects\LiftSys\bdp\Lift.bxml:1:5:1:3:2:2" typref="2042919802" value="DIRECTION"/>
+</Binary_Exp>
+</Exp_Comparison>
+</Binary_Pred>
+</Goal>
+</Simple_Goal>
+<Simple_Goal>
+<Tag>Invariant is preserved</Tag>
+<Goal>
+<Binary_Pred op="=>">
+<Ref_Hyp num="1"/>
+<Exp_Comparison op=":" initialTag="((in) : (((((ground_floor) .. (top_floor))) &lt;-> (DIRECTION))))" goalTag="Invariant is preserved">
+<Id tag="D:\Users\T0164919\bmethod\Atelier B free 4.2.1\Projects\LiftSys\bdp\Lift.bxml:1:5:1:4:1" typref="3206142961" value="in"/>
+<Binary_Exp op="&lt;->" typref="1070595026">
+<Binary_Exp op=".." typref="3603043417">
+<Id tag="D:\Users\T0164919\bmethod\Atelier B free 4.2.1\Projects\LiftSys\bdp\Lift.bxml:1:5:1:4:2:1:1" typref="2701647786" value="ground_floor"/>
+<Id tag="D:\Users\T0164919\bmethod\Atelier B free 4.2.1\Projects\LiftSys\bdp\Lift.bxml:1:5:1:4:2:1:2" typref="2701647786" value="top_floor"/>
+</Binary_Exp>
+<Id tag="D:\Users\T0164919\bmethod\Atelier B free 4.2.1\Projects\LiftSys\bdp\Lift.bxml:1:5:1:4:2:2" typref="2042919802" value="DIRECTION"/>
+</Binary_Exp>
+</Exp_Comparison>
+</Binary_Pred>
+</Goal>
+</Simple_Goal>
+<Simple_Goal>
+<Tag>Invariant is preserved</Tag>
+<Goal>
+<Binary_Pred op="=>">
+<Ref_Hyp num="1"/>
+<Exp_Comparison op="/:" initialTag="not(((ground_floor) |-> (dn)) : in)" goalTag="Invariant is preserved">
+<Binary_Exp op="|->" typref="1971943826">
+<Id tag="D:\Users\T0164919\bmethod\Atelier B free 4.2.1\Projects\LiftSys\bdp\Lift.bxml:1:5:1:6:1:1" typref="2701647786" value="ground_floor"/>
+<Id tag="D:\Users\T0164919\bmethod\Atelier B free 4.2.1\Projects\LiftSys\bdp\Lift.bxml:1:5:1:6:1:2" typref="2018955977" value="dn"/>
+</Binary_Exp>
+<Id tag="D:\Users\T0164919\bmethod\Atelier B free 4.2.1\Projects\LiftSys\bdp\Lift.bxml:1:5:1:6:2" typref="3206142961" value="in"/>
+</Exp_Comparison>
+</Binary_Pred>
+</Goal>
+</Simple_Goal>
+<Simple_Goal>
+<Tag>Invariant is preserved</Tag>
+<Goal>
+<Binary_Pred op="=>">
+<Ref_Hyp num="1"/>
+<Exp_Comparison op="/:" initialTag="not(((top_floor) |-> (up)) : in)" goalTag="Invariant is preserved">
+<Binary_Exp op="|->" typref="1971943826">
+<Id tag="D:\Users\T0164919\bmethod\Atelier B free 4.2.1\Projects\LiftSys\bdp\Lift.bxml:1:5:1:7:1:1" typref="2701647786" value="top_floor"/>
+<Id tag="D:\Users\T0164919\bmethod\Atelier B free 4.2.1\Projects\LiftSys\bdp\Lift.bxml:1:5:1:7:1:2" typref="2018955977" value="up"/>
+</Binary_Exp>
+<Id tag="D:\Users\T0164919\bmethod\Atelier B free 4.2.1\Projects\LiftSys\bdp\Lift.bxml:1:5:1:7:2" typref="3206142961" value="in"/>
+</Exp_Comparison>
+</Binary_Pred>
+</Goal>
+</Simple_Goal>
+<Simple_Goal>
 <Tag>Invariant is preserved</Tag>
 <Goal>
 <Binary_Pred op="=>">
@@ -1700,7 +1993,7 @@
 </Binary_Pred>
 </Goal>
 </Simple_Goal>
-<Simple_Goal merge="7">
+<Simple_Goal>
 <Tag>Invariant is preserved</Tag>
 <Goal>
 <Binary_Pred op="=>">
@@ -1743,7 +2036,7 @@
 </Goal>
 </Simple_Goal>
 </Proof_Obligation>
-<Proof_Obligation merge="=">
+<Proof_Obligation>
 <Comment>Operations dans une machine abstraite</Comment>
 <Tag>Depart_dn</Tag>
 <Tag>INVARIANT</Tag>
@@ -1803,7 +2096,7 @@
 <Local_Hyp num="1">
 <Nary_Pred op="&amp;"/>
 </Local_Hyp>
-<Simple_Goal merge="">
+<Simple_Goal>
 <Tag>Invariant is preserved</Tag>
 <Goal>
 <Binary_Pred op="=>">
@@ -1819,9 +2112,8 @@
 </Exp_Comparison>
 </Binary_Pred>
 </Goal>
-<Proof_State proofState="Proved(0)" methodList="pr" passList="Force(0),?"/>
 </Simple_Goal>
-<Simple_Goal merge="1">
+<Simple_Goal>
 <Tag>Invariant is preserved</Tag>
 <Goal>
 <Binary_Pred op="=>">
@@ -1853,7 +2145,70 @@
 </Binary_Pred>
 </Goal>
 </Simple_Goal>
-<Simple_Goal merge="6">
+<Simple_Goal>
+<Tag>Invariant is preserved</Tag>
+<Goal>
+<Binary_Pred op="=>">
+<Ref_Hyp num="1"/>
+<Exp_Comparison op=":" initialTag="((dir) : (((LIFT) --> (DIRECTION))))" goalTag="Invariant is preserved">
+<Id tag="D:\Users\T0164919\bmethod\Atelier B free 4.2.1\Projects\LiftSys\bdp\Lift.bxml:1:5:1:3:1" typref="1733510054" value="dir"/>
+<Binary_Exp op="-->" typref="1919973043">
+<Id tag="D:\Users\T0164919\bmethod\Atelier B free 4.2.1\Projects\LiftSys\bdp\Lift.bxml:1:5:1:3:2:1" typref="729739904" value="LIFT"/>
+<Id tag="D:\Users\T0164919\bmethod\Atelier B free 4.2.1\Projects\LiftSys\bdp\Lift.bxml:1:5:1:3:2:2" typref="2042919802" value="DIRECTION"/>
+</Binary_Exp>
+</Exp_Comparison>
+</Binary_Pred>
+</Goal>
+</Simple_Goal>
+<Simple_Goal>
+<Tag>Invariant is preserved</Tag>
+<Goal>
+<Binary_Pred op="=>">
+<Ref_Hyp num="1"/>
+<Exp_Comparison op=":" initialTag="((in) : (((((ground_floor) .. (top_floor))) &lt;-> (DIRECTION))))" goalTag="Invariant is preserved">
+<Id tag="D:\Users\T0164919\bmethod\Atelier B free 4.2.1\Projects\LiftSys\bdp\Lift.bxml:1:5:1:4:1" typref="3206142961" value="in"/>
+<Binary_Exp op="&lt;->" typref="1070595026">
+<Binary_Exp op=".." typref="3603043417">
+<Id tag="D:\Users\T0164919\bmethod\Atelier B free 4.2.1\Projects\LiftSys\bdp\Lift.bxml:1:5:1:4:2:1:1" typref="2701647786" value="ground_floor"/>
+<Id tag="D:\Users\T0164919\bmethod\Atelier B free 4.2.1\Projects\LiftSys\bdp\Lift.bxml:1:5:1:4:2:1:2" typref="2701647786" value="top_floor"/>
+</Binary_Exp>
+<Id tag="D:\Users\T0164919\bmethod\Atelier B free 4.2.1\Projects\LiftSys\bdp\Lift.bxml:1:5:1:4:2:2" typref="2042919802" value="DIRECTION"/>
+</Binary_Exp>
+</Exp_Comparison>
+</Binary_Pred>
+</Goal>
+</Simple_Goal>
+<Simple_Goal>
+<Tag>Invariant is preserved</Tag>
+<Goal>
+<Binary_Pred op="=>">
+<Ref_Hyp num="1"/>
+<Exp_Comparison op="/:" initialTag="not(((ground_floor) |-> (dn)) : in)" goalTag="Invariant is preserved">
+<Binary_Exp op="|->" typref="1971943826">
+<Id tag="D:\Users\T0164919\bmethod\Atelier B free 4.2.1\Projects\LiftSys\bdp\Lift.bxml:1:5:1:6:1:1" typref="2701647786" value="ground_floor"/>
+<Id tag="D:\Users\T0164919\bmethod\Atelier B free 4.2.1\Projects\LiftSys\bdp\Lift.bxml:1:5:1:6:1:2" typref="2018955977" value="dn"/>
+</Binary_Exp>
+<Id tag="D:\Users\T0164919\bmethod\Atelier B free 4.2.1\Projects\LiftSys\bdp\Lift.bxml:1:5:1:6:2" typref="3206142961" value="in"/>
+</Exp_Comparison>
+</Binary_Pred>
+</Goal>
+</Simple_Goal>
+<Simple_Goal>
+<Tag>Invariant is preserved</Tag>
+<Goal>
+<Binary_Pred op="=>">
+<Ref_Hyp num="1"/>
+<Exp_Comparison op="/:" initialTag="not(((top_floor) |-> (up)) : in)" goalTag="Invariant is preserved">
+<Binary_Exp op="|->" typref="1971943826">
+<Id tag="D:\Users\T0164919\bmethod\Atelier B free 4.2.1\Projects\LiftSys\bdp\Lift.bxml:1:5:1:7:1:1" typref="2701647786" value="top_floor"/>
+<Id tag="D:\Users\T0164919\bmethod\Atelier B free 4.2.1\Projects\LiftSys\bdp\Lift.bxml:1:5:1:7:1:2" typref="2018955977" value="up"/>
+</Binary_Exp>
+<Id tag="D:\Users\T0164919\bmethod\Atelier B free 4.2.1\Projects\LiftSys\bdp\Lift.bxml:1:5:1:7:2" typref="3206142961" value="in"/>
+</Exp_Comparison>
+</Binary_Pred>
+</Goal>
+</Simple_Goal>
+<Simple_Goal>
 <Tag>Invariant is preserved</Tag>
 <Goal>
 <Binary_Pred op="=>">
@@ -1890,7 +2245,7 @@
 </Binary_Pred>
 </Goal>
 </Simple_Goal>
-<Simple_Goal merge="7">
+<Simple_Goal>
 <Tag>Invariant is preserved</Tag>
 <Goal>
 <Binary_Pred op="=>">
@@ -1933,7 +2288,7 @@
 </Goal>
 </Simple_Goal>
 </Proof_Obligation>
-<Proof_Obligation merge="=">
+<Proof_Obligation>
 <Comment>Operations dans une machine abstraite</Comment>
 <Tag>Change_up_to_dn</Tag>
 <Tag>INVARIANT</Tag>
@@ -2021,7 +2376,7 @@
 <Local_Hyp num="1">
 <Nary_Pred op="&amp;"/>
 </Local_Hyp>
-<Simple_Goal merge="0">
+<Simple_Goal>
 <Tag>Invariant is preserved</Tag>
 <Goal>
 <Binary_Pred op="=>">
@@ -2044,7 +2399,7 @@
 </Binary_Pred>
 </Goal>
 </Simple_Goal>
-<Simple_Goal merge="1">
+<Simple_Goal>
 <Tag>Invariant is preserved</Tag>
 <Goal>
 <Binary_Pred op="=>">
@@ -2073,7 +2428,7 @@
 </Binary_Pred>
 </Goal>
 </Simple_Goal>
-<Simple_Goal merge="2">
+<Simple_Goal>
 <Tag>Invariant is preserved</Tag>
 <Goal>
 <Binary_Pred op="=>">
@@ -2099,7 +2454,7 @@
 </Binary_Pred>
 </Goal>
 </Simple_Goal>
-<Simple_Goal merge="3">
+<Simple_Goal>
 <Tag>Invariant is preserved</Tag>
 <Goal>
 <Binary_Pred op="=>">
@@ -2125,7 +2480,7 @@
 </Binary_Pred>
 </Goal>
 </Simple_Goal>
-<Simple_Goal merge="4">
+<Simple_Goal>
 <Tag>Invariant is preserved</Tag>
 <Goal>
 <Binary_Pred op="=>">
@@ -2168,7 +2523,7 @@
 </Goal>
 </Simple_Goal>
 </Proof_Obligation>
-<Proof_Obligation merge="=">
+<Proof_Obligation>
 <Comment>Operations dans une machine abstraite</Comment>
 <Tag>Change_dn_to_up</Tag>
 <Tag>INVARIANT</Tag>
@@ -2256,7 +2611,7 @@
 <Local_Hyp num="1">
 <Nary_Pred op="&amp;"/>
 </Local_Hyp>
-<Simple_Goal merge="0">
+<Simple_Goal>
 <Tag>Invariant is preserved</Tag>
 <Goal>
 <Binary_Pred op="=>">
@@ -2279,7 +2634,7 @@
 </Binary_Pred>
 </Goal>
 </Simple_Goal>
-<Simple_Goal merge="1">
+<Simple_Goal>
 <Tag>Invariant is preserved</Tag>
 <Goal>
 <Binary_Pred op="=>">
@@ -2308,7 +2663,7 @@
 </Binary_Pred>
 </Goal>
 </Simple_Goal>
-<Simple_Goal merge="2">
+<Simple_Goal>
 <Tag>Invariant is preserved</Tag>
 <Goal>
 <Binary_Pred op="=>">
@@ -2334,7 +2689,7 @@
 </Binary_Pred>
 </Goal>
 </Simple_Goal>
-<Simple_Goal merge="3">
+<Simple_Goal>
 <Tag>Invariant is preserved</Tag>
 <Goal>
 <Binary_Pred op="=>">
@@ -2360,7 +2715,7 @@
 </Binary_Pred>
 </Goal>
 </Simple_Goal>
-<Simple_Goal merge="4">
+<Simple_Goal>
 <Tag>Invariant is preserved</Tag>
 <Goal>
 <Binary_Pred op="=>">
@@ -2403,10 +2758,10 @@
 </Goal>
 </Simple_Goal>
 </Proof_Obligation>
-<Proof_Obligation merge="=">
+<Proof_Obligation>
 <Tag>WellDefinednessConstraints</Tag>
 </Proof_Obligation>
-<Proof_Obligation merge="=">
+<Proof_Obligation>
 <Tag>WellDefinednessProperties</Tag>
 <Definition name="B definitions"/>
 <Definition name="ctx"/>
@@ -2436,7 +2791,7 @@
 </Exp_Comparison>
 </Local_Hyp>
 </Proof_Obligation>
-<Proof_Obligation merge="=">
+<Proof_Obligation>
 <Tag>WellDefinednessInvariant</Tag>
 <Definition name="B definitions"/>
 <Definition name="ctx"/>
@@ -2527,7 +2882,7 @@
 </Exp_Comparison>
 </Local_Hyp>
 </Proof_Obligation>
-<Proof_Obligation merge="=">
+<Proof_Obligation>
 <Tag>WellDefinednessAssertions</Tag>
 <Definition name="B definitions"/>
 <Definition name="ctx"/>
@@ -2538,7 +2893,7 @@
 <Definition name="seext"/>
 <Definition name="inv"/>
 </Proof_Obligation>
-<Proof_Obligation merge="=">
+<Proof_Obligation>
 <Tag>WellDefinednessInitialisation</Tag>
 <Definition name="B definitions"/>
 <Definition name="ctx"/>
@@ -2548,7 +2903,7 @@
 <Definition name="inext"/>
 <Definition name="seext"/>
 </Proof_Obligation>
-<Proof_Obligation merge="=">
+<Proof_Obligation>
 <Comment>Operations dans une machine abstraite</Comment>
 <Tag>WellDefinedness_Precondition_Request_Floor</Tag>
 <Tag>INVARIANT</Tag>
@@ -2582,7 +2937,7 @@
 <Id tag="D:\Users\T0164919\bmethod\Atelier B free 4.2.1\Projects\LiftSys\bdp\Lift.bxml:1:7:1:2:1:1:2" typref="729739904" value="LIFT"/>
 </Exp_Comparison>
 </Local_Hyp>
-<Simple_Goal merge="0">
+<Simple_Goal>
 <Tag>Well definedness</Tag>
 <Goal>
 <Binary_Pred op="=>">
@@ -2600,7 +2955,7 @@
 </Binary_Pred>
 </Goal>
 </Simple_Goal>
-<Simple_Goal merge="1">
+<Simple_Goal>
 <Tag>Well definedness</Tag>
 <Goal>
 <Binary_Pred op="=>">
@@ -2624,7 +2979,7 @@
 </Goal>
 </Simple_Goal>
 </Proof_Obligation>
-<Proof_Obligation merge="-">
+<Proof_Obligation>
 <Comment>Operations dans une machine abstraite</Comment>
 <Tag>WellDefinedness_Request_Floor</Tag>
 <Tag>INVARIANT</Tag>
@@ -2666,7 +3021,7 @@
 </Nary_Pred>
 </Hypothesis>
 </Proof_Obligation>
-<Proof_Obligation merge="=">
+<Proof_Obligation>
 <Comment>Operations dans une machine abstraite</Comment>
 <Tag>WellDefinedness_Precondition_Request_Lift</Tag>
 <Tag>INVARIANT</Tag>
@@ -2719,7 +3074,7 @@
 </Exp_Comparison>
 </Local_Hyp>
 </Proof_Obligation>
-<Proof_Obligation merge="=">
+<Proof_Obligation>
 <Comment>Operations dans une machine abstraite</Comment>
 <Tag>WellDefinedness_Request_Lift</Tag>
 <Tag>INVARIANT</Tag>
@@ -2783,7 +3138,7 @@
 </Nary_Pred>
 </Hypothesis>
 </Proof_Obligation>
-<Proof_Obligation merge="=">
+<Proof_Obligation>
 <Comment>Operations dans une machine abstraite</Comment>
 <Tag>WellDefinedness_Precondition_Continue_up</Tag>
 <Tag>INVARIANT</Tag>
@@ -2838,7 +3193,7 @@
 <Id tag="D:\Users\T0164919\bmethod\Atelier B free 4.2.1\Projects\LiftSys\bdp\Lift.bxml:1:7:3:2:1:1:2" typref="729739904" value="moving"/>
 </Exp_Comparison>
 </Local_Hyp>
-<Simple_Goal merge="0">
+<Simple_Goal>
 <Tag>Well definedness</Tag>
 <Goal>
 <Binary_Pred op="=>">
@@ -2852,7 +3207,7 @@
 </Binary_Pred>
 </Goal>
 </Simple_Goal>
-<Simple_Goal merge="1">
+<Simple_Goal>
 <Tag>Well definedness</Tag>
 <Goal>
 <Binary_Pred op="=>">
@@ -2871,7 +3226,7 @@
 </Binary_Pred>
 </Goal>
 </Simple_Goal>
-<Simple_Goal merge="2">
+<Simple_Goal>
 <Tag>Well definedness</Tag>
 <Goal>
 <Binary_Pred op="=>">
@@ -2888,7 +3243,7 @@
 </Binary_Pred>
 </Goal>
 </Simple_Goal>
-<Simple_Goal merge="3">
+<Simple_Goal>
 <Tag>Well definedness</Tag>
 <Goal>
 <Binary_Pred op="=>">
@@ -2910,7 +3265,7 @@
 </Binary_Pred>
 </Goal>
 </Simple_Goal>
-<Simple_Goal merge="4">
+<Simple_Goal>
 <Tag>Well definedness</Tag>
 <Goal>
 <Binary_Pred op="=>">
@@ -2928,7 +3283,7 @@
 </Binary_Pred>
 </Goal>
 </Simple_Goal>
-<Simple_Goal merge="5">
+<Simple_Goal>
 <Tag>Well definedness</Tag>
 <Goal>
 <Binary_Pred op="=>">
@@ -2951,7 +3306,7 @@
 </Binary_Pred>
 </Goal>
 </Simple_Goal>
-<Simple_Goal merge="6">
+<Simple_Goal>
 <Tag>Well definedness</Tag>
 <Goal>
 <Binary_Pred op="=>">
@@ -2969,7 +3324,7 @@
 </Binary_Pred>
 </Goal>
 </Simple_Goal>
-<Simple_Goal merge="7">
+<Simple_Goal>
 <Tag>Well definedness</Tag>
 <Goal>
 <Binary_Pred op="=>">
@@ -2992,7 +3347,7 @@
 </Binary_Pred>
 </Goal>
 </Simple_Goal>
-<Simple_Goal merge="8">
+<Simple_Goal>
 <Tag>Well definedness</Tag>
 <Goal>
 <Binary_Pred op="=>">
@@ -3011,7 +3366,7 @@
 </Binary_Pred>
 </Goal>
 </Simple_Goal>
-<Simple_Goal merge="9">
+<Simple_Goal>
 <Tag>Well definedness</Tag>
 <Goal>
 <Binary_Pred op="=>">
@@ -3036,7 +3391,7 @@
 </Goal>
 </Simple_Goal>
 </Proof_Obligation>
-<Proof_Obligation merge="=">
+<Proof_Obligation>
 <Comment>Operations dans une machine abstraite</Comment>
 <Tag>WellDefinedness_Continue_up</Tag>
 <Tag>INVARIANT</Tag>
@@ -3113,7 +3468,7 @@
 </Exp_Comparison>
 </Nary_Pred>
 </Hypothesis>
-<Simple_Goal merge="0">
+<Simple_Goal>
 <Tag>Well definedness</Tag>
 <Goal>
 <Exp_Comparison op=":">
@@ -3124,7 +3479,7 @@
 </Exp_Comparison>
 </Goal>
 </Simple_Goal>
-<Simple_Goal merge="1">
+<Simple_Goal>
 <Tag>Well definedness</Tag>
 <Goal>
 <Exp_Comparison op=":">
@@ -3141,7 +3496,7 @@
 </Goal>
 </Simple_Goal>
 </Proof_Obligation>
-<Proof_Obligation merge="=">
+<Proof_Obligation>
 <Comment>Operations dans une machine abstraite</Comment>
 <Tag>WellDefinedness_Precondition_Continue_dn</Tag>
 <Tag>INVARIANT</Tag>
@@ -3196,7 +3551,7 @@
 <Id tag="D:\Users\T0164919\bmethod\Atelier B free 4.2.1\Projects\LiftSys\bdp\Lift.bxml:1:7:4:2:1:1:2" typref="729739904" value="moving"/>
 </Exp_Comparison>
 </Local_Hyp>
-<Simple_Goal merge="0">
+<Simple_Goal>
 <Tag>Well definedness</Tag>
 <Goal>
 <Binary_Pred op="=>">
@@ -3210,7 +3565,7 @@
 </Binary_Pred>
 </Goal>
 </Simple_Goal>
-<Simple_Goal merge="1">
+<Simple_Goal>
 <Tag>Well definedness</Tag>
 <Goal>
 <Binary_Pred op="=>">
@@ -3229,7 +3584,7 @@
 </Binary_Pred>
 </Goal>
 </Simple_Goal>
-<Simple_Goal merge="2">
+<Simple_Goal>
 <Tag>Well definedness</Tag>
 <Goal>
 <Binary_Pred op="=>">
@@ -3246,7 +3601,7 @@
 </Binary_Pred>
 </Goal>
 </Simple_Goal>
-<Simple_Goal merge="3">
+<Simple_Goal>
 <Tag>Well definedness</Tag>
 <Goal>
 <Binary_Pred op="=>">
@@ -3268,7 +3623,7 @@
 </Binary_Pred>
 </Goal>
 </Simple_Goal>
-<Simple_Goal merge="4">
+<Simple_Goal>
 <Tag>Well definedness</Tag>
 <Goal>
 <Binary_Pred op="=>">
@@ -3286,7 +3641,7 @@
 </Binary_Pred>
 </Goal>
 </Simple_Goal>
-<Simple_Goal merge="5">
+<Simple_Goal>
 <Tag>Well definedness</Tag>
 <Goal>
 <Binary_Pred op="=>">
@@ -3309,7 +3664,7 @@
 </Binary_Pred>
 </Goal>
 </Simple_Goal>
-<Simple_Goal merge="6">
+<Simple_Goal>
 <Tag>Well definedness</Tag>
 <Goal>
 <Binary_Pred op="=>">
@@ -3327,7 +3682,7 @@
 </Binary_Pred>
 </Goal>
 </Simple_Goal>
-<Simple_Goal merge="7">
+<Simple_Goal>
 <Tag>Well definedness</Tag>
 <Goal>
 <Binary_Pred op="=>">
@@ -3350,7 +3705,7 @@
 </Binary_Pred>
 </Goal>
 </Simple_Goal>
-<Simple_Goal merge="8">
+<Simple_Goal>
 <Tag>Well definedness</Tag>
 <Goal>
 <Binary_Pred op="=>">
@@ -3369,7 +3724,7 @@
 </Binary_Pred>
 </Goal>
 </Simple_Goal>
-<Simple_Goal merge="9">
+<Simple_Goal>
 <Tag>Well definedness</Tag>
 <Goal>
 <Binary_Pred op="=>">
@@ -3394,7 +3749,7 @@
 </Goal>
 </Simple_Goal>
 </Proof_Obligation>
-<Proof_Obligation merge="=">
+<Proof_Obligation>
 <Comment>Operations dans une machine abstraite</Comment>
 <Tag>WellDefinedness_Continue_dn</Tag>
 <Tag>INVARIANT</Tag>
@@ -3471,7 +3826,7 @@
 </Exp_Comparison>
 </Nary_Pred>
 </Hypothesis>
-<Simple_Goal merge="0">
+<Simple_Goal>
 <Tag>Well definedness</Tag>
 <Goal>
 <Exp_Comparison op=":">
@@ -3482,7 +3837,7 @@
 </Exp_Comparison>
 </Goal>
 </Simple_Goal>
-<Simple_Goal merge="1">
+<Simple_Goal>
 <Tag>Well definedness</Tag>
 <Goal>
 <Exp_Comparison op=":">
@@ -3499,7 +3854,7 @@
 </Goal>
 </Simple_Goal>
 </Proof_Obligation>
-<Proof_Obligation merge="=">
+<Proof_Obligation>
 <Comment>Operations dans une machine abstraite</Comment>
 <Tag>WellDefinedness_Precondition_Stop_up</Tag>
 <Tag>INVARIANT</Tag>
@@ -3554,7 +3909,7 @@
 <Id tag="D:\Users\T0164919\bmethod\Atelier B free 4.2.1\Projects\LiftSys\bdp\Lift.bxml:1:7:5:2:1:1:2" typref="729739904" value="moving"/>
 </Exp_Comparison>
 </Local_Hyp>
-<Simple_Goal merge="0">
+<Simple_Goal>
 <Tag>Well definedness</Tag>
 <Goal>
 <Binary_Pred op="=>">
@@ -3568,7 +3923,7 @@
 </Binary_Pred>
 </Goal>
 </Simple_Goal>
-<Simple_Goal merge="1">
+<Simple_Goal>
 <Tag>Well definedness</Tag>
 <Goal>
 <Binary_Pred op="=>">
@@ -3587,7 +3942,7 @@
 </Binary_Pred>
 </Goal>
 </Simple_Goal>
-<Simple_Goal merge="2">
+<Simple_Goal>
 <Tag>Well definedness</Tag>
 <Goal>
 <Binary_Pred op="=>">
@@ -3604,7 +3959,7 @@
 </Binary_Pred>
 </Goal>
 </Simple_Goal>
-<Simple_Goal merge="3">
+<Simple_Goal>
 <Tag>Well definedness</Tag>
 <Goal>
 <Binary_Pred op="=>">
@@ -3626,7 +3981,7 @@
 </Binary_Pred>
 </Goal>
 </Simple_Goal>
-<Simple_Goal merge="4">
+<Simple_Goal>
 <Tag>Well definedness</Tag>
 <Goal>
 <Binary_Pred op="=>">
@@ -3644,7 +3999,7 @@
 </Binary_Pred>
 </Goal>
 </Simple_Goal>
-<Simple_Goal merge="5">
+<Simple_Goal>
 <Tag>Well definedness</Tag>
 <Goal>
 <Binary_Pred op="=>">
@@ -3667,7 +4022,7 @@
 </Binary_Pred>
 </Goal>
 </Simple_Goal>
-<Simple_Goal merge="6">
+<Simple_Goal>
 <Tag>Well definedness</Tag>
 <Goal>
 <Binary_Pred op="=>">
@@ -3685,7 +4040,7 @@
 </Binary_Pred>
 </Goal>
 </Simple_Goal>
-<Simple_Goal merge="7">
+<Simple_Goal>
 <Tag>Well definedness</Tag>
 <Goal>
 <Binary_Pred op="=>">
@@ -3708,7 +4063,7 @@
 </Binary_Pred>
 </Goal>
 </Simple_Goal>
-<Simple_Goal merge="8">
+<Simple_Goal>
 <Tag>Well definedness</Tag>
 <Goal>
 <Binary_Pred op="=>">
@@ -3727,7 +4082,7 @@
 </Binary_Pred>
 </Goal>
 </Simple_Goal>
-<Simple_Goal merge="9">
+<Simple_Goal>
 <Tag>Well definedness</Tag>
 <Goal>
 <Binary_Pred op="=>">
@@ -3752,7 +4107,7 @@
 </Goal>
 </Simple_Goal>
 </Proof_Obligation>
-<Proof_Obligation merge="=">
+<Proof_Obligation>
 <Comment>Operations dans une machine abstraite</Comment>
 <Tag>WellDefinedness_Stop_up</Tag>
 <Tag>INVARIANT</Tag>
@@ -3833,7 +4188,7 @@
 </Unary_Pred>
 </Nary_Pred>
 </Hypothesis>
-<Simple_Goal merge="0">
+<Simple_Goal>
 <Tag>Well definedness</Tag>
 <Goal>
 <Exp_Comparison op=":">
@@ -3844,7 +4199,7 @@
 </Exp_Comparison>
 </Goal>
 </Simple_Goal>
-<Simple_Goal merge="1">
+<Simple_Goal>
 <Tag>Well definedness</Tag>
 <Goal>
 <Exp_Comparison op=":">
@@ -3860,7 +4215,7 @@
 </Exp_Comparison>
 </Goal>
 </Simple_Goal>
-<Simple_Goal merge="2">
+<Simple_Goal>
 <Tag>Well definedness</Tag>
 <Goal>
 <Exp_Comparison op=":">
@@ -3871,7 +4226,7 @@
 </Exp_Comparison>
 </Goal>
 </Simple_Goal>
-<Simple_Goal merge="3">
+<Simple_Goal>
 <Tag>Well definedness</Tag>
 <Goal>
 <Exp_Comparison op=":">
@@ -3888,7 +4243,7 @@
 </Goal>
 </Simple_Goal>
 </Proof_Obligation>
-<Proof_Obligation merge="=">
+<Proof_Obligation>
 <Comment>Operations dans une machine abstraite</Comment>
 <Tag>WellDefinedness_Precondition_Stop_dn</Tag>
 <Tag>INVARIANT</Tag>
@@ -3943,7 +4298,7 @@
 <Id tag="D:\Users\T0164919\bmethod\Atelier B free 4.2.1\Projects\LiftSys\bdp\Lift.bxml:1:7:6:2:1:1:2" typref="729739904" value="moving"/>
 </Exp_Comparison>
 </Local_Hyp>
-<Simple_Goal merge="0">
+<Simple_Goal>
 <Tag>Well definedness</Tag>
 <Goal>
 <Binary_Pred op="=>">
@@ -3957,7 +4312,7 @@
 </Binary_Pred>
 </Goal>
 </Simple_Goal>
-<Simple_Goal merge="1">
+<Simple_Goal>
 <Tag>Well definedness</Tag>
 <Goal>
 <Binary_Pred op="=>">
@@ -3976,7 +4331,7 @@
 </Binary_Pred>
 </Goal>
 </Simple_Goal>
-<Simple_Goal merge="2">
+<Simple_Goal>
 <Tag>Well definedness</Tag>
 <Goal>
 <Binary_Pred op="=>">
@@ -3993,7 +4348,7 @@
 </Binary_Pred>
 </Goal>
 </Simple_Goal>
-<Simple_Goal merge="3">
+<Simple_Goal>
 <Tag>Well definedness</Tag>
 <Goal>
 <Binary_Pred op="=>">
@@ -4015,7 +4370,7 @@
 </Binary_Pred>
 </Goal>
 </Simple_Goal>
-<Simple_Goal merge="4">
+<Simple_Goal>
 <Tag>Well definedness</Tag>
 <Goal>
 <Binary_Pred op="=>">
@@ -4033,7 +4388,7 @@
 </Binary_Pred>
 </Goal>
 </Simple_Goal>
-<Simple_Goal merge="5">
+<Simple_Goal>
 <Tag>Well definedness</Tag>
 <Goal>
 <Binary_Pred op="=>">
@@ -4056,7 +4411,7 @@
 </Binary_Pred>
 </Goal>
 </Simple_Goal>
-<Simple_Goal merge="6">
+<Simple_Goal>
 <Tag>Well definedness</Tag>
 <Goal>
 <Binary_Pred op="=>">
@@ -4074,7 +4429,7 @@
 </Binary_Pred>
 </Goal>
 </Simple_Goal>
-<Simple_Goal merge="7">
+<Simple_Goal>
 <Tag>Well definedness</Tag>
 <Goal>
 <Binary_Pred op="=>">
@@ -4097,7 +4452,7 @@
 </Binary_Pred>
 </Goal>
 </Simple_Goal>
-<Simple_Goal merge="8">
+<Simple_Goal>
 <Tag>Well definedness</Tag>
 <Goal>
 <Binary_Pred op="=>">
@@ -4116,7 +4471,7 @@
 </Binary_Pred>
 </Goal>
 </Simple_Goal>
-<Simple_Goal merge="9">
+<Simple_Goal>
 <Tag>Well definedness</Tag>
 <Goal>
 <Binary_Pred op="=>">
@@ -4141,7 +4496,7 @@
 </Goal>
 </Simple_Goal>
 </Proof_Obligation>
-<Proof_Obligation merge="=">
+<Proof_Obligation>
 <Comment>Operations dans une machine abstraite</Comment>
 <Tag>WellDefinedness_Stop_dn</Tag>
 <Tag>INVARIANT</Tag>
@@ -4222,7 +4577,7 @@
 </Unary_Pred>
 </Nary_Pred>
 </Hypothesis>
-<Simple_Goal merge="0">
+<Simple_Goal>
 <Tag>Well definedness</Tag>
 <Goal>
 <Exp_Comparison op=":">
@@ -4233,7 +4588,7 @@
 </Exp_Comparison>
 </Goal>
 </Simple_Goal>
-<Simple_Goal merge="1">
+<Simple_Goal>
 <Tag>Well definedness</Tag>
 <Goal>
 <Exp_Comparison op=":">
@@ -4249,7 +4604,7 @@
 </Exp_Comparison>
 </Goal>
 </Simple_Goal>
-<Simple_Goal merge="2">
+<Simple_Goal>
 <Tag>Well definedness</Tag>
 <Goal>
 <Exp_Comparison op=":">
@@ -4260,7 +4615,7 @@
 </Exp_Comparison>
 </Goal>
 </Simple_Goal>
-<Simple_Goal merge="3">
+<Simple_Goal>
 <Tag>Well definedness</Tag>
 <Goal>
 <Exp_Comparison op=":">
@@ -4277,7 +4632,7 @@
 </Goal>
 </Simple_Goal>
 </Proof_Obligation>
-<Proof_Obligation merge="=">
+<Proof_Obligation>
 <Comment>Operations dans une machine abstraite</Comment>
 <Tag>WellDefinedness_Precondition_Depart_up</Tag>
 <Tag>INVARIANT</Tag>
@@ -4308,7 +4663,7 @@
 </Binary_Exp>
 </Exp_Comparison>
 </Local_Hyp>
-<Simple_Goal merge="0">
+<Simple_Goal>
 <Tag>Well definedness</Tag>
 <Goal>
 <Binary_Pred op="=>">
@@ -4322,7 +4677,7 @@
 </Binary_Pred>
 </Goal>
 </Simple_Goal>
-<Simple_Goal merge="1">
+<Simple_Goal>
 <Tag>Well definedness</Tag>
 <Goal>
 <Binary_Pred op="=>">
@@ -4341,7 +4696,7 @@
 </Binary_Pred>
 </Goal>
 </Simple_Goal>
-<Simple_Goal merge="2">
+<Simple_Goal>
 <Tag>Well definedness</Tag>
 <Goal>
 <Binary_Pred op="=>">
@@ -4358,7 +4713,7 @@
 </Binary_Pred>
 </Goal>
 </Simple_Goal>
-<Simple_Goal merge="3">
+<Simple_Goal>
 <Tag>Well definedness</Tag>
 <Goal>
 <Binary_Pred op="=>">
@@ -4381,7 +4736,7 @@
 </Goal>
 </Simple_Goal>
 </Proof_Obligation>
-<Proof_Obligation merge="=">
+<Proof_Obligation>
 <Comment>Operations dans une machine abstraite</Comment>
 <Tag>WellDefinedness_Depart_up</Tag>
 <Tag>INVARIANT</Tag>
@@ -4438,7 +4793,7 @@
 </Exp_Comparison>
 </Nary_Pred>
 </Hypothesis>
-<Simple_Goal merge="0">
+<Simple_Goal>
 <Tag>Well definedness</Tag>
 <Goal>
 <Exp_Comparison op=":">
@@ -4449,7 +4804,7 @@
 </Exp_Comparison>
 </Goal>
 </Simple_Goal>
-<Simple_Goal merge="1">
+<Simple_Goal>
 <Tag>Well definedness</Tag>
 <Goal>
 <Exp_Comparison op=":">
@@ -4466,7 +4821,7 @@
 </Goal>
 </Simple_Goal>
 </Proof_Obligation>
-<Proof_Obligation merge="=">
+<Proof_Obligation>
 <Comment>Operations dans une machine abstraite</Comment>
 <Tag>WellDefinedness_Precondition_Depart_dn</Tag>
 <Tag>INVARIANT</Tag>
@@ -4497,7 +4852,7 @@
 </Binary_Exp>
 </Exp_Comparison>
 </Local_Hyp>
-<Simple_Goal merge="0">
+<Simple_Goal>
 <Tag>Well definedness</Tag>
 <Goal>
 <Binary_Pred op="=>">
@@ -4511,7 +4866,7 @@
 </Binary_Pred>
 </Goal>
 </Simple_Goal>
-<Simple_Goal merge="1">
+<Simple_Goal>
 <Tag>Well definedness</Tag>
 <Goal>
 <Binary_Pred op="=>">
@@ -4530,7 +4885,7 @@
 </Binary_Pred>
 </Goal>
 </Simple_Goal>
-<Simple_Goal merge="2">
+<Simple_Goal>
 <Tag>Well definedness</Tag>
 <Goal>
 <Binary_Pred op="=>">
@@ -4547,7 +4902,7 @@
 </Binary_Pred>
 </Goal>
 </Simple_Goal>
-<Simple_Goal merge="3">
+<Simple_Goal>
 <Tag>Well definedness</Tag>
 <Goal>
 <Binary_Pred op="=>">
@@ -4570,7 +4925,7 @@
 </Goal>
 </Simple_Goal>
 </Proof_Obligation>
-<Proof_Obligation merge="=">
+<Proof_Obligation>
 <Comment>Operations dans une machine abstraite</Comment>
 <Tag>WellDefinedness_Depart_dn</Tag>
 <Tag>INVARIANT</Tag>
@@ -4627,7 +4982,7 @@
 </Exp_Comparison>
 </Nary_Pred>
 </Hypothesis>
-<Simple_Goal merge="0">
+<Simple_Goal>
 <Tag>Well definedness</Tag>
 <Goal>
 <Exp_Comparison op=":">
@@ -4638,7 +4993,7 @@
 </Exp_Comparison>
 </Goal>
 </Simple_Goal>
-<Simple_Goal merge="1">
+<Simple_Goal>
 <Tag>Well definedness</Tag>
 <Goal>
 <Exp_Comparison op=":">
@@ -4655,7 +5010,7 @@
 </Goal>
 </Simple_Goal>
 </Proof_Obligation>
-<Proof_Obligation merge="=">
+<Proof_Obligation>
 <Comment>Operations dans une machine abstraite</Comment>
 <Tag>WellDefinedness_Precondition_Change_up_to_dn</Tag>
 <Tag>INVARIANT</Tag>
@@ -4716,7 +5071,7 @@
 </Binary_Exp>
 </Exp_Comparison>
 </Local_Hyp>
-<Simple_Goal merge="0">
+<Simple_Goal>
 <Tag>Well definedness</Tag>
 <Goal>
 <Binary_Pred op="=>">
@@ -4730,7 +5085,7 @@
 </Binary_Pred>
 </Goal>
 </Simple_Goal>
-<Simple_Goal merge="1">
+<Simple_Goal>
 <Tag>Well definedness</Tag>
 <Goal>
 <Binary_Pred op="=>">
@@ -4749,7 +5104,7 @@
 </Binary_Pred>
 </Goal>
 </Simple_Goal>
-<Simple_Goal merge="2">
+<Simple_Goal>
 <Tag>Well definedness</Tag>
 <Goal>
 <Binary_Pred op="=>">
@@ -4766,7 +5121,7 @@
 </Binary_Pred>
 </Goal>
 </Simple_Goal>
-<Simple_Goal merge="3">
+<Simple_Goal>
 <Tag>Well definedness</Tag>
 <Goal>
 <Binary_Pred op="=>">
@@ -4788,7 +5143,7 @@
 </Binary_Pred>
 </Goal>
 </Simple_Goal>
-<Simple_Goal merge="4">
+<Simple_Goal>
 <Tag>Well definedness</Tag>
 <Goal>
 <Binary_Pred op="=>">
@@ -4806,7 +5161,7 @@
 </Binary_Pred>
 </Goal>
 </Simple_Goal>
-<Simple_Goal merge="5">
+<Simple_Goal>
 <Tag>Well definedness</Tag>
 <Goal>
 <Binary_Pred op="=>">
@@ -4830,7 +5185,7 @@
 </Goal>
 </Simple_Goal>
 </Proof_Obligation>
-<Proof_Obligation merge="=">
+<Proof_Obligation>
 <Comment>Operations dans une machine abstraite</Comment>
 <Tag>WellDefinedness_Change_up_to_dn</Tag>
 <Tag>INVARIANT</Tag>
@@ -4915,7 +5270,7 @@
 </Exp_Comparison>
 </Nary_Pred>
 </Hypothesis>
-<Simple_Goal merge="0">
+<Simple_Goal>
 <Tag>Well definedness</Tag>
 <Goal>
 <Exp_Comparison op=":">
@@ -4926,7 +5281,7 @@
 </Exp_Comparison>
 </Goal>
 </Simple_Goal>
-<Simple_Goal merge="1">
+<Simple_Goal>
 <Tag>Well definedness</Tag>
 <Goal>
 <Exp_Comparison op=":">
@@ -4943,7 +5298,7 @@
 </Goal>
 </Simple_Goal>
 </Proof_Obligation>
-<Proof_Obligation merge="=">
+<Proof_Obligation>
 <Comment>Operations dans une machine abstraite</Comment>
 <Tag>WellDefinedness_Precondition_Change_dn_to_up</Tag>
 <Tag>INVARIANT</Tag>
@@ -5004,7 +5359,7 @@
 </Binary_Exp>
 </Exp_Comparison>
 </Local_Hyp>
-<Simple_Goal merge="0">
+<Simple_Goal>
 <Tag>Well definedness</Tag>
 <Goal>
 <Binary_Pred op="=>">
@@ -5018,7 +5373,7 @@
 </Binary_Pred>
 </Goal>
 </Simple_Goal>
-<Simple_Goal merge="1">
+<Simple_Goal>
 <Tag>Well definedness</Tag>
 <Goal>
 <Binary_Pred op="=>">
@@ -5037,7 +5392,7 @@
 </Binary_Pred>
 </Goal>
 </Simple_Goal>
-<Simple_Goal merge="2">
+<Simple_Goal>
 <Tag>Well definedness</Tag>
 <Goal>
 <Binary_Pred op="=>">
@@ -5054,7 +5409,7 @@
 </Binary_Pred>
 </Goal>
 </Simple_Goal>
-<Simple_Goal merge="3">
+<Simple_Goal>
 <Tag>Well definedness</Tag>
 <Goal>
 <Binary_Pred op="=>">
@@ -5076,7 +5431,7 @@
 </Binary_Pred>
 </Goal>
 </Simple_Goal>
-<Simple_Goal merge="4">
+<Simple_Goal>
 <Tag>Well definedness</Tag>
 <Goal>
 <Binary_Pred op="=>">
@@ -5094,7 +5449,7 @@
 </Binary_Pred>
 </Goal>
 </Simple_Goal>
-<Simple_Goal merge="5">
+<Simple_Goal>
 <Tag>Well definedness</Tag>
 <Goal>
 <Binary_Pred op="=>">
@@ -5118,7 +5473,7 @@
 </Goal>
 </Simple_Goal>
 </Proof_Obligation>
-<Proof_Obligation merge="=">
+<Proof_Obligation>
 <Comment>Operations dans une machine abstraite</Comment>
 <Tag>WellDefinedness_Change_dn_to_up</Tag>
 <Tag>INVARIANT</Tag>
@@ -5203,7 +5558,7 @@
 </Exp_Comparison>
 </Nary_Pred>
 </Hypothesis>
-<Simple_Goal merge="0">
+<Simple_Goal>
 <Tag>Well definedness</Tag>
 <Goal>
 <Exp_Comparison op=":">
@@ -5214,7 +5569,7 @@
 </Exp_Comparison>
 </Goal>
 </Simple_Goal>
-<Simple_Goal merge="1">
+<Simple_Goal>
 <Tag>Well definedness</Tag>
 <Goal>
 <Exp_Comparison op=":">
@@ -5231,7 +5586,7 @@
 </Goal>
 </Simple_Goal>
 </Proof_Obligation>
-<TypeInfos merge="=">
+<TypeInfos>
 <Type id="729739904">
 <Unary_Exp op="POW">
 <Id tag="D:\Users\T0164919\bmethod\Atelier B free 4.2.1\Projects\LiftSys\bdp\Lift.bxml:1:8:1:1:1" value="LIFT"/>

@@ -1,3 +1,6 @@
+﻿THEORY User_Pass IS
+Operation(Initialisation) & ff(0) & dd & mp
+END &
 /* Lift
  * Author: T0164919
  * Creation date: 7/9/2015

@@ -1,6 +1,6 @@
 /* Lift
- * Author∈ T0164919
- * Creation date∈ 7÷8÷2015
+ * Author: T0164919
+ * Creation date: 7/8/2015
  */
 MACHINE
     Lift
@@ -12,8 +12,10 @@ SETS
 CONSTANTS
 
     ground_floor, top_floor
-    /*WARNING∈ top is a reserved word ⇾ top of a tree 5.21 ⇒ Renamed top_floor*/
-
+    /*
+    WARNING: top is a reserved word -> top of a tree 5.21 => Renamed top_floor
+             Renamed ground to ground_floor to mantain consistency with top_floor
+    */
     
 PROPERTIES
     ground_floor ∈ NAT ∧
@@ -26,12 +28,13 @@ DEFINITIONS
     attracted_dn(ll) == (dom(in) ∪ out[{ll}]) ∩ (ground_floor..(current_floor(ll) - 1)) ≠ ∅;
     can_continue_up(ll) == (ll↦current_floor(ll)) ∉ out ∧ (current_floor(ll)↦dir(ll)) ∉ in ∧ attracted_up(ll);
     can_continue_dn(ll) == (ll↦current_floor(ll)) ∉ out ∧ (current_floor(ll)↦dir(ll)) ∉ in ∧ attracted_dn(ll)
+
 ABSTRACT_VARIABLES
     moving, current_floor, dir, in, out
-    /*WARNING|∈ floor is a reserved word ⇒ Renamed current_floor*/
+    /*WARNING: floor is a reserved word => Renamed current_floor*/
 INVARIANT
     moving ⊆ LIFT ∧
-    current_floor ∈ LIFT --> FLOOR ∧
+    current_floor ∈ LIFT → FLOOR ∧
     dir ∈ LIFT → DIRECTION ∧
     in∈ FLOOR ↔ DIRECTION ∧
     out ∈ LIFT ↔ FLOOR ∧
@@ -45,14 +48,15 @@ INITIALISATION
     current_floor, dir := LIFT * {ground_floor}, LIFT * {up}
     
 OPERATIONS
-    Request_Floor(ll,ff)=
-    /*WARNING∈ f,l identifiers shorter than 2 letters ⇒ renamed ll,ff*/
+    
+Request_Floor(ll,ff)=
+    /*WARNING: f,l identifiers shorter than 2 letters => renamed ll,ff*/
         PRE 
             ll ∈ LIFT ∧
             ff ∈ FLOOR ∧
-            (ll∉ moving ⇒ current_floor(ll) /= ff )
+            (ll∉ moving ⇒ current_floor(ll) ≠ ff )
         THEN
-            out:= out  ∪ {ll↦ff}
+            out:= out ∪ {ll↦ff}
         END;
         
     Request_Lift(ff,dd)=
@@ -77,8 +81,8 @@ OPERATIONS
      
       Continue_dn(ll) =
      PRE
-             ll: moving &
-         dir(ll) = dn &
+         ll∈ moving ∧
+         dir(ll) = dn ∧
          can_continue_dn(ll)
      THEN
          current_floor(ll) := current_floor(ll) - 1
@@ -86,13 +90,13 @@ OPERATIONS
         
      Stop_up(ll) =
      PRE
-         ll:moving &
-         dir(ll) = up &
-         not(can_continue_up(ll))
+         ll∈moving ∧
+         dir(ll) = up ∧
+         ¬(can_continue_up(ll))
     THEN
-        moving:=moving - {ll} ||
-        out := out - {ll|->current_floor(ll)} ||
-        in:= in - {current_floor(ll) |-> dir(ll)}
+        moving := moving - {ll} ||
+        out := out - {ll↦current_floor(ll)} ||
+        in  := in  - {current_floor(ll) ↦ dir(ll)}
     END;
     
     Stop_dn(ll) =
@@ -101,50 +105,50 @@ OPERATIONS
          dir(ll) = dn ∧
          ¬(can_continue_dn(ll))
     THEN
-        moving:=moving - {ll} ||
+        moving :=moving - {ll} ||
         out := out - {ll↦current_floor(ll)} ||
-        in:= in - {current_floor(ll) ↦ dir(ll)}
+        in  := in - {current_floor(ll) ↦ dir(ll)}
     END;
     
     Depart_up(ll) =
     PRE
-        ll: LIFT - moving &
-        dir(ll) = up &
+        ll∈ LIFT - moving ∧
+        dir(ll) = up ∧
         attracted_up(ll)
     THEN
-        moving := moving \/ {ll} || 
+        moving := moving ∪ {ll} || 
         current_floor(ll) := current_floor(ll) + 1
     END;
     
     Depart_dn(ll) = 
     PRE
-        ll: LIFT - moving &
-        dir(ll) = dn &
+        ll∈ LIFT - moving ∧
+        dir(ll) = dn ∧
         attracted_dn(ll)
     THEN
-        moving := moving \/ {ll} || 
+        moving := moving ∪ {ll} || 
         current_floor(ll) := current_floor(ll) - 1
     END;
    
    Change_up_to_dn(ll) =
    PRE
-        ll: LIFT - moving &
-        dir(ll) = up &
-        not(attracted_up(ll)) &
+        ll∈ LIFT - moving ∧
+        dir(ll) = up ∧
+        ¬(attracted_up(ll)) ∧
         attracted_dn(ll)
    THEN
-       in:= in - {current_floor(ll)|->dn} ||
+       in:= in - {current_floor(ll)↦dn} ||
        dir(ll):=dn
    END;
    
    Change_dn_to_up(ll) =
    PRE
-        ll: LIFT - moving &
-        dir(ll) = dn &
-        not(attracted_dn(ll)) &
+        ll∈ LIFT - moving ∧
+        dir(ll) = dn ∧
+        ¬(attracted_dn(ll)) ∧
         attracted_up(ll)
    THEN
-       in:= in - {current_floor(ll)|->up} ||
+       in:= in - {current_floor(ll)↦up} ||
        dir(ll):=up
    END
 END
