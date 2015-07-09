@@ -1,0 +1,8 @@
+{
+  "template": "template.html",
+  "model": "model/MLift.bcm",
+  "autoOpen": [
+    "CurrentTrace",
+    "Events"
+  ]
+}
