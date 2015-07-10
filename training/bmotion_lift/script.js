@@ -41,7 +41,7 @@ requirejs(['bmotion.template'], function (bms) {
         selector: "text[data-floor]",
         formulas: ["cur_floor"],
         trigger: function (origin, data) {
-            origin.attr("fill", origin.attr("data-floor") === data[0] ? "green" : "red");
+            origin.attr("font-weight", origin.attr("data-floor") === data[0] ? "bold" : "none");
         }
     });
 	
