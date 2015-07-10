@@ -1,6 +1,6 @@
 requirejs(['bmotion.template'], function (bms) {
-	
-	//Formula Observer Displaying the Current Floor
+
+	// Formula Observer Displaying the Current Floor
 	bms.observe("formula", {
 	  selector: "#txt_cur_floor",
 	  formulas: ["cur_floor"],
@@ -9,7 +9,7 @@ requirejs(['bmotion.template'], function (bms) {
 	  }
 	});
 	
-	//Formula Observer for the Lift Door
+	// Formula Observer for the Lift and Door
 	bms.observe("formula", {
 	  selector: "#door",
 	  formulas: ["cur_floor", "door_open"],
@@ -36,7 +36,25 @@ requirejs(['bmotion.template'], function (bms) {
 	  }
 	});
 	
-	//Interactive Feature
+	//Observer color current floor
+	bms.observe("formula", {
+        selector: "text[data-floor]",
+        formulas: ["cur_floor"],
+        trigger: function (origin, data) {
+            origin.attr("fill", origin.attr("data-floor") === data[0] ? "green" : "red");
+        }
+    });
+	
+	// Observer for direction
+	bms.observe("formula", {
+        selector: "#txt_direction",
+        formulas: ["direction_up"],
+        trigger: function (origin, result) {
+            result[0] == "TRUE" ? origin.text('Moving: UP') : origin.text('Moving: DOWN');
+        }
+    });
+	
+	// Interactive Feature: push call button
 	bms.executeEvent({
 	  selector: "text[data-floor]",
 	  events: [
@@ -49,8 +67,7 @@ requirejs(['bmotion.template'], function (bms) {
 	  ]
 	});
 
-	
-	//Interaction with the Lift Door
+	// Interactive with the Lift Door
 	bms.executeEvent({
 	  selector: "#door",
 	  events: [
@@ -58,5 +75,17 @@ requirejs(['bmotion.template'], function (bms) {
 		{ name: "open_door" }
 	  ]
 	});
+
+	// Event button move up
+	bms.executeEvent({
+        selector: "#bt_move_up",
+        events: [{name: "move_up"}, {name: "reverse_lift_up"}]
+    });
+
+	// Event button move down
+    bms.executeEvent({
+        selector: "#bt_move_down",
+        events: [{name: "move_down"}, {name: "reverse_lift_down"}]
+    });
 	
 });
