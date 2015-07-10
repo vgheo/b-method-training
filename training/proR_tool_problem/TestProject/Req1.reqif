@@ -1,0 +1,443 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REQ-IF xmlns="http://www.omg.org/spec/ReqIF/20110401/reqif.xsd" xmlns:configuration="http://eclipse.org/rmf/pror/toolextensions/1.0" xmlns:headline="http://pror.org/presentation/headline" xmlns:highlight="http://formalmind.com/pror/presentation/highlight" xmlns:id="http://pror.org/presentation/id" xmlns:linewrap="http://pror.org/presentation/linewrap">
+  <THE-HEADER>
+    <REQ-IF-HEADER IDENTIFIER="rmf-35bfca2c-0aa1-46c3-bf25-24a2e74b9d08">
+      <COMMENT>Created by: T0164930</COMMENT>
+      <CREATION-TIME>2015-07-08T11:57:04.595+03:00</CREATION-TIME>
+      <REQ-IF-TOOL-ID>ProR (http://pror.org)</REQ-IF-TOOL-ID>
+      <REQ-IF-VERSION>1.0</REQ-IF-VERSION>
+      <SOURCE-TOOL-ID>ProR (http://pror.org)</SOURCE-TOOL-ID>
+      <TITLE>First document</TITLE>
+    </REQ-IF-HEADER>
+  </THE-HEADER>
+  <CORE-CONTENT>
+    <REQ-IF-CONTENT>
+      <DATATYPES>
+        <DATATYPE-DEFINITION-STRING IDENTIFIER="_TgKEIiVPEeWtQNBnSmbyPw" LAST-CHANGE="2015-07-08T11:57:04.595+03:00" LONG-NAME="T_String32k" MAX-LENGTH="32000"/>
+        <DATATYPE-DEFINITION-STRING IDENTIFIER="_ejflACVrEeWtQNBnSmbyPw" LAST-CHANGE="2015-07-08T15:18:29.134+03:00" LONG-NAME="T_ID"/>
+        <DATATYPE-DEFINITION-STRING IDENTIFIER="_vYoIICYFEeWvr_B-MeG_kg" LAST-CHANGE="2015-07-09T09:42:55.586+03:00" LONG-NAME="T_Headline" MAX-LENGTH="50"/>
+      </DATATYPES>
+      <SPEC-TYPES>
+        <SPEC-OBJECT-TYPE IDENTIFIER="_TgKEIyVPEeWtQNBnSmbyPw" LAST-CHANGE="2015-07-08T11:57:04.595+03:00" LONG-NAME="Requirement Type">
+          <SPEC-ATTRIBUTES>
+            <ATTRIBUTE-DEFINITION-STRING IDENTIFIER="_TgKEJCVPEeWtQNBnSmbyPw" LAST-CHANGE="2015-07-08T11:57:04.595+03:00" LONG-NAME="Description">
+              <TYPE>
+                <DATATYPE-DEFINITION-STRING-REF>_TgKEIiVPEeWtQNBnSmbyPw</DATATYPE-DEFINITION-STRING-REF>
+              </TYPE>
+            </ATTRIBUTE-DEFINITION-STRING>
+            <ATTRIBUTE-DEFINITION-STRING IDENTIFIER="_yxvZQCVmEeWtQNBnSmbyPw" LAST-CHANGE="2015-07-08T14:45:10.664+03:00" LONG-NAME="ID">
+              <TYPE>
+                <DATATYPE-DEFINITION-STRING-REF>_ejflACVrEeWtQNBnSmbyPw</DATATYPE-DEFINITION-STRING-REF>
+              </TYPE>
+            </ATTRIBUTE-DEFINITION-STRING>
+            <ATTRIBUTE-DEFINITION-STRING IDENTIFIER="_-9MCcCVmEeWtQNBnSmbyPw" LAST-CHANGE="2015-07-08T14:46:32.574+03:00" LONG-NAME="Owner">
+              <TYPE>
+                <DATATYPE-DEFINITION-STRING-REF>_TgKEIiVPEeWtQNBnSmbyPw</DATATYPE-DEFINITION-STRING-REF>
+              </TYPE>
+            </ATTRIBUTE-DEFINITION-STRING>
+            <ATTRIBUTE-DEFINITION-STRING IDENTIFIER="_UO1MICYMEeWvr_B-MeG_kg" LAST-CHANGE="2015-07-09T10:29:58.996+03:00" LONG-NAME="Headt">
+              <TYPE>
+                <DATATYPE-DEFINITION-STRING-REF>_vYoIICYFEeWvr_B-MeG_kg</DATATYPE-DEFINITION-STRING-REF>
+              </TYPE>
+            </ATTRIBUTE-DEFINITION-STRING>
+          </SPEC-ATTRIBUTES>
+        </SPEC-OBJECT-TYPE>
+        <SPECIFICATION-TYPE IDENTIFIER="_TgKEJSVPEeWtQNBnSmbyPw" LAST-CHANGE="2015-07-08T11:57:04.595+03:00" LONG-NAME="Specification Type">
+          <SPEC-ATTRIBUTES>
+            <ATTRIBUTE-DEFINITION-STRING IDENTIFIER="_TgKEJiVPEeWtQNBnSmbyPw" LAST-CHANGE="2015-07-08T11:57:04.595+03:00" LONG-NAME="Description">
+              <TYPE>
+                <DATATYPE-DEFINITION-STRING-REF>_TgKEIiVPEeWtQNBnSmbyPw</DATATYPE-DEFINITION-STRING-REF>
+              </TYPE>
+            </ATTRIBUTE-DEFINITION-STRING>
+          </SPEC-ATTRIBUTES>
+        </SPECIFICATION-TYPE>
+        <SPEC-OBJECT-TYPE IDENTIFIER="_YKso8CYFEeWvr_B-MeG_kg" LAST-CHANGE="2015-07-09T09:40:06.827+03:00" LONG-NAME="Headline Type">
+          <SPEC-ATTRIBUTES>
+            <ATTRIBUTE-DEFINITION-STRING IDENTIFIER="_frXlECYFEeWvr_B-MeG_kg" LAST-CHANGE="2015-07-09T09:41:08.798+03:00" LONG-NAME="Description">
+              <TYPE>
+                <DATATYPE-DEFINITION-STRING-REF>_vYoIICYFEeWvr_B-MeG_kg</DATATYPE-DEFINITION-STRING-REF>
+              </TYPE>
+            </ATTRIBUTE-DEFINITION-STRING>
+          </SPEC-ATTRIBUTES>
+        </SPEC-OBJECT-TYPE>
+        <SPECIFICATION-TYPE IDENTIFIER="_z8qCECYHEeWvr_B-MeG_kg" LAST-CHANGE="2015-07-09T09:57:41.732+03:00" LONG-NAME="Specification">
+          <SPEC-ATTRIBUTES>
+            <ATTRIBUTE-DEFINITION-STRING IDENTIFIER="_5BaVYCYHEeWvr_B-MeG_kg" LAST-CHANGE="2015-07-09T09:58:00.724+03:00" LONG-NAME="Description" IS-EDITABLE="true">
+              <TYPE>
+                <DATATYPE-DEFINITION-STRING-REF>_TgKEIiVPEeWtQNBnSmbyPw</DATATYPE-DEFINITION-STRING-REF>
+              </TYPE>
+            </ATTRIBUTE-DEFINITION-STRING>
+          </SPEC-ATTRIBUTES>
+        </SPECIFICATION-TYPE>
+        <SPEC-RELATION-TYPE IDENTIFIER="_bk8RgCYhEeWvr_B-MeG_kg" LAST-CHANGE="2015-07-09T13:01:04.750+03:00" LONG-NAME="Relation Type">
+          <SPEC-ATTRIBUTES>
+            <ATTRIBUTE-DEFINITION-STRING IDENTIFIER="_gpIkICYhEeWvr_B-MeG_kg" LAST-CHANGE="2015-07-09T13:01:45.077+03:00" LONG-NAME="Description">
+              <TYPE>
+                <DATATYPE-DEFINITION-STRING-REF>_TgKEIiVPEeWtQNBnSmbyPw</DATATYPE-DEFINITION-STRING-REF>
+              </TYPE>
+            </ATTRIBUTE-DEFINITION-STRING>
+          </SPEC-ATTRIBUTES>
+        </SPEC-RELATION-TYPE>
+      </SPEC-TYPES>
+      <SPEC-OBJECTS>
+        <SPEC-OBJECT IDENTIFIER="_TgKEJyVPEeWtQNBnSmbyPw" LAST-CHANGE="2015-07-09T09:54:19.314+03:00">
+          <VALUES>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="A ProR Tutorial">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_frXlECYFEeWvr_B-MeG_kg</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+          </VALUES>
+          <TYPE>
+            <SPEC-OBJECT-TYPE-REF>_YKso8CYFEeWvr_B-MeG_kg</SPEC-OBJECT-TYPE-REF>
+          </TYPE>
+        </SPEC-OBJECT>
+        <SPEC-OBJECT DESC="SPEC" IDENTIFIER="_9KC0YCVnEeWtQNBnSmbyPw" LAST-CHANGE="2015-07-09T15:15:29.889+03:00">
+          <VALUES>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="Long text for testing the display of the html format.">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_TgKEJCVPEeWtQNBnSmbyPw</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="REQ-1">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_yxvZQCVmEeWtQNBnSmbyPw</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_-9MCcCVmEeWtQNBnSmbyPw</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="headline type used here">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_UO1MICYMEeWvr_B-MeG_kg</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+          </VALUES>
+          <TYPE>
+            <SPEC-OBJECT-TYPE-REF>_TgKEIyVPEeWtQNBnSmbyPw</SPEC-OBJECT-TYPE-REF>
+          </TYPE>
+        </SPEC-OBJECT>
+        <SPEC-OBJECT IDENTIFIER="_lEoeICVoEeWtQNBnSmbyPw" LAST-CHANGE="2015-07-10T10:25:42.774+03:00">
+          <VALUES>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="REQ-1a">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_yxvZQCVmEeWtQNBnSmbyPw</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="First indented requirement">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_TgKEJCVPEeWtQNBnSmbyPw</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+          </VALUES>
+          <TYPE>
+            <SPEC-OBJECT-TYPE-REF>_TgKEIyVPEeWtQNBnSmbyPw</SPEC-OBJECT-TYPE-REF>
+          </TYPE>
+        </SPEC-OBJECT>
+        <SPEC-OBJECT IDENTIFIER="_0_2ksCVoEeWtQNBnSmbyPw" LAST-CHANGE="2015-07-09T13:24:29.244+03:00">
+          <VALUES>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="REQ4">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_yxvZQCVmEeWtQNBnSmbyPw</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="Linked relation">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_TgKEJCVPEeWtQNBnSmbyPw</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_-9MCcCVmEeWtQNBnSmbyPw</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+          </VALUES>
+          <TYPE>
+            <SPEC-OBJECT-TYPE-REF>_TgKEIyVPEeWtQNBnSmbyPw</SPEC-OBJECT-TYPE-REF>
+          </TYPE>
+        </SPEC-OBJECT>
+        <SPEC-OBJECT IDENTIFIER="_18z8MCVoEeWtQNBnSmbyPw" LAST-CHANGE="2015-07-10T10:26:31.338+03:00">
+          <VALUES>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="REQ5">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_yxvZQCVmEeWtQNBnSmbyPw</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="Linked Relation &amp; hierachy sibling">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_TgKEJCVPEeWtQNBnSmbyPw</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+          </VALUES>
+          <TYPE>
+            <SPEC-OBJECT-TYPE-REF>_TgKEIyVPEeWtQNBnSmbyPw</SPEC-OBJECT-TYPE-REF>
+          </TYPE>
+        </SPEC-OBJECT>
+        <SPEC-OBJECT IDENTIFIER="_3M_xsCVoEeWtQNBnSmbyPw" LAST-CHANGE="2015-07-10T10:26:13.913+03:00">
+          <VALUES>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="REQ3B">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_yxvZQCVmEeWtQNBnSmbyPw</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="Requirement within hierarchy">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_TgKEJCVPEeWtQNBnSmbyPw</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+          </VALUES>
+          <TYPE>
+            <SPEC-OBJECT-TYPE-REF>_TgKEIyVPEeWtQNBnSmbyPw</SPEC-OBJECT-TYPE-REF>
+          </TYPE>
+        </SPEC-OBJECT>
+        <SPEC-OBJECT IDENTIFIER="_BxXvYCVpEeWtQNBnSmbyPw" LAST-CHANGE="2015-07-08T15:01:09.013+03:00">
+          <VALUES>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="INF-2">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_yxvZQCVmEeWtQNBnSmbyPw</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="A new Hirearchy">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_TgKEJCVPEeWtQNBnSmbyPw</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="Tu">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_-9MCcCVmEeWtQNBnSmbyPw</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+          </VALUES>
+          <TYPE>
+            <SPEC-OBJECT-TYPE-REF>_TgKEIyVPEeWtQNBnSmbyPw</SPEC-OBJECT-TYPE-REF>
+          </TYPE>
+        </SPEC-OBJECT>
+        <SPEC-OBJECT IDENTIFIER="_PcQyECVpEeWtQNBnSmbyPw" LAST-CHANGE="2015-07-09T15:15:20.561+03:00">
+          <VALUES>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="REQ2">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_yxvZQCVmEeWtQNBnSmbyPw</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="Req linked to 2 other links">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_TgKEJCVPEeWtQNBnSmbyPw</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="&#x9;&#x9;&#x9;">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_-9MCcCVmEeWtQNBnSmbyPw</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+          </VALUES>
+          <TYPE>
+            <SPEC-OBJECT-TYPE-REF>_TgKEIyVPEeWtQNBnSmbyPw</SPEC-OBJECT-TYPE-REF>
+          </TYPE>
+        </SPEC-OBJECT>
+        <SPEC-OBJECT IDENTIFIER="_x1cEoCYMEeWvr_B-MeG_kg" LAST-CHANGE="2015-07-09T10:33:14.937+03:00">
+          <VALUES>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="Headline1">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_frXlECYFEeWvr_B-MeG_kg</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+          </VALUES>
+          <TYPE>
+            <SPEC-OBJECT-TYPE-REF>_YKso8CYFEeWvr_B-MeG_kg</SPEC-OBJECT-TYPE-REF>
+          </TYPE>
+        </SPEC-OBJECT>
+        <SPEC-OBJECT IDENTIFIER="_2K2lsSYMEeWvr_B-MeG_kg" LAST-CHANGE="2015-07-09T15:13:14.025+03:00">
+          <VALUES>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="REQ-12">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_yxvZQCVmEeWtQNBnSmbyPw</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="First spec b module">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_TgKEJCVPEeWtQNBnSmbyPw</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+          </VALUES>
+          <TYPE>
+            <SPEC-OBJECT-TYPE-REF>_TgKEIyVPEeWtQNBnSmbyPw</SPEC-OBJECT-TYPE-REF>
+          </TYPE>
+        </SPEC-OBJECT>
+      </SPEC-OBJECTS>
+      <SPEC-RELATIONS>
+        <SPEC-RELATION IDENTIFIER="_qA9HwCYkEeWvr_B-MeG_kg" LAST-CHANGE="2015-07-09T13:24:18.492+03:00">
+          <TARGET>
+            <SPEC-OBJECT-REF>_0_2ksCVoEeWtQNBnSmbyPw</SPEC-OBJECT-REF>
+          </TARGET>
+          <SOURCE>
+            <SPEC-OBJECT-REF>_PcQyECVpEeWtQNBnSmbyPw</SPEC-OBJECT-REF>
+          </SOURCE>
+          <TYPE>
+            <SPEC-RELATION-TYPE-REF>_bk8RgCYhEeWvr_B-MeG_kg</SPEC-RELATION-TYPE-REF>
+          </TYPE>
+        </SPEC-RELATION>
+        <SPEC-RELATION IDENTIFIER="_w40XcCYkEeWvr_B-MeG_kg" LAST-CHANGE="2015-07-09T13:25:04.615+03:00">
+          <VALUES>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="going link2">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_gpIkICYhEeWvr_B-MeG_kg</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+          </VALUES>
+          <TARGET>
+            <SPEC-OBJECT-REF>_18z8MCVoEeWtQNBnSmbyPw</SPEC-OBJECT-REF>
+          </TARGET>
+          <SOURCE>
+            <SPEC-OBJECT-REF>_PcQyECVpEeWtQNBnSmbyPw</SPEC-OBJECT-REF>
+          </SOURCE>
+          <TYPE>
+            <SPEC-RELATION-TYPE-REF>_bk8RgCYhEeWvr_B-MeG_kg</SPEC-RELATION-TYPE-REF>
+          </TYPE>
+        </SPEC-RELATION>
+      </SPEC-RELATIONS>
+      <SPECIFICATIONS>
+        <SPECIFICATION DESC="SpecDoc" IDENTIFIER="_TgKEKSVPEeWtQNBnSmbyPw" LAST-CHANGE="2015-07-09T10:32:00.204+03:00" LONG-NAME="Specification Document">
+          <VALUES>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="Spec module A">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_5BaVYCYHEeWvr_B-MeG_kg</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+          </VALUES>
+          <TYPE>
+            <SPECIFICATION-TYPE-REF>_z8qCECYHEeWvr_B-MeG_kg</SPECIFICATION-TYPE-REF>
+          </TYPE>
+          <CHILDREN>
+            <SPEC-HIERARCHY IDENTIFIER="_TgKEKyVPEeWtQNBnSmbyPw" LAST-CHANGE="2015-07-08T11:57:04.595+03:00">
+              <OBJECT>
+                <SPEC-OBJECT-REF>_TgKEJyVPEeWtQNBnSmbyPw</SPEC-OBJECT-REF>
+              </OBJECT>
+              <CHILDREN>
+                <SPEC-HIERARCHY IDENTIFIER="_9K2ssCVnEeWtQNBnSmbyPw" LAST-CHANGE="2015-07-08T14:52:40.444+03:00">
+                  <OBJECT>
+                    <SPEC-OBJECT-REF>_9KC0YCVnEeWtQNBnSmbyPw</SPEC-OBJECT-REF>
+                  </OBJECT>
+                  <CHILDREN>
+                    <SPEC-HIERARCHY IDENTIFIER="_lFR-YCVoEeWtQNBnSmbyPw" LAST-CHANGE="2015-07-08T14:57:55.686+03:00">
+                      <OBJECT>
+                        <SPEC-OBJECT-REF>_lEoeICVoEeWtQNBnSmbyPw</SPEC-OBJECT-REF>
+                      </OBJECT>
+                    </SPEC-HIERARCHY>
+                    <SPEC-HIERARCHY IDENTIFIER="_Pc65YCVpEeWtQNBnSmbyPw" LAST-CHANGE="2015-07-09T13:07:56.430+03:00">
+                      <OBJECT>
+                        <SPEC-OBJECT-REF>_PcQyECVpEeWtQNBnSmbyPw</SPEC-OBJECT-REF>
+                      </OBJECT>
+                    </SPEC-HIERARCHY>
+                  </CHILDREN>
+                </SPEC-HIERARCHY>
+              </CHILDREN>
+            </SPEC-HIERARCHY>
+            <SPEC-HIERARCHY IDENTIFIER="_Bx8-MCVpEeWtQNBnSmbyPw" LAST-CHANGE="2015-07-08T15:01:09.013+03:00">
+              <OBJECT>
+                <SPEC-OBJECT-REF>_BxXvYCVpEeWtQNBnSmbyPw</SPEC-OBJECT-REF>
+              </OBJECT>
+              <CHILDREN>
+                <SPEC-HIERARCHY IDENTIFIER="_zVdfcCVoEeWtQNBnSmbyPw" LAST-CHANGE="2015-07-08T15:01:20.622+03:00">
+                  <CHILDREN>
+                    <SPEC-HIERARCHY IDENTIFIER="_3NlAgCVoEeWtQNBnSmbyPw" LAST-CHANGE="2015-07-08T14:59:59.079+03:00">
+                      <OBJECT>
+                        <SPEC-OBJECT-REF>_3M_xsCVoEeWtQNBnSmbyPw</SPEC-OBJECT-REF>
+                      </OBJECT>
+                      <CHILDREN/>
+                    </SPEC-HIERARCHY>
+                    <SPEC-HIERARCHY IDENTIFIER="_1AePwCVoEeWtQNBnSmbyPw" LAST-CHANGE="2015-07-10T10:25:56.441+03:00">
+                      <OBJECT>
+                        <SPEC-OBJECT-REF>_0_2ksCVoEeWtQNBnSmbyPw</SPEC-OBJECT-REF>
+                      </OBJECT>
+                    </SPEC-HIERARCHY>
+                  </CHILDREN>
+                </SPEC-HIERARCHY>
+                <SPEC-HIERARCHY IDENTIFIER="_19bnQCVoEeWtQNBnSmbyPw" LAST-CHANGE="2015-07-08T15:01:23.189+03:00">
+                  <OBJECT>
+                    <SPEC-OBJECT-REF>_18z8MCVoEeWtQNBnSmbyPw</SPEC-OBJECT-REF>
+                  </OBJECT>
+                  <CHILDREN/>
+                </SPEC-HIERARCHY>
+              </CHILDREN>
+            </SPEC-HIERARCHY>
+          </CHILDREN>
+        </SPECIFICATION>
+        <SPECIFICATION IDENTIFIER="_sysjgCYMEeWvr_B-MeG_kg" LAST-CHANGE="2015-07-09T10:32:41.484+03:00">
+          <VALUES>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="Spec module B">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_5BaVYCYHEeWvr_B-MeG_kg</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+          </VALUES>
+          <TYPE>
+            <SPECIFICATION-TYPE-REF>_z8qCECYHEeWvr_B-MeG_kg</SPECIFICATION-TYPE-REF>
+          </TYPE>
+          <CHILDREN>
+            <SPEC-HIERARCHY IDENTIFIER="_x2DIoCYMEeWvr_B-MeG_kg" LAST-CHANGE="2015-07-09T10:33:14.937+03:00">
+              <OBJECT>
+                <SPEC-OBJECT-REF>_x1cEoCYMEeWvr_B-MeG_kg</SPEC-OBJECT-REF>
+              </OBJECT>
+              <CHILDREN>
+                <SPEC-HIERARCHY IDENTIFIER="_2K2lsCYMEeWvr_B-MeG_kg" LAST-CHANGE="2015-07-09T10:33:26.505+03:00">
+                  <OBJECT>
+                    <SPEC-OBJECT-REF>_2K2lsSYMEeWvr_B-MeG_kg</SPEC-OBJECT-REF>
+                  </OBJECT>
+                </SPEC-HIERARCHY>
+              </CHILDREN>
+            </SPEC-HIERARCHY>
+          </CHILDREN>
+        </SPECIFICATION>
+      </SPECIFICATIONS>
+    </REQ-IF-CONTENT>
+  </CORE-CONTENT>
+  <TOOL-EXTENSIONS>
+    <REQ-IF-TOOL-EXTENSION>
+      <configuration:ProrToolExtension>
+        <configuration:specViewConfigurations>
+          <configuration:ProrSpecViewConfiguration specification="_TgKEKSVPEeWtQNBnSmbyPw">
+            <configuration:columns>
+              <configuration:Column label="ID" width="154"/>
+              <configuration:Column label="Description" width="237"/>
+              <configuration:Column label="Owner" width="93"/>
+              <configuration:Column label="Headt" width="122"/>
+            </configuration:columns>
+            <configuration:leftHeaderColumn>
+              <configuration:Column label="Lead Header Column" width="81"/>
+            </configuration:leftHeaderColumn>
+          </configuration:ProrSpecViewConfiguration>
+          <configuration:ProrSpecViewConfiguration specification="_sysjgCYMEeWvr_B-MeG_kg">
+            <configuration:columns>
+              <configuration:Column label="Description" width="100"/>
+              <configuration:Column label="ID"/>
+            </configuration:columns>
+            <configuration:leftHeaderColumn>
+              <configuration:Column label="Lead Header Column" width="30"/>
+            </configuration:leftHeaderColumn>
+          </configuration:ProrSpecViewConfiguration>
+        </configuration:specViewConfigurations>
+        <configuration:generalConfiguration>
+          <configuration:ProrGeneralConfiguration>
+            <configuration:labelConfiguration>
+              <configuration:LabelConfiguration>
+                <defaultLabel>Description</defaultLabel>
+              </configuration:LabelConfiguration>
+            </configuration:labelConfiguration>
+          </configuration:ProrGeneralConfiguration>
+        </configuration:generalConfiguration>
+        <configuration:presentationConfigurations>
+          <configuration:ProrPresentationConfigurations>
+            <configuration:presentationConfigurations>
+              <id:IdConfiguration datatype="_ejflACVrEeWtQNBnSmbyPw" prefix="REQ-" count="12"/>
+              <headline:HeadlineConfiguration datatype="_vYoIICYFEeWvr_B-MeG_kg" size="14"/>
+              <linewrap:LinewrapConfiguration datatype="_TgKEIiVPEeWtQNBnSmbyPw"/>
+              <highlight:KeywordConfiguration/>
+            </configuration:presentationConfigurations>
+          </configuration:ProrPresentationConfigurations>
+        </configuration:presentationConfigurations>
+      </configuration:ProrToolExtension>
+    </REQ-IF-TOOL-EXTENSION>
+  </TOOL-EXTENSIONS>
+</REQ-IF>
