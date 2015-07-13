@@ -35,7 +35,7 @@ requirejs(['bmotion.template'], function (bms) {
 		
 	  }
 	});
-	
+// TODO: refactoring --------------------------------------------------------------	
 	// Formula Observer for floor 1 inside
 	bms.observe("formula", {
 	  selector: "#txt_floor1",
@@ -97,6 +97,7 @@ requirejs(['bmotion.template'], function (bms) {
 	  }
 	});
 	
+// -----------------------------------------------------------------------------------------	
 	// Observer bold call floor
 	//  NOTE.  call_buttons B Set is transferred as string.
 	// 
