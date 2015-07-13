@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <REQ-IF xmlns="http://www.omg.org/spec/ReqIF/20110401/reqif.xsd" xmlns:configuration="http://eclipse.org/rmf/pror/toolextensions/1.0" xmlns:headline="http://pror.org/presentation/headline" xmlns:id="http://pror.org/presentation/id">
   <THE-HEADER>
-    <REQ-IF-HEADER IDENTIFIER="rmf-938ada45-a0c1-44bb-847e-5d5d7cb4431f">
+    <REQ-IF-HEADER IDENTIFIER="rmf-9e0367f8-a490-44c0-854c-8efad047005b">
       <COMMENT>Created by: T0164930</COMMENT>
       <CREATION-TIME>2015-07-13T09:43:52.951+03:00</CREATION-TIME>
       <REQ-IF-TOOL-ID>ProR (http://pror.org)</REQ-IF-TOOL-ID>
@@ -16,7 +16,7 @@
         <DATATYPE-DEFINITION-STRING IDENTIFIER="_CT_ZICkrEeWbv7BPFqT3xQ" LAST-CHANGE="2015-07-13T09:47:27.442+03:00" LONG-NAME="T_ID"/>
         <DATATYPE-DEFINITION-STRING IDENTIFIER="_xD578CkrEeWbv7BPFqT3xQ" LAST-CHANGE="2015-07-13T09:52:38.971+03:00" LONG-NAME="T_Head"/>
         <DATATYPE-DEFINITION-STRING IDENTIFIER="_O7VagCkzEeWbv7BPFqT3xQ" LAST-CHANGE="2015-07-13T10:46:10.428+03:00" LONG-NAME="T_hie"/>
-        <DATATYPE-DEFINITION-ENUMERATION IDENTIFIER="_RnBEACk7EeWHCKo44py1aQ" LAST-CHANGE="2015-07-13T11:43:43.986+03:00" LONG-NAME="T_ReqType">
+        <DATATYPE-DEFINITION-ENUMERATION IDENTIFIER="_RnBEACk7EeWHCKo44py1aQ" LAST-CHANGE="2015-07-13T11:43:43.986+03:00" LONG-NAME="T_Category">
           <SPECIFIED-VALUES>
             <ENUM-VALUE IDENTIFIER="_GGofICk9EeWQcbFgs6cCBA" LAST-CHANGE="2015-07-13T11:56:45.188+03:00" LONG-NAME="Function">
               <PROPERTIES>
@@ -39,7 +39,7 @@
                 <DATATYPE-DEFINITION-STRING-REF>_hq9RcykqEeWbv7BPFqT3xQ</DATATYPE-DEFINITION-STRING-REF>
               </TYPE>
             </ATTRIBUTE-DEFINITION-STRING>
-            <ATTRIBUTE-DEFINITION-ENUMERATION IDENTIFIER="_scyXICk8EeWQcbFgs6cCBA" LAST-CHANGE="2015-07-13T11:53:53.621+03:00" LONG-NAME="Type">
+            <ATTRIBUTE-DEFINITION-ENUMERATION IDENTIFIER="_scyXICk8EeWQcbFgs6cCBA" LAST-CHANGE="2015-07-13T11:53:53.621+03:00" LONG-NAME="Category">
               <TYPE>
                 <DATATYPE-DEFINITION-ENUMERATION-REF>_RnBEACk7EeWHCKo44py1aQ</DATATYPE-DEFINITION-ENUMERATION-REF>
               </TYPE>
@@ -824,7 +824,7 @@
             <configuration:columns>
               <configuration:Column label="ID" width="107"/>
               <configuration:Column label="Description" width="603"/>
-              <configuration:Column label="Type" width="114"/>
+              <configuration:Column label="Category" width="114"/>
             </configuration:columns>
             <configuration:leftHeaderColumn>
               <configuration:Column label="Lead Header Column" width="47"/>
