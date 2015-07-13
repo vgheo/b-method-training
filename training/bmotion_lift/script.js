@@ -98,11 +98,14 @@ requirejs(['bmotion.template'], function (bms) {
 	});
 	
 	// Observer bold call floor
+	//  NOTE.  call_buttons B Set is transferred as string.
+	// 
 	bms.observe("formula", {
         selector: "text[data-floor]",      // id element grafic -> origin
         formulas: ["call_buttons"],        // (formule) variabile B -> data
         trigger: function (origin, data) {
 			
+			// Parse set from string into js list
 			var buttons = (data[0].replace(/{|}/g, "")).split(",");
 			//console.log("buttons = " + buttons);
 			
@@ -136,7 +139,8 @@ requirejs(['bmotion.template'], function (bms) {
         selector: "#txt_direction",
         formulas: ["direction_up"],
         trigger: function (origin, result) {
-            result[0] == "TRUE" ? origin.text('Direction: UP') : origin.text('Direction: DOWN');
+			var dir = result[0] == "TRUE" ? "UP" : "DOWN";
+			origin.text('Direction: '+dir);
         }
     });
 	
