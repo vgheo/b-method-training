@@ -1,0 +1,3 @@
+# ignore atelierb lock files
+.usedby*
+*.lock
