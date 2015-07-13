@@ -2,14 +2,14 @@ requirejs(['bmotion.template'], function (bms) {
 
 	// Formula Observer Displaying the Current Floor
 	bms.observe("formula", {
-	  selector: "#txt_cur_floor",
-	  formulas: ["cur_floor"],
+	  selector: "#txt_cur_floor",           // id element grafic -> origin
+	  formulas: ["cur_floor"],              // (formule) variabile B -> result
 	  trigger: function (origin, result) {
 		origin.text(result[0])
 	  }
 	});
 	
-	// Formula Observer for the Lift and Door
+	// Formula Observer for the Lift(move lift) and Door(white/gray)
 	bms.observe("formula", {
 	  selector: "#door",
 	  formulas: ["cur_floor", "door_open"],
@@ -36,12 +36,98 @@ requirejs(['bmotion.template'], function (bms) {
 	  }
 	});
 	
-	//Observer color current floor
+	// Formula Observer for floor 1 inside
 	bms.observe("formula", {
-        selector: "text[data-floor]",
-        formulas: ["cur_floor"],
+	  selector: "#txt_floor1",
+	  formulas: ["cur_floor"],
+	  trigger: function (origin, result) {
+		
+		switch (result[0]) {
+		  case "0":
+			origin.attr("y", "190");
+			break;
+		  case "1":
+			origin.attr("y", "75");
+			break;
+		  case "-1":
+			origin.attr("y", "290");
+			break;
+		}
+		
+	  }
+	});
+	// Formula Observer for floor 0 inside
+	bms.observe("formula", {
+	  selector: "#txt_floor0",
+	  formulas: ["cur_floor"],
+	  trigger: function (origin, result) {
+		
+		switch (result[0]) {
+		  case "0":
+			origin.attr("y", "220");
+			break;
+		  case "1":
+			origin.attr("y", "105");
+			break;
+		  case "-1":
+			origin.attr("y", "320");
+			break;
+		}
+		
+	  }
+	});
+	// Formula Observer for floor -1 inside
+	bms.observe("formula", {
+	  selector: "#txt_floor-1",
+	  formulas: ["cur_floor"],
+	  trigger: function (origin, result) {
+		
+		switch (result[0]) {
+		  case "0":
+			origin.attr("y", "250");
+			break;
+		  case "1":
+			origin.attr("y", "135");
+			break;
+		  case "-1":
+			origin.attr("y", "350");
+			break;
+		}
+		
+	  }
+	});
+	
+	// Observer bold call floor
+	bms.observe("formula", {
+        selector: "text[data-floor]",      // id element grafic -> origin
+        formulas: ["call_buttons"],        // (formule) variabile B -> data
         trigger: function (origin, data) {
-            origin.attr("font-weight", origin.attr("data-floor") === data[0] ? "bold" : "none");
+			
+			var buttons = (data[0].replace(/{|}/g, "")).split(",");
+			//console.log("buttons = " + buttons);
+			
+			if (buttons.indexOf(origin.attr("data-floor")) >= 0) {
+				//console.log("floor = " + origin.attr("data-floor"));
+				origin.attr("font-weight", "bold");
+			} else origin.attr("font-weight", "none");
+
+        }
+    });
+	
+	// Observer bold call floor inside
+	bms.observe("formula", {
+        selector: "text[data-floor_inside]",      // id element grafic -> origin
+        formulas: ["inside_buttons"],             // (formule) variabile B -> data
+        trigger: function (origin, data) {
+			
+			var buttons = (data[0].replace(/{|}/g, "")).split(",");
+			//console.log("buttons = " + buttons);
+			
+			if (buttons.indexOf(origin.attr("data-floor_inside")) >= 0) {
+				//console.log("floor = " + origin.attr("data-floor"));
+				origin.attr("font-weight", "bold");
+			} else origin.attr("font-weight", "none");
+
         }
     });
 	
@@ -50,7 +136,7 @@ requirejs(['bmotion.template'], function (bms) {
         selector: "#txt_direction",
         formulas: ["direction_up"],
         trigger: function (origin, result) {
-            result[0] == "TRUE" ? origin.text('Moving: UP') : origin.text('Moving: DOWN');
+            result[0] == "TRUE" ? origin.text('Direction: UP') : origin.text('Direction: DOWN');
         }
     });
 	
@@ -67,6 +153,19 @@ requirejs(['bmotion.template'], function (bms) {
 	  ]
 	});
 
+	// Interactive Feature: push inside button
+	bms.executeEvent({
+	  selector: "text[data-floor_inside]",
+	  events: [
+		{
+		  name: "push_inside_button", 
+		  predicate: function (origin) {
+			return "b=" + $(origin).attr("data-floor_inside")
+		  }
+		}
+	  ]
+	});
+	
 	// Interactive with the Lift Door
 	bms.executeEvent({
 	  selector: "#door",
@@ -79,13 +178,19 @@ requirejs(['bmotion.template'], function (bms) {
 	// Event button move up
 	bms.executeEvent({
         selector: "#bt_move_up",
-        events: [{name: "move_up"}, {name: "reverse_lift_up"}]
+        events: [{name: "move_up"}]
     });
 
 	// Event button move down
     bms.executeEvent({
         selector: "#bt_move_down",
-        events: [{name: "move_down"}, {name: "reverse_lift_down"}]
+        events: [{name: "move_down"}]
     });
 	
+	
+	// Event label direction
+    bms.executeEvent({
+        selector: "#txt_direction",
+        events: [{name: "reverse_lift_up"}, {name: "reverse_lift_down"}]
+    });
 });
