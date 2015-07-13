@@ -1,0 +1,885 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REQ-IF xmlns="http://www.omg.org/spec/ReqIF/20110401/reqif.xsd" xmlns:configuration="http://eclipse.org/rmf/pror/toolextensions/1.0" xmlns:headline="http://pror.org/presentation/headline" xmlns:id="http://pror.org/presentation/id">
+  <THE-HEADER>
+    <REQ-IF-HEADER IDENTIFIER="rmf-f83a6712-cb23-4221-aeb2-5b8e696b7773">
+      <COMMENT>Created by: T0164930</COMMENT>
+      <CREATION-TIME>2015-07-13T09:43:52.951+03:00</CREATION-TIME>
+      <REQ-IF-TOOL-ID>ProR (http://pror.org)</REQ-IF-TOOL-ID>
+      <REQ-IF-VERSION>1.0</REQ-IF-VERSION>
+      <SOURCE-TOOL-ID>ProR (http://pror.org)</SOURCE-TOOL-ID>
+    </REQ-IF-HEADER>
+  </THE-HEADER>
+  <CORE-CONTENT>
+    <REQ-IF-CONTENT>
+      <DATATYPES>
+        <DATATYPE-DEFINITION-STRING IDENTIFIER="_hq9RcykqEeWbv7BPFqT3xQ" LAST-CHANGE="2015-07-13T09:43:52.951+03:00" LONG-NAME="T_String32k" MAX-LENGTH="32000"/>
+        <DATATYPE-DEFINITION-STRING IDENTIFIER="_CT_ZICkrEeWbv7BPFqT3xQ" LAST-CHANGE="2015-07-13T09:47:27.442+03:00" LONG-NAME="T_ID"/>
+        <DATATYPE-DEFINITION-STRING IDENTIFIER="_xD578CkrEeWbv7BPFqT3xQ" LAST-CHANGE="2015-07-13T09:52:38.971+03:00" LONG-NAME="T_Head"/>
+        <DATATYPE-DEFINITION-STRING IDENTIFIER="_O7VagCkzEeWbv7BPFqT3xQ" LAST-CHANGE="2015-07-13T10:46:10.428+03:00" LONG-NAME="T_hie"/>
+      </DATATYPES>
+      <SPEC-TYPES>
+        <SPEC-OBJECT-TYPE IDENTIFIER="_hq9RdCkqEeWbv7BPFqT3xQ" LAST-CHANGE="2015-07-13T09:43:52.951+03:00" LONG-NAME="Requirement Type">
+          <SPEC-ATTRIBUTES>
+            <ATTRIBUTE-DEFINITION-STRING IDENTIFIER="_hq9RdSkqEeWbv7BPFqT3xQ" LAST-CHANGE="2015-07-13T09:43:52.951+03:00" LONG-NAME="Title">
+              <TYPE>
+                <DATATYPE-DEFINITION-STRING-REF>_hq9RcykqEeWbv7BPFqT3xQ</DATATYPE-DEFINITION-STRING-REF>
+              </TYPE>
+            </ATTRIBUTE-DEFINITION-STRING>
+            <ATTRIBUTE-DEFINITION-STRING IDENTIFIER="_pg7IICkqEeWbv7BPFqT3xQ" LAST-CHANGE="2015-07-13T09:44:39.997+03:00" LONG-NAME="Description" IS-EDITABLE="false">
+              <TYPE>
+                <DATATYPE-DEFINITION-STRING-REF>_hq9RcykqEeWbv7BPFqT3xQ</DATATYPE-DEFINITION-STRING-REF>
+              </TYPE>
+            </ATTRIBUTE-DEFINITION-STRING>
+            <ATTRIBUTE-DEFINITION-STRING IDENTIFIER="_1AZcICkqEeWbv7BPFqT3xQ" LAST-CHANGE="2015-07-13T09:45:57.428+03:00" LONG-NAME="Type">
+              <TYPE>
+                <DATATYPE-DEFINITION-STRING-REF>_hq9RcykqEeWbv7BPFqT3xQ</DATATYPE-DEFINITION-STRING-REF>
+              </TYPE>
+            </ATTRIBUTE-DEFINITION-STRING>
+            <ATTRIBUTE-DEFINITION-STRING IDENTIFIER="_79UyACkqEeWbv7BPFqT3xQ" LAST-CHANGE="2015-07-13T09:46:46.956+03:00" LONG-NAME="ID">
+              <TYPE>
+                <DATATYPE-DEFINITION-STRING-REF>_CT_ZICkrEeWbv7BPFqT3xQ</DATATYPE-DEFINITION-STRING-REF>
+              </TYPE>
+            </ATTRIBUTE-DEFINITION-STRING>
+          </SPEC-ATTRIBUTES>
+        </SPEC-OBJECT-TYPE>
+        <SPEC-OBJECT-TYPE IDENTIFIER="_zWCWoCkrEeWbv7BPFqT3xQ" LAST-CHANGE="2015-07-13T09:52:56.026+03:00" LONG-NAME="Headline Type">
+          <SPEC-ATTRIBUTES>
+            <ATTRIBUTE-DEFINITION-STRING IDENTIFIER="_2b8XoCkrEeWbv7BPFqT3xQ" LAST-CHANGE="2015-07-13T09:53:19.134+03:00" LONG-NAME="Title">
+              <TYPE>
+                <DATATYPE-DEFINITION-STRING-REF>_xD578CkrEeWbv7BPFqT3xQ</DATATYPE-DEFINITION-STRING-REF>
+              </TYPE>
+            </ATTRIBUTE-DEFINITION-STRING>
+          </SPEC-ATTRIBUTES>
+        </SPEC-OBJECT-TYPE>
+        <SPECIFICATION-TYPE IDENTIFIER="_hq9RdikqEeWbv7BPFqT3xQ" LAST-CHANGE="2015-07-13T09:43:52.951+03:00" LONG-NAME="Specification Type">
+          <SPEC-ATTRIBUTES>
+            <ATTRIBUTE-DEFINITION-STRING IDENTIFIER="_hq9RdykqEeWbv7BPFqT3xQ" LAST-CHANGE="2015-07-13T09:43:52.951+03:00" LONG-NAME="Title">
+              <TYPE>
+                <DATATYPE-DEFINITION-STRING-REF>_hq9RcykqEeWbv7BPFqT3xQ</DATATYPE-DEFINITION-STRING-REF>
+              </TYPE>
+            </ATTRIBUTE-DEFINITION-STRING>
+          </SPEC-ATTRIBUTES>
+        </SPECIFICATION-TYPE>
+        <SPEC-OBJECT-TYPE IDENTIFIER="_WS8hQCkzEeWbv7BPFqT3xQ" LAST-CHANGE="2015-07-13T10:46:58.040+03:00" LONG-NAME="Hierarchy Type">
+          <SPEC-ATTRIBUTES>
+            <ATTRIBUTE-DEFINITION-STRING IDENTIFIER="_ZuA58CkzEeWbv7BPFqT3xQ" LAST-CHANGE="2015-07-13T10:47:20.401+03:00" LONG-NAME="Title">
+              <TYPE>
+                <DATATYPE-DEFINITION-STRING-REF>_O7VagCkzEeWbv7BPFqT3xQ</DATATYPE-DEFINITION-STRING-REF>
+              </TYPE>
+            </ATTRIBUTE-DEFINITION-STRING>
+          </SPEC-ATTRIBUTES>
+        </SPEC-OBJECT-TYPE>
+      </SPEC-TYPES>
+      <SPEC-OBJECTS>
+        <SPEC-OBJECT IDENTIFIER="_hq9ReCkqEeWbv7BPFqT3xQ" LAST-CHANGE="2015-07-13T09:55:54.517+03:00">
+          <VALUES>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="Lift Specification">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_2b8XoCkrEeWbv7BPFqT3xQ</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+          </VALUES>
+          <TYPE>
+            <SPEC-OBJECT-TYPE-REF>_zWCWoCkrEeWbv7BPFqT3xQ</SPEC-OBJECT-TYPE-REF>
+          </TYPE>
+        </SPEC-OBJECT>
+        <SPEC-OBJECT IDENTIFIER="_SkLNoCksEeWbv7BPFqT3xQ" LAST-CHANGE="2015-07-13T11:02:31.777+03:00">
+          <VALUES>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="REQ-1">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_79UyACkqEeWbv7BPFqT3xQ</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="General specifications">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_hq9RdSkqEeWbv7BPFqT3xQ</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="A lift system is to be installed in a building">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_pg7IICkqEeWbv7BPFqT3xQ</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="Env condition">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_1AZcICkqEeWbv7BPFqT3xQ</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+          </VALUES>
+          <TYPE>
+            <SPEC-OBJECT-TYPE-REF>_hq9RdCkqEeWbv7BPFqT3xQ</SPEC-OBJECT-TYPE-REF>
+          </TYPE>
+        </SPEC-OBJECT>
+        <SPEC-OBJECT IDENTIFIER="_TegH4CksEeWbv7BPFqT3xQ" LAST-CHANGE="2015-07-13T10:07:46.146+03:00">
+          <VALUES>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="Lift buttons">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_ZuA58CkzEeWbv7BPFqT3xQ</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+          </VALUES>
+          <TYPE>
+            <SPEC-OBJECT-TYPE-REF>_WS8hQCkzEeWbv7BPFqT3xQ</SPEC-OBJECT-TYPE-REF>
+          </TYPE>
+        </SPEC-OBJECT>
+        <SPEC-OBJECT IDENTIFIER="_T1H4ICksEeWbv7BPFqT3xQ" LAST-CHANGE="2015-07-13T10:49:08.466+03:00">
+          <VALUES>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="Floor buttons">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_ZuA58CkzEeWbv7BPFqT3xQ</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+          </VALUES>
+          <TYPE>
+            <SPEC-OBJECT-TYPE-REF>_WS8hQCkzEeWbv7BPFqT3xQ</SPEC-OBJECT-TYPE-REF>
+          </TYPE>
+        </SPEC-OBJECT>
+        <SPEC-OBJECT IDENTIFIER="_UNYAECksEeWbv7BPFqT3xQ" LAST-CHANGE="2015-07-13T10:44:59.115+03:00">
+          <VALUES>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="Commands fairness">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_ZuA58CkzEeWbv7BPFqT3xQ</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+          </VALUES>
+          <TYPE>
+            <SPEC-OBJECT-TYPE-REF>_WS8hQCkzEeWbv7BPFqT3xQ</SPEC-OBJECT-TYPE-REF>
+          </TYPE>
+        </SPEC-OBJECT>
+        <SPEC-OBJECT IDENTIFIER="_UipsgCksEeWbv7BPFqT3xQ" LAST-CHANGE="2015-07-13T09:56:42.241+03:00">
+          <VALUES>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="REQ-5">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_79UyACkqEeWbv7BPFqT3xQ</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="Order of lift stops">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_hq9RdSkqEeWbv7BPFqT3xQ</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="All requests are serviced sequencially in the directon of travel">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_pg7IICkqEeWbv7BPFqT3xQ</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="Env conditon">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_1AZcICkqEeWbv7BPFqT3xQ</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+          </VALUES>
+          <TYPE>
+            <SPEC-OBJECT-TYPE-REF>_hq9RdCkqEeWbv7BPFqT3xQ</SPEC-OBJECT-TYPE-REF>
+          </TYPE>
+        </SPEC-OBJECT>
+        <SPEC-OBJECT IDENTIFIER="_VYqHcCksEeWbv7BPFqT3xQ" LAST-CHANGE="2015-07-13T09:56:47.124+03:00">
+          <VALUES>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="Emergency button">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_ZuA58CkzEeWbv7BPFqT3xQ</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+          </VALUES>
+          <TYPE>
+            <SPEC-OBJECT-TYPE-REF>_WS8hQCkzEeWbv7BPFqT3xQ</SPEC-OBJECT-TYPE-REF>
+          </TYPE>
+        </SPEC-OBJECT>
+        <SPEC-OBJECT IDENTIFIER="_9sszACksEeWbv7BPFqT3xQ" LAST-CHANGE="2015-07-13T10:32:26.180+03:00">
+          <VALUES>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="REQ-7">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_79UyACkqEeWbv7BPFqT3xQ</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="Lift positioning after services">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_hq9RdSkqEeWbv7BPFqT3xQ</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="When a lift has no requests to serivce it should remain at its final destination with the doors closed">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_pg7IICkqEeWbv7BPFqT3xQ</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="Env conditon">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_1AZcICkqEeWbv7BPFqT3xQ</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+          </VALUES>
+          <TYPE>
+            <SPEC-OBJECT-TYPE-REF>_hq9RdCkqEeWbv7BPFqT3xQ</SPEC-OBJECT-TYPE-REF>
+          </TYPE>
+        </SPEC-OBJECT>
+        <SPEC-OBJECT IDENTIFIER="_VzOHECktEeWbv7BPFqT3xQ" LAST-CHANGE="2015-07-13T10:04:46.597+03:00">
+          <VALUES>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="REQ-8">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_79UyACkqEeWbv7BPFqT3xQ</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="Each lift has a set of buttons, one for each floor">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_pg7IICkqEeWbv7BPFqT3xQ</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="Number of buttons">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_hq9RdSkqEeWbv7BPFqT3xQ</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="Function">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_1AZcICkqEeWbv7BPFqT3xQ</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+          </VALUES>
+          <TYPE>
+            <SPEC-OBJECT-TYPE-REF>_hq9RdCkqEeWbv7BPFqT3xQ</SPEC-OBJECT-TYPE-REF>
+          </TYPE>
+        </SPEC-OBJECT>
+        <SPEC-OBJECT IDENTIFIER="_dvJb0CktEeWbv7BPFqT3xQ" LAST-CHANGE="2015-07-13T11:03:48.301+03:00">
+          <VALUES>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="REQ-9">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_79UyACkqEeWbv7BPFqT3xQ</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="Command aknowledgemnet">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_hq9RdSkqEeWbv7BPFqT3xQ</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="Buttons illuminate when pressed ">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_pg7IICkqEeWbv7BPFqT3xQ</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="Env condition">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_1AZcICkqEeWbv7BPFqT3xQ</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+          </VALUES>
+          <TYPE>
+            <SPEC-OBJECT-TYPE-REF>_hq9RdCkqEeWbv7BPFqT3xQ</SPEC-OBJECT-TYPE-REF>
+          </TYPE>
+        </SPEC-OBJECT>
+        <SPEC-OBJECT IDENTIFIER="_lEFCACktEeWbv7BPFqT3xQ" LAST-CHANGE="2015-07-13T10:08:32.601+03:00">
+          <VALUES>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="REQ-10">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_79UyACkqEeWbv7BPFqT3xQ</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="Cancel command conditon">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_hq9RdSkqEeWbv7BPFqT3xQ</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="The illumination is cancelled when the corresponding floor is visited">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_pg7IICkqEeWbv7BPFqT3xQ</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="Env conditon">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_1AZcICkqEeWbv7BPFqT3xQ</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+          </VALUES>
+          <TYPE>
+            <SPEC-OBJECT-TYPE-REF>_hq9RdCkqEeWbv7BPFqT3xQ</SPEC-OBJECT-TYPE-REF>
+          </TYPE>
+        </SPEC-OBJECT>
+        <SPEC-OBJECT IDENTIFIER="_DnrHMCkuEeWbv7BPFqT3xQ" LAST-CHANGE="2015-07-13T10:08:56.567+03:00">
+          <VALUES>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="REQ-11">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_79UyACkqEeWbv7BPFqT3xQ</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="Number of floor buttons">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_hq9RdSkqEeWbv7BPFqT3xQ</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="Each floor has two buttons one to request an up-lift and one to request  down lift.">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_pg7IICkqEeWbv7BPFqT3xQ</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="Function">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_1AZcICkqEeWbv7BPFqT3xQ</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+          </VALUES>
+          <TYPE>
+            <SPEC-OBJECT-TYPE-REF>_hq9RdCkqEeWbv7BPFqT3xQ</SPEC-OBJECT-TYPE-REF>
+          </TYPE>
+        </SPEC-OBJECT>
+        <SPEC-OBJECT IDENTIFIER="_LYhNUCkuEeWbv7BPFqT3xQ" LAST-CHANGE="2015-07-13T10:14:47.887+03:00">
+          <VALUES>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="REQ-12">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_79UyACkqEeWbv7BPFqT3xQ</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="Top and ground floors">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_hq9RdSkqEeWbv7BPFqT3xQ</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="Top and ground floors have one button for down-lift respectively for up-lift.">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_pg7IICkqEeWbv7BPFqT3xQ</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="Env conditon">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_1AZcICkqEeWbv7BPFqT3xQ</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+          </VALUES>
+          <TYPE>
+            <SPEC-OBJECT-TYPE-REF>_hq9RdCkqEeWbv7BPFqT3xQ</SPEC-OBJECT-TYPE-REF>
+          </TYPE>
+        </SPEC-OBJECT>
+        <SPEC-OBJECT IDENTIFIER="_tG7BoCkuEeWbv7BPFqT3xQ" LAST-CHANGE="2015-07-13T10:15:06.984+03:00">
+          <VALUES>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="REQ-13">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_79UyACkqEeWbv7BPFqT3xQ</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="Functionality">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_hq9RdSkqEeWbv7BPFqT3xQ</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="They illuminate when pressed">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_pg7IICkqEeWbv7BPFqT3xQ</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="Function">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_1AZcICkqEeWbv7BPFqT3xQ</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+          </VALUES>
+          <TYPE>
+            <SPEC-OBJECT-TYPE-REF>_hq9RdCkqEeWbv7BPFqT3xQ</SPEC-OBJECT-TYPE-REF>
+          </TYPE>
+        </SPEC-OBJECT>
+        <SPEC-OBJECT IDENTIFIER="_-P0cQCkuEeWbv7BPFqT3xQ" LAST-CHANGE="2015-07-13T10:42:29.572+03:00">
+          <VALUES>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="Cancel command condition">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_ZuA58CkzEeWbv7BPFqT3xQ</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+          </VALUES>
+          <TYPE>
+            <SPEC-OBJECT-TYPE-REF>_WS8hQCkzEeWbv7BPFqT3xQ</SPEC-OBJECT-TYPE-REF>
+          </TYPE>
+        </SPEC-OBJECT>
+        <SPEC-OBJECT IDENTIFIER="_JdCioCkvEeWbv7BPFqT3xQ" LAST-CHANGE="2015-07-13T10:39:02.671+03:00">
+          <VALUES>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="REQ-15">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_79UyACkqEeWbv7BPFqT3xQ</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="Arrival of the lift">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_hq9RdSkqEeWbv7BPFqT3xQ</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="Env conditon">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_1AZcICkqEeWbv7BPFqT3xQ</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="When the lift arrives at the floor the command is cancelled ">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_pg7IICkqEeWbv7BPFqT3xQ</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+          </VALUES>
+          <TYPE>
+            <SPEC-OBJECT-TYPE-REF>_hq9RdCkqEeWbv7BPFqT3xQ</SPEC-OBJECT-TYPE-REF>
+          </TYPE>
+        </SPEC-OBJECT>
+        <SPEC-OBJECT IDENTIFIER="_K48f8CkvEeWbv7BPFqT3xQ" LAST-CHANGE="2015-07-13T10:23:47.430+03:00">
+          <VALUES>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="REQ-16">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_79UyACkqEeWbv7BPFqT3xQ</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="Passing of the lift">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_hq9RdSkqEeWbv7BPFqT3xQ</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="When the lift travels in the requested direction and stops at the floor the command is canceled">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_pg7IICkqEeWbv7BPFqT3xQ</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="Env conditon">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_1AZcICkqEeWbv7BPFqT3xQ</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+          </VALUES>
+          <TYPE>
+            <SPEC-OBJECT-TYPE-REF>_hq9RdCkqEeWbv7BPFqT3xQ</SPEC-OBJECT-TYPE-REF>
+          </TYPE>
+        </SPEC-OBJECT>
+        <SPEC-OBJECT IDENTIFIER="_ItmNQCkwEeWbv7BPFqT3xQ" LAST-CHANGE="2015-07-13T10:23:57.210+03:00">
+          <VALUES>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="REQ-17">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_79UyACkqEeWbv7BPFqT3xQ</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+          </VALUES>
+          <TYPE>
+            <SPEC-OBJECT-TYPE-REF>_hq9RdCkqEeWbv7BPFqT3xQ</SPEC-OBJECT-TYPE-REF>
+          </TYPE>
+        </SPEC-OBJECT>
+        <SPEC-OBJECT IDENTIFIER="_NziMUCkwEeWbv7BPFqT3xQ" LAST-CHANGE="2015-07-13T10:24:03.154+03:00">
+          <VALUES>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="REQ-18">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_79UyACkqEeWbv7BPFqT3xQ</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+          </VALUES>
+          <TYPE>
+            <SPEC-OBJECT-TYPE-REF>_hq9RdCkqEeWbv7BPFqT3xQ</SPEC-OBJECT-TYPE-REF>
+          </TYPE>
+        </SPEC-OBJECT>
+        <SPEC-OBJECT IDENTIFIER="_QMBGoCkwEeWbv7BPFqT3xQ" LAST-CHANGE="2015-07-13T10:30:21.337+03:00">
+          <VALUES>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="REQ-19">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_79UyACkqEeWbv7BPFqT3xQ</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="Wait time minimization">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_hq9RdSkqEeWbv7BPFqT3xQ</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="The algorithm used to decide which command should service has to minimize the waiting time">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_pg7IICkqEeWbv7BPFqT3xQ</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="Function">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_1AZcICkqEeWbv7BPFqT3xQ</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+          </VALUES>
+          <TYPE>
+            <SPEC-OBJECT-TYPE-REF>_hq9RdCkqEeWbv7BPFqT3xQ</SPEC-OBJECT-TYPE-REF>
+          </TYPE>
+        </SPEC-OBJECT>
+        <SPEC-OBJECT IDENTIFIER="_b2Wm0CkwEeWbv7BPFqT3xQ" LAST-CHANGE="2015-07-13T10:42:36.476+03:00">
+          <VALUES>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="REQ-20">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_79UyACkqEeWbv7BPFqT3xQ</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="Liveness">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_hq9RdSkqEeWbv7BPFqT3xQ</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="All requests must  be serviced eventually">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_pg7IICkqEeWbv7BPFqT3xQ</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="Function">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_1AZcICkqEeWbv7BPFqT3xQ</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+          </VALUES>
+          <TYPE>
+            <SPEC-OBJECT-TYPE-REF>_hq9RdCkqEeWbv7BPFqT3xQ</SPEC-OBJECT-TYPE-REF>
+          </TYPE>
+        </SPEC-OBJECT>
+        <SPEC-OBJECT IDENTIFIER="_WOJywCkxEeWbv7BPFqT3xQ" LAST-CHANGE="2015-07-13T11:08:07.802+03:00">
+          <VALUES>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="REQ-21">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_79UyACkqEeWbv7BPFqT3xQ</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="Functionality">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_hq9RdSkqEeWbv7BPFqT3xQ</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="The emergency button causes a warning to be sent to the site manager">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_pg7IICkqEeWbv7BPFqT3xQ</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="Function">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_1AZcICkqEeWbv7BPFqT3xQ</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+          </VALUES>
+          <TYPE>
+            <SPEC-OBJECT-TYPE-REF>_hq9RdCkqEeWbv7BPFqT3xQ</SPEC-OBJECT-TYPE-REF>
+          </TYPE>
+        </SPEC-OBJECT>
+        <SPEC-OBJECT IDENTIFIER="_dDHfcCkxEeWbv7BPFqT3xQ" LAST-CHANGE="2015-07-13T11:04:43.035+03:00">
+          <VALUES>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="REQ-22">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_79UyACkqEeWbv7BPFqT3xQ</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="Out of serivce notice">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_hq9RdSkqEeWbv7BPFqT3xQ</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="The lift is deemed 'out-of-service' after the button is pressed">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_pg7IICkqEeWbv7BPFqT3xQ</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="Env conditon">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_1AZcICkqEeWbv7BPFqT3xQ</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+          </VALUES>
+          <TYPE>
+            <SPEC-OBJECT-TYPE-REF>_hq9RdCkqEeWbv7BPFqT3xQ</SPEC-OBJECT-TYPE-REF>
+          </TYPE>
+        </SPEC-OBJECT>
+        <SPEC-OBJECT IDENTIFIER="_sUq98CkxEeWbv7BPFqT3xQ" LAST-CHANGE="2015-07-13T10:35:07.152+03:00">
+          <VALUES>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="REQ-23">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_79UyACkqEeWbv7BPFqT3xQ</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="Return to original state">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_hq9RdSkqEeWbv7BPFqT3xQ</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="Each lift has a mechanism to cancel the 'out-of-'service' status">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_pg7IICkqEeWbv7BPFqT3xQ</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="Function">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_1AZcICkqEeWbv7BPFqT3xQ</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+          </VALUES>
+          <TYPE>
+            <SPEC-OBJECT-TYPE-REF>_hq9RdCkqEeWbv7BPFqT3xQ</SPEC-OBJECT-TYPE-REF>
+          </TYPE>
+        </SPEC-OBJECT>
+        <SPEC-OBJECT IDENTIFIER="_TKZxECk1EeWbv7BPFqT3xQ" LAST-CHANGE="2015-07-13T11:01:48.826+03:00">
+          <VALUES>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="REQ-30">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_79UyACkqEeWbv7BPFqT3xQ</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="The building has M floors">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_pg7IICkqEeWbv7BPFqT3xQ</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="Env condition">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_1AZcICkqEeWbv7BPFqT3xQ</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="Number of floors">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_hq9RdSkqEeWbv7BPFqT3xQ</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+          </VALUES>
+          <TYPE>
+            <SPEC-OBJECT-TYPE-REF>_hq9RdCkqEeWbv7BPFqT3xQ</SPEC-OBJECT-TYPE-REF>
+          </TYPE>
+        </SPEC-OBJECT>
+        <SPEC-OBJECT IDENTIFIER="_Tpfg0Ck1EeWbv7BPFqT3xQ" LAST-CHANGE="2015-07-13T11:02:13.002+03:00">
+          <VALUES>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="REQ-31">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_79UyACkqEeWbv7BPFqT3xQ</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="The system has N lifts">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_pg7IICkqEeWbv7BPFqT3xQ</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="Env conditon">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_1AZcICkqEeWbv7BPFqT3xQ</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="Number of lifts">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_hq9RdSkqEeWbv7BPFqT3xQ</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+          </VALUES>
+          <TYPE>
+            <SPEC-OBJECT-TYPE-REF>_hq9RdCkqEeWbv7BPFqT3xQ</SPEC-OBJECT-TYPE-REF>
+          </TYPE>
+        </SPEC-OBJECT>
+        <SPEC-OBJECT IDENTIFIER="_l0sF8Ck1EeWbv7BPFqT3xQ" LAST-CHANGE="2015-07-13T11:04:09.832+03:00">
+          <VALUES>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="REQ-32">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_79UyACkqEeWbv7BPFqT3xQ</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="Functionality">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_hq9RdSkqEeWbv7BPFqT3xQ</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="Pressing a button causes the lift to visit the corresponding floor">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_pg7IICkqEeWbv7BPFqT3xQ</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="Function">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_1AZcICkqEeWbv7BPFqT3xQ</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+          </VALUES>
+          <TYPE>
+            <SPEC-OBJECT-TYPE-REF>_hq9RdCkqEeWbv7BPFqT3xQ</SPEC-OBJECT-TYPE-REF>
+          </TYPE>
+        </SPEC-OBJECT>
+      </SPEC-OBJECTS>
+      <SPECIFICATIONS>
+        <SPECIFICATION IDENTIFIER="_hq9ReikqEeWbv7BPFqT3xQ" LAST-CHANGE="2015-07-13T09:44:25.444+03:00" LONG-NAME="Specification Document">
+          <VALUES>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="LiftSpec">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_hq9RdykqEeWbv7BPFqT3xQ</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+          </VALUES>
+          <TYPE>
+            <SPECIFICATION-TYPE-REF>_hq9RdikqEeWbv7BPFqT3xQ</SPECIFICATION-TYPE-REF>
+          </TYPE>
+          <CHILDREN>
+            <SPEC-HIERARCHY IDENTIFIER="_hq9RfCkqEeWbv7BPFqT3xQ" LAST-CHANGE="2015-07-13T09:43:52.951+03:00">
+              <OBJECT>
+                <SPEC-OBJECT-REF>_hq9ReCkqEeWbv7BPFqT3xQ</SPEC-OBJECT-REF>
+              </OBJECT>
+              <CHILDREN>
+                <SPEC-HIERARCHY IDENTIFIER="_SlElgSksEeWbv7BPFqT3xQ" LAST-CHANGE="2015-07-13T09:56:24.861+03:00">
+                  <OBJECT>
+                    <SPEC-OBJECT-REF>_SkLNoCksEeWbv7BPFqT3xQ</SPEC-OBJECT-REF>
+                  </OBJECT>
+                  <CHILDREN>
+                    <SPEC-HIERARCHY IDENTIFIER="_TLKmECk1EeWbv7BPFqT3xQ" LAST-CHANGE="2015-07-13T11:00:51.741+03:00">
+                      <OBJECT>
+                        <SPEC-OBJECT-REF>_TKZxECk1EeWbv7BPFqT3xQ</SPEC-OBJECT-REF>
+                      </OBJECT>
+                    </SPEC-HIERARCHY>
+                    <SPEC-HIERARCHY IDENTIFIER="_TqKPMSk1EeWbv7BPFqT3xQ" LAST-CHANGE="2015-07-13T11:01:01.275+03:00">
+                      <OBJECT>
+                        <SPEC-OBJECT-REF>_Tpfg0Ck1EeWbv7BPFqT3xQ</SPEC-OBJECT-REF>
+                      </OBJECT>
+                    </SPEC-HIERARCHY>
+                  </CHILDREN>
+                </SPEC-HIERARCHY>
+                <SPEC-HIERARCHY IDENTIFIER="_TfGk0SksEeWbv7BPFqT3xQ" LAST-CHANGE="2015-07-13T10:54:23.943+03:00">
+                  <OBJECT>
+                    <SPEC-OBJECT-REF>_TegH4CksEeWbv7BPFqT3xQ</SPEC-OBJECT-REF>
+                  </OBJECT>
+                  <CHILDREN>
+                    <SPEC-HIERARCHY IDENTIFIER="_Vz9t8SktEeWbv7BPFqT3xQ" LAST-CHANGE="2015-07-13T10:03:56.302+03:00">
+                      <OBJECT>
+                        <SPEC-OBJECT-REF>_VzOHECktEeWbv7BPFqT3xQ</SPEC-OBJECT-REF>
+                      </OBJECT>
+                    </SPEC-HIERARCHY>
+                    <SPEC-HIERARCHY IDENTIFIER="_dv5CsSktEeWbv7BPFqT3xQ" LAST-CHANGE="2015-07-13T10:04:50.310+03:00">
+                      <OBJECT>
+                        <SPEC-OBJECT-REF>_dvJb0CktEeWbv7BPFqT3xQ</SPEC-OBJECT-REF>
+                      </OBJECT>
+                    </SPEC-HIERARCHY>
+                    <SPEC-HIERARCHY IDENTIFIER="_l1QtsSk1EeWbv7BPFqT3xQ" LAST-CHANGE="2015-07-13T11:02:59.084+03:00">
+                      <OBJECT>
+                        <SPEC-OBJECT-REF>_l0sF8Ck1EeWbv7BPFqT3xQ</SPEC-OBJECT-REF>
+                      </OBJECT>
+                      <CHILDREN/>
+                    </SPEC-HIERARCHY>
+                    <SPEC-HIERARCHY IDENTIFIER="_lE0o4SktEeWbv7BPFqT3xQ" LAST-CHANGE="2015-07-13T10:05:40.699+03:00">
+                      <OBJECT>
+                        <SPEC-OBJECT-REF>_lEFCACktEeWbv7BPFqT3xQ</SPEC-OBJECT-REF>
+                      </OBJECT>
+                    </SPEC-HIERARCHY>
+                  </CHILDREN>
+                </SPEC-HIERARCHY>
+                <SPEC-HIERARCHY IDENTIFIER="_T13fASksEeWbv7BPFqT3xQ" LAST-CHANGE="2015-07-13T10:54:29.237+03:00">
+                  <OBJECT>
+                    <SPEC-OBJECT-REF>_T1H4ICksEeWbv7BPFqT3xQ</SPEC-OBJECT-REF>
+                  </OBJECT>
+                  <CHILDREN>
+                    <SPEC-HIERARCHY IDENTIFIER="_DoauESkuEeWbv7BPFqT3xQ" LAST-CHANGE="2015-07-13T10:08:56.567+03:00">
+                      <OBJECT>
+                        <SPEC-OBJECT-REF>_DnrHMCkuEeWbv7BPFqT3xQ</SPEC-OBJECT-REF>
+                      </OBJECT>
+                    </SPEC-HIERARCHY>
+                    <SPEC-HIERARCHY IDENTIFIER="_LZHqQSkuEeWbv7BPFqT3xQ" LAST-CHANGE="2015-07-13T10:09:57.527+03:00">
+                      <OBJECT>
+                        <SPEC-OBJECT-REF>_LYhNUCkuEeWbv7BPFqT3xQ</SPEC-OBJECT-REF>
+                      </OBJECT>
+                    </SPEC-HIERARCHY>
+                    <SPEC-HIERARCHY IDENTIFIER="_tHqogSkuEeWbv7BPFqT3xQ" LAST-CHANGE="2015-07-13T10:13:43.525+03:00">
+                      <OBJECT>
+                        <SPEC-OBJECT-REF>_tG7BoCkuEeWbv7BPFqT3xQ</SPEC-OBJECT-REF>
+                      </OBJECT>
+                    </SPEC-HIERARCHY>
+                    <SPEC-HIERARCHY IDENTIFIER="_-Qg_0CkuEeWbv7BPFqT3xQ" LAST-CHANGE="2015-07-13T10:15:37.356+03:00">
+                      <OBJECT>
+                        <SPEC-OBJECT-REF>_-P0cQCkuEeWbv7BPFqT3xQ</SPEC-OBJECT-REF>
+                      </OBJECT>
+                      <CHILDREN>
+                        <SPEC-HIERARCHY IDENTIFIER="_JdyJgSkvEeWbv7BPFqT3xQ" LAST-CHANGE="2015-07-13T10:16:53.000+03:00">
+                          <OBJECT>
+                            <SPEC-OBJECT-REF>_JdCioCkvEeWbv7BPFqT3xQ</SPEC-OBJECT-REF>
+                          </OBJECT>
+                          <CHILDREN/>
+                        </SPEC-HIERARCHY>
+                        <SPEC-HIERARCHY IDENTIFIER="_K5iV0SkvEeWbv7BPFqT3xQ" LAST-CHANGE="2015-07-13T10:17:16.662+03:00">
+                          <OBJECT>
+                            <SPEC-OBJECT-REF>_K48f8CkvEeWbv7BPFqT3xQ</SPEC-OBJECT-REF>
+                          </OBJECT>
+                        </SPEC-HIERARCHY>
+                      </CHILDREN>
+                    </SPEC-HIERARCHY>
+                  </CHILDREN>
+                </SPEC-HIERARCHY>
+                <SPEC-HIERARCHY IDENTIFIER="_UOQw4SksEeWbv7BPFqT3xQ" LAST-CHANGE="2015-07-13T10:54:33.597+03:00">
+                  <OBJECT>
+                    <SPEC-OBJECT-REF>_UNYAECksEeWbv7BPFqT3xQ</SPEC-OBJECT-REF>
+                  </OBJECT>
+                  <CHILDREN>
+                    <SPEC-HIERARCHY IDENTIFIER="_QMm8gSkwEeWbv7BPFqT3xQ" LAST-CHANGE="2015-07-13T10:24:50.403+03:00">
+                      <OBJECT>
+                        <SPEC-OBJECT-REF>_QMBGoCkwEeWbv7BPFqT3xQ</SPEC-OBJECT-REF>
+                      </OBJECT>
+                    </SPEC-HIERARCHY>
+                    <SPEC-HIERARCHY IDENTIFIER="_b3GNsSkwEeWbv7BPFqT3xQ" LAST-CHANGE="2015-07-13T10:26:08.116+03:00">
+                      <OBJECT>
+                        <SPEC-OBJECT-REF>_b2Wm0CkwEeWbv7BPFqT3xQ</SPEC-OBJECT-REF>
+                      </OBJECT>
+                    </SPEC-HIERARCHY>
+                  </CHILDREN>
+                </SPEC-HIERARCHY>
+                <SPEC-HIERARCHY IDENTIFIER="_VZGzYSksEeWbv7BPFqT3xQ" LAST-CHANGE="2015-07-13T10:54:37.461+03:00">
+                  <OBJECT>
+                    <SPEC-OBJECT-REF>_VYqHcCksEeWbv7BPFqT3xQ</SPEC-OBJECT-REF>
+                  </OBJECT>
+                  <CHILDREN>
+                    <SPEC-HIERARCHY IDENTIFIER="_WO6nwSkxEeWbv7BPFqT3xQ" LAST-CHANGE="2015-07-13T10:32:39.592+03:00">
+                      <OBJECT>
+                        <SPEC-OBJECT-REF>_WOJywCkxEeWbv7BPFqT3xQ</SPEC-OBJECT-REF>
+                      </OBJECT>
+                      <CHILDREN>
+                        <SPEC-HIERARCHY IDENTIFIER="_dDyN0SkxEeWbv7BPFqT3xQ" LAST-CHANGE="2015-07-13T11:04:26.529+03:00">
+                          <OBJECT>
+                            <SPEC-OBJECT-REF>_dDHfcCkxEeWbv7BPFqT3xQ</SPEC-OBJECT-REF>
+                          </OBJECT>
+                        </SPEC-HIERARCHY>
+                      </CHILDREN>
+                    </SPEC-HIERARCHY>
+                    <SPEC-HIERARCHY IDENTIFIER="_sVT3ICkxEeWbv7BPFqT3xQ" LAST-CHANGE="2015-07-13T10:35:47.698+03:00">
+                      <OBJECT>
+                        <SPEC-OBJECT-REF>_sUq98CkxEeWbv7BPFqT3xQ</SPEC-OBJECT-REF>
+                      </OBJECT>
+                      <CHILDREN/>
+                    </SPEC-HIERARCHY>
+                  </CHILDREN>
+                </SPEC-HIERARCHY>
+                <SPEC-HIERARCHY IDENTIFIER="_9tcZ4SksEeWbv7BPFqT3xQ" LAST-CHANGE="2015-07-13T10:54:39.461+03:00">
+                  <OBJECT>
+                    <SPEC-OBJECT-REF>_9sszACksEeWbv7BPFqT3xQ</SPEC-OBJECT-REF>
+                  </OBJECT>
+                  <CHILDREN/>
+                </SPEC-HIERARCHY>
+                <SPEC-HIERARCHY IDENTIFIER="_UjZTYSksEeWbv7BPFqT3xQ" LAST-CHANGE="2015-07-13T10:54:41.573+03:00">
+                  <OBJECT>
+                    <SPEC-OBJECT-REF>_UipsgCksEeWbv7BPFqT3xQ</SPEC-OBJECT-REF>
+                  </OBJECT>
+                  <CHILDREN/>
+                </SPEC-HIERARCHY>
+              </CHILDREN>
+            </SPEC-HIERARCHY>
+          </CHILDREN>
+        </SPECIFICATION>
+      </SPECIFICATIONS>
+    </REQ-IF-CONTENT>
+  </CORE-CONTENT>
+  <TOOL-EXTENSIONS>
+    <REQ-IF-TOOL-EXTENSION>
+      <configuration:ProrToolExtension>
+        <configuration:specViewConfigurations>
+          <configuration:ProrSpecViewConfiguration specification="_hq9ReikqEeWbv7BPFqT3xQ">
+            <configuration:columns>
+              <configuration:Column label="Title" width="245"/>
+              <configuration:Column label="ID" width="72"/>
+              <configuration:Column label="Description" width="191"/>
+              <configuration:Column label="Type" width="134"/>
+            </configuration:columns>
+            <configuration:leftHeaderColumn>
+              <configuration:Column label="Lead Header Column" width="47"/>
+            </configuration:leftHeaderColumn>
+          </configuration:ProrSpecViewConfiguration>
+        </configuration:specViewConfigurations>
+        <configuration:generalConfiguration>
+          <configuration:ProrGeneralConfiguration>
+            <configuration:labelConfiguration>
+              <configuration:LabelConfiguration>
+                <defaultLabel>Description</defaultLabel>
+              </configuration:LabelConfiguration>
+            </configuration:labelConfiguration>
+          </configuration:ProrGeneralConfiguration>
+        </configuration:generalConfiguration>
+        <configuration:presentationConfigurations>
+          <configuration:ProrPresentationConfigurations>
+            <configuration:presentationConfigurations>
+              <id:IdConfiguration datatype="_CT_ZICkrEeWbv7BPFqT3xQ" count="32"/>
+              <headline:HeadlineConfiguration datatype="_xD578CkrEeWbv7BPFqT3xQ" size="13"/>
+              <headline:HeadlineConfiguration datatype="_O7VagCkzEeWbv7BPFqT3xQ" size="11"/>
+            </configuration:presentationConfigurations>
+          </configuration:ProrPresentationConfigurations>
+        </configuration:presentationConfigurations>
+      </configuration:ProrToolExtension>
+    </REQ-IF-TOOL-EXTENSION>
+  </TOOL-EXTENSIONS>
+</REQ-IF>
