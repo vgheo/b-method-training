@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <REQ-IF xmlns="http://www.omg.org/spec/ReqIF/20110401/reqif.xsd" xmlns:configuration="http://eclipse.org/rmf/pror/toolextensions/1.0" xmlns:headline="http://pror.org/presentation/headline" xmlns:id="http://pror.org/presentation/id">
   <THE-HEADER>
-    <REQ-IF-HEADER IDENTIFIER="rmf-cf3c5130-4c42-4ffc-bdd9-3dcc79e1a781">
+    <REQ-IF-HEADER IDENTIFIER="rmf-938ada45-a0c1-44bb-847e-5d5d7cb4431f">
       <COMMENT>Created by: T0164930</COMMENT>
       <CREATION-TIME>2015-07-13T09:43:52.951+03:00</CREATION-TIME>
       <REQ-IF-TOOL-ID>ProR (http://pror.org)</REQ-IF-TOOL-ID>
@@ -551,14 +551,14 @@
             <SPEC-OBJECT-TYPE-REF>_hq9RdCkqEeWbv7BPFqT3xQ</SPEC-OBJECT-TYPE-REF>
           </TYPE>
         </SPEC-OBJECT>
-        <SPEC-OBJECT IDENTIFIER="_sUq98CkxEeWbv7BPFqT3xQ" LAST-CHANGE="2015-07-13T10:35:07.152+03:00">
+        <SPEC-OBJECT IDENTIFIER="_sUq98CkxEeWbv7BPFqT3xQ" LAST-CHANGE="2015-07-13T12:49:30.775+03:00">
           <VALUES>
             <ATTRIBUTE-VALUE-STRING THE-VALUE="REQ-23">
               <DEFINITION>
                 <ATTRIBUTE-DEFINITION-STRING-REF>_79UyACkqEeWbv7BPFqT3xQ</ATTRIBUTE-DEFINITION-STRING-REF>
               </DEFINITION>
             </ATTRIBUTE-VALUE-STRING>
-            <ATTRIBUTE-VALUE-STRING THE-VALUE="Each lift has a mechanism to cancel the 'out-of-'service' status">
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="Each lift has a mechanism to cancel the 'out-of-service' status">
               <DEFINITION>
                 <ATTRIBUTE-DEFINITION-STRING-REF>_pg7IICkqEeWbv7BPFqT3xQ</ATTRIBUTE-DEFINITION-STRING-REF>
               </DEFINITION>
