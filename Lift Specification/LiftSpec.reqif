@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <REQ-IF xmlns="http://www.omg.org/spec/ReqIF/20110401/reqif.xsd" xmlns:configuration="http://eclipse.org/rmf/pror/toolextensions/1.0" xmlns:headline="http://pror.org/presentation/headline" xmlns:id="http://pror.org/presentation/id">
   <THE-HEADER>
-    <REQ-IF-HEADER IDENTIFIER="rmf-f83a6712-cb23-4221-aeb2-5b8e696b7773">
+    <REQ-IF-HEADER IDENTIFIER="rmf-21f246f6-8891-4337-afb0-77a556bcdb27">
       <COMMENT>Created by: T0164930</COMMENT>
       <CREATION-TIME>2015-07-13T09:43:52.951+03:00</CREATION-TIME>
       <REQ-IF-TOOL-ID>ProR (http://pror.org)</REQ-IF-TOOL-ID>
@@ -20,11 +20,6 @@
       <SPEC-TYPES>
         <SPEC-OBJECT-TYPE IDENTIFIER="_hq9RdCkqEeWbv7BPFqT3xQ" LAST-CHANGE="2015-07-13T09:43:52.951+03:00" LONG-NAME="Requirement Type">
           <SPEC-ATTRIBUTES>
-            <ATTRIBUTE-DEFINITION-STRING IDENTIFIER="_hq9RdSkqEeWbv7BPFqT3xQ" LAST-CHANGE="2015-07-13T09:43:52.951+03:00" LONG-NAME="Title">
-              <TYPE>
-                <DATATYPE-DEFINITION-STRING-REF>_hq9RcykqEeWbv7BPFqT3xQ</DATATYPE-DEFINITION-STRING-REF>
-              </TYPE>
-            </ATTRIBUTE-DEFINITION-STRING>
             <ATTRIBUTE-DEFINITION-STRING IDENTIFIER="_pg7IICkqEeWbv7BPFqT3xQ" LAST-CHANGE="2015-07-13T09:44:39.997+03:00" LONG-NAME="Description" IS-EDITABLE="false">
               <TYPE>
                 <DATATYPE-DEFINITION-STRING-REF>_hq9RcykqEeWbv7BPFqT3xQ</DATATYPE-DEFINITION-STRING-REF>
@@ -44,7 +39,7 @@
         </SPEC-OBJECT-TYPE>
         <SPEC-OBJECT-TYPE IDENTIFIER="_zWCWoCkrEeWbv7BPFqT3xQ" LAST-CHANGE="2015-07-13T09:52:56.026+03:00" LONG-NAME="Headline Type">
           <SPEC-ATTRIBUTES>
-            <ATTRIBUTE-DEFINITION-STRING IDENTIFIER="_2b8XoCkrEeWbv7BPFqT3xQ" LAST-CHANGE="2015-07-13T09:53:19.134+03:00" LONG-NAME="Title">
+            <ATTRIBUTE-DEFINITION-STRING IDENTIFIER="_2b8XoCkrEeWbv7BPFqT3xQ" LAST-CHANGE="2015-07-13T09:53:19.134+03:00" LONG-NAME="Description">
               <TYPE>
                 <DATATYPE-DEFINITION-STRING-REF>_xD578CkrEeWbv7BPFqT3xQ</DATATYPE-DEFINITION-STRING-REF>
               </TYPE>
@@ -53,7 +48,7 @@
         </SPEC-OBJECT-TYPE>
         <SPECIFICATION-TYPE IDENTIFIER="_hq9RdikqEeWbv7BPFqT3xQ" LAST-CHANGE="2015-07-13T09:43:52.951+03:00" LONG-NAME="Specification Type">
           <SPEC-ATTRIBUTES>
-            <ATTRIBUTE-DEFINITION-STRING IDENTIFIER="_hq9RdykqEeWbv7BPFqT3xQ" LAST-CHANGE="2015-07-13T09:43:52.951+03:00" LONG-NAME="Title">
+            <ATTRIBUTE-DEFINITION-STRING IDENTIFIER="_hq9RdykqEeWbv7BPFqT3xQ" LAST-CHANGE="2015-07-13T09:43:52.951+03:00" LONG-NAME="Description">
               <TYPE>
                 <DATATYPE-DEFINITION-STRING-REF>_hq9RcykqEeWbv7BPFqT3xQ</DATATYPE-DEFINITION-STRING-REF>
               </TYPE>
@@ -62,7 +57,7 @@
         </SPECIFICATION-TYPE>
         <SPEC-OBJECT-TYPE IDENTIFIER="_WS8hQCkzEeWbv7BPFqT3xQ" LAST-CHANGE="2015-07-13T10:46:58.040+03:00" LONG-NAME="Hierarchy Type">
           <SPEC-ATTRIBUTES>
-            <ATTRIBUTE-DEFINITION-STRING IDENTIFIER="_ZuA58CkzEeWbv7BPFqT3xQ" LAST-CHANGE="2015-07-13T10:47:20.401+03:00" LONG-NAME="Title">
+            <ATTRIBUTE-DEFINITION-STRING IDENTIFIER="_ZuA58CkzEeWbv7BPFqT3xQ" LAST-CHANGE="2015-07-13T10:47:20.401+03:00" LONG-NAME="Description">
               <TYPE>
                 <DATATYPE-DEFINITION-STRING-REF>_O7VagCkzEeWbv7BPFqT3xQ</DATATYPE-DEFINITION-STRING-REF>
               </TYPE>
@@ -88,11 +83,6 @@
             <ATTRIBUTE-VALUE-STRING THE-VALUE="REQ-1">
               <DEFINITION>
                 <ATTRIBUTE-DEFINITION-STRING-REF>_79UyACkqEeWbv7BPFqT3xQ</ATTRIBUTE-DEFINITION-STRING-REF>
-              </DEFINITION>
-            </ATTRIBUTE-VALUE-STRING>
-            <ATTRIBUTE-VALUE-STRING THE-VALUE="General specifications">
-              <DEFINITION>
-                <ATTRIBUTE-DEFINITION-STRING-REF>_hq9RdSkqEeWbv7BPFqT3xQ</ATTRIBUTE-DEFINITION-STRING-REF>
               </DEFINITION>
             </ATTRIBUTE-VALUE-STRING>
             <ATTRIBUTE-VALUE-STRING THE-VALUE="A lift system is to be installed in a building">
@@ -153,11 +143,6 @@
                 <ATTRIBUTE-DEFINITION-STRING-REF>_79UyACkqEeWbv7BPFqT3xQ</ATTRIBUTE-DEFINITION-STRING-REF>
               </DEFINITION>
             </ATTRIBUTE-VALUE-STRING>
-            <ATTRIBUTE-VALUE-STRING THE-VALUE="Order of lift stops">
-              <DEFINITION>
-                <ATTRIBUTE-DEFINITION-STRING-REF>_hq9RdSkqEeWbv7BPFqT3xQ</ATTRIBUTE-DEFINITION-STRING-REF>
-              </DEFINITION>
-            </ATTRIBUTE-VALUE-STRING>
             <ATTRIBUTE-VALUE-STRING THE-VALUE="All requests are serviced sequencially in the directon of travel">
               <DEFINITION>
                 <ATTRIBUTE-DEFINITION-STRING-REF>_pg7IICkqEeWbv7BPFqT3xQ</ATTRIBUTE-DEFINITION-STRING-REF>
@@ -192,11 +177,6 @@
                 <ATTRIBUTE-DEFINITION-STRING-REF>_79UyACkqEeWbv7BPFqT3xQ</ATTRIBUTE-DEFINITION-STRING-REF>
               </DEFINITION>
             </ATTRIBUTE-VALUE-STRING>
-            <ATTRIBUTE-VALUE-STRING THE-VALUE="Lift positioning after services">
-              <DEFINITION>
-                <ATTRIBUTE-DEFINITION-STRING-REF>_hq9RdSkqEeWbv7BPFqT3xQ</ATTRIBUTE-DEFINITION-STRING-REF>
-              </DEFINITION>
-            </ATTRIBUTE-VALUE-STRING>
             <ATTRIBUTE-VALUE-STRING THE-VALUE="When a lift has no requests to serivce it should remain at its final destination with the doors closed">
               <DEFINITION>
                 <ATTRIBUTE-DEFINITION-STRING-REF>_pg7IICkqEeWbv7BPFqT3xQ</ATTRIBUTE-DEFINITION-STRING-REF>
@@ -224,11 +204,6 @@
                 <ATTRIBUTE-DEFINITION-STRING-REF>_pg7IICkqEeWbv7BPFqT3xQ</ATTRIBUTE-DEFINITION-STRING-REF>
               </DEFINITION>
             </ATTRIBUTE-VALUE-STRING>
-            <ATTRIBUTE-VALUE-STRING THE-VALUE="Number of buttons">
-              <DEFINITION>
-                <ATTRIBUTE-DEFINITION-STRING-REF>_hq9RdSkqEeWbv7BPFqT3xQ</ATTRIBUTE-DEFINITION-STRING-REF>
-              </DEFINITION>
-            </ATTRIBUTE-VALUE-STRING>
             <ATTRIBUTE-VALUE-STRING THE-VALUE="Function">
               <DEFINITION>
                 <ATTRIBUTE-DEFINITION-STRING-REF>_1AZcICkqEeWbv7BPFqT3xQ</ATTRIBUTE-DEFINITION-STRING-REF>
@@ -244,11 +219,6 @@
             <ATTRIBUTE-VALUE-STRING THE-VALUE="REQ-9">
               <DEFINITION>
                 <ATTRIBUTE-DEFINITION-STRING-REF>_79UyACkqEeWbv7BPFqT3xQ</ATTRIBUTE-DEFINITION-STRING-REF>
-              </DEFINITION>
-            </ATTRIBUTE-VALUE-STRING>
-            <ATTRIBUTE-VALUE-STRING THE-VALUE="Command aknowledgemnet">
-              <DEFINITION>
-                <ATTRIBUTE-DEFINITION-STRING-REF>_hq9RdSkqEeWbv7BPFqT3xQ</ATTRIBUTE-DEFINITION-STRING-REF>
               </DEFINITION>
             </ATTRIBUTE-VALUE-STRING>
             <ATTRIBUTE-VALUE-STRING THE-VALUE="Buttons illuminate when pressed ">
@@ -273,11 +243,6 @@
                 <ATTRIBUTE-DEFINITION-STRING-REF>_79UyACkqEeWbv7BPFqT3xQ</ATTRIBUTE-DEFINITION-STRING-REF>
               </DEFINITION>
             </ATTRIBUTE-VALUE-STRING>
-            <ATTRIBUTE-VALUE-STRING THE-VALUE="Cancel command conditon">
-              <DEFINITION>
-                <ATTRIBUTE-DEFINITION-STRING-REF>_hq9RdSkqEeWbv7BPFqT3xQ</ATTRIBUTE-DEFINITION-STRING-REF>
-              </DEFINITION>
-            </ATTRIBUTE-VALUE-STRING>
             <ATTRIBUTE-VALUE-STRING THE-VALUE="The illumination is cancelled when the corresponding floor is visited">
               <DEFINITION>
                 <ATTRIBUTE-DEFINITION-STRING-REF>_pg7IICkqEeWbv7BPFqT3xQ</ATTRIBUTE-DEFINITION-STRING-REF>
@@ -298,11 +263,6 @@
             <ATTRIBUTE-VALUE-STRING THE-VALUE="REQ-11">
               <DEFINITION>
                 <ATTRIBUTE-DEFINITION-STRING-REF>_79UyACkqEeWbv7BPFqT3xQ</ATTRIBUTE-DEFINITION-STRING-REF>
-              </DEFINITION>
-            </ATTRIBUTE-VALUE-STRING>
-            <ATTRIBUTE-VALUE-STRING THE-VALUE="Number of floor buttons">
-              <DEFINITION>
-                <ATTRIBUTE-DEFINITION-STRING-REF>_hq9RdSkqEeWbv7BPFqT3xQ</ATTRIBUTE-DEFINITION-STRING-REF>
               </DEFINITION>
             </ATTRIBUTE-VALUE-STRING>
             <ATTRIBUTE-VALUE-STRING THE-VALUE="Each floor has two buttons one to request an up-lift and one to request  down lift.">
@@ -327,11 +287,6 @@
                 <ATTRIBUTE-DEFINITION-STRING-REF>_79UyACkqEeWbv7BPFqT3xQ</ATTRIBUTE-DEFINITION-STRING-REF>
               </DEFINITION>
             </ATTRIBUTE-VALUE-STRING>
-            <ATTRIBUTE-VALUE-STRING THE-VALUE="Top and ground floors">
-              <DEFINITION>
-                <ATTRIBUTE-DEFINITION-STRING-REF>_hq9RdSkqEeWbv7BPFqT3xQ</ATTRIBUTE-DEFINITION-STRING-REF>
-              </DEFINITION>
-            </ATTRIBUTE-VALUE-STRING>
             <ATTRIBUTE-VALUE-STRING THE-VALUE="Top and ground floors have one button for down-lift respectively for up-lift.">
               <DEFINITION>
                 <ATTRIBUTE-DEFINITION-STRING-REF>_pg7IICkqEeWbv7BPFqT3xQ</ATTRIBUTE-DEFINITION-STRING-REF>
@@ -352,11 +307,6 @@
             <ATTRIBUTE-VALUE-STRING THE-VALUE="REQ-13">
               <DEFINITION>
                 <ATTRIBUTE-DEFINITION-STRING-REF>_79UyACkqEeWbv7BPFqT3xQ</ATTRIBUTE-DEFINITION-STRING-REF>
-              </DEFINITION>
-            </ATTRIBUTE-VALUE-STRING>
-            <ATTRIBUTE-VALUE-STRING THE-VALUE="Functionality">
-              <DEFINITION>
-                <ATTRIBUTE-DEFINITION-STRING-REF>_hq9RdSkqEeWbv7BPFqT3xQ</ATTRIBUTE-DEFINITION-STRING-REF>
               </DEFINITION>
             </ATTRIBUTE-VALUE-STRING>
             <ATTRIBUTE-VALUE-STRING THE-VALUE="They illuminate when pressed">
@@ -393,11 +343,6 @@
                 <ATTRIBUTE-DEFINITION-STRING-REF>_79UyACkqEeWbv7BPFqT3xQ</ATTRIBUTE-DEFINITION-STRING-REF>
               </DEFINITION>
             </ATTRIBUTE-VALUE-STRING>
-            <ATTRIBUTE-VALUE-STRING THE-VALUE="Arrival of the lift">
-              <DEFINITION>
-                <ATTRIBUTE-DEFINITION-STRING-REF>_hq9RdSkqEeWbv7BPFqT3xQ</ATTRIBUTE-DEFINITION-STRING-REF>
-              </DEFINITION>
-            </ATTRIBUTE-VALUE-STRING>
             <ATTRIBUTE-VALUE-STRING THE-VALUE="Env conditon">
               <DEFINITION>
                 <ATTRIBUTE-DEFINITION-STRING-REF>_1AZcICkqEeWbv7BPFqT3xQ</ATTRIBUTE-DEFINITION-STRING-REF>
@@ -418,11 +363,6 @@
             <ATTRIBUTE-VALUE-STRING THE-VALUE="REQ-16">
               <DEFINITION>
                 <ATTRIBUTE-DEFINITION-STRING-REF>_79UyACkqEeWbv7BPFqT3xQ</ATTRIBUTE-DEFINITION-STRING-REF>
-              </DEFINITION>
-            </ATTRIBUTE-VALUE-STRING>
-            <ATTRIBUTE-VALUE-STRING THE-VALUE="Passing of the lift">
-              <DEFINITION>
-                <ATTRIBUTE-DEFINITION-STRING-REF>_hq9RdSkqEeWbv7BPFqT3xQ</ATTRIBUTE-DEFINITION-STRING-REF>
               </DEFINITION>
             </ATTRIBUTE-VALUE-STRING>
             <ATTRIBUTE-VALUE-STRING THE-VALUE="When the lift travels in the requested direction and stops at the floor the command is canceled">
@@ -471,11 +411,6 @@
                 <ATTRIBUTE-DEFINITION-STRING-REF>_79UyACkqEeWbv7BPFqT3xQ</ATTRIBUTE-DEFINITION-STRING-REF>
               </DEFINITION>
             </ATTRIBUTE-VALUE-STRING>
-            <ATTRIBUTE-VALUE-STRING THE-VALUE="Wait time minimization">
-              <DEFINITION>
-                <ATTRIBUTE-DEFINITION-STRING-REF>_hq9RdSkqEeWbv7BPFqT3xQ</ATTRIBUTE-DEFINITION-STRING-REF>
-              </DEFINITION>
-            </ATTRIBUTE-VALUE-STRING>
             <ATTRIBUTE-VALUE-STRING THE-VALUE="The algorithm used to decide which command should service has to minimize the waiting time">
               <DEFINITION>
                 <ATTRIBUTE-DEFINITION-STRING-REF>_pg7IICkqEeWbv7BPFqT3xQ</ATTRIBUTE-DEFINITION-STRING-REF>
@@ -496,11 +431,6 @@
             <ATTRIBUTE-VALUE-STRING THE-VALUE="REQ-20">
               <DEFINITION>
                 <ATTRIBUTE-DEFINITION-STRING-REF>_79UyACkqEeWbv7BPFqT3xQ</ATTRIBUTE-DEFINITION-STRING-REF>
-              </DEFINITION>
-            </ATTRIBUTE-VALUE-STRING>
-            <ATTRIBUTE-VALUE-STRING THE-VALUE="Liveness">
-              <DEFINITION>
-                <ATTRIBUTE-DEFINITION-STRING-REF>_hq9RdSkqEeWbv7BPFqT3xQ</ATTRIBUTE-DEFINITION-STRING-REF>
               </DEFINITION>
             </ATTRIBUTE-VALUE-STRING>
             <ATTRIBUTE-VALUE-STRING THE-VALUE="All requests must  be serviced eventually">
@@ -525,11 +455,6 @@
                 <ATTRIBUTE-DEFINITION-STRING-REF>_79UyACkqEeWbv7BPFqT3xQ</ATTRIBUTE-DEFINITION-STRING-REF>
               </DEFINITION>
             </ATTRIBUTE-VALUE-STRING>
-            <ATTRIBUTE-VALUE-STRING THE-VALUE="Functionality">
-              <DEFINITION>
-                <ATTRIBUTE-DEFINITION-STRING-REF>_hq9RdSkqEeWbv7BPFqT3xQ</ATTRIBUTE-DEFINITION-STRING-REF>
-              </DEFINITION>
-            </ATTRIBUTE-VALUE-STRING>
             <ATTRIBUTE-VALUE-STRING THE-VALUE="The emergency button causes a warning to be sent to the site manager">
               <DEFINITION>
                 <ATTRIBUTE-DEFINITION-STRING-REF>_pg7IICkqEeWbv7BPFqT3xQ</ATTRIBUTE-DEFINITION-STRING-REF>
@@ -552,11 +477,6 @@
                 <ATTRIBUTE-DEFINITION-STRING-REF>_79UyACkqEeWbv7BPFqT3xQ</ATTRIBUTE-DEFINITION-STRING-REF>
               </DEFINITION>
             </ATTRIBUTE-VALUE-STRING>
-            <ATTRIBUTE-VALUE-STRING THE-VALUE="Out of serivce notice">
-              <DEFINITION>
-                <ATTRIBUTE-DEFINITION-STRING-REF>_hq9RdSkqEeWbv7BPFqT3xQ</ATTRIBUTE-DEFINITION-STRING-REF>
-              </DEFINITION>
-            </ATTRIBUTE-VALUE-STRING>
             <ATTRIBUTE-VALUE-STRING THE-VALUE="The lift is deemed 'out-of-service' after the button is pressed">
               <DEFINITION>
                 <ATTRIBUTE-DEFINITION-STRING-REF>_pg7IICkqEeWbv7BPFqT3xQ</ATTRIBUTE-DEFINITION-STRING-REF>
@@ -577,11 +497,6 @@
             <ATTRIBUTE-VALUE-STRING THE-VALUE="REQ-23">
               <DEFINITION>
                 <ATTRIBUTE-DEFINITION-STRING-REF>_79UyACkqEeWbv7BPFqT3xQ</ATTRIBUTE-DEFINITION-STRING-REF>
-              </DEFINITION>
-            </ATTRIBUTE-VALUE-STRING>
-            <ATTRIBUTE-VALUE-STRING THE-VALUE="Return to original state">
-              <DEFINITION>
-                <ATTRIBUTE-DEFINITION-STRING-REF>_hq9RdSkqEeWbv7BPFqT3xQ</ATTRIBUTE-DEFINITION-STRING-REF>
               </DEFINITION>
             </ATTRIBUTE-VALUE-STRING>
             <ATTRIBUTE-VALUE-STRING THE-VALUE="Each lift has a mechanism to cancel the 'out-of-'service' status">
@@ -616,11 +531,6 @@
                 <ATTRIBUTE-DEFINITION-STRING-REF>_1AZcICkqEeWbv7BPFqT3xQ</ATTRIBUTE-DEFINITION-STRING-REF>
               </DEFINITION>
             </ATTRIBUTE-VALUE-STRING>
-            <ATTRIBUTE-VALUE-STRING THE-VALUE="Number of floors">
-              <DEFINITION>
-                <ATTRIBUTE-DEFINITION-STRING-REF>_hq9RdSkqEeWbv7BPFqT3xQ</ATTRIBUTE-DEFINITION-STRING-REF>
-              </DEFINITION>
-            </ATTRIBUTE-VALUE-STRING>
           </VALUES>
           <TYPE>
             <SPEC-OBJECT-TYPE-REF>_hq9RdCkqEeWbv7BPFqT3xQ</SPEC-OBJECT-TYPE-REF>
@@ -643,11 +553,6 @@
                 <ATTRIBUTE-DEFINITION-STRING-REF>_1AZcICkqEeWbv7BPFqT3xQ</ATTRIBUTE-DEFINITION-STRING-REF>
               </DEFINITION>
             </ATTRIBUTE-VALUE-STRING>
-            <ATTRIBUTE-VALUE-STRING THE-VALUE="Number of lifts">
-              <DEFINITION>
-                <ATTRIBUTE-DEFINITION-STRING-REF>_hq9RdSkqEeWbv7BPFqT3xQ</ATTRIBUTE-DEFINITION-STRING-REF>
-              </DEFINITION>
-            </ATTRIBUTE-VALUE-STRING>
           </VALUES>
           <TYPE>
             <SPEC-OBJECT-TYPE-REF>_hq9RdCkqEeWbv7BPFqT3xQ</SPEC-OBJECT-TYPE-REF>
@@ -658,11 +563,6 @@
             <ATTRIBUTE-VALUE-STRING THE-VALUE="REQ-32">
               <DEFINITION>
                 <ATTRIBUTE-DEFINITION-STRING-REF>_79UyACkqEeWbv7BPFqT3xQ</ATTRIBUTE-DEFINITION-STRING-REF>
-              </DEFINITION>
-            </ATTRIBUTE-VALUE-STRING>
-            <ATTRIBUTE-VALUE-STRING THE-VALUE="Functionality">
-              <DEFINITION>
-                <ATTRIBUTE-DEFINITION-STRING-REF>_hq9RdSkqEeWbv7BPFqT3xQ</ATTRIBUTE-DEFINITION-STRING-REF>
               </DEFINITION>
             </ATTRIBUTE-VALUE-STRING>
             <ATTRIBUTE-VALUE-STRING THE-VALUE="Pressing a button causes the lift to visit the corresponding floor">
@@ -851,10 +751,9 @@
         <configuration:specViewConfigurations>
           <configuration:ProrSpecViewConfiguration specification="_hq9ReikqEeWbv7BPFqT3xQ">
             <configuration:columns>
-              <configuration:Column label="Title" width="245"/>
-              <configuration:Column label="ID" width="72"/>
-              <configuration:Column label="Description" width="191"/>
-              <configuration:Column label="Type" width="134"/>
+              <configuration:Column label="ID" width="107"/>
+              <configuration:Column label="Description" width="603"/>
+              <configuration:Column label="Type" width="114"/>
             </configuration:columns>
             <configuration:leftHeaderColumn>
               <configuration:Column label="Lead Header Column" width="47"/>
