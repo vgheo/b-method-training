@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<REQ-IF xmlns="http://www.omg.org/spec/ReqIF/20110401/reqif.xsd" xmlns:configuration="http://eclipse.org/rmf/pror/toolextensions/1.0" xmlns:headline="http://pror.org/presentation/headline" xmlns:highlight="http://formalmind.com/pror/presentation/highlight" xmlns:id="http://pror.org/presentation/id" xmlns:linewrap="http://pror.org/presentation/linewrap">
+<REQ-IF xmlns="http://www.omg.org/spec/ReqIF/20110401/reqif.xsd" xmlns:configuration="http://eclipse.org/rmf/pror/toolextensions/1.0" xmlns:headline="http://pror.org/presentation/headline" xmlns:highlight="http://formalmind.com/pror/presentation/highlight" xmlns:id="http://pror.org/presentation/id" xmlns:linewrap="http://pror.org/presentation/linewrap" xmlns:linkmanagement="http://formalmind.com/pror/presentation/linkmanagement">
   <THE-HEADER>
-    <REQ-IF-HEADER IDENTIFIER="rmf-35bfca2c-0aa1-46c3-bf25-24a2e74b9d08">
+    <REQ-IF-HEADER IDENTIFIER="rmf-b13ab7ae-0861-41c3-b760-7e445f7bfd5e">
       <COMMENT>Created by: T0164930</COMMENT>
       <CREATION-TIME>2015-07-08T11:57:04.595+03:00</CREATION-TIME>
       <REQ-IF-TOOL-ID>ProR (http://pror.org)</REQ-IF-TOOL-ID>
@@ -42,6 +42,15 @@
             </ATTRIBUTE-DEFINITION-STRING>
           </SPEC-ATTRIBUTES>
         </SPEC-OBJECT-TYPE>
+        <SPEC-OBJECT-TYPE IDENTIFIER="_YKso8CYFEeWvr_B-MeG_kg" LAST-CHANGE="2015-07-09T09:40:06.827+03:00" LONG-NAME="Headline Type">
+          <SPEC-ATTRIBUTES>
+            <ATTRIBUTE-DEFINITION-STRING IDENTIFIER="_frXlECYFEeWvr_B-MeG_kg" LAST-CHANGE="2015-07-10T14:30:08.784+03:00" LONG-NAME="Description">
+              <TYPE>
+                <DATATYPE-DEFINITION-STRING-REF>_vYoIICYFEeWvr_B-MeG_kg</DATATYPE-DEFINITION-STRING-REF>
+              </TYPE>
+            </ATTRIBUTE-DEFINITION-STRING>
+          </SPEC-ATTRIBUTES>
+        </SPEC-OBJECT-TYPE>
         <SPECIFICATION-TYPE IDENTIFIER="_TgKEJSVPEeWtQNBnSmbyPw" LAST-CHANGE="2015-07-08T11:57:04.595+03:00" LONG-NAME="Specification Type">
           <SPEC-ATTRIBUTES>
             <ATTRIBUTE-DEFINITION-STRING IDENTIFIER="_TgKEJiVPEeWtQNBnSmbyPw" LAST-CHANGE="2015-07-08T11:57:04.595+03:00" LONG-NAME="Description">
@@ -51,18 +60,9 @@
             </ATTRIBUTE-DEFINITION-STRING>
           </SPEC-ATTRIBUTES>
         </SPECIFICATION-TYPE>
-        <SPEC-OBJECT-TYPE IDENTIFIER="_YKso8CYFEeWvr_B-MeG_kg" LAST-CHANGE="2015-07-09T09:40:06.827+03:00" LONG-NAME="Headline Type">
-          <SPEC-ATTRIBUTES>
-            <ATTRIBUTE-DEFINITION-STRING IDENTIFIER="_frXlECYFEeWvr_B-MeG_kg" LAST-CHANGE="2015-07-09T09:41:08.798+03:00" LONG-NAME="Description">
-              <TYPE>
-                <DATATYPE-DEFINITION-STRING-REF>_vYoIICYFEeWvr_B-MeG_kg</DATATYPE-DEFINITION-STRING-REF>
-              </TYPE>
-            </ATTRIBUTE-DEFINITION-STRING>
-          </SPEC-ATTRIBUTES>
-        </SPEC-OBJECT-TYPE>
         <SPECIFICATION-TYPE IDENTIFIER="_z8qCECYHEeWvr_B-MeG_kg" LAST-CHANGE="2015-07-09T09:57:41.732+03:00" LONG-NAME="Specification">
           <SPEC-ATTRIBUTES>
-            <ATTRIBUTE-DEFINITION-STRING IDENTIFIER="_5BaVYCYHEeWvr_B-MeG_kg" LAST-CHANGE="2015-07-09T09:58:00.724+03:00" LONG-NAME="Description" IS-EDITABLE="true">
+            <ATTRIBUTE-DEFINITION-STRING IDENTIFIER="_5BaVYCYHEeWvr_B-MeG_kg" LAST-CHANGE="2015-07-10T14:30:08.784+03:00" LONG-NAME="Description" IS-EDITABLE="true">
               <TYPE>
                 <DATATYPE-DEFINITION-STRING-REF>_TgKEIiVPEeWtQNBnSmbyPw</DATATYPE-DEFINITION-STRING-REF>
               </TYPE>
@@ -296,6 +296,36 @@
             <SPEC-RELATION-TYPE-REF>_bk8RgCYhEeWvr_B-MeG_kg</SPEC-RELATION-TYPE-REF>
           </TYPE>
         </SPEC-RELATION>
+        <SPEC-RELATION IDENTIFIER="_SgYQ8Cb2EeWcdJVA0QVD_A" LAST-CHANGE="2015-07-10T14:24:51.513+03:00">
+          <TARGET>
+            <SPEC-OBJECT-REF>_PcQyECVpEeWtQNBnSmbyPw</SPEC-OBJECT-REF>
+          </TARGET>
+          <SOURCE>
+            <SPEC-OBJECT-REF>_lEoeICVoEeWtQNBnSmbyPw</SPEC-OBJECT-REF>
+          </SOURCE>
+          <TYPE>
+            <SPEC-RELATION-TYPE-REF>_bk8RgCYhEeWvr_B-MeG_kg</SPEC-RELATION-TYPE-REF>
+          </TYPE>
+        </SPEC-RELATION>
+        <SPEC-RELATION IDENTIFIER="_quzj0Cb2EeWcdJVA0QVD_A" LAST-CHANGE="2015-07-10T14:27:31.478+03:00">
+          <TARGET>
+            <SPEC-OBJECT-REF>_2K2lsSYMEeWvr_B-MeG_kg</SPEC-OBJECT-REF>
+          </TARGET>
+          <SOURCE>
+            <SPEC-OBJECT-REF>_3M_xsCVoEeWtQNBnSmbyPw</SPEC-OBJECT-REF>
+          </SOURCE>
+          <TYPE>
+            <SPEC-RELATION-TYPE-REF>_bk8RgCYhEeWvr_B-MeG_kg</SPEC-RELATION-TYPE-REF>
+          </TYPE>
+        </SPEC-RELATION>
+        <SPEC-RELATION IDENTIFIER="_QU6CcCb3EeWcdJVA0QVD_A" LAST-CHANGE="2015-07-10T14:31:49.911+03:00">
+          <TARGET>
+            <SPEC-OBJECT-REF>_BxXvYCVpEeWtQNBnSmbyPw</SPEC-OBJECT-REF>
+          </TARGET>
+          <SOURCE>
+            <SPEC-OBJECT-REF>_TgKEJyVPEeWtQNBnSmbyPw</SPEC-OBJECT-REF>
+          </SOURCE>
+        </SPEC-RELATION>
       </SPEC-RELATIONS>
       <SPECIFICATIONS>
         <SPECIFICATION DESC="SpecDoc" IDENTIFIER="_TgKEKSVPEeWtQNBnSmbyPw" LAST-CHANGE="2015-07-09T10:32:00.204+03:00" LONG-NAME="Specification Document">
@@ -353,6 +383,10 @@
                       </OBJECT>
                     </SPEC-HIERARCHY>
                   </CHILDREN>
+                  <EDITABLE-ATTS>
+                    <ATTRIBUTE-DEFINITION-STRING-REF>_frXlECYFEeWvr_B-MeG_kg</ATTRIBUTE-DEFINITION-STRING-REF>
+                    <ATTRIBUTE-DEFINITION-STRING-REF>_5BaVYCYHEeWvr_B-MeG_kg</ATTRIBUTE-DEFINITION-STRING-REF>
+                  </EDITABLE-ATTS>
                 </SPEC-HIERARCHY>
                 <SPEC-HIERARCHY IDENTIFIER="_19bnQCVoEeWtQNBnSmbyPw" LAST-CHANGE="2015-07-08T15:01:23.189+03:00">
                   <OBJECT>
@@ -399,10 +433,10 @@
         <configuration:specViewConfigurations>
           <configuration:ProrSpecViewConfiguration specification="_TgKEKSVPEeWtQNBnSmbyPw">
             <configuration:columns>
-              <configuration:Column label="ID" width="154"/>
-              <configuration:Column label="Description" width="237"/>
-              <configuration:Column label="Owner" width="93"/>
-              <configuration:Column label="Headt" width="122"/>
+              <configuration:Column label="ID" width="129"/>
+              <configuration:Column label="Description" width="212"/>
+              <configuration:Column label="Owner" width="68"/>
+              <configuration:Column label="Headt" width="238"/>
             </configuration:columns>
             <configuration:leftHeaderColumn>
               <configuration:Column label="Lead Header Column" width="81"/>
@@ -434,6 +468,7 @@
               <headline:HeadlineConfiguration datatype="_vYoIICYFEeWvr_B-MeG_kg" size="14"/>
               <linewrap:LinewrapConfiguration datatype="_TgKEIiVPEeWtQNBnSmbyPw"/>
               <highlight:KeywordConfiguration/>
+              <linkmanagement:LinkmanagementConfiguration/>
             </configuration:presentationConfigurations>
           </configuration:ProrPresentationConfigurations>
         </configuration:presentationConfigurations>
