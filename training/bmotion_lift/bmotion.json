@@ -1,5 +1,5 @@
 {
-  "template": "template.html",
+  "template": "lift.html",
   "model": "model/MLift.bcm",
   "autoOpen": [
     "CurrentTrace",
