@@ -13,7 +13,7 @@ AtelierB configuration notes
 
 - Workspace - WS_DIR/bdb 
 - Project
-	- assuming proejct name = PRJ_NAME
+	- assuming project name = PRJ_NAME
 	- workspace reference: WS_DIR/bdb/PRJ_NAME.desc
 		- **USES ABSOLUTE PATHS**
 	- project database (dir): PRJ_DIR/bdp
@@ -27,5 +27,15 @@ AtelierB configuration notes
 	
 	
 	
-### Variant A. 
+### Variant A
+
+- Determine if path resolution is absolute or relative to a certain folder 
+	- If path resolution is absolute manual intervention in workspace reference will generate a permanent conflict in push/pull sequences in Git 
+	- If path resolution is relative we must define a mutual folder to report to 
+	
+### Variant B
+
+- Create new project in existing workspace and add component to this project from shared version from git working directory
+	
+
 
