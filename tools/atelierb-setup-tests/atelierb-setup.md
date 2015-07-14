@@ -31,10 +31,28 @@ AtelierB configuration notes
 	
 ### Solution
 #### Variant A
-- Create new project in existing workspace and add component to this project from shared version from git working directory
-	
+- AtelierB workspace - local 
+- AtelierB project - local 
+- component files - in sub-directory under Version Control
+
+
+Setup AtelierB to import existing component:
+- Create new project in existing workspace and add component to this project from shared version from VCS(git) working directory
+
+
+ISSUES:
+- all generated files (POs) are not under Version control
+- Interactive Proofs - not under version control
+   
+
 #### Variant B
+- AtelierB workspace - under Version Control
+- AtelierB project - under Version Control 
+- component files - under directory of the Project (under Version Control)
+
 
 	
+
+
 
 
