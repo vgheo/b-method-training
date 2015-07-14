@@ -1,8 +1,0 @@
-/* PatchProver
- * Author: T0164919
- * Creation date: 7/9/2015
- */
-
-THEORY todoT IS
-     btrue
-END
