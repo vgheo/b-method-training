@@ -25,17 +25,16 @@ AtelierB configuration notes
 		- **USES ABSOLUTE PATHS**
 	- checksum? : PRJ_DIR/bdp/COMP_NAME.dep
 	
-	
-	
-### Variant A
-
-- Determine if path resolution is absolute or relative to a certain folder 
+- Determine if AtelierB uses absolute or relative paths for referencing different files 
 	- If path resolution is absolute manual intervention in workspace reference will generate a permanent conflict in push/pull sequences in Git 
 	- If path resolution is relative we must define a mutual folder to report to 
 	
-### Variant B
-
+### Solution
+#### Variant A
 - Create new project in existing workspace and add component to this project from shared version from git working directory
+	
+#### Variant B
+
 	
 
 
