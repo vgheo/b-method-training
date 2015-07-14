@@ -50,8 +50,10 @@ ISSUES:
 - AtelierB project - under Version Control 
 - component files - under directory of the Project (under Version Control)
 
+Constraint: The Workspace and Project directories must be **at the same absolute path** on all hosts 
+where AtelierB is used on these workspaces/projects.
 
-	
+  	
 
 
 
