@@ -1,0 +1,138 @@
+digraph g {
+rankdir=RL;
+    Noderoot [label="&\n true", shape="ellipse", fillcolor="olivedrab2", style="filled"]
+    Node1 [label=":\n true\ncurrent_floor : LIFT --\> ground_floor ..\n top_floor", shape="ellipse", fillcolor="olivedrab2", style="filled"]
+        Node1 -> Noderoot;
+    Node2 [label=":\n true\ncurrent_floor : LIFT +-\> INTEGER", shape="ellipse", fillcolor="olivedrab2", style="filled"]
+        Node2 -> Node1;
+    Node3 [label="current_floor\n \{(LIFT1\|-\>0)\}", shape="box", fillcolor="white", style="filled"]
+        Node3 -> Node2;
+    Node4 [label="+-\>\n (LIFT +-\> INTEGER)", shape="box", fillcolor="white", style="filled"]
+        Node4 -> Node2;
+    Node5 [label="LIFT", shape="box", fillcolor="white", style="filled"]
+        Node5 -> Node4;
+    Node6 [label="integer_set\n INTEGER", shape="box", fillcolor="white", style="filled"]
+        Node6 -> Node4;
+    Node7 [label="=\n true\ndom(current_floor) = LIFT", shape="ellipse", fillcolor="olivedrab2", style="filled"]
+        Node7 -> Node1;
+    Node8 [label="dom\n \{LIFT1\}", shape="box", fillcolor="white", style="filled"]
+        Node8 -> Node7;
+    Node9 [label="current_floor\n \{(LIFT1\|-\>0)\}", shape="box", fillcolor="white", style="filled"]
+        Node9 -> Node8;
+    Node10 [label="LIFT", shape="box", fillcolor="white", style="filled"]
+        Node10 -> Node7;
+    Node11 [label="<:\n true\nran(current_floor) <: ground_floor .. to\np_floor", shape="ellipse", fillcolor="olivedrab2", style="filled"]
+        Node11 -> Node1;
+    Node12 [label="ran\n \{0\}", shape="box", fillcolor="white", style="filled"]
+        Node12 -> Node11;
+    Node13 [label="current_floor\n \{(LIFT1\|-\>0)\}", shape="box", fillcolor="white", style="filled"]
+        Node13 -> Node12;
+    Node14 [label="..\n (0 .. 2)", shape="box", fillcolor="white", style="filled"]
+        Node14 -> Node11;
+    Node15 [label="ground_floor\n 0", shape="box", fillcolor="white", style="filled"]
+        Node15 -> Node14;
+    Node16 [label="top_floor\n 2", shape="box", fillcolor="white", style="filled"]
+        Node16 -> Node14;
+    Node17 [label=":\n true\ndir : LIFT --\> DIRECTION", shape="ellipse", fillcolor="olivedrab2", style="filled"]
+        Node17 -> Noderoot;
+    Node18 [label=":\n true\ndir : LIFT +-\> DIRECTION", shape="ellipse", fillcolor="olivedrab2", style="filled"]
+        Node18 -> Node17;
+    Node19 [label="dir\n \{(LIFT1\|-\>up)\}", shape="box", fillcolor="white", style="filled"]
+        Node19 -> Node18;
+    Node20 [label="+-\>\n (LIFT +-\> DIRECTION)", shape="box", fillcolor="white", style="filled"]
+        Node20 -> Node18;
+    Node21 [label="LIFT", shape="box", fillcolor="white", style="filled"]
+        Node21 -> Node20;
+    Node22 [label="DIRECTION", shape="box", fillcolor="white", style="filled"]
+        Node22 -> Node20;
+    Node23 [label="=\n true\ndom(dir) = LIFT", shape="ellipse", fillcolor="olivedrab2", style="filled"]
+        Node23 -> Node17;
+    Node24 [label="dom\n \{LIFT1\}", shape="box", fillcolor="white", style="filled"]
+        Node24 -> Node23;
+    Node25 [label="dir\n \{(LIFT1\|-\>up)\}", shape="box", fillcolor="white", style="filled"]
+        Node25 -> Node24;
+    Node26 [label="LIFT", shape="box", fillcolor="white", style="filled"]
+        Node26 -> Node23;
+    Node27 [label=":\n true\nin : ground_floor .. top_floor <-\> DIREC\nTION", shape="ellipse", fillcolor="olivedrab2", style="filled"]
+        Node27 -> Noderoot;
+    Node28 [label="in\n \{\}", shape="box", fillcolor="white", style="filled"]
+        Node28 -> Node27;
+    Node29 [label="<-\>\n ((0 .. 2) <-\> DIRECTION)", shape="box", fillcolor="white", style="filled"]
+        Node29 -> Node27;
+    Node30 [label="..\n (0 .. 2)", shape="box", fillcolor="white", style="filled"]
+        Node30 -> Node29;
+    Node31 [label="ground_floor\n 0", shape="box", fillcolor="white", style="filled"]
+        Node31 -> Node30;
+    Node32 [label="top_floor\n 2", shape="box", fillcolor="white", style="filled"]
+        Node32 -> Node30;
+    Node33 [label="DIRECTION", shape="box", fillcolor="white", style="filled"]
+        Node33 -> Node29;
+    Node34 [label=":\n true\nout : LIFT <-\> ground_floor .. top_floor", shape="ellipse", fillcolor="olivedrab2", style="filled"]
+        Node34 -> Noderoot;
+    Node35 [label="out\n \{\}", shape="box", fillcolor="white", style="filled"]
+        Node35 -> Node34;
+    Node36 [label="<-\>\n (LIFT <-\> (0 .. 2))", shape="box", fillcolor="white", style="filled"]
+        Node36 -> Node34;
+    Node37 [label="LIFT", shape="box", fillcolor="white", style="filled"]
+        Node37 -> Node36;
+    Node38 [label="..\n (0 .. 2)", shape="box", fillcolor="white", style="filled"]
+        Node38 -> Node36;
+    Node39 [label="ground_floor\n 0", shape="box", fillcolor="white", style="filled"]
+        Node39 -> Node38;
+    Node40 [label="top_floor\n 2", shape="box", fillcolor="white", style="filled"]
+        Node40 -> Node38;
+    Node41 [label="/:\n true\n(ground_floor \|-\> dn) /: in", shape="ellipse", fillcolor="olivedrab2", style="filled"]
+        Node41 -> Noderoot;
+    Node42 [label="\|-\>\n (0\|-\>dn)", shape="box", fillcolor="white", style="filled"]
+        Node42 -> Node41;
+    Node43 [label="ground_floor\n 0", shape="box", fillcolor="white", style="filled"]
+        Node43 -> Node42;
+    Node44 [label="dn", shape="box", fillcolor="white", style="filled"]
+        Node44 -> Node42;
+    Node45 [label="in\n \{\}", shape="box", fillcolor="white", style="filled"]
+        Node45 -> Node41;
+    Node46 [label="/:\n true\n(top_floor \|-\> up) /: in", shape="ellipse", fillcolor="olivedrab2", style="filled"]
+        Node46 -> Noderoot;
+    Node47 [label="\|-\>\n (2\|-\>up)", shape="box", fillcolor="white", style="filled"]
+        Node47 -> Node46;
+    Node48 [label="top_floor\n 2", shape="box", fillcolor="white", style="filled"]
+        Node48 -> Node47;
+    Node49 [label="up", shape="box", fillcolor="white", style="filled"]
+        Node49 -> Node47;
+    Node50 [label="in\n \{\}", shape="box", fillcolor="white", style="filled"]
+        Node50 -> Node46;
+    Node51 [label="=\n true\nmoving <<\| (out /\\ current_floor) = \{\}", shape="ellipse", fillcolor="olivedrab2", style="filled"]
+        Node51 -> Noderoot;
+    Node52 [label="<<\|\n \{\}", shape="box", fillcolor="white", style="filled"]
+        Node52 -> Node51;
+    Node53 [label="moving\n \{\}", shape="box", fillcolor="white", style="filled"]
+        Node53 -> Node52;
+    Node54 [label="/\\\n \{\}", shape="box", fillcolor="white", style="filled"]
+        Node54 -> Node52;
+    Node55 [label="out\n \{\}", shape="box", fillcolor="white", style="filled"]
+        Node55 -> Node54;
+    Node56 [label="current_floor\n \{(LIFT1\|-\>0)\}", shape="box", fillcolor="white", style="filled"]
+        Node56 -> Node54;
+    Node57 [label="\{\}", shape="box", fillcolor="white", style="filled"]
+        Node57 -> Node51;
+    Node58 [label="=\n true\nin /\\ ran(moving <<\| (current_floor \>< d\nir)) = \{\}", shape="ellipse", fillcolor="olivedrab2", style="filled"]
+        Node58 -> Noderoot;
+    Node59 [label="/\\\n \{\}", shape="box", fillcolor="white", style="filled"]
+        Node59 -> Node58;
+    Node60 [label="in\n \{\}", shape="box", fillcolor="white", style="filled"]
+        Node60 -> Node59;
+    Node61 [label="ran\n \{(0\|-\>up)\}", shape="box", fillcolor="white", style="filled"]
+        Node61 -> Node59;
+    Node62 [label="<<\|\n \{(LIFT1\|-\>(0\|-\>up))\}", shape="box", fillcolor="white", style="filled"]
+        Node62 -> Node61;
+    Node63 [label="moving\n \{\}", shape="box", fillcolor="white", style="filled"]
+        Node63 -> Node62;
+    Node64 [label="\><\n \{(LIFT1\|-\>(0\|-\>up))\}", shape="box", fillcolor="white", style="filled"]
+        Node64 -> Node62;
+    Node65 [label="current_floor\n \{(LIFT1\|-\>0)\}", shape="box", fillcolor="white", style="filled"]
+        Node65 -> Node64;
+    Node66 [label="dir\n \{(LIFT1\|-\>up)\}", shape="box", fillcolor="white", style="filled"]
+        Node66 -> Node64;
+    Node67 [label="\{\}", shape="box", fillcolor="white", style="filled"]
+        Node67 -> Node58;
+}
