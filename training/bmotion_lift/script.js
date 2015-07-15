@@ -21,43 +21,17 @@ requirejs(['bmotion.template'], function (bms) {
 	  formulas: ["cur_floor"],
 	  trigger: function (origin, result) {
 		
-		/*var svgFloor1 = document.getElementById("txt_floor1");
-		var svgFloor0 = document.getElementById("txt_floor0");
-		var svgFloor_1 = document.getElementById("txt_floor-1");
-		var svgDoor = document.getElementById("door");*/
-		
 		var svgGroup = document.getElementById("lift");
 		
 		switch (result[0]) {
 		  case "0":
-		    {
 				svgGroup.setAttribute("transform", "translate(0, -100)");
-				/*svgDoor.setAttribute("y", "175");
-				svgFloor1.setAttribute("y", "190");
-				svgFloor0.setAttribute("y", "220");
-				svgFloor_1.setAttribute("y", "250");*/
-				//origin.attr("y", "175");
-			}
 			break;
 		  case "1":
-			{
 				svgGroup.setAttribute("transform", "translate(0, -220)");
-				/*svgDoor.setAttribute("y", "60");
-				svgFloor1.setAttribute("y", "75");
-				svgFloor0.setAttribute("y", "105");
-				svgFloor_1.setAttribute("y", "135");*/
-				//origin.attr("y", "60");
-			}
 			break;
 		  case "-1":
-			{
 				svgGroup.setAttribute("transform", "translate(0, 0)");
-				/*svgDoor.setAttribute("y", "275");
-				svgFloor1.setAttribute("y", "290");
-				svgFloor0.setAttribute("y", "320");
-				svgFloor_1.setAttribute("y", "350");*/
-				//origin.attr("y", "275");
-			}
 			break;
 		}
 	  }
@@ -80,72 +54,7 @@ requirejs(['bmotion.template'], function (bms) {
 		
 	  }
 	});
-	
-/*
-// Refactoring up --------------------------------------------------------------	
 
-	// Formula Observer for floor 1 inside
-	bms.observe("formula", {
-	  selector: "#txt_floor1",
-	  formulas: ["cur_floor"],
-	  trigger: function (origin, result) {
-		
-		switch (result[0]) {
-		  case "0":
-			origin.attr("y", "190");
-			break;
-		  case "1":
-			origin.attr("y", "75");
-			break;
-		  case "-1":
-			origin.attr("y", "290");
-			break;
-		}
-		
-	  }
-	});
-	// Formula Observer for floor 0 inside
-	bms.observe("formula", {
-	  selector: "#txt_floor0",
-	  formulas: ["cur_floor"],
-	  trigger: function (origin, result) {
-		
-		switch (result[0]) {
-		  case "0":
-			origin.attr("y", "220");
-			break;
-		  case "1":
-			origin.attr("y", "105");
-			break;
-		  case "-1":
-			origin.attr("y", "320");
-			break;
-		}
-		
-	  }
-	});
-	// Formula Observer for floor -1 inside
-	bms.observe("formula", {
-	  selector: "#txt_floor-1",
-	  formulas: ["cur_floor"],
-	  trigger: function (origin, result) {
-		
-		switch (result[0]) {
-		  case "0":
-			origin.attr("y", "250");
-			break;
-		  case "1":
-			origin.attr("y", "135");
-			break;
-		  case "-1":
-			origin.attr("y", "350");
-			break;
-		}
-		
-	  }
-	});
-*/
-//----------------------------------------------------------------------
 	
 	/*
 	 * Observer bold floor : push call button
