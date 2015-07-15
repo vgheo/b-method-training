@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<REQ-IF xmlns="http://www.omg.org/spec/ReqIF/20110401/reqif.xsd" xmlns:configuration="http://eclipse.org/rmf/pror/toolextensions/1.0" xmlns:headline="http://pror.org/presentation/headline" xmlns:highlight="http://formalmind.com/pror/presentation/highlight" xmlns:id="http://pror.org/presentation/id" xmlns:linewrap="http://pror.org/presentation/linewrap" xmlns:linkmanagement="http://formalmind.com/pror/presentation/linkmanagement">
+<REQ-IF xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.omg.org/spec/ReqIF/20110401/reqif.xsd" xmlns:configuration="http://eclipse.org/rmf/pror/toolextensions/1.0" xmlns:headline="http://pror.org/presentation/headline" xmlns:highlight="http://formalmind.com/pror/presentation/highlight" xmlns:id="http://pror.org/presentation/id" xmlns:linewrap="http://pror.org/presentation/linewrap" xmlns:linkmanagement="http://formalmind.com/pror/presentation/linkmanagement">
   <THE-HEADER>
-    <REQ-IF-HEADER IDENTIFIER="rmf-b13ab7ae-0861-41c3-b760-7e445f7bfd5e">
+    <REQ-IF-HEADER IDENTIFIER="rmf-5b6ce2d2-680a-4333-bb57-5de437098aa6">
       <COMMENT>Created by: T0164930</COMMENT>
       <CREATION-TIME>2015-07-08T11:57:04.595+03:00</CREATION-TIME>
       <REQ-IF-TOOL-ID>ProR (http://pror.org)</REQ-IF-TOOL-ID>
@@ -16,6 +16,7 @@
         <DATATYPE-DEFINITION-STRING IDENTIFIER="_TgKEIiVPEeWtQNBnSmbyPw" LAST-CHANGE="2015-07-08T11:57:04.595+03:00" LONG-NAME="T_String32k" MAX-LENGTH="32000"/>
         <DATATYPE-DEFINITION-STRING IDENTIFIER="_ejflACVrEeWtQNBnSmbyPw" LAST-CHANGE="2015-07-08T15:18:29.134+03:00" LONG-NAME="T_ID"/>
         <DATATYPE-DEFINITION-STRING IDENTIFIER="_vYoIICYFEeWvr_B-MeG_kg" LAST-CHANGE="2015-07-09T09:42:55.586+03:00" LONG-NAME="T_Headline" MAX-LENGTH="50"/>
+        <DATATYPE-DEFINITION-STRING IDENTIFIER="_9dvSYCrLEeWjMOXaSMowzQ" LAST-CHANGE="2015-07-15T11:31:57.282+03:00" LONG-NAME="stringlink"/>
       </DATATYPES>
       <SPEC-TYPES>
         <SPEC-OBJECT-TYPE IDENTIFIER="_TgKEIyVPEeWtQNBnSmbyPw" LAST-CHANGE="2015-07-08T11:57:04.595+03:00" LONG-NAME="Requirement Type">
@@ -136,14 +137,14 @@
             <SPEC-OBJECT-TYPE-REF>_TgKEIyVPEeWtQNBnSmbyPw</SPEC-OBJECT-TYPE-REF>
           </TYPE>
         </SPEC-OBJECT>
-        <SPEC-OBJECT IDENTIFIER="_0_2ksCVoEeWtQNBnSmbyPw" LAST-CHANGE="2015-07-09T13:24:29.244+03:00">
+        <SPEC-OBJECT IDENTIFIER="_0_2ksCVoEeWtQNBnSmbyPw" LAST-CHANGE="2015-07-15T11:46:45.044+03:00">
           <VALUES>
             <ATTRIBUTE-VALUE-STRING THE-VALUE="REQ4">
               <DEFINITION>
                 <ATTRIBUTE-DEFINITION-STRING-REF>_yxvZQCVmEeWtQNBnSmbyPw</ATTRIBUTE-DEFINITION-STRING-REF>
               </DEFINITION>
             </ATTRIBUTE-VALUE-STRING>
-            <ATTRIBUTE-VALUE-STRING THE-VALUE="Linked relation">
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="Multiple Reference">
               <DEFINITION>
                 <ATTRIBUTE-DEFINITION-STRING-REF>_TgKEJCVPEeWtQNBnSmbyPw</ATTRIBUTE-DEFINITION-STRING-REF>
               </DEFINITION>
@@ -236,6 +237,28 @@
             <SPEC-OBJECT-TYPE-REF>_TgKEIyVPEeWtQNBnSmbyPw</SPEC-OBJECT-TYPE-REF>
           </TYPE>
         </SPEC-OBJECT>
+        <SPEC-OBJECT IDENTIFIER="_a6VskCrHEeWjMOXaSMowzQ" LAST-CHANGE="2015-07-15T10:59:21.664+03:00">
+          <VALUES>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="REQ-13">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_yxvZQCVmEeWtQNBnSmbyPw</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="objectmultiple">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_TgKEJCVPEeWtQNBnSmbyPw</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="ad">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_-9MCcCVmEeWtQNBnSmbyPw</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+          </VALUES>
+          <TYPE>
+            <SPEC-OBJECT-TYPE-REF>_TgKEIyVPEeWtQNBnSmbyPw</SPEC-OBJECT-TYPE-REF>
+          </TYPE>
+        </SPEC-OBJECT>
         <SPEC-OBJECT IDENTIFIER="_x1cEoCYMEeWvr_B-MeG_kg" LAST-CHANGE="2015-07-09T10:33:14.937+03:00">
           <VALUES>
             <ATTRIBUTE-VALUE-STRING THE-VALUE="Headline1">
@@ -265,19 +288,42 @@
             <SPEC-OBJECT-TYPE-REF>_TgKEIyVPEeWtQNBnSmbyPw</SPEC-OBJECT-TYPE-REF>
           </TYPE>
         </SPEC-OBJECT>
+        <SPEC-OBJECT IDENTIFIER="__-dfgCrHEeWjMOXaSMowzQ" LAST-CHANGE="2015-07-15T11:03:33.515+03:00">
+          <VALUES>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="REQ-14">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_yxvZQCVmEeWtQNBnSmbyPw</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="SameObject">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_TgKEJCVPEeWtQNBnSmbyPw</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+          </VALUES>
+          <TYPE>
+            <SPEC-OBJECT-TYPE-REF>_TgKEIyVPEeWtQNBnSmbyPw</SPEC-OBJECT-TYPE-REF>
+          </TYPE>
+        </SPEC-OBJECT>
+        <SPEC-OBJECT IDENTIFIER="_S6eBECrJEeWjMOXaSMowzQ" LAST-CHANGE="2015-07-15T11:12:51.875+03:00">
+          <VALUES>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="REQ-15">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_yxvZQCVmEeWtQNBnSmbyPw</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="SameReference">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_TgKEJCVPEeWtQNBnSmbyPw</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+          </VALUES>
+          <TYPE>
+            <SPEC-OBJECT-TYPE-REF>_TgKEIyVPEeWtQNBnSmbyPw</SPEC-OBJECT-TYPE-REF>
+          </TYPE>
+        </SPEC-OBJECT>
       </SPEC-OBJECTS>
       <SPEC-RELATIONS>
-        <SPEC-RELATION IDENTIFIER="_qA9HwCYkEeWvr_B-MeG_kg" LAST-CHANGE="2015-07-09T13:24:18.492+03:00">
-          <TARGET>
-            <SPEC-OBJECT-REF>_0_2ksCVoEeWtQNBnSmbyPw</SPEC-OBJECT-REF>
-          </TARGET>
-          <SOURCE>
-            <SPEC-OBJECT-REF>_PcQyECVpEeWtQNBnSmbyPw</SPEC-OBJECT-REF>
-          </SOURCE>
-          <TYPE>
-            <SPEC-RELATION-TYPE-REF>_bk8RgCYhEeWvr_B-MeG_kg</SPEC-RELATION-TYPE-REF>
-          </TYPE>
-        </SPEC-RELATION>
         <SPEC-RELATION IDENTIFIER="_w40XcCYkEeWvr_B-MeG_kg" LAST-CHANGE="2015-07-09T13:25:04.615+03:00">
           <VALUES>
             <ATTRIBUTE-VALUE-STRING THE-VALUE="going link2">
@@ -289,9 +335,6 @@
           <TARGET>
             <SPEC-OBJECT-REF>_18z8MCVoEeWtQNBnSmbyPw</SPEC-OBJECT-REF>
           </TARGET>
-          <SOURCE>
-            <SPEC-OBJECT-REF>_PcQyECVpEeWtQNBnSmbyPw</SPEC-OBJECT-REF>
-          </SOURCE>
           <TYPE>
             <SPEC-RELATION-TYPE-REF>_bk8RgCYhEeWvr_B-MeG_kg</SPEC-RELATION-TYPE-REF>
           </TYPE>
@@ -321,6 +364,56 @@
         <SPEC-RELATION IDENTIFIER="_QU6CcCb3EeWcdJVA0QVD_A" LAST-CHANGE="2015-07-10T14:31:49.911+03:00">
           <TARGET>
             <SPEC-OBJECT-REF>_BxXvYCVpEeWtQNBnSmbyPw</SPEC-OBJECT-REF>
+          </TARGET>
+          <SOURCE>
+            <SPEC-OBJECT-REF>_TgKEJyVPEeWtQNBnSmbyPw</SPEC-OBJECT-REF>
+          </SOURCE>
+        </SPEC-RELATION>
+        <SPEC-RELATION IDENTIFIER="_ATTRoCrJEeWjMOXaSMowzQ" LAST-CHANGE="2015-07-15T11:10:46.629+03:00">
+          <TARGET>
+            <SPEC-OBJECT-REF>_2K2lsSYMEeWvr_B-MeG_kg</SPEC-OBJECT-REF>
+          </TARGET>
+          <SOURCE>
+            <SPEC-OBJECT-REF>_a6VskCrHEeWjMOXaSMowzQ</SPEC-OBJECT-REF>
+          </SOURCE>
+          <TYPE>
+            <SPEC-RELATION-TYPE-REF>_bk8RgCYhEeWvr_B-MeG_kg</SPEC-RELATION-TYPE-REF>
+          </TYPE>
+        </SPEC-RELATION>
+        <SPEC-RELATION IDENTIFIER="_L8Q40CrJEeWjMOXaSMowzQ" LAST-CHANGE="2015-07-15T11:12:05.695+03:00">
+          <TARGET>
+            <SPEC-OBJECT-REF>_a6VskCrHEeWjMOXaSMowzQ</SPEC-OBJECT-REF>
+          </TARGET>
+          <SOURCE>
+            <SPEC-OBJECT-REF>__-dfgCrHEeWjMOXaSMowzQ</SPEC-OBJECT-REF>
+          </SOURCE>
+          <TYPE>
+            <SPEC-RELATION-TYPE-REF>_bk8RgCYhEeWvr_B-MeG_kg</SPEC-RELATION-TYPE-REF>
+          </TYPE>
+        </SPEC-RELATION>
+        <SPEC-RELATION IDENTIFIER="_leof0CrJEeWjMOXaSMowzQ" LAST-CHANGE="2015-07-15T11:14:56.697+03:00">
+          <TARGET>
+            <SPEC-OBJECT-REF>_S6eBECrJEeWjMOXaSMowzQ</SPEC-OBJECT-REF>
+          </TARGET>
+          <SOURCE>
+            <SPEC-OBJECT-REF>_a6VskCrHEeWjMOXaSMowzQ</SPEC-OBJECT-REF>
+          </SOURCE>
+          <TYPE/>
+        </SPEC-RELATION>
+        <SPEC-RELATION IDENTIFIER="_rNYLUCrJEeWjMOXaSMowzQ" LAST-CHANGE="2015-07-15T11:15:31.830+03:00">
+          <TARGET>
+            <SPEC-OBJECT-REF>_a6VskCrHEeWjMOXaSMowzQ</SPEC-OBJECT-REF>
+          </TARGET>
+          <SOURCE>
+            <SPEC-OBJECT-REF>_S6eBECrJEeWjMOXaSMowzQ</SPEC-OBJECT-REF>
+          </SOURCE>
+          <TYPE>
+            <SPEC-RELATION-TYPE-REF>_bk8RgCYhEeWvr_B-MeG_kg</SPEC-RELATION-TYPE-REF>
+          </TYPE>
+        </SPEC-RELATION>
+        <SPEC-RELATION IDENTIFIER="_u3QcECrJEeWjMOXaSMowzQ" LAST-CHANGE="2015-07-15T11:16:02.641+03:00">
+          <TARGET>
+            <SPEC-OBJECT-REF>__-dfgCrHEeWjMOXaSMowzQ</SPEC-OBJECT-REF>
           </TARGET>
           <SOURCE>
             <SPEC-OBJECT-REF>_TgKEJyVPEeWtQNBnSmbyPw</SPEC-OBJECT-REF>
@@ -360,6 +453,21 @@
                         <SPEC-OBJECT-REF>_PcQyECVpEeWtQNBnSmbyPw</SPEC-OBJECT-REF>
                       </OBJECT>
                     </SPEC-HIERARCHY>
+                    <SPEC-HIERARCHY IDENTIFIER="_1AePwCVoEeWtQNBnSmbyPw" LAST-CHANGE="2015-07-15T11:36:23.420+03:00">
+                      <OBJECT>
+                        <SPEC-OBJECT-REF>_0_2ksCVoEeWtQNBnSmbyPw</SPEC-OBJECT-REF>
+                      </OBJECT>
+                    </SPEC-HIERARCHY>
+                    <SPEC-HIERARCHY IDENTIFIER="_k6vBMCrMEeWjMOXaSMowzQ" LAST-CHANGE="2015-07-15T11:36:24.387+03:00">
+                      <OBJECT>
+                        <SPEC-OBJECT-REF>_0_2ksCVoEeWtQNBnSmbyPw</SPEC-OBJECT-REF>
+                      </OBJECT>
+                    </SPEC-HIERARCHY>
+                    <SPEC-HIERARCHY IDENTIFIER="_lAr4MCrMEeWjMOXaSMowzQ" LAST-CHANGE="2015-07-15T11:36:25.011+03:00">
+                      <OBJECT>
+                        <SPEC-OBJECT-REF>_0_2ksCVoEeWtQNBnSmbyPw</SPEC-OBJECT-REF>
+                      </OBJECT>
+                    </SPEC-HIERARCHY>
                   </CHILDREN>
                 </SPEC-HIERARCHY>
               </CHILDREN>
@@ -369,18 +477,16 @@
                 <SPEC-OBJECT-REF>_BxXvYCVpEeWtQNBnSmbyPw</SPEC-OBJECT-REF>
               </OBJECT>
               <CHILDREN>
-                <SPEC-HIERARCHY IDENTIFIER="_zVdfcCVoEeWtQNBnSmbyPw" LAST-CHANGE="2015-07-08T15:01:20.622+03:00">
+                <SPEC-HIERARCHY IDENTIFIER="_zVdfcCVoEeWtQNBnSmbyPw" LAST-CHANGE="2015-07-08T15:01:20.622+03:00" IS-TABLE-INTERNAL="true">
+                  <OBJECT>
+                    <SPEC-OBJECT-REF>_a6VskCrHEeWjMOXaSMowzQ</SPEC-OBJECT-REF>
+                  </OBJECT>
                   <CHILDREN>
                     <SPEC-HIERARCHY IDENTIFIER="_3NlAgCVoEeWtQNBnSmbyPw" LAST-CHANGE="2015-07-08T14:59:59.079+03:00">
                       <OBJECT>
                         <SPEC-OBJECT-REF>_3M_xsCVoEeWtQNBnSmbyPw</SPEC-OBJECT-REF>
                       </OBJECT>
                       <CHILDREN/>
-                    </SPEC-HIERARCHY>
-                    <SPEC-HIERARCHY IDENTIFIER="_1AePwCVoEeWtQNBnSmbyPw" LAST-CHANGE="2015-07-10T10:25:56.441+03:00">
-                      <OBJECT>
-                        <SPEC-OBJECT-REF>_0_2ksCVoEeWtQNBnSmbyPw</SPEC-OBJECT-REF>
-                      </OBJECT>
                     </SPEC-HIERARCHY>
                   </CHILDREN>
                   <EDITABLE-ATTS>
@@ -393,6 +499,73 @@
                     <SPEC-OBJECT-REF>_18z8MCVoEeWtQNBnSmbyPw</SPEC-OBJECT-REF>
                   </OBJECT>
                   <CHILDREN/>
+                </SPEC-HIERARCHY>
+                <SPEC-HIERARCHY IDENTIFIER="_S7Wx4SrJEeWjMOXaSMowzQ" LAST-CHANGE="2015-07-15T11:12:51.875+03:00">
+                  <OBJECT>
+                    <SPEC-OBJECT-REF>_S6eBECrJEeWjMOXaSMowzQ</SPEC-OBJECT-REF>
+                  </OBJECT>
+                  <CHILDREN>
+                    <SPEC-HIERARCHY IDENTIFIER="__OVbYCrNEeWjMOXaSMowzQ" LAST-CHANGE="2015-07-15T11:46:30.422+03:00">
+                      <OBJECT>
+                        <SPEC-OBJECT-REF>_0_2ksCVoEeWtQNBnSmbyPw</SPEC-OBJECT-REF>
+                      </OBJECT>
+                    </SPEC-HIERARCHY>
+                    <SPEC-HIERARCHY IDENTIFIER="__ne7MCrNEeWjMOXaSMowzQ" LAST-CHANGE="2015-07-15T11:46:33.059+03:00">
+                      <OBJECT>
+                        <SPEC-OBJECT-REF>_0_2ksCVoEeWtQNBnSmbyPw</SPEC-OBJECT-REF>
+                      </OBJECT>
+                    </SPEC-HIERARCHY>
+                    <SPEC-HIERARCHY IDENTIFIER="__ssLUCrNEeWjMOXaSMowzQ" LAST-CHANGE="2015-07-15T11:46:33.605+03:00">
+                      <OBJECT>
+                        <SPEC-OBJECT-REF>_0_2ksCVoEeWtQNBnSmbyPw</SPEC-OBJECT-REF>
+                      </OBJECT>
+                      <CHILDREN>
+                        <SPEC-HIERARCHY IDENTIFIER="_AB0GwCrOEeWjMOXaSMowzQ" LAST-CHANGE="2015-07-15T11:46:35.820+03:00">
+                          <OBJECT>
+                            <SPEC-OBJECT-REF>_0_2ksCVoEeWtQNBnSmbyPw</SPEC-OBJECT-REF>
+                          </OBJECT>
+                          <CHILDREN>
+                            <SPEC-HIERARCHY IDENTIFIER="_B9o6QCrOEeWjMOXaSMowzQ" LAST-CHANGE="2015-07-15T11:46:48.804+03:00">
+                              <OBJECT>
+                                <SPEC-OBJECT-REF>_0_2ksCVoEeWtQNBnSmbyPw</SPEC-OBJECT-REF>
+                              </OBJECT>
+                              <CHILDREN>
+                                <SPEC-HIERARCHY IDENTIFIER="_COmHYCrOEeWjMOXaSMowzQ" LAST-CHANGE="2015-07-15T11:46:50.582+03:00">
+                                  <OBJECT>
+                                    <SPEC-OBJECT-REF>_0_2ksCVoEeWtQNBnSmbyPw</SPEC-OBJECT-REF>
+                                  </OBJECT>
+                                  <CHILDREN>
+                                    <SPEC-HIERARCHY IDENTIFIER="_PjmuwCrQEeWjMOXaSMowzQ" LAST-CHANGE="2015-07-15T12:02:39.020+03:00">
+                                      <OBJECT>
+                                        <SPEC-OBJECT-REF>_0_2ksCVoEeWtQNBnSmbyPw</SPEC-OBJECT-REF>
+                                      </OBJECT>
+                                    </SPEC-HIERARCHY>
+                                    <SPEC-HIERARCHY IDENTIFIER="_Po9v4CrQEeWjMOXaSMowzQ" LAST-CHANGE="2015-07-15T12:02:39.582+03:00">
+                                      <OBJECT>
+                                        <SPEC-OBJECT-REF>_0_2ksCVoEeWtQNBnSmbyPw</SPEC-OBJECT-REF>
+                                      </OBJECT>
+                                    </SPEC-HIERARCHY>
+                                    <SPEC-HIERARCHY IDENTIFIER="_PsryQCrQEeWjMOXaSMowzQ" LAST-CHANGE="2015-07-15T12:02:39.972+03:00">
+                                      <OBJECT>
+                                        <SPEC-OBJECT-REF>_0_2ksCVoEeWtQNBnSmbyPw</SPEC-OBJECT-REF>
+                                      </OBJECT>
+                                      <CHILDREN>
+                                        <SPEC-HIERARCHY IDENTIFIER="_P_R-ICrQEeWjMOXaSMowzQ" LAST-CHANGE="2015-07-15T12:02:41.922+03:00">
+                                          <OBJECT>
+                                            <SPEC-OBJECT-REF>_0_2ksCVoEeWtQNBnSmbyPw</SPEC-OBJECT-REF>
+                                          </OBJECT>
+                                        </SPEC-HIERARCHY>
+                                      </CHILDREN>
+                                    </SPEC-HIERARCHY>
+                                  </CHILDREN>
+                                </SPEC-HIERARCHY>
+                              </CHILDREN>
+                            </SPEC-HIERARCHY>
+                          </CHILDREN>
+                        </SPEC-HIERARCHY>
+                      </CHILDREN>
+                    </SPEC-HIERARCHY>
+                  </CHILDREN>
                 </SPEC-HIERARCHY>
               </CHILDREN>
             </SPEC-HIERARCHY>
@@ -420,6 +593,19 @@
                     <SPEC-OBJECT-REF>_2K2lsSYMEeWvr_B-MeG_kg</SPEC-OBJECT-REF>
                   </OBJECT>
                 </SPEC-HIERARCHY>
+                <SPEC-HIERARCHY DESC="" IDENTIFIER="___QwwCrHEeWjMOXaSMowzQ" LAST-CHANGE="2015-07-15T11:03:33.515+03:00" IS-EDITABLE="true" IS-TABLE-INTERNAL="true">
+                  <OBJECT>
+                    <SPEC-OBJECT-REF>__-dfgCrHEeWjMOXaSMowzQ</SPEC-OBJECT-REF>
+                  </OBJECT>
+                  <CHILDREN>
+                    <SPEC-HIERARCHY IDENTIFIER="_49wDkCrMEeWjMOXaSMowzQ" LAST-CHANGE="2015-07-15T11:38:38.921+03:00">
+                      <OBJECT>
+                        <SPEC-OBJECT-REF>_0_2ksCVoEeWtQNBnSmbyPw</SPEC-OBJECT-REF>
+                      </OBJECT>
+                      <CHILDREN/>
+                    </SPEC-HIERARCHY>
+                  </CHILDREN>
+                </SPEC-HIERARCHY>
               </CHILDREN>
             </SPEC-HIERARCHY>
           </CHILDREN>
@@ -444,7 +630,7 @@
           </configuration:ProrSpecViewConfiguration>
           <configuration:ProrSpecViewConfiguration specification="_sysjgCYMEeWvr_B-MeG_kg">
             <configuration:columns>
-              <configuration:Column label="Description" width="100"/>
+              <configuration:Column label="Description" width="130"/>
               <configuration:Column label="ID"/>
             </configuration:columns>
             <configuration:leftHeaderColumn>
@@ -464,11 +650,14 @@
         <configuration:presentationConfigurations>
           <configuration:ProrPresentationConfigurations>
             <configuration:presentationConfigurations>
-              <id:IdConfiguration datatype="_ejflACVrEeWtQNBnSmbyPw" prefix="REQ-" count="12"/>
+              <id:IdConfiguration datatype="_ejflACVrEeWtQNBnSmbyPw" prefix="REQ-" count="15"/>
               <headline:HeadlineConfiguration datatype="_vYoIICYFEeWvr_B-MeG_kg" size="14"/>
               <linewrap:LinewrapConfiguration datatype="_TgKEIiVPEeWtQNBnSmbyPw"/>
-              <highlight:KeywordConfiguration/>
-              <linkmanagement:LinkmanagementConfiguration/>
+              <highlight:KeywordConfiguration datatype="_ejflACVrEeWtQNBnSmbyPw" color="red" priority="0"/>
+              <linkmanagement:LinkmanagementConfiguration datatype="_9dvSYCrLEeWjMOXaSMowzQ" linkRelationType="_bk8RgCYhEeWvr_B-MeG_kg">
+                <sourceStatus xsi:nil="true"/>
+                <targetStatus xsi:nil="true"/>
+              </linkmanagement:LinkmanagementConfiguration>
             </configuration:presentationConfigurations>
           </configuration:ProrPresentationConfigurations>
         </configuration:presentationConfigurations>
