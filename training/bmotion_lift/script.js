@@ -1,33 +1,78 @@
 requirejs(['bmotion.template'], function (bms) {
 
-	// Formula Observer Displaying the Current Floor
+    /*
+	 * Observer Displaying the Current Floor
+	 */
+	 
 	bms.observe("formula", {
-	  selector: "#txt_cur_floor",           // id element grafic -> origin
-	  formulas: ["cur_floor"],              // (formule) variabile B -> result
+	  selector: "#txt_cur_floor",           // id element graphic -> origin
+	  formulas: ["cur_floor"],              // (formulas) variable B -> result
 	  trigger: function (origin, result) {
 		origin.text(result[0])
 	  }
 	});
 	
-	// Formula Observer for the Lift(move lift) and Door(white/gray)
+	/*
+	 * Observer for the Lift(move lift up/down)
+	 */
+	 
 	bms.observe("formula", {
-	  selector: "#door",
-	  formulas: ["cur_floor", "door_open"],
+	  selector: "#lift",
+	  formulas: ["cur_floor"],
 	  trigger: function (origin, result) {
+		
+		/*var svgFloor1 = document.getElementById("txt_floor1");
+		var svgFloor0 = document.getElementById("txt_floor0");
+		var svgFloor_1 = document.getElementById("txt_floor-1");
+		var svgDoor = document.getElementById("door");*/
+		
+		var svgGroup = document.getElementById("lift");
 		
 		switch (result[0]) {
 		  case "0":
-			origin.attr("y", "175");
+		    {
+				svgGroup.setAttribute("transform", "translate(0, -100)");
+				/*svgDoor.setAttribute("y", "175");
+				svgFloor1.setAttribute("y", "190");
+				svgFloor0.setAttribute("y", "220");
+				svgFloor_1.setAttribute("y", "250");*/
+				//origin.attr("y", "175");
+			}
 			break;
 		  case "1":
-			origin.attr("y", "60");
+			{
+				svgGroup.setAttribute("transform", "translate(0, -220)");
+				/*svgDoor.setAttribute("y", "60");
+				svgFloor1.setAttribute("y", "75");
+				svgFloor0.setAttribute("y", "105");
+				svgFloor_1.setAttribute("y", "135");*/
+				//origin.attr("y", "60");
+			}
 			break;
 		  case "-1":
-			origin.attr("y", "275");
+			{
+				svgGroup.setAttribute("transform", "translate(0, 0)");
+				/*svgDoor.setAttribute("y", "275");
+				svgFloor1.setAttribute("y", "290");
+				svgFloor0.setAttribute("y", "320");
+				svgFloor_1.setAttribute("y", "350");*/
+				//origin.attr("y", "275");
+			}
 			break;
 		}
+	  }
+	});
+	
+	/*
+	 * Observer for Door(white/gray)
+	 */
+	 
+	bms.observe("formula", {
+	  selector: "#door",
+	  formulas: ["door_open"],
+	  trigger: function (origin, result) {
 		
-		if(result[1] === "TRUE") {
+		if(result[0] === "TRUE") {
 		  origin.attr("fill", "white");
 		} else {
 		  origin.attr("fill", "lightgray");
@@ -35,7 +80,10 @@ requirejs(['bmotion.template'], function (bms) {
 		
 	  }
 	});
-// TODO: refactoring --------------------------------------------------------------	
+	
+/*
+// Refactoring up --------------------------------------------------------------	
+
 	// Formula Observer for floor 1 inside
 	bms.observe("formula", {
 	  selector: "#txt_floor1",
@@ -96,56 +144,66 @@ requirejs(['bmotion.template'], function (bms) {
 		
 	  }
 	});
+*/
+//----------------------------------------------------------------------
 	
-// -----------------------------------------------------------------------------------------	
-	// Observer bold call floor
-	//  NOTE.  call_buttons B Set is transferred as string.
-	// 
+	/*
+	 * Observer bold floor : push call button
+	 * NOTE.  call_buttons B Set is transferred as string.
+     */
+	 
 	bms.observe("formula", {
-        selector: "text[data-floor]",      // id element grafic -> origin
-        formulas: ["call_buttons"],        // (formule) variabile B -> data
+        selector: "text[data-floor]",      // id element graphic -> origin
+        formulas: ["call_buttons"],        // (formulas) variable B -> data
         trigger: function (origin, data) {
 			
 			// Parse set from string into js list
 			var buttons = (data[0].replace(/{|}/g, "")).split(",");
-			//console.log("buttons = " + buttons);
 			
-			if (buttons.indexOf(origin.attr("data-floor")) >= 0) {
-				//console.log("floor = " + origin.attr("data-floor"));
+			if (buttons.indexOf(origin.attr("data-floor")) >= 0)
 				origin.attr("font-weight", "bold");
-			} else origin.attr("font-weight", "none");
+			else origin.attr("font-weight", "none");
 
         }
     });
 	
-	// Observer bold call floor inside
+	/*
+     * Observer bold floor : push inside button
+	 * NOTE.  call_buttons B Set is transferred as string.
+	 */
+	 
 	bms.observe("formula", {
-        selector: "text[data-floor_inside]",      // id element grafic -> origin
-        formulas: ["inside_buttons"],             // (formule) variabile B -> data
+        selector: "text[data-floor_inside]",      // id element graphic -> origin
+        formulas: ["inside_buttons"],             // (formulas) variable B -> data
         trigger: function (origin, data) {
 			
+			// Parse set from string into js list
 			var buttons = (data[0].replace(/{|}/g, "")).split(",");
-			//console.log("buttons = " + buttons);
 			
-			if (buttons.indexOf(origin.attr("data-floor_inside")) >= 0) {
-				//console.log("floor = " + origin.attr("data-floor"));
+			if (buttons.indexOf(origin.attr("data-floor_inside")) >= 0)
 				origin.attr("font-weight", "bold");
-			} else origin.attr("font-weight", "none");
+			else origin.attr("font-weight", "none");
 
         }
     });
 	
-	// Observer for direction
+	/*
+     * Observer for direction up/down
+	 */
+	 
 	bms.observe("formula", {
         selector: "#txt_direction",
         formulas: ["direction_up"],
         trigger: function (origin, result) {
 			var dir = result[0] == "TRUE" ? "UP" : "DOWN";
-			origin.text('Direction: '+dir);
+			origin.text('Direction: ' + dir);
         }
     });
 	
-	// Interactive Feature: push call button
+	/*
+	 * Interactive Feature: floor - push call button
+	 */
+	 
 	bms.executeEvent({
 	  selector: "text[data-floor]",
 	  events: [
@@ -158,7 +216,10 @@ requirejs(['bmotion.template'], function (bms) {
 	  ]
 	});
 
-	// Interactive Feature: push inside button
+	/*
+     * Interactive Feature: floor - push inside button
+	 */
+	 
 	bms.executeEvent({
 	  selector: "text[data-floor_inside]",
 	  events: [
@@ -171,7 +232,10 @@ requirejs(['bmotion.template'], function (bms) {
 	  ]
 	});
 	
-	// Interactive with the Lift Door
+	/*
+	 * Interactive Feature : the Lift Door - open/close
+	 */
+	 
 	bms.executeEvent({
 	  selector: "#door",
 	  events: [
@@ -180,22 +244,33 @@ requirejs(['bmotion.template'], function (bms) {
 	  ]
 	});
 
-	// Event button move up
+	/*
+	 * Event: button move up
+	 */
+	 
 	bms.executeEvent({
         selector: "#bt_move_up",
         events: [{name: "move_up"}]
     });
 
-	// Event button move down
+	/*
+	 * Event: button move down
+	 */
+	 
     bms.executeEvent({
         selector: "#bt_move_down",
         events: [{name: "move_down"}]
     });
 	
-	
-	// Event label direction
+	/*
+	 * Event: label direction
+	 */
+	 
     bms.executeEvent({
         selector: "#txt_direction",
-        events: [{name: "reverse_lift_up"}, {name: "reverse_lift_down"}]
+        events: [
+			{name: "reverse_lift_up"}, 
+			{name: "reverse_lift_down"}
+		]
     });
 });
