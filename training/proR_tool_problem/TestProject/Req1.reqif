@@ -654,10 +654,7 @@
               <headline:HeadlineConfiguration datatype="_vYoIICYFEeWvr_B-MeG_kg" size="14"/>
               <linewrap:LinewrapConfiguration datatype="_TgKEIiVPEeWtQNBnSmbyPw"/>
               <highlight:KeywordConfiguration datatype="_ejflACVrEeWtQNBnSmbyPw" color="red" priority="0"/>
-              <linkmanagement:LinkmanagementConfiguration datatype="_9dvSYCrLEeWjMOXaSMowzQ" linkRelationType="_bk8RgCYhEeWvr_B-MeG_kg">
-                <sourceStatus xsi:nil="true"/>
-                <targetStatus xsi:nil="true"/>
-              </linkmanagement:LinkmanagementConfiguration>
+              <linkmanagement:LinkmanagementConfiguration/>
             </configuration:presentationConfigurations>
           </configuration:ProrPresentationConfigurations>
         </configuration:presentationConfigurations>
