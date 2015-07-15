@@ -14,6 +14,7 @@ requirejs(['bmotion.template'], function (bms) {
 	
 	/*
 	 * Observer for the Lift(move lift up/down)
+	 * http://stackoverflow.com/questions/4719647/how-to-change-argument-of-svg-g-transform-scalex-with-javascript
 	 */
 	 
 	bms.observe("formula", {
@@ -24,11 +25,11 @@ requirejs(['bmotion.template'], function (bms) {
 		var svgGroup = document.getElementById("lift");
 		
 		switch (result[0]) {
-		  case "0":
-				svgGroup.setAttribute("transform", "translate(0, -100)");
-			break;
 		  case "1":
 				svgGroup.setAttribute("transform", "translate(0, -220)");
+			break;
+		  case "0": 
+				svgGroup.setAttribute("transform", "translate(0, -100)");
 			break;
 		  case "-1":
 				svgGroup.setAttribute("transform", "translate(0, 0)");
