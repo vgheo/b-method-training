@@ -4,8 +4,6 @@ AtelierB configuration notes
 ===================
 
 
-
-
 ## Setup AtelierB Projects for team collaboration using Version Control
 
 
