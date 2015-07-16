@@ -65,15 +65,12 @@ requirejs(['bmotion.template'], function (bms) {
 	bms.observe("formula", {
         selector: "text[data-floor]",      // id element graphic -> origin
         formulas: ["call_buttons"],        // (formulas) variable B -> data
+		translate: "true",
         trigger: function (origin, data) {
-			
-			// Parse set from string into js list
-			var buttons = (data[0].replace(/{|}/g, "")).split(",");
-			
-			if (buttons.indexOf(origin.attr("data-floor")) >= 0)
-				origin.attr("font-weight", "bold");
-			else origin.attr("font-weight", "none");
-
+		
+			var floor = origin.attr("data-floor");
+			var text = data[0].indexOf(Number(floor));
+			origin.attr("font-weight", text > -1 ? "bold" : "none");
         }
     });
 	
@@ -85,15 +82,12 @@ requirejs(['bmotion.template'], function (bms) {
 	bms.observe("formula", {
         selector: "text[data-floor_inside]",      // id element graphic -> origin
         formulas: ["inside_buttons"],             // (formulas) variable B -> data
+		translate: "true",
         trigger: function (origin, data) {
 			
-			// Parse set from string into js list
-			var buttons = (data[0].replace(/{|}/g, "")).split(",");
-			
-			if (buttons.indexOf(origin.attr("data-floor_inside")) >= 0)
-				origin.attr("font-weight", "bold");
-			else origin.attr("font-weight", "none");
-
+			var floor = origin.attr("data-floor_inside");
+			var text = data[0].indexOf(Number(floor));
+			origin.attr("font-weight", text > -1 ? "bold" : "none");
         }
     });
 	
