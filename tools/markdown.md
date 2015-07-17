@@ -39,6 +39,20 @@ Various features
 
 Sample: [b-method-training\training\markdown\embed_image.md](../training/markdown/embed_image.md)
 	
+	
+## Control Table style
+
+For Chrome MD plugins - the style is controlled by css files. 
+These may have some issues (eg. clearness.css sets the screen width to 768px ).
+
+
+TODO - copy task " MD - control table column width" [story](http://robucsweb:8080/agilefant/qr.action?q=story:1910)
+
+
+### MD Chrome plugins - the width is controlled by css
+
+ 
+
 Related links
 =============
 - [stackoverflow](http://stackoverflow.com/questions/9843609/view-markdown-files-offline)
