@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="1000"
+   height="750"
+   id="svg7789"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="diagram_symbol.svg">
+  <metadata
+     id="metadata7858">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs7856">
+    <symbol
+       id="symbol11792">
+      <rect
+         style="opacity:1;fill:#00aad5;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="sem1"
+         x="220"
+         y="400"
+         width="25"
+         height="20" />
+      <line
+         id="ls11"
+         x1="245"
+         y1="410"
+         x2="260"
+         y2="410"
+         stroke="#000000"
+         fill="none" />
+      <line
+         id="ls12"
+         x1="260"
+         y1="410"
+         x2="260"
+         y2="470"
+         stroke="#000000"
+         fill="none" />
+      <line
+         id="ls13"
+         x1="260"
+         y1="410"
+         x2="260"
+         y2="350"
+         stroke-dasharray="4"
+         stroke="#000000"
+         fill="none" />
+    </symbol>
+    <symbol
+       id="symbol12006">
+      <ellipse
+         ry="4"
+         rx="5"
+         cy="525"
+         cx="125"
+         id="ellipse12105"
+         style="opacity:1;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <ellipse
+         style="opacity:1;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="path4919"
+         cx="115"
+         cy="525"
+         rx="5"
+         ry="4" />
+      <g
+         id="use11985" />
+    </symbol>
+  </defs>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1148"
+     id="namedview7854"
+     showgrid="false"
+     inkscape:zoom="1.168"
+     inkscape:cx="466.33217"
+     inkscape:cy="368.48722"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg7789" />
+  <g
+     id="g7796">
+    <title
+       id="title7798">DK East West</title>
+    <g
+       id="ixl">
+      <rect
+         id="train"
+         x="10"
+         y="290"
+         width="25"
+         height="20"
+         fill="#ffffff"
+         stroke="#0000ff"
+         stroke-width="2" />
+      <line
+         id="svg_1"
+         x1="0"
+         y1="300"
+         x2="50"
+         y2="300"
+         fill="none"
+         stroke="#000000"
+         stroke-width="3" />
+      <line
+         id="svg_2"
+         x1="0"
+         y1="500"
+         x2="100"
+         y2="500"
+         fill="none"
+         stroke="#000000"
+         stroke-width="3" />
+      <line
+         id="svg_3"
+         x1="50"
+         y1="300"
+         x2="100"
+         y2="500"
+         fill="none"
+         stroke="#000000"
+         stroke-width="3" />
+      <line
+         id="svg_4"
+         x1="950"
+         y1="300"
+         x2="1000"
+         y2="300"
+         fill="none"
+         stroke="#000000"
+         stroke-width="3" />
+      <line
+         id="svg_5"
+         x1="900"
+         y1="500"
+         x2="1000"
+         y2="500"
+         fill="none"
+         stroke="#000000"
+         stroke-width="3" />
+      <line
+         id="svg_6"
+         x1="950"
+         y1="300"
+         x2="900"
+         y2="500"
+         fill="none"
+         stroke="#000000"
+         stroke-width="3" />
+      <line
+         id="track"
+         x1="100"
+         y1="500"
+         x2="900"
+         y2="500"
+         fill="none"
+         stroke="#000000"
+         stroke-width="5" />
+      <line
+         id="limit1"
+         x1="500"
+         y1="30"
+         x2="500"
+         y2="736.64386"
+         style="fill:none;stroke:#000000;stroke-width:1.61777604;stroke-dasharray:8.08888032" />
+      <use
+         xlink:href="#symbol11792"
+         id="use11798"
+         transform="translate(0,5.2397301)"
+         x="0"
+         y="0"
+         width="100%"
+         height="100%" />
+      <use
+         id="use11913"
+         xlink:href="#symbol11792"
+         x="0"
+         y="0"
+         width="100%"
+         height="100%"
+         transform="translate(267.70548,5.2397301)" />
+      <use
+         id="use11939"
+         xlink:href="#symbol11792"
+         x="0"
+         y="0"
+         width="100%"
+         height="100%"
+         transform="translate(537.39727,5.2397301)" />
+      <use
+         id="use11965"
+         xlink:href="#symbol11792"
+         x="0"
+         y="0"
+         width="100%"
+         height="100%"
+         transform="matrix(-1,0,0,-1,473.73287,1020.4452)" />
+      <use
+         transform="matrix(-1,0,0,-1,727.15753,1020.4452)"
+         height="100%"
+         width="100%"
+         y="0"
+         x="0"
+         xlink:href="#symbol11792"
+         id="use11978" />
+      <use
+         id="use11980"
+         xlink:href="#symbol11792"
+         x="0"
+         y="0"
+         width="100%"
+         height="100%"
+         transform="matrix(-1,0,0,-1,1001.1301,1020.4452)" />
+      <use
+         id="use12157"
+         xlink:href="#symbol12006"
+         x="0"
+         y="0"
+         width="100%"
+         height="100%"
+         transform="translate(-1.8493091,-7.8767146)" />
+      <use
+         transform="translate(106.88357,-7.8767146)"
+         height="100%"
+         width="100%"
+         y="0"
+         x="0"
+         xlink:href="#symbol12006"
+         id="use12169" />
+      <use
+         id="use12171"
+         xlink:href="#symbol12006"
+         x="0"
+         y="0"
+         width="100%"
+         height="100%"
+         transform="translate(377.43152,-7.8767146)" />
+      <use
+         transform="translate(645.41097,-7.8767146)"
+         height="100%"
+         width="100%"
+         y="0"
+         x="0"
+         xlink:href="#symbol12006"
+         id="use12173" />
+      <use
+         id="use12175"
+         xlink:href="#symbol12006"
+         x="0"
+         y="0"
+         width="100%"
+         height="100%"
+         transform="translate(755.85618,-7.8767146)" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         x="22.260271"
+         y="65.068481"
+         id="text12177"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan12179"
+           x="22.260271"
+           y="65.068481">Sample symbol use:</tspan><tspan
+           sodipodi:role="line"
+           x="22.260271"
+           y="115.06848"
+           id="tspan12189">- signal</tspan><tspan
+           sodipodi:role="line"
+           x="22.260271"
+           y="165.06848"
+           id="tspan12191">- detection point</tspan></text>
+      <flowRoot
+         xml:space="preserve"
+         id="flowRoot12181"
+         style="fill:black;stroke:none;stroke-opacity:1;stroke-width:1px;stroke-linejoin:miter;stroke-linecap:butt;fill-opacity:1;font-family:sans-serif;font-style:normal;font-weight:normal;font-size:40px;line-height:125%;letter-spacing:0px;word-spacing:0px"><flowRegion
+           id="flowRegion12183"><rect
+             id="rect12185"
+             width="107.87671"
+             height="98.4589"
+             x="84.760277"
+             y="58.219177" /></flowRegion><flowPara
+           id="flowPara12187"></flowPara></flowRoot>    </g>
+  </g>
+</svg>
