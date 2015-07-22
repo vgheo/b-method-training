@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+ 
+<svg width="1024" height="1024"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:cc="http://creativecommons.org/ns#"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:svg="http://www.w3.org/2000/svg"
+	xmlns="http://www.w3.org/2000/svg"
+	xmlns:xlink="http://www.w3.org/1999/xlink"
+	xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+	xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape">
+<defs
+	id="defs_main" >
+</defs>
+
+<g>
+	<title>background</title>
+	<rect fill="none" id="canvas_background" width="1026" height="1026" y="-1" x="-1"/>
+</g>
+ 
+<g>
+	<title>Test use</title>
+	<!-- http://dbushell.com/2015/01/30/use-svg-part-2/ -->
+	<!-- https://github.com/jonathantneal/svg4everybody -->
+	
+	<!-- Doesn't work -->
+	<svg><use xlink:href="example_use.svg#test_area" id="use_1" x="0" y="0"></use></svg>
+	<svg><use xlink:href="example_use.svg#test_area" id="use_2" x="500" y="400"></use></svg>
+
+</g>
+
+</svg>
