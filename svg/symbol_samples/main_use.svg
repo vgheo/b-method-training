@@ -9,7 +9,8 @@
 	xmlns="http://www.w3.org/2000/svg"
 	xmlns:xlink="http://www.w3.org/1999/xlink"
 	xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-	xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape">
+	xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+	version="1.1">
 <defs
 	id="defs_main" >
 </defs>
@@ -19,15 +20,21 @@
 	<rect fill="none" id="canvas_background" width="1026" height="1026" y="-1" x="-1"/>
 </g>
  
-<g>
+<g externalResourcesRequired="true">
 	<title>Test use</title>
 	<!-- http://dbushell.com/2015/01/30/use-svg-part-2/ -->
 	<!-- https://github.com/jonathantneal/svg4everybody -->
 	
-	<!-- Doesn't work -->
+	<!-- example_use -->
+	<!-- Doesn't work in Inkscape, Chrome(not an entire symbol or smth like that), it works only in Firefox -->
 	<svg><use xlink:href="example_use.svg#test_area" id="use_1" x="0" y="0"></use></svg>
-	<svg><use xlink:href="example_use.svg#test_area" id="use_2" x="500" y="400"></use></svg>
+	<!-- It works in Inkscape, Firefox, not Chrome (here sensorH is a symbol with lines, not a symbol with svg) -->
+	<svg><use xlink:href="example_use.svg#sensorH" id="use_2" x="200" y="300"></use></svg>
 
+	
+	<!-- example_use2 (it works in Inkscape, Firefox, not Chrome) -->
+	<svg><use xlink:href="example_use2.svg#test_area" id="use_3" x="300" y="500"></use></svg>
+	<svg><use xlink:href="example_use2.svg#test_area" id="use_4" x="500" y="700"></use></svg>
 </g>
 
 </svg>

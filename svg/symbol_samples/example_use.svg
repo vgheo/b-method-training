@@ -14,7 +14,8 @@
 	id="defs_example" >
 	<!-- Little symbol svg -->
 	<symbol id="test_area">
-		<svg width="800" height="600"
+	
+		<svg width="400" height="300"
 			xmlns:dc="http://purl.org/dc/elements/1.1/"
 			xmlns:cc="http://creativecommons.org/ns#"
 			xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -44,6 +45,7 @@
 		</svg>
 	<!-- End of little symbol svg-->	
 	</symbol>
+	
 </defs>
 
 <!-- Body: use -> it works -->
