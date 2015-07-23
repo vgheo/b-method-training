@@ -11,7 +11,7 @@ NOT SUPPORTED:
  
 ## ProB - BMotionStutio stand-alone
 
-Uses Webkit
+Uses Webkit to render html/svg/js.
 
 ### Limitations
 
