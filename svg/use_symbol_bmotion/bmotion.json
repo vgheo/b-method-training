@@ -1,0 +1,8 @@
+{
+  "template": "Test_Bmotion.html",
+  "model": "model/DKEastWest.mch",
+  "autoOpen": [
+    "CurrentTrace",
+    "Events"
+  ]
+}

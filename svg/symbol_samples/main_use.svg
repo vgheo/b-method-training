@@ -14,11 +14,6 @@
 <defs
 	id="defs_main" >
 </defs>
-
-<g>
-	<title>background</title>
-	<rect fill="none" id="canvas_background" width="1026" height="1026" y="-1" x="-1"/>
-</g>
  
 <g externalResourcesRequired="true">
 	<title>Test use</title>

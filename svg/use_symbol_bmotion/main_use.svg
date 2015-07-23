@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="1024"
+   height="1024"
+   version="1.1"
+   id="svg8068"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="main_use.svg">
+  <metadata
+     id="metadata8131">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1680"
+     inkscape:window-height="998"
+     id="namedview8129"
+     showgrid="false"
+     inkscape:zoom="0.77441406"
+     inkscape:cx="512"
+     inkscape:cy="512"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g8071" />
+  <defs
+     id="defs_main" />
+  <g
+     externalResourcesRequired="true"
+     id="g8071">
+    <title
+       id="title8073">Test use</title>
+    <!-- http://dbushell.com/2015/01/30/use-svg-part-2/ -->
+    <!-- https://github.com/jonathantneal/svg4everybody -->
+    <!-- example_use -->
+    <!-- Doesn't work in Inkscape, Chrome(not an entire symbol or smth like that), it works only in Firefox and bmotion -->
+    <use
+       xlink:href="example_use.svg#test_area"
+       y="0"
+       x="0"
+       id="use_1" />
+    <!-- It works in Inkscape, Firefox, and bmotion, not Chrome (here sensorH is a symbol with lines, not a symbol with svg) -->
+    <use
+       xlink:href="example_use.svg#sensorH"
+       y="0"
+       x="600"
+       id="use_2" />
+    <!-- example_use2 (it works in Inkscape, Firefox, not Chrome, not bmotion) -->
+    <use
+       xlink:href="example_use2.svg#test_area"
+       y="400"
+       x="0"
+       id="use_3" />
+    <use
+       xlink:href="example_use2.svg#test_area"
+       y="400"
+       x="600"
+       id="use_4" />
+    <!-- use only symbol (it works in bmotion, Firefox) -->
+    <use
+       xlink:href="example_use2.svg#rect"
+       transform="translate(10,600)"
+       height="100%"
+       width="100%"
+       y="0"
+       x="0"
+       id="use_5" />
+    <use
+       xlink:href="example_use2.svg#rect"
+       transform="translate(100,600)"
+       height="100%"
+       width="100%"
+       y="0"
+       x="0"
+       id="use8125" />
+    <use
+       xlink:href="example_use2.svg#rect"
+       transform="translate(180,600)"
+       height="100%"
+       width="100%"
+       y="0"
+       x="0"
+       id="use8127" />
+  </g>
+</svg>
