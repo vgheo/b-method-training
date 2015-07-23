@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
+<!--
+	Chrome - 
+		- must add option allow-file-access-from-files
+-->
 <svg
    xmlns:dc="http://purl.org/dc/elements/1.1/"
    xmlns:cc="http://creativecommons.org/ns#"
@@ -56,54 +60,68 @@
        id="title8073">Test use</title>
     <!-- http://dbushell.com/2015/01/30/use-svg-part-2/ -->
     <!-- https://github.com/jonathantneal/svg4everybody -->
-    <!-- example_use -->
-    <!-- Doesn't work in Inkscape, Chrome(not an entire symbol or smth like that), it works only in Firefox and bmotion -->
+	
+   
+    <text x="0" y="20">TEST1. use simple symbol  - several uses</text>
+    <!-- 
+	 - WORKS IN:  bmotion, Firefox
+	 -->
+	 
+	 
     <use
-       xlink:href="example_use.svg#test_area"
-       y="0"
-       x="0"
-       id="use_1" />
-    <!-- It works in Inkscape, Firefox, and bmotion, not Chrome (here sensorH is a symbol with lines, not a symbol with svg) -->
-    <use
-       xlink:href="example_use.svg#sensorH"
-       y="0"
-       x="600"
-       id="use_2" />
-    <!-- example_use2 (it works in Inkscape, Firefox, not Chrome, not bmotion) -->
-    <use
-       xlink:href="example_use2.svg#test_area"
-       y="400"
-       x="0"
-       id="use_3" />
-    <use
-       xlink:href="example_use2.svg#test_area"
-       y="400"
-       x="600"
-       id="use_4" />
-    <!-- use only symbol (it works in bmotion, Firefox) -->
-    <use
-       xlink:href="example_use2.svg#rect"
-       transform="translate(10,600)"
+       xlink:href="symbols1.svg#rect"
+       transform="translate(10,30)"
        height="100%"
        width="100%"
        y="0"
        x="0"
        id="use_5" />
+
     <use
-       xlink:href="example_use2.svg#rect"
-       transform="translate(100,600)"
+       xlink:href="symbols1.svg#rect"
+       transform="translate(100,30)"
        height="100%"
        width="100%"
        y="0"
        x="0"
        id="use8125" />
     <use
-       xlink:href="example_use2.svg#rect"
-       transform="translate(180,600)"
+       xlink:href="symbols1.svg#rect"
+       transform="translate(180,30)"
        height="100%"
        width="100%"
        y="0"
        x="0"
        id="use8127" />
+	
+	<text x="0" y="100">TEST2. Use symbol that uses other symbols</text>
+	<!-- 
+		PASS: Chrome  43.0.2357.124 m
+		FAIL: -
+	-->
+	<use
+       xlink:href="symbols1.svg#double_rect"
+       transform="translate(0,110)"
+       height="100%"
+       width="100%"
+       y="0"
+       x="0"
+       id="use81274" />
+	   
+	
+	<use xlink:href="symbols1.svg#third_level" x="200" y="110"/>
+
+	<text x="0" y="200">TEST3. Use symbol2</text>
+	<!-- 
+		PASS:
+		FAIL: Chrome 43.0.2357.124 m
+	-->
+	<use
+       xlink:href="symbols2.svg#test_area"
+       x="0" y="230"
+       height="100%" width="100%"
+       
+       id="use81274" />
+     
   </g>
 </svg>

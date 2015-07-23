@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+ 
+<svg width="400" height="300"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:cc="http://creativecommons.org/ns#"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:svg="http://www.w3.org/2000/svg"
+	xmlns="http://www.w3.org/2000/svg"
+	xmlns:xlink="http://www.w3.org/1999/xlink"
+	xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+	xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape">
+<defs id="defs_example" >
+	
+	<symbol id="rect">
+		<rect id="train1" x="0" y="0" width="20" height="20" fill="#0000ff" stroke="#000000" stroke-width="2" />
+		<rect id="train2" x="0" y="0" width="20" height="20" fill="#0000ff" stroke="#000000" stroke-width="2" />
+	</symbol>
+	
+	<symbol id="double_rect">
+		<text id="txt2" x="0" y="20" xml:space="preserve" font-family="Helvetica, Arial, sans-serif" font-size="15" 
+			text-anchor="left" fill="#000000" stroke-width="0" stroke="#000">double_rect</text>
+		<use xlink:href="#rect" id="use_dbl1"  transform="translate(80,0)" />
+		<use xlink:href="#rect" id="use_dbl2" transform="translate(100,0)" />
+	</symbol>
+	
+	<symbol id="third_level">
+		<use xlink:href="#rect" id="use_tl1" />
+		<use xlink:href="#double_rect" id="use_tl2"  transform="translate(20,0)" />
+	</symbol>
+</defs>
+
+<!-- local test -->
+
+<use xlink:href="#rect" y="20"/>
+<use xlink:href="#double_rect" y="50"/>
+<use xlink:href="#third_level" y="80"/>
+
+</svg>
