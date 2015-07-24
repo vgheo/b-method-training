@@ -45,4 +45,13 @@ Inkskape - [symbol use](http://wiki.inkscape.org/wiki/index.php/SymbolsDialog)
 [Sample - diagram](../svg/symbol_samples/diagram_symbol.svg)
 
 
+## Tips & Tricks
+
+See - [Chrome Tips And Tricks](https://developer.chrome.com/devtools/docs/tips-and-tricks#inspect-shadow-dom)
+
+### Inspect shadow DOM  (for svg:use) - Chrome
+To enable : Inspector > Settings > Show user agent shadow DOM = yes
+
+
+
 
