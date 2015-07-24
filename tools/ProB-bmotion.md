@@ -6,8 +6,9 @@
 
 NOT SUPPORTED:
 - VALUES clause
+	- see related [post](https://groups.google.com/forum/#!topic/prob-users/ObdhVgF0dpY)
 - tuples without parentheses
- 
+ 	
  
 ## ProB - BMotionStutio stand-alone
 
