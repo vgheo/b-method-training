@@ -8,7 +8,8 @@ NOT SUPPORTED:
 - VALUES clause
 	- see related [post](https://groups.google.com/forum/#!topic/prob-users/ObdhVgF0dpY)
 - tuples without parentheses
- 	
+- c++ - style comments
+	- supported in atelier-b  	
  
 ## ProB - BMotionStutio stand-alone
 
