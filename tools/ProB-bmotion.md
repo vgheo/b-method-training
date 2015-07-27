@@ -27,4 +27,9 @@ ProB - BMS is an app framework built on [node-webkit](https://github.com/nwjs/nw
 See [tutorial](https://gentlenode.com/journal/node-webkit-1-complete-cheatsheet/26).
 
 - Access the window object - from JS console: `gui.Window.get()`
-- `gui.Window.get().zoomLevel = +1`
+
+In JS context:
+```
+	var gui = require('nw.gui');
+	gui.Window.get().zoomLevel = +1
+```
