@@ -2,15 +2,18 @@
 <uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_iQPpYDE5EeWHo87IIylbhQ" name="training1">
   <packagedElement xmi:type="uml:Package" xmi:id="_kyp7wDE5EeWHo87IIylbhQ" name="p1">
     <packagedElement xmi:type="uml:Class" xmi:id="_nMh9MDE5EeWHo87IIylbhQ" name="A">
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_prYlQDE5EeWHo87IIylbhQ" name="op1">
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_v5RD0DE5EeWHo87IIylbhQ" name="q"/>
+      <ownedOperation xmi:id="_prYlQDE5EeWHo87IIylbhQ" name="op1">
+        <ownedParameter xmi:id="_v5RD0DE5EeWHo87IIylbhQ" name="q"/>
       </ownedOperation>
+      <nestedClassifier xmi:type="uml:FunctionBehavior" xmi:id="_VaZtMDRLEeWhTfHrhn_Mjw"/>
     </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_xQE2wDRPEeWhTfHrhn_Mjw" name="B"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_y79JwDRPEeWhTfHrhn_Mjw" name="C"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Package" xmi:id="_lpbywDE5EeWHo87IIylbhQ" name="p2">
     <packagedElement xmi:type="uml:Enumeration" xmi:id="_yHTosDE5EeWHo87IIylbhQ">
-      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_y4IosDE5EeWHo87IIylbhQ"/>
-      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_zp_jcDE5EeWHo87IIylbhQ"/>
+      <ownedLiteral xmi:id="_y4IosDE5EeWHo87IIylbhQ"/>
+      <ownedLiteral xmi:id="_zp_jcDE5EeWHo87IIylbhQ"/>
     </packagedElement>
   </packagedElement>
 </uml:Model>
