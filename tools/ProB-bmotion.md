@@ -15,6 +15,7 @@ NOT SUPPORTED:
  
 - Unicode versions for Certain operators
 	- `:`
+	- '&`
 	- `<+`
 	- (...)
 	 
