@@ -4,6 +4,8 @@
 
 ### Limitations
 
+Valid for: `ProB 1.5.0-final 3bc086f2be4b309869fcab31325ede65f8d27277`
+
 NOT SUPPORTED:
 - VALUES clause
 	- see related [post](https://groups.google.com/forum/#!topic/prob-users/ObdhVgF0dpY)
@@ -11,6 +13,12 @@ NOT SUPPORTED:
 - c++ - style comments
 	- supported in atelier-b  	
  
+- Unicode versions for Certain operators
+	- `:`
+	- `<+`
+	- (...)
+	 
+
 ## ProB - BMotionStutio stand-alone
 
 Uses Webkit to render html/svg/js.
