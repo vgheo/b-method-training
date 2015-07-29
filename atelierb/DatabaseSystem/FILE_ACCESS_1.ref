@@ -9,10 +9,46 @@ REFINES FILE_ACCESS
 VARIABLES
      bfile
 VISIBLE_VARIABLES
-updated,name,record
+    updated,name,record
 
 INITIALISATION
-      bfile,buffer,updated := [],{},FALSE
+      bfile,updated,name := [],FALSE,0 ||
+      record :: FIELD-->VALUE
+INVARIANT
+      name : 0..size(bfile) &
+      record : FIELD --> VALUE &
+      buffer = {0} <<|{name|->record}
+OPERATIONS
+     get_record(oo)=
+     BEGIN
+         name,record,updated := oo,bfile(oo),FALSE
+     END;
+     
+     put_buffer=
+     BEGIN
+         bfile(name):=record
+     END;
+     oo<--create_record(vv)=
+     BEGIN
+         bfile:=bfile<-(INDEX * {vv}) ||
+         oo:=size(bfile)+1
+     END;
+     
+     mod_buffer(oo,ii,vv)=
+     BEGIN
+         record(ii):=vv ||
+         updated :=TRUE
+     END;
+     
+     vv<--not_in_buffer(oo)=
+     BEGIN
+         vv:=bool(name/=oo)
+     END;
+     vv<--size_file=
+     BEGIN
+        vv:=size(bfile)
+     END
+ 
 
 
  END
