@@ -1,0 +1,23 @@
+/* FILE_BUFFER_1
+ * Author: T0164919
+ * Creation date: 7/29/2015
+ */
+
+IMPLEMENTATION FILE_BUFFER_1(max_rec,FIELD,VALUE)
+REFINES FILE_BUFFER
+IMPORTS
+    FILE_ACCES(max_rec,FIELD,VALUE)
+PROMOTES
+    create_record,not_in_buffer,mod_buffer,val_buffer,size_file
+OPERATIONS
+    load_buffer(oo)=
+    BEGIN
+    IF
+        updated = true 
+    THEN
+        put_buffe
+    END;
+    get_record(oo)
+    END
+
+ END

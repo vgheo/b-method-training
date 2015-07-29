@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<db_xml>
+    <atelierb version="3_7_ubuntu-cvs" />
+    <project decomp_dir="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\expand_src" old_decomp_dir="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\src" type="VALIDATION">
+        <!-- Definition directory list -->
+        <!-- Component file list -->
+        <component_file path="A:/b-method-training-atelierb/atelierb/DatabaseSystem" name="FILE" suffix="mch" user="T0164919">
+            <component name="FILE" type="specification" />
+        </component_file>
+        <component_file path="A:/b-method-training-atelierb/atelierb/DatabaseSystem" name="FILE_1" suffix="imp" user="T0164919">
+            <component name="FILE_1" type="implementation" />
+        </component_file>
+        <component_file path="A:/b-method-training-atelierb/atelierb/DatabaseSystem" name="FILE_ACCESS" suffix="mch" user="T0164919">
+            <component name="FILE_ACCESS" type="specification" />
+        </component_file>
+        <component_file path="A:/b-method-training-atelierb/atelierb/DatabaseSystem" name="FILE_ACCESS_1" suffix="ref" user="T0164919">
+            <component name="FILE_ACCESS_1" type="refinement" />
+        </component_file>
+        <component_file path="A:/b-method-training-atelierb/atelierb/DatabaseSystem" name="FILE_BUFFER" suffix="mch" user="T0164919">
+            <component name="FILE_BUFFER" type="specification" />
+        </component_file>
+        <component_file path="A:/b-method-training-atelierb/atelierb/DatabaseSystem" name="FILE_BUFFER_1" suffix="imp" user="T0164919">
+            <component name="FILE_BUFFER_1" type="implementation" />
+        </component_file>
+    </project>
+</db_xml>

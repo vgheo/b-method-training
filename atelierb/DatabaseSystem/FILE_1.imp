@@ -1,0 +1,34 @@
+/* FILE_1
+ * Author: T0164919
+ * Creation date: 7/29/2015
+ */
+
+IMPLEMENTATION FILE_1(max_rec,FIELD,VALUE)
+REFINES FILE
+
+IMPORTS
+    FILE_BUFFER(max_rec,FIELD,VALUE)
+PROMOTES
+    create_record,size_file
+INVARIANT
+    file=bfile<+buffer
+OPERATIONS
+    mod_file(oo,ii,vv)=
+    VAR test IN 
+        test<--not_in_buffer(oo);
+    
+    IF test = TRUE THEN
+        load_buffer(oo)
+    END;
+    mod_buffer(oo,ii,vv)
+END;
+    vv<--val_file(oo,ii)=
+    VAR test IN 
+        test<--not_in_buffer(oo);
+    
+    IF test = TRUE THEN
+        load_buffer(oo)
+    END;
+    vv<--val_buffer(oo,ii)
+END
+END

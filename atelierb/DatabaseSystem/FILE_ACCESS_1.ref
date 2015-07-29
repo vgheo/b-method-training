@@ -1,0 +1,18 @@
+/* FILE_ACCESS_1
+ * Author: T0164919
+ * Creation date: 7/29/2015
+ */
+
+REFINEMENT FILE_ACCESS_1(max_rec,FIELD,VALUE)
+REFINES FILE_ACCESS
+
+VARIABLES
+     bfile
+VISIBLE_VARIABLES
+updated,name,record
+
+INITIALISATION
+      bfile,buffer,updated := [],{},FALSE
+
+
+ END

@@ -1,0 +1,9 @@
+digraph {
+FILE_1 [ label=" FILE\nFILE_1 " shape= box ]
+FILE_ACCESS_1 [ label=" FILE_ACCESS\nFILE_ACCESS_1 " shape= box ]
+FILE_BUFFER_1 [ label=" FILE_BUFFER\nFILE_BUFFER_1 " shape= box ]
+FILE_ACCES [ label=" FILE_ACCES " shape= boxshape= rhombcolor= pink ]
+
+"FILE_1" -> "FILE_BUFFER_1" []
+"FILE_BUFFER_1" -> "FILE_ACCES" []
+}
