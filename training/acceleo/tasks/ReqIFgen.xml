@@ -37,7 +37,6 @@
         <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.uml2.common_2.0.1.v20150202-0947.jar"/>
         <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.uml2.types_2.0.0.v20150202-0947.jar"/>
         <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.emf.mapping.ecore2xml_2.8.0.v20150123-0452.jar"/>
-        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.rmf.reqif10_0.13.0.201505310301.jar"/>
         <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.rmf.reqif10.pror_0.13.0.201505310301.jar"/>
         <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.rmf.reqif10.common_0.13.0.201505310301.jar"/>
     </path>

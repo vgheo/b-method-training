@@ -8,7 +8,7 @@
  * Contributors:
  *     Obeo - initial API and implementation
  *******************************************************************************/
-package acceleo.tutorial1.common;
+package acceleopror.main;
 
 import java.io.File;
 import java.io.IOException;
@@ -25,24 +25,24 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 
 /**
- * Entry point of the 'ReqIFgen' generation module.
+ * Entry point of the 'GenerateReq' generation module.
  *
  * @generated
  */
-public class ReqIFgen extends AbstractAcceleoGenerator {
+public class GenerateReq extends AbstractAcceleoGenerator {
     /**
      * The name of the module.
      *
      * @generated
      */
-    public static final String MODULE_FILE_NAME = "/acceleo/tutorial1/common/ReqIFgen";
+    public static final String MODULE_FILE_NAME = "/acceleopror/main/generateReq";
     
     /**
      * The name of the templates that are to be generated.
      *
      * @generated
      */
-    public static final String[] TEMPLATE_NAMES = { "generate" };
+    public static final String[] TEMPLATE_NAMES = { "generateReqif" };
     
     /**
      * The list of properties files from the launch parameters (Launch configuration).
@@ -65,7 +65,7 @@ public class ReqIFgen extends AbstractAcceleoGenerator {
      *
      * @generated
      */
-    public ReqIFgen() {
+    public GenerateReq() {
         // Empty implementation
     }
 
@@ -85,7 +85,7 @@ public class ReqIFgen extends AbstractAcceleoGenerator {
      *             the model cannot be loaded.
      * @generated
      */
-    public ReqIFgen(URI modelURI, File targetFolder,
+    public GenerateReq(URI modelURI, File targetFolder,
             List<? extends Object> arguments) throws IOException {
         initialize(modelURI, targetFolder, arguments);
     }
@@ -106,7 +106,7 @@ public class ReqIFgen extends AbstractAcceleoGenerator {
      *             This can be thrown in two scenarios : the module cannot be found, or it cannot be loaded.
      * @generated
      */
-    public ReqIFgen(EObject model, File targetFolder,
+    public GenerateReq(EObject model, File targetFolder,
             List<? extends Object> arguments) throws IOException {
         initialize(model, targetFolder, arguments);
     }
@@ -141,7 +141,7 @@ public class ReqIFgen extends AbstractAcceleoGenerator {
                  * add in "arguments" this "String" attribute.
                  */
                 
-                ReqIFgen generator = new ReqIFgen(modelURI, folder, arguments);
+                GenerateReq generator = new GenerateReq(modelURI, folder, arguments);
                 
                 /*
                  * Add the properties from the launch arguments.
@@ -342,6 +342,12 @@ public class ReqIFgen extends AbstractAcceleoGenerator {
         super.registerPackages(resourceSet);
         if (!isInWorkspace(org.eclipse.rmf.reqif10.pror.configuration.ConfigurationPackage.class)) {
             resourceSet.getPackageRegistry().put(org.eclipse.rmf.reqif10.pror.configuration.ConfigurationPackage.eINSTANCE.getNsURI(), org.eclipse.rmf.reqif10.pror.configuration.ConfigurationPackage.eINSTANCE);
+        }
+        if (!isInWorkspace(com.formalmind.rmf.reqif10.pror.presentation.highlight.HighlightPackage.class)) {
+            resourceSet.getPackageRegistry().put(com.formalmind.rmf.reqif10.pror.presentation.highlight.HighlightPackage.eINSTANCE.getNsURI(), com.formalmind.rmf.reqif10.pror.presentation.highlight.HighlightPackage.eINSTANCE);
+        }
+        if (!isInWorkspace(com.formalmind.rmf.reqif10.pror.presentation.linkmanagement.LinkmanagementPackage.class)) {
+            resourceSet.getPackageRegistry().put(com.formalmind.rmf.reqif10.pror.presentation.linkmanagement.LinkmanagementPackage.eINSTANCE.getNsURI(), com.formalmind.rmf.reqif10.pror.presentation.linkmanagement.LinkmanagementPackage.eINSTANCE);
         }
         
         /*
