@@ -1,3 +1,13 @@
+/*
+
+
+Note: To use jQuery selector for id that contains dot an escape syntax must be used.  
+	
+References:
+[1] http://stackoverflow.com/questions/9930577/jquery-dot-in-id-selector
+
+
+*/
 requirejs(['bmotion.template'], function (bms) {
 
     /*
