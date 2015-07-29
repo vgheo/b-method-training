@@ -15,7 +15,9 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.acceleo.profiler;bundle-version="3.3.0",
  org.eclipse.acceleo.engine;bundle-version="3.3.0",
  com.google.guava,
- org.eclipse.uml2.uml
+ org.eclipse.uml2.uml,
+ org.eclipse.rmf.reqif10;bundle-version="0.13.0",
+ org.eclipse.rmf.reqif10.pror;bundle-version="0.13.0"
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-ActivationPolicy: lazy
 Eclipse-LazyStart: true

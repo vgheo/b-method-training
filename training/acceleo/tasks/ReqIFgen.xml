@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project default="generate" name="acceleo.tutorial1">
+<project default="ReqIFgen" name="acceleo.tutorial1">
     <property name="ECLIPSE_HOME" value="../../../../../../FormalMind/fmStudio"/>
     <property name="ECLIPSE_WORKSPACE" value="../../../../../FMStudioWorkspace"/>
 
@@ -57,8 +57,8 @@
     </path>
 
     <!-- The default task with the jars used by this project -->
-    <target name="generate">
-        <java classname="acceleo.tutorial1.common.Generate" classpathref="acceleo.tutorial1.classpath">
+    <target name="ReqIFgen">
+        <java classname="acceleo.tutorial1.common.ReqIFgen" classpathref="acceleo.tutorial1.classpath">
             <arg value="${model}"/>
             <arg value="${target}"/>
         </java>
@@ -68,8 +68,8 @@
         In case of problem you can also try with all the jar available in your Eclipse
         Keep in mind that having two versions of the same jar can create problems
     -->
-    <target name="generate.alljars">
-        <java classname="acceleo.tutorial1.common.Generate" classpathref="acceleo.tutorial1.classpath">
+    <target name="ReqIFgen.alljars">
+        <java classname="acceleo.tutorial1.common.ReqIFgen" classpathref="acceleo.tutorial1.classpath">
             <arg value="${model}"/>
             <arg value="${target}"/>
         </java>
