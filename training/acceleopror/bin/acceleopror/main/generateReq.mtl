@@ -9,7 +9,7 @@
  * The documentation of the template generateReqif.
  * @param aReqIF
  */]
-[template public generateReqif(aReqIF :ReqIF)]
+[template public generateReqif(aReqIF : ReqIF)]
 [comment @main/]
 [file (('generated.html'), false)]
 <html>
@@ -31,6 +31,12 @@
 
 [template public generateLinks(lk:SpecRelation)]
 <tr>
-
+	<td>
+		[lk.source.values.eAllContents(AttributeValueXHTML)/]
+	</td>
+	<td>
+		[lk.target.values.eAllContents(AttributeValueXHTML)/]
+	</td>
 </tr>
+
 [/template]
