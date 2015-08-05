@@ -1,0 +1,8 @@
+{
+  "template": "bmissue.html",
+  "model": "bmotionIssue/MachB.mch",
+  "autoOpen": [
+    "CurrentTrace",
+    "Events"
+  ]
+}
