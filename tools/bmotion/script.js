@@ -12,7 +12,7 @@ requirejs(['bmotion.template'], function (bms) {
 					var opr = viewId[0];
 					var operationName = viewId[1];
 					
-					console.log("### sendEWIXL: " + opr + "." + operationName);
+					console.log("### values: " + opr + "." + operationName);
 					return "xx=" + opr;
 		   		  }
 		   		},
@@ -23,7 +23,7 @@ requirejs(['bmotion.template'], function (bms) {
 					var opr = viewId[0];
 					var operationName = viewId[1];
 					
-					console.log("### sendEWIXL: " + opr + "." + operationName);
+					console.log("### values: " + opr + "." + operationName);
 					return "xx=" + opr;
 		   		  }
 		   		}
