@@ -263,19 +263,19 @@
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none;marker-end:url(#Arrow2Mend)"
        d="m 368.23529,147.52941 38.82353,0"
        id="1.id"
-       class="notworkingop"
+       class="issueop"
        inkscape:connector-curvature="0" />
 	 <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none;marker-end:url(#marker9364)"
        d="m 847.05882,145.17647 48.2353,0"
        id="2.id"
-       class="workingop1"
+       class="workingop"
        inkscape:connector-curvature="0" />
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none;marker-end:url(#marker9722)"
        d="m 904.70588,338.11765 -54.11764,0"
        id="3.id"
-       class="workingop2"
+       class="issueop2"
        inkscape:connector-curvature="0" />
     
   </g>

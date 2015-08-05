@@ -3,20 +3,25 @@ MACHINE
 INCLUDES
     MachA
 OPERATIONS
+    
     issueOp(xx)=
     PRE
         xx : NAT1
     THEN
     op(xx)
-END;
-    workingOp=
-    BEGIN
-    op(1)
-END;
-    workingOp2(xx)=
+    END;
+
+    issueOp2(xx)=
     PRE
         xx : NAT
     THEN
     op(2)
-END
+    END;
+
+    workingOp=
+    BEGIN
+    op(1)
+    END
+    
+
 END

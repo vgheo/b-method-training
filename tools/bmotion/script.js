@@ -3,7 +3,7 @@ requirejs(['bmotion.template'], function (bms) {
     
 		
 	bms.executeEvent({
-		  selector: "[class='notworkingop']",
+		  selector: "[class='issueop']",
 		  events: [
 		   		{
 		   		  name: "issueOp", 
@@ -30,7 +30,7 @@ requirejs(['bmotion.template'], function (bms) {
 		   	  ]
 	});
 	bms.executeEvent({
-		  selector: "[class='workingop1']",
+		  selector: "[class='workingop']",
 		  events: [
 		   		{
 		   		  name: "workingOp", 
@@ -57,10 +57,10 @@ requirejs(['bmotion.template'], function (bms) {
 		   	  ]
 	});
 	bms.executeEvent({
-		  selector: "[class='workingop2']",
+		  selector: "[class='issueop2']",
 		  events: [
 		   		{
-		   		  name: "workingOp2", 
+		   		  name: "issueOp2", 
 		   		  predicate: function (origin) {
 					var viewId = origin.attr("id").split("."); 
 					var opr = viewId[0];
@@ -71,7 +71,7 @@ requirejs(['bmotion.template'], function (bms) {
 		   		  }
 		   		},
 				{
-		   		  name: "workingOp2", 
+		   		  name: "issueOp2", 
 		   		  predicate: function (origin) {
 					var viewId = origin.attr("id").split("."); 
 					var opr = viewId[0];
