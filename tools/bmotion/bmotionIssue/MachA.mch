@@ -7,11 +7,10 @@ INVARIANT
 INITIALISATION
     count:=0
 OPERATIONS
-    op(t1,t2)=
+    op(t1)=
     PRE
-        t1 : NAT &
-        t2 : NAT
+        t1 : NAT 
     THEN
-        count:=t1+t2
+        count:=count + t1
     END
 END
