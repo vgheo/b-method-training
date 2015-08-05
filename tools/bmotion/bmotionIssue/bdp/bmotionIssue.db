@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<db_xml>
+    <atelierb version="3_7_ubuntu-cvs" />
+    <project decomp_dir="X:\b-method-training\tools\bmotion\bmotionIssue\bdp\expand_src" old_decomp_dir="X:\b-method-training\tools\bmotion\bmotionIssue\bdp\src">
+        <!-- Definition directory list -->
+        <!-- Component file list -->
+        <component_file path="X:/b-method-training/tools/bmotion/bmotionIssue" name="MachA" suffix="mch" user="T0164930">
+            <component name="MachA" type="specification" />
+        </component_file>
+        <component_file path="X:/b-method-training/tools/bmotion/bmotionIssue" name="MachB" suffix="mch" user="T0164930">
+            <component name="MachB" type="specification" />
+        </component_file>
+    </project>
+</db_xml>

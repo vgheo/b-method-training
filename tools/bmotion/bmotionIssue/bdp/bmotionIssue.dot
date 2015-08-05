@@ -1,0 +1,5 @@
+digraph {
+MachA [ label=" MachA " shape= box ]
+MachB [ label=" MachB " shape= box ]
+
+}
