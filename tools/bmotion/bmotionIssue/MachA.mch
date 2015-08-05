@@ -1,5 +1,5 @@
 MACHINE
-    MachA(CH)
+    MachA
 VARIABLES
     count
 INVARIANT
