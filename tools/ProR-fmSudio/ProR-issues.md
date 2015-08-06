@@ -1,12 +1,13 @@
-# ProR
+# ProR/formalMind Studio - Known issues
 
-#### Known issues
 
-Link navigation with links isn't possible:
-[NaviBug](https://bugs.eclipse.org/bugs/show_bug.cgi?id=445861)
+## NaviBug. Link navigation with links isn't possible 
 
-Linkmanagement presentation causes project to crash:
-[LinkBug](https://bugs.eclipse.org/bugs/show_bug.cgi?id=472725)
+[#445861](https://bugs.eclipse.org/bugs/show_bug.cgi?id=445861)
 
-Shift level up doesn't update in SpecView
-[RefreshBug](https://bugs.eclipse.org/bugs/show_bug.cgi?id=473038)
+## LinkBug. Linkmanagement presentation causes project to crash
+
+[#472725](https://bugs.eclipse.org/bugs/show_bug.cgi?id=472725)
+
+## RefreshBug. Shift level up doesn't update in SpecView 
+[#473038](https://bugs.eclipse.org/bugs/show_bug.cgi?id=473038)
