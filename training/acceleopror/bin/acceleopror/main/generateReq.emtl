@@ -1,0 +1,472 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:mtl="http://www.eclipse.org/acceleo/mtl/3.0" xmlns:ocl.ecore="http://www.eclipse.org/ocl/1.1.0/Ecore">
+  <mtl:Module name="generateReq" nsURI="acceleopror::main::generateReq" startHeaderPosition="86" endHeaderPosition="397">
+    <documentation xsi:type="mtl:ModuleDocumentation">
+      <body startPosition="32" endPosition="83" value="&#xD;&#xA;The documentation of the module generateReq.&#xD;&#xA;&#xD;&#xA;"/>
+    </documentation>
+    <input>
+      <takesTypesFrom href="http://eclipse.org/rmf/pror/toolextensions/1.0#/"/>
+    </input>
+    <input>
+      <takesTypesFrom href="http://www.omg.org/spec/ReqIF/20110401/reqif.xsd#/"/>
+    </input>
+    <input>
+      <takesTypesFrom href="http://formalmind.com/pror/presentation/highlight#/"/>
+    </input>
+    <input>
+      <takesTypesFrom href="http://formalmind.com/pror/presentation/linkmanagement#/"/>
+    </input>
+    <ownedModuleElement xsi:type="mtl:Template" name="generateReqif" visibility="Public" main="true">
+      <body xsi:type="mtl:FileBlock" openMode="OverWrite">
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&lt;html>&#xA;  &lt;body>&#xA;&#x9;&lt;table border = &quot;1&quot;>&#xA;&#x9;&#x9;&lt;tr>&#xA;    &#x9;&#x9;&lt;th>Specification&lt;/th>&#xA;    &#x9;&#x9;&lt;th>Chapter&lt;/th>&#xA;    &#x9;&lt;/tr>&#xA;"/>
+        <body xsi:type="mtl:ForBlock">
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="    "/>
+          <body xsi:type="mtl:TemplateInvocation" definition="/0/generateLinks">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            <argument xsi:type="ocl.ecore:VariableExp" name="lk" referredVariable="/0/generateReqif/%/%.1/lk">
+              <eType xsi:type="ecore:EClass" href="http://www.omg.org/spec/ReqIF/20110401/reqif.xsd#//SpecRelation"/>
+            </argument>
+          </body>
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;"/>
+          <loopVariable name="lk">
+            <eType xsi:type="ecore:EClass" href="http://www.omg.org/spec/ReqIF/20110401/reqif.xsd#//SpecRelation"/>
+          </loopVariable>
+          <iterSet xsi:type="ocl.ecore:OperationCallExp" eType="/8/Sequence(SpecRelation)" referredOperation="/1/EObject_Class/eContents">
+            <source xsi:type="ocl.ecore:VariableExp" name="aReqIF" referredVariable="/0/generateReqif/aReqIF">
+              <eType xsi:type="ecore:EClass" href="http://www.omg.org/spec/ReqIF/20110401/reqif.xsd#//ReqIF"/>
+            </source>
+            <argument xsi:type="ocl.ecore:TypeExp" eType="/7/SpecRelation">
+              <referredType xsi:type="ecore:EClass" href="http://www.omg.org/spec/ReqIF/20110401/reqif.xsd#//SpecRelation"/>
+            </argument>
+          </iterSet>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&lt;/table>&#xA;  &lt;/body>&#xA;&lt;/html>&#xA;"/>
+        <fileUrl xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="generated.html">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </fileUrl>
+      </body>
+      <documentation xsi:type="mtl:ModuleElementDocumentation">
+        <body startPosition="325" endPosition="397" value="&#xD;&#xA;The documentation of the template generateReqif.&#xD;&#xA;@param aReqIF&#xD;&#xA;&#xD;&#xA;"/>
+        <parametersDocumentation name="aReqIF">
+          <body value=""/>
+        </parametersDocumentation>
+      </documentation>
+      <parameter name="aReqIF">
+        <eType xsi:type="ecore:EClass" href="http://www.omg.org/spec/ReqIF/20110401/reqif.xsd#//ReqIF"/>
+      </parameter>
+    </ownedModuleElement>
+    <ownedModuleElement xsi:type="mtl:Template" name="generateLinks" visibility="Public">
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&lt;tr>&#xA;&#x9;&lt;td>&#xA;&#x9;&#x9;"/>
+      <body xsi:type="ocl.ecore:IteratorExp" name="collect" eType="/8/Bag(AttributeValueXHTML)">
+        <source xsi:type="ocl.ecore:PropertyCallExp" eType="/8/Set(AttributeValue)">
+          <source xsi:type="ocl.ecore:PropertyCallExp">
+            <eType xsi:type="ecore:EClass" href="http://www.omg.org/spec/ReqIF/20110401/reqif.xsd#//SpecObject"/>
+            <source xsi:type="ocl.ecore:VariableExp" name="lk" referredVariable="/0/generateLinks/lk">
+              <eType xsi:type="ecore:EClass" href="http://www.omg.org/spec/ReqIF/20110401/reqif.xsd#//SpecRelation"/>
+            </source>
+            <referredProperty xsi:type="ecore:EReference" href="http://www.omg.org/spec/ReqIF/20110401/reqif.xsd#//SpecRelation/source"/>
+          </source>
+          <referredProperty xsi:type="ecore:EReference" href="http://www.omg.org/spec/ReqIF/20110401/reqif.xsd#//SpecElementWithAttributes/values"/>
+        </source>
+        <body xsi:type="ocl.ecore:OperationCallExp" eType="/8/Sequence(AttributeValueXHTML)" referredOperation="/1/EObject_Class/eAllContents">
+          <source xsi:type="ocl.ecore:VariableExp" name="temp1" referredVariable="/0/generateLinks/collect/temp1">
+            <eType xsi:type="ecore:EClass" href="http://www.omg.org/spec/ReqIF/20110401/reqif.xsd#//AttributeValue"/>
+          </source>
+          <argument xsi:type="ocl.ecore:TypeExp" eType="/7/AttributeValueXHTML">
+            <referredType xsi:type="ecore:EClass" href="http://www.omg.org/spec/ReqIF/20110401/reqif.xsd#//AttributeValueXHTML"/>
+          </argument>
+        </body>
+        <iterator xsi:type="ocl.ecore:Variable" name="temp1">
+          <eType xsi:type="ecore:EClass" href="http://www.omg.org/spec/ReqIF/20110401/reqif.xsd#//AttributeValue"/>
+        </iterator>
+      </body>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;&#x9;&lt;/td>&#xA;&#x9;&lt;td>&#xA;&#x9;&#x9;"/>
+      <body xsi:type="ocl.ecore:IteratorExp" name="collect" eType="/8/Bag(AttributeValueXHTML)">
+        <source xsi:type="ocl.ecore:PropertyCallExp" eType="/8/Set(AttributeValue)">
+          <source xsi:type="ocl.ecore:PropertyCallExp">
+            <eType xsi:type="ecore:EClass" href="http://www.omg.org/spec/ReqIF/20110401/reqif.xsd#//SpecObject"/>
+            <source xsi:type="ocl.ecore:VariableExp" name="lk" referredVariable="/0/generateLinks/lk">
+              <eType xsi:type="ecore:EClass" href="http://www.omg.org/spec/ReqIF/20110401/reqif.xsd#//SpecRelation"/>
+            </source>
+            <referredProperty xsi:type="ecore:EReference" href="http://www.omg.org/spec/ReqIF/20110401/reqif.xsd#//SpecRelation/target"/>
+          </source>
+          <referredProperty xsi:type="ecore:EReference" href="http://www.omg.org/spec/ReqIF/20110401/reqif.xsd#//SpecElementWithAttributes/values"/>
+        </source>
+        <body xsi:type="ocl.ecore:OperationCallExp" eType="/8/Sequence(AttributeValueXHTML)" referredOperation="/1/EObject_Class/eAllContents">
+          <source xsi:type="ocl.ecore:VariableExp" name="temp1" referredVariable="/0/generateLinks/collect.1/temp2">
+            <eType xsi:type="ecore:EClass" href="http://www.omg.org/spec/ReqIF/20110401/reqif.xsd#//AttributeValue"/>
+          </source>
+          <argument xsi:type="ocl.ecore:TypeExp" eType="/7/AttributeValueXHTML">
+            <referredType xsi:type="ecore:EClass" href="http://www.omg.org/spec/ReqIF/20110401/reqif.xsd#//AttributeValueXHTML"/>
+          </argument>
+        </body>
+        <iterator xsi:type="ocl.ecore:Variable" name="temp2">
+          <eType xsi:type="ecore:EClass" href="http://www.omg.org/spec/ReqIF/20110401/reqif.xsd#//AttributeValue"/>
+        </iterator>
+      </body>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;&#x9;&lt;/td>&#xA;&lt;/tr>&#xA;"/>
+      <parameter name="lk">
+        <eType xsi:type="ecore:EClass" href="http://www.omg.org/spec/ReqIF/20110401/reqif.xsd#//SpecRelation"/>
+      </parameter>
+    </ownedModuleElement>
+  </mtl:Module>
+  <ecore:EPackage name="additions">
+    <eClassifiers xsi:type="ecore:EClass" name="String_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Integer_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Real_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Real"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="EObject_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+      </eAnnotations>
+      <eOperations name="eAllContents">
+        <eAnnotations source="MTL non-standard"/>
+        <eType xsi:type="ocl.ecore:SequenceType" href="http://www.eclipse.org/acceleo/mtl/3.0/mtlnonstdlib.ecore#//Sequence(OclAny)"/>
+        <eParameters name="filter">
+          <eType xsi:type="ocl.ecore:TypeType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclType"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="eContents">
+        <eAnnotations source="MTL non-standard"/>
+        <eType xsi:type="ocl.ecore:SequenceType" href="http://www.eclipse.org/acceleo/mtl/3.0/mtlnonstdlib.ecore#//Sequence(OclAny)"/>
+        <eParameters name="filter">
+          <eType xsi:type="ocl.ecore:TypeType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclType"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="generateReqif">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL" references="/0/generateReqif"/>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="aReqIF">
+          <eType xsi:type="ecore:EClass" href="http://www.omg.org/spec/ReqIF/20110401/reqif.xsd#//ReqIF"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="generateLinks">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL" references="/0/generateLinks"/>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="lk">
+          <eType xsi:type="ecore:EClass" href="http://www.omg.org/spec/ReqIF/20110401/reqif.xsd#//SpecRelation"/>
+        </eParameters>
+      </eOperations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="OclAny_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Collection(T)_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Collection(T)"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Sequence(T)_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Sequence(T)"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="OrderedSet(T)_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OrderedSet(T)"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ReqIF_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.omg.org/spec/ReqIF/20110401/reqif.xsd#//ReqIF"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="SpecRelation_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.omg.org/spec/ReqIF/20110401/reqif.xsd#//SpecRelation"/>
+      </eAnnotations>
+    </eClassifiers>
+  </ecore:EPackage>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.omg.org/spec/ReqIF/20110401/reqif.xsd#//ReqIF"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.omg.org/spec/ReqIF/20110401/reqif.xsd#//ReqIF"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.omg.org/spec/ReqIF/20110401/reqif.xsd#//ReqIF"/>
+  </ocl.ecore:Variable>
+  <ecore:EPackage name="types">
+    <eClassifiers xsi:type="ocl.ecore:TypeType" name="SpecRelation">
+      <referredType xsi:type="ecore:EClass" href="http://www.omg.org/spec/ReqIF/20110401/reqif.xsd#//SpecRelation"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ocl.ecore:TypeType" name="AttributeValueXHTML">
+      <referredType xsi:type="ecore:EClass" href="http://www.omg.org/spec/ReqIF/20110401/reqif.xsd#//AttributeValueXHTML"/>
+    </eClassifiers>
+  </ecore:EPackage>
+  <ecore:EPackage name="collections">
+    <eClassifiers xsi:type="ocl.ecore:SequenceType" name="Sequence(OclAny)" instanceClassName="java.util.List">
+      <elementType xsi:type="ocl.ecore:AnyType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ocl.ecore:SequenceType" name="Sequence(SpecRelation)" instanceClassName="java.util.List">
+      <elementType xsi:type="ecore:EClass" href="http://www.omg.org/spec/ReqIF/20110401/reqif.xsd#//SpecRelation"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ocl.ecore:SetType" name="Set(AttributeValue)" instanceClassName="java.util.Set">
+      <elementType xsi:type="ecore:EClass" href="http://www.omg.org/spec/ReqIF/20110401/reqif.xsd#//AttributeValue"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ocl.ecore:SequenceType" name="Sequence(AttributeValueXHTML)" instanceClassName="java.util.List">
+      <elementType xsi:type="ecore:EClass" href="http://www.omg.org/spec/ReqIF/20110401/reqif.xsd#//AttributeValueXHTML"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ocl.ecore:BagType" name="Bag(AttributeValueXHTML)" instanceClassName="org.eclipse.ocl.util.Bag">
+      <elementType xsi:type="ecore:EClass" href="http://www.omg.org/spec/ReqIF/20110401/reqif.xsd#//AttributeValueXHTML"/>
+    </eClassifiers>
+  </ecore:EPackage>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.omg.org/spec/ReqIF/20110401/reqif.xsd#//ReqIF"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.omg.org/spec/ReqIF/20110401/reqif.xsd#//SpecRelation"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.omg.org/spec/ReqIF/20110401/reqif.xsd#//SpecRelation"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.omg.org/spec/ReqIF/20110401/reqif.xsd#//ReqIF"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="i">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.omg.org/spec/ReqIF/20110401/reqif.xsd#//SpecRelation"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.omg.org/spec/ReqIF/20110401/reqif.xsd#//SpecRelation"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.omg.org/spec/ReqIF/20110401/reqif.xsd#//SpecRelation"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.omg.org/spec/ReqIF/20110401/reqif.xsd#//SpecRelation"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ecore:EAnnotation source="positions">
+    <eAnnotations source="positions.0" references="/0/%">
+      <details key="start" value="29"/>
+      <details key="end" value="85"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.1" references="/0/generateReqif">
+      <details key="start" value="400"/>
+      <details key="end" value="746"/>
+      <details key="line" value="12"/>
+    </eAnnotations>
+    <eAnnotations source="positions.2" references="/0/generateReqif/%">
+      <details key="start" value="465"/>
+      <details key="end" value="734"/>
+      <details key="line" value="14"/>
+    </eAnnotations>
+    <eAnnotations source="positions.3" references="/0/generateReqif/%/%">
+      <details key="start" value="500"/>
+      <details key="end" value="608"/>
+      <details key="line" value="15"/>
+    </eAnnotations>
+    <eAnnotations source="positions.4" references="/0/generateReqif/%/%.1">
+      <details key="start" value="608"/>
+      <details key="end" value="698"/>
+      <details key="line" value="22"/>
+    </eAnnotations>
+    <eAnnotations source="positions.5" references="/0/generateReqif/%/%.1/%">
+      <details key="start" value="667"/>
+      <details key="end" value="671"/>
+      <details key="line" value="23"/>
+    </eAnnotations>
+    <eAnnotations source="positions.6" references="/0/generateReqif/%/%.1/%.1">
+      <details key="start" value="672"/>
+      <details key="end" value="689"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.7" references="/0/generateReqif/%/%.1/%.1/lk">
+      <details key="start" value="686"/>
+      <details key="end" value="688"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.8" references="/0/generateReqif/%/%.1/%.2">
+      <details key="start" value="691"/>
+      <details key="end" value="692"/>
+      <details key="line" value="24"/>
+    </eAnnotations>
+    <eAnnotations source="positions.9" references="/0/generateReqif/%/%.1/lk">
+      <details key="start" value="614"/>
+      <details key="end" value="631"/>
+      <details key="line" value="22"/>
+    </eAnnotations>
+    <eAnnotations source="positions.10" references="/0/generateReqif/%/%.1/%.3">
+      <details key="start" value="634"/>
+      <details key="end" value="664"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.11" references="/0/generateReqif/%/%.1/%.3/aReqIF">
+      <details key="start" value="634"/>
+      <details key="end" value="640"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.12" references="/0/generateReqif/%/%.1/%.3/%">
+      <details key="start" value="651"/>
+      <details key="end" value="663"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.13" references="/0/generateReqif/%/%.2">
+      <details key="start" value="699"/>
+      <details key="end" value="727"/>
+      <details key="line" value="25"/>
+    </eAnnotations>
+    <eAnnotations source="positions.14" references="/0/generateReqif/%/%.3">
+      <details key="start" value="472"/>
+      <details key="end" value="490"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.15" references="/0/generateReqif/%.1">
+      <details key="start" value="322"/>
+      <details key="end" value="399"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.16" references="/0/generateReqif/%.1/aReqIF">
+      <details key="start" value="-1"/>
+      <details key="end" value="-1"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.17" references="/0/generateReqif/aReqIF">
+      <details key="start" value="431"/>
+      <details key="end" value="445"/>
+      <details key="line" value="12"/>
+    </eAnnotations>
+    <eAnnotations source="positions.18" references="/0/generateLinks">
+      <details key="start" value="749"/>
+      <details key="end" value="959"/>
+      <details key="line" value="32"/>
+    </eAnnotations>
+    <eAnnotations source="positions.19" references="/0/generateLinks/%">
+      <details key="start" value="798"/>
+      <details key="end" value="811"/>
+      <details key="line" value="33"/>
+    </eAnnotations>
+    <eAnnotations source="positions.20" references="/0/generateLinks/collect">
+      <details key="start" value="812"/>
+      <details key="end" value="862"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.21" references="/0/generateLinks/collect/%">
+      <details key="start" value="812"/>
+      <details key="end" value="828"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.22" references="/0/generateLinks/collect/%/%">
+      <details key="start" value="812"/>
+      <details key="end" value="821"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.23" references="/0/generateLinks/collect/%/%/lk">
+      <details key="start" value="812"/>
+      <details key="end" value="814"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.24" references="/0/generateLinks/collect/%.1">
+      <details key="start" value="-1"/>
+      <details key="end" value="-1"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.25" references="/0/generateLinks/collect/%.1/temp1">
+      <details key="start" value="-1"/>
+      <details key="end" value="-1"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.26" references="/0/generateLinks/collect/%.1/%">
+      <details key="start" value="842"/>
+      <details key="end" value="861"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.27" references="/0/generateLinks/collect/temp1">
+      <details key="start" value="-1"/>
+      <details key="end" value="-1"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.28" references="/0/generateLinks/%.1">
+      <details key="start" value="864"/>
+      <details key="end" value="880"/>
+      <details key="line" value="36"/>
+    </eAnnotations>
+    <eAnnotations source="positions.29" references="/0/generateLinks/collect.1">
+      <details key="start" value="881"/>
+      <details key="end" value="931"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.30" references="/0/generateLinks/collect.1/%">
+      <details key="start" value="881"/>
+      <details key="end" value="897"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.31" references="/0/generateLinks/collect.1/%/%">
+      <details key="start" value="881"/>
+      <details key="end" value="890"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.32" references="/0/generateLinks/collect.1/%/%/lk">
+      <details key="start" value="881"/>
+      <details key="end" value="883"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.33" references="/0/generateLinks/collect.1/%.1">
+      <details key="start" value="-1"/>
+      <details key="end" value="-1"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.34" references="/0/generateLinks/collect.1/%.1/temp1">
+      <details key="start" value="-1"/>
+      <details key="end" value="-1"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.35" references="/0/generateLinks/collect.1/%.1/%">
+      <details key="start" value="911"/>
+      <details key="end" value="930"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.36" references="/0/generateLinks/collect.1/temp2">
+      <details key="start" value="-1"/>
+      <details key="end" value="-1"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.37" references="/0/generateLinks/%.2">
+      <details key="start" value="933"/>
+      <details key="end" value="947"/>
+      <details key="line" value="39"/>
+    </eAnnotations>
+    <eAnnotations source="positions.38" references="/0/generateLinks/lk">
+      <details key="start" value="780"/>
+      <details key="end" value="795"/>
+      <details key="line" value="32"/>
+    </eAnnotations>
+  </ecore:EAnnotation>
+</xmi:XMI>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html data-bms-visualisation>
+<head>
+    <title>BMotion Studio Visualization</title>
+	<meta name="viewport"
+          content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<script>
+		function reSizeOnLoad(){
+         var gui = require('nw.gui');
+         gui.Window.get().zoomLevel = -1.4
+       }
+	   function zoomOut() {
+		var Page = document.getElementById('Body');
+		var zoom = parseInt(Page.style.zoom) - 10 +'%'
+		Page.style.zoom = zoom;
+		return false;
+	   }
+	   function zoomIn() {
+		var Page = document.getElementById('Body');
+		var zoom = parseInt(Page.style.zoom) + 10 +'%'
+		Page.style.zoom = zoom;
+		return false;
+	   }
+    </script>
+</head>
+
+<body id="Body" style="zoom: 100%" onload = "reSizeOnLoad();" >
+	<script data-main="script" src="require.js"></script>
+	
+	<div class="zoomPage">
+		<button id="bt_zoom_in" type="button" onclick="zoomIn()"> + </button>
+		<button id="bt_zoom_out" type="button" onclick="zoomOut()"> - </button>
+	</div>
+	<div data-bms-svg="bmissue.svg" class="env" ></div>
+	
+</body>
+</html>
