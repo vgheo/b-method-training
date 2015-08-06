@@ -7,7 +7,8 @@ ProB tools:
 - [bug tracker](https://probjira.atlassian.net/secure/Dashboard.jspa)
 
 
-## ProB - Unsupported B language features
+## ProB-core issues
+### ProB - Unsupported B language features
 
 Valid for: `ProB 1.5.0-final 3bc086f2be4b309869fcab31325ede65f8d27277`
 
@@ -23,8 +24,16 @@ NOT SUPPORTED:
     - '&`
     - `<+`
     - (...)
+    
+### '//' comments not supported
 
-## BMS/webkit - svg:symbol limited usage
+[report on prob-users forum](https://groups.google.com/forum/#!topic/prob-users/FLq1ftxJ34A)
+[issue](https://probjira.atlassian.net/browse/PARSERLIB-37)
+
+
+## BMS/webkit issues
+
+### BMS/webkit - svg:symbol limited usage
 (webkit issue ) - svg:symbol - symbol definition cannot "use" a symbol defined in another file
     - using symbols in the same file works
 
