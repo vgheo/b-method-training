@@ -1,0 +1,52 @@
+THEORY ProofList IS
+_f(1) & _f(2) & _f(8) & _f(16) & WellDefinedness_val_field.3,(_f(24) => _f(27));
+_f(1) & _f(2) & _f(8) & _f(16) & WellDefinedness_val_field.2,(_f(24) => _f(26));
+_f(1) & _f(2) & _f(8) & _f(16) & WellDefinedness_val_field.1,(_f(24) => _f(25));
+_f(1) & _f(2) & _f(8) & WellDefinedness_Precondition_val_field.2,(_f(23) & _f(24) => _f(26));
+_f(1) & _f(2) & _f(8) & WellDefinedness_Precondition_val_field.1,(_f(23) & _f(24) => _f(25));
+_f(1) & _f(2) & _f(8) & _f(14) & WellDefinedness_def_field.2,(_f(24) => _f(26));
+_f(1) & _f(2) & _f(8) & _f(14) & WellDefinedness_def_field.1,(_f(24) => _f(25));
+_f(1) & _f(2) & _f(8) & _f(14) & WellDefinedness_rem_field.2,(_f(24) => _f(26));
+_f(1) & _f(2) & _f(8) & _f(14) & WellDefinedness_rem_field.1,(_f(24) => _f(25));
+_f(1) & _f(2) & _f(8) & _f(12) & WellDefinedness_mod_field.2,(_f(24) => _f(26));
+_f(1) & _f(2) & _f(8) & _f(12) & WellDefinedness_mod_field.1,(_f(24) => _f(25));
+_f(1) & _f(2) & _f(8) & _f(14) & rem_field.1,(_f(3) & _f(6) => _f(15));
+_f(1) & _f(2) & _f(8) & _f(12) & mod_field.1,(_f(3) & _f(6) => _f(13));
+_f(1) & _f(2) & _f(8) & _f(9) & create_partial_object.2,(_f(3) & _f(6) => _f(11));
+_f(1) & _f(2) & _f(8) & _f(9) & create_partial_object.1,(_f(3) & _f(4) => _f(10));
+_f(1) & _f(2) & Initialisation.2,(_f(3) & _f(6) => _f(7));
+_f(1) & _f(2) & Initialisation.1,(_f(3) & _f(4) => _f(5))
+END
+&
+THEORY Formulas IS
+((NAT) = (((0) .. (2147483647)))) & ((INT) = (((-2147483647) .. (2147483647))));
+((max_obj) : ((NAT-{0}))) & ((max_field) : ((NAT-{0}))) & ((min_val) : (NAT)) & ((max_val) : (NAT)) & (max_val +1 <= 2147483647);
+"Invariant is preserved";
+"Check invariant ((partial_object) : (((0) .. (max_obj))))";
+((0) : (((0) .. (max_obj))));
+"Check invariant ((partial_field) : (((((1) .. (max_field))) --> (((((1) .. (partial_object))) +-> (((min_val) .. (max_val))))))))";
+(({}) : (((((1) .. (max_field))) --> (((((1) .. (0))) +-> (((min_val) .. (max_val))))))));
+((partial_object) : (((0) .. (max_obj)))) & partial_field : ((1) .. (max_field)) +-> ((((1) .. (partial_object))) +-> (((min_val) .. (max_val)))) & dom(partial_field) = ((1) .. (max_field)) & ((partial_field) : (((((1) .. (max_field))) --> (((((1) .. (partial_object))) +-> (((min_val) .. (max_val))))))));
+not(partial_object = max_obj);
+(((partial_object + 1)) : (((0) .. (max_obj))));
+((partial_field) : (((((1) .. (max_field))) --> (((((1) .. ((partial_object + 1)))) +-> (((min_val) .. (max_val))))))));
+((ii) : (((1) .. (max_field)))) & ((oo) : (((1) .. (partial_object)))) & ((vv) : (((min_val) .. (max_val))));
+((((partial_field) <+ ({((ii) |-> ((((partial_field )(ii)) <+ ({((oo) |-> (vv))}))))}))) : (((((1) .. (max_field))) --> (((((1) .. (partial_object))) +-> (((min_val) .. (max_val))))))));
+((ii) : (((1) .. (max_field)))) & ((oo) : (((1) .. (partial_object))));
+((((partial_field) <+ ({((ii) |-> ((({oo}) <<| ((partial_field )(ii)))))}))) : (((((1) .. (max_field))) --> (((((1) .. (partial_object))) +-> (((min_val) .. (max_val))))))));
+((ii) : (((1) .. (max_field)))) & ((oo) : (dom((partial_field )(ii))));
+((max_val) : (NAT));
+((min_val) : (NAT));
+((max_field) : ((NAT-{0})));
+((max_obj) : ((NAT-{0})));
+((partial_object) : (((0) .. (max_obj))));
+((oo) : (((1) .. (partial_object))));
+((ii) : (((1) .. (max_field))));
+"Well definedness";
+((ii) : (dom(partial_field)));
+((partial_field) : (((dom(partial_field)) +-> (ran(partial_field)))));
+(((partial_field )(ii)) : (((dom((partial_field )(ii))) +-> (ran((partial_field )(ii))))))
+END
+&
+THEORY EnumerateX
+END

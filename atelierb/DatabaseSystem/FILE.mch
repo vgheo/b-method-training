@@ -46,7 +46,7 @@ OPERATIONS
         vv: VALUE &
         size(file) < max_rec
     THEN
-        file:= file<-(FIELD * {vv}) || // /INDEX in page 613, probably typo
+        file:= file<-(FIELD * {vv}) || /* /INDEX in page 613, probably typo*/
         oo := size(file) +1
     END;
     /*returns the size of file*/

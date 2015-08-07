@@ -1,0 +1,22 @@
+THEORY ProofList
+END
+&
+THEORY Formulas IS
+((NAT) = (((0) .. (2147483647)))) & ((INT) = (((-2147483647) .. (2147483647))));
+((1..2)*{STATUS}): FIN(NATURAL*{STATUS}) & not(((1..2)*{STATUS}) = {}) & code_STATUS : ((1..2)*{STATUS}) +-> {0}\/{1} & code_STATUS : ((1..2)*{STATUS}) >+> {0}\/{1} & code_STATUS : ((1..2)*{STATUS}) +->> {0}\/{1} & code_STATUS : ((1..2)*{STATUS}) --> {0}\/{1} & dom(code_STATUS) = ((1..2)*{STATUS}) & code_STATUS~ : {0}\/{1} +-> ((1..2)*{STATUS}) & ran(code_STATUS) = {0}\/{1} & ((code_STATUS) : (((((1..2)*{STATUS})) >->> ({0}\/{1})))) & ((decode_STATUS) = ((code_STATUS)~));
+((rr$1) : (((1..2)*{STATUS})));
+((ii) : (((1..2)*{STATUS})));
+((1..2)*{STATUS}): FIN(NATURAL*{STATUS}) & not(((1..2)*{STATUS}) = {});
+code_STATUS : ((1..2)*{STATUS}) +-> {0}\/{1};
+code_STATUS : ((1..2)*{STATUS}) >+> {0}\/{1};
+code_STATUS : ((1..2)*{STATUS}) +->> {0}\/{1};
+code_STATUS : ((1..2)*{STATUS}) --> {0}\/{1};
+dom(code_STATUS) = ((1..2)*{STATUS});
+code_STATUS~ : {0}\/{1} +-> ((1..2)*{STATUS});
+ran(code_STATUS) = {0}\/{1};
+((code_STATUS) : (((((1..2)*{STATUS})) >->> ({0}\/{1}))))
+END
+&
+THEORY EnumerateX IS
+STATUS == {dead,living}
+END

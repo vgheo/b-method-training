@@ -1,0 +1,314 @@
+<Machine name='FILE_ACCESS_2' type='implementation'>
+<Abstraction>FILE_ACCESS_1</Abstraction>
+<Parameters>
+<Id value='max_rec' typref='2701647786'/>
+<Id value='FIELD' typref='3988092277'/>
+<Id value='VALUE' typref='3958993484'/>
+</Parameters>
+<Constraints>
+<Nary_Pred op='&amp;'>
+<Set>
+<Id value='FIELD' typref='3988092277'/>
+</Set>
+<Set>
+<Id value='VALUE' typref='3958993484'/>
+</Set>
+</Nary_Pred>
+</Constraints>
+<Imports>
+<Referenced_Machine>
+<Name>BASIC_FILE_VAR</Name>
+<Parameters>
+<Id value='max_rec' typref='2701647786'/>
+<Id value='FIELD' typref='3988092277'/>
+<Id value='VALUE' typref='3958993484'/>
+</Parameters>
+</Referenced_Machine>
+</Imports>
+<Invariant>
+<Nary_Pred op='&amp;'>
+<Exp_Comparison op='='>
+<Id value='bfile' typref='277897435'/>
+<Id value='file_vrb' typref='277897435'/>
+</Exp_Comparison>
+<Exp_Comparison op='='>
+<Id value='record' typref='2927107167'/>
+<Id value='buf_vrb' typref='2927107167'/>
+</Exp_Comparison>
+</Nary_Pred>
+</Invariant>
+<Initialisation>
+<Nary_Sub op=';'>
+<Assignement_Sub>
+<Variables>
+<Id value='updated' typref='2043437594'/>
+</Variables>
+<Values>
+<Boolean_Literal value='FALSE' typref='2043437594'/>
+</Values>
+</Assignement_Sub>
+<Assignement_Sub>
+<Variables>
+<Id value='name' typref='2701647786'/>
+</Variables>
+<Values>
+<Integer_Literal value='0' typref='2701647786'/>
+</Values>
+</Assignement_Sub>
+<Assignement_Sub>
+<Variables>
+<Id value='buffer' typref='277897435'/>
+<Id value='bfile' typref='277897435'/>
+</Variables>
+<Values>
+<EmptySet typref='3817003670'/>
+<EmptySeq typref='2085061915'/>
+</Values>
+</Assignement_Sub>
+<Assignement_Sub>
+<Variables>
+<Id value='record' typref='2927107167'/>
+</Variables>
+<Values>
+<EmptySet typref='3817003670'/>
+</Values>
+</Assignement_Sub>
+</Nary_Sub>
+</Initialisation>
+<Operations>
+<Operation name='get_record'>
+<Input_Parameters>
+<Id value='oo' typref='2701647786'/>
+</Input_Parameters>
+<Body>
+<Nary_Sub op=';'>
+<Assignement_Sub>
+<Variables>
+<Id value='name' typref='2701647786'/>
+</Variables>
+<Values>
+<Integer_Literal value='1' typref='2701647786'/>
+</Values>
+</Assignement_Sub>
+<Operation_Call>
+<Name>
+<Id value='READ_FILE'/>
+</Name>
+<Input_Parameters>
+<Id value='name' typref='2701647786'/>
+</Input_Parameters>
+</Operation_Call>
+<Assignement_Sub>
+<Variables>
+<Id value='updated' typref='2043437594'/>
+</Variables>
+<Values>
+<Boolean_Literal value='FALSE' typref='2043437594'/>
+</Values>
+</Assignement_Sub>
+</Nary_Sub>
+</Body>
+</Operation>
+<Operation name='put_buffer'>
+<Body>
+<Operation_Call>
+<Name>
+<Id value='WRITE_FILE'/>
+</Name>
+<Input_Parameters>
+<Id value='name' typref='2701647786'/>
+</Input_Parameters>
+</Operation_Call>
+</Body>
+</Operation>
+<Operation name='create_record'>
+<Output_Parameters>
+<Id value='oo' typref='2701647786'/>
+</Output_Parameters>
+<Input_Parameters>
+<Id value='vv' typref='4077266551'/>
+</Input_Parameters>
+<Body>
+<Nary_Sub op=';'>
+<Operation_Call>
+<Name>
+<Id value='NEW_RECORD'/>
+</Name>
+<Input_Parameters>
+<Id value='vv' typref='4077266551'/>
+</Input_Parameters>
+</Operation_Call>
+<Operation_Call>
+<Name>
+<Id value='SIZE_FILE'/>
+</Name>
+<Output_Parameters>
+<Id value='oo' typref='2701647786'/>
+</Output_Parameters>
+</Operation_Call>
+</Nary_Sub>
+</Body>
+</Operation>
+<Operation name='mod_buffer'>
+<Input_Parameters>
+<Id value='oo' typref='2701647786'/>
+<Id value='ii' typref='1177923086'/>
+<Id value='vv' typref='4077266551'/>
+</Input_Parameters>
+<Body>
+<Nary_Sub op=';'>
+<Assignement_Sub>
+<Variables>
+<Binary_Exp op='(' typref='4077266551'>
+<Id value='record' typref='2927107167'/>
+<Id value='ii' typref='1177923086'/>
+</Binary_Exp>
+</Variables>
+<Values>
+<Id value='vv' typref='4077266551'/>
+</Values>
+</Assignement_Sub>
+<Assignement_Sub>
+<Variables>
+<Id value='updated' typref='2043437594'/>
+</Variables>
+<Values>
+<Boolean_Literal value='TRUE' typref='2043437594'/>
+</Values>
+</Assignement_Sub>
+</Nary_Sub>
+</Body>
+</Operation>
+<Operation name='not_in_buffer'>
+<Output_Parameters>
+<Id value='vv' typref='2043437594'/>
+</Output_Parameters>
+<Input_Parameters>
+<Id value='oo' typref='2701647786'/>
+</Input_Parameters>
+<Body>
+<Assignement_Sub>
+<Variables>
+<Id value='vv' typref='2043437594'/>
+</Variables>
+<Values>
+<Boolean_Exp typref='2043437594'>
+<Exp_Comparison op='/='>
+<Id value='oo' typref='2701647786'/>
+<Id value='name' typref='2701647786'/>
+</Exp_Comparison>
+</Boolean_Exp>
+</Values>
+</Assignement_Sub>
+</Body>
+</Operation>
+<Operation name='size_file'>
+<Output_Parameters>
+<Id value='vv' typref='2701647786'/>
+</Output_Parameters>
+<Body>
+<Operation_Call>
+<Name>
+<Id value='SIZE_FILE'/>
+</Name>
+<Output_Parameters>
+<Id value='vv' typref='2701647786'/>
+</Output_Parameters>
+</Operation_Call>
+</Body>
+</Operation>
+<Operation name='val_buffer'>
+<Output_Parameters>
+<Id value='vv' typref='4077266551'/>
+</Output_Parameters>
+<Input_Parameters>
+<Id value='oo' typref='2701647786'/>
+<Id value='ii' typref='1177923086'/>
+</Input_Parameters>
+<Body>
+<Assignement_Sub>
+<Variables>
+<Id value='vv' typref='4077266551'/>
+</Variables>
+<Values>
+<Binary_Exp op='(' typref='4077266551'>
+<Binary_Exp op='(' typref='2927107167'>
+<Id value='buffer' typref='277897435'/>
+<Id value='oo' typref='2701647786'/>
+</Binary_Exp>
+<Id value='ii' typref='1177923086'/>
+</Binary_Exp>
+</Values>
+</Assignement_Sub>
+</Body>
+</Operation>
+</Operations>
+<TypeInfos>
+<Type id='2701647786'>
+<Id value='INTEGER'/>
+</Type>
+<Type id='3988092277'>
+<Unary_Exp op='POW'>
+<Id value='FIELD'/>
+</Unary_Exp>
+</Type>
+<Type id='3958993484'>
+<Unary_Exp op='POW'>
+<Id value='VALUE'/>
+</Unary_Exp>
+</Type>
+<Type id='277897435'>
+<Unary_Exp op='POW'>
+<Binary_Exp op='*'>
+<Id value='INTEGER'/>
+<Unary_Exp op='POW'>
+<Binary_Exp op='*'>
+<Id value='FIELD'/>
+<Id value='VALUE'/>
+</Binary_Exp>
+</Unary_Exp>
+</Binary_Exp>
+</Unary_Exp>
+</Type>
+<Type id='2927107167'>
+<Unary_Exp op='POW'>
+<Binary_Exp op='*'>
+<Id value='FIELD'/>
+<Id value='VALUE'/>
+</Binary_Exp>
+</Unary_Exp>
+</Type>
+<Type id='2043437594'>
+<Id value='BOOL'/>
+</Type>
+<Type id='3817003670'>
+<Unary_Exp op='POW'>
+<Generic_Type/>
+</Unary_Exp>
+</Type>
+<Type id='2085061915'>
+<Unary_Exp op='POW'>
+<Binary_Exp op='*'>
+<Id value='INTEGER'/>
+<Unary_Exp op='POW'>
+<Unary_Exp op='POW'>
+<Unary_Exp op='POW'>
+<Binary_Exp op='*'>
+<Id value='FIELD'/>
+<Id value='VALUE'/>
+</Binary_Exp>
+</Unary_Exp>
+</Unary_Exp>
+</Unary_Exp>
+</Binary_Exp>
+</Unary_Exp>
+</Type>
+<Type id='4077266551'>
+<Id value='VALUE'/>
+</Type>
+<Type id='1177923086'>
+<Id value='FIELD'/>
+</Type>
+</TypeInfos>
+
+</Machine>

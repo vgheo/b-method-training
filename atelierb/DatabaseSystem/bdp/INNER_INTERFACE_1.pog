@@ -1,0 +1,1546 @@
+<Proof_Obligations>
+<Define merge="=" name="B definitions">
+<Nary_Pred op="&amp;" translate="((NAT) = (((0) .. (2147483647)))) &amp; ((INT) = (((-2147483647) .. (2147483647))))">
+<Exp_Comparison op="=">
+<Id value="NAT"/>
+<Binary_Exp op="..">
+<Integer_Literal value="0"/>
+<Id value="MAXINT"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="=">
+<Id value="INT"/>
+<Binary_Exp op="..">
+<Id value="MININT"/>
+<Id value="MAXINT"/>
+</Binary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Define>
+<Define merge="=" name="ctx"/>
+<Define merge="=" name="seext"/>
+<Define merge="=" name="inv"/>
+<Define merge="=" name="ass"/>
+<Define merge="=" name="mchcst"/>
+<Define merge="=" name="aprp"/>
+<Define merge="=" name="abs"/>
+<Define merge="=" name="imlprp"/>
+<Define merge="=" name="imprp">
+<Set>
+<Id tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:2:1:1" typref="917286058" value="PERSON"/>
+</Set>
+<Exp_Comparison op="=" translate="((max_pers) = (card(PERSON)))">
+<Id tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:5:1:1" typref="2701647786" value="max_pers"/>
+<Unary_Exp op="card" typref="2701647786">
+<Id tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:5:1:2:1" typref="917286058" value="PERSON"/>
+</Unary_Exp>
+</Exp_Comparison>
+</Define>
+<Define merge="=" name="imext">
+<Nary_Pred op="&amp;" translate="person$1 : POW( PERSON) &amp; sex$1 : person$1 +-> SEX &amp; dom(sex$1) = person$1 &amp; ((sex$1) : (((person$1) --> (SEX)))) &amp; status$1 : person$1 +-> STATUS &amp; dom(status$1) = person$1 &amp; ((status$1) : (((person$1) --> (STATUS)))) &amp; husband$1 : ((sex$1)~ )[{woman}] +-> ((sex$1)~ )[{man}] &amp; husband$1~ : ((sex$1)~ )[{man}] +-> ((sex$1)~ )[{woman}] &amp; ((husband$1) : (((((sex$1)~ )[{woman}]) >+> (((sex$1)~ )[{man}])))) &amp; ((wife$1) = ((husband$1)~)) &amp; ((mother$1) : (((person$1) +-> (((dom(((husband$1) \/ (wife$1)))) /\ (((sex$1)~ )[{woman}]))))))">
+<Exp_Comparison op="&lt;:" initialTag="person$1 : POW( PERSON)">
+<Id suffix="1" tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:4:1,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:6:1:1:1," typref="917286058" value="person"/>
+<Id tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:6:1:1:2" typref="917286058" value="PERSON"/>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((sex$1) : (((person$1) --> (SEX))))">
+<Id suffix="1" tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:4:2,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:6:1:2:1," typref="3579877623" value="sex"/>
+<Binary_Exp op="-->" typref="2707207074">
+<Id suffix="1" tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:4:1,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:6:1:2:2:1," typref="917286058" value="person"/>
+<Id tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:6:1:2:2:2" typref="845307297" value="SEX"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((status$1) : (((person$1) --> (STATUS))))">
+<Id suffix="1" tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:4:3,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:6:1:3:1," typref="1872266093" value="status"/>
+<Binary_Exp op="-->" typref="2314681430">
+<Id suffix="1" tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:4:1,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:6:1:3:2:1," typref="917286058" value="person"/>
+<Id tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:6:1:3:2:2" typref="515940807" value="STATUS"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((husband$1) : (((((sex$1)~ )[{woman}]) >+> (((sex$1)~ )[{man}]))))">
+<Id suffix="1" tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:4:5,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:6:1:4:1," typref="2068808656" value="husband"/>
+<Binary_Exp op=">+>" typref="3096305075">
+<Binary_Exp op="[" typref="917286058">
+<Unary_Exp op="~" typref="2094411303">
+<Id suffix="1" tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:4:2,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:6:1:4:2:1:1:1," typref="3579877623" value="sex"/>
+</Unary_Exp>
+<Nary_Exp op="{" typref="845307297">
+<Id tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:6:1:4:2:1:2:1" typref="3153412450" value="woman"/>
+</Nary_Exp>
+</Binary_Exp>
+<Binary_Exp op="[" typref="917286058">
+<Unary_Exp op="~" typref="2094411303">
+<Id suffix="1" tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:4:2,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:6:1:4:2:2:1:1," typref="3579877623" value="sex"/>
+</Unary_Exp>
+<Nary_Exp op="{" typref="845307297">
+<Id tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:6:1:4:2:2:2:1" typref="3153412450" value="man"/>
+</Nary_Exp>
+</Binary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="=" initialTag="((wife$1) = ((husband$1)~))">
+<Id suffix="1" tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:4:6,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:6:1:5:1," typref="2068808656" value="wife"/>
+<Unary_Exp op="~" typref="2068808656">
+<Id suffix="1" tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:4:5,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:6:1:5:2:1," typref="2068808656" value="husband"/>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((mother$1) : (((person$1) +-> (((dom(((husband$1) \/ (wife$1)))) /\ (((sex$1)~ )[{woman}]))))))">
+<Id suffix="1" tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:4:4,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:6:1:6:1," typref="2068808656" value="mother"/>
+<Binary_Exp op="+->" typref="3096305075">
+<Id suffix="1" tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:4:1,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:6:1:6:2:1," typref="917286058" value="person"/>
+<Binary_Exp op="/\" typref="917286058">
+<Unary_Exp op="dom" typref="917286058">
+<Binary_Exp op="\/" typref="2068808656">
+<Id suffix="1" tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:4:5,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:6:1:6:2:2:1:1:1," typref="2068808656" value="husband"/>
+<Id suffix="1" tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:4:6,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:6:1:6:2:2:1:1:2," typref="2068808656" value="wife"/>
+</Binary_Exp>
+</Unary_Exp>
+<Binary_Exp op="[" typref="917286058">
+<Unary_Exp op="~" typref="2094411303">
+<Id suffix="1" tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:4:2,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:6:1:6:2:2:2:1:1," typref="3579877623" value="sex"/>
+</Unary_Exp>
+<Nary_Exp op="{" typref="845307297">
+<Id tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:6:1:6:2:2:2:2:1" typref="3153412450" value="woman"/>
+</Nary_Exp>
+</Binary_Exp>
+</Binary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Define>
+<Proof_Obligation merge="=">
+<Comment>Importation dans une implantation</Comment>
+<Tag>InstanciatedConstraintsLemmas</Tag>
+<Tag>CONSTRAINTS</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+</Proof_Obligation>
+<Proof_Obligation merge="=">
+<Comment>Importation dans une implantation</Comment>
+<Tag>InstanciatedConstraintsLemmas</Tag>
+<Tag>CONSTRAINTS</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+</Proof_Obligation>
+<Proof_Obligation merge="=">
+<Comment>Valuation dans une implantation</Comment>
+<Tag>ValuesLemmas</Tag>
+<Tag>CONSTRAINTS</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="imprp"/>
+</Proof_Obligation>
+<Proof_Obligation merge="=">
+<Comment>Initialisation dans une implantation</Comment>
+<Tag>Initialisation</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+<Definition name="imprp"/>
+<Definition name="imext"/>
+<Definition name="seext"/>
+<Local_Hyp num="1">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Exp_Comparison op="&lt;:" initialTag="person$1 : POW( PERSON)">
+<EmptySet tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:7:1:1:2:1,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:4:1,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:6:1:1:1,,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:4:1,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:7:1:1:1:1," typref="917286058"/>
+<Id tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:6:1:1:2" typref="917286058" value="PERSON"/>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((sex$1) : (((person$1) --> (SEX))))">
+<EmptySet tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:7:1:2:2:1,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:4:2,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:6:1:2:1,,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:4:2,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:7:1:2:1:1," typref="3579877623"/>
+<Binary_Exp op="-->" typref="2707207074">
+<EmptySet tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:7:1:1:2:1,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:4:1,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:6:1:2:2:1,,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:4:1,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:7:1:1:1:1," typref="917286058"/>
+<Id tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:6:1:2:2:2" typref="845307297" value="SEX"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((status$1) : (((person$1) --> (STATUS))))">
+<EmptySet tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:7:1:3:2:1,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:4:3,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:6:1:3:1,,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:4:3,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:7:1:3:1:1," typref="1872266093"/>
+<Binary_Exp op="-->" typref="2314681430">
+<EmptySet tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:7:1:1:2:1,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:4:1,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:6:1:3:2:1,,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:4:1,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:7:1:1:1:1," typref="917286058"/>
+<Id tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:6:1:3:2:2" typref="515940807" value="STATUS"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((husband$1) : (((((sex$1)~ )[{woman}]) >+> (((sex$1)~ )[{man}]))))">
+<EmptySet tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:7:1:5:2:1,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:4:5,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:6:1:4:1,,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:4:5,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:7:1:5:1:1," typref="2068808656"/>
+<Binary_Exp op=">+>" typref="3096305075">
+<Binary_Exp op="[" typref="917286058">
+<Unary_Exp op="~" typref="2094411303">
+<EmptySet tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:7:1:2:2:1,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:4:2,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:6:1:4:2:1:1:1,,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:4:2,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:7:1:2:1:1," typref="3579877623"/>
+</Unary_Exp>
+<Nary_Exp op="{" typref="845307297">
+<Id tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:6:1:4:2:1:2:1" typref="3153412450" value="woman"/>
+</Nary_Exp>
+</Binary_Exp>
+<Binary_Exp op="[" typref="917286058">
+<Unary_Exp op="~" typref="2094411303">
+<EmptySet tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:7:1:2:2:1,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:4:2,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:6:1:4:2:2:1:1,,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:4:2,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:7:1:2:1:1," typref="3579877623"/>
+</Unary_Exp>
+<Nary_Exp op="{" typref="845307297">
+<Id tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:6:1:4:2:2:2:1" typref="3153412450" value="man"/>
+</Nary_Exp>
+</Binary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="=" initialTag="((wife$1) = ((husband$1)~))">
+<EmptySet tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:7:1:6:2:1,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:4:6,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:6:1:5:1,,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:4:6,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:7:1:6:1:1," typref="2068808656"/>
+<Unary_Exp op="~" typref="2068808656">
+<EmptySet tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:7:1:5:2:1,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:4:5,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:6:1:5:2:1,,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:4:5,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:7:1:5:1:1," typref="2068808656"/>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((mother$1) : (((person$1) +-> (((dom(((husband$1) \/ (wife$1)))) /\ (((sex$1)~ )[{woman}]))))))">
+<EmptySet tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:7:1:4:2:1,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:4:4,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:6:1:6:1,,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:4:4,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:7:1:4:1:1," typref="2068808656"/>
+<Binary_Exp op="+->" typref="3096305075">
+<EmptySet tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:7:1:1:2:1,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:4:1,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:6:1:6:2:1,,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:4:1,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:7:1:1:1:1," typref="917286058"/>
+<Binary_Exp op="/\" typref="917286058">
+<Unary_Exp op="dom" typref="917286058">
+<Binary_Exp op="\/" typref="2068808656">
+<EmptySet tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:7:1:5:2:1,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:4:5,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:6:1:6:2:2:1:1:1,,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:4:5,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:7:1:5:1:1," typref="2068808656"/>
+<EmptySet tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:7:1:6:2:1,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:4:6,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:6:1:6:2:2:1:1:2,,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:4:6,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:7:1:6:1:1," typref="2068808656"/>
+</Binary_Exp>
+</Unary_Exp>
+<Binary_Exp op="[" typref="917286058">
+<Unary_Exp op="~" typref="2094411303">
+<EmptySet tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:7:1:2:2:1,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:4:2,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:6:1:6:2:2:2:1:1,,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:4:2,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:7:1:2:1:1," typref="3579877623"/>
+</Unary_Exp>
+<Nary_Exp op="{" typref="845307297">
+<Id tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:6:1:6:2:2:2:2:1" typref="3153412450" value="woman"/>
+</Nary_Exp>
+</Binary_Exp>
+</Binary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Nary_Pred>
+</Local_Hyp>
+</Proof_Obligation>
+<Proof_Obligation merge="=">
+<Comment>Operations dans une implantation / Precondition</Comment>
+<Tag>death_operation</Tag>
+<Tag>PRECONDITION</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+<Definition name="imprp"/>
+<Definition name="imext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;"/>
+</Hypothesis>
+</Proof_Obligation>
+<Proof_Obligation merge="=">
+<Comment>Operations dans une implantation</Comment>
+<Tag>death_operation</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+<Definition name="imprp"/>
+<Definition name="imext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;"/>
+</Hypothesis>
+<Local_Hyp num="1">
+<Nary_Pred op="&amp;"/>
+</Local_Hyp>
+<Local_Hyp num="2">
+<Exp_Comparison op="=">
+<Id suffix="" tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:1:1:1:1:2,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:1:1:1:2:1:2:1:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:1:1:1:1:2" typref="2043437594" value="bb"/>
+<Boolean_Literal tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:1:1:1:2:1:2:1:1:2" typref="2043437594" value="TRUE"/>
+</Exp_Comparison>
+</Local_Hyp>
+<Local_Hyp num="3">
+<Nary_Pred op="&amp;"/>
+</Local_Hyp>
+<Local_Hyp num="4">
+<Unary_Pred op="not">
+<Exp_Comparison op="=">
+<Id suffix="" tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:1:1:1:1:2,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:1:1:1:2:1:2:1:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:1:1:1:1:2" typref="2043437594" value="bb"/>
+<Boolean_Literal tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:1:1:1:2:1:2:1:1:2" typref="2043437594" value="TRUE"/>
+</Exp_Comparison>
+</Unary_Pred>
+</Local_Hyp>
+<Local_Hyp num="5">
+<Exp_Comparison op=":">
+<Id suffix="1" tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:1:2:1:1:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:1:1:1:2:1:1:1:1,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:1:2:1:1:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:1:1:1:2:1:1:1:1,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:1:2:1:1:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:1:1:1:2:1:1:1:1" typref="555065967" value="pp"/>
+<Binary_Exp op="[" typref="917286058">
+<Unary_Exp op="~" typref="400612467">
+<Id suffix="1" tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:4:3,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:1:2:1:1:2:1:1:1,,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:1:1:1:2:1:1:1:1" typref="1872266093" value="status"/>
+</Unary_Exp>
+<Nary_Exp op="{" typref="515940807">
+<Id tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:1:2:1:1:2:1:2:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:1:1:1:2:1:1:1:1" typref="2246778642" value="living"/>
+</Nary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+</Local_Hyp>
+<Local_Hyp num="6">
+<Nary_Pred op="&amp;"/>
+</Local_Hyp>
+<Local_Hyp num="7">
+<Exp_Comparison op="=">
+<Boolean_Literal tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:1:2:1:2:2:2:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:1:1:1:2:1:1:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:1:1:1:1:2,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:1:1:1:2:1:2:1:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:1:1:1:1:2,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:1:1:1:1:2,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:1:1:1:2:1:1:2:2,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:1:1:1:1:2,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:1:2:1:2:2:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:1:1:1:2:1:1:1:1,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:1:1:2,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:1:1:1:2:1:1:1:1" typref="2043437594" value="FALSE"/>
+<Boolean_Literal tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:1:1:1:2:1:2:1:1:2" typref="2043437594" value="TRUE"/>
+</Exp_Comparison>
+</Local_Hyp>
+<Local_Hyp num="8">
+<Nary_Pred op="&amp;"/>
+</Local_Hyp>
+<Local_Hyp num="9">
+<Unary_Pred op="not">
+<Exp_Comparison op="=">
+<Boolean_Literal tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:1:2:1:2:2:2:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:1:1:1:2:1:1:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:1:1:1:1:2,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:1:1:1:2:1:2:1:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:1:1:1:1:2,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:1:1:1:1:2,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:1:1:1:2:1:1:2:2,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:1:1:1:1:2,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:1:2:1:2:2:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:1:1:1:2:1:1:1:1,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:1:1:2,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:1:1:1:2:1:1:1:1" typref="2043437594" value="FALSE"/>
+<Boolean_Literal tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:1:1:1:2:1:2:1:1:2" typref="2043437594" value="TRUE"/>
+</Exp_Comparison>
+</Unary_Pred>
+</Local_Hyp>
+<Local_Hyp num="10">
+<Exp_Comparison op=":">
+<Id suffix="1" tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:1:2:1:2:1:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:1:1:1:2:1:1:1:1,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:1:2:1:2:1:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:1:1:1:2:1:1:1:1,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:1:2:1:2:1:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:1:1:1:2:1:1:1:1" typref="555065967" value="pp"/>
+<Id tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:1:2:1:2:1:2:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:1:1:1:2:1:1:1:1" typref="917286058" value="PERSON"/>
+</Exp_Comparison>
+</Local_Hyp>
+<Local_Hyp num="11">
+<Nary_Pred op="&amp;"/>
+</Local_Hyp>
+<Local_Hyp num="12">
+<Nary_Pred op="&amp;"/>
+</Local_Hyp>
+<Simple_Goal merge="0">
+<Tag>Precondition predicate</Tag>
+<Goal>
+<Binary_Pred op="=>">
+<Nary_Pred op="&amp;">
+<Ref_Hyp num="12"/>
+<Ref_Hyp num="11"/>
+<Ref_Hyp num="10"/>
+<Ref_Hyp num="7"/>
+</Nary_Pred>
+<Exp_Comparison op=":" goalTag="Precondition predicate">
+<Id suffix="1" tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:1:2:1:2:1:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:1:1:1:2:1:1:1:1,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:1:2:1:2:1:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:1:1:1:2:1:1:1:1,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:1:2:1:2:1:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:1:1:1:2:1:1:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:1:1:1:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:1:1:1:2:1:2:2:1:2:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:1:1:1:1:1,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:8:1:2:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:1:1:1:2:1:2:2:1:1:1,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:8:1:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:1:1:1:2:1:2:2:1:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:1:1:1:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:1:1:1:2:1:1:2:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:1:1:1:1:1,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:1:2:1:2:1:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:1:1:1:2:1:1:1:1,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:1:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:1:1:1:2:1:1:1:1" typref="555065967" value="pp"/>
+<Binary_Exp op="[" typref="917286058">
+<Unary_Exp op="~" typref="400612467">
+<Id suffix="1" tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:4:3,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:8:1:2:1:2:1:1,,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:1:1:1:2:1:2:2:1:1:1" typref="1872266093" value="status"/>
+</Unary_Exp>
+<Nary_Exp op="{" typref="515940807">
+<Id tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:8:1:2:1:2:2:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:1:1:1:2:1:2:2:1:1:1" typref="2246778642" value="living"/>
+</Nary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+</Binary_Pred>
+</Goal>
+</Simple_Goal>
+</Proof_Obligation>
+<Proof_Obligation merge="=">
+<Comment>Operations dans une implantation / Precondition</Comment>
+<Tag>marriage_operation</Tag>
+<Tag>PRECONDITION</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+<Definition name="imprp"/>
+<Definition name="imext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;"/>
+</Hypothesis>
+</Proof_Obligation>
+<Proof_Obligation merge="=">
+<Comment>Operations dans une implantation</Comment>
+<Tag>marriage_operation</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+<Definition name="imprp"/>
+<Definition name="imext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;"/>
+</Hypothesis>
+<Local_Hyp num="1">
+<Nary_Pred op="&amp;"/>
+</Local_Hyp>
+<Local_Hyp num="2">
+<Exp_Comparison op="=">
+<Id suffix="" tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:2:1:1:1:3,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:2:1:1:2:1:2:1:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:2:1:1:1:3" typref="2043437594" value="bb"/>
+<Boolean_Literal tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:2:1:1:2:1:2:1:1:2" typref="2043437594" value="TRUE"/>
+</Exp_Comparison>
+</Local_Hyp>
+<Local_Hyp num="3">
+<Nary_Pred op="&amp;"/>
+</Local_Hyp>
+<Local_Hyp num="4">
+<Unary_Pred op="not">
+<Exp_Comparison op="=">
+<Id suffix="" tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:2:1:1:1:3,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:2:1:1:2:1:2:1:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:2:1:1:1:3" typref="2043437594" value="bb"/>
+<Boolean_Literal tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:2:1:1:2:1:2:1:1:2" typref="2043437594" value="TRUE"/>
+</Exp_Comparison>
+</Unary_Pred>
+</Local_Hyp>
+<Local_Hyp num="5">
+<Exp_Comparison op=":">
+<Id suffix="1" tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:4:2:1:1:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:2:1:1:2:1:1:1:1,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:4:2:1:1:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:2:1:1:2:1:1:1:1,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:4:2:1:1:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:2:1:1:2:1:1:1:1" typref="555065967" value="mm"/>
+<Binary_Exp op="/\" typref="917286058">
+<Binary_Exp op="-" typref="917286058">
+<Id suffix="1" tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:4:1,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:4:2:1:1:2:1:1:1,,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:2:1:1:2:1:1:1:1" typref="917286058" value="person"/>
+<Unary_Exp op="dom" typref="917286058">
+<Binary_Exp op="\/" typref="2068808656">
+<Id suffix="1" tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:4:5,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:4:2:1:1:2:1:1:2:1:1,,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:2:1:1:2:1:1:1:1" typref="2068808656" value="husband"/>
+<Id suffix="1" tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:4:6,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:4:2:1:1:2:1:1:2:1:2,,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:2:1:1:2:1:1:1:1" typref="2068808656" value="wife"/>
+</Binary_Exp>
+</Unary_Exp>
+</Binary_Exp>
+<Binary_Exp op="[" typref="917286058">
+<Unary_Exp op="~" typref="2094411303">
+<Id suffix="1" tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:4:2,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:4:2:1:1:2:1:2:1:1,,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:2:1:1:2:1:1:1:1" typref="3579877623" value="sex"/>
+</Unary_Exp>
+<Nary_Exp op="{" typref="845307297">
+<Id tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:4:2:1:1:2:1:2:2:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:2:1:1:2:1:1:1:1" typref="3153412450" value="man"/>
+</Nary_Exp>
+</Binary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+</Local_Hyp>
+<Local_Hyp num="6">
+<Nary_Pred op="&amp;"/>
+</Local_Hyp>
+<Local_Hyp num="7">
+<Exp_Comparison op="=">
+<Boolean_Literal tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:4:2:1:2:3:2:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:2:1:1:2:1:1:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:2:1:1:1:3,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:2:1:1:2:1:2:1:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:2:1:1:1:3,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:2:1:1:1:3,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:2:1:1:2:1:1:2:3,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:2:1:1:1:3,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:4:2:1:2:3:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:2:1:1:2:1:1:1:1,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:4:1:3,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:2:1:1:2:1:1:1:1" typref="2043437594" value="FALSE"/>
+<Boolean_Literal tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:2:1:1:2:1:2:1:1:2" typref="2043437594" value="TRUE"/>
+</Exp_Comparison>
+</Local_Hyp>
+<Local_Hyp num="8">
+<Nary_Pred op="&amp;"/>
+</Local_Hyp>
+<Local_Hyp num="9">
+<Unary_Pred op="not">
+<Exp_Comparison op="=">
+<Boolean_Literal tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:4:2:1:2:3:2:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:2:1:1:2:1:1:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:2:1:1:1:3,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:2:1:1:2:1:2:1:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:2:1:1:1:3,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:2:1:1:1:3,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:2:1:1:2:1:1:2:3,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:2:1:1:1:3,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:4:2:1:2:3:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:2:1:1:2:1:1:1:1,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:4:1:3,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:2:1:1:2:1:1:1:1" typref="2043437594" value="FALSE"/>
+<Boolean_Literal tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:2:1:1:2:1:2:1:1:2" typref="2043437594" value="TRUE"/>
+</Exp_Comparison>
+</Unary_Pred>
+</Local_Hyp>
+<Local_Hyp num="10">
+<Exp_Comparison op=":">
+<Id suffix="1" tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:4:2:1:2:2:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:2:1:1:2:1:1:1:1,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:4:2:1:2:2:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:2:1:1:2:1:1:1:1,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:4:2:1:2:2:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:2:1:1:2:1:1:1:1" typref="555065967" value="ww"/>
+<Id tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:4:2:1:2:2:2:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:2:1:1:2:1:1:1:1" typref="917286058" value="PERSON"/>
+</Exp_Comparison>
+</Local_Hyp>
+<Local_Hyp num="11">
+<Exp_Comparison op=":">
+<Id suffix="1" tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:4:2:1:2:1:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:2:1:1:2:1:1:1:1,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:4:2:1:2:1:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:2:1:1:2:1:1:1:1,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:4:2:1:2:1:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:2:1:1:2:1:1:1:1" typref="555065967" value="mm"/>
+<Id tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:4:2:1:2:1:2:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:2:1:1:2:1:1:1:1" typref="917286058" value="PERSON"/>
+</Exp_Comparison>
+</Local_Hyp>
+<Local_Hyp num="12">
+<Nary_Pred op="&amp;"/>
+</Local_Hyp>
+<Local_Hyp num="13">
+<Nary_Pred op="&amp;"/>
+</Local_Hyp>
+<Simple_Goal merge="0">
+<Tag>Precondition predicate</Tag>
+<Goal>
+<Binary_Pred op="=>">
+<Nary_Pred op="&amp;">
+<Ref_Hyp num="13"/>
+<Ref_Hyp num="12"/>
+<Ref_Hyp num="5"/>
+<Ref_Hyp num="2"/>
+</Nary_Pred>
+<Exp_Comparison op=":" goalTag="Precondition predicate">
+<Id suffix="" tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:2:1:1:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:2:1:1:2:1:2:2:1:2:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:2:1:1:1:1,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:8:2:2:1:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:2:1:1:2:1:2:2:1:1:1,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:8:2:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:2:1:1:2:1:2:2:1:1:1" typref="555065967" value="ww"/>
+<Binary_Exp op="/\" typref="917286058">
+<Binary_Exp op="-" typref="917286058">
+<Id suffix="1" tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:4:1,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:8:2:2:1:1:2:1:1,,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:2:1:1:2:1:2:2:1:1:1" typref="917286058" value="person"/>
+<Unary_Exp op="dom" typref="917286058">
+<Binary_Exp op="\/" typref="2068808656">
+<Id suffix="1" tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:4:5,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:8:2:2:1:1:2:1:2:1:1,,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:2:1:1:2:1:2:2:1:1:1" typref="2068808656" value="husband"/>
+<Id suffix="1" tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:4:6,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:8:2:2:1:1:2:1:2:1:2,,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:2:1:1:2:1:2:2:1:1:1" typref="2068808656" value="wife"/>
+</Binary_Exp>
+</Unary_Exp>
+</Binary_Exp>
+<Binary_Exp op="[" typref="917286058">
+<Unary_Exp op="~" typref="2094411303">
+<Id suffix="1" tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:4:2,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:8:2:2:1:1:2:2:1:1,,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:2:1:1:2:1:2:2:1:1:1" typref="3579877623" value="sex"/>
+</Unary_Exp>
+<Nary_Exp op="{" typref="845307297">
+<Id tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:8:2:2:1:1:2:2:2:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:2:1:1:2:1:2:2:1:1:1" typref="3153412450" value="woman"/>
+</Nary_Exp>
+</Binary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+</Binary_Pred>
+</Goal>
+</Simple_Goal>
+<Simple_Goal merge="1">
+<Tag>Precondition predicate</Tag>
+<Goal>
+<Binary_Pred op="=>">
+<Nary_Pred op="&amp;">
+<Ref_Hyp num="13"/>
+<Ref_Hyp num="12"/>
+<Ref_Hyp num="11"/>
+<Ref_Hyp num="10"/>
+<Ref_Hyp num="7"/>
+</Nary_Pred>
+<Exp_Comparison op=":" goalTag="Precondition predicate">
+<Id suffix="1" tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:4:2:1:2:2:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:2:1:1:2:1:1:1:1,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:4:2:1:2:2:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:2:1:1:2:1:1:1:1,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:4:2:1:2:2:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:2:1:1:2:1:1:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:2:1:1:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:2:1:1:2:1:2:2:1:2:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:2:1:1:1:1,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:8:2:2:1:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:2:1:1:2:1:2:2:1:1:1,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:8:2:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:2:1:1:2:1:2:2:1:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:2:1:1:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:2:1:1:2:1:1:2:2,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:2:1:1:1:1,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:4:2:1:2:2:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:2:1:1:2:1:1:1:1,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:4:1:2,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:2:1:1:2:1:1:1:1" typref="555065967" value="ww"/>
+<Binary_Exp op="/\" typref="917286058">
+<Binary_Exp op="-" typref="917286058">
+<Id suffix="1" tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:4:1,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:8:2:2:1:1:2:1:1,,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:2:1:1:2:1:2:2:1:1:1" typref="917286058" value="person"/>
+<Unary_Exp op="dom" typref="917286058">
+<Binary_Exp op="\/" typref="2068808656">
+<Id suffix="1" tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:4:5,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:8:2:2:1:1:2:1:2:1:1,,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:2:1:1:2:1:2:2:1:1:1" typref="2068808656" value="husband"/>
+<Id suffix="1" tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:4:6,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:8:2:2:1:1:2:1:2:1:2,,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:2:1:1:2:1:2:2:1:1:1" typref="2068808656" value="wife"/>
+</Binary_Exp>
+</Unary_Exp>
+</Binary_Exp>
+<Binary_Exp op="[" typref="917286058">
+<Unary_Exp op="~" typref="2094411303">
+<Id suffix="1" tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:4:2,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:8:2:2:1:1:2:2:1:1,,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:2:1:1:2:1:2:2:1:1:1" typref="3579877623" value="sex"/>
+</Unary_Exp>
+<Nary_Exp op="{" typref="845307297">
+<Id tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:8:2:2:1:1:2:2:2:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:2:1:1:2:1:2:2:1:1:1" typref="3153412450" value="woman"/>
+</Nary_Exp>
+</Binary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+</Binary_Pred>
+</Goal>
+</Simple_Goal>
+<Simple_Goal merge="2">
+<Tag>Precondition predicate</Tag>
+<Goal>
+<Binary_Pred op="=>">
+<Nary_Pred op="&amp;">
+<Ref_Hyp num="13"/>
+<Ref_Hyp num="12"/>
+<Ref_Hyp num="11"/>
+<Ref_Hyp num="10"/>
+<Ref_Hyp num="7"/>
+</Nary_Pred>
+<Exp_Comparison op=":" goalTag="Precondition predicate">
+<Id suffix="1" tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:4:2:1:2:1:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:2:1:1:2:1:1:1:1,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:4:2:1:2:1:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:2:1:1:2:1:1:1:1,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:4:2:1:2:1:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:2:1:1:2:1:1:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:2:1:1:1:2,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:2:1:1:2:1:2:2:1:2:2,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:2:1:1:1:2,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:8:2:2:1:2:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:2:1:1:2:1:2:2:1:1:1,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:8:2:1:2,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:2:1:1:2:1:2:2:1:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:2:1:1:1:2,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:2:1:1:2:1:1:2:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:2:1:1:1:2,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:4:2:1:2:1:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:2:1:1:2:1:1:1:1,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:4:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:2:1:1:2:1:1:1:1" typref="555065967" value="mm"/>
+<Binary_Exp op="/\" typref="917286058">
+<Binary_Exp op="-" typref="917286058">
+<Id suffix="1" tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:4:1,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:8:2:2:1:2:2:1:1,,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:2:1:1:2:1:2:2:1:1:1" typref="917286058" value="person"/>
+<Unary_Exp op="dom" typref="917286058">
+<Binary_Exp op="\/" typref="2068808656">
+<Id suffix="1" tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:4:5,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:8:2:2:1:2:2:1:2:1:1,,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:2:1:1:2:1:2:2:1:1:1" typref="2068808656" value="husband"/>
+<Id suffix="1" tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:4:6,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:8:2:2:1:2:2:1:2:1:2,,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:2:1:1:2:1:2:2:1:1:1" typref="2068808656" value="wife"/>
+</Binary_Exp>
+</Unary_Exp>
+</Binary_Exp>
+<Binary_Exp op="[" typref="917286058">
+<Unary_Exp op="~" typref="2094411303">
+<Id suffix="1" tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:4:2,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:8:2:2:1:2:2:2:1:1,,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:2:1:1:2:1:2:2:1:1:1" typref="3579877623" value="sex"/>
+</Unary_Exp>
+<Nary_Exp op="{" typref="845307297">
+<Id tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:8:2:2:1:2:2:2:2:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:2:1:1:2:1:2:2:1:1:1" typref="3153412450" value="man"/>
+</Nary_Exp>
+</Binary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+</Binary_Pred>
+</Goal>
+</Simple_Goal>
+</Proof_Obligation>
+<Proof_Obligation merge="=">
+<Comment>Operations dans une implantation / Precondition</Comment>
+<Tag>first_operation</Tag>
+<Tag>PRECONDITION</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+<Definition name="imprp"/>
+<Definition name="imext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;"/>
+</Hypothesis>
+</Proof_Obligation>
+<Proof_Obligation merge="=">
+<Comment>Operations dans une implantation</Comment>
+<Tag>first_operation</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+<Definition name="imprp"/>
+<Definition name="imext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;"/>
+</Hypothesis>
+<Local_Hyp num="1">
+<Nary_Pred op="&amp;"/>
+</Local_Hyp>
+<Local_Hyp num="2">
+<Exp_Comparison op=":">
+<Id suffix="" tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:8:3:4:1:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:3:1:1:2:1:2:2:1:1:1,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:8:3:4:1:2:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:3:1:1:2:1:2:2:1:1:1,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:8:3:4:1:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:3:1:1:2:1:2:2:1:1:1" typref="555065967" value="angel"/>
+<Binary_Exp op="-" typref="917286058">
+<Id tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:8:3:4:1:2:1:2:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:3:1:1:2:1:2:2:1:1:1" typref="917286058" value="PERSON"/>
+<Id suffix="1" tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:4:1,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:8:3:4:1:2:1:2:2,,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:3:1:1:2:1:2:2:1:1:1" typref="917286058" value="person"/>
+</Binary_Exp>
+</Exp_Comparison>
+</Local_Hyp>
+<Local_Hyp num="3">
+<Exp_Comparison op="=">
+<Boolean_Exp tag=",A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:3:1:1:1:2,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:3:1:1:2:1:2:1:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:3:1:1:1:2,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:3:1:1:1:2,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:3:1:1:2:1:1:2:2,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:3:1:1:1:2,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:2:2:1:2:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:3:1:1:2:1:1:1:1,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:2:1:2,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:3:1:1:2:1:1:1:1" typref="2043437594">
+<Exp_Comparison op="/=">
+<Binary_Exp op="-" typref="917286058">
+<Id tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:2:2:1:2:2:1:1:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:3:1:1:2:1:1:1:1" typref="917286058" value="PERSON"/>
+<Id suffix="1" tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:4:1,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:2:2:1:2:2:1:1:1:2,,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:3:1:1:2:1:1:1:1" typref="917286058" value="person"/>
+</Binary_Exp>
+<EmptySet tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:2:2:1:2:2:1:1:2,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:3:1:1:2:1:1:1:1" typref="917286058"/>
+</Exp_Comparison>
+</Boolean_Exp>
+<Boolean_Literal tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:3:1:1:2:1:2:1:1:2" typref="2043437594" value="TRUE"/>
+</Exp_Comparison>
+</Local_Hyp>
+<Local_Hyp num="4">
+<Nary_Pred op="&amp;"/>
+</Local_Hyp>
+<Local_Hyp num="5">
+<Unary_Pred op="not">
+<Exp_Comparison op="=">
+<Boolean_Exp tag=",A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:3:1:1:1:2,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:3:1:1:2:1:2:1:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:3:1:1:1:2,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:3:1:1:1:2,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:3:1:1:2:1:1:2:2,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:3:1:1:1:2,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:2:2:1:2:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:3:1:1:2:1:1:1:1,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:2:1:2,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:3:1:1:2:1:1:1:1" typref="2043437594">
+<Exp_Comparison op="/=">
+<Binary_Exp op="-" typref="917286058">
+<Id tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:2:2:1:2:2:1:1:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:3:1:1:2:1:1:1:1" typref="917286058" value="PERSON"/>
+<Id suffix="1" tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:4:1,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:2:2:1:2:2:1:1:1:2,,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:3:1:1:2:1:1:1:1" typref="917286058" value="person"/>
+</Binary_Exp>
+<EmptySet tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:2:2:1:2:2:1:1:2,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:3:1:1:2:1:1:1:1" typref="917286058"/>
+</Exp_Comparison>
+</Boolean_Exp>
+<Boolean_Literal tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:3:1:1:2:1:2:1:1:2" typref="2043437594" value="TRUE"/>
+</Exp_Comparison>
+</Unary_Pred>
+</Local_Hyp>
+<Local_Hyp num="6">
+<Exp_Comparison op=":">
+<Id suffix="1" tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:2:2:1:1:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:3:1:1:2:1:1:1:1,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:2:2:1:1:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:3:1:1:2:1:1:1:1,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:2:2:1:1:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:3:1:1:2:1:1:1:1" typref="3153412450" value="ss"/>
+<Id tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:2:2:1:1:2:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:3:1:1:2:1:1:1:1" typref="845307297" value="SEX"/>
+</Exp_Comparison>
+</Local_Hyp>
+<Local_Hyp num="7">
+<Nary_Pred op="&amp;"/>
+</Local_Hyp>
+<Local_Hyp num="8">
+<Nary_Pred op="&amp;"/>
+</Local_Hyp>
+</Proof_Obligation>
+<Proof_Obligation merge="=">
+<Comment>Operations dans une implantation / Precondition</Comment>
+<Tag>birth_operation</Tag>
+<Tag>PRECONDITION</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+<Definition name="imprp"/>
+<Definition name="imext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;"/>
+</Hypothesis>
+</Proof_Obligation>
+<Proof_Obligation merge="=">
+<Comment>Operations dans une implantation</Comment>
+<Tag>birth_operation</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+<Definition name="imprp"/>
+<Definition name="imext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;"/>
+</Hypothesis>
+<Local_Hyp num="1">
+<Nary_Pred op="&amp;"/>
+</Local_Hyp>
+<Local_Hyp num="2">
+<Exp_Comparison op=":">
+<Id suffix="" tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:8:4:4:1:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:4:1:1:2:1:2:2:1:1:1,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:8:4:4:1:2:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:4:1:1:2:1:2:2:1:1:1,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:8:4:4:1:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:4:1:1:2:1:2:2:1:1:1" typref="555065967" value="angel"/>
+<Binary_Exp op="-" typref="917286058">
+<Id tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:8:4:4:1:2:1:2:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:4:1:1:2:1:2:2:1:1:1" typref="917286058" value="PERSON"/>
+<Id suffix="1" tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:4:1,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:8:4:4:1:2:1:2:2,,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:4:1:1:2:1:2:2:1:1:1" typref="917286058" value="person"/>
+</Binary_Exp>
+</Exp_Comparison>
+</Local_Hyp>
+<Local_Hyp num="3">
+<Exp_Comparison op="=">
+<Id suffix="" tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:4:1:1:1:3,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:4:1:1:2:1:2:1:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:4:1:1:1:3" typref="2043437594" value="bb"/>
+<Boolean_Literal tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:4:1:1:2:1:2:1:1:2" typref="2043437594" value="TRUE"/>
+</Exp_Comparison>
+</Local_Hyp>
+<Local_Hyp num="4">
+<Nary_Pred op="&amp;"/>
+</Local_Hyp>
+<Local_Hyp num="5">
+<Unary_Pred op="not">
+<Exp_Comparison op="=">
+<Id suffix="" tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:4:1:1:1:3,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:4:1:1:2:1:2:1:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:4:1:1:1:3" typref="2043437594" value="bb"/>
+<Boolean_Literal tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:4:1:1:2:1:2:1:1:2" typref="2043437594" value="TRUE"/>
+</Exp_Comparison>
+</Unary_Pred>
+</Local_Hyp>
+<Local_Hyp num="6">
+<Exp_Comparison op=":">
+<Id suffix="1" tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:5:2:1:1:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:4:1:1:2:1:1:1:1,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:5:2:1:1:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:4:1:1:2:1:1:1:1,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:5:2:1:1:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:4:1:1:2:1:1:1:1" typref="3153412450" value="ss"/>
+<Id tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:5:2:1:1:2:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:4:1:1:2:1:1:1:1" typref="845307297" value="SEX"/>
+</Exp_Comparison>
+</Local_Hyp>
+<Local_Hyp num="7">
+<Nary_Pred op="&amp;"/>
+</Local_Hyp>
+<Local_Hyp num="8">
+<Exp_Comparison op=":">
+<Id suffix="" tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:8:4:4:1:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:4:1:1:2:1:2:2:1:1:1,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:8:4:4:1:2:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:4:1:1:2:1:2:2:1:1:1,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:8:4:4:1:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:4:1:1:2:1:2:2:1:1:1" typref="555065967" value="angel"/>
+<Binary_Exp op="-" typref="917286058">
+<Id tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:8:4:4:1:2:1:2:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:4:1:1:2:1:2:2:1:1:1" typref="917286058" value="PERSON"/>
+<Id suffix="1" tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:4:1,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:8:4:4:1:2:1:2:2,,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:4:1:1:2:1:2:2:1:1:1" typref="917286058" value="person"/>
+</Binary_Exp>
+</Exp_Comparison>
+</Local_Hyp>
+<Local_Hyp num="9">
+<Exp_Comparison op="=">
+<Boolean_Literal tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:5:2:1:2:3:2:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:4:1:1:2:1:1:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:4:1:1:1:3,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:4:1:1:2:1:2:1:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:4:1:1:1:3,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:4:1:1:1:3,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:4:1:1:2:1:1:2:3,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:4:1:1:1:3,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:5:2:1:2:3:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:4:1:1:2:1:1:1:1,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:5:1:3,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:4:1:1:2:1:1:1:1" typref="2043437594" value="FALSE"/>
+<Boolean_Literal tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:4:1:1:2:1:2:1:1:2" typref="2043437594" value="TRUE"/>
+</Exp_Comparison>
+</Local_Hyp>
+<Local_Hyp num="10">
+<Nary_Pred op="&amp;"/>
+</Local_Hyp>
+<Local_Hyp num="11">
+<Unary_Pred op="not">
+<Exp_Comparison op="=">
+<Boolean_Literal tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:5:2:1:2:3:2:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:4:1:1:2:1:1:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:4:1:1:1:3,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:4:1:1:2:1:2:1:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:4:1:1:1:3,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:4:1:1:1:3,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:4:1:1:2:1:1:2:3,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:4:1:1:1:3,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:5:2:1:2:3:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:4:1:1:2:1:1:1:1,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:5:1:3,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:4:1:1:2:1:1:1:1" typref="2043437594" value="FALSE"/>
+<Boolean_Literal tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:4:1:1:2:1:2:1:1:2" typref="2043437594" value="TRUE"/>
+</Exp_Comparison>
+</Unary_Pred>
+</Local_Hyp>
+<Local_Hyp num="12">
+<Exp_Comparison op=":">
+<Id suffix="1" tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:5:2:1:2:2:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:4:1:1:2:1:1:1:1,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:5:2:1:2:2:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:4:1:1:2:1:1:1:1,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:5:2:1:2:2:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:4:1:1:2:1:1:1:1" typref="555065967" value="ww"/>
+<Id tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:5:2:1:2:2:2:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:4:1:1:2:1:1:1:1" typref="917286058" value="PERSON"/>
+</Exp_Comparison>
+</Local_Hyp>
+<Local_Hyp num="13">
+<Exp_Comparison op=":">
+<Id suffix="1" tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:5:2:1:2:1:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:4:1:1:2:1:1:1:1,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:5:2:1:2:1:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:4:1:1:2:1:1:1:1,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:5:2:1:2:1:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:4:1:1:2:1:1:1:1" typref="3153412450" value="ss"/>
+<Id tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:5:2:1:2:1:2:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:4:1:1:2:1:1:1:1" typref="845307297" value="SEX"/>
+</Exp_Comparison>
+</Local_Hyp>
+<Local_Hyp num="14">
+<Nary_Pred op="&amp;"/>
+</Local_Hyp>
+<Local_Hyp num="15">
+<Nary_Pred op="&amp;"/>
+</Local_Hyp>
+<Simple_Goal merge="0">
+<Tag>Precondition predicate</Tag>
+<Goal>
+<Binary_Pred op="=>">
+<Nary_Pred op="&amp;">
+<Ref_Hyp num="15"/>
+<Ref_Hyp num="14"/>
+<Ref_Hyp num="6"/>
+<Ref_Hyp num="3"/>
+</Nary_Pred>
+<Exp_Comparison op="/=" goalTag="Precondition predicate">
+<Binary_Exp op="-" typref="917286058">
+<Id tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:8:4:3:1:1:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:4:1:1:2:1:2:2:1:1:1" typref="917286058" value="PERSON"/>
+<Id suffix="1" tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:4:1,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:8:4:3:1:1:1:2,,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:4:1:1:2:1:2:2:1:1:1" typref="917286058" value="person"/>
+</Binary_Exp>
+<EmptySet tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:8:4:3:1:1:2,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:4:1:1:2:1:2:2:1:1:1" typref="917286058"/>
+</Exp_Comparison>
+</Binary_Pred>
+</Goal>
+</Simple_Goal>
+<Simple_Goal merge="1">
+<Tag>Precondition predicate</Tag>
+<Goal>
+<Binary_Pred op="=>">
+<Nary_Pred op="&amp;">
+<Ref_Hyp num="15"/>
+<Ref_Hyp num="14"/>
+<Ref_Hyp num="6"/>
+<Ref_Hyp num="3"/>
+</Nary_Pred>
+<Exp_Comparison op=":" goalTag="Precondition predicate">
+<Id suffix="" tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:4:1:1:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:4:1:1:2:1:2:2:1:2:2,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:4:1:1:1:1,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:8:4:3:1:3:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:4:1:1:2:1:2:2:1:1:1,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:8:4:2:2,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:4:1:1:2:1:2:2:1:1:1" typref="555065967" value="ww"/>
+<Binary_Exp op="/\" typref="917286058">
+<Unary_Exp op="dom" typref="917286058">
+<Binary_Exp op="\/" typref="2068808656">
+<Id suffix="1" tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:4:5,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:8:4:3:1:3:2:1:1:1,,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:4:1:1:2:1:2:2:1:1:1" typref="2068808656" value="husband"/>
+<Id suffix="1" tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:4:6,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:8:4:3:1:3:2:1:1:2,,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:4:1:1:2:1:2:2:1:1:1" typref="2068808656" value="wife"/>
+</Binary_Exp>
+</Unary_Exp>
+<Binary_Exp op="[" typref="917286058">
+<Unary_Exp op="~" typref="2094411303">
+<Id suffix="1" tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:4:2,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:8:4:3:1:3:2:2:1:1,,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:4:1:1:2:1:2:2:1:1:1" typref="3579877623" value="sex"/>
+</Unary_Exp>
+<Nary_Exp op="{" typref="845307297">
+<Id tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:8:4:3:1:3:2:2:2:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:4:1:1:2:1:2:2:1:1:1" typref="3153412450" value="woman"/>
+</Nary_Exp>
+</Binary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+</Binary_Pred>
+</Goal>
+</Simple_Goal>
+<Simple_Goal merge="0">
+<Tag>Precondition predicate</Tag>
+<Goal>
+<Binary_Pred op="=>">
+<Nary_Pred op="&amp;">
+<Ref_Hyp num="15"/>
+<Ref_Hyp num="14"/>
+<Ref_Hyp num="13"/>
+<Ref_Hyp num="12"/>
+<Ref_Hyp num="9"/>
+</Nary_Pred>
+<Exp_Comparison op="/=" goalTag="Precondition predicate">
+<Binary_Exp op="-" typref="917286058">
+<Id tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:8:4:3:1:1:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:4:1:1:2:1:2:2:1:1:1" typref="917286058" value="PERSON"/>
+<Id suffix="1" tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:4:1,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:8:4:3:1:1:1:2,,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:4:1:1:2:1:2:2:1:1:1" typref="917286058" value="person"/>
+</Binary_Exp>
+<EmptySet tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:8:4:3:1:1:2,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:4:1:1:2:1:2:2:1:1:1" typref="917286058"/>
+</Exp_Comparison>
+</Binary_Pred>
+</Goal>
+</Simple_Goal>
+<Simple_Goal merge="3">
+<Tag>Precondition predicate</Tag>
+<Goal>
+<Binary_Pred op="=>">
+<Nary_Pred op="&amp;">
+<Ref_Hyp num="15"/>
+<Ref_Hyp num="14"/>
+<Ref_Hyp num="13"/>
+<Ref_Hyp num="12"/>
+<Ref_Hyp num="9"/>
+</Nary_Pred>
+<Exp_Comparison op=":" goalTag="Precondition predicate">
+<Id suffix="1" tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:5:2:1:2:2:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:4:1:1:2:1:1:1:1,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:5:2:1:2:2:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:4:1:1:2:1:1:1:1,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:5:2:1:2:2:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:4:1:1:2:1:1:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:4:1:1:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:4:1:1:2:1:2:2:1:2:2,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:4:1:1:1:1,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:8:4:3:1:3:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:4:1:1:2:1:2:2:1:1:1,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:8:4:2:2,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:4:1:1:2:1:2:2:1:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:4:1:1:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:4:1:1:2:1:1:2:2,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:4:1:1:1:1,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:5:2:1:2:2:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:4:1:1:2:1:1:1:1,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:5:1:2,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:4:1:1:2:1:1:1:1" typref="555065967" value="ww"/>
+<Binary_Exp op="/\" typref="917286058">
+<Unary_Exp op="dom" typref="917286058">
+<Binary_Exp op="\/" typref="2068808656">
+<Id suffix="1" tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:4:5,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:8:4:3:1:3:2:1:1:1,,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:4:1:1:2:1:2:2:1:1:1" typref="2068808656" value="husband"/>
+<Id suffix="1" tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:4:6,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:8:4:3:1:3:2:1:1:2,,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:4:1:1:2:1:2:2:1:1:1" typref="2068808656" value="wife"/>
+</Binary_Exp>
+</Unary_Exp>
+<Binary_Exp op="[" typref="917286058">
+<Unary_Exp op="~" typref="2094411303">
+<Id suffix="1" tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:4:2,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:8:4:3:1:3:2:2:1:1,,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:4:1:1:2:1:2:2:1:1:1" typref="3579877623" value="sex"/>
+</Unary_Exp>
+<Nary_Exp op="{" typref="845307297">
+<Id tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:8:4:3:1:3:2:2:2:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:4:1:1:2:1:2:2:1:1:1" typref="3153412450" value="woman"/>
+</Nary_Exp>
+</Binary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+</Binary_Pred>
+</Goal>
+</Simple_Goal>
+</Proof_Obligation>
+<Proof_Obligation merge="=">
+<Comment>Operations dans une implantation / Precondition</Comment>
+<Tag>print_operation</Tag>
+<Tag>PRECONDITION</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+<Definition name="imprp"/>
+<Definition name="imext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;"/>
+</Hypothesis>
+</Proof_Obligation>
+<Proof_Obligation merge="=">
+<Comment>Operations dans une implantation</Comment>
+<Tag>print_operation</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+<Definition name="imprp"/>
+<Definition name="imext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;"/>
+</Hypothesis>
+<Local_Hyp num="1">
+<Nary_Pred op="&amp;"/>
+</Local_Hyp>
+<Local_Hyp num="2">
+<Nary_Pred op="&amp;"/>
+</Local_Hyp>
+</Proof_Obligation>
+<Proof_Obligation merge="=">
+<Tag>WellDefinednessProperties</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imprp"/>
+<Hypothesis/>
+</Proof_Obligation>
+<Proof_Obligation merge="=">
+<Tag>WellDefinednessInvariant</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+<Definition name="imprp"/>
+<Definition name="imext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+</Proof_Obligation>
+<Proof_Obligation merge="=">
+<Tag>WellDefinednessAssertions</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+<Definition name="imprp"/>
+<Definition name="imext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+</Proof_Obligation>
+<Proof_Obligation merge="=">
+<Tag>WellDefinednessInitialisation</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+<Definition name="imprp"/>
+<Definition name="imext"/>
+<Definition name="seext"/>
+</Proof_Obligation>
+<Proof_Obligation merge="=">
+<Comment>Operations dans une implementation</Comment>
+<Tag>WellDefinedness_death_operation</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+<Definition name="imprp"/>
+<Definition name="imext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;"/>
+</Hypothesis>
+<Local_Hyp num="1">
+<Exp_Comparison op="=">
+<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:1:1:1:2:1:2:1:1:1" typref="2043437594" value="bb"/>
+<Boolean_Literal tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:1:1:1:2:1:2:1:1:2" typref="2043437594" value="TRUE"/>
+</Exp_Comparison>
+</Local_Hyp>
+<Local_Hyp num="2">
+<Unary_Pred op="not">
+<Exp_Comparison op="=">
+<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:1:1:1:2:1:2:1:1:1" typref="2043437594" value="bb"/>
+<Boolean_Literal tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:1:1:1:2:1:2:1:1:2" typref="2043437594" value="TRUE"/>
+</Exp_Comparison>
+</Unary_Pred>
+</Local_Hyp>
+<Local_Hyp num="3">
+<Exp_Comparison op=":">
+<Id suffix="1" tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:1:2:1:1:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:1:1:1:2:1:1:1:1,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:1:2:1:1:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:1:1:1:2:1:1:1:1,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:1:2:1:1:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:1:1:1:2:1:1:1:1" typref="555065967" value="pp"/>
+<Binary_Exp op="[" typref="917286058">
+<Unary_Exp op="~" typref="400612467">
+<Id suffix="1" tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:4:3,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:1:2:1:1:2:1:1:1,,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:1:1:1:2:1:1:1:1" typref="1872266093" value="status"/>
+</Unary_Exp>
+<Nary_Exp op="{" typref="515940807">
+<Id tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:1:2:1:1:2:1:2:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:1:1:1:2:1:1:1:1" typref="2246778642" value="living"/>
+</Nary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+</Local_Hyp>
+<Local_Hyp num="4">
+<Exp_Comparison op="=">
+<Boolean_Literal tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:1:2:1:2:2:2:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:1:1:1:2:1:1:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:1:1:1:2:1:2:1:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:1:1:1:2:1:1:2:2,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:1:2:1:2:2:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:1:1:1:2:1:1:1:1,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:1:1:2,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:1:1:1:2:1:1:1:1" typref="2043437594" value="FALSE"/>
+<Boolean_Literal tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:1:1:1:2:1:2:1:1:2" typref="2043437594" value="TRUE"/>
+</Exp_Comparison>
+</Local_Hyp>
+<Local_Hyp num="5">
+<Unary_Pred op="not">
+<Exp_Comparison op="=">
+<Boolean_Literal tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:1:2:1:2:2:2:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:1:1:1:2:1:1:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:1:1:1:2:1:2:1:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:1:1:1:2:1:1:2:2,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:1:2:1:2:2:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:1:1:1:2:1:1:1:1,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:1:1:2,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:1:1:1:2:1:1:1:1" typref="2043437594" value="FALSE"/>
+<Boolean_Literal tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:1:1:1:2:1:2:1:1:2" typref="2043437594" value="TRUE"/>
+</Exp_Comparison>
+</Unary_Pred>
+</Local_Hyp>
+<Local_Hyp num="6">
+<Exp_Comparison op=":">
+<Id suffix="1" tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:1:2:1:2:1:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:1:1:1:2:1:1:1:1,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:1:2:1:2:1:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:1:1:1:2:1:1:1:1,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:1:2:1:2:1:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:1:1:1:2:1:1:1:1" typref="555065967" value="pp"/>
+<Id tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:1:2:1:2:1:2:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:1:1:1:2:1:1:1:1" typref="917286058" value="PERSON"/>
+</Exp_Comparison>
+</Local_Hyp>
+</Proof_Obligation>
+<Proof_Obligation merge="=">
+<Comment>Operations dans une implementation</Comment>
+<Tag>WellDefinedness_marriage_operation</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+<Definition name="imprp"/>
+<Definition name="imext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;"/>
+</Hypothesis>
+<Local_Hyp num="1">
+<Exp_Comparison op=":">
+<Id suffix="1" tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:4:2:1:1:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:2:1:1:2:1:1:1:1,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:4:2:1:1:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:2:1:1:2:1:1:1:1,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:4:2:1:1:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:2:1:1:2:1:1:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:2:1:1:2:1:2:2:1:2:2,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:8:2:2:1:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:2:1:1:2:1:2:2:1:1:1,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:8:2:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:2:1:1:2:1:2:2:1:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:2:1:1:2:1:1:2:1,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:4:2:1:1:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:2:1:1:2:1:1:1:1,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:4:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:2:1:1:2:1:1:1:1" typref="555065967" value="mm"/>
+<Binary_Exp op="/\" typref="917286058">
+<Binary_Exp op="-" typref="917286058">
+<Id suffix="1" tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:4:1,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:8:2:2:1:1:2:1:1,,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:2:1:1:2:1:2:2:1:1:1" typref="917286058" value="person"/>
+<Unary_Exp op="dom" typref="917286058">
+<Binary_Exp op="\/" typref="2068808656">
+<Id suffix="1" tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:4:5,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:8:2:2:1:1:2:1:2:1:1,,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:2:1:1:2:1:2:2:1:1:1" typref="2068808656" value="husband"/>
+<Id suffix="1" tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:4:6,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:8:2:2:1:1:2:1:2:1:2,,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:2:1:1:2:1:2:2:1:1:1" typref="2068808656" value="wife"/>
+</Binary_Exp>
+</Unary_Exp>
+</Binary_Exp>
+<Binary_Exp op="[" typref="917286058">
+<Unary_Exp op="~" typref="2094411303">
+<Id suffix="1" tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:4:2,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:8:2:2:1:1:2:2:1:1,,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:2:1:1:2:1:2:2:1:1:1" typref="3579877623" value="sex"/>
+</Unary_Exp>
+<Nary_Exp op="{" typref="845307297">
+<Id tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:8:2:2:1:1:2:2:2:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:2:1:1:2:1:2:2:1:1:1" typref="3153412450" value="woman"/>
+</Nary_Exp>
+</Binary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+</Local_Hyp>
+<Local_Hyp num="2">
+<Exp_Comparison op="=">
+<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:2:1:1:2:1:2:1:1:1" typref="2043437594" value="bb"/>
+<Boolean_Literal tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:2:1:1:2:1:2:1:1:2" typref="2043437594" value="TRUE"/>
+</Exp_Comparison>
+</Local_Hyp>
+<Local_Hyp num="3">
+<Unary_Pred op="not">
+<Exp_Comparison op="=">
+<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:2:1:1:2:1:2:1:1:1" typref="2043437594" value="bb"/>
+<Boolean_Literal tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:2:1:1:2:1:2:1:1:2" typref="2043437594" value="TRUE"/>
+</Exp_Comparison>
+</Unary_Pred>
+</Local_Hyp>
+<Local_Hyp num="4">
+<Exp_Comparison op=":">
+<Id suffix="1" tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:4:2:1:1:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:2:1:1:2:1:1:1:1,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:4:2:1:1:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:2:1:1:2:1:1:1:1,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:4:2:1:1:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:2:1:1:2:1:1:1:1" typref="555065967" value="mm"/>
+<Binary_Exp op="/\" typref="917286058">
+<Binary_Exp op="-" typref="917286058">
+<Id suffix="1" tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:4:1,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:4:2:1:1:2:1:1:1,,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:2:1:1:2:1:1:1:1" typref="917286058" value="person"/>
+<Unary_Exp op="dom" typref="917286058">
+<Binary_Exp op="\/" typref="2068808656">
+<Id suffix="1" tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:4:5,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:4:2:1:1:2:1:1:2:1:1,,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:2:1:1:2:1:1:1:1" typref="2068808656" value="husband"/>
+<Id suffix="1" tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:4:6,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:4:2:1:1:2:1:1:2:1:2,,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:2:1:1:2:1:1:1:1" typref="2068808656" value="wife"/>
+</Binary_Exp>
+</Unary_Exp>
+</Binary_Exp>
+<Binary_Exp op="[" typref="917286058">
+<Unary_Exp op="~" typref="2094411303">
+<Id suffix="1" tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:4:2,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:4:2:1:1:2:1:2:1:1,,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:2:1:1:2:1:1:1:1" typref="3579877623" value="sex"/>
+</Unary_Exp>
+<Nary_Exp op="{" typref="845307297">
+<Id tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:4:2:1:1:2:1:2:2:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:2:1:1:2:1:1:1:1" typref="3153412450" value="man"/>
+</Nary_Exp>
+</Binary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+</Local_Hyp>
+<Local_Hyp num="5">
+<Exp_Comparison op=":">
+<Id suffix="1" tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:4:2:1:2:1:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:2:1:1:2:1:1:1:1,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:4:2:1:2:1:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:2:1:1:2:1:1:1:1,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:4:2:1:2:1:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:2:1:1:2:1:1:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:2:1:1:2:1:2:2:1:2:2,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:8:2:2:1:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:2:1:1:2:1:2:2:1:1:1,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:8:2:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:2:1:1:2:1:2:2:1:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:2:1:1:2:1:1:2:1,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:4:2:1:2:1:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:2:1:1:2:1:1:1:1,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:4:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:2:1:1:2:1:1:1:1" typref="555065967" value="mm"/>
+<Binary_Exp op="/\" typref="917286058">
+<Binary_Exp op="-" typref="917286058">
+<Id suffix="1" tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:4:1,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:8:2:2:1:1:2:1:1,,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:2:1:1:2:1:2:2:1:1:1" typref="917286058" value="person"/>
+<Unary_Exp op="dom" typref="917286058">
+<Binary_Exp op="\/" typref="2068808656">
+<Id suffix="1" tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:4:5,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:8:2:2:1:1:2:1:2:1:1,,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:2:1:1:2:1:2:2:1:1:1" typref="2068808656" value="husband"/>
+<Id suffix="1" tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:4:6,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:8:2:2:1:1:2:1:2:1:2,,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:2:1:1:2:1:2:2:1:1:1" typref="2068808656" value="wife"/>
+</Binary_Exp>
+</Unary_Exp>
+</Binary_Exp>
+<Binary_Exp op="[" typref="917286058">
+<Unary_Exp op="~" typref="2094411303">
+<Id suffix="1" tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:4:2,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:8:2:2:1:1:2:2:1:1,,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:2:1:1:2:1:2:2:1:1:1" typref="3579877623" value="sex"/>
+</Unary_Exp>
+<Nary_Exp op="{" typref="845307297">
+<Id tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:8:2:2:1:1:2:2:2:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:2:1:1:2:1:2:2:1:1:1" typref="3153412450" value="woman"/>
+</Nary_Exp>
+</Binary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+</Local_Hyp>
+<Local_Hyp num="6">
+<Exp_Comparison op="=">
+<Boolean_Literal tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:4:2:1:2:3:2:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:2:1:1:2:1:1:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:2:1:1:2:1:2:1:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:2:1:1:2:1:1:2:3,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:4:2:1:2:3:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:2:1:1:2:1:1:1:1,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:4:1:3,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:2:1:1:2:1:1:1:1" typref="2043437594" value="FALSE"/>
+<Boolean_Literal tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:2:1:1:2:1:2:1:1:2" typref="2043437594" value="TRUE"/>
+</Exp_Comparison>
+</Local_Hyp>
+<Local_Hyp num="7">
+<Unary_Pred op="not">
+<Exp_Comparison op="=">
+<Boolean_Literal tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:4:2:1:2:3:2:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:2:1:1:2:1:1:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:2:1:1:2:1:2:1:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:2:1:1:2:1:1:2:3,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:4:2:1:2:3:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:2:1:1:2:1:1:1:1,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:4:1:3,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:2:1:1:2:1:1:1:1" typref="2043437594" value="FALSE"/>
+<Boolean_Literal tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:2:1:1:2:1:2:1:1:2" typref="2043437594" value="TRUE"/>
+</Exp_Comparison>
+</Unary_Pred>
+</Local_Hyp>
+<Local_Hyp num="8">
+<Exp_Comparison op=":">
+<Id suffix="1" tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:4:2:1:2:2:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:2:1:1:2:1:1:1:1,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:4:2:1:2:2:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:2:1:1:2:1:1:1:1,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:4:2:1:2:2:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:2:1:1:2:1:1:1:1" typref="555065967" value="ww"/>
+<Id tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:4:2:1:2:2:2:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:2:1:1:2:1:1:1:1" typref="917286058" value="PERSON"/>
+</Exp_Comparison>
+</Local_Hyp>
+<Local_Hyp num="9">
+<Exp_Comparison op=":">
+<Id suffix="1" tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:4:2:1:2:1:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:2:1:1:2:1:1:1:1,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:4:2:1:2:1:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:2:1:1:2:1:1:1:1,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:4:2:1:2:1:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:2:1:1:2:1:1:1:1" typref="555065967" value="mm"/>
+<Id tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:4:2:1:2:1:2:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:2:1:1:2:1:1:1:1" typref="917286058" value="PERSON"/>
+</Exp_Comparison>
+</Local_Hyp>
+</Proof_Obligation>
+<Proof_Obligation merge="=">
+<Comment>Operations dans une implementation</Comment>
+<Tag>WellDefinedness_first_operation</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+<Definition name="imprp"/>
+<Definition name="imext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;"/>
+</Hypothesis>
+<Local_Hyp num="1">
+<Exp_Comparison op="/=">
+<Binary_Exp op="-" typref="917286058">
+<Id tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:8:3:3:1:1:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:3:1:1:2:1:2:2:1:1:1" typref="917286058" value="PERSON"/>
+<Id suffix="1" tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:4:1,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:8:3:3:1:1:1:2,,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:3:1:1:2:1:2:2:1:1:1" typref="917286058" value="person"/>
+</Binary_Exp>
+<EmptySet tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:8:3:3:1:1:2,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:3:1:1:2:1:2:2:1:1:1" typref="917286058"/>
+</Exp_Comparison>
+</Local_Hyp>
+<Local_Hyp num="2">
+<Exp_Comparison op="=">
+<Boolean_Exp tag=",A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:3:1:1:2:1:2:1:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:3:1:1:2:1:1:2:2,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:2:2:1:2:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:3:1:1:2:1:1:1:1,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:2:1:2,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:3:1:1:2:1:1:1:1" typref="2043437594">
+<Exp_Comparison op="/=">
+<Binary_Exp op="-" typref="917286058">
+<Id tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:2:2:1:2:2:1:1:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:3:1:1:2:1:1:1:1" typref="917286058" value="PERSON"/>
+<Id suffix="1" tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:4:1,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:2:2:1:2:2:1:1:1:2,,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:3:1:1:2:1:1:1:1" typref="917286058" value="person"/>
+</Binary_Exp>
+<EmptySet tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:2:2:1:2:2:1:1:2,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:3:1:1:2:1:1:1:1" typref="917286058"/>
+</Exp_Comparison>
+</Boolean_Exp>
+<Boolean_Literal tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:3:1:1:2:1:2:1:1:2" typref="2043437594" value="TRUE"/>
+</Exp_Comparison>
+</Local_Hyp>
+<Local_Hyp num="3">
+<Unary_Pred op="not">
+<Exp_Comparison op="=">
+<Boolean_Exp tag=",A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:3:1:1:2:1:2:1:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:3:1:1:2:1:1:2:2,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:2:2:1:2:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:3:1:1:2:1:1:1:1,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:2:1:2,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:3:1:1:2:1:1:1:1" typref="2043437594">
+<Exp_Comparison op="/=">
+<Binary_Exp op="-" typref="917286058">
+<Id tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:2:2:1:2:2:1:1:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:3:1:1:2:1:1:1:1" typref="917286058" value="PERSON"/>
+<Id suffix="1" tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:4:1,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:2:2:1:2:2:1:1:1:2,,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:3:1:1:2:1:1:1:1" typref="917286058" value="person"/>
+</Binary_Exp>
+<EmptySet tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:2:2:1:2:2:1:1:2,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:3:1:1:2:1:1:1:1" typref="917286058"/>
+</Exp_Comparison>
+</Boolean_Exp>
+<Boolean_Literal tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:3:1:1:2:1:2:1:1:2" typref="2043437594" value="TRUE"/>
+</Exp_Comparison>
+</Unary_Pred>
+</Local_Hyp>
+<Local_Hyp num="4">
+<Exp_Comparison op=":">
+<Id suffix="1" tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:2:2:1:1:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:3:1:1:2:1:1:1:1,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:2:2:1:1:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:3:1:1:2:1:1:1:1,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:2:2:1:1:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:3:1:1:2:1:1:1:1" typref="3153412450" value="ss"/>
+<Id tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:2:2:1:1:2:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:3:1:1:2:1:1:1:1" typref="845307297" value="SEX"/>
+</Exp_Comparison>
+</Local_Hyp>
+</Proof_Obligation>
+<Proof_Obligation merge="=">
+<Comment>Operations dans une implementation</Comment>
+<Tag>WellDefinedness_birth_operation</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+<Definition name="imprp"/>
+<Definition name="imext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;"/>
+</Hypothesis>
+<Local_Hyp num="1">
+<Exp_Comparison op=":">
+<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:4:1:1:2:1:2:2:1:2:2,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:8:4:3:1:2:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:4:1:1:2:1:2:2:1:1:1,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:8:4:2:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:4:1:1:2:1:2:2:1:1:1" typref="3153412450" value="ww"/>
+<Id tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:8:4:3:1:2:2,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:4:1:1:2:1:2:2:1:1:1" typref="845307297" value="SEX"/>
+</Exp_Comparison>
+</Local_Hyp>
+<Local_Hyp num="2">
+<Exp_Comparison op="/=">
+<Binary_Exp op="-" typref="917286058">
+<Id tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:8:4:3:1:1:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:4:1:1:2:1:2:2:1:1:1" typref="917286058" value="PERSON"/>
+<Id suffix="1" tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:4:1,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:8:4:3:1:1:1:2,,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:4:1:1:2:1:2:2:1:1:1" typref="917286058" value="person"/>
+</Binary_Exp>
+<EmptySet tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:8:4:3:1:1:2,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:4:1:1:2:1:2:2:1:1:1" typref="917286058"/>
+</Exp_Comparison>
+</Local_Hyp>
+<Local_Hyp num="3">
+<Exp_Comparison op="=">
+<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:4:1:1:2:1:2:1:1:1" typref="2043437594" value="bb"/>
+<Boolean_Literal tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:4:1:1:2:1:2:1:1:2" typref="2043437594" value="TRUE"/>
+</Exp_Comparison>
+</Local_Hyp>
+<Local_Hyp num="4">
+<Unary_Pred op="not">
+<Exp_Comparison op="=">
+<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:4:1:1:2:1:2:1:1:1" typref="2043437594" value="bb"/>
+<Boolean_Literal tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:4:1:1:2:1:2:1:1:2" typref="2043437594" value="TRUE"/>
+</Exp_Comparison>
+</Unary_Pred>
+</Local_Hyp>
+<Local_Hyp num="5">
+<Exp_Comparison op=":">
+<Id suffix="1" tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:5:2:1:1:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:4:1:1:2:1:1:1:1,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:5:2:1:1:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:4:1:1:2:1:1:1:1,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:5:2:1:1:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:4:1:1:2:1:1:1:1" typref="3153412450" value="ss"/>
+<Id tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:5:2:1:1:2:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:4:1:1:2:1:1:1:1" typref="845307297" value="SEX"/>
+</Exp_Comparison>
+</Local_Hyp>
+<Local_Hyp num="6">
+<Exp_Comparison op=":">
+<Id suffix="1" tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:5:2:1:2:2:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:4:1:1:2:1:1:1:1,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:5:2:1:2:2:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:4:1:1:2:1:1:1:1,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:5:2:1:2:2:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:4:1:1:2:1:1:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:4:1:1:2:1:2:2:1:2:2,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:8:4:3:1:2:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:4:1:1:2:1:2:2:1:1:1,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:8:4:2:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:4:1:1:2:1:2:2:1:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:4:1:1:2:1:1:2:2,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:5:2:1:2:2:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:4:1:1:2:1:1:1:1,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:5:1:2,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:4:1:1:2:1:1:1:1" typref="3153412450" value="ww"/>
+<Id tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:8:4:3:1:2:2,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:4:1:1:2:1:2:2:1:1:1" typref="845307297" value="SEX"/>
+</Exp_Comparison>
+</Local_Hyp>
+<Local_Hyp num="7">
+<Exp_Comparison op="/=">
+<Binary_Exp op="-" typref="917286058">
+<Id tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:8:4:3:1:1:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:4:1:1:2:1:2:2:1:1:1" typref="917286058" value="PERSON"/>
+<Id suffix="1" tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:4:1,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:8:4:3:1:1:1:2,,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:4:1:1:2:1:2:2:1:1:1" typref="917286058" value="person"/>
+</Binary_Exp>
+<EmptySet tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:8:4:3:1:1:2,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:4:1:1:2:1:2:2:1:1:1" typref="917286058"/>
+</Exp_Comparison>
+</Local_Hyp>
+<Local_Hyp num="8">
+<Exp_Comparison op="=">
+<Boolean_Literal tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:5:2:1:2:3:2:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:4:1:1:2:1:1:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:4:1:1:2:1:2:1:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:4:1:1:2:1:1:2:3,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:5:2:1:2:3:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:4:1:1:2:1:1:1:1,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:5:1:3,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:4:1:1:2:1:1:1:1" typref="2043437594" value="FALSE"/>
+<Boolean_Literal tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:4:1:1:2:1:2:1:1:2" typref="2043437594" value="TRUE"/>
+</Exp_Comparison>
+</Local_Hyp>
+<Local_Hyp num="9">
+<Unary_Pred op="not">
+<Exp_Comparison op="=">
+<Boolean_Literal tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:5:2:1:2:3:2:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:4:1:1:2:1:1:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:4:1:1:2:1:2:1:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:4:1:1:2:1:1:2:3,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:5:2:1:2:3:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:4:1:1:2:1:1:1:1,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:5:1:3,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:4:1:1:2:1:1:1:1" typref="2043437594" value="FALSE"/>
+<Boolean_Literal tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:4:1:1:2:1:2:1:1:2" typref="2043437594" value="TRUE"/>
+</Exp_Comparison>
+</Unary_Pred>
+</Local_Hyp>
+<Local_Hyp num="10">
+<Exp_Comparison op=":">
+<Id suffix="1" tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:5:2:1:2:2:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:4:1:1:2:1:1:1:1,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:5:2:1:2:2:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:4:1:1:2:1:1:1:1,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:5:2:1:2:2:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:4:1:1:2:1:1:1:1" typref="555065967" value="ww"/>
+<Id tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:5:2:1:2:2:2:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:4:1:1:2:1:1:1:1" typref="917286058" value="PERSON"/>
+</Exp_Comparison>
+</Local_Hyp>
+<Local_Hyp num="11">
+<Exp_Comparison op=":">
+<Id suffix="1" tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:5:2:1:2:1:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:4:1:1:2:1:1:1:1,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:5:2:1:2:1:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:4:1:1:2:1:1:1:1,A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:5:2:1:2:1:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:4:1:1:2:1:1:1:1" typref="3153412450" value="ss"/>
+<Id tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:3:5:2:1:2:1:2:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:4:4:1:1:2:1:1:1:1" typref="845307297" value="SEX"/>
+</Exp_Comparison>
+</Local_Hyp>
+</Proof_Obligation>
+<Proof_Obligation merge="=">
+<Comment>Operations dans une implementation</Comment>
+<Tag>WellDefinedness_print_operation</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+<Definition name="imprp"/>
+<Definition name="imext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;"/>
+</Hypothesis>
+</Proof_Obligation>
+<TypeInfos merge="=">
+<Type id="555065967">
+<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:5:1:1" value="PERSON"/>
+</Type>
+<Type id="2043437594">
+<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:5:2:1" value="BOOL"/>
+</Type>
+<Type id="3153412450">
+<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\INNER_INTERFACE_1.bxml:1:5:3:1" value="SEX"/>
+</Type>
+<Type id="917286058">
+<Unary_Exp op="POW">
+<Id tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:9:1:1:1" value="PERSON"/>
+</Unary_Exp>
+</Type>
+<Type id="2701647786">
+<Id tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:9:2:1" value="INTEGER"/>
+</Type>
+<Type id="3579877623">
+<Unary_Exp op="POW">
+<Binary_Exp op="*">
+<Id tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:9:3:1:1:1" value="PERSON"/>
+<Id tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:9:3:1:1:2" value="SEX"/>
+</Binary_Exp>
+</Unary_Exp>
+</Type>
+<Type id="1872266093">
+<Unary_Exp op="POW">
+<Binary_Exp op="*">
+<Id tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:9:4:1:1:1" value="PERSON"/>
+<Id tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:9:4:1:1:2" value="STATUS"/>
+</Binary_Exp>
+</Unary_Exp>
+</Type>
+<Type id="2068808656">
+<Unary_Exp op="POW">
+<Binary_Exp op="*">
+<Id tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:9:5:1:1:1" value="PERSON"/>
+<Id tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:9:5:1:1:2" value="PERSON"/>
+</Binary_Exp>
+</Unary_Exp>
+</Type>
+<Type id="2707207074">
+<Unary_Exp op="POW">
+<Unary_Exp op="POW">
+<Binary_Exp op="*">
+<Id tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:9:6:1:1:1:1" value="PERSON"/>
+<Id tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:9:6:1:1:1:2" value="SEX"/>
+</Binary_Exp>
+</Unary_Exp>
+</Unary_Exp>
+</Type>
+<Type id="845307297">
+<Unary_Exp op="POW">
+<Id tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:9:7:1:1" value="SEX"/>
+</Unary_Exp>
+</Type>
+<Type id="2314681430">
+<Unary_Exp op="POW">
+<Unary_Exp op="POW">
+<Binary_Exp op="*">
+<Id tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:9:8:1:1:1:1" value="PERSON"/>
+<Id tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:9:8:1:1:1:2" value="STATUS"/>
+</Binary_Exp>
+</Unary_Exp>
+</Unary_Exp>
+</Type>
+<Type id="515940807">
+<Unary_Exp op="POW">
+<Id tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:9:9:1:1" value="STATUS"/>
+</Unary_Exp>
+</Type>
+<Type id="3096305075">
+<Unary_Exp op="POW">
+<Unary_Exp op="POW">
+<Binary_Exp op="*">
+<Id tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:9:10:1:1:1:1" value="PERSON"/>
+<Id tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:9:10:1:1:1:2" value="PERSON"/>
+</Binary_Exp>
+</Unary_Exp>
+</Unary_Exp>
+</Type>
+<Type id="2094411303">
+<Unary_Exp op="POW">
+<Binary_Exp op="*">
+<Id tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:9:11:1:1:1" value="SEX"/>
+<Id tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:9:11:1:1:2" value="PERSON"/>
+</Binary_Exp>
+</Unary_Exp>
+</Type>
+<Type id="3153412450">
+<Id tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:9:12:1" value="SEX"/>
+</Type>
+<Type id="3817003670">
+<Unary_Exp op="POW">
+<Generic_Type tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:9:13:1:1"/>
+</Unary_Exp>
+</Type>
+<Type id="555065967">
+<Id tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:9:14:1" value="PERSON"/>
+</Type>
+<Type id="400612467">
+<Unary_Exp op="POW">
+<Binary_Exp op="*">
+<Id tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:9:15:1:1:1" value="STATUS"/>
+<Id tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:9:15:1:1:2" value="PERSON"/>
+</Binary_Exp>
+</Unary_Exp>
+</Type>
+<Type id="2246778642">
+<Id tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:9:16:1" value="STATUS"/>
+</Type>
+<Type id="2043437594">
+<Id tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:9:17:1" value="BOOL"/>
+</Type>
+<Type id="555065967">
+<Id tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:4:1:1" value="PERSON"/>
+</Type>
+<Type id="2043437594">
+<Id tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:4:2:1" value="BOOL"/>
+</Type>
+<Type id="917286058">
+<Unary_Exp op="POW">
+<Id tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:4:3:1:1" value="PERSON"/>
+</Unary_Exp>
+</Type>
+<Type id="400612467">
+<Unary_Exp op="POW">
+<Binary_Exp op="*">
+<Id tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:4:4:1:1:1" value="STATUS"/>
+<Id tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:4:4:1:1:2" value="PERSON"/>
+</Binary_Exp>
+</Unary_Exp>
+</Type>
+<Type id="1872266093">
+<Unary_Exp op="POW">
+<Binary_Exp op="*">
+<Id tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:4:5:1:1:1" value="PERSON"/>
+<Id tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:4:5:1:1:2" value="STATUS"/>
+</Binary_Exp>
+</Unary_Exp>
+</Type>
+<Type id="515940807">
+<Unary_Exp op="POW">
+<Id tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:4:6:1:1" value="STATUS"/>
+</Unary_Exp>
+</Type>
+<Type id="2246778642">
+<Id tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:4:7:1" value="STATUS"/>
+</Type>
+<Type id="3153412450">
+<Id tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:4:8:1" value="SEX"/>
+</Type>
+<Type id="845307297">
+<Unary_Exp op="POW">
+<Id tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:4:9:1:1" value="SEX"/>
+</Unary_Exp>
+</Type>
+<Type id="2068808656">
+<Unary_Exp op="POW">
+<Binary_Exp op="*">
+<Id tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:4:10:1:1:1" value="PERSON"/>
+<Id tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:4:10:1:1:2" value="PERSON"/>
+</Binary_Exp>
+</Unary_Exp>
+</Type>
+<Type id="2094411303">
+<Unary_Exp op="POW">
+<Binary_Exp op="*">
+<Id tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:4:11:1:1:1" value="SEX"/>
+<Id tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:4:11:1:1:2" value="PERSON"/>
+</Binary_Exp>
+</Unary_Exp>
+</Type>
+<Type id="3579877623">
+<Unary_Exp op="POW">
+<Binary_Exp op="*">
+<Id tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:4:12:1:1:1" value="PERSON"/>
+<Id tag="A:/b-method-training-atelierb/atelierb/DatabaseSystem/bdp\QUERY.bxml:1:4:12:1:1:2" value="SEX"/>
+</Binary_Exp>
+</Unary_Exp>
+</Type>
+</TypeInfos>
+</Proof_Obligations>

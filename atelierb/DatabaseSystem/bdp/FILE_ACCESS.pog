@@ -1,0 +1,1393 @@
+<Proof_Obligations>
+<Define merge="=" name="B definitions">
+<Nary_Pred op="&amp;" translate="((NAT) = (((0) .. (2147483647)))) &amp; ((INT) = (((-2147483647) .. (2147483647))))">
+<Exp_Comparison op="=">
+<Id value="NAT"/>
+<Binary_Exp op="..">
+<Integer_Literal value="0"/>
+<Id value="MAXINT"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="=">
+<Id value="INT"/>
+<Binary_Exp op="..">
+<Id value="MININT"/>
+<Id value="MAXINT"/>
+</Binary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Define>
+<Define merge="=" name="ctx"/>
+<Define merge="=" name="seext"/>
+<Define merge="=" name="inv">
+<Nary_Pred op="&amp;" translate="bfile : NATURAL-{0} +-> ((FIELD) --> (VALUE)) &amp; ((bfile) : (seq(((FIELD) --> (VALUE))))) &amp; ((buffer) : (((dom(bfile)) +-> (((FIELD) --> (VALUE)))))) &amp; ((updated) : (BOOL)) &amp; ((((updated) = (FALSE))) => (buffer : POW( bfile))) &amp; ((((updated) = (TRUE))) => (not(buffer = {})))">
+<Exp_Comparison op=":" initialTag="((bfile) : (seq(((FIELD) --> (VALUE)))))">
+<Id tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:4:1:1:1" typref="277897435" value="bfile"/>
+<Unary_Exp op="seq" typref="3173643880">
+<Binary_Exp op="-->" typref="1599463524">
+<Id tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:4:1:1:2:1:1" typref="3988092277" value="FIELD"/>
+<Id tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:4:1:1:2:1:2" typref="3958993484" value="VALUE"/>
+</Binary_Exp>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((buffer) : (((dom(bfile)) +-> (((FIELD) --> (VALUE))))))">
+<Id tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:4:1:2:1" typref="277897435" value="buffer"/>
+<Binary_Exp op="+->" typref="3173643880">
+<Unary_Exp op="dom" typref="3603043417">
+<Id tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:4:1:2:2:1:1" typref="277897435" value="bfile"/>
+</Unary_Exp>
+<Binary_Exp op="-->" typref="1599463524">
+<Id tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:4:1:2:2:2:1" typref="3988092277" value="FIELD"/>
+<Id tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:4:1:2:2:2:2" typref="3958993484" value="VALUE"/>
+</Binary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((updated) : (BOOL))">
+<Id tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:4:1:3:1" typref="2043437594" value="updated"/>
+<Id tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:4:1:3:2" typref="4282494527" value="BOOL"/>
+</Exp_Comparison>
+<Binary_Pred op="=>" initialTag="((((updated) = (FALSE))) => (buffer : POW( bfile)))">
+<Exp_Comparison op="=">
+<Id tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:4:1:4:1:1" typref="2043437594" value="updated"/>
+<Boolean_Literal tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:4:1:4:1:2" typref="2043437594" value="FALSE"/>
+</Exp_Comparison>
+<Exp_Comparison op="&lt;:">
+<Id tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:4:1:4:2:1" typref="277897435" value="buffer"/>
+<Id tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:4:1:4:2:2" typref="277897435" value="bfile"/>
+</Exp_Comparison>
+</Binary_Pred>
+<Binary_Pred op="=>" initialTag="((((updated) = (TRUE))) => (not(buffer = {})))">
+<Exp_Comparison op="=">
+<Id tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:4:1:5:1:1" typref="2043437594" value="updated"/>
+<Boolean_Literal tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:4:1:5:1:2" typref="2043437594" value="TRUE"/>
+</Exp_Comparison>
+<Exp_Comparison op="/=">
+<Id tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:4:1:5:2:1" typref="277897435" value="buffer"/>
+<EmptySet tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:4:1:5:2:2" typref="277897435"/>
+</Exp_Comparison>
+</Binary_Pred>
+</Nary_Pred>
+</Define>
+<Define merge="=" name="ass"/>
+<Define merge="=" name="lprp"/>
+<Define merge="=" name="inprp"/>
+<Define merge="=" name="inext"/>
+<Define merge="=" name="cst">
+<Nary_Pred op="&amp;" translate="FIELD: FIN(INTEGER) &amp; not(FIELD = {}) &amp; VALUE: FIN(INTEGER) &amp; not(VALUE = {}) &amp; ((max_rec) : ((NAT-{0})))">
+<Set>
+<Id tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:2:1:1:1" typref="3988092277" value="FIELD"/>
+</Set>
+<Set>
+<Id tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:2:1:2:1" typref="3958993484" value="VALUE"/>
+</Set>
+<Exp_Comparison op=":">
+<Id tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:2:1:3:1" typref="2701647786" value="max_rec"/>
+<Id tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:2:1:3:2" typref="3603043417" value="NAT1"/>
+</Exp_Comparison>
+</Nary_Pred>
+</Define>
+<Proof_Obligation merge="=">
+<Comment>Initialisation dans une machine abstraite</Comment>
+<Tag>Initialisation</Tag>
+<Tag>Invariant</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Local_Hyp num="1">
+<Exp_Comparison op="=">
+<Boolean_Literal tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:6:1:2:3,B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:5:1:4:1:1,B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:6:1:1:3" typref="2043437594" value="FALSE"/>
+<Boolean_Literal tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:5:1:4:1:2" typref="2043437594" value="FALSE"/>
+</Exp_Comparison>
+</Local_Hyp>
+<Local_Hyp num="2">
+<Exp_Comparison op="=">
+<Boolean_Literal tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:6:1:2:3,B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:5:1:5:1:1,B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:6:1:1:3" typref="2043437594" value="FALSE"/>
+<Boolean_Literal tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:5:1:5:1:2" typref="2043437594" value="TRUE"/>
+</Exp_Comparison>
+</Local_Hyp>
+<Local_Hyp num="3">
+<Nary_Pred op="&amp;"/>
+</Local_Hyp>
+<Simple_Goal merge="0">
+<Tag>Invariant is preserved</Tag>
+<Goal>
+<Binary_Pred op="=>">
+<Ref_Hyp num="3"/>
+<Exp_Comparison op=":" initialTag="((bfile) : (seq(((FIELD) --> (VALUE)))))" goalTag="Invariant is preserved">
+<EmptySeq tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:6:1:2:1,B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:5:1:1:1,B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:6:1:1:1" typref="277897435"/>
+<Unary_Exp op="seq" typref="3173643880">
+<Binary_Exp op="-->" typref="1599463524">
+<Id tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:5:1:1:2:1:1" typref="3988092277" value="FIELD"/>
+<Id tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:5:1:1:2:1:2" typref="3958993484" value="VALUE"/>
+</Binary_Exp>
+</Unary_Exp>
+</Exp_Comparison>
+</Binary_Pred>
+</Goal>
+</Simple_Goal>
+<Simple_Goal merge="1">
+<Tag>Invariant is preserved</Tag>
+<Goal>
+<Binary_Pred op="=>">
+<Ref_Hyp num="3"/>
+<Exp_Comparison op=":" initialTag="((buffer) : (((dom(bfile)) +-> (((FIELD) --> (VALUE))))))" goalTag="Invariant is preserved">
+<EmptySet tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:6:1:2:2,B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:5:1:2:1,B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:6:1:1:2" typref="277897435"/>
+<Binary_Exp op="+->" typref="3173643880">
+<Unary_Exp op="dom" typref="3603043417">
+<EmptySeq tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:6:1:2:1,B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:5:1:2:2:1:1,B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:6:1:1:1" typref="277897435"/>
+</Unary_Exp>
+<Binary_Exp op="-->" typref="1599463524">
+<Id tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:5:1:2:2:2:1" typref="3988092277" value="FIELD"/>
+<Id tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:5:1:2:2:2:2" typref="3958993484" value="VALUE"/>
+</Binary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+</Binary_Pred>
+</Goal>
+</Simple_Goal>
+<Simple_Goal merge="">
+<Tag>Invariant is preserved</Tag>
+<Goal>
+<Binary_Pred op="=>">
+<Nary_Pred op="&amp;">
+<Ref_Hyp num="3"/>
+<Ref_Hyp num="1"/>
+</Nary_Pred>
+<Exp_Comparison op="&lt;:">
+<EmptySet tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:6:1:2:2,B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:5:1:4:2:1,B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:6:1:1:2" typref="277897435"/>
+<EmptySeq tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:6:1:2:1,B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:5:1:4:2:2,B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:6:1:1:1" typref="277897435"/>
+</Exp_Comparison>
+</Binary_Pred>
+</Goal>
+<Proof_State proofState="Unproved" methodList="?" passList="Force(0),?"/>
+</Simple_Goal>
+<Simple_Goal merge="">
+<Tag>Invariant is preserved</Tag>
+<Goal>
+<Binary_Pred op="=>">
+<Nary_Pred op="&amp;">
+<Ref_Hyp num="3"/>
+<Ref_Hyp num="2"/>
+</Nary_Pred>
+<Exp_Comparison op="/=">
+<EmptySet tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:6:1:2:2,B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:5:1:5:2:1,B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:6:1:1:2" typref="277897435"/>
+<EmptySet tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:5:1:5:2:2" typref="277897435"/>
+</Exp_Comparison>
+</Binary_Pred>
+</Goal>
+<Proof_State proofState="Unproved" methodList="?" passList="Force(0),?"/>
+</Simple_Goal>
+</Proof_Obligation>
+<Proof_Obligation merge="=">
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>get_record</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Exp_Comparison op=":">
+<Id tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:6:1:2:1:1" typref="2701647786" value="oo"/>
+<Unary_Exp op="dom" typref="3603043417">
+<Id tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:6:1:2:1:2:1" typref="277897435" value="bfile"/>
+</Unary_Exp>
+</Exp_Comparison>
+</Hypothesis>
+<Local_Hyp num="1">
+<Exp_Comparison op="=">
+<Boolean_Literal tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:7:1:3:1:2:2:1,B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:5:1:4:1:1,B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:7:1:3:1:2:1:1" typref="2043437594" value="FALSE"/>
+<Boolean_Literal tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:5:1:4:1:2" typref="2043437594" value="FALSE"/>
+</Exp_Comparison>
+</Local_Hyp>
+<Local_Hyp num="2">
+<Exp_Comparison op="=">
+<Boolean_Literal tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:7:1:3:1:2:2:1,B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:5:1:5:1:1,B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:7:1:3:1:2:1:1" typref="2043437594" value="FALSE"/>
+<Boolean_Literal tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:5:1:5:1:2" typref="2043437594" value="TRUE"/>
+</Exp_Comparison>
+</Local_Hyp>
+<Local_Hyp num="3">
+<Nary_Pred op="&amp;"/>
+</Local_Hyp>
+<Simple_Goal merge="0">
+<Tag>Invariant is preserved</Tag>
+<Goal>
+<Binary_Pred op="=>">
+<Ref_Hyp num="3"/>
+<Exp_Comparison op=":" initialTag="((buffer) : (((dom(bfile)) +-> (((FIELD) --> (VALUE))))))" goalTag="Invariant is preserved">
+<Nary_Exp op="{" tag=",B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:5:1:2:1,B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:7:1:3:1:1:1:1" typref="277897435">
+<Binary_Exp op="|->" typref="1098621736">
+<Id tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:7:1:3:1:1:2:1:1:1" typref="2701647786" value="oo"/>
+<Binary_Exp op="(" typref="2927107167">
+<Id tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:7:1:3:1:1:2:1:1:2:1" typref="277897435" value="bfile"/>
+<Id tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:7:1:3:1:1:2:1:1:2:2" typref="2701647786" value="oo"/>
+</Binary_Exp>
+</Binary_Exp>
+</Nary_Exp>
+<Binary_Exp op="+->" typref="3173643880">
+<Unary_Exp op="dom" typref="3603043417">
+<Id tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:5:1:2:2:1:1" typref="277897435" value="bfile"/>
+</Unary_Exp>
+<Binary_Exp op="-->" typref="1599463524">
+<Id tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:5:1:2:2:2:1" typref="3988092277" value="FIELD"/>
+<Id tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:5:1:2:2:2:2" typref="3958993484" value="VALUE"/>
+</Binary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+</Binary_Pred>
+</Goal>
+</Simple_Goal>
+<Simple_Goal merge="">
+<Tag>Invariant is preserved</Tag>
+<Goal>
+<Binary_Pred op="=>">
+<Nary_Pred op="&amp;">
+<Ref_Hyp num="3"/>
+<Ref_Hyp num="1"/>
+</Nary_Pred>
+<Exp_Comparison op="&lt;:">
+<Nary_Exp op="{" tag=",B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:5:1:4:2:1,B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:7:1:3:1:1:1:1" typref="277897435">
+<Binary_Exp op="|->" typref="1098621736">
+<Id tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:7:1:3:1:1:2:1:1:1" typref="2701647786" value="oo"/>
+<Binary_Exp op="(" typref="2927107167">
+<Id tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:7:1:3:1:1:2:1:1:2:1" typref="277897435" value="bfile"/>
+<Id tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:7:1:3:1:1:2:1:1:2:2" typref="2701647786" value="oo"/>
+</Binary_Exp>
+</Binary_Exp>
+</Nary_Exp>
+<Id tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:5:1:4:2:2" typref="277897435" value="bfile"/>
+</Exp_Comparison>
+</Binary_Pred>
+</Goal>
+<Proof_State proofState="Unproved" methodList="?" passList="Force(0),?"/>
+</Simple_Goal>
+<Simple_Goal merge="">
+<Tag>Invariant is preserved</Tag>
+<Goal>
+<Binary_Pred op="=>">
+<Nary_Pred op="&amp;">
+<Ref_Hyp num="3"/>
+<Ref_Hyp num="2"/>
+</Nary_Pred>
+<Exp_Comparison op="/=">
+<Nary_Exp op="{" tag=",B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:5:1:5:2:1,B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:7:1:3:1:1:1:1" typref="277897435">
+<Binary_Exp op="|->" typref="1098621736">
+<Id tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:7:1:3:1:1:2:1:1:1" typref="2701647786" value="oo"/>
+<Binary_Exp op="(" typref="2927107167">
+<Id tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:7:1:3:1:1:2:1:1:2:1" typref="277897435" value="bfile"/>
+<Id tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:7:1:3:1:1:2:1:1:2:2" typref="2701647786" value="oo"/>
+</Binary_Exp>
+</Binary_Exp>
+</Nary_Exp>
+<EmptySet tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:5:1:5:2:2" typref="277897435"/>
+</Exp_Comparison>
+</Binary_Pred>
+</Goal>
+<Proof_State proofState="Unproved" methodList="?" passList="Force(0),?"/>
+</Simple_Goal>
+</Proof_Obligation>
+<Proof_Obligation merge="=">
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>put_buffer</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Exp_Comparison op="=">
+<Id tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:6:2:1:1:1" typref="2043437594" value="updated"/>
+<Boolean_Literal tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:6:2:1:1:2" typref="2043437594" value="TRUE"/>
+</Exp_Comparison>
+</Hypothesis>
+<Local_Hyp num="1">
+<Exp_Comparison op="=">
+<Id tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:5:1:4:1:1" typref="2043437594" value="updated"/>
+<Boolean_Literal tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:5:1:4:1:2" typref="2043437594" value="FALSE"/>
+</Exp_Comparison>
+</Local_Hyp>
+<Local_Hyp num="2">
+<Nary_Pred op="&amp;"/>
+</Local_Hyp>
+<Simple_Goal merge="0">
+<Tag>Invariant is preserved</Tag>
+<Goal>
+<Binary_Pred op="=>">
+<Ref_Hyp num="2"/>
+<Exp_Comparison op=":" initialTag="((bfile) : (seq(((FIELD) --> (VALUE)))))" goalTag="Invariant is preserved">
+<Binary_Exp op="&lt;+" tag=",B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:5:1:1:1,B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:7:2:2:1:1:1" typref="277897435">
+<Id tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:7:2:2:1:2:1:1" typref="277897435" value="bfile"/>
+<Id tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:7:2:2:1:2:1:2" typref="277897435" value="buffer"/>
+</Binary_Exp>
+<Unary_Exp op="seq" typref="3173643880">
+<Binary_Exp op="-->" typref="1599463524">
+<Id tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:5:1:1:2:1:1" typref="3988092277" value="FIELD"/>
+<Id tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:5:1:1:2:1:2" typref="3958993484" value="VALUE"/>
+</Binary_Exp>
+</Unary_Exp>
+</Exp_Comparison>
+</Binary_Pred>
+</Goal>
+</Simple_Goal>
+<Simple_Goal merge="1">
+<Tag>Invariant is preserved</Tag>
+<Goal>
+<Binary_Pred op="=>">
+<Ref_Hyp num="2"/>
+<Exp_Comparison op=":" initialTag="((buffer) : (((dom(bfile)) +-> (((FIELD) --> (VALUE))))))" goalTag="Invariant is preserved">
+<Id tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:5:1:2:1" typref="277897435" value="buffer"/>
+<Binary_Exp op="+->" typref="3173643880">
+<Unary_Exp op="dom" typref="3603043417">
+<Binary_Exp op="&lt;+" tag=",B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:5:1:2:2:1:1,B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:7:2:2:1:1:1" typref="277897435">
+<Id tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:7:2:2:1:2:1:1" typref="277897435" value="bfile"/>
+<Id tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:7:2:2:1:2:1:2" typref="277897435" value="buffer"/>
+</Binary_Exp>
+</Unary_Exp>
+<Binary_Exp op="-->" typref="1599463524">
+<Id tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:5:1:2:2:2:1" typref="3988092277" value="FIELD"/>
+<Id tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:5:1:2:2:2:2" typref="3958993484" value="VALUE"/>
+</Binary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+</Binary_Pred>
+</Goal>
+</Simple_Goal>
+<Simple_Goal merge="">
+<Tag>Invariant is preserved</Tag>
+<Goal>
+<Binary_Pred op="=>">
+<Nary_Pred op="&amp;">
+<Ref_Hyp num="2"/>
+<Ref_Hyp num="1"/>
+</Nary_Pred>
+<Exp_Comparison op="&lt;:">
+<Id tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:5:1:4:2:1" typref="277897435" value="buffer"/>
+<Binary_Exp op="&lt;+" tag=",B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:5:1:4:2:2,B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:7:2:2:1:1:1" typref="277897435">
+<Id tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:7:2:2:1:2:1:1" typref="277897435" value="bfile"/>
+<Id tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:7:2:2:1:2:1:2" typref="277897435" value="buffer"/>
+</Binary_Exp>
+</Exp_Comparison>
+</Binary_Pred>
+</Goal>
+<Proof_State proofState="Unproved" methodList="?" passList="Force(0),?"/>
+</Simple_Goal>
+</Proof_Obligation>
+<Proof_Obligation merge="=">
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>create_record</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Id tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:6:3:3:1:1:1" typref="4077266551" value="vv"/>
+<Id tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:6:3:3:1:1:2" typref="3958993484" value="VALUE"/>
+</Exp_Comparison>
+<Exp_Comparison op="/=">
+<Unary_Exp op="size" typref="2701647786">
+<Id tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:6:3:3:1:2:1:1" typref="277897435" value="bfile"/>
+</Unary_Exp>
+<Id tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:6:3:3:1:2:2" typref="2701647786" value="max_rec"/>
+</Exp_Comparison>
+</Nary_Pred>
+</Hypothesis>
+<Local_Hyp num="1">
+<Exp_Comparison op="=">
+<Id tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:5:1:4:1:1" typref="2043437594" value="updated"/>
+<Boolean_Literal tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:5:1:4:1:2" typref="2043437594" value="FALSE"/>
+</Exp_Comparison>
+</Local_Hyp>
+<Local_Hyp num="2">
+<Nary_Pred op="&amp;"/>
+</Local_Hyp>
+<Simple_Goal merge="0">
+<Tag>Invariant is preserved</Tag>
+<Goal>
+<Binary_Pred op="=>">
+<Ref_Hyp num="2"/>
+<Exp_Comparison op=":" initialTag="((bfile) : (seq(((FIELD) --> (VALUE)))))" goalTag="Invariant is preserved">
+<Binary_Exp op="&lt;-" tag=",B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:5:1:1:1,B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:7:3:4:1:1:1:1" typref="277897435">
+<Id tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:7:3:4:1:1:2:1:1" typref="277897435" value="bfile" fixed="false"/>
+<Binary_Exp op="*" typref="2927107167">
+<Id tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:7:3:4:1:1:2:1:2:1" typref="3988092277" value="FIELD"/>
+<Nary_Exp op="{" typref="3958993484">
+<Id tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:7:3:4:1:1:2:1:2:2:1" typref="4077266551" value="vv"/>
+</Nary_Exp>
+</Binary_Exp>
+</Binary_Exp>
+<Unary_Exp op="seq" typref="3173643880">
+<Binary_Exp op="-->" typref="1599463524">
+<Id tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:5:1:1:2:1:1" typref="3988092277" value="FIELD"/>
+<Id tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:5:1:1:2:1:2" typref="3958993484" value="VALUE"/>
+</Binary_Exp>
+</Unary_Exp>
+</Exp_Comparison>
+</Binary_Pred>
+</Goal>
+</Simple_Goal>
+<Simple_Goal merge="1">
+<Tag>Invariant is preserved</Tag>
+<Goal>
+<Binary_Pred op="=>">
+<Ref_Hyp num="2"/>
+<Exp_Comparison op=":" initialTag="((buffer) : (((dom(bfile)) +-> (((FIELD) --> (VALUE))))))" goalTag="Invariant is preserved">
+<Id tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:5:1:2:1" typref="277897435" value="buffer"/>
+<Binary_Exp op="+->" typref="3173643880">
+<Unary_Exp op="dom" typref="3603043417">
+<Binary_Exp op="&lt;-" tag=",B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:5:1:2:2:1:1,B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:7:3:4:1:1:1:1" typref="277897435">
+<Id tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:7:3:4:1:1:2:1:1" typref="277897435" value="bfile" fixed="false"/>
+<Binary_Exp op="*" typref="2927107167">
+<Id tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:7:3:4:1:1:2:1:2:1" typref="3988092277" value="FIELD"/>
+<Nary_Exp op="{" typref="3958993484">
+<Id tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:7:3:4:1:1:2:1:2:2:1" typref="4077266551" value="vv"/>
+</Nary_Exp>
+</Binary_Exp>
+</Binary_Exp>
+</Unary_Exp>
+<Binary_Exp op="-->" typref="1599463524">
+<Id tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:5:1:2:2:2:1" typref="3988092277" value="FIELD"/>
+<Id tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:5:1:2:2:2:2" typref="3958993484" value="VALUE"/>
+</Binary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+</Binary_Pred>
+</Goal>
+</Simple_Goal>
+<Simple_Goal merge="">
+<Tag>Invariant is preserved</Tag>
+<Goal>
+<Binary_Pred op="=>">
+<Nary_Pred op="&amp;">
+<Ref_Hyp num="2"/>
+<Ref_Hyp num="1"/>
+</Nary_Pred>
+<Exp_Comparison op="&lt;:">
+<Id tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:5:1:4:2:1" typref="277897435" value="buffer"/>
+<Binary_Exp op="&lt;-" tag=",B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:5:1:4:2:2,B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:7:3:4:1:1:1:1" typref="277897435">
+<Id tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:7:3:4:1:1:2:1:1" typref="277897435" value="bfile" fixed="false"/>
+<Binary_Exp op="*" typref="2927107167">
+<Id tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:7:3:4:1:1:2:1:2:1" typref="3988092277" value="FIELD"/>
+<Nary_Exp op="{" typref="3958993484">
+<Id tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:7:3:4:1:1:2:1:2:2:1" typref="4077266551" value="vv"/>
+</Nary_Exp>
+</Binary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+</Binary_Pred>
+</Goal>
+<Proof_State proofState="Unproved" methodList="?" passList="Force(0),?"/>
+</Simple_Goal>
+</Proof_Obligation>
+<Proof_Obligation merge="=">
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>not_in_buffer</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Exp_Comparison op=":">
+<Id tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:6:4:3:1:1" typref="2701647786" value="oo"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:6:4:3:1:2:1" typref="2701647786" value="1"/>
+<Unary_Exp op="size" typref="2701647786">
+<Id tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:6:4:3:1:2:2:1" typref="277897435" value="bfile"/>
+</Unary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+</Hypothesis>
+<Local_Hyp num="1">
+<Nary_Pred op="&amp;"/>
+</Local_Hyp>
+</Proof_Obligation>
+<Proof_Obligation merge="=">
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>mod_buffer</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Id tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:6:5:2:1:1:1" typref="2701647786" value="oo"/>
+<Unary_Exp op="dom" typref="3603043417">
+<Id tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:6:5:2:1:1:2:1" typref="277897435" value="buffer"/>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Id tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:6:5:2:1:2:1" typref="1177923086" value="ii"/>
+<Id tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:6:5:2:1:2:2" typref="3988092277" value="FIELD"/>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Id tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:6:5:2:1:3:1" typref="4077266551" value="vv"/>
+<Id tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:6:5:2:1:3:2" typref="3958993484" value="VALUE"/>
+</Exp_Comparison>
+</Nary_Pred>
+</Hypothesis>
+<Local_Hyp num="1">
+<Exp_Comparison op="=">
+<Boolean_Literal tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:7:5:3:1:2:2:1,B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:5:1:4:1:1,B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:7:5:3:1:2:1:1" typref="2043437594" value="TRUE"/>
+<Boolean_Literal tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:5:1:4:1:2" typref="2043437594" value="FALSE"/>
+</Exp_Comparison>
+</Local_Hyp>
+<Local_Hyp num="2">
+<Exp_Comparison op="=">
+<Boolean_Literal tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:7:5:3:1:2:2:1,B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:5:1:5:1:1,B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:7:5:3:1:2:1:1" typref="2043437594" value="TRUE"/>
+<Boolean_Literal tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:5:1:5:1:2" typref="2043437594" value="TRUE"/>
+</Exp_Comparison>
+</Local_Hyp>
+<Local_Hyp num="3">
+<Nary_Pred op="&amp;"/>
+</Local_Hyp>
+<Simple_Goal merge="0">
+<Tag>Invariant is preserved</Tag>
+<Goal>
+<Binary_Pred op="=>">
+<Ref_Hyp num="3"/>
+<Exp_Comparison op=":" initialTag="((buffer) : (((dom(bfile)) +-> (((FIELD) --> (VALUE))))))" goalTag="Invariant is preserved">
+<Binary_Exp op="&lt;+" tag=",B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:5:1:2:1,B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:7:5:3:1:1:1:1:1:1" typref="277897435">
+<Id tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:7:5:3:1:1:1:1:1:1" typref="277897435" value="buffer" fixed="false"/>
+<Nary_Exp op="{">
+<Binary_Exp op="|->">
+<Id tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:7:5:3:1:1:1:1:1:2" typref="2701647786" value="oo"/>
+<Binary_Exp op="&lt;+">
+<Binary_Exp op="(" typref="2927107167">
+<Id tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:7:5:3:1:1:1:1:1:1" typref="277897435" value="buffer" fixed="false"/>
+<Id tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:7:5:3:1:1:1:1:1:2" typref="2701647786" value="oo"/>
+</Binary_Exp>
+<Nary_Exp op="{">
+<Binary_Exp op="|->">
+<Id tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:7:5:3:1:1:1:1:2" typref="1177923086" value="ii"/>
+<Id tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:7:5:3:1:1:2:1" typref="4077266551" value="vv"/>
+</Binary_Exp>
+</Nary_Exp>
+</Binary_Exp>
+</Binary_Exp>
+</Nary_Exp>
+</Binary_Exp>
+<Binary_Exp op="+->" typref="3173643880">
+<Unary_Exp op="dom" typref="3603043417">
+<Id tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:5:1:2:2:1:1" typref="277897435" value="bfile"/>
+</Unary_Exp>
+<Binary_Exp op="-->" typref="1599463524">
+<Id tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:5:1:2:2:2:1" typref="3988092277" value="FIELD"/>
+<Id tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:5:1:2:2:2:2" typref="3958993484" value="VALUE"/>
+</Binary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+</Binary_Pred>
+</Goal>
+</Simple_Goal>
+<Simple_Goal merge="">
+<Tag>Invariant is preserved</Tag>
+<Goal>
+<Binary_Pred op="=>">
+<Nary_Pred op="&amp;">
+<Ref_Hyp num="3"/>
+<Ref_Hyp num="1"/>
+</Nary_Pred>
+<Exp_Comparison op="&lt;:">
+<Binary_Exp op="&lt;+" tag=",B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:5:1:4:2:1,B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:7:5:3:1:1:1:1:1:1" typref="277897435">
+<Id tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:7:5:3:1:1:1:1:1:1" typref="277897435" value="buffer" fixed="false"/>
+<Nary_Exp op="{">
+<Binary_Exp op="|->">
+<Id tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:7:5:3:1:1:1:1:1:2" typref="2701647786" value="oo"/>
+<Binary_Exp op="&lt;+">
+<Binary_Exp op="(" typref="2927107167">
+<Id tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:7:5:3:1:1:1:1:1:1" typref="277897435" value="buffer" fixed="false"/>
+<Id tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:7:5:3:1:1:1:1:1:2" typref="2701647786" value="oo"/>
+</Binary_Exp>
+<Nary_Exp op="{">
+<Binary_Exp op="|->">
+<Id tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:7:5:3:1:1:1:1:2" typref="1177923086" value="ii"/>
+<Id tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:7:5:3:1:1:2:1" typref="4077266551" value="vv"/>
+</Binary_Exp>
+</Nary_Exp>
+</Binary_Exp>
+</Binary_Exp>
+</Nary_Exp>
+</Binary_Exp>
+<Id tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:5:1:4:2:2" typref="277897435" value="bfile"/>
+</Exp_Comparison>
+</Binary_Pred>
+</Goal>
+<Proof_State proofState="Unproved" methodList="?" passList="Force(0),?"/>
+</Simple_Goal>
+<Simple_Goal merge="">
+<Tag>Invariant is preserved</Tag>
+<Goal>
+<Binary_Pred op="=>">
+<Nary_Pred op="&amp;">
+<Ref_Hyp num="3"/>
+<Ref_Hyp num="2"/>
+</Nary_Pred>
+<Exp_Comparison op="/=">
+<Binary_Exp op="&lt;+" tag=",B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:5:1:5:2:1,B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:7:5:3:1:1:1:1:1:1" typref="277897435">
+<Id tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:7:5:3:1:1:1:1:1:1" typref="277897435" value="buffer" fixed="false"/>
+<Nary_Exp op="{">
+<Binary_Exp op="|->">
+<Id tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:7:5:3:1:1:1:1:1:2" typref="2701647786" value="oo"/>
+<Binary_Exp op="&lt;+">
+<Binary_Exp op="(" typref="2927107167">
+<Id tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:7:5:3:1:1:1:1:1:1" typref="277897435" value="buffer" fixed="false"/>
+<Id tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:7:5:3:1:1:1:1:1:2" typref="2701647786" value="oo"/>
+</Binary_Exp>
+<Nary_Exp op="{">
+<Binary_Exp op="|->">
+<Id tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:7:5:3:1:1:1:1:2" typref="1177923086" value="ii"/>
+<Id tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:7:5:3:1:1:2:1" typref="4077266551" value="vv"/>
+</Binary_Exp>
+</Nary_Exp>
+</Binary_Exp>
+</Binary_Exp>
+</Nary_Exp>
+</Binary_Exp>
+<EmptySet tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:5:1:5:2:2" typref="277897435"/>
+</Exp_Comparison>
+</Binary_Pred>
+</Goal>
+<Proof_State proofState="Unproved" methodList="?" passList="Force(0),?"/>
+</Simple_Goal>
+</Proof_Obligation>
+<Proof_Obligation merge="=">
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>size_file</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis/>
+<Local_Hyp num="1">
+<Nary_Pred op="&amp;"/>
+</Local_Hyp>
+</Proof_Obligation>
+<Proof_Obligation merge="=">
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>val_buffer</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Id tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:6:7:3:1:1:1" typref="2701647786" value="oo"/>
+<Unary_Exp op="dom" typref="3603043417">
+<Id tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:6:7:3:1:1:2:1" typref="277897435" value="buffer"/>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Id tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:6:7:3:1:2:1" typref="1177923086" value="ii"/>
+<Id tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:6:7:3:1:2:2" typref="3988092277" value="FIELD"/>
+</Exp_Comparison>
+</Nary_Pred>
+</Hypothesis>
+<Local_Hyp num="1">
+<Nary_Pred op="&amp;"/>
+</Local_Hyp>
+</Proof_Obligation>
+<Proof_Obligation merge="=">
+<Tag>WellDefinednessConstraints</Tag>
+<Local_Hyp num="1">
+<Set>
+<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:2:1:2:1" typref="3958993484" value="VALUE"/>
+</Set>
+</Local_Hyp>
+<Local_Hyp num="2">
+<Set>
+<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:2:1:1:1" typref="3988092277" value="FIELD"/>
+</Set>
+</Local_Hyp>
+</Proof_Obligation>
+<Proof_Obligation merge="=">
+<Tag>WellDefinednessProperties</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Hypothesis/>
+</Proof_Obligation>
+<Proof_Obligation merge="=">
+<Tag>WellDefinednessInvariant</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Local_Hyp num="1">
+<Exp_Comparison op="=">
+<Id tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:5:1:4:1:1" typref="2043437594" value="updated"/>
+<Boolean_Literal tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:5:1:4:1:2" typref="2043437594" value="FALSE"/>
+</Exp_Comparison>
+</Local_Hyp>
+<Local_Hyp num="2">
+<Exp_Comparison op="=">
+<Id tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:5:1:5:1:1" typref="2043437594" value="updated"/>
+<Boolean_Literal tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:5:1:5:1:2" typref="2043437594" value="TRUE"/>
+</Exp_Comparison>
+</Local_Hyp>
+<Local_Hyp num="3">
+<Binary_Pred op="=>" initialTag="((((updated) = (FALSE))) => (buffer : POW( bfile)))">
+<Exp_Comparison op="=">
+<Id tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:5:1:4:1:1" typref="2043437594" value="updated"/>
+<Boolean_Literal tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:5:1:4:1:2" typref="2043437594" value="FALSE"/>
+</Exp_Comparison>
+<Exp_Comparison op="&lt;:">
+<Id tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:5:1:4:2:1" typref="277897435" value="buffer"/>
+<Id tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:5:1:4:2:2" typref="277897435" value="bfile"/>
+</Exp_Comparison>
+</Binary_Pred>
+</Local_Hyp>
+<Local_Hyp num="4">
+<Exp_Comparison op=":" initialTag="((updated) : (BOOL))">
+<Id tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:5:1:3:1" typref="2043437594" value="updated"/>
+<Id tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:5:1:3:2" typref="4282494527" value="BOOL"/>
+</Exp_Comparison>
+</Local_Hyp>
+<Local_Hyp num="5">
+<Exp_Comparison op=":" initialTag="((buffer) : (((dom(bfile)) +-> (((FIELD) --> (VALUE))))))">
+<Id tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:5:1:2:1" typref="277897435" value="buffer"/>
+<Binary_Exp op="+->" typref="3173643880">
+<Unary_Exp op="dom" typref="3603043417">
+<Id tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:5:1:2:2:1:1" typref="277897435" value="bfile"/>
+</Unary_Exp>
+<Binary_Exp op="-->" typref="1599463524">
+<Id tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:5:1:2:2:2:1" typref="3988092277" value="FIELD"/>
+<Id tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:5:1:2:2:2:2" typref="3958993484" value="VALUE"/>
+</Binary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+</Local_Hyp>
+<Local_Hyp num="6">
+<Exp_Comparison op=":" initialTag="((bfile) : (seq(((FIELD) --> (VALUE)))))">
+<Id tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:5:1:1:1" typref="277897435" value="bfile"/>
+<Unary_Exp op="seq" typref="3173643880">
+<Binary_Exp op="-->" typref="1599463524">
+<Id tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:5:1:1:2:1:1" typref="3988092277" value="FIELD"/>
+<Id tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:5:1:1:2:1:2" typref="3958993484" value="VALUE"/>
+</Binary_Exp>
+</Unary_Exp>
+</Exp_Comparison>
+</Local_Hyp>
+</Proof_Obligation>
+<Proof_Obligation merge="=">
+<Tag>WellDefinednessAssertions</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+</Proof_Obligation>
+<Proof_Obligation merge="=">
+<Tag>WellDefinednessInitialisation</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+</Proof_Obligation>
+<Proof_Obligation merge="=">
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_Precondition_get_record</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+</Proof_Obligation>
+<Proof_Obligation merge="=">
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_get_record</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Exp_Comparison op=":">
+<Id tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:6:1:2:1:1" typref="2701647786" value="oo"/>
+<Unary_Exp op="dom" typref="3603043417">
+<Id tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:6:1:2:1:2:1" typref="277897435" value="bfile"/>
+</Unary_Exp>
+</Exp_Comparison>
+</Hypothesis>
+<Simple_Goal>
+<Tag>Well definedness</Tag>
+<Goal>
+<Exp_Comparison op=":">
+<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:6:1:3:1:1:2:1:1:2:1" typref="277897435" value="bfile"/>
+<Binary_Exp op="+->">
+<Unary_Exp op="dom">
+<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:6:1:3:1:1:2:1:1:2:1" typref="277897435" value="bfile"/>
+</Unary_Exp>
+<Unary_Exp op="ran">
+<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:6:1:3:1:1:2:1:1:2:1" typref="277897435" value="bfile"/>
+</Unary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+</Goal>
+</Simple_Goal>
+</Proof_Obligation>
+<Proof_Obligation merge="=">
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_Precondition_put_buffer</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+</Proof_Obligation>
+<Proof_Obligation merge="=">
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_put_buffer</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Exp_Comparison op="=">
+<Id tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:6:2:1:1:1" typref="2043437594" value="updated"/>
+<Boolean_Literal tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:6:2:1:1:2" typref="2043437594" value="TRUE"/>
+</Exp_Comparison>
+</Hypothesis>
+</Proof_Obligation>
+<Proof_Obligation merge="=">
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_Precondition_create_record</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Local_Hyp num="1">
+<Exp_Comparison op=":">
+<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:6:3:3:1:1:1" typref="4077266551" value="vv"/>
+<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:6:3:3:1:1:2" typref="3958993484" value="VALUE"/>
+</Exp_Comparison>
+</Local_Hyp>
+<Simple_Goal>
+<Tag>Well definedness</Tag>
+<Goal>
+<Binary_Pred op="=>">
+<Ref_Hyp num="1"/>
+<Exp_Comparison op=":">
+<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:6:3:3:1:2:1:1" typref="277897435" value="bfile"/>
+<Unary_Exp op="seq">
+<Unary_Exp op="ran">
+<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:6:3:3:1:2:1:1" typref="277897435" value="bfile"/>
+</Unary_Exp>
+</Unary_Exp>
+</Exp_Comparison>
+</Binary_Pred>
+</Goal>
+</Simple_Goal>
+</Proof_Obligation>
+<Proof_Obligation merge="=">
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_create_record</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Id tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:6:3:3:1:1:1" typref="4077266551" value="vv"/>
+<Id tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:6:3:3:1:1:2" typref="3958993484" value="VALUE"/>
+</Exp_Comparison>
+<Exp_Comparison op="/=">
+<Unary_Exp op="size" typref="2701647786">
+<Id tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:6:3:3:1:2:1:1" typref="277897435" value="bfile"/>
+</Unary_Exp>
+<Id tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:6:3:3:1:2:2" typref="2701647786" value="max_rec"/>
+</Exp_Comparison>
+</Nary_Pred>
+</Hypothesis>
+<Simple_Goal>
+<Tag>Well definedness</Tag>
+<Goal>
+<Exp_Comparison op=":">
+<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:6:3:4:1:1:2:1:1" typref="277897435" value="bfile"/>
+<Unary_Exp op="seq">
+<Unary_Exp op="ran">
+<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:6:3:4:1:1:2:1:1" typref="277897435" value="bfile"/>
+</Unary_Exp>
+</Unary_Exp>
+</Exp_Comparison>
+</Goal>
+</Simple_Goal>
+</Proof_Obligation>
+<Proof_Obligation merge="=">
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_Precondition_not_in_buffer</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Simple_Goal>
+<Tag>Well definedness</Tag>
+<Goal>
+<Exp_Comparison op=":">
+<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:6:4:3:1:2:2:1" typref="277897435" value="bfile"/>
+<Unary_Exp op="seq">
+<Unary_Exp op="ran">
+<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:6:4:3:1:2:2:1" typref="277897435" value="bfile"/>
+</Unary_Exp>
+</Unary_Exp>
+</Exp_Comparison>
+</Goal>
+</Simple_Goal>
+</Proof_Obligation>
+<Proof_Obligation merge="=">
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_not_in_buffer</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Exp_Comparison op=":">
+<Id tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:6:4:3:1:1" typref="2701647786" value="oo"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:6:4:3:1:2:1" typref="2701647786" value="1"/>
+<Unary_Exp op="size" typref="2701647786">
+<Id tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:6:4:3:1:2:2:1" typref="277897435" value="bfile"/>
+</Unary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+</Hypothesis>
+</Proof_Obligation>
+<Proof_Obligation merge="=">
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_Precondition_mod_buffer</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Local_Hyp num="1">
+<Exp_Comparison op=":">
+<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:6:5:2:1:2:1" typref="1177923086" value="ii"/>
+<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:6:5:2:1:2:2" typref="3988092277" value="FIELD"/>
+</Exp_Comparison>
+</Local_Hyp>
+<Local_Hyp num="2">
+<Exp_Comparison op=":">
+<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:6:5:2:1:1:1" typref="2701647786" value="oo"/>
+<Unary_Exp op="dom" typref="3603043417">
+<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:6:5:2:1:1:2:1" typref="277897435" value="buffer"/>
+</Unary_Exp>
+</Exp_Comparison>
+</Local_Hyp>
+</Proof_Obligation>
+<Proof_Obligation merge="=">
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_mod_buffer</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Id tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:6:5:2:1:1:1" typref="2701647786" value="oo"/>
+<Unary_Exp op="dom" typref="3603043417">
+<Id tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:6:5:2:1:1:2:1" typref="277897435" value="buffer"/>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Id tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:6:5:2:1:2:1" typref="1177923086" value="ii"/>
+<Id tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:6:5:2:1:2:2" typref="3988092277" value="FIELD"/>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Id tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:6:5:2:1:3:1" typref="4077266551" value="vv"/>
+<Id tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:6:5:2:1:3:2" typref="3958993484" value="VALUE"/>
+</Exp_Comparison>
+</Nary_Pred>
+</Hypothesis>
+<Simple_Goal>
+<Tag>Well definedness</Tag>
+<Goal>
+<Exp_Comparison op=":">
+<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:6:5:3:1:1:1:1:1:1" typref="277897435" value="buffer"/>
+<Binary_Exp op="+->">
+<Unary_Exp op="dom">
+<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:6:5:3:1:1:1:1:1:1" typref="277897435" value="buffer"/>
+</Unary_Exp>
+<Unary_Exp op="ran">
+<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:6:5:3:1:1:1:1:1:1" typref="277897435" value="buffer"/>
+</Unary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+</Goal>
+</Simple_Goal>
+</Proof_Obligation>
+<Proof_Obligation merge="=">
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_Precondition_size_file</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+</Proof_Obligation>
+<Proof_Obligation merge="=">
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_size_file</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis/>
+<Simple_Goal>
+<Tag>Well definedness</Tag>
+<Goal>
+<Exp_Comparison op=":">
+<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:6:6:2:1:2:1:1" typref="277897435" value="bfile"/>
+<Unary_Exp op="seq">
+<Unary_Exp op="ran">
+<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:6:6:2:1:2:1:1" typref="277897435" value="bfile"/>
+</Unary_Exp>
+</Unary_Exp>
+</Exp_Comparison>
+</Goal>
+</Simple_Goal>
+</Proof_Obligation>
+<Proof_Obligation merge="=">
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_Precondition_val_buffer</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Local_Hyp num="1">
+<Exp_Comparison op=":">
+<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:6:7:3:1:1:1" typref="2701647786" value="oo"/>
+<Unary_Exp op="dom" typref="3603043417">
+<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:6:7:3:1:1:2:1" typref="277897435" value="buffer"/>
+</Unary_Exp>
+</Exp_Comparison>
+</Local_Hyp>
+</Proof_Obligation>
+<Proof_Obligation merge="=">
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_val_buffer</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Id tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:6:7:3:1:1:1" typref="2701647786" value="oo"/>
+<Unary_Exp op="dom" typref="3603043417">
+<Id tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:6:7:3:1:1:2:1" typref="277897435" value="buffer"/>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Id tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:6:7:3:1:2:1" typref="1177923086" value="ii"/>
+<Id tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:6:7:3:1:2:2" typref="3988092277" value="FIELD"/>
+</Exp_Comparison>
+</Nary_Pred>
+</Hypothesis>
+<Simple_Goal>
+<Tag>Well definedness</Tag>
+<Goal>
+<Exp_Comparison op=":">
+<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:6:7:4:1:2:1:1:1" typref="277897435" value="buffer"/>
+<Binary_Exp op="+->">
+<Unary_Exp op="dom">
+<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:6:7:4:1:2:1:1:1" typref="277897435" value="buffer"/>
+</Unary_Exp>
+<Unary_Exp op="ran">
+<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:6:7:4:1:2:1:1:1" typref="277897435" value="buffer"/>
+</Unary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+</Goal>
+</Simple_Goal>
+<Simple_Goal>
+<Tag>Well definedness</Tag>
+<Goal>
+<Exp_Comparison op=":">
+<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:6:7:4:1:2:1:2" typref="1177923086" value="ii"/>
+<Unary_Exp op="dom">
+<Binary_Exp op="(" typref="2927107167">
+<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:6:7:4:1:2:1:1:1" typref="277897435" value="buffer"/>
+<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:6:7:4:1:2:1:1:2" typref="2701647786" value="oo"/>
+</Binary_Exp>
+</Unary_Exp>
+</Exp_Comparison>
+</Goal>
+</Simple_Goal>
+<Simple_Goal>
+<Tag>Well definedness</Tag>
+<Goal>
+<Exp_Comparison op=":">
+<Binary_Exp op="(" typref="2927107167">
+<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:6:7:4:1:2:1:1:1" typref="277897435" value="buffer"/>
+<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:6:7:4:1:2:1:1:2" typref="2701647786" value="oo"/>
+</Binary_Exp>
+<Binary_Exp op="+->">
+<Unary_Exp op="dom">
+<Binary_Exp op="(" typref="2927107167">
+<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:6:7:4:1:2:1:1:1" typref="277897435" value="buffer"/>
+<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:6:7:4:1:2:1:1:2" typref="2701647786" value="oo"/>
+</Binary_Exp>
+</Unary_Exp>
+<Unary_Exp op="ran">
+<Binary_Exp op="(" typref="2927107167">
+<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:6:7:4:1:2:1:1:1" typref="277897435" value="buffer"/>
+<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:6:7:4:1:2:1:1:2" typref="2701647786" value="oo"/>
+</Binary_Exp>
+</Unary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+</Goal>
+</Simple_Goal>
+</Proof_Obligation>
+<TypeInfos merge="=">
+<Type id="2701647786">
+<Id tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:7:1:1" value="INTEGER"/>
+</Type>
+<Type id="3988092277">
+<Unary_Exp op="POW">
+<Id tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:7:2:1:1" value="FIELD"/>
+</Unary_Exp>
+</Type>
+<Type id="3958993484">
+<Unary_Exp op="POW">
+<Id tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:7:3:1:1" value="VALUE"/>
+</Unary_Exp>
+</Type>
+<Type id="3603043417">
+<Unary_Exp op="POW">
+<Id tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:7:4:1:1" value="INTEGER"/>
+</Unary_Exp>
+</Type>
+<Type id="277897435">
+<Unary_Exp op="POW">
+<Binary_Exp op="*">
+<Id tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:7:5:1:1:1" value="INTEGER"/>
+<Unary_Exp op="POW">
+<Binary_Exp op="*">
+<Id tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:7:5:1:1:2:1:1" value="FIELD"/>
+<Id tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:7:5:1:1:2:1:2" value="VALUE"/>
+</Binary_Exp>
+</Unary_Exp>
+</Binary_Exp>
+</Unary_Exp>
+</Type>
+<Type id="2043437594">
+<Id tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:7:6:1" value="BOOL"/>
+</Type>
+<Type id="3173643880">
+<Unary_Exp op="POW">
+<Unary_Exp op="POW">
+<Binary_Exp op="*">
+<Id tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:7:7:1:1:1:1" value="INTEGER"/>
+<Unary_Exp op="POW">
+<Binary_Exp op="*">
+<Id tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:7:7:1:1:1:2:1:1" value="FIELD"/>
+<Id tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:7:7:1:1:1:2:1:2" value="VALUE"/>
+</Binary_Exp>
+</Unary_Exp>
+</Binary_Exp>
+</Unary_Exp>
+</Unary_Exp>
+</Type>
+<Type id="1599463524">
+<Unary_Exp op="POW">
+<Unary_Exp op="POW">
+<Binary_Exp op="*">
+<Id tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:7:8:1:1:1:1" value="FIELD"/>
+<Id tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:7:8:1:1:1:2" value="VALUE"/>
+</Binary_Exp>
+</Unary_Exp>
+</Unary_Exp>
+</Type>
+<Type id="4282494527">
+<Unary_Exp op="POW">
+<Id tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:7:9:1:1" value="BOOL"/>
+</Unary_Exp>
+</Type>
+<Type id="2085061915">
+<Unary_Exp op="POW">
+<Binary_Exp op="*">
+<Id tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:7:10:1:1:1" value="INTEGER"/>
+<Unary_Exp op="POW">
+<Unary_Exp op="POW">
+<Unary_Exp op="POW">
+<Binary_Exp op="*">
+<Id tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:7:10:1:1:2:1:1:1:1" value="FIELD"/>
+<Id tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:7:10:1:1:2:1:1:1:2" value="VALUE"/>
+</Binary_Exp>
+</Unary_Exp>
+</Unary_Exp>
+</Unary_Exp>
+</Binary_Exp>
+</Unary_Exp>
+</Type>
+<Type id="3817003670">
+<Unary_Exp op="POW">
+<Generic_Type tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:7:11:1:1"/>
+</Unary_Exp>
+</Type>
+<Type id="1098621736">
+<Binary_Exp op="*">
+<Id tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:7:12:1:1" value="INTEGER"/>
+<Unary_Exp op="POW">
+<Binary_Exp op="*">
+<Id tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:7:12:1:2:1:1" value="FIELD"/>
+<Id tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:7:12:1:2:1:2" value="VALUE"/>
+</Binary_Exp>
+</Unary_Exp>
+</Binary_Exp>
+</Type>
+<Type id="2927107167">
+<Unary_Exp op="POW">
+<Binary_Exp op="*">
+<Id tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:7:13:1:1:1" value="FIELD"/>
+<Id tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:7:13:1:1:2" value="VALUE"/>
+</Binary_Exp>
+</Unary_Exp>
+</Type>
+<Type id="4077266551">
+<Id tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:7:14:1" value="VALUE"/>
+</Type>
+<Type id="1177923086">
+<Id tag="B:\DatabaseSystem\bdp\FILE_ACCESS.bxml:1:7:15:1" value="FIELD"/>
+</Type>
+</TypeInfos>
+</Proof_Obligations>

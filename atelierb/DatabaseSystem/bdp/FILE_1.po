@@ -1,0 +1,96 @@
+THEORY ProofList IS
+_f(1) & _f(2) & _f(3) & _f(9) & _f(10) & WellDefinedness_size_file.1,(_f(38) => _f(39));
+_f(1) & _f(2) & _f(3) & _f(9) & _f(10) & _f(49) & WellDefinedness_create_record.1,(_f(38) => _f(39));
+_f(1) & _f(2) & _f(3) & _f(9) & _f(10) & _f(11) & WellDefinedness_val_file.12,(_f(14) & _f(38) => _f(48));
+_f(1) & _f(2) & _f(3) & _f(9) & _f(10) & _f(11) & WellDefinedness_val_file.11,(_f(14) & _f(38) => _f(47));
+_f(1) & _f(2) & _f(3) & _f(9) & _f(10) & _f(11) & WellDefinedness_val_file.10,(_f(14) & _f(38) => _f(42));
+_f(1) & _f(2) & _f(3) & _f(9) & _f(10) & _f(11) & WellDefinedness_val_file.9,(_f(14) & _f(38) => _f(44));
+_f(1) & _f(2) & _f(3) & _f(9) & _f(10) & _f(11) & WellDefinedness_val_file.8,(_f(13) & _f(38) => _f(46));
+_f(1) & _f(2) & _f(3) & _f(9) & _f(10) & _f(11) & WellDefinedness_val_file.7,(_f(13) & _f(38) => _f(45));
+_f(1) & _f(2) & _f(3) & _f(9) & _f(10) & _f(11) & WellDefinedness_val_file.6,(_f(13) & _f(38) => _f(41));
+_f(1) & _f(2) & _f(3) & _f(9) & _f(10) & _f(11) & WellDefinedness_val_file.5,(_f(13) & _f(38) => _f(43));
+_f(1) & _f(2) & _f(3) & _f(9) & _f(10) & _f(11) & WellDefinedness_val_file.4,(_f(13) & _f(38) => _f(40));
+_f(1) & _f(2) & _f(3) & _f(9) & _f(10) & _f(11) & WellDefinedness_val_file.3,(_f(13) & _f(38) => _f(19));
+_f(1) & _f(2) & _f(3) & _f(9) & _f(10) & _f(11) & WellDefinedness_val_file.2,(_f(17) => _f(18));
+_f(1) & _f(2) & _f(3) & _f(9) & _f(10) & _f(11) & WellDefinedness_val_file.1,(_f(38) => _f(39));
+_f(1) & _f(2) & _f(3) & _f(9) & _f(10) & _f(25) & WellDefinedness_mod_file.8,(_f(14) & _f(38) => _f(42));
+_f(1) & _f(2) & _f(3) & _f(9) & _f(10) & _f(25) & WellDefinedness_mod_file.7,(_f(14) & _f(38) => _f(37));
+_f(1) & _f(2) & _f(3) & _f(9) & _f(10) & _f(25) & WellDefinedness_mod_file.6,(_f(13) & _f(38) => _f(41));
+_f(1) & _f(2) & _f(3) & _f(9) & _f(10) & _f(25) & WellDefinedness_mod_file.5,(_f(13) & _f(38) => _f(36));
+_f(1) & _f(2) & _f(3) & _f(9) & _f(10) & _f(25) & WellDefinedness_mod_file.4,(_f(13) & _f(38) => _f(40));
+_f(1) & _f(2) & _f(3) & _f(9) & _f(10) & _f(25) & WellDefinedness_mod_file.3,(_f(13) & _f(38) => _f(19));
+_f(1) & _f(2) & _f(3) & _f(9) & _f(10) & _f(25) & WellDefinedness_mod_file.2,(_f(17) => _f(18));
+_f(1) & _f(2) & _f(3) & _f(9) & _f(10) & _f(25) & WellDefinedness_mod_file.1,(_f(38) => _f(39));
+_f(1) & _f(2) & _f(3) & _f(9) & _f(10) & _f(12) & size_file.1,(_f(7) => _f(35));
+_f(1) & _f(2) & _f(3) & _f(9) & _f(10) & _f(30) & create_record.2,(_f(26) & _f(31) & _f(26) & _f(32) & _f(7) => _f(34));
+_f(1) & _f(2) & _f(3) & _f(9) & _f(10) & _f(30) & create_record.1,(_f(26) & _f(31) & _f(26) & _f(32) & _f(7) => _f(33));
+_f(1) & _f(2) & _f(3) & _f(9) & _f(10) & mod_file.6,(_f(15) & _f(16) & _f(26) & _f(14) & _f(7) => _f(28));
+_f(1) & _f(2) & _f(3) & _f(9) & _f(10) & mod_file.5,(_f(15) & _f(16) & _f(26) & _f(14) & _f(17) => _f(23));
+_f(1) & _f(2) & _f(3) & _f(9) & _f(10) & mod_file.4,(_f(15) & _f(16) & _f(26) & _f(13) & _f(7) => _f(27));
+_f(1) & _f(2) & _f(3) & _f(9) & _f(10) & mod_file.3,(_f(15) & _f(16) & _f(26) & _f(13) & _f(17) => _f(20));
+_f(1) & _f(2) & _f(3) & _f(9) & _f(10) & mod_file.2,(_f(15) & _f(16) & _f(26) & _f(13) & _f(17) => _f(19));
+_f(1) & _f(2) & _f(3) & _f(9) & _f(10) & mod_file.1,(_f(15) & _f(16) & _f(26) & _f(17) => _f(18));
+_f(1) & _f(2) & _f(3) & _f(9) & _f(10) & _f(12) & val_file.7,(_f(15) & _f(16) & _f(14) & _f(7) => _f(24));
+_f(1) & _f(2) & _f(3) & _f(9) & _f(10) & _f(12) & val_file.6,(_f(15) & _f(16) & _f(14) & _f(17) => _f(23));
+_f(1) & _f(2) & _f(3) & _f(9) & _f(10) & _f(12) & val_file.5,(_f(15) & _f(16) & _f(13) & _f(7) => _f(22));
+_f(1) & _f(2) & _f(3) & _f(9) & _f(10) & _f(12) & val_file.4,(_f(15) & _f(16) & _f(13) & _f(7) => _f(21));
+_f(1) & _f(2) & _f(3) & _f(9) & _f(10) & _f(12) & val_file.3,(_f(15) & _f(16) & _f(13) & _f(17) => _f(20));
+_f(1) & _f(2) & _f(3) & _f(9) & _f(10) & _f(12) & val_file.2,(_f(15) & _f(16) & _f(13) & _f(17) => _f(19));
+_f(1) & _f(2) & _f(3) & _f(9) & _f(10) & _f(12) & val_file.1,(_f(15) & _f(16) & _f(17) => _f(18));
+_f(1) & _f(2) & _f(3) & Initialisation.1,(_f(4) & _f(5) & _f(6) & _f(7) => _f(8))
+END
+&
+THEORY Formulas IS
+((NAT) = (((0) .. (2147483647)))) & ((INT) = (((-2147483647) .. (2147483647))));
+FIELD: FIN(INTEGER) & not(FIELD = {}) & VALUE: FIN(INTEGER) & not(VALUE = {}) & ((max_rec) : ((NAT-{0})));
+bfile$1 : NATURAL-{0} +-> ((FIELD) --> (VALUE)) & ((bfile$1) : (seq(((FIELD) --> (VALUE))))) & ((buffer$1) : (((dom(bfile$1)) +-> (((FIELD) --> (VALUE))))));
+{} : NATURAL-{0} +-> ((FIELD) --> (VALUE));
+(({}) : (seq(((FIELD) --> (VALUE)))));
+(({}) : (((dom({})) +-> (((FIELD) --> (VALUE))))));
+"Refinement is correct";
+(({}) = ((({}) <+ ({}))));
+file : NATURAL-{0} +-> ((FIELD) --> (VALUE)) & ((file) : (seq(((FIELD) --> (VALUE))))) & (size(file) <= max_rec);
+((file) = (((bfile$1) <+ (buffer$1))));
+((oo) : (dom(file))) & ((ii) : (FIELD));
+((vv$1) = (vv));
+not(oo : dom(buffer$1));
+not(not(oo : dom(buffer$1)));
+((oo) : (dom(file)));
+((ii) : (FIELD));
+"Precondition predicate";
+((oo) : (((1) .. (size(bfile$1)))));
+((oo) : (dom(bfile$1)));
+((oo) : (dom({((oo) |-> ((bfile$1 )(oo)))})));
+((file) = (((((bfile$1) <+ (buffer$1))) <+ ({((oo) |-> ((bfile$1 )(oo)))}))));
+(((({((oo) |-> ((bfile$1 )(oo)))} )(oo) )(ii)) = (((file )(oo) )(ii)));
+((oo) : (dom(buffer$1)));
+((((buffer$1 )(oo) )(ii)) = (((file )(oo) )(ii)));
+((oo) : (dom(file))) & ((ii) : (FIELD)) & ((vv) : (VALUE));
+((vv) : (VALUE));
+((((file) <+ ({((oo) |-> ((((file )(oo)) <+ ({((ii) |-> (vv))}))))}))) = (((((bfile$1) <+ (buffer$1))) <+ ((({((oo) |-> ((bfile$1 )(oo)))}) <+ ({((oo) |-> (((({((oo) |-> ((bfile$1 )(oo)))} )(oo)) <+ ({((ii) |-> (vv))}))))}))))));
+((((file) <+ ({((oo) |-> ((((file )(oo)) <+ ({((ii) |-> (vv))}))))}))) = (((bfile$1) <+ (((buffer$1) <+ ({((oo) |-> ((((buffer$1 )(oo)) <+ ({((ii) |-> (vv))}))))}))))));
+((vv) : (VALUE)) & (size(file) +1 <= max_rec);
+((oo$1) = (oo));
+(size(file) +1 <= max_rec);
+not(size(bfile$1) = max_rec);
+((((file) <- ((FIELD * {vv})))) = (((((bfile$1) <- ((FIELD * {vv})))) <+ (buffer$1))));
+(((size(bfile$1) + 1)) = ((size(file) + 1)));
+((size(bfile$1)) = (size(file)));
+((vv) : (dom({((oo) |-> ((bfile$1 )(oo)))})));
+((vv) : (dom(buffer$1)));
+"Well definedness";
+((bfile$1) : (seq(ran(bfile$1))));
+((bfile$1) : (((dom(bfile$1)) +-> (ran(bfile$1)))));
+(({((oo) |-> ((bfile$1 )(oo)))}) : (((dom({((oo) |-> ((bfile$1 )(oo)))})) +-> (ran({((oo) |-> ((bfile$1 )(oo)))})))));
+((buffer$1) : (((dom(buffer$1)) +-> (ran(buffer$1)))));
+((ii) : (dom({((oo) |-> ((bfile$1 )(oo)))})));
+((ii) : (dom(buffer$1)));
+((ii) : (dom(({((oo) |-> ((bfile$1 )(oo)))} )(ii))));
+((({((oo) |-> ((bfile$1 )(oo)))} )(ii)) : (((dom(({((oo) |-> ((bfile$1 )(oo)))} )(ii))) +-> (ran(({((oo) |-> ((bfile$1 )(oo)))} )(ii))))));
+((ii) : (dom((buffer$1 )(ii))));
+(((buffer$1 )(ii)) : (((dom((buffer$1 )(ii))) +-> (ran((buffer$1 )(ii))))));
+((vv) : (VALUE)) & (size(file) +1 <= max_rec) & ((vv) : (VALUE)) & not(size(bfile$1) = max_rec)
+END
+&
+THEORY EnumerateX
+END

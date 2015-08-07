@@ -1,0 +1,4 @@
+﻿THEORY User_Pass IS
+Operation(WellDefinedness_create_record) & ff(0) & pp(rp.1);
+Operation(WellDefinedness_size_file) & ff(0) & pp(rp.1)
+END 

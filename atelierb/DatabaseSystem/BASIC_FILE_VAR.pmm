@@ -1,0 +1,8 @@
+﻿THEORY User_Pass IS
+
+Operation(NEW_RECORD) & ff(0) & mp & pr;
+Operation(WellDefinednessInvariant) & ff(0) & mp & ch & pr & pp;
+Operation(WellDefinedness_Precondition_NEW_RECORD) & ff(0) & mp & ch & pr & pp;
+Operation(WellDefinedness_NEW_RECORD) & ff(0) & mp & ch & pr & pp;
+Operation(WellDefinedness_SIZE_FILE) & ff(0) & mp & ch & pr & pp
+END 

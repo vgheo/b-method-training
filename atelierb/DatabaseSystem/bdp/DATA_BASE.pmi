@@ -1,0 +1,110 @@
+﻿THEORY BalanceX IS
+  DATA_BASE,27,27,0,0,0,0,0;
+  Initialisation,6,6,0,0,0,0,0;
+  WellDefinednessProperties,1,1,0,0,0,0,0;
+  WellDefinedness_val_mother,1,1,0,0,0,0,0;
+  WellDefinedness_val_sex,2,2,0,0,0,0,0;
+  WellDefinedness_val_spouse,1,1,0,0,0,0,0;
+  WellDefinedness_val_status,2,2,0,0,0,0,0;
+  death,1,1,0,0,0,0,0;
+  first_human,5,5,0,0,0,0,0;
+  marriage,3,3,0,0,0,0,0;
+  new_born,5,5,0,0,0,0,0
+END
+&
+THEORY ProofState IS
+  Proved(Util);
+  Proved(Util);
+  Proved(Util);
+  Proved(Util);
+  Proved(Util);
+  Proved(Util);
+  Proved(Util);
+  Proved(Util);
+  Proved(Util);
+  Proved(Util);
+  Proved(Util);
+  Proved(Util);
+  Proved(Util);
+  Proved(Util);
+  Proved(Util);
+  Proved(Util);
+  Proved(Util);
+  Proved(Util);
+  Proved(Util);
+  Proved(Util);
+  Proved(Util);
+  Proved(Util);
+  Proved(Util);
+  Proved(Util);
+  Proved(Util);
+  Proved(Util);
+  Proved(Util)
+END
+&
+THEORY MethodList IS
+  mp;
+  mp & pr & pp(rp.2);
+  mp;
+  mp;
+  mp;
+  mp;
+  mp;
+  mp & pr & ah({angel|->mm}: person\/{angel} +-> dom(husband)\/dom(wife)/\(sex~\/{ss|->angel})[{woman}]) & mp & pp(rp.1) & mp & pp & pp(rt.1) & pp;
+  mp & pr & pr & pr & pr & pr;
+  mp & pr;
+  mp & pr;
+  mp;
+  mp & pr & pr & pp(rp.2);
+  mp & pr & pr & pr & pr & pr;
+  mp & pr;
+  mp & pr;
+  mp;
+  mp & pr & pp(rp.2);
+  mp & pr & pp(rp.2);
+  mp & pr;
+  mp & pr;
+  mp;
+  mp;
+  mp;
+  mp;
+  mp;
+  mp
+END
+&
+THEORY PassList IS
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),(?;0;1;2;3);
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?
+END
+&
+THEORY ManForms 
+END
+&
+THEORY Version IS
+  PRVersion("svn")(CLT == "V4.0-53996")
+END

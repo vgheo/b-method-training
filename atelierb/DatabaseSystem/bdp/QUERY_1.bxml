@@ -1,0 +1,894 @@
+<Machine name='QUERY_1' type='implementation'>
+<Abstraction>QUERY</Abstraction>
+<Sees>
+<Referenced_Machine>
+<Name>DATA_BASE</Name>
+</Referenced_Machine>
+<Referenced_Machine>
+<Name>BASIC_IO</Name>
+</Referenced_Machine>
+<Referenced_Machine>
+<Name>BASIC_SEX</Name>
+</Referenced_Machine>
+<Referenced_Machine>
+<Name>BASIC_STATUS</Name>
+</Referenced_Machine>
+</Sees>
+<Initialisation>
+<Skip/>
+</Initialisation>
+<Operations>
+<Operation name='get_new_dead_person'>
+<Output_Parameters>
+<Id value='pp' typref='555065967'/>
+<Id value='bb' typref='2043437594'/>
+</Output_Parameters>
+<Body>
+<Nary_Sub op=';'>
+<Operation_Call>
+<Name>
+<Id value='STRING_WRITE'/>
+</Name>
+<Input_Parameters>
+<STRING_Literal value='Mother Id:' typref='3239339507'/>
+</Input_Parameters>
+</Operation_Call>
+<Operation_Call>
+<Name>
+<Id value='PERSON_read'/>
+</Name>
+<Output_Parameters>
+<Id value='pp' typref='555065967'/>
+</Output_Parameters>
+</Operation_Call>
+<Operation_Call>
+<Name>
+<Id value='is_present'/>
+</Name>
+<Input_Parameters>
+<Id value='pp' typref='555065967'/>
+</Input_Parameters>
+<Output_Parameters>
+<Id value='bb' typref='2043437594'/>
+</Output_Parameters>
+</Operation_Call>
+<If_Sub elseif='no'>
+<Condition>
+<Exp_Comparison op='='>
+<Id value='bb' typref='2043437594'/>
+<Boolean_Literal value='FALSE' typref='2043437594'/>
+</Exp_Comparison>
+</Condition>
+<Then>
+<Operation_Call>
+<Name>
+<Id value='STRING_WRITE'/>
+</Name>
+<Input_Parameters>
+<STRING_Literal value='Person does not exist\n' typref='3239339507'/>
+</Input_Parameters>
+</Operation_Call>
+</Then>
+<Else>
+<Nary_Sub op=';'>
+<Operation_Call>
+<Name>
+<Id value='is_living'/>
+</Name>
+<Input_Parameters>
+<Id value='pp' typref='555065967'/>
+</Input_Parameters>
+<Output_Parameters>
+<Id value='bb' typref='2043437594'/>
+</Output_Parameters>
+</Operation_Call>
+<If_Sub elseif='no'>
+<Condition>
+<Exp_Comparison op='='>
+<Id value='bb' typref='2043437594'/>
+<Boolean_Literal value='FALSE' typref='2043437594'/>
+</Exp_Comparison>
+</Condition>
+<Then>
+<Operation_Call>
+<Name>
+<Id value='STRING_WRITE'/>
+</Name>
+<Input_Parameters>
+<STRING_Literal value='Person must be alive\n' typref='3239339507'/>
+</Input_Parameters>
+</Operation_Call>
+</Then>
+</If_Sub>
+</Nary_Sub>
+</Else>
+</If_Sub>
+</Nary_Sub>
+</Body>
+</Operation>
+<Operation name='get_sex_of_new'>
+<Output_Parameters>
+<Id value='ss' typref='3153412450'/>
+<Id value='bb' typref='2043437594'/>
+</Output_Parameters>
+<Body>
+<Nary_Sub op=';'>
+<Operation_Call>
+<Name>
+<Id value='STRING_WRITE'/>
+</Name>
+<Input_Parameters>
+<STRING_Literal value='Sex: ' typref='3239339507'/>
+</Input_Parameters>
+</Operation_Call>
+<Operation_Call>
+<Name>
+<Id value='SEX_READ'/>
+</Name>
+<Output_Parameters>
+<Id value='ss' typref='3153412450'/>
+</Output_Parameters>
+</Operation_Call>
+<Operation_Call>
+<Name>
+<Id value='not_saturated'/>
+</Name>
+<Output_Parameters>
+<Id value='bb' typref='2043437594'/>
+</Output_Parameters>
+</Operation_Call>
+<If_Sub elseif='no'>
+<Condition>
+<Exp_Comparison op='='>
+<Id value='bb' typref='2043437594'/>
+<Boolean_Literal value='FALSE' typref='2043437594'/>
+</Exp_Comparison>
+</Condition>
+<Then>
+<Operation_Call>
+<Name>
+<Id value='STRING_WRITE'/>
+</Name>
+<Input_Parameters>
+<STRING_Literal value='System_full\n' typref='3239339507'/>
+</Input_Parameters>
+</Operation_Call>
+</Then>
+</If_Sub>
+</Nary_Sub>
+</Body>
+</Operation>
+<Operation name='get_sex_and_mother'>
+<Output_Parameters>
+<Id value='ss' typref='3153412450'/>
+<Id value='ww' typref='555065967'/>
+<Id value='bb' typref='2043437594'/>
+</Output_Parameters>
+<Body>
+<Nary_Sub op=';'>
+<Operation_Call>
+<Name>
+<Id value='STRING_WRITE'/>
+</Name>
+<Input_Parameters>
+<STRING_Literal value='Sex: ' typref='3239339507'/>
+</Input_Parameters>
+</Operation_Call>
+<Operation_Call>
+<Name>
+<Id value='SEX_READ'/>
+</Name>
+<Output_Parameters>
+<Id value='ss' typref='3153412450'/>
+</Output_Parameters>
+</Operation_Call>
+<Operation_Call>
+<Name>
+<Id value='STRING_WRITE'/>
+</Name>
+<Input_Parameters>
+<STRING_Literal value='Mother Id: ' typref='3239339507'/>
+</Input_Parameters>
+</Operation_Call>
+<Operation_Call>
+<Name>
+<Id value='PERSON_read'/>
+</Name>
+<Output_Parameters>
+<Id value='ww' typref='555065967'/>
+</Output_Parameters>
+</Operation_Call>
+<Operation_Call>
+<Name>
+<Id value='is_present'/>
+</Name>
+<Input_Parameters>
+<Id value='ww' typref='555065967'/>
+</Input_Parameters>
+<Output_Parameters>
+<Id value='bb' typref='2043437594'/>
+</Output_Parameters>
+</Operation_Call>
+<If_Sub elseif='no'>
+<Condition>
+<Exp_Comparison op='='>
+<Id value='bb' typref='2043437594'/>
+<Boolean_Literal value='FALSE' typref='2043437594'/>
+</Exp_Comparison>
+</Condition>
+<Then>
+<Operation_Call>
+<Name>
+<Id value='STRING_WRITE'/>
+</Name>
+<Input_Parameters>
+<STRING_Literal value='Person does not exist\n' typref='3239339507'/>
+</Input_Parameters>
+</Operation_Call>
+</Then>
+<Else>
+<Nary_Sub op=';'>
+<Operation_Call>
+<Name>
+<Id value='is_woman'/>
+</Name>
+<Input_Parameters>
+<Id value='ww' typref='555065967'/>
+</Input_Parameters>
+<Output_Parameters>
+<Id value='bb' typref='2043437594'/>
+</Output_Parameters>
+</Operation_Call>
+<If_Sub elseif='no'>
+<Condition>
+<Exp_Comparison op='='>
+<Id value='bb' typref='2043437594'/>
+<Boolean_Literal value='FALSE' typref='2043437594'/>
+</Exp_Comparison>
+</Condition>
+<Then>
+<Operation_Call>
+<Name>
+<Id value='STRING_WRITE'/>
+</Name>
+<Input_Parameters>
+<STRING_Literal value='Person must be a woman\n' typref='3239339507'/>
+</Input_Parameters>
+</Operation_Call>
+</Then>
+<Else>
+<Nary_Sub op=';'>
+<Operation_Call>
+<Name>
+<Id value='is_married'/>
+</Name>
+<Input_Parameters>
+<Id value='ww' typref='555065967'/>
+</Input_Parameters>
+<Output_Parameters>
+<Id value='bb' typref='2043437594'/>
+</Output_Parameters>
+</Operation_Call>
+<If_Sub elseif='no'>
+<Condition>
+<Exp_Comparison op='='>
+<Id value='bb' typref='2043437594'/>
+<Boolean_Literal value='FALSE' typref='2043437594'/>
+</Exp_Comparison>
+</Condition>
+<Then>
+<Operation_Call>
+<Name>
+<Id value='STRING_WRITE'/>
+</Name>
+<Input_Parameters>
+<STRING_Literal value='Person must be married\n' typref='3239339507'/>
+</Input_Parameters>
+</Operation_Call>
+</Then>
+<Else>
+<Nary_Sub op=';'>
+<Operation_Call>
+<Name>
+<Id value='not_saturated'/>
+</Name>
+<Output_Parameters>
+<Id value='bb' typref='2043437594'/>
+</Output_Parameters>
+</Operation_Call>
+<If_Sub elseif='no'>
+<Condition>
+<Exp_Comparison op='='>
+<Id value='bb' typref='2043437594'/>
+<Boolean_Literal value='FALSE' typref='2043437594'/>
+</Exp_Comparison>
+</Condition>
+<Then>
+<Operation_Call>
+<Name>
+<Id value='STRING_WRITE'/>
+</Name>
+<Input_Parameters>
+<STRING_Literal value='System full\n' typref='3239339507'/>
+</Input_Parameters>
+</Operation_Call>
+</Then>
+</If_Sub>
+</Nary_Sub>
+</Else>
+</If_Sub>
+</Nary_Sub>
+</Else>
+</If_Sub>
+</Nary_Sub>
+</Else>
+</If_Sub>
+</Nary_Sub>
+</Body>
+</Operation>
+<Operation name='get_new_couple'>
+<Output_Parameters>
+<Id value='mm' typref='555065967'/>
+<Id value='ww' typref='555065967'/>
+<Id value='bb' typref='2043437594'/>
+</Output_Parameters>
+<Body>
+<VAR_IN>
+<Variables>
+<Id value='pm' typref='2043437594'/>
+<Id value='pw' typref='2043437594'/>
+<Id value='bm' typref='2043437594'/>
+<Id value='bms' typref='2043437594'/>
+<Id value='bw' typref='2043437594'/>
+<Id value='bws' typref='2043437594'/>
+</Variables>
+<Body>
+<Nary_Sub op=';'>
+<Assignement_Sub>
+<Variables>
+<Id value='bb' typref='2043437594'/>
+</Variables>
+<Values>
+<Boolean_Literal value='TRUE' typref='2043437594'/>
+</Values>
+</Assignement_Sub>
+<Operation_Call>
+<Name>
+<Id value='STRING_WRITE'/>
+</Name>
+<Input_Parameters>
+<STRING_Literal value='Man Id: ' typref='3239339507'/>
+</Input_Parameters>
+</Operation_Call>
+<Operation_Call>
+<Name>
+<Id value='PERSON_read'/>
+</Name>
+<Output_Parameters>
+<Id value='mm' typref='555065967'/>
+</Output_Parameters>
+</Operation_Call>
+<Operation_Call>
+<Name>
+<Id value='STRING_WRITE'/>
+</Name>
+<Input_Parameters>
+<STRING_Literal value='Woman Id' typref='3239339507'/>
+</Input_Parameters>
+</Operation_Call>
+<Operation_Call>
+<Name>
+<Id value='PERSON_read'/>
+</Name>
+<Output_Parameters>
+<Id value='ww' typref='555065967'/>
+</Output_Parameters>
+</Operation_Call>
+<Operation_Call>
+<Name>
+<Id value='is_present'/>
+</Name>
+<Input_Parameters>
+<Id value='mm' typref='555065967'/>
+</Input_Parameters>
+<Output_Parameters>
+<Id value='pm' typref='2043437594'/>
+</Output_Parameters>
+</Operation_Call>
+<Operation_Call>
+<Name>
+<Id value='is_present'/>
+</Name>
+<Input_Parameters>
+<Id value='ww' typref='555065967'/>
+</Input_Parameters>
+<Output_Parameters>
+<Id value='pw' typref='2043437594'/>
+</Output_Parameters>
+</Operation_Call>
+<If_Sub elseif='no'>
+<Condition>
+<Exp_Comparison op='='>
+<Id value='pm' typref='2043437594'/>
+<Boolean_Literal value='FALSE' typref='2043437594'/>
+</Exp_Comparison>
+</Condition>
+<Then>
+<Nary_Sub op=';'>
+<Assignement_Sub>
+<Variables>
+<Id value='bb' typref='2043437594'/>
+</Variables>
+<Values>
+<Boolean_Literal value='FALSE' typref='2043437594'/>
+</Values>
+</Assignement_Sub>
+<Operation_Call>
+<Name>
+<Id value='STRING_WRITE'/>
+</Name>
+<Input_Parameters>
+<STRING_Literal value='First person does not exist\n' typref='3239339507'/>
+</Input_Parameters>
+</Operation_Call>
+</Nary_Sub>
+</Then>
+</If_Sub>
+<If_Sub elseif='no'>
+<Condition>
+<Exp_Comparison op='='>
+<Id value='pw' typref='2043437594'/>
+<Boolean_Literal value='FALSE' typref='2043437594'/>
+</Exp_Comparison>
+</Condition>
+<Then>
+<Nary_Sub op=';'>
+<Assignement_Sub>
+<Variables>
+<Id value='bb' typref='2043437594'/>
+</Variables>
+<Values>
+<Boolean_Literal value='FALSE' typref='2043437594'/>
+</Values>
+</Assignement_Sub>
+<Operation_Call>
+<Name>
+<Id value='STRING_WRITE'/>
+</Name>
+<Input_Parameters>
+<STRING_Literal value='Second person does not exist\n' typref='3239339507'/>
+</Input_Parameters>
+</Operation_Call>
+</Nary_Sub>
+</Then>
+</If_Sub>
+<If_Sub elseif='no'>
+<Condition>
+<Exp_Comparison op='='>
+<Id value='bb' typref='2043437594'/>
+<Boolean_Literal value='TRUE' typref='2043437594'/>
+</Exp_Comparison>
+</Condition>
+<Then>
+<Nary_Sub op=';'>
+<Operation_Call>
+<Name>
+<Id value='is_woman'/>
+</Name>
+<Input_Parameters>
+<Id value='mm' typref='555065967'/>
+</Input_Parameters>
+<Output_Parameters>
+<Id value='bm' typref='2043437594'/>
+</Output_Parameters>
+</Operation_Call>
+<Operation_Call>
+<Name>
+<Id value='is_married'/>
+</Name>
+<Input_Parameters>
+<Id value='mm' typref='555065967'/>
+</Input_Parameters>
+<Output_Parameters>
+<Id value='bms' typref='2043437594'/>
+</Output_Parameters>
+</Operation_Call>
+<Operation_Call>
+<Name>
+<Id value='is_woman'/>
+</Name>
+<Input_Parameters>
+<Id value='ww' typref='555065967'/>
+</Input_Parameters>
+<Output_Parameters>
+<Id value='bw' typref='2043437594'/>
+</Output_Parameters>
+</Operation_Call>
+<Operation_Call>
+<Name>
+<Id value='is_married'/>
+</Name>
+<Input_Parameters>
+<Id value='ww' typref='555065967'/>
+</Input_Parameters>
+<Output_Parameters>
+<Id value='bws' typref='2043437594'/>
+</Output_Parameters>
+</Operation_Call>
+<If_Sub elseif='no'>
+<Condition>
+<Exp_Comparison op='='>
+<Id value='bm' typref='2043437594'/>
+<Boolean_Literal value='TRUE' typref='2043437594'/>
+</Exp_Comparison>
+</Condition>
+<Then>
+<Nary_Sub op=';'>
+<Assignement_Sub>
+<Variables>
+<Id value='bb' typref='2043437594'/>
+</Variables>
+<Values>
+<Boolean_Literal value='FALSE' typref='2043437594'/>
+</Values>
+</Assignement_Sub>
+<Operation_Call>
+<Name>
+<Id value='STRING_WRITE'/>
+</Name>
+<Input_Parameters>
+<STRING_Literal value='First person must be a man\n' typref='3239339507'/>
+</Input_Parameters>
+</Operation_Call>
+</Nary_Sub>
+</Then>
+</If_Sub>
+<If_Sub elseif='no'>
+<Condition>
+<Exp_Comparison op='='>
+<Id value='bms' typref='2043437594'/>
+<Boolean_Literal value='TRUE' typref='2043437594'/>
+</Exp_Comparison>
+</Condition>
+<Then>
+<Nary_Sub op=';'>
+<Assignement_Sub>
+<Variables>
+<Id value='bb' typref='2043437594'/>
+</Variables>
+<Values>
+<Boolean_Literal value='FALSE' typref='2043437594'/>
+</Values>
+</Assignement_Sub>
+<Operation_Call>
+<Name>
+<Id value='STRING_WRITE'/>
+</Name>
+<Input_Parameters>
+<STRING_Literal value='First person must be a woman\n' typref='3239339507'/>
+</Input_Parameters>
+</Operation_Call>
+</Nary_Sub>
+</Then>
+</If_Sub>
+<If_Sub elseif='no'>
+<Condition>
+<Exp_Comparison op='='>
+<Id value='bw' typref='2043437594'/>
+<Boolean_Literal value='FALSE' typref='2043437594'/>
+</Exp_Comparison>
+</Condition>
+<Then>
+<Nary_Sub op=';'>
+<Assignement_Sub>
+<Variables>
+<Id value='bb' typref='2043437594'/>
+</Variables>
+<Values>
+<Boolean_Literal value='FALSE' typref='2043437594'/>
+</Values>
+</Assignement_Sub>
+<Operation_Call>
+<Name>
+<Id value='STRING_WRITE'/>
+</Name>
+<Input_Parameters>
+<STRING_Literal value='Second person must be a woman\n' typref='3239339507'/>
+</Input_Parameters>
+</Operation_Call>
+</Nary_Sub>
+</Then>
+</If_Sub>
+<If_Sub elseif='no'>
+<Condition>
+<Exp_Comparison op='='>
+<Id value='bws' typref='2043437594'/>
+<Boolean_Literal value='TRUE' typref='2043437594'/>
+</Exp_Comparison>
+</Condition>
+<Then>
+<Nary_Sub op=';'>
+<Assignement_Sub>
+<Variables>
+<Id value='bb' typref='2043437594'/>
+</Variables>
+<Values>
+<Boolean_Literal value='FALSE' typref='2043437594'/>
+</Values>
+</Assignement_Sub>
+<Operation_Call>
+<Name>
+<Id value='STRING_WRITE'/>
+</Name>
+<Input_Parameters>
+<STRING_Literal value='Second person must not be married\n' typref='3239339507'/>
+</Input_Parameters>
+</Operation_Call>
+</Nary_Sub>
+</Then>
+</If_Sub>
+</Nary_Sub>
+</Then>
+</If_Sub>
+</Nary_Sub>
+</Body>
+</VAR_IN>
+</Body>
+</Operation>
+<Operation name='get_and_print_person'>
+<Body>
+<VAR_IN>
+<Variables>
+<Id value='pp' typref='555065967'/>
+<Id value='bb' typref='2043437594'/>
+<Id value='vv' typref='3153412450'/>
+<Id value='uu' typref='2246778642'/>
+<Id value='ww' typref='555065967'/>
+<Id value='tt' typref='555065967'/>
+</Variables>
+<Body>
+<Nary_Sub op=';'>
+<Operation_Call>
+<Name>
+<Id value='STRING_WRITE'/>
+</Name>
+<Input_Parameters>
+<STRING_Literal value='Person Id: ' typref='3239339507'/>
+</Input_Parameters>
+</Operation_Call>
+<Operation_Call>
+<Name>
+<Id value='PERSON_read'/>
+</Name>
+<Output_Parameters>
+<Id value='pp' typref='555065967'/>
+</Output_Parameters>
+</Operation_Call>
+<Operation_Call>
+<Name>
+<Id value='is_present'/>
+</Name>
+<Input_Parameters>
+<Id value='pp' typref='555065967'/>
+</Input_Parameters>
+<Output_Parameters>
+<Id value='bb' typref='2043437594'/>
+</Output_Parameters>
+</Operation_Call>
+<If_Sub elseif='no'>
+<Condition>
+<Exp_Comparison op='='>
+<Id value='bb' typref='2043437594'/>
+<Boolean_Literal value='FALSE' typref='2043437594'/>
+</Exp_Comparison>
+</Condition>
+<Then>
+<Operation_Call>
+<Name>
+<Id value='STRING_WRITE'/>
+</Name>
+<Input_Parameters>
+<STRING_Literal value='Person does not exist \n' typref='3239339507'/>
+</Input_Parameters>
+</Operation_Call>
+</Then>
+<Else>
+<Nary_Sub op=';'>
+<Operation_Call>
+<Name>
+<Id value='STRING_WRITE'/>
+</Name>
+<Input_Parameters>
+<STRING_Literal value='\n Person: ' typref='3239339507'/>
+</Input_Parameters>
+</Operation_Call>
+<Operation_Call>
+<Name>
+<Id value='PERSON_write'/>
+</Name>
+<Input_Parameters>
+<Id value='pp' typref='555065967'/>
+</Input_Parameters>
+</Operation_Call>
+<Operation_Call>
+<Name>
+<Id value='STRING_WRITE'/>
+</Name>
+<Input_Parameters>
+<STRING_Literal value='\n Sex: ' typref='3239339507'/>
+</Input_Parameters>
+</Operation_Call>
+<Operation_Call>
+<Name>
+<Id value='val_sex'/>
+</Name>
+<Input_Parameters>
+<Id value='pp' typref='555065967'/>
+</Input_Parameters>
+<Output_Parameters>
+<Id value='vv' typref='3153412450'/>
+</Output_Parameters>
+</Operation_Call>
+<Operation_Call>
+<Name>
+<Id value='SEX_WRITE'/>
+</Name>
+<Input_Parameters>
+<Id value='vv' typref='3153412450'/>
+</Input_Parameters>
+</Operation_Call>
+<Operation_Call>
+<Name>
+<Id value='STRING_WRITE'/>
+</Name>
+<Input_Parameters>
+<STRING_Literal value='\n Status: ' typref='3239339507'/>
+</Input_Parameters>
+</Operation_Call>
+<Operation_Call>
+<Name>
+<Id value='val_status'/>
+</Name>
+<Input_Parameters>
+<Id value='pp' typref='555065967'/>
+</Input_Parameters>
+<Output_Parameters>
+<Id value='uu' typref='2246778642'/>
+</Output_Parameters>
+</Operation_Call>
+<Operation_Call>
+<Name>
+<Id value='STATUS_WRITE'/>
+</Name>
+<Input_Parameters>
+<Id value='uu' typref='2246778642'/>
+</Input_Parameters>
+</Operation_Call>
+<Operation_Call>
+<Name>
+<Id value='has_mother'/>
+</Name>
+<Input_Parameters>
+<Id value='pp' typref='555065967'/>
+</Input_Parameters>
+<Output_Parameters>
+<Id value='bb' typref='2043437594'/>
+</Output_Parameters>
+</Operation_Call>
+<If_Sub elseif='no'>
+<Condition>
+<Exp_Comparison op='='>
+<Id value='bb' typref='2043437594'/>
+<Boolean_Literal value='TRUE' typref='2043437594'/>
+</Exp_Comparison>
+</Condition>
+<Then>
+<Nary_Sub op=';'>
+<Operation_Call>
+<Name>
+<Id value='STRING_WRITE'/>
+</Name>
+<Input_Parameters>
+<STRING_Literal value='\n Mother: ' typref='3239339507'/>
+</Input_Parameters>
+</Operation_Call>
+<Operation_Call>
+<Name>
+<Id value='val_mother'/>
+</Name>
+<Input_Parameters>
+<Id value='pp' typref='555065967'/>
+</Input_Parameters>
+<Output_Parameters>
+<Id value='ww' typref='555065967'/>
+</Output_Parameters>
+</Operation_Call>
+<Operation_Call>
+<Name>
+<Id value='PERSON_write'/>
+</Name>
+<Input_Parameters>
+<Id value='ww' typref='555065967'/>
+</Input_Parameters>
+</Operation_Call>
+</Nary_Sub>
+</Then>
+</If_Sub>
+<Operation_Call>
+<Name>
+<Id value='is_married'/>
+</Name>
+<Input_Parameters>
+<Id value='pp' typref='555065967'/>
+</Input_Parameters>
+<Output_Parameters>
+<Id value='bb' typref='2043437594'/>
+</Output_Parameters>
+</Operation_Call>
+<If_Sub elseif='no'>
+<Condition>
+<Exp_Comparison op='='>
+<Id value='bb' typref='2043437594'/>
+<Boolean_Literal value='TRUE' typref='2043437594'/>
+</Exp_Comparison>
+</Condition>
+<Then>
+<Nary_Sub op=';'>
+<Operation_Call>
+<Name>
+<Id value='STRING_WRITE'/>
+</Name>
+<Input_Parameters>
+<STRING_Literal value='\n Spu=ouse: ' typref='3239339507'/>
+</Input_Parameters>
+</Operation_Call>
+<Operation_Call>
+<Name>
+<Id value='val_spouse'/>
+</Name>
+<Input_Parameters>
+<Id value='pp' typref='555065967'/>
+</Input_Parameters>
+<Output_Parameters>
+<Id value='tt' typref='555065967'/>
+</Output_Parameters>
+</Operation_Call>
+<Operation_Call>
+<Name>
+<Id value='PERSON_write'/>
+</Name>
+<Input_Parameters>
+<Id value='tt' typref='555065967'/>
+</Input_Parameters>
+</Operation_Call>
+</Nary_Sub>
+</Then>
+</If_Sub>
+</Nary_Sub>
+</Else>
+</If_Sub>
+</Nary_Sub>
+</Body>
+</VAR_IN>
+</Body>
+</Operation>
+</Operations>
+<TypeInfos>
+<Type id='555065967'>
+<Id value='PERSON'/>
+</Type>
+<Type id='2043437594'>
+<Id value='BOOL'/>
+</Type>
+<Type id='3239339507'>
+<Id value='STRING'/>
+</Type>
+<Type id='3153412450'>
+<Id value='SEX'/>
+</Type>
+<Type id='2246778642'>
+<Id value='STATUS'/>
+</Type>
+</TypeInfos>
+
+</Machine>

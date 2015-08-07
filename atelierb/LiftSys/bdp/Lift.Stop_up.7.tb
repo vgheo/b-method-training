@@ -1,0 +1,11 @@
+﻿THEORY TraceBruteX IS
+ MainGoal(in/\ran(moving-{ll}<<|(current_floor><dir)) = {current_floor(ll)|->up});
+ Simplify((_delta_e(ll,moving)),(bcall(5574,0: _delta_e(ll)) & bcall(5574,0: _delta_e(moving)) & _delta_e2(couple)),("Rule DeltaExprX.154"));
+ Simplify((_delta_e(ll)),(bcall(5532,0: push(btrue))),("Rule DeltaExprX.6"));
+ Simplify((_delta_e(moving)),(bcall(5532,0: push(btrue))),("Rule DeltaExprX.6"));
+ Simplify((_delta_e2(couple)),(bcall(5532,0: push(btrue & btrue))),("Rule DeltaExprX.4"));
+ AttemptToProve(Start(btrue));
+ AttemptToProve(Success(btrue));
+ Simplify((in/\ran(moving-{ll}<<|(current_floor><dir)) = {current_floor(ll)|->up}),((ll: moving => in/\ran(moving-{ll}<<|(current_floor><dir)) = {current_floor(ll)|->up}) & (not(ll: moving) => in/\ran(moving<<|(current_floor><dir)) = {current_floor(ll)|->up})),("Trigger Case"));
+ EndOfTrace
+END

@@ -1,0 +1,37 @@
+﻿/* TOTAL_OBJECT_1
+ * Author: T0164919
+ * Creation date: 7/30/2015
+ */
+
+IMPLEMENTATION TOTAL_OBJECT_1 ( max_obj , FIELD , VALUE )
+REFINES TOTAL_OBJECT
+
+IMPORTS
+    FILE ( max_obj , FIELD , VALUE )
+INVARIANT
+    file = % oo . ( oo : OBJECT | % ii . ( ii : FIELD | total_field ( ii ) ( oo ) ) )
+/*Added DEFINITINS clause because visibility rues  do not exist for definitions clause in an implementation*/
+DEFINITIONS
+    OBJECT == 1 .. total_object
+OPERATIONS
+    oo <-- create_total_object ( vv ) =
+    BEGIN
+        oo <-- create_record ( vv )
+    END ;
+
+    mod_field ( ii , oo , vv ) =
+    BEGIN
+        mod_file ( oo , ii , vv )
+    END ;
+
+    vv <-- val_field ( ii , oo ) =
+    BEGIN
+        vv <-- val_file ( oo , ii )
+    END ;
+    vv <-- nbr_object =
+    BEGIN
+        vv <-- size_file
+    END
+
+
+ END

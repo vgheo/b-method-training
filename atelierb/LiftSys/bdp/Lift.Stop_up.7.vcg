@@ -1,0 +1,33 @@
+﻿graph: {
+ title: "Proof Tree" 
+ layoutalgorithm: tree 
+ smanhattan_edges: yes 
+ display_edge_labels: yes 
+ color: lightgrey 
+ node: {title: "1" label: "in/\ran(moving-{ll}<<|(current_floor><dir)) = {current_floor(ll)|->up}" textmode: center}
+ node: {title: "2" label: "_delta_e2(couple)" textmode: center}
+ edge: {sourcename: "1" targetname: "2" label: "Rule DeltaExprX.154" thickness: 4}
+ node: {title: "3" label: "bcall(5574,0: _delta_e(moving))" textmode: center}
+ edge: {sourcename: "1" targetname: "3" label: "Rule DeltaExprX.154" thickness: 4}
+ node: {title: "4" label: "bcall(5574,0: _delta_e(ll))" textmode: center}
+ edge: {sourcename: "1" targetname: "4" label: "Rule DeltaExprX.154" thickness: 4}
+ node: {title: "5" label: "bcall(5532,0: push(btrue))" textmode: center}
+ edge: {sourcename: "4" targetname: "5" label: "Rule DeltaExprX.6" thickness: 4}
+ node: {title: "6" label: "bcall(5532,0: push(btrue))" textmode: center}
+ edge: {sourcename: "5" targetname: "6" label: "Rule DeltaExprX.6" thickness: 4}
+ node: {title: "7" label: "bcall(5532,0: push(btrue & btrue))" textmode: center}
+ edge: {sourcename: "6" targetname: "7" label: "Rule DeltaExprX.4" thickness: 4}
+ node: {title: "8" label: "btrue" textmode: center}
+ nearedge: {sourcename: "7" targetname: "8" color: blue thickness: 4}
+ node: {title: "9" label: "DISCHARGED" shape: ellipse textcolor: red textmode: center}
+ nearedge: {sourcename: "8" targetname: "9" thickness: 4 linestyle: dashed}
+ node: {title: "10" label: "not(ll: moving)
+=>
+in/\ran(moving<<|(current_floor><dir)) = {current_floor(ll)|->up}" textmode: center}
+ edge: {sourcename: "7" targetname: "10" label: "Trigger Case" thickness: 4}
+ node: {title: "11" label: "ll: moving
+=>
+in/\ran(moving-{ll}<<|(current_floor><dir)) = {current_floor(ll)|->up}" textmode: center}
+ edge: {sourcename: "7" targetname: "11" label: "Trigger Case" thickness: 4}
+
+}

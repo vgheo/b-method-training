@@ -1,0 +1,62 @@
+﻿THEORY BalanceX IS
+  MAIN_INTERFACE_1,14,14,0,0,0,0,0;
+  main,14,14,0,0,0,0,0
+END
+&
+THEORY ProofState IS
+  Proved(Util);
+  Proved(Util);
+  Proved(Util);
+  Proved(Util);
+  Proved(Util);
+  Proved(Util);
+  Proved(Util);
+  Proved(Util);
+  Proved(Util);
+  Proved(Util);
+  Proved(Util);
+  Proved(Util);
+  Proved(Util);
+  Proved(Util)
+END
+&
+THEORY MethodList IS
+  mp;
+  mp;
+  mp;
+  mp;
+  mp;
+  mp;
+  mp;
+  mp;
+  mp;
+  mp;
+  mp;
+  mp;
+  mp;
+  mp
+END
+&
+THEORY PassList IS
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?
+END
+&
+THEORY ManForms 
+END
+&
+THEORY Version IS
+  PRVersion("svn")(CLT == "V4.0-53996")
+END

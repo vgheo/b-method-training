@@ -6,16 +6,16 @@
 IMPLEMENTATION FILE_BUFFER_1(max_rec,FIELD,VALUE)
 REFINES FILE_BUFFER
 IMPORTS
-    FILE_ACCES(max_rec,FIELD,VALUE)
+    FILE_ACCESS(max_rec,FIELD,VALUE)
 PROMOTES
     create_record,not_in_buffer,mod_buffer,val_buffer,size_file
 OPERATIONS
     load_buffer(oo)=
     BEGIN
     IF
-        updated = true 
+        updated = TRUE
     THEN
-        put_buffe
+        put_buffer
     END;
     get_record(oo)
     END

@@ -1,0 +1,6 @@
+﻿THEORY User_Pass IS
+Operation(WellDefinedness_Precondition_create_record) & ff(0) & mp & pr & pp(rp.1) & pp;
+Operation(WellDefinedness_create_record) & ff(0) & mp & pr & pp(rp.1) & pp;
+Operation(WellDefinedness_Precondition_not_in_buffer) & ff(0) & mp & pr & pp(rp.1) & pp;
+Operation(WellDefinedness_size_file) & ff(0) & mp & pr & pp(rp.1) & pp
+END 

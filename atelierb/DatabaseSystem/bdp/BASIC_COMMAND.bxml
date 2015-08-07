@@ -1,0 +1,122 @@
+<Machine name='BASIC_COMMAND' type='abstraction'>
+<Sets>
+<Set>
+<Id value='COMMAND' typref='3322002598'/>
+<Enumerated_Values>
+<Id value='new' typref='3671739677'/>
+<Id value='birth' typref='3671739677'/>
+<Id value='marriage' typref='3671739677'/>
+<Id value='death' typref='3671739677'/>
+<Id value='print' typref='3671739677'/>
+<Id value='quit' typref='3671739677'/>
+</Enumerated_Values>
+</Set>
+</Sets>
+<Concrete_Constants>
+<Id value='code_COMMAND' typref='103823389'/>
+<Id value='decode_COMMAND' typref='1042935709'/>
+</Concrete_Constants>
+<Properties>
+<Nary_Pred op='&amp;'>
+<Exp_Comparison op=':'>
+<Id value='code_COMMAND' typref='103823389'/>
+<Binary_Exp op='&gt;-&gt;&gt;' typref='3747551526'>
+<Id value='COMMAND' typref='3322002598'/>
+<Nary_Exp op='{' typref='3603043417'>
+<Integer_Literal value='0' typref='2701647786'/>
+<Integer_Literal value='1' typref='2701647786'/>
+<Integer_Literal value='2' typref='2701647786'/>
+<Integer_Literal value='3' typref='2701647786'/>
+<Integer_Literal value='4' typref='2701647786'/>
+<Integer_Literal value='5' typref='2701647786'/>
+</Nary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op='='>
+<Id value='decode_COMMAND' typref='1042935709'/>
+<Unary_Exp op='~' typref='1042935709'>
+<Id value='code_COMMAND' typref='103823389'/>
+</Unary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Properties>
+<Initialisation>
+<Skip/>
+</Initialisation>
+<Operations>
+<Operation name='COMMAND_READ'>
+<Output_Parameters>
+<Id value='rr' typref='3671739677'/>
+</Output_Parameters>
+<Body>
+<Becomes_In>
+<Variables>
+<Id value='rr' typref='3671739677'/>
+</Variables>
+<Value>
+<Id value='COMMAND' typref='3322002598'/>
+</Value>
+</Becomes_In>
+</Body>
+</Operation>
+<Operation name='COMMAND_WRITE'>
+<Input_Parameters>
+<Id value='ii' typref='3671739677'/>
+</Input_Parameters>
+<Precondition>
+<Exp_Comparison op=':'>
+<Id value='ii' typref='3671739677'/>
+<Id value='COMMAND' typref='3322002598'/>
+</Exp_Comparison>
+</Precondition>
+<Body>
+<Skip/>
+</Body>
+</Operation>
+</Operations>
+<TypeInfos>
+<Type id='3322002598'>
+<Unary_Exp op='POW'>
+<Id value='COMMAND'/>
+</Unary_Exp>
+</Type>
+<Type id='3671739677'>
+<Id value='COMMAND'/>
+</Type>
+<Type id='103823389'>
+<Unary_Exp op='POW'>
+<Binary_Exp op='*'>
+<Id value='COMMAND'/>
+<Id value='INTEGER'/>
+</Binary_Exp>
+</Unary_Exp>
+</Type>
+<Type id='1042935709'>
+<Unary_Exp op='POW'>
+<Binary_Exp op='*'>
+<Id value='INTEGER'/>
+<Id value='COMMAND'/>
+</Binary_Exp>
+</Unary_Exp>
+</Type>
+<Type id='3747551526'>
+<Unary_Exp op='POW'>
+<Unary_Exp op='POW'>
+<Binary_Exp op='*'>
+<Id value='COMMAND'/>
+<Id value='INTEGER'/>
+</Binary_Exp>
+</Unary_Exp>
+</Unary_Exp>
+</Type>
+<Type id='3603043417'>
+<Unary_Exp op='POW'>
+<Id value='INTEGER'/>
+</Unary_Exp>
+</Type>
+<Type id='2701647786'>
+<Id value='INTEGER'/>
+</Type>
+</TypeInfos>
+
+</Machine>

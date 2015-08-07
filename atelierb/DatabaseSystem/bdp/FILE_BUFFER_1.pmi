@@ -1,0 +1,64 @@
+﻿THEORY BalanceX IS
+  FILE_BUFFER_1,13,2,0,11,0,0,0;
+  WellDefinedness_create_record,1,1,0,0,0,0,0;
+  WellDefinedness_load_buffer,4,0,0,4,0,0,0;
+  WellDefinedness_mod_buffer,1,0,0,1,0,0,0;
+  WellDefinedness_size_file,1,1,0,0,0,0,0;
+  WellDefinedness_val_buffer,3,0,0,3,0,0,0;
+  load_buffer,3,0,0,3,0,0,0
+END
+&
+THEORY ProofState IS
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Proved(Util);
+  Proved(0);
+  Proved(Util);
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Proved(0)
+END
+&
+THEORY MethodList IS
+  pr;
+  pr;
+  pr;
+  pp(rp.1);
+  pr;
+  pp(rp.1);
+  pr;
+  pr;
+  pr;
+  pr;
+  pr;
+  pr;
+  pr
+END
+&
+THEORY PassList IS
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),(?;0;1;2;3);
+  Force(0),?;
+  Force(0),(?;0;1;2;3);
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?
+END
+&
+THEORY ManForms 
+END
+&
+THEORY Version IS
+  PRVersion("svn")(CLT == "V4.0-53996")
+END

@@ -1,0 +1,49 @@
+THEORY ProofList IS
+_f(1) & _f(2) & _f(8) & WellDefinedness_size_file.1,(_f(20) => _f(21));
+_f(1) & _f(2) & _f(8) & _f(13) & WellDefinedness_create_record.1,(_f(20) => _f(21));
+_f(1) & _f(2) & _f(8) & WellDefinedness_Precondition_create_record.1,(_f(27) & _f(20) => _f(21));
+_f(1) & _f(2) & _f(8) & _f(10) & WellDefinedness_mod_file.1,(_f(20) => _f(23));
+_f(1) & _f(2) & _f(8) & _f(9) & WellDefinedness_val_file.3,(_f(20) => _f(25));
+_f(1) & _f(2) & _f(8) & _f(9) & WellDefinedness_val_file.2,(_f(20) => _f(24));
+_f(1) & _f(2) & _f(8) & _f(9) & WellDefinedness_val_file.1,(_f(20) => _f(23));
+_f(1) & _f(2) & WellDefinednessInvariant.1,(_f(18) & _f(19) & _f(20) => _f(21));
+_f(1) & _f(2) & _f(8) & _f(13) & create_record.2,(_f(3) & _f(6) => _f(15));
+_f(1) & _f(2) & _f(8) & _f(13) & create_record.1,(_f(3) & _f(4) => _f(14));
+_f(1) & _f(2) & _f(8) & _f(10) & mod_file.2,(_f(3) & _f(6) => _f(12));
+_f(1) & _f(2) & _f(8) & _f(10) & mod_file.1,(_f(3) & _f(4) => _f(11));
+_f(1) & _f(2) & Initialisation.2,(_f(3) & _f(6) => _f(7));
+_f(1) & _f(2) & Initialisation.1,(_f(3) & _f(4) => _f(5))
+END
+&
+THEORY Formulas IS
+((NAT) = (((0) .. (2147483647)))) & ((INT) = (((-2147483647) .. (2147483647))));
+FIELD: FIN(INTEGER) & not(FIELD = {}) & VALUE: FIN(INTEGER) & not(VALUE = {}) & ((max_rec) : ((NAT-{0})));
+"Invariant is preserved";
+"Check invariant ((file) : (seq(((FIELD) --> (VALUE)))))";
+(({}) : (seq(((FIELD) --> (VALUE)))));
+"Check invariant (size(file) <= max_rec)";
+(size({}) <= max_rec);
+file : NATURAL-{0} +-> ((FIELD) --> (VALUE)) & ((file) : (seq(((FIELD) --> (VALUE))))) & (size(file) <= max_rec);
+((oo) : (dom(file))) & ((ii) : (FIELD));
+((oo) : (dom(file))) & ((ii) : (FIELD)) & ((vv) : (VALUE));
+((((file) <+ ({((oo) |-> ((((file )(oo)) <+ ({((ii) |-> (vv))}))))}))) : (seq(((FIELD) --> (VALUE)))));
+(size(((file) <+ ({((oo) |-> ((((file )(oo)) <+ ({((ii) |-> (vv))}))))}))) <= max_rec);
+((vv) : (VALUE)) & (size(file) +1 <= max_rec);
+((((file) <- ((FIELD * {vv})))) : (seq(((FIELD) --> (VALUE)))));
+(size(((file) <- ((FIELD * {vv})))) <= max_rec);
+VALUE: FIN(INTEGER) & not(VALUE = {});
+FIELD: FIN(INTEGER) & not(FIELD = {});
+file : NATURAL-{0} +-> ((FIELD) --> (VALUE));
+((file) : (seq(((FIELD) --> (VALUE)))));
+"Well definedness";
+((file) : (seq(ran(file))));
+((oo) : (dom(file)));
+((file) : (((dom(file)) +-> (ran(file)))));
+((ii) : (dom((file )(oo))));
+(((file )(oo)) : (((dom((file )(oo))) +-> (ran((file )(oo))))));
+((ii) : (FIELD));
+((vv) : (VALUE))
+END
+&
+THEORY EnumerateX
+END

@@ -1,0 +1,34 @@
+<Machine name='INNER_INTERFACE' type='abstraction'>
+<Initialisation>
+<Skip/>
+</Initialisation>
+<Operations>
+<Operation name='death_operation'>
+<Body>
+<Skip/>
+</Body>
+</Operation>
+<Operation name='marriage_operation'>
+<Body>
+<Skip/>
+</Body>
+</Operation>
+<Operation name='first_operation'>
+<Body>
+<Skip/>
+</Body>
+</Operation>
+<Operation name='birth_operation'>
+<Body>
+<Skip/>
+</Body>
+</Operation>
+<Operation name='print_operation'>
+<Body>
+<Skip/>
+</Body>
+</Operation>
+</Operations>
+<TypeInfos/>
+
+</Machine>

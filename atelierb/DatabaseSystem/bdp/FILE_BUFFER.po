@@ -1,0 +1,56 @@
+THEORY ProofList IS
+_f(1) & _f(2) & _f(8) & _f(18) & WellDefinedness_val_buffer.3,(_f(24) => _f(32));
+_f(1) & _f(2) & _f(8) & _f(18) & WellDefinedness_val_buffer.2,(_f(24) => _f(31));
+_f(1) & _f(2) & _f(8) & _f(18) & WellDefinedness_val_buffer.1,(_f(24) => _f(30));
+_f(1) & _f(2) & _f(8) & _f(16) & WellDefinedness_mod_buffer.1,(_f(24) => _f(30));
+_f(1) & _f(2) & _f(8) & WellDefinedness_Precondition_not_in_buffer.1,(_f(24) => _f(25));
+_f(1) & _f(2) & _f(8) & WellDefinedness_size_file.1,(_f(24) => _f(25));
+_f(1) & _f(2) & _f(8) & _f(12) & WellDefinedness_load_buffer.1,(_f(24) => _f(27));
+_f(1) & _f(2) & _f(8) & _f(9) & WellDefinedness_create_record.1,(_f(24) => _f(25));
+_f(1) & _f(2) & _f(8) & WellDefinedness_Precondition_create_record.1,(_f(23) & _f(24) => _f(25));
+_f(1) & _f(2) & _f(8) & _f(16) & mod_buffer.1,(_f(3) & _f(6) => _f(17));
+_f(1) & _f(2) & _f(8) & _f(12) & load_buffer.2,(_f(3) & _f(6) => _f(14));
+_f(1) & _f(2) & _f(8) & _f(12) & load_buffer.1,(_f(3) & _f(4) => _f(13));
+_f(1) & _f(2) & _f(8) & _f(9) & create_record.2,(_f(3) & _f(6) => _f(11));
+_f(1) & _f(2) & _f(8) & _f(9) & create_record.1,(_f(3) & _f(4) => _f(10));
+_f(1) & _f(2) & Initialisation.2,(_f(3) & _f(6) => _f(7));
+_f(1) & _f(2) & Initialisation.1,(_f(3) & _f(4) => _f(5))
+END
+&
+THEORY Formulas IS
+((NAT) = (((0) .. (2147483647)))) & ((INT) = (((-2147483647) .. (2147483647))));
+FIELD: FIN(INTEGER) & not(FIELD = {}) & VALUE: FIN(INTEGER) & not(VALUE = {}) & ((max_rec) : ((NAT-{0})));
+"Invariant is preserved";
+"Check invariant ((bfile) : (seq(((FIELD) --> (VALUE)))))";
+(({}) : (seq(((FIELD) --> (VALUE)))));
+"Check invariant ((buffer) : (((dom(bfile)) +-> (((FIELD) --> (VALUE))))))";
+(({}) : (((dom({})) +-> (((FIELD) --> (VALUE))))));
+bfile : NATURAL-{0} +-> ((FIELD) --> (VALUE)) & ((bfile) : (seq(((FIELD) --> (VALUE))))) & ((buffer) : (((dom(bfile)) +-> (((FIELD) --> (VALUE))))));
+((vv) : (VALUE)) & not(size(bfile) = max_rec);
+((((bfile) <- ((FIELD * {vv})))) : (seq(((FIELD) --> (VALUE)))));
+((buffer) : (((dom(((bfile) <- ((FIELD * {vv}))))) +-> (((FIELD) --> (VALUE))))));
+((oo) : (dom(bfile))) & not(oo : dom(buffer));
+((((bfile) <+ (buffer))) : (seq(((FIELD) --> (VALUE)))));
+(({((oo) |-> ((bfile )(oo)))}) : (((dom(((bfile) <+ (buffer)))) +-> (((FIELD) --> (VALUE))))));
+((oo) : (((1) .. (size(bfile)))));
+((oo) : (dom(buffer))) & ((ii) : (FIELD)) & ((vv) : (VALUE));
+((((buffer) <+ ({((oo) |-> ((((buffer )(oo)) <+ ({((ii) |-> (vv))}))))}))) : (((dom(bfile)) +-> (((FIELD) --> (VALUE))))));
+((oo) : (dom(buffer))) & ((ii) : (FIELD));
+VALUE: FIN(INTEGER) & not(VALUE = {});
+FIELD: FIN(INTEGER) & not(FIELD = {});
+bfile : NATURAL-{0} +-> ((FIELD) --> (VALUE));
+((bfile) : (seq(((FIELD) --> (VALUE)))));
+((vv) : (VALUE));
+"Well definedness";
+((bfile) : (seq(ran(bfile))));
+((oo) : (dom(bfile)));
+((bfile) : (((dom(bfile)) +-> (ran(bfile)))));
+((ii) : (FIELD));
+((oo) : (dom(buffer)));
+((buffer) : (((dom(buffer)) +-> (ran(buffer)))));
+((ii) : (dom((buffer )(oo))));
+(((buffer )(oo)) : (((dom((buffer )(oo))) +-> (ran((buffer )(oo))))))
+END
+&
+THEORY EnumerateX
+END

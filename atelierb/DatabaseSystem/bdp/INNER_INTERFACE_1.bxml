@@ -1,0 +1,215 @@
+<Machine name='INNER_INTERFACE_1' type='implementation'>
+<Abstraction>INNER_INTERFACE</Abstraction>
+<Imports>
+<Referenced_Machine>
+<Name>DATA_BASE</Name>
+</Referenced_Machine>
+<Referenced_Machine>
+<Name>QUERY</Name>
+</Referenced_Machine>
+</Imports>
+<Initialisation>
+<Skip/>
+</Initialisation>
+<Operations>
+<Operation name='death_operation'>
+<Body>
+<VAR_IN>
+<Variables>
+<Id value='pp' typref='555065967'/>
+<Id value='bb' typref='2043437594'/>
+</Variables>
+<Body>
+<Nary_Sub op=';'>
+<Operation_Call>
+<Name>
+<Id value='get_new_dead_person'/>
+</Name>
+<Output_Parameters>
+<Id value='pp' typref='555065967'/>
+<Id value='bb' typref='2043437594'/>
+</Output_Parameters>
+</Operation_Call>
+<If_Sub elseif='no'>
+<Condition>
+<Exp_Comparison op='='>
+<Id value='bb' typref='2043437594'/>
+<Boolean_Literal value='TRUE' typref='2043437594'/>
+</Exp_Comparison>
+</Condition>
+<Then>
+<Operation_Call>
+<Name>
+<Id value='death'/>
+</Name>
+<Input_Parameters>
+<Id value='pp' typref='555065967'/>
+</Input_Parameters>
+</Operation_Call>
+</Then>
+</If_Sub>
+</Nary_Sub>
+</Body>
+</VAR_IN>
+</Body>
+</Operation>
+<Operation name='marriage_operation'>
+<Body>
+<VAR_IN>
+<Variables>
+<Id value='ww' typref='555065967'/>
+<Id value='mm' typref='555065967'/>
+<Id value='bb' typref='2043437594'/>
+</Variables>
+<Body>
+<Nary_Sub op=';'>
+<Operation_Call>
+<Name>
+<Id value='get_new_couple'/>
+</Name>
+<Output_Parameters>
+<Id value='mm' typref='555065967'/>
+<Id value='ww' typref='555065967'/>
+<Id value='bb' typref='2043437594'/>
+</Output_Parameters>
+</Operation_Call>
+<If_Sub elseif='no'>
+<Condition>
+<Exp_Comparison op='='>
+<Id value='bb' typref='2043437594'/>
+<Boolean_Literal value='TRUE' typref='2043437594'/>
+</Exp_Comparison>
+</Condition>
+<Then>
+<Operation_Call>
+<Name>
+<Id value='marriage'/>
+</Name>
+<Input_Parameters>
+<Id value='ww' typref='555065967'/>
+<Id value='mm' typref='555065967'/>
+</Input_Parameters>
+</Operation_Call>
+</Then>
+</If_Sub>
+</Nary_Sub>
+</Body>
+</VAR_IN>
+</Body>
+</Operation>
+<Operation name='first_operation'>
+<Body>
+<VAR_IN>
+<Variables>
+<Id value='ss' typref='3153412450'/>
+<Id value='bb' typref='2043437594'/>
+<Id value='pp' typref='555065967'/>
+</Variables>
+<Body>
+<Nary_Sub op=';'>
+<Operation_Call>
+<Name>
+<Id value='get_sex_of_new'/>
+</Name>
+<Output_Parameters>
+<Id value='ss' typref='3153412450'/>
+<Id value='bb' typref='2043437594'/>
+</Output_Parameters>
+</Operation_Call>
+<If_Sub elseif='no'>
+<Condition>
+<Exp_Comparison op='='>
+<Id value='bb' typref='2043437594'/>
+<Boolean_Literal value='TRUE' typref='2043437594'/>
+</Exp_Comparison>
+</Condition>
+<Then>
+<Operation_Call>
+<Name>
+<Id value='first_human'/>
+</Name>
+<Input_Parameters>
+<Id value='ss' typref='3153412450'/>
+</Input_Parameters>
+<Output_Parameters>
+<Id value='pp' typref='555065967'/>
+</Output_Parameters>
+</Operation_Call>
+</Then>
+</If_Sub>
+</Nary_Sub>
+</Body>
+</VAR_IN>
+</Body>
+</Operation>
+<Operation name='birth_operation'>
+<Body>
+<VAR_IN>
+<Variables>
+<Id value='ww' typref='555065967'/>
+<Id value='ss' typref='3153412450'/>
+<Id value='bb' typref='2043437594'/>
+<Id value='pp' typref='555065967'/>
+</Variables>
+<Body>
+<Nary_Sub op=';'>
+<Operation_Call>
+<Name>
+<Id value='get_sex_and_mother'/>
+</Name>
+<Output_Parameters>
+<Id value='ss' typref='3153412450'/>
+<Id value='ww' typref='555065967'/>
+<Id value='bb' typref='2043437594'/>
+</Output_Parameters>
+</Operation_Call>
+<If_Sub elseif='no'>
+<Condition>
+<Exp_Comparison op='='>
+<Id value='bb' typref='2043437594'/>
+<Boolean_Literal value='TRUE' typref='2043437594'/>
+</Exp_Comparison>
+</Condition>
+<Then>
+<Operation_Call>
+<Name>
+<Id value='new_born'/>
+</Name>
+<Input_Parameters>
+<Id value='ss' typref='3153412450'/>
+<Id value='ww' typref='555065967'/>
+</Input_Parameters>
+<Output_Parameters>
+<Id value='pp' typref='555065967'/>
+</Output_Parameters>
+</Operation_Call>
+</Then>
+</If_Sub>
+</Nary_Sub>
+</Body>
+</VAR_IN>
+</Body>
+</Operation>
+<Operation name='print_operation'>
+<Body>
+<Operation_Call>
+<Name>
+<Id value='get_and_print_person'/>
+</Name>
+</Operation_Call>
+</Body>
+</Operation>
+</Operations>
+<TypeInfos>
+<Type id='555065967'>
+<Id value='PERSON'/>
+</Type>
+<Type id='2043437594'>
+<Id value='BOOL'/>
+</Type>
+<Type id='3153412450'>
+<Id value='SEX'/>
+</Type>
+</TypeInfos>
+
+</Machine>

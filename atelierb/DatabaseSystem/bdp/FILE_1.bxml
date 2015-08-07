@@ -1,0 +1,202 @@
+<Machine name='FILE_1' type='implementation'>
+<Abstraction>FILE</Abstraction>
+<Parameters>
+<Id value='max_rec' typref='2701647786'/>
+<Id value='FIELD' typref='3988092277'/>
+<Id value='VALUE' typref='3958993484'/>
+</Parameters>
+<Constraints>
+<Nary_Pred op='&amp;'>
+<Set>
+<Id value='FIELD' typref='3988092277'/>
+</Set>
+<Set>
+<Id value='VALUE' typref='3958993484'/>
+</Set>
+</Nary_Pred>
+</Constraints>
+<Imports>
+<Referenced_Machine>
+<Name>FILE_BUFFER</Name>
+<Parameters>
+<Id value='max_rec' typref='2701647786'/>
+<Id value='FIELD' typref='3988092277'/>
+<Id value='VALUE' typref='3958993484'/>
+</Parameters>
+</Referenced_Machine>
+</Imports>
+<Promotes>
+<Promoted_Operation>create_record</Promoted_Operation>
+<Promoted_Operation>size_file</Promoted_Operation>
+</Promotes>
+<Invariant>
+<Exp_Comparison op='='>
+<Id value='file' typref='277897435'/>
+<Binary_Exp op='&lt;+' typref='277897435'>
+<Id value='bfile' typref='277897435'/>
+<Id value='buffer' typref='277897435'/>
+</Binary_Exp>
+</Exp_Comparison>
+</Invariant>
+<Initialisation>
+<Skip/>
+</Initialisation>
+<Operations>
+<Operation name='mod_file'>
+<Input_Parameters>
+<Id value='oo' typref='2701647786'/>
+<Id value='ii' typref='1177923086'/>
+<Id value='vv' typref='4077266551'/>
+</Input_Parameters>
+<Body>
+<VAR_IN>
+<Variables>
+<Id value='test' typref='2043437594'/>
+</Variables>
+<Body>
+<Nary_Sub op=';'>
+<Operation_Call>
+<Name>
+<Id value='not_in_buffer'/>
+</Name>
+<Input_Parameters>
+<Id value='oo' typref='2701647786'/>
+</Input_Parameters>
+<Output_Parameters>
+<Id value='test' typref='2043437594'/>
+</Output_Parameters>
+</Operation_Call>
+<If_Sub elseif='no'>
+<Condition>
+<Exp_Comparison op='='>
+<Id value='test' typref='2043437594'/>
+<Boolean_Literal value='TRUE' typref='2043437594'/>
+</Exp_Comparison>
+</Condition>
+<Then>
+<Operation_Call>
+<Name>
+<Id value='load_buffer'/>
+</Name>
+<Input_Parameters>
+<Id value='oo' typref='2701647786'/>
+</Input_Parameters>
+</Operation_Call>
+</Then>
+</If_Sub>
+<Operation_Call>
+<Name>
+<Id value='mod_buffer'/>
+</Name>
+<Input_Parameters>
+<Id value='oo' typref='2701647786'/>
+<Id value='ii' typref='1177923086'/>
+<Id value='vv' typref='4077266551'/>
+</Input_Parameters>
+</Operation_Call>
+</Nary_Sub>
+</Body>
+</VAR_IN>
+</Body>
+</Operation>
+<Operation name='val_file'>
+<Output_Parameters>
+<Id value='vv' typref='4077266551'/>
+</Output_Parameters>
+<Input_Parameters>
+<Id value='oo' typref='2701647786'/>
+<Id value='ii' typref='1177923086'/>
+</Input_Parameters>
+<Body>
+<VAR_IN>
+<Variables>
+<Id value='test' typref='2043437594'/>
+</Variables>
+<Body>
+<Nary_Sub op=';'>
+<Operation_Call>
+<Name>
+<Id value='not_in_buffer'/>
+</Name>
+<Input_Parameters>
+<Id value='oo' typref='2701647786'/>
+</Input_Parameters>
+<Output_Parameters>
+<Id value='test' typref='2043437594'/>
+</Output_Parameters>
+</Operation_Call>
+<If_Sub elseif='no'>
+<Condition>
+<Exp_Comparison op='='>
+<Id value='test' typref='2043437594'/>
+<Boolean_Literal value='TRUE' typref='2043437594'/>
+</Exp_Comparison>
+</Condition>
+<Then>
+<Operation_Call>
+<Name>
+<Id value='load_buffer'/>
+</Name>
+<Input_Parameters>
+<Id value='oo' typref='2701647786'/>
+</Input_Parameters>
+</Operation_Call>
+</Then>
+</If_Sub>
+<Operation_Call>
+<Name>
+<Id value='val_buffer'/>
+</Name>
+<Input_Parameters>
+<Id value='oo' typref='2701647786'/>
+<Id value='ii' typref='1177923086'/>
+</Input_Parameters>
+<Output_Parameters>
+<Id value='vv' typref='4077266551'/>
+</Output_Parameters>
+</Operation_Call>
+</Nary_Sub>
+</Body>
+</VAR_IN>
+</Body>
+</Operation>
+</Operations>
+<TypeInfos>
+<Type id='2701647786'>
+<Id value='INTEGER'/>
+</Type>
+<Type id='3988092277'>
+<Unary_Exp op='POW'>
+<Id value='FIELD'/>
+</Unary_Exp>
+</Type>
+<Type id='3958993484'>
+<Unary_Exp op='POW'>
+<Id value='VALUE'/>
+</Unary_Exp>
+</Type>
+<Type id='277897435'>
+<Unary_Exp op='POW'>
+<Binary_Exp op='*'>
+<Id value='INTEGER'/>
+<Unary_Exp op='POW'>
+<Binary_Exp op='*'>
+<Id value='FIELD'/>
+<Id value='VALUE'/>
+</Binary_Exp>
+</Unary_Exp>
+</Binary_Exp>
+</Unary_Exp>
+</Type>
+<Type id='1177923086'>
+<Id value='FIELD'/>
+</Type>
+<Type id='4077266551'>
+<Id value='VALUE'/>
+</Type>
+<Type id='2043437594'>
+<Id value='BOOL'/>
+</Type>
+</TypeInfos>
+
+</Machine>

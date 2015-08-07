@@ -1,0 +1,52 @@
+﻿/* INNER_INTERFACE_1
+ * Author: T0164919
+ * Creation date: 7/30/2015
+ */
+
+IMPLEMENTATION INNER_INTERFACE_1
+REFINES INNER_INTERFACE
+IMPORTS
+    DATA_BASE , QUERY
+OPERATIONS
+    death_operation =
+    VAR pp , bb IN
+        pp , bb <-- get_new_dead_person ;
+        IF bb = TRUE THEN
+        death ( pp )
+        END
+    END ;
+    marriage_operation =
+    VAR ww , mm , bb IN
+           mm , ww , bb <-- get_new_couple ;
+           IF bb = TRUE THEN
+               marriage ( ww , mm )
+           END
+    END ;
+
+    first_operation =
+    VAR ss , bb , pp IN
+        ss , bb <-- get_sex_of_new ;
+        IF bb = TRUE THEN
+            pp <-- first_human ( ss )
+        END
+    END ;
+
+    birth_operation =
+    VAR ww , ss , bb , pp IN
+        ss , ww , bb <-- get_sex_and_mother ;
+        IF bb = TRUE THEN
+            pp <-- new_born ( ss , ww )
+        END
+    END ;
+
+    print_operation =
+    BEGIN
+       get_and_print_person
+    END
+
+
+
+
+
+
+ END

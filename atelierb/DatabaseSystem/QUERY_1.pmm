@@ -1,0 +1,14 @@
+﻿THEORY User_Pass IS
+
+Operation(get_sex_and_mother) & ff(0) & dd;
+Operation(get_new_couple) & ff(0) & mp & pr;
+Operation(WellDefinedness_get_and_print_person) & ff(0) & mp & pr & pp(rp.2)
+END &
+/* QUERY_1
+ * Author: T0164919
+ * Creation date: 7/31/2015
+ */
+
+THEORY todoT IS
+     btrue
+END

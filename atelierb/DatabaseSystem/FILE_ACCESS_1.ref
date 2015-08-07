@@ -6,14 +6,16 @@
 REFINEMENT FILE_ACCESS_1(max_rec,FIELD,VALUE)
 REFINES FILE_ACCESS
 
-VARIABLES
-     bfile
-VISIBLE_VARIABLES
-    updated,name,record
+CONCRETE_VARIABLES
+     name,record
+
+/*can not have variables with the same name as in specification*/
 
 INITIALISATION
-      bfile,updated,name := [],FALSE,0 ||
-      record :: FIELD-->VALUE
+      name := 0 ||
+      record :: FIELD-->VALUE ||
+       buffer,bfile,updated := {},[],FALSE
+
 INVARIANT
       name : 0..size(bfile) &
       record : FIELD --> VALUE &
@@ -28,10 +30,17 @@ OPERATIONS
      BEGIN
          bfile(name):=record
      END;
+     
      oo<--create_record(vv)=
      BEGIN
-         bfile:=bfile<-(INDEX * {vv}) ||
+         /*Renamed INDEX to FIELD ,typo*/
+         bfile:=bfile<-(FIELD * {vv}) ||
          oo:=size(bfile)+1
+     END;
+     
+      vv<--not_in_buffer(oo)=
+     BEGIN
+         vv:=bool(name/=oo)
      END;
      
      mod_buffer(oo,ii,vv)=
@@ -40,10 +49,7 @@ OPERATIONS
          updated :=TRUE
      END;
      
-     vv<--not_in_buffer(oo)=
-     BEGIN
-         vv:=bool(name/=oo)
-     END;
+    
      vv<--size_file=
      BEGIN
         vv:=size(bfile)

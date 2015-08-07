@@ -1,0 +1,1070 @@
+<Proof_Obligations>
+<Define merge="=" name="B definitions">
+<Nary_Pred op="&amp;" translate="((NAT) = (((0) .. (2147483647)))) &amp; ((INT) = (((-2147483647) .. (2147483647))))">
+<Exp_Comparison op="=">
+<Id value="NAT"/>
+<Binary_Exp op="..">
+<Integer_Literal value="0"/>
+<Id value="MAXINT"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="=">
+<Id value="INT"/>
+<Binary_Exp op="..">
+<Id value="MININT"/>
+<Id value="MAXINT"/>
+</Binary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Define>
+<Define merge="=" name="ctx"/>
+<Define merge="=" name="seext"/>
+<Define merge="=" name="inv">
+<Nary_Pred op="&amp;" translate="((partial_object) : (((0) .. (max_obj)))) &amp; partial_field : ((1) .. (max_field)) +-> ((((1) .. (partial_object))) +-> (((min_val) .. (max_val)))) &amp; dom(partial_field) = ((1) .. (max_field)) &amp; ((partial_field) : (((((1) .. (max_field))) --> (((((1) .. (partial_object))) +-> (((min_val) .. (max_val))))))))">
+<Exp_Comparison op=":" initialTag="((partial_object) : (((0) .. (max_obj))))">
+<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:1:1" typref="2701647786" value="partial_object"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:1:2:1" typref="2701647786" value="0"/>
+<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:1:2:2" typref="2701647786" value="max_obj"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((partial_field) : (((((1) .. (max_field))) --> (((((1) .. (partial_object))) +-> (((min_val) .. (max_val))))))))">
+<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:2:1" typref="4044453162" value="partial_field"/>
+<Binary_Exp op="-->" typref="2175577561">
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:2:2:1:1" typref="2701647786" value="1"/>
+<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:2:2:1:2" typref="2701647786" value="max_field"/>
+</Binary_Exp>
+<Binary_Exp op="+->" typref="3083833907">
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:2:2:2:1:1" typref="2701647786" value="1"/>
+<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:2:2:2:1:2" typref="2701647786" value="partial_object"/>
+</Binary_Exp>
+<Binary_Exp op=".." typref="3603043417">
+<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:2:2:2:2:1" typref="2701647786" value="min_val"/>
+<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:2:2:2:2:2" typref="2701647786" value="max_val"/>
+</Binary_Exp>
+</Binary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Define>
+<Define merge="=" name="ass"/>
+<Define merge="=" name="lprp"/>
+<Define merge="=" name="inprp"/>
+<Define merge="=" name="inext"/>
+<Define merge="=" name="cst">
+<Nary_Pred op="&amp;" translate="((max_obj) : ((NAT-{0}))) &amp; ((max_field) : ((NAT-{0}))) &amp; ((min_val) : (NAT)) &amp; ((max_val) : (NAT)) &amp; (max_val +1 &lt;= 2147483647)">
+<Exp_Comparison op=":">
+<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:2:1:1:1" typref="2701647786" value="max_obj"/>
+<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:2:1:1:2" typref="3603043417" value="NAT1"/>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:2:1:2:1" typref="2701647786" value="max_field"/>
+<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:2:1:2:2" typref="3603043417" value="NAT1"/>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:2:1:3:1" typref="2701647786" value="min_val"/>
+<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:2:1:3:2" typref="3603043417" value="NAT"/>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:2:1:4:1" typref="2701647786" value="max_val"/>
+<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:2:1:4:2" typref="3603043417" value="NAT"/>
+</Exp_Comparison>
+<Exp_Comparison op="&lt;">
+<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:2:1:5:1" typref="2701647786" value="max_val"/>
+<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:2:1:5:2" typref="2701647786" value="MAXINT"/>
+</Exp_Comparison>
+</Nary_Pred>
+</Define>
+<Proof_Obligation merge="=">
+<Comment>Initialisation dans une machine abstraite</Comment>
+<Tag>Initialisation</Tag>
+<Tag>Invariant</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Local_Hyp num="1">
+<Nary_Pred op="&amp;"/>
+</Local_Hyp>
+<Simple_Goal merge="0">
+<Tag>Invariant is preserved</Tag>
+<Goal>
+<Binary_Pred op="=>">
+<Ref_Hyp num="1"/>
+<Exp_Comparison op=":" initialTag="((partial_object) : (((0) .. (max_obj))))" goalTag="Invariant is preserved">
+<Integer_Literal tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:5:1:1:2:1,B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:1:1,B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:5:1:1:1:1" typref="2701647786" value="0"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:1:2:1" typref="2701647786" value="0"/>
+<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:1:2:2" typref="2701647786" value="max_obj"/>
+</Binary_Exp>
+</Exp_Comparison>
+</Binary_Pred>
+</Goal>
+</Simple_Goal>
+<Simple_Goal merge="">
+<Tag>Invariant is preserved</Tag>
+<Goal>
+<Binary_Pred op="=>">
+<Ref_Hyp num="1"/>
+<Exp_Comparison op=":" initialTag="((partial_field) : (((((1) .. (max_field))) --> (((((1) .. (partial_object))) +-> (((min_val) .. (max_val))))))))" goalTag="Invariant is preserved">
+<EmptySet tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:5:1:2:2:1,B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:2:1,B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:5:1:2:1:1" typref="4044453162"/>
+<Binary_Exp op="-->" typref="2175577561">
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:2:2:1:1" typref="2701647786" value="1"/>
+<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:2:2:1:2" typref="2701647786" value="max_field"/>
+</Binary_Exp>
+<Binary_Exp op="+->" typref="3083833907">
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:2:2:2:1:1" typref="2701647786" value="1"/>
+<Integer_Literal tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:5:1:1:2:1,B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:2:2:2:1:2,B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:5:1:1:1:1" typref="2701647786" value="0"/>
+</Binary_Exp>
+<Binary_Exp op=".." typref="3603043417">
+<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:2:2:2:2:1" typref="2701647786" value="min_val"/>
+<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:2:2:2:2:2" typref="2701647786" value="max_val"/>
+</Binary_Exp>
+</Binary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+</Binary_Pred>
+</Goal>
+<Proof_State proofState="Unproved" methodList="pr" passList="Force(0),?"/>
+</Simple_Goal>
+</Proof_Obligation>
+<Proof_Obligation merge="=">
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>create_partial_object</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Exp_Comparison op="/=">
+<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:1:2:1:1" typref="2701647786" value="partial_object"/>
+<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:1:2:1:2" typref="2701647786" value="max_obj"/>
+</Exp_Comparison>
+</Hypothesis>
+<Local_Hyp num="1">
+<Nary_Pred op="&amp;"/>
+</Local_Hyp>
+<Simple_Goal merge="0">
+<Tag>Invariant is preserved</Tag>
+<Goal>
+<Binary_Pred op="=>">
+<Ref_Hyp num="1"/>
+<Exp_Comparison op=":" initialTag="((partial_object) : (((0) .. (max_obj))))" goalTag="Invariant is preserved">
+<Binary_Exp op="+" tag=",B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:1:1,B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:1:3:1:1:1:1" typref="2701647786">
+<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:1:3:1:1:2:1:1" typref="2701647786" value="partial_object" fixed="false"/>
+<Integer_Literal tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:1:3:1:1:2:1:2" typref="2701647786" value="1"/>
+</Binary_Exp>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:1:2:1" typref="2701647786" value="0"/>
+<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:1:2:2" typref="2701647786" value="max_obj"/>
+</Binary_Exp>
+</Exp_Comparison>
+</Binary_Pred>
+</Goal>
+</Simple_Goal>
+<Simple_Goal merge="1">
+<Tag>Invariant is preserved</Tag>
+<Goal>
+<Binary_Pred op="=>">
+<Ref_Hyp num="1"/>
+<Exp_Comparison op=":" initialTag="((partial_field) : (((((1) .. (max_field))) --> (((((1) .. (partial_object))) +-> (((min_val) .. (max_val))))))))" goalTag="Invariant is preserved">
+<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:2:1" typref="4044453162" value="partial_field"/>
+<Binary_Exp op="-->" typref="2175577561">
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:2:2:1:1" typref="2701647786" value="1"/>
+<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:2:2:1:2" typref="2701647786" value="max_field"/>
+</Binary_Exp>
+<Binary_Exp op="+->" typref="3083833907">
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:2:2:2:1:1" typref="2701647786" value="1"/>
+<Binary_Exp op="+" tag=",B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:2:2:2:1:2,B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:1:3:1:1:1:1" typref="2701647786">
+<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:1:3:1:1:2:1:1" typref="2701647786" value="partial_object" fixed="false"/>
+<Integer_Literal tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:1:3:1:1:2:1:2" typref="2701647786" value="1"/>
+</Binary_Exp>
+</Binary_Exp>
+<Binary_Exp op=".." typref="3603043417">
+<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:2:2:2:2:1" typref="2701647786" value="min_val"/>
+<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:2:2:2:2:2" typref="2701647786" value="max_val"/>
+</Binary_Exp>
+</Binary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+</Binary_Pred>
+</Goal>
+</Simple_Goal>
+</Proof_Obligation>
+<Proof_Obligation merge="=">
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>mod_field</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:2:2:1:1:1" typref="2701647786" value="ii"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:2:2:1:1:2:1" typref="2701647786" value="1"/>
+<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:2:2:1:1:2:2" typref="2701647786" value="max_field"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:2:2:1:2:1" typref="2701647786" value="oo"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:2:2:1:2:2:1" typref="2701647786" value="1"/>
+<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:2:2:1:2:2:2" typref="2701647786" value="partial_object"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:2:2:1:3:1" typref="2701647786" value="vv"/>
+<Binary_Exp op=".." typref="3603043417">
+<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:2:2:1:3:2:1" typref="2701647786" value="min_val"/>
+<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:2:2:1:3:2:2" typref="2701647786" value="max_val"/>
+</Binary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Hypothesis>
+<Local_Hyp num="1">
+<Nary_Pred op="&amp;"/>
+</Local_Hyp>
+<Simple_Goal merge="0">
+<Tag>Invariant is preserved</Tag>
+<Goal>
+<Binary_Pred op="=>">
+<Ref_Hyp num="1"/>
+<Exp_Comparison op=":" initialTag="((partial_field) : (((((1) .. (max_field))) --> (((((1) .. (partial_object))) +-> (((min_val) .. (max_val))))))))" goalTag="Invariant is preserved">
+<Binary_Exp op="&lt;+" tag=",B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:2:1,B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:2:3:1:1:1:1:1" typref="4044453162">
+<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:2:3:1:1:1:1:1" typref="4044453162" value="partial_field"/>
+<Nary_Exp op="{">
+<Binary_Exp op="|->">
+<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:2:3:1:1:1:1:2" typref="2701647786" value="ii"/>
+<Binary_Exp op="&lt;+">
+<Binary_Exp op="(" typref="103245008">
+<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:2:3:1:1:1:1:1" typref="4044453162" value="partial_field"/>
+<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:2:3:1:1:1:1:2" typref="2701647786" value="ii"/>
+</Binary_Exp>
+<Nary_Exp op="{">
+<Binary_Exp op="|->">
+<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:2:3:1:1:1:2" typref="2701647786" value="oo"/>
+<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:2:3:1:2:1" typref="2701647786" value="vv"/>
+</Binary_Exp>
+</Nary_Exp>
+</Binary_Exp>
+</Binary_Exp>
+</Nary_Exp>
+</Binary_Exp>
+<Binary_Exp op="-->" typref="2175577561">
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:2:2:1:1" typref="2701647786" value="1"/>
+<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:2:2:1:2" typref="2701647786" value="max_field"/>
+</Binary_Exp>
+<Binary_Exp op="+->" typref="3083833907">
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:2:2:2:1:1" typref="2701647786" value="1"/>
+<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:2:2:2:1:2" typref="2701647786" value="partial_object"/>
+</Binary_Exp>
+<Binary_Exp op=".." typref="3603043417">
+<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:2:2:2:2:1" typref="2701647786" value="min_val"/>
+<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:2:2:2:2:2" typref="2701647786" value="max_val"/>
+</Binary_Exp>
+</Binary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+</Binary_Pred>
+</Goal>
+</Simple_Goal>
+</Proof_Obligation>
+<Proof_Obligation merge="=">
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>rem_field</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:3:2:1:1:1" typref="2701647786" value="ii"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:3:2:1:1:2:1" typref="2701647786" value="1"/>
+<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:3:2:1:1:2:2" typref="2701647786" value="max_field"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:3:2:1:2:1" typref="2701647786" value="oo"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:3:2:1:2:2:1" typref="2701647786" value="1"/>
+<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:3:2:1:2:2:2" typref="2701647786" value="partial_object"/>
+</Binary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Hypothesis>
+<Local_Hyp num="1">
+<Nary_Pred op="&amp;"/>
+</Local_Hyp>
+<Simple_Goal merge="0">
+<Tag>Invariant is preserved</Tag>
+<Goal>
+<Binary_Pred op="=>">
+<Ref_Hyp num="1"/>
+<Exp_Comparison op=":" initialTag="((partial_field) : (((((1) .. (max_field))) --> (((((1) .. (partial_object))) +-> (((min_val) .. (max_val))))))))" goalTag="Invariant is preserved">
+<Binary_Exp op="&lt;+" tag=",B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:2:1,B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:3:3:1:1:1:1" typref="4044453162">
+<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:3:3:1:1:1:1" typref="4044453162" value="partial_field"/>
+<Nary_Exp op="{">
+<Binary_Exp op="|->">
+<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:3:3:1:1:1:2" typref="2701647786" value="ii"/>
+<Binary_Exp op="&lt;&lt;|" typref="103245008">
+<Nary_Exp op="{" typref="3603043417">
+<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:3:3:1:2:1:1:1" typref="2701647786" value="oo"/>
+</Nary_Exp>
+<Binary_Exp op="(" typref="103245008">
+<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:3:3:1:2:1:2:1" typref="4044453162" value="partial_field"/>
+<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:3:3:1:2:1:2:2" typref="2701647786" value="ii"/>
+</Binary_Exp>
+</Binary_Exp>
+</Binary_Exp>
+</Nary_Exp>
+</Binary_Exp>
+<Binary_Exp op="-->" typref="2175577561">
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:2:2:1:1" typref="2701647786" value="1"/>
+<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:2:2:1:2" typref="2701647786" value="max_field"/>
+</Binary_Exp>
+<Binary_Exp op="+->" typref="3083833907">
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:2:2:2:1:1" typref="2701647786" value="1"/>
+<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:2:2:2:1:2" typref="2701647786" value="partial_object"/>
+</Binary_Exp>
+<Binary_Exp op=".." typref="3603043417">
+<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:2:2:2:2:1" typref="2701647786" value="min_val"/>
+<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:2:2:2:2:2" typref="2701647786" value="max_val"/>
+</Binary_Exp>
+</Binary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+</Binary_Pred>
+</Goal>
+</Simple_Goal>
+</Proof_Obligation>
+<Proof_Obligation merge="=">
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>def_field</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:4:3:1:1:1" typref="2701647786" value="ii"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:4:3:1:1:2:1" typref="2701647786" value="1"/>
+<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:4:3:1:1:2:2" typref="2701647786" value="max_field"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:4:3:1:2:1" typref="2701647786" value="oo"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:4:3:1:2:2:1" typref="2701647786" value="1"/>
+<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:4:3:1:2:2:2" typref="2701647786" value="partial_object"/>
+</Binary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Hypothesis>
+<Local_Hyp num="1">
+<Nary_Pred op="&amp;"/>
+</Local_Hyp>
+</Proof_Obligation>
+<Proof_Obligation merge="=">
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>val_field</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:5:3:1:1:1" typref="2701647786" value="ii"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:5:3:1:1:2:1" typref="2701647786" value="1"/>
+<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:5:3:1:1:2:2" typref="2701647786" value="max_field"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:5:3:1:2:1" typref="2701647786" value="oo"/>
+<Unary_Exp op="dom" typref="3603043417">
+<Binary_Exp op="(" typref="103245008">
+<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:5:3:1:2:2:1:1" typref="4044453162" value="partial_field"/>
+<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:5:3:1:2:2:1:2" typref="2701647786" value="ii"/>
+</Binary_Exp>
+</Unary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Hypothesis>
+<Local_Hyp num="1">
+<Nary_Pred op="&amp;"/>
+</Local_Hyp>
+</Proof_Obligation>
+<Proof_Obligation merge="=">
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>nbr_object</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis/>
+<Local_Hyp num="1">
+<Nary_Pred op="&amp;"/>
+</Local_Hyp>
+</Proof_Obligation>
+<Proof_Obligation merge="=">
+<Tag>WellDefinednessConstraints</Tag>
+<Local_Hyp num="1">
+<Exp_Comparison op=":">
+<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:2:1:4:1" typref="2701647786" value="max_val"/>
+<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:2:1:4:2" typref="3603043417" value="NAT"/>
+</Exp_Comparison>
+</Local_Hyp>
+<Local_Hyp num="2">
+<Exp_Comparison op=":">
+<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:2:1:3:1" typref="2701647786" value="min_val"/>
+<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:2:1:3:2" typref="3603043417" value="NAT"/>
+</Exp_Comparison>
+</Local_Hyp>
+<Local_Hyp num="3">
+<Exp_Comparison op=":">
+<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:2:1:2:1" typref="2701647786" value="max_field"/>
+<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:2:1:2:2" typref="3603043417" value="NAT1"/>
+</Exp_Comparison>
+</Local_Hyp>
+<Local_Hyp num="4">
+<Exp_Comparison op=":">
+<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:2:1:1:1" typref="2701647786" value="max_obj"/>
+<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:2:1:1:2" typref="3603043417" value="NAT1"/>
+</Exp_Comparison>
+</Local_Hyp>
+</Proof_Obligation>
+<Proof_Obligation merge="=">
+<Tag>WellDefinednessProperties</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Hypothesis/>
+</Proof_Obligation>
+<Proof_Obligation merge="=">
+<Tag>WellDefinednessInvariant</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Local_Hyp num="1">
+<Exp_Comparison op=":" initialTag="((partial_object) : (((0) .. (max_obj))))">
+<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:1:1" typref="2701647786" value="partial_object"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:1:2:1" typref="2701647786" value="0"/>
+<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:1:2:2" typref="2701647786" value="max_obj"/>
+</Binary_Exp>
+</Exp_Comparison>
+</Local_Hyp>
+</Proof_Obligation>
+<Proof_Obligation merge="=">
+<Tag>WellDefinednessAssertions</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+</Proof_Obligation>
+<Proof_Obligation merge="=">
+<Tag>WellDefinednessInitialisation</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+</Proof_Obligation>
+<Proof_Obligation merge="=">
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_Precondition_create_partial_object</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+</Proof_Obligation>
+<Proof_Obligation merge="=">
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_create_partial_object</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Exp_Comparison op="/=">
+<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:1:2:1:1" typref="2701647786" value="partial_object"/>
+<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:1:2:1:2" typref="2701647786" value="max_obj"/>
+</Exp_Comparison>
+</Hypothesis>
+</Proof_Obligation>
+<Proof_Obligation merge="=">
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_Precondition_mod_field</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Local_Hyp num="1">
+<Exp_Comparison op=":">
+<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:2:2:1:2:1" typref="2701647786" value="oo"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:2:2:1:2:2:1" typref="2701647786" value="1"/>
+<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:2:2:1:2:2:2" typref="2701647786" value="partial_object"/>
+</Binary_Exp>
+</Exp_Comparison>
+</Local_Hyp>
+<Local_Hyp num="2">
+<Exp_Comparison op=":">
+<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:2:2:1:1:1" typref="2701647786" value="ii"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:2:2:1:1:2:1" typref="2701647786" value="1"/>
+<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:2:2:1:1:2:2" typref="2701647786" value="max_field"/>
+</Binary_Exp>
+</Exp_Comparison>
+</Local_Hyp>
+</Proof_Obligation>
+<Proof_Obligation merge="=">
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_mod_field</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:2:2:1:1:1" typref="2701647786" value="ii"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:2:2:1:1:2:1" typref="2701647786" value="1"/>
+<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:2:2:1:1:2:2" typref="2701647786" value="max_field"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:2:2:1:2:1" typref="2701647786" value="oo"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:2:2:1:2:2:1" typref="2701647786" value="1"/>
+<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:2:2:1:2:2:2" typref="2701647786" value="partial_object"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:2:2:1:3:1" typref="2701647786" value="vv"/>
+<Binary_Exp op=".." typref="3603043417">
+<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:2:2:1:3:2:1" typref="2701647786" value="min_val"/>
+<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:2:2:1:3:2:2" typref="2701647786" value="max_val"/>
+</Binary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Hypothesis>
+<Simple_Goal merge="0">
+<Tag>Well definedness</Tag>
+<Goal>
+<Exp_Comparison op=":">
+<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:2:3:1:1:1:1:2" typref="2701647786" value="ii"/>
+<Unary_Exp op="dom">
+<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:2:3:1:1:1:1:1" typref="4044453162" value="partial_field"/>
+</Unary_Exp>
+</Exp_Comparison>
+</Goal>
+</Simple_Goal>
+<Simple_Goal merge="1">
+<Tag>Well definedness</Tag>
+<Goal>
+<Exp_Comparison op=":">
+<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:2:3:1:1:1:1:1" typref="4044453162" value="partial_field"/>
+<Binary_Exp op="+->">
+<Unary_Exp op="dom">
+<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:2:3:1:1:1:1:1" typref="4044453162" value="partial_field"/>
+</Unary_Exp>
+<Unary_Exp op="ran">
+<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:2:3:1:1:1:1:1" typref="4044453162" value="partial_field"/>
+</Unary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+</Goal>
+</Simple_Goal>
+</Proof_Obligation>
+<Proof_Obligation merge="=">
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_Precondition_rem_field</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Local_Hyp num="1">
+<Exp_Comparison op=":">
+<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:3:2:1:1:1" typref="2701647786" value="ii"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:3:2:1:1:2:1" typref="2701647786" value="1"/>
+<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:3:2:1:1:2:2" typref="2701647786" value="max_field"/>
+</Binary_Exp>
+</Exp_Comparison>
+</Local_Hyp>
+</Proof_Obligation>
+<Proof_Obligation merge="=">
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_rem_field</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:3:2:1:1:1" typref="2701647786" value="ii"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:3:2:1:1:2:1" typref="2701647786" value="1"/>
+<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:3:2:1:1:2:2" typref="2701647786" value="max_field"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:3:2:1:2:1" typref="2701647786" value="oo"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:3:2:1:2:2:1" typref="2701647786" value="1"/>
+<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:3:2:1:2:2:2" typref="2701647786" value="partial_object"/>
+</Binary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Hypothesis>
+<Simple_Goal merge="0">
+<Tag>Well definedness</Tag>
+<Goal>
+<Exp_Comparison op=":">
+<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:3:3:1:2:1:2:2" typref="2701647786" value="ii"/>
+<Unary_Exp op="dom">
+<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:3:3:1:2:1:2:1" typref="4044453162" value="partial_field"/>
+</Unary_Exp>
+</Exp_Comparison>
+</Goal>
+</Simple_Goal>
+<Simple_Goal merge="1">
+<Tag>Well definedness</Tag>
+<Goal>
+<Exp_Comparison op=":">
+<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:3:3:1:2:1:2:1" typref="4044453162" value="partial_field"/>
+<Binary_Exp op="+->">
+<Unary_Exp op="dom">
+<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:3:3:1:2:1:2:1" typref="4044453162" value="partial_field"/>
+</Unary_Exp>
+<Unary_Exp op="ran">
+<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:3:3:1:2:1:2:1" typref="4044453162" value="partial_field"/>
+</Unary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+</Goal>
+</Simple_Goal>
+</Proof_Obligation>
+<Proof_Obligation merge="=">
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_Precondition_def_field</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Local_Hyp num="1">
+<Exp_Comparison op=":">
+<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:4:3:1:1:1" typref="2701647786" value="ii"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:4:3:1:1:2:1" typref="2701647786" value="1"/>
+<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:4:3:1:1:2:2" typref="2701647786" value="max_field"/>
+</Binary_Exp>
+</Exp_Comparison>
+</Local_Hyp>
+</Proof_Obligation>
+<Proof_Obligation merge="=">
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_def_field</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:4:3:1:1:1" typref="2701647786" value="ii"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:4:3:1:1:2:1" typref="2701647786" value="1"/>
+<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:4:3:1:1:2:2" typref="2701647786" value="max_field"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:4:3:1:2:1" typref="2701647786" value="oo"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:4:3:1:2:2:1" typref="2701647786" value="1"/>
+<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:4:3:1:2:2:2" typref="2701647786" value="partial_object"/>
+</Binary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Hypothesis>
+<Simple_Goal merge="0">
+<Tag>Well definedness</Tag>
+<Goal>
+<Exp_Comparison op=":">
+<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:4:4:1:2:1:1:2:1:2" typref="2701647786" value="ii"/>
+<Unary_Exp op="dom">
+<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:4:4:1:2:1:1:2:1:1" typref="4044453162" value="partial_field"/>
+</Unary_Exp>
+</Exp_Comparison>
+</Goal>
+</Simple_Goal>
+<Simple_Goal merge="1">
+<Tag>Well definedness</Tag>
+<Goal>
+<Exp_Comparison op=":">
+<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:4:4:1:2:1:1:2:1:1" typref="4044453162" value="partial_field"/>
+<Binary_Exp op="+->">
+<Unary_Exp op="dom">
+<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:4:4:1:2:1:1:2:1:1" typref="4044453162" value="partial_field"/>
+</Unary_Exp>
+<Unary_Exp op="ran">
+<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:4:4:1:2:1:1:2:1:1" typref="4044453162" value="partial_field"/>
+</Unary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+</Goal>
+</Simple_Goal>
+</Proof_Obligation>
+<Proof_Obligation merge="=">
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_Precondition_val_field</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Local_Hyp num="1">
+<Exp_Comparison op=":">
+<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:5:3:1:1:1" typref="2701647786" value="ii"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:5:3:1:1:2:1" typref="2701647786" value="1"/>
+<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:5:3:1:1:2:2" typref="2701647786" value="max_field"/>
+</Binary_Exp>
+</Exp_Comparison>
+</Local_Hyp>
+<Simple_Goal merge="0">
+<Tag>Well definedness</Tag>
+<Goal>
+<Binary_Pred op="=>">
+<Ref_Hyp num="1"/>
+<Exp_Comparison op=":">
+<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:5:3:1:2:2:1:2" typref="2701647786" value="ii"/>
+<Unary_Exp op="dom">
+<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:5:3:1:2:2:1:1" typref="4044453162" value="partial_field"/>
+</Unary_Exp>
+</Exp_Comparison>
+</Binary_Pred>
+</Goal>
+</Simple_Goal>
+<Simple_Goal merge="1">
+<Tag>Well definedness</Tag>
+<Goal>
+<Binary_Pred op="=>">
+<Ref_Hyp num="1"/>
+<Exp_Comparison op=":">
+<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:5:3:1:2:2:1:1" typref="4044453162" value="partial_field"/>
+<Binary_Exp op="+->">
+<Unary_Exp op="dom">
+<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:5:3:1:2:2:1:1" typref="4044453162" value="partial_field"/>
+</Unary_Exp>
+<Unary_Exp op="ran">
+<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:5:3:1:2:2:1:1" typref="4044453162" value="partial_field"/>
+</Unary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+</Binary_Pred>
+</Goal>
+</Simple_Goal>
+</Proof_Obligation>
+<Proof_Obligation merge="=">
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_val_field</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:5:3:1:1:1" typref="2701647786" value="ii"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:5:3:1:1:2:1" typref="2701647786" value="1"/>
+<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:5:3:1:1:2:2" typref="2701647786" value="max_field"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:5:3:1:2:1" typref="2701647786" value="oo"/>
+<Unary_Exp op="dom" typref="3603043417">
+<Binary_Exp op="(" typref="103245008">
+<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:5:3:1:2:2:1:1" typref="4044453162" value="partial_field"/>
+<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:5:3:1:2:2:1:2" typref="2701647786" value="ii"/>
+</Binary_Exp>
+</Unary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Hypothesis>
+<Simple_Goal merge="0">
+<Tag>Well definedness</Tag>
+<Goal>
+<Exp_Comparison op=":">
+<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:5:4:1:2:1:1:2" typref="2701647786" value="ii"/>
+<Unary_Exp op="dom">
+<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:5:4:1:2:1:1:1" typref="4044453162" value="partial_field"/>
+</Unary_Exp>
+</Exp_Comparison>
+</Goal>
+</Simple_Goal>
+<Simple_Goal merge="1">
+<Tag>Well definedness</Tag>
+<Goal>
+<Exp_Comparison op=":">
+<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:5:4:1:2:1:1:1" typref="4044453162" value="partial_field"/>
+<Binary_Exp op="+->">
+<Unary_Exp op="dom">
+<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:5:4:1:2:1:1:1" typref="4044453162" value="partial_field"/>
+</Unary_Exp>
+<Unary_Exp op="ran">
+<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:5:4:1:2:1:1:1" typref="4044453162" value="partial_field"/>
+</Unary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+</Goal>
+</Simple_Goal>
+<Simple_Goal merge="2">
+<Tag>Well definedness</Tag>
+<Goal>
+<Exp_Comparison op=":">
+<Binary_Exp op="(" typref="103245008">
+<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:5:4:1:2:1:1:1" typref="4044453162" value="partial_field"/>
+<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:5:4:1:2:1:1:2" typref="2701647786" value="ii"/>
+</Binary_Exp>
+<Binary_Exp op="+->">
+<Unary_Exp op="dom">
+<Binary_Exp op="(" typref="103245008">
+<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:5:4:1:2:1:1:1" typref="4044453162" value="partial_field"/>
+<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:5:4:1:2:1:1:2" typref="2701647786" value="ii"/>
+</Binary_Exp>
+</Unary_Exp>
+<Unary_Exp op="ran">
+<Binary_Exp op="(" typref="103245008">
+<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:5:4:1:2:1:1:1" typref="4044453162" value="partial_field"/>
+<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:5:4:1:2:1:1:2" typref="2701647786" value="ii"/>
+</Binary_Exp>
+</Unary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+</Goal>
+</Simple_Goal>
+</Proof_Obligation>
+<Proof_Obligation merge="=">
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_Precondition_nbr_object</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+</Proof_Obligation>
+<Proof_Obligation merge="=">
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_nbr_object</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis/>
+</Proof_Obligation>
+<TypeInfos merge="=">
+<Type id="2701647786">
+<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:7:1:1" value="INTEGER"/>
+</Type>
+<Type id="3603043417">
+<Unary_Exp op="POW">
+<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:7:2:1:1" value="INTEGER"/>
+</Unary_Exp>
+</Type>
+<Type id="4044453162">
+<Unary_Exp op="POW">
+<Binary_Exp op="*">
+<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:7:3:1:1:1" value="INTEGER"/>
+<Unary_Exp op="POW">
+<Binary_Exp op="*">
+<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:7:3:1:1:2:1:1" value="INTEGER"/>
+<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:7:3:1:1:2:1:2" value="INTEGER"/>
+</Binary_Exp>
+</Unary_Exp>
+</Binary_Exp>
+</Unary_Exp>
+</Type>
+<Type id="2175577561">
+<Unary_Exp op="POW">
+<Unary_Exp op="POW">
+<Binary_Exp op="*">
+<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:7:4:1:1:1:1" value="INTEGER"/>
+<Unary_Exp op="POW">
+<Binary_Exp op="*">
+<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:7:4:1:1:1:2:1:1" value="INTEGER"/>
+<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:7:4:1:1:1:2:1:2" value="INTEGER"/>
+</Binary_Exp>
+</Unary_Exp>
+</Binary_Exp>
+</Unary_Exp>
+</Unary_Exp>
+</Type>
+<Type id="3083833907">
+<Unary_Exp op="POW">
+<Unary_Exp op="POW">
+<Binary_Exp op="*">
+<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:7:5:1:1:1:1" value="INTEGER"/>
+<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:7:5:1:1:1:2" value="INTEGER"/>
+</Binary_Exp>
+</Unary_Exp>
+</Unary_Exp>
+</Type>
+<Type id="3817003670">
+<Unary_Exp op="POW">
+<Generic_Type tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:7:6:1:1"/>
+</Unary_Exp>
+</Type>
+<Type id="103245008">
+<Unary_Exp op="POW">
+<Binary_Exp op="*">
+<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:7:7:1:1:1" value="INTEGER"/>
+<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:7:7:1:1:2" value="INTEGER"/>
+</Binary_Exp>
+</Unary_Exp>
+</Type>
+<Type id="2043437594">
+<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:7:8:1" value="BOOL"/>
+</Type>
+</TypeInfos>
+</Proof_Obligations>

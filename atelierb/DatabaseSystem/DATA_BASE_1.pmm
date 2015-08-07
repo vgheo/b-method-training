@@ -1,0 +1,4 @@
+﻿THEORY User_Pass IS
+Operation(WellDefinedness_death) & ff(0) & mp & pr & dc(1<=pp) & dd & pp(12);
+Operation(WellDefinedness_marriage) & ff(0) & mp & ch & pr
+END 

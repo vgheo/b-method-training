@@ -1,0 +1,14 @@
+<Machine name='MAIN_INTERFACE' type='abstraction'>
+<Initialisation>
+<Skip/>
+</Initialisation>
+<Operations>
+<Operation name='main'>
+<Body>
+<Skip/>
+</Body>
+</Operation>
+</Operations>
+<TypeInfos/>
+
+</Machine>

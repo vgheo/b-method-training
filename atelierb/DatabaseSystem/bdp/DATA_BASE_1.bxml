@@ -1,0 +1,692 @@
+<Machine name='DATA_BASE_1' type='implementation'>
+<Abstraction>DATA_BASE</Abstraction>
+<Imports>
+<Referenced_Machine>
+<Name>PARTIAL_OBJECT</Name>
+<Parameters>
+<Integer_Literal value='10000' typref='2701647786'/>
+<Integer_Literal value='4' typref='2701647786'/>
+<Integer_Literal value='0' typref='2701647786'/>
+<Integer_Literal value='10000' typref='2701647786'/>
+</Parameters>
+</Referenced_Machine>
+</Imports>
+<Sees>
+<Referenced_Machine>
+<Name>BASIC_IO</Name>
+</Referenced_Machine>
+<Referenced_Machine>
+<Name>BASIC_SEX</Name>
+</Referenced_Machine>
+<Referenced_Machine>
+<Name>BASIC_STATUS</Name>
+</Referenced_Machine>
+</Sees>
+<Values>
+<Valuation ident='PERSON' typref='3603043417'>
+<Binary_Exp op='..' typref='3603043417'>
+<Integer_Literal value='1' typref='2701647786'/>
+<Integer_Literal value='10000' typref='2701647786'/>
+</Binary_Exp>
+</Valuation>
+<Valuation ident='max_pers' typref='2701647786'>
+<Integer_Literal value='10000' typref='2701647786'/>
+</Valuation>
+</Values>
+<Invariant>
+<Nary_Pred op='&amp;'>
+<Exp_Comparison op='='>
+<Id value='person' typref='3603043417'/>
+<Binary_Exp op='..' typref='3603043417'>
+<Integer_Literal value='1' typref='2701647786'/>
+<Id value='max_pers' typref='2701647786'/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op='='>
+<Binary_Exp op='(' typref='103245008'>
+<Id value='partial_field' typref='4044453162'/>
+<Integer_Literal value='1' typref='2701647786'/>
+</Binary_Exp>
+<Binary_Exp op=';' typref='103245008'>
+<Id value='sex' typref='4139043608'/>
+<Id value='code_SEX' typref='3611811608'/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op='='>
+<Binary_Exp op='(' typref='103245008'>
+<Id value='partial_field' typref='4044453162'/>
+<Integer_Literal value='2' typref='2701647786'/>
+</Binary_Exp>
+<Binary_Exp op=';' typref='103245008'>
+<Id value='status' typref='3781868044'/>
+<Id value='code_STATUS' typref='2905916364'/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op='='>
+<Binary_Exp op='(' typref='103245008'>
+<Id value='partial_field' typref='4044453162'/>
+<Integer_Literal value='3' typref='2701647786'/>
+</Binary_Exp>
+<Id value='mother' typref='103245008'/>
+</Exp_Comparison>
+<Exp_Comparison op='='>
+<Binary_Exp op='(' typref='103245008'>
+<Id value='partial_field' typref='4044453162'/>
+<Integer_Literal value='4' typref='2701647786'/>
+</Binary_Exp>
+<Binary_Exp op='\/' typref='103245008'>
+<Id value='husband' typref='103245008'/>
+<Id value='wife' typref='103245008'/>
+</Binary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Invariant>
+<Initialisation>
+<Skip/>
+</Initialisation>
+<Operations>
+<Operation name='death'>
+<Input_Parameters>
+<Id value='pp' typref='2701647786'/>
+</Input_Parameters>
+<Body>
+<Operation_Call>
+<Name>
+<Id value='mod_field'/>
+</Name>
+<Input_Parameters>
+<Integer_Literal value='2' typref='2701647786'/>
+<Id value='pp' typref='2701647786'/>
+<Binary_Exp op='(' typref='2701647786'>
+<Id value='code_STATUS' typref='2905916364'/>
+<Id value='dead' typref='2246778642'/>
+</Binary_Exp>
+</Input_Parameters>
+</Operation_Call>
+</Body>
+</Operation>
+<Operation name='marriage'>
+<Input_Parameters>
+<Id value='bride' typref='2701647786'/>
+<Id value='groom' typref='2701647786'/>
+</Input_Parameters>
+<Body>
+<Nary_Sub op=';'>
+<Operation_Call>
+<Name>
+<Id value='mod_field'/>
+</Name>
+<Input_Parameters>
+<Integer_Literal value='4' typref='2701647786'/>
+<Id value='bride' typref='2701647786'/>
+<Id value='groom' typref='2701647786'/>
+</Input_Parameters>
+</Operation_Call>
+<Operation_Call>
+<Name>
+<Id value='mod_field'/>
+</Name>
+<Input_Parameters>
+<Integer_Literal value='4' typref='2701647786'/>
+<Id value='groom' typref='2701647786'/>
+<Id value='bride' typref='2701647786'/>
+</Input_Parameters>
+</Operation_Call>
+</Nary_Sub>
+</Body>
+</Operation>
+<Operation name='first_human'>
+<Output_Parameters>
+<Id value='baby' typref='2701647786'/>
+</Output_Parameters>
+<Input_Parameters>
+<Id value='ss' typref='3153412450'/>
+</Input_Parameters>
+<Body>
+<Nary_Sub op=';'>
+<Operation_Call>
+<Name>
+<Id value='create_partial_object'/>
+</Name>
+<Output_Parameters>
+<Id value='baby' typref='2701647786'/>
+</Output_Parameters>
+</Operation_Call>
+<Operation_Call>
+<Name>
+<Id value='mod_field'/>
+</Name>
+<Input_Parameters>
+<Integer_Literal value='1' typref='2701647786'/>
+<Id value='baby' typref='2701647786'/>
+<Binary_Exp op='(' typref='2701647786'>
+<Id value='code_SEX' typref='3611811608'/>
+<Id value='ss' typref='3153412450'/>
+</Binary_Exp>
+</Input_Parameters>
+</Operation_Call>
+<Operation_Call>
+<Name>
+<Id value='mod_field'/>
+</Name>
+<Input_Parameters>
+<Integer_Literal value='2' typref='2701647786'/>
+<Id value='baby' typref='2701647786'/>
+<Binary_Exp op='(' typref='2701647786'>
+<Id value='code_STATUS' typref='2905916364'/>
+<Id value='living' typref='2246778642'/>
+</Binary_Exp>
+</Input_Parameters>
+</Operation_Call>
+</Nary_Sub>
+</Body>
+</Operation>
+<Operation name='not_saturated'>
+<Output_Parameters>
+<Id value='report' typref='2043437594'/>
+</Output_Parameters>
+<Body>
+<VAR_IN>
+<Variables>
+<Id value='nn' typref='2701647786'/>
+</Variables>
+<Body>
+<Nary_Sub op=';'>
+<Operation_Call>
+<Name>
+<Id value='nbr_object'/>
+</Name>
+<Output_Parameters>
+<Id value='nn' typref='2701647786'/>
+</Output_Parameters>
+</Operation_Call>
+<Assignement_Sub>
+<Variables>
+<Id value='report' typref='2043437594'/>
+</Variables>
+<Values>
+<Boolean_Exp typref='2043437594'>
+<Exp_Comparison op='/='>
+<Id value='nn' typref='2701647786'/>
+<Id value='max_pers' typref='2701647786'/>
+</Exp_Comparison>
+</Boolean_Exp>
+</Values>
+</Assignement_Sub>
+</Nary_Sub>
+</Body>
+</VAR_IN>
+</Body>
+</Operation>
+<Operation name='new_born'>
+<Output_Parameters>
+<Id value='baby' typref='2701647786'/>
+</Output_Parameters>
+<Input_Parameters>
+<Id value='ss' typref='3153412450'/>
+<Id value='mm' typref='2701647786'/>
+</Input_Parameters>
+<Body>
+<Nary_Sub op=';'>
+<Operation_Call>
+<Name>
+<Id value='create_partial_object'/>
+</Name>
+<Output_Parameters>
+<Id value='baby' typref='2701647786'/>
+</Output_Parameters>
+</Operation_Call>
+<Operation_Call>
+<Name>
+<Id value='mod_field'/>
+</Name>
+<Input_Parameters>
+<Integer_Literal value='1' typref='2701647786'/>
+<Id value='baby' typref='2701647786'/>
+<Binary_Exp op='(' typref='2701647786'>
+<Id value='code_SEX' typref='3611811608'/>
+<Id value='ss' typref='3153412450'/>
+</Binary_Exp>
+</Input_Parameters>
+</Operation_Call>
+<Operation_Call>
+<Name>
+<Id value='mod_field'/>
+</Name>
+<Input_Parameters>
+<Integer_Literal value='2' typref='2701647786'/>
+<Id value='baby' typref='2701647786'/>
+<Binary_Exp op='(' typref='2701647786'>
+<Id value='code_STATUS' typref='2905916364'/>
+<Id value='living' typref='2246778642'/>
+</Binary_Exp>
+</Input_Parameters>
+</Operation_Call>
+<Operation_Call>
+<Name>
+<Id value='mod_field'/>
+</Name>
+<Input_Parameters>
+<Integer_Literal value='3' typref='2701647786'/>
+<Id value='baby' typref='2701647786'/>
+<Id value='mm' typref='2701647786'/>
+</Input_Parameters>
+</Operation_Call>
+</Nary_Sub>
+</Body>
+</Operation>
+<Operation name='is_present'>
+<Output_Parameters>
+<Id value='report' typref='2043437594'/>
+</Output_Parameters>
+<Input_Parameters>
+<Id value='pp' typref='2701647786'/>
+</Input_Parameters>
+<Body>
+<VAR_IN>
+<Variables>
+<Id value='nn' typref='2701647786'/>
+</Variables>
+<Body>
+<Nary_Sub op=';'>
+<Operation_Call>
+<Name>
+<Id value='nbr_object'/>
+</Name>
+<Output_Parameters>
+<Id value='nn' typref='2701647786'/>
+</Output_Parameters>
+</Operation_Call>
+<Assignement_Sub>
+<Variables>
+<Id value='report' typref='2043437594'/>
+</Variables>
+<Values>
+<Boolean_Exp typref='2043437594'>
+<Exp_Comparison op='/='>
+<Id value='nn' typref='2701647786'/>
+<Id value='max_pers' typref='2701647786'/>
+</Exp_Comparison>
+</Boolean_Exp>
+</Values>
+</Assignement_Sub>
+</Nary_Sub>
+</Body>
+</VAR_IN>
+</Body>
+</Operation>
+<Operation name='is_living'>
+<Output_Parameters>
+<Id value='report' typref='2043437594'/>
+</Output_Parameters>
+<Input_Parameters>
+<Id value='pp' typref='2701647786'/>
+</Input_Parameters>
+<Body>
+<VAR_IN>
+<Variables>
+<Id value='ss' typref='2701647786'/>
+</Variables>
+<Body>
+<Nary_Sub op=';'>
+<Operation_Call>
+<Name>
+<Id value='val_field'/>
+</Name>
+<Input_Parameters>
+<Integer_Literal value='2' typref='2701647786'/>
+<Id value='pp' typref='2701647786'/>
+</Input_Parameters>
+<Output_Parameters>
+<Id value='ss' typref='2701647786'/>
+</Output_Parameters>
+</Operation_Call>
+<Assignement_Sub>
+<Variables>
+<Id value='report' typref='2043437594'/>
+</Variables>
+<Values>
+<Boolean_Exp typref='2043437594'>
+<Exp_Comparison op='='>
+<Id value='ss' typref='2701647786'/>
+<Binary_Exp op='(' typref='2701647786'>
+<Id value='code_STATUS' typref='2905916364'/>
+<Id value='living' typref='2246778642'/>
+</Binary_Exp>
+</Exp_Comparison>
+</Boolean_Exp>
+</Values>
+</Assignement_Sub>
+</Nary_Sub>
+</Body>
+</VAR_IN>
+</Body>
+</Operation>
+<Operation name='is_woman'>
+<Output_Parameters>
+<Id value='report' typref='2043437594'/>
+</Output_Parameters>
+<Input_Parameters>
+<Id value='pp' typref='2701647786'/>
+</Input_Parameters>
+<Body>
+<VAR_IN>
+<Variables>
+<Id value='ss' typref='2701647786'/>
+</Variables>
+<Body>
+<Nary_Sub op=';'>
+<Operation_Call>
+<Name>
+<Id value='val_field'/>
+</Name>
+<Input_Parameters>
+<Integer_Literal value='1' typref='2701647786'/>
+<Id value='pp' typref='2701647786'/>
+</Input_Parameters>
+<Output_Parameters>
+<Id value='ss' typref='2701647786'/>
+</Output_Parameters>
+</Operation_Call>
+<Assignement_Sub>
+<Variables>
+<Id value='report' typref='2043437594'/>
+</Variables>
+<Values>
+<Boolean_Exp typref='2043437594'>
+<Exp_Comparison op='='>
+<Id value='ss' typref='2701647786'/>
+<Binary_Exp op='(' typref='2701647786'>
+<Id value='code_SEX' typref='3611811608'/>
+<Id value='woman' typref='3153412450'/>
+</Binary_Exp>
+</Exp_Comparison>
+</Boolean_Exp>
+</Values>
+</Assignement_Sub>
+</Nary_Sub>
+</Body>
+</VAR_IN>
+</Body>
+</Operation>
+<Operation name='is_married'>
+<Output_Parameters>
+<Id value='report' typref='2043437594'/>
+</Output_Parameters>
+<Input_Parameters>
+<Id value='pp' typref='2701647786'/>
+</Input_Parameters>
+<Body>
+<Operation_Call>
+<Name>
+<Id value='def_field'/>
+</Name>
+<Input_Parameters>
+<Integer_Literal value='4' typref='2701647786'/>
+<Id value='pp' typref='2701647786'/>
+</Input_Parameters>
+<Output_Parameters>
+<Id value='report' typref='2043437594'/>
+</Output_Parameters>
+</Operation_Call>
+</Body>
+</Operation>
+<Operation name='has_mother'>
+<Output_Parameters>
+<Id value='report' typref='2043437594'/>
+</Output_Parameters>
+<Input_Parameters>
+<Id value='pp' typref='2701647786'/>
+</Input_Parameters>
+<Body>
+<Operation_Call>
+<Name>
+<Id value='def_field'/>
+</Name>
+<Input_Parameters>
+<Integer_Literal value='3' typref='2701647786'/>
+<Id value='pp' typref='2701647786'/>
+</Input_Parameters>
+<Output_Parameters>
+<Id value='report' typref='2043437594'/>
+</Output_Parameters>
+</Operation_Call>
+</Body>
+</Operation>
+<Operation name='val_status'>
+<Output_Parameters>
+<Id value='vv' typref='2246778642'/>
+</Output_Parameters>
+<Input_Parameters>
+<Id value='pp' typref='2701647786'/>
+</Input_Parameters>
+<Body>
+<VAR_IN>
+<Variables>
+<Id value='ss' typref='2701647786'/>
+</Variables>
+<Body>
+<Nary_Sub op=';'>
+<Operation_Call>
+<Name>
+<Id value='val_field'/>
+</Name>
+<Input_Parameters>
+<Integer_Literal value='2' typref='2701647786'/>
+<Id value='pp' typref='2701647786'/>
+</Input_Parameters>
+<Output_Parameters>
+<Id value='ss' typref='2701647786'/>
+</Output_Parameters>
+</Operation_Call>
+<Assignement_Sub>
+<Variables>
+<Id value='vv' typref='2246778642'/>
+</Variables>
+<Values>
+<Binary_Exp op='(' typref='2246778642'>
+<Id value='decode_STATUS' typref='3781868044'/>
+<Id value='ss' typref='2701647786'/>
+</Binary_Exp>
+</Values>
+</Assignement_Sub>
+</Nary_Sub>
+</Body>
+</VAR_IN>
+</Body>
+</Operation>
+<Operation name='val_sex'>
+<Output_Parameters>
+<Id value='vv' typref='3153412450'/>
+</Output_Parameters>
+<Input_Parameters>
+<Id value='pp' typref='2701647786'/>
+</Input_Parameters>
+<Body>
+<VAR_IN>
+<Variables>
+<Id value='ss' typref='2701647786'/>
+</Variables>
+<Body>
+<Nary_Sub op=';'>
+<Operation_Call>
+<Name>
+<Id value='val_field'/>
+</Name>
+<Input_Parameters>
+<Integer_Literal value='1' typref='2701647786'/>
+<Id value='pp' typref='2701647786'/>
+</Input_Parameters>
+<Output_Parameters>
+<Id value='ss' typref='2701647786'/>
+</Output_Parameters>
+</Operation_Call>
+<Assignement_Sub>
+<Variables>
+<Id value='vv' typref='3153412450'/>
+</Variables>
+<Values>
+<Binary_Exp op='(' typref='3153412450'>
+<Id value='decode_SEX' typref='4139043608'/>
+<Id value='ss' typref='2701647786'/>
+</Binary_Exp>
+</Values>
+</Assignement_Sub>
+</Nary_Sub>
+</Body>
+</VAR_IN>
+</Body>
+</Operation>
+<Operation name='val_spouse'>
+<Output_Parameters>
+<Id value='vv' typref='2701647786'/>
+</Output_Parameters>
+<Input_Parameters>
+<Id value='pp' typref='2701647786'/>
+</Input_Parameters>
+<Body>
+<Operation_Call>
+<Name>
+<Id value='val_field'/>
+</Name>
+<Input_Parameters>
+<Integer_Literal value='4' typref='2701647786'/>
+<Id value='pp' typref='2701647786'/>
+</Input_Parameters>
+<Output_Parameters>
+<Id value='vv' typref='2701647786'/>
+</Output_Parameters>
+</Operation_Call>
+</Body>
+</Operation>
+<Operation name='val_mother'>
+<Output_Parameters>
+<Id value='vv' typref='2701647786'/>
+</Output_Parameters>
+<Input_Parameters>
+<Id value='pp' typref='2701647786'/>
+</Input_Parameters>
+<Body>
+<Operation_Call>
+<Name>
+<Id value='val_field'/>
+</Name>
+<Input_Parameters>
+<Integer_Literal value='3' typref='2701647786'/>
+<Id value='pp' typref='2701647786'/>
+</Input_Parameters>
+<Output_Parameters>
+<Id value='vv' typref='2701647786'/>
+</Output_Parameters>
+</Operation_Call>
+</Body>
+</Operation>
+<Operation name='PERSON_read'>
+<Output_Parameters>
+<Id value='pp' typref='2701647786'/>
+</Output_Parameters>
+<Body>
+<Operation_Call>
+<Name>
+<Id value='INTERVAL_READ'/>
+</Name>
+<Input_Parameters>
+<Integer_Literal value='1' typref='2701647786'/>
+<Id value='max_pers' typref='2701647786'/>
+</Input_Parameters>
+<Output_Parameters>
+<Id value='pp' typref='2701647786'/>
+</Output_Parameters>
+</Operation_Call>
+</Body>
+</Operation>
+<Operation name='PERSON_write'>
+<Input_Parameters>
+<Id value='pp' typref='2701647786'/>
+</Input_Parameters>
+<Body>
+<Operation_Call>
+<Name>
+<Id value='INT_WRITE'/>
+</Name>
+<Input_Parameters>
+<Id value='pp' typref='2701647786'/>
+</Input_Parameters>
+</Operation_Call>
+</Body>
+</Operation>
+</Operations>
+<TypeInfos>
+<Type id='2701647786'>
+<Id value='INTEGER'/>
+</Type>
+<Type id='3603043417'>
+<Unary_Exp op='POW'>
+<Id value='INTEGER'/>
+</Unary_Exp>
+</Type>
+<Type id='103245008'>
+<Unary_Exp op='POW'>
+<Binary_Exp op='*'>
+<Id value='INTEGER'/>
+<Id value='INTEGER'/>
+</Binary_Exp>
+</Unary_Exp>
+</Type>
+<Type id='4044453162'>
+<Unary_Exp op='POW'>
+<Binary_Exp op='*'>
+<Id value='INTEGER'/>
+<Unary_Exp op='POW'>
+<Binary_Exp op='*'>
+<Id value='INTEGER'/>
+<Id value='INTEGER'/>
+</Binary_Exp>
+</Unary_Exp>
+</Binary_Exp>
+</Unary_Exp>
+</Type>
+<Type id='4139043608'>
+<Unary_Exp op='POW'>
+<Binary_Exp op='*'>
+<Id value='INTEGER'/>
+<Id value='SEX'/>
+</Binary_Exp>
+</Unary_Exp>
+</Type>
+<Type id='3611811608'>
+<Unary_Exp op='POW'>
+<Binary_Exp op='*'>
+<Id value='SEX'/>
+<Id value='INTEGER'/>
+</Binary_Exp>
+</Unary_Exp>
+</Type>
+<Type id='3781868044'>
+<Unary_Exp op='POW'>
+<Binary_Exp op='*'>
+<Id value='INTEGER'/>
+<Id value='STATUS'/>
+</Binary_Exp>
+</Unary_Exp>
+</Type>
+<Type id='2905916364'>
+<Unary_Exp op='POW'>
+<Binary_Exp op='*'>
+<Id value='STATUS'/>
+<Id value='INTEGER'/>
+</Binary_Exp>
+</Unary_Exp>
+</Type>
+<Type id='2246778642'>
+<Id value='STATUS'/>
+</Type>
+<Type id='3153412450'>
+<Id value='SEX'/>
+</Type>
+<Type id='2043437594'>
+<Id value='BOOL'/>
+</Type>
+</TypeInfos>
+
+</Machine>

@@ -1,0 +1,22 @@
+THEORY ProofList
+END
+&
+THEORY Formulas IS
+((NAT) = (((0) .. (2147483647)))) & ((INT) = (((-2147483647) .. (2147483647))));
+((1..6)*{COMMAND}): FIN(NATURAL*{COMMAND}) & not(((1..6)*{COMMAND}) = {}) & code_COMMAND : ((1..6)*{COMMAND}) +-> {0}\/{1}\/{2}\/{3}\/{4}\/{5} & code_COMMAND : ((1..6)*{COMMAND}) >+> {0}\/{1}\/{2}\/{3}\/{4}\/{5} & code_COMMAND : ((1..6)*{COMMAND}) +->> {0}\/{1}\/{2}\/{3}\/{4}\/{5} & code_COMMAND : ((1..6)*{COMMAND}) --> {0}\/{1}\/{2}\/{3}\/{4}\/{5} & dom(code_COMMAND) = ((1..6)*{COMMAND}) & code_COMMAND~ : {0}\/{1}\/{2}\/{3}\/{4}\/{5} +-> ((1..6)*{COMMAND}) & ran(code_COMMAND) = {0}\/{1}\/{2}\/{3}\/{4}\/{5} & ((code_COMMAND) : (((((1..6)*{COMMAND})) >->> ({0}\/{1}\/{2}\/{3}\/{4}\/{5})))) & ((decode_COMMAND) = ((code_COMMAND)~));
+((rr$1) : (((1..6)*{COMMAND})));
+((ii) : (((1..6)*{COMMAND})));
+((1..6)*{COMMAND}): FIN(NATURAL*{COMMAND}) & not(((1..6)*{COMMAND}) = {});
+code_COMMAND : ((1..6)*{COMMAND}) +-> {0}\/{1}\/{2}\/{3}\/{4}\/{5};
+code_COMMAND : ((1..6)*{COMMAND}) >+> {0}\/{1}\/{2}\/{3}\/{4}\/{5};
+code_COMMAND : ((1..6)*{COMMAND}) +->> {0}\/{1}\/{2}\/{3}\/{4}\/{5};
+code_COMMAND : ((1..6)*{COMMAND}) --> {0}\/{1}\/{2}\/{3}\/{4}\/{5};
+dom(code_COMMAND) = ((1..6)*{COMMAND});
+code_COMMAND~ : {0}\/{1}\/{2}\/{3}\/{4}\/{5} +-> ((1..6)*{COMMAND});
+ran(code_COMMAND) = {0}\/{1}\/{2}\/{3}\/{4}\/{5};
+((code_COMMAND) : (((((1..6)*{COMMAND})) >->> ({0}\/{1}\/{2}\/{3}\/{4}\/{5}))))
+END
+&
+THEORY EnumerateX IS
+COMMAND == {new,birth,marriage,death,print,quit}
+END

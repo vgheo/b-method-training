@@ -1,0 +1,390 @@
+<Machine name='PARTIAL_OBJECT' type='abstraction'>
+<Parameters>
+<Id value='max_obj' typref='2701647786'/>
+<Id value='max_field' typref='2701647786'/>
+<Id value='min_val' typref='2701647786'/>
+<Id value='max_val' typref='2701647786'/>
+</Parameters>
+<Constraints>
+<Nary_Pred op='&amp;'>
+<Exp_Comparison op=':'>
+<Id value='max_obj' typref='2701647786'/>
+<Id value='NAT1' typref='3603043417'/>
+</Exp_Comparison>
+<Exp_Comparison op=':'>
+<Id value='max_field' typref='2701647786'/>
+<Id value='NAT1' typref='3603043417'/>
+</Exp_Comparison>
+<Exp_Comparison op=':'>
+<Id value='min_val' typref='2701647786'/>
+<Id value='NAT' typref='3603043417'/>
+</Exp_Comparison>
+<Exp_Comparison op=':'>
+<Id value='max_val' typref='2701647786'/>
+<Id value='NAT' typref='3603043417'/>
+</Exp_Comparison>
+<Exp_Comparison op='&lt;'>
+<Id value='max_val' typref='2701647786'/>
+<Id value='MAXINT' typref='2701647786'/>
+</Exp_Comparison>
+</Nary_Pred>
+</Constraints>
+<Abstract_Variables>
+<Id value='partial_object' typref='2701647786'/>
+<Id value='partial_field' typref='4044453162'/>
+</Abstract_Variables>
+<Invariant>
+<Nary_Pred op='&amp;'>
+<Exp_Comparison op=':'>
+<Id value='partial_object' typref='2701647786'/>
+<Binary_Exp op='..' typref='3603043417'>
+<Integer_Literal value='0' typref='2701647786'/>
+<Id value='max_obj' typref='2701647786'/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=':'>
+<Id value='partial_field' typref='4044453162'/>
+<Binary_Exp op='--&gt;' typref='2175577561'>
+<Binary_Exp op='..' typref='3603043417'>
+<Integer_Literal value='1' typref='2701647786'/>
+<Id value='max_field' typref='2701647786'/>
+</Binary_Exp>
+<Binary_Exp op='+-&gt;' typref='3083833907'>
+<Binary_Exp op='..' typref='3603043417'>
+<Integer_Literal value='1' typref='2701647786'/>
+<Id value='partial_object' typref='2701647786'/>
+</Binary_Exp>
+<Binary_Exp op='..' typref='3603043417'>
+<Id value='min_val' typref='2701647786'/>
+<Id value='max_val' typref='2701647786'/>
+</Binary_Exp>
+</Binary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Invariant>
+<Initialisation>
+<Nary_Sub op='||'>
+<Assignement_Sub>
+<Variables>
+<Id value='partial_object' typref='2701647786'/>
+</Variables>
+<Values>
+<Integer_Literal value='0' typref='2701647786'/>
+</Values>
+</Assignement_Sub>
+<Assignement_Sub>
+<Variables>
+<Id value='partial_field' typref='4044453162'/>
+</Variables>
+<Values>
+<EmptySet typref='3817003670'/>
+</Values>
+</Assignement_Sub>
+</Nary_Sub>
+</Initialisation>
+<Operations>
+<Operation name='create_partial_object'>
+<Output_Parameters>
+<Id value='oo' typref='2701647786'/>
+</Output_Parameters>
+<Precondition>
+<Exp_Comparison op='/='>
+<Id value='partial_object' typref='2701647786'/>
+<Id value='max_obj' typref='2701647786'/>
+</Exp_Comparison>
+</Precondition>
+<Body>
+<Nary_Sub op='||'>
+<Assignement_Sub>
+<Variables>
+<Id value='partial_object' typref='2701647786'/>
+</Variables>
+<Values>
+<Binary_Exp op='+' typref='2701647786'>
+<Id value='partial_object' typref='2701647786'/>
+<Integer_Literal value='1' typref='2701647786'/>
+</Binary_Exp>
+</Values>
+</Assignement_Sub>
+<Assignement_Sub>
+<Variables>
+<Id value='oo' typref='2701647786'/>
+</Variables>
+<Values>
+<Binary_Exp op='+' typref='2701647786'>
+<Id value='partial_object' typref='2701647786'/>
+<Integer_Literal value='1' typref='2701647786'/>
+</Binary_Exp>
+</Values>
+</Assignement_Sub>
+</Nary_Sub>
+</Body>
+</Operation>
+<Operation name='mod_field'>
+<Input_Parameters>
+<Id value='ii' typref='2701647786'/>
+<Id value='oo' typref='2701647786'/>
+<Id value='vv' typref='2701647786'/>
+</Input_Parameters>
+<Precondition>
+<Nary_Pred op='&amp;'>
+<Exp_Comparison op=':'>
+<Id value='ii' typref='2701647786'/>
+<Binary_Exp op='..' typref='3603043417'>
+<Integer_Literal value='1' typref='2701647786'/>
+<Id value='max_field' typref='2701647786'/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=':'>
+<Id value='oo' typref='2701647786'/>
+<Binary_Exp op='..' typref='3603043417'>
+<Integer_Literal value='1' typref='2701647786'/>
+<Id value='partial_object' typref='2701647786'/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=':'>
+<Id value='vv' typref='2701647786'/>
+<Binary_Exp op='..' typref='3603043417'>
+<Id value='min_val' typref='2701647786'/>
+<Id value='max_val' typref='2701647786'/>
+</Binary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Precondition>
+<Body>
+<Assignement_Sub>
+<Variables>
+<Binary_Exp op='(' typref='2701647786'>
+<Binary_Exp op='(' typref='103245008'>
+<Id value='partial_field' typref='4044453162'/>
+<Id value='ii' typref='2701647786'/>
+</Binary_Exp>
+<Id value='oo' typref='2701647786'/>
+</Binary_Exp>
+</Variables>
+<Values>
+<Id value='vv' typref='2701647786'/>
+</Values>
+</Assignement_Sub>
+</Body>
+</Operation>
+<Operation name='rem_field'>
+<Input_Parameters>
+<Id value='ii' typref='2701647786'/>
+<Id value='oo' typref='2701647786'/>
+</Input_Parameters>
+<Precondition>
+<Nary_Pred op='&amp;'>
+<Exp_Comparison op=':'>
+<Id value='ii' typref='2701647786'/>
+<Binary_Exp op='..' typref='3603043417'>
+<Integer_Literal value='1' typref='2701647786'/>
+<Id value='max_field' typref='2701647786'/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=':'>
+<Id value='oo' typref='2701647786'/>
+<Binary_Exp op='..' typref='3603043417'>
+<Integer_Literal value='1' typref='2701647786'/>
+<Id value='partial_object' typref='2701647786'/>
+</Binary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Precondition>
+<Body>
+<Assignement_Sub>
+<Variables>
+<Binary_Exp op='(' typref='103245008'>
+<Id value='partial_field' typref='4044453162'/>
+<Id value='ii' typref='2701647786'/>
+</Binary_Exp>
+</Variables>
+<Values>
+<Binary_Exp op='&lt;&lt;|' typref='103245008'>
+<Nary_Exp op='{' typref='3603043417'>
+<Id value='oo' typref='2701647786'/>
+</Nary_Exp>
+<Binary_Exp op='(' typref='103245008'>
+<Id value='partial_field' typref='4044453162'/>
+<Id value='ii' typref='2701647786'/>
+</Binary_Exp>
+</Binary_Exp>
+</Values>
+</Assignement_Sub>
+</Body>
+</Operation>
+<Operation name='def_field'>
+<Output_Parameters>
+<Id value='vv' typref='2043437594'/>
+</Output_Parameters>
+<Input_Parameters>
+<Id value='ii' typref='2701647786'/>
+<Id value='oo' typref='2701647786'/>
+</Input_Parameters>
+<Precondition>
+<Nary_Pred op='&amp;'>
+<Exp_Comparison op=':'>
+<Id value='ii' typref='2701647786'/>
+<Binary_Exp op='..' typref='3603043417'>
+<Integer_Literal value='1' typref='2701647786'/>
+<Id value='max_field' typref='2701647786'/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=':'>
+<Id value='oo' typref='2701647786'/>
+<Binary_Exp op='..' typref='3603043417'>
+<Integer_Literal value='1' typref='2701647786'/>
+<Id value='partial_object' typref='2701647786'/>
+</Binary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Precondition>
+<Body>
+<Assignement_Sub>
+<Variables>
+<Id value='vv' typref='2043437594'/>
+</Variables>
+<Values>
+<Boolean_Exp typref='2043437594'>
+<Exp_Comparison op=':'>
+<Id value='oo' typref='2701647786'/>
+<Unary_Exp op='dom' typref='3603043417'>
+<Binary_Exp op='(' typref='103245008'>
+<Id value='partial_field' typref='4044453162'/>
+<Id value='ii' typref='2701647786'/>
+</Binary_Exp>
+</Unary_Exp>
+</Exp_Comparison>
+</Boolean_Exp>
+</Values>
+</Assignement_Sub>
+</Body>
+</Operation>
+<Operation name='val_field'>
+<Output_Parameters>
+<Id value='vv' typref='2701647786'/>
+</Output_Parameters>
+<Input_Parameters>
+<Id value='ii' typref='2701647786'/>
+<Id value='oo' typref='2701647786'/>
+</Input_Parameters>
+<Precondition>
+<Nary_Pred op='&amp;'>
+<Exp_Comparison op=':'>
+<Id value='ii' typref='2701647786'/>
+<Binary_Exp op='..' typref='3603043417'>
+<Integer_Literal value='1' typref='2701647786'/>
+<Id value='max_field' typref='2701647786'/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=':'>
+<Id value='oo' typref='2701647786'/>
+<Unary_Exp op='dom' typref='3603043417'>
+<Binary_Exp op='(' typref='103245008'>
+<Id value='partial_field' typref='4044453162'/>
+<Id value='ii' typref='2701647786'/>
+</Binary_Exp>
+</Unary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Precondition>
+<Body>
+<Assignement_Sub>
+<Variables>
+<Id value='vv' typref='2701647786'/>
+</Variables>
+<Values>
+<Binary_Exp op='(' typref='2701647786'>
+<Binary_Exp op='(' typref='103245008'>
+<Id value='partial_field' typref='4044453162'/>
+<Id value='ii' typref='2701647786'/>
+</Binary_Exp>
+<Id value='oo' typref='2701647786'/>
+</Binary_Exp>
+</Values>
+</Assignement_Sub>
+</Body>
+</Operation>
+<Operation name='nbr_object'>
+<Output_Parameters>
+<Id value='vv' typref='2701647786'/>
+</Output_Parameters>
+<Body>
+<Assignement_Sub>
+<Variables>
+<Id value='vv' typref='2701647786'/>
+</Variables>
+<Values>
+<Id value='partial_object' typref='2701647786'/>
+</Values>
+</Assignement_Sub>
+</Body>
+</Operation>
+</Operations>
+<TypeInfos>
+<Type id='2701647786'>
+<Id value='INTEGER'/>
+</Type>
+<Type id='3603043417'>
+<Unary_Exp op='POW'>
+<Id value='INTEGER'/>
+</Unary_Exp>
+</Type>
+<Type id='4044453162'>
+<Unary_Exp op='POW'>
+<Binary_Exp op='*'>
+<Id value='INTEGER'/>
+<Unary_Exp op='POW'>
+<Binary_Exp op='*'>
+<Id value='INTEGER'/>
+<Id value='INTEGER'/>
+</Binary_Exp>
+</Unary_Exp>
+</Binary_Exp>
+</Unary_Exp>
+</Type>
+<Type id='2175577561'>
+<Unary_Exp op='POW'>
+<Unary_Exp op='POW'>
+<Binary_Exp op='*'>
+<Id value='INTEGER'/>
+<Unary_Exp op='POW'>
+<Binary_Exp op='*'>
+<Id value='INTEGER'/>
+<Id value='INTEGER'/>
+</Binary_Exp>
+</Unary_Exp>
+</Binary_Exp>
+</Unary_Exp>
+</Unary_Exp>
+</Type>
+<Type id='3083833907'>
+<Unary_Exp op='POW'>
+<Unary_Exp op='POW'>
+<Binary_Exp op='*'>
+<Id value='INTEGER'/>
+<Id value='INTEGER'/>
+</Binary_Exp>
+</Unary_Exp>
+</Unary_Exp>
+</Type>
+<Type id='3817003670'>
+<Unary_Exp op='POW'>
+<Generic_Type/>
+</Unary_Exp>
+</Type>
+<Type id='103245008'>
+<Unary_Exp op='POW'>
+<Binary_Exp op='*'>
+<Id value='INTEGER'/>
+<Id value='INTEGER'/>
+</Binary_Exp>
+</Unary_Exp>
+</Type>
+<Type id='2043437594'>
+<Id value='BOOL'/>
+</Type>
+</TypeInfos>
+
+</Machine>

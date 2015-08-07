@@ -1,0 +1,37 @@
+/* MAIN_INTERFACE_1
+ * Author: T0164919
+ * Creation date: 7/30/2015
+ */
+
+IMPLEMENTATION MAIN_INTERFACE_1
+REFINES MAIN_INTERFACE
+IMPORTS
+    INNER_INTERFACE,BASIC_COMMAND,BASIC_SEX,BASIC_STATUS,BASIC_IO
+OPERATIONS
+  main=
+  VAR cc,xx IN 
+      cc<--COMMAND_READ;
+      xx:=MAXINT;
+      WHILE(cc/=quit) & (xx/=0) DO
+          CASE cc OF 
+              EITHER new THEN 
+                  first_operation
+              OR birth THEN
+                  birth_operation
+              OR marriage THEN
+                  marriage_operation
+              OR death THEN
+                  death_operation
+              OR print THEN
+                  print_operation
+              END
+          END;
+          cc<--COMMAND_READ;
+          xx:=xx-1
+      INVARIANT
+          xx:NAT
+      VARIANT
+          xx
+      END
+  END
+END

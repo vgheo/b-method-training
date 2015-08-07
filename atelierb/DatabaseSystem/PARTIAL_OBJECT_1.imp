@@ -1,0 +1,41 @@
+/* PARTIAL_OBJECT_1
+ * Author: T0164919
+ * Creation date: 7/30/2015
+ */
+
+IMPLEMENTATION 
+    PARTIAL_OBJECT_1(max_obj,max_field,min_val,max_val)
+REFINES 
+    PARTIAL_OBJECT
+IMPORTS
+    TOTAL_OBJECT(max_obj,1..max_field,min_val..MAXINT)
+PROMOTES
+    mod_field,val_field,nbr_object
+INVARIANT
+    partial_object = total_object &
+    !ii.(ii:(1..max_field) => partial_field(ii) = total_field(ii)|>>{MAXINT})
+DEFINITIONS
+    FIELD == 1..max_field;
+    OBJECT == 1..partial_object;
+    VALUE == min_val..max_val
+
+OPERATIONS
+    oo<--create_partial_object=
+   BEGIN
+       oo<--create_total_object(MAXINT)
+    END;
+    
+    
+    rem_field(ii,oo)=
+    BEGIN
+        mod_field(ii,oo,MAXINT)
+    END;
+
+    
+vv<--def_field(ii,oo)=
+    VAR ww IN
+    ww<--val_field(ii,oo);
+    vv:=bool(ww/=MAXINT)    
+    END
+
+ END

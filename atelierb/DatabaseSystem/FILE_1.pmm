@@ -1,0 +1,5 @@
+﻿THEORY User_Pass IS
+Operation(WellDefinedness_mod_file) & ff(0) & pr & pp(rp.1);
+Operation(WellDefinedness_val_file) & ff(0) & mp & pp(rp.1);
+Operation(WellDefinedness_mod_file) & ff(0) & mp & pr
+END 

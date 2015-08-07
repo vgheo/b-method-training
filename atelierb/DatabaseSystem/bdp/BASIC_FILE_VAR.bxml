@@ -1,0 +1,283 @@
+<Machine name='BASIC_FILE_VAR' type='abstraction'>
+<Parameters>
+<Id value='max_rec' typref='2701647786'/>
+<Id value='INDEX' typref='3666687245'/>
+<Id value='VALUE' typref='3958993484'/>
+</Parameters>
+<Constraints>
+<Nary_Pred op='&amp;'>
+<Set>
+<Id value='INDEX' typref='3666687245'/>
+</Set>
+<Set>
+<Id value='VALUE' typref='3958993484'/>
+</Set>
+<Exp_Comparison op=':'>
+<Id value='max_rec' typref='2701647786'/>
+<Id value='NAT1' typref='3603043417'/>
+</Exp_Comparison>
+</Nary_Pred>
+</Constraints>
+<Abstract_Variables>
+<Id value='file_vrb' typref='1204907843'/>
+</Abstract_Variables>
+<Concrete_Variables>
+<Id value='buf_vrb' typref='1963249655'/>
+</Concrete_Variables>
+<Invariant>
+<Nary_Pred op='&amp;'>
+<Exp_Comparison op=':'>
+<Id value='buf_vrb' typref='1963249655'/>
+<Binary_Exp op='--&gt;' typref='4102281932'>
+<Id value='INDEX' typref='3666687245'/>
+<Id value='VALUE' typref='3958993484'/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=':'>
+<Id value='file_vrb' typref='1204907843'/>
+<Unary_Exp op='seq' typref='3206855168'>
+<Binary_Exp op='--&gt;' typref='4102281932'>
+<Id value='INDEX' typref='3666687245'/>
+<Id value='VALUE' typref='3958993484'/>
+</Binary_Exp>
+</Unary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op='&lt;'>
+<Unary_Exp op='size' typref='2701647786'>
+<Id value='file_vrb' typref='1204907843'/>
+</Unary_Exp>
+<Id value='max_rec' typref='2701647786'/>
+</Exp_Comparison>
+</Nary_Pred>
+</Invariant>
+<Initialisation>
+<Nary_Sub op='||'>
+<Becomes_In>
+<Variables>
+<Id value='buf_vrb' typref='1963249655'/>
+</Variables>
+<Value>
+<Binary_Exp op='--&gt;' typref='4102281932'>
+<Id value='INDEX' typref='3666687245'/>
+<Id value='VALUE' typref='3958993484'/>
+</Binary_Exp>
+</Value>
+</Becomes_In>
+<Assignement_Sub>
+<Variables>
+<Id value='file_vrb' typref='1204907843'/>
+</Variables>
+<Values>
+<EmptySeq typref='3183177603'/>
+</Values>
+</Assignement_Sub>
+</Nary_Sub>
+</Initialisation>
+<Operations>
+<Operation name='READ_FILE'>
+<Input_Parameters>
+<Id value='ii' typref='2701647786'/>
+</Input_Parameters>
+<Precondition>
+<Exp_Comparison op=':'>
+<Id value='ii' typref='2701647786'/>
+<Unary_Exp op='dom' typref='3603043417'>
+<Id value='file_vrb' typref='1204907843'/>
+</Unary_Exp>
+</Exp_Comparison>
+</Precondition>
+<Body>
+<Assignement_Sub>
+<Variables>
+<Id value='buf_vrb' typref='1963249655'/>
+</Variables>
+<Values>
+<Binary_Exp op='(' typref='1963249655'>
+<Id value='file_vrb' typref='1204907843'/>
+<Id value='ii' typref='2701647786'/>
+</Binary_Exp>
+</Values>
+</Assignement_Sub>
+</Body>
+</Operation>
+<Operation name='WRITE_FILE'>
+<Input_Parameters>
+<Id value='ii' typref='2701647786'/>
+</Input_Parameters>
+<Precondition>
+<Exp_Comparison op=':'>
+<Id value='ii' typref='2701647786'/>
+<Unary_Exp op='dom' typref='3603043417'>
+<Id value='file_vrb' typref='1204907843'/>
+</Unary_Exp>
+</Exp_Comparison>
+</Precondition>
+<Body>
+<Assignement_Sub>
+<Variables>
+<Binary_Exp op='(' typref='1963249655'>
+<Id value='file_vrb' typref='1204907843'/>
+<Id value='ii' typref='2701647786'/>
+</Binary_Exp>
+</Variables>
+<Values>
+<Id value='buf_vrb' typref='1963249655'/>
+</Values>
+</Assignement_Sub>
+</Body>
+</Operation>
+<Operation name='NEW_RECORD'>
+<Input_Parameters>
+<Id value='vv' typref='4077266551'/>
+</Input_Parameters>
+<Precondition>
+<Nary_Pred op='&amp;'>
+<Exp_Comparison op=':'>
+<Id value='vv' typref='4077266551'/>
+<Id value='VALUE' typref='3958993484'/>
+</Exp_Comparison>
+<Exp_Comparison op='/='>
+<Unary_Exp op='size' typref='2701647786'>
+<Id value='file_vrb' typref='1204907843'/>
+</Unary_Exp>
+<Id value='max_rec' typref='2701647786'/>
+</Exp_Comparison>
+</Nary_Pred>
+</Precondition>
+<Body>
+<Assignement_Sub>
+<Variables>
+<Id value='file_vrb' typref='1204907843'/>
+</Variables>
+<Values>
+<Binary_Exp op='&lt;-' typref='1204907843'>
+<Id value='file_vrb' typref='1204907843'/>
+<Binary_Exp op='*' typref='1963249655'>
+<Id value='INDEX' typref='3666687245'/>
+<Nary_Exp op='{' typref='3958993484'>
+<Id value='vv' typref='4077266551'/>
+</Nary_Exp>
+</Binary_Exp>
+</Binary_Exp>
+</Values>
+</Assignement_Sub>
+</Body>
+</Operation>
+<Operation name='SIZE_FILE'>
+<Output_Parameters>
+<Id value='vv' typref='2701647786'/>
+</Output_Parameters>
+<Body>
+<Assignement_Sub>
+<Variables>
+<Id value='vv' typref='2701647786'/>
+</Variables>
+<Values>
+<Unary_Exp op='size' typref='2701647786'>
+<Id value='file_vrb' typref='1204907843'/>
+</Unary_Exp>
+</Values>
+</Assignement_Sub>
+</Body>
+</Operation>
+<Operation name='RESET_FILE'>
+<Body>
+<Assignement_Sub>
+<Variables>
+<Id value='file_vrb' typref='1204907843'/>
+</Variables>
+<Values>
+<EmptySeq typref='3183177603'/>
+</Values>
+</Assignement_Sub>
+</Body>
+</Operation>
+</Operations>
+<TypeInfos>
+<Type id='2701647786'>
+<Id value='INTEGER'/>
+</Type>
+<Type id='3666687245'>
+<Unary_Exp op='POW'>
+<Id value='INDEX'/>
+</Unary_Exp>
+</Type>
+<Type id='3958993484'>
+<Unary_Exp op='POW'>
+<Id value='VALUE'/>
+</Unary_Exp>
+</Type>
+<Type id='3603043417'>
+<Unary_Exp op='POW'>
+<Id value='INTEGER'/>
+</Unary_Exp>
+</Type>
+<Type id='1204907843'>
+<Unary_Exp op='POW'>
+<Binary_Exp op='*'>
+<Id value='INTEGER'/>
+<Unary_Exp op='POW'>
+<Binary_Exp op='*'>
+<Id value='INDEX'/>
+<Id value='VALUE'/>
+</Binary_Exp>
+</Unary_Exp>
+</Binary_Exp>
+</Unary_Exp>
+</Type>
+<Type id='1963249655'>
+<Unary_Exp op='POW'>
+<Binary_Exp op='*'>
+<Id value='INDEX'/>
+<Id value='VALUE'/>
+</Binary_Exp>
+</Unary_Exp>
+</Type>
+<Type id='4102281932'>
+<Unary_Exp op='POW'>
+<Unary_Exp op='POW'>
+<Binary_Exp op='*'>
+<Id value='INDEX'/>
+<Id value='VALUE'/>
+</Binary_Exp>
+</Unary_Exp>
+</Unary_Exp>
+</Type>
+<Type id='3206855168'>
+<Unary_Exp op='POW'>
+<Unary_Exp op='POW'>
+<Binary_Exp op='*'>
+<Id value='INTEGER'/>
+<Unary_Exp op='POW'>
+<Binary_Exp op='*'>
+<Id value='INDEX'/>
+<Id value='VALUE'/>
+</Binary_Exp>
+</Unary_Exp>
+</Binary_Exp>
+</Unary_Exp>
+</Unary_Exp>
+</Type>
+<Type id='3183177603'>
+<Unary_Exp op='POW'>
+<Binary_Exp op='*'>
+<Id value='INTEGER'/>
+<Unary_Exp op='POW'>
+<Unary_Exp op='POW'>
+<Unary_Exp op='POW'>
+<Binary_Exp op='*'>
+<Id value='INDEX'/>
+<Id value='VALUE'/>
+</Binary_Exp>
+</Unary_Exp>
+</Unary_Exp>
+</Unary_Exp>
+</Binary_Exp>
+</Unary_Exp>
+</Type>
+<Type id='4077266551'>
+<Id value='VALUE'/>
+</Type>
+</TypeInfos>
+
+</Machine>

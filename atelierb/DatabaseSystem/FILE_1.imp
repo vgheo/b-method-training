@@ -21,14 +21,15 @@ OPERATIONS
         load_buffer(oo)
     END;
     mod_buffer(oo,ii,vv)
-END;
+    END;
+
     vv<--val_file(oo,ii)=
     VAR test IN 
         test<--not_in_buffer(oo);
-    
     IF test = TRUE THEN
         load_buffer(oo)
     END;
     vv<--val_buffer(oo,ii)
-END
+    END
+
 END

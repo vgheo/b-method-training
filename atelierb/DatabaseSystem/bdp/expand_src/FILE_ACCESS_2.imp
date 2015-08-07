@@ -1,0 +1,72 @@
+﻿/* FILE_ACCESS_2
+* Author: T0164919
+* Creation date: 7/30/2015
+*/
+
+IMPLEMENTATION FILE_ACCESS_2 ( max_rec , FIELD , VALUE )
+REFINES FILE_ACCESS_1
+IMPORTS
+    BASIC_FILE_VAR ( max_rec , FIELD , VALUE )
+    /*
+    
+    VISIBLE_VARIABLES
+    updated,name
+    */
+INITIALISATION
+    updated := FALSE ;
+    name := 0 ;
+    buffer , bfile := {} , [] ;
+    record := {}
+
+INVARIANT
+    bfile = file_vrb &
+    record = buf_vrb
+OPERATIONS
+
+    get_record ( oo ) =
+    BEGIN
+        /*corection name:=1 instead of 0 becau8se 0 /: dom(file_vrb(N) as requested i theb PRECONDITION clause of READ_FILE*/
+        name := 1 ;
+        READ_FILE ( name ) ;
+        updated := FALSE
+    END ;
+
+    put_buffer =
+    BEGIN
+        WRITE_FILE ( name )
+    END ;
+
+    oo <-- create_record ( vv ) =
+    BEGIN
+        NEW_RECORD ( vv ) ;
+        oo <-- SIZE_FILE
+    END ;
+
+    mod_buffer ( oo , ii , vv ) =
+    BEGIN
+        /*STR_BUFFER(ii,vv);
+        No reference to STR_BUFFER anywhere else but this file
+        */
+        record ( ii ) := vv ;
+        updated := TRUE
+    END ;
+
+    vv <-- not_in_buffer ( oo ) =
+    BEGIN
+        vv := bool ( oo /= name )
+    END ;
+
+    vv <-- size_file =
+    BEGIN
+        vv <-- SIZE_FILE
+    END ;
+
+    vv <-- val_buffer ( oo , ii ) =
+    BEGIN
+        vv := buffer ( oo ) ( ii )
+    END
+
+
+
+
+END

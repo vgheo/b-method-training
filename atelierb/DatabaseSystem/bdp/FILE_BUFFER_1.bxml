@@ -1,0 +1,91 @@
+<Machine name='FILE_BUFFER_1' type='implementation'>
+<Abstraction>FILE_BUFFER</Abstraction>
+<Parameters>
+<Id value='max_rec' typref='2701647786'/>
+<Id value='FIELD' typref='3988092277'/>
+<Id value='VALUE' typref='3958993484'/>
+</Parameters>
+<Constraints>
+<Nary_Pred op='&amp;'>
+<Set>
+<Id value='FIELD' typref='3988092277'/>
+</Set>
+<Set>
+<Id value='VALUE' typref='3958993484'/>
+</Set>
+</Nary_Pred>
+</Constraints>
+<Imports>
+<Referenced_Machine>
+<Name>FILE_ACCESS</Name>
+<Parameters>
+<Id value='max_rec' typref='2701647786'/>
+<Id value='FIELD' typref='3988092277'/>
+<Id value='VALUE' typref='3958993484'/>
+</Parameters>
+</Referenced_Machine>
+</Imports>
+<Promotes>
+<Promoted_Operation>create_record</Promoted_Operation>
+<Promoted_Operation>not_in_buffer</Promoted_Operation>
+<Promoted_Operation>mod_buffer</Promoted_Operation>
+<Promoted_Operation>val_buffer</Promoted_Operation>
+<Promoted_Operation>size_file</Promoted_Operation>
+</Promotes>
+<Initialisation>
+<Skip/>
+</Initialisation>
+<Operations>
+<Operation name='load_buffer'>
+<Input_Parameters>
+<Id value='oo' typref='2701647786'/>
+</Input_Parameters>
+<Body>
+<Nary_Sub op=';'>
+<If_Sub elseif='no'>
+<Condition>
+<Exp_Comparison op='='>
+<Id value='updated' typref='2043437594'/>
+<Boolean_Literal value='TRUE' typref='2043437594'/>
+</Exp_Comparison>
+</Condition>
+<Then>
+<Operation_Call>
+<Name>
+<Id value='put_buffer'/>
+</Name>
+</Operation_Call>
+</Then>
+</If_Sub>
+<Operation_Call>
+<Name>
+<Id value='get_record'/>
+</Name>
+<Input_Parameters>
+<Id value='oo' typref='2701647786'/>
+</Input_Parameters>
+</Operation_Call>
+</Nary_Sub>
+</Body>
+</Operation>
+</Operations>
+<TypeInfos>
+<Type id='2701647786'>
+<Id value='INTEGER'/>
+</Type>
+<Type id='3988092277'>
+<Unary_Exp op='POW'>
+<Id value='FIELD'/>
+</Unary_Exp>
+</Type>
+<Type id='3958993484'>
+<Unary_Exp op='POW'>
+<Id value='VALUE'/>
+</Unary_Exp>
+</Type>
+<Type id='2043437594'>
+<Id value='BOOL'/>
+</Type>
+</TypeInfos>
+
+</Machine>

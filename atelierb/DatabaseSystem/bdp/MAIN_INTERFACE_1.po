@@ -1,0 +1,62 @@
+THEORY ProofList IS
+_f(1) & _f(2) & main.14,(_f(18) & _f(3) & _f(15) & _f(16) & _f(10) & _f(11) & _f(12) & _f(13) & _f(14) & _f(4) & _f(25) => _f(26));
+_f(1) & _f(2) & main.13,(_f(18) & _f(3) & _f(15) & _f(16) & _f(10) & _f(11) & _f(12) & _f(13) & _f(14) & _f(4) & _f(23) => _f(24));
+_f(1) & _f(2) & main.12,(_f(18) & _f(3) & _f(15) & _f(16) & _f(9) & _f(4) & _f(25) => _f(26));
+_f(1) & _f(2) & main.11,(_f(18) & _f(3) & _f(15) & _f(16) & _f(9) & _f(4) & _f(23) => _f(24));
+_f(1) & _f(2) & main.10,(_f(18) & _f(3) & _f(15) & _f(16) & _f(8) & _f(4) & _f(25) => _f(26));
+_f(1) & _f(2) & main.9,(_f(18) & _f(3) & _f(15) & _f(16) & _f(8) & _f(4) & _f(23) => _f(24));
+_f(1) & _f(2) & main.8,(_f(18) & _f(3) & _f(15) & _f(16) & _f(7) & _f(4) & _f(25) => _f(26));
+_f(1) & _f(2) & main.7,(_f(18) & _f(3) & _f(15) & _f(16) & _f(7) & _f(4) & _f(23) => _f(24));
+_f(1) & _f(2) & main.6,(_f(18) & _f(3) & _f(15) & _f(16) & _f(6) & _f(4) & _f(25) => _f(26));
+_f(1) & _f(2) & main.5,(_f(18) & _f(3) & _f(15) & _f(16) & _f(6) & _f(4) & _f(23) => _f(24));
+_f(1) & _f(2) & main.4,(_f(18) & _f(3) & _f(15) & _f(16) & _f(5) & _f(4) & _f(25) => _f(26));
+_f(1) & _f(2) & main.3,(_f(18) & _f(3) & _f(15) & _f(16) & _f(5) & _f(4) & _f(23) => _f(24));
+_f(1) & _f(2) & main.2,(_f(18) & _f(3) & _f(21) => _f(22));
+_f(1) & _f(2) & main.1,(_f(18) & _f(19) => _f(20))
+END
+&
+THEORY Formulas IS
+((NAT) = (((0) .. (2147483647)))) & ((INT) = (((-2147483647) .. (2147483647))));
+((1..6)*{COMMAND}): FIN(NATURAL*{COMMAND}) & not(((1..6)*{COMMAND}) = {}) & ((1..2)*{SEX}): FIN(NATURAL*{SEX}) & not(((1..2)*{SEX}) = {}) & ((1..2)*{STATUS}): FIN(NATURAL*{STATUS}) & not(((1..2)*{STATUS}) = {}) & code_COMMAND : ((1..6)*{COMMAND}) +-> {0}\/{1}\/{2}\/{3}\/{4}\/{5} & code_COMMAND : ((1..6)*{COMMAND}) >+> {0}\/{1}\/{2}\/{3}\/{4}\/{5} & code_COMMAND : ((1..6)*{COMMAND}) +->> {0}\/{1}\/{2}\/{3}\/{4}\/{5} & code_COMMAND : ((1..6)*{COMMAND}) --> {0}\/{1}\/{2}\/{3}\/{4}\/{5} & dom(code_COMMAND) = ((1..6)*{COMMAND}) & code_COMMAND~ : {0}\/{1}\/{2}\/{3}\/{4}\/{5} +-> ((1..6)*{COMMAND}) & ran(code_COMMAND) = {0}\/{1}\/{2}\/{3}\/{4}\/{5} & ((code_COMMAND) : (((((1..6)*{COMMAND})) >->> ({0}\/{1}\/{2}\/{3}\/{4}\/{5})))) & ((decode_COMMAND) = ((code_COMMAND)~)) & code_SEX : ((1..2)*{SEX}) +-> {0}\/{1} & code_SEX : ((1..2)*{SEX}) >+> {0}\/{1} & code_SEX : ((1..2)*{SEX}) +->> {0}\/{1} & code_SEX : ((1..2)*{SEX}) --> {0}\/{1} & dom(code_SEX) = ((1..2)*{SEX}) & code_SEX~ : {0}\/{1} +-> ((1..2)*{SEX}) & ran(code_SEX) = {0}\/{1} & ((code_SEX) : (((((1..2)*{SEX})) >->> ({0}\/{1})))) & ((decode_SEX) = ((code_SEX)~)) & code_STATUS : ((1..2)*{STATUS}) +-> {0}\/{1} & code_STATUS : ((1..2)*{STATUS}) >+> {0}\/{1} & code_STATUS : ((1..2)*{STATUS}) +->> {0}\/{1} & code_STATUS : ((1..2)*{STATUS}) --> {0}\/{1} & dom(code_STATUS) = ((1..2)*{STATUS}) & code_STATUS~ : {0}\/{1} +-> ((1..2)*{STATUS}) & ran(code_STATUS) = {0}\/{1} & ((code_STATUS) : (((((1..2)*{STATUS})) >->> ({0}\/{1})))) & ((decode_STATUS) = ((code_STATUS)~));
+((xx$1) : (NAT));
+((rr$1) : (((1..6)*{COMMAND})));
+((cc$1) = ((1|->COMMAND)));
+((cc$1) = ((2|->COMMAND)));
+((cc$1) = ((3|->COMMAND)));
+((cc$1) = ((4|->COMMAND)));
+((cc$1) = ((5|->COMMAND)));
+not(((cc$1) = ((1|->COMMAND))));
+not(((cc$1) = ((2|->COMMAND))));
+not(((cc$1) = ((3|->COMMAND))));
+not(((cc$1) = ((4|->COMMAND))));
+not(((cc$1) = ((5|->COMMAND))));
+not(cc$1 = (6|->COMMAND));
+not(xx$1 = 0);
+not(not(cc$1 = (6|->COMMAND)) & not(xx$1 = 0));
+((rr$2) : (((1..6)*{COMMAND})));
+"Loop initialisation";
+((2147483647) : (NAT));
+"Loop variant is positive";
+(0 <= xx$1);
+"Loop invariant is preserved";
+(((xx$1 - 1)) : (NAT));
+"Variant is decreasing";
+((xx$1 - 1) +1 <= xx$1);
+not(rr$2 = (6|->COMMAND));
+((rr$2) = ((1|->COMMAND)));
+((rr$2) = ((2|->COMMAND)));
+((rr$2) = ((3|->COMMAND)));
+((rr$2) = ((4|->COMMAND)));
+((rr$2) = ((5|->COMMAND)));
+not(((rr$2) = ((1|->COMMAND))));
+not(((rr$2) = ((2|->COMMAND))));
+not(((rr$2) = ((3|->COMMAND))));
+not(((rr$2) = ((4|->COMMAND))));
+not(((rr$2) = ((5|->COMMAND))))
+END
+&
+THEORY EnumerateX IS
+COMMAND == {new,birth,marriage,death,print,quit};
+SEX == {man,woman};
+STATUS == {dead,living}
+END

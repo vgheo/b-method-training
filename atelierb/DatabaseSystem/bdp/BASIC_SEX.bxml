@@ -1,0 +1,114 @@
+<Machine name='BASIC_SEX' type='abstraction'>
+<Sets>
+<Set>
+<Id value='SEX' typref='845307297'/>
+<Enumerated_Values>
+<Id value='man' typref='3153412450'/>
+<Id value='woman' typref='3153412450'/>
+</Enumerated_Values>
+</Set>
+</Sets>
+<Concrete_Constants>
+<Id value='code_SEX' typref='3611811608'/>
+<Id value='decode_SEX' typref='4139043608'/>
+</Concrete_Constants>
+<Properties>
+<Nary_Pred op='&amp;'>
+<Exp_Comparison op=':'>
+<Id value='code_SEX' typref='3611811608'/>
+<Binary_Exp op='&gt;-&gt;&gt;' typref='2425755371'>
+<Id value='SEX' typref='845307297'/>
+<Nary_Exp op='{' typref='3603043417'>
+<Integer_Literal value='0' typref='2701647786'/>
+<Integer_Literal value='1' typref='2701647786'/>
+</Nary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op='='>
+<Id value='decode_SEX' typref='4139043608'/>
+<Unary_Exp op='~' typref='4139043608'>
+<Id value='code_SEX' typref='3611811608'/>
+</Unary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Properties>
+<Initialisation>
+<Skip/>
+</Initialisation>
+<Operations>
+<Operation name='SEX_READ'>
+<Output_Parameters>
+<Id value='rr' typref='3153412450'/>
+</Output_Parameters>
+<Body>
+<Becomes_In>
+<Variables>
+<Id value='rr' typref='3153412450'/>
+</Variables>
+<Value>
+<Id value='SEX' typref='845307297'/>
+</Value>
+</Becomes_In>
+</Body>
+</Operation>
+<Operation name='SEX_WRITE'>
+<Input_Parameters>
+<Id value='ii' typref='3153412450'/>
+</Input_Parameters>
+<Precondition>
+<Exp_Comparison op=':'>
+<Id value='ii' typref='3153412450'/>
+<Id value='SEX' typref='845307297'/>
+</Exp_Comparison>
+</Precondition>
+<Body>
+<Skip/>
+</Body>
+</Operation>
+</Operations>
+<TypeInfos>
+<Type id='845307297'>
+<Unary_Exp op='POW'>
+<Id value='SEX'/>
+</Unary_Exp>
+</Type>
+<Type id='3153412450'>
+<Id value='SEX'/>
+</Type>
+<Type id='3611811608'>
+<Unary_Exp op='POW'>
+<Binary_Exp op='*'>
+<Id value='SEX'/>
+<Id value='INTEGER'/>
+</Binary_Exp>
+</Unary_Exp>
+</Type>
+<Type id='4139043608'>
+<Unary_Exp op='POW'>
+<Binary_Exp op='*'>
+<Id value='INTEGER'/>
+<Id value='SEX'/>
+</Binary_Exp>
+</Unary_Exp>
+</Type>
+<Type id='2425755371'>
+<Unary_Exp op='POW'>
+<Unary_Exp op='POW'>
+<Binary_Exp op='*'>
+<Id value='SEX'/>
+<Id value='INTEGER'/>
+</Binary_Exp>
+</Unary_Exp>
+</Unary_Exp>
+</Type>
+<Type id='3603043417'>
+<Unary_Exp op='POW'>
+<Id value='INTEGER'/>
+</Unary_Exp>
+</Type>
+<Type id='2701647786'>
+<Id value='INTEGER'/>
+</Type>
+</TypeInfos>
+
+</Machine>

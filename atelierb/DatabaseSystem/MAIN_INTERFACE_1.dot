@@ -1,0 +1,42 @@
+digraph visited_states {
+graph [nodesep=1.5, ranksep=1.5];
+root [shape=invtriangle, color="#99BF38", fontsize=12, penwidth=2, label="root"];
+
+root -> 0 [style = dotted, color = black, label="SETUP_CONSTANTS(\{(new\|-\>0),(birth\|-\>1),(marriage\|-\n\>2),(death\|-\>3),(print\|-\>4),(quit\|-\>5)\},\{(0\|-\>new)\n,(1\|-\>birth),(2\|-\>marriage),(3\|-\>death),(4\|-\>print)\n,(5\|-\>quit)\},\{(man\|-\>0),(woman\|-\>1)\},\{(0\|-\>man),(1\|\n-\>woman)\},\{(dead\|-\>0),(living\|-\>1)\},\{(0\|-\>dead),(1\|\n-\>living)\})", fontsize=12];
+root -> 1 [style = dotted, color = black, label="SETUP_CONSTANTS(\{(new\|-\>0),(birth\|-\>1),(marriage\|-\n\>2),(death\|-\>3),(print\|-\>4),(quit\|-\>5)\},\{(0\|-\>new)\n,(1\|-\>birth),(2\|-\>marriage),(3\|-\>death),(4\|-\>print)\n,(5\|-\>quit)\},\{(man\|-\>0),(woman\|-\>1)\},\{(0\|-\>man),(1\|\n-\>woman)\},\{(dead\|-\>1),(living\|-\>0)\},\{(0\|-\>living),(\n1\|-\>dead)\})", fontsize=12];
+root -> 2 [style = dotted, color = black, label="SETUP_CONSTANTS(\{(new\|-\>0),(birth\|-\>1),(marriage\|-\n\>2),(death\|-\>3),(print\|-\>4),(quit\|-\>5)\},\{(0\|-\>new)\n,(1\|-\>birth),(2\|-\>marriage),(3\|-\>death),(4\|-\>print)\n,(5\|-\>quit)\},\{(man\|-\>1),(woman\|-\>0)\},\{(0\|-\>woman),(\n1\|-\>man)\},\{(dead\|-\>0),(living\|-\>1)\},\{(0\|-\>dead),(1\|\n-\>living)\})", fontsize=12];
+root -> 3 [style = dotted, color = black, label="SETUP_CONSTANTS(\{(new\|-\>0),(birth\|-\>1),(marriage\|-\n\>2),(death\|-\>3),(print\|-\>4),(quit\|-\>5)\},\{(0\|-\>new)\n,(1\|-\>birth),(2\|-\>marriage),(3\|-\>death),(4\|-\>print)\n,(5\|-\>quit)\},\{(man\|-\>1),(woman\|-\>0)\},\{(0\|-\>woman),(\n1\|-\>man)\},\{(dead\|-\>1),(living\|-\>0)\},\{(0\|-\>living),(\n1\|-\>dead)\})", fontsize=12];
+
+0 [shape=box, color="#99BF38", fontsize=12, penwidth=2, label="code_COMMAND(new) = 0,code_COMMAND(birth) = 1,code_COMMAND(marriage) = 2,\ncode_COMMAND(death) = 3,code_COMMAND(print) = 4,code_COMMAND(quit) = 5,\ndecode_COMMAND(0) = new,decode_COMMAND(1) = birth,decode_COMMAND(2) = marriage,\ndecode_COMMAND(3) = death,decode_COMMAND(4) = print,decode_COMMAND(5) = quit,\ncode_SEX(man) = 0,code_SEX(woman) = 1,decode_SEX(0) = man,\ndecode_SEX(1) = woman,code_STATUS(dead) = 0,code_STATUS(living) = 1,\ndecode_STATUS(0) = dead,decode_STATUS(1) = living"];
+
+0 -> 4 [color = "#006391", label="INITIALISATION", fontsize=12];
+
+1 [shape=box, color="#99BF38", fontsize=12, penwidth=2, label="code_COMMAND(new) = 0,code_COMMAND(birth) = 1,code_COMMAND(marriage) = 2,\ncode_COMMAND(death) = 3,code_COMMAND(print) = 4,code_COMMAND(quit) = 5,\ndecode_COMMAND(0) = new,decode_COMMAND(1) = birth,decode_COMMAND(2) = marriage,\ndecode_COMMAND(3) = death,decode_COMMAND(4) = print,decode_COMMAND(5) = quit,\ncode_SEX(man) = 0,code_SEX(woman) = 1,decode_SEX(0) = man,\ndecode_SEX(1) = woman,code_STATUS(dead) = 1,code_STATUS(living) = 0,\ndecode_STATUS(0) = living,decode_STATUS(1) = dead"];
+
+1 -> 7 [color = "#006391", label="INITIALISATION", fontsize=12];
+
+2 [shape=box, color="#99BF38", fontsize=12, penwidth=2, label="code_COMMAND(new) = 0,code_COMMAND(birth) = 1,code_COMMAND(marriage) = 2,\ncode_COMMAND(death) = 3,code_COMMAND(print) = 4,code_COMMAND(quit) = 5,\ndecode_COMMAND(0) = new,decode_COMMAND(1) = birth,decode_COMMAND(2) = marriage,\ndecode_COMMAND(3) = death,decode_COMMAND(4) = print,decode_COMMAND(5) = quit,\ncode_SEX(man) = 1,code_SEX(woman) = 0,decode_SEX(0) = woman,\ndecode_SEX(1) = man,code_STATUS(dead) = 0,code_STATUS(living) = 1,\ndecode_STATUS(0) = dead,decode_STATUS(1) = living"];
+
+2 -> 6 [color = "#006391", label="INITIALISATION", fontsize=12];
+
+3 [shape=box, color="#99BF38", fontsize=12, penwidth=2, label="code_COMMAND(new) = 0,code_COMMAND(birth) = 1,code_COMMAND(marriage) = 2,\ncode_COMMAND(death) = 3,code_COMMAND(print) = 4,code_COMMAND(quit) = 5,\ndecode_COMMAND(0) = new,decode_COMMAND(1) = birth,decode_COMMAND(2) = marriage,\ndecode_COMMAND(3) = death,decode_COMMAND(4) = print,decode_COMMAND(5) = quit,\ncode_SEX(man) = 1,code_SEX(woman) = 0,decode_SEX(0) = woman,\ndecode_SEX(1) = man,code_STATUS(dead) = 1,code_STATUS(living) = 0,\ndecode_STATUS(0) = living,decode_STATUS(1) = dead"];
+
+3 -> 5 [color = "#006391", label="INITIALISATION", fontsize=12];
+
+4 [shape=doubleoctagon, color="#99BF38", fontsize=12, penwidth=2, label=""];
+
+4 -> 4 [color = "#006391", label="main", fontsize=12];
+
+5 [shape=box, color="#99BF38", fontsize=12, penwidth=2, label=""];
+
+5 -> 5 [color = "#006391", label="main", fontsize=12];
+
+6 [shape=box, color="#99BF38", fontsize=12, penwidth=2, label=""];
+
+6 -> 6 [color = "#006391", label="main", fontsize=12];
+
+7 [shape=box, color="#99BF38", fontsize=12, penwidth=2, label=""];
+
+7 -> 7 [color = "#006391", label="main", fontsize=12];
+
+}

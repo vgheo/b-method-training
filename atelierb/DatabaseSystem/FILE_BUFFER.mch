@@ -51,12 +51,14 @@ OPERATIONS
 
     mod_buffer(oo,ii,vv)=
     PRE
-        oo:dom(bfile) &
+        /*possible typo=>renamed bfile in buffer because model would have been false -- bfile not included in bfile so it possible to apply buufer on something out of his domaine*/
+        oo:dom(buffer) &
         ii:FIELD &
         vv:VALUE
     THEN
         buffer(oo)(ii):=vv
     END;
+
     vv<--val_buffer(oo,ii)=
     PRE
         oo:dom(buffer) &

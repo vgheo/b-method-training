@@ -1,0 +1,117 @@
+/* DATA_BASE_1
+ * Author: T0164919
+ * Creation date: 7/30/2015
+ */
+
+
+IMPLEMENTATION DATA_BASE_1
+REFINES DATA_BASE
+IMPORTS
+    PARTIAL_OBJECT(10000,4,0,10000)
+SEES
+    BASIC_IO,BASIC_SEX,BASIC_STATUS
+
+VALUES
+    PERSON = 1..10000;
+    max_pers = 10000
+INVARIANT
+    /*Warning:possible typo object(not present anywere else) => rename to max_pers*/
+    person =1..max_pers &
+    partial_field(1) = (sex;code_SEX)&
+    partial_field(2)=(status;code_STATUS) &
+    partial_field(3)=mother &
+    partial_field(4)=husband\/wife
+    
+OPERATIONS
+    death(pp)=
+    BEGIN
+        mod_field(2,pp,code_STATUS(dead))
+    END;
+    
+    marriage(bride,groom)=
+    BEGIN
+        mod_field(4,bride,groom);
+        mod_field(4,groom,bride)
+    END;
+    
+    baby<--first_human(ss)=
+    BEGIN
+        baby<--create_partial_object;
+        mod_field(1,baby,code_SEX(ss));
+        mod_field(2,baby,code_STATUS(living))
+    END;
+    
+    report<--not_saturated=
+    VAR nn IN
+        nn<--nbr_object;
+        report:=bool(nn/=max_pers)
+    END;   
+    
+    baby<--new_born(ss,mm)=
+    BEGIN
+        baby<--create_partial_object;
+        mod_field(1,baby,code_SEX(ss));
+        mod_field(2,baby,code_STATUS(living));
+        mod_field(3,baby,mm)
+    END;
+
+    report<--is_present(pp)=
+    VAR nn IN
+        nn<--nbr_object;
+        report:=bool(nn/=max_pers)
+    END;
+    
+    report<--is_living(pp)=
+    VAR ss IN 
+        ss<--val_field(2,pp);
+        report:=bool(ss=code_STATUS(living))
+    END;
+    
+    report<--is_woman(pp)=
+    VAR ss IN
+        ss<--val_field(1,pp);
+        report:=bool(ss=code_SEX(woman))
+    END;
+    
+    report<--is_married(pp)=
+    BEGIN
+        report<--def_field(4,pp)
+    END;
+
+    report<--has_mother(pp)=
+    BEGIN
+        report<--def_field(3,pp)    
+    END;
+    
+    vv<--val_status(pp)=
+    VAR ss IN
+        ss<--val_field(2,pp);
+        vv:=decode_STATUS(ss)
+    END;
+        
+    vv<--val_sex(pp)=
+    VAR ss IN
+        ss<--val_field(1,pp);
+        vv:=decode_SEX(ss)        
+    END;
+    
+    vv<--val_spouse(pp)=
+    BEGIN
+        vv<--val_field(4,pp)
+    END;
+
+    vv<--val_mother(pp)=
+    BEGIN
+        vv<--val_field(3,pp)       
+    END;
+    
+    pp<--PERSON_read=
+    BEGIN
+       pp<--INTERVAL_READ(1,max_pers)
+    END;
+    
+    PERSON_write(pp)=
+    BEGIN
+        INT_WRITE(pp)
+    END
+END

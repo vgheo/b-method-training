@@ -1,0 +1,8 @@
+﻿THEORY User_Pass IS
+Operation(InstanciatedConstraintsLemmas) & ff(0) & mp & pp;
+Operation(create_partial_object) & ff(0) & mp & pp;
+Operation(mod_field) & ff(0) & mp & pr;
+Operation(def_field) & ff(0) & mp & pr & pp;
+Operation(val_field) & ff(0) & mp & pr;
+Operation(WellDefinedness_rem_field) & ff(0) & mp & pr
+END 

@@ -1,0 +1,32 @@
+THEORY ProofList
+END
+&
+THEORY Formulas IS
+((NAT) = (((0) .. (2147483647)))) & ((INT) = (((-2147483647) .. (2147483647))));
+PERSON: FIN(INTEGER) & not(PERSON = {}) & ((1..2)*{SEX}): FIN(NATURAL*{SEX}) & not(((1..2)*{SEX}) = {}) & ((1..2)*{STATUS}): FIN(NATURAL*{STATUS}) & not(((1..2)*{STATUS}) = {}) & ((max_pers) = (card(PERSON))) & code_SEX : ((1..2)*{SEX}) +-> {0}\/{1} & code_SEX : ((1..2)*{SEX}) >+> {0}\/{1} & code_SEX : ((1..2)*{SEX}) +->> {0}\/{1} & code_SEX : ((1..2)*{SEX}) --> {0}\/{1} & dom(code_SEX) = ((1..2)*{SEX}) & code_SEX~ : {0}\/{1} +-> ((1..2)*{SEX}) & ran(code_SEX) = {0}\/{1} & ((code_SEX) : (((((1..2)*{SEX})) >->> ({0}\/{1})))) & ((decode_SEX) = ((code_SEX)~)) & code_STATUS : ((1..2)*{STATUS}) +-> {0}\/{1} & code_STATUS : ((1..2)*{STATUS}) >+> {0}\/{1} & code_STATUS : ((1..2)*{STATUS}) +->> {0}\/{1} & code_STATUS : ((1..2)*{STATUS}) --> {0}\/{1} & dom(code_STATUS) = ((1..2)*{STATUS}) & code_STATUS~ : {0}\/{1} +-> ((1..2)*{STATUS}) & ran(code_STATUS) = {0}\/{1} & ((code_STATUS) : (((((1..2)*{STATUS})) >->> ({0}\/{1})))) & ((decode_STATUS) = ((code_STATUS)~));
+person : POW( PERSON) & sex : person +-> ((1..2)*{SEX}) & dom(sex) = person & ((sex) : (((person) --> (((1..2)*{SEX}))))) & status : person +-> ((1..2)*{STATUS}) & dom(status) = person & ((status) : (((person) --> (((1..2)*{STATUS}))))) & husband : ((sex)~ )[{(2|->SEX)}] +-> ((sex)~ )[{(1|->SEX)}] & husband~ : ((sex)~ )[{(1|->SEX)}] +-> ((sex)~ )[{(2|->SEX)}] & ((husband) : (((((sex)~ )[{(2|->SEX)}]) >+> (((sex)~ )[{(1|->SEX)}])))) & ((wife) = ((husband)~)) & ((mother) : (((person) +-> (((dom(((husband) \/ (wife)))) /\ (((sex)~ )[{(2|->SEX)}]))))));
+((pp$1) : (((status)~ )[{(2|->STATUS)}]));
+((pp$1) : (PERSON));
+((ss$1) : (((1..2)*{SEX})));
+((mm$1) : ((((person - dom(((husband) \/ (wife))))) /\ (((sex)~ )[{(1|->SEX)}]))));
+((ww$1) : (PERSON));
+((mm$1) : (PERSON));
+((pp) : (((status)~ )[{(2|->STATUS)}]));
+((bride) : ((((person - dom(((husband) \/ (wife))))) /\ (((sex)~ )[{(2|->SEX)}])))) & ((groom) : ((((person - dom(((husband) \/ (wife))))) /\ (((sex)~ )[{(1|->SEX)}]))));
+not((PERSON - person) = {}) & ((ss) : (((1..2)*{SEX})));
+((angel) : ((PERSON - person)));
+not((PERSON - person) = {}) & ((ss) : (((1..2)*{SEX}))) & ((mm) : (((dom(((husband) \/ (wife)))) /\ (((sex)~ )[{(2|->SEX)}]))));
+((pp) : (PERSON));
+((pp) : (person));
+((pp) : (dom(((husband) \/ (wife)))));
+((pp) : (dom(mother)));
+((rr$1) : (((1..2)*{SEX})));
+((ii) : (((1..2)*{SEX})));
+((rr$1) : (((1..2)*{STATUS})));
+((ii) : (((1..2)*{STATUS})))
+END
+&
+THEORY EnumerateX IS
+SEX == {man,woman};
+STATUS == {dead,living}
+END

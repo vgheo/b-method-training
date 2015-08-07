@@ -1,0 +1,67 @@
+THEORY ProofList IS
+_f(1) & _f(2) & _f(3) & _f(10) & _f(11) & _f(44) & WellDefinedness_val_buffer.3,(_f(36) => _f(46));
+_f(1) & _f(2) & _f(3) & _f(10) & _f(11) & _f(44) & WellDefinedness_val_buffer.2,(_f(36) => _f(45));
+_f(1) & _f(2) & _f(3) & _f(10) & _f(11) & _f(44) & WellDefinedness_val_buffer.1,(_f(36) => _f(42));
+_f(1) & _f(2) & _f(3) & _f(10) & _f(11) & WellDefinedness_size_file.1,(_f(36) => _f(40));
+_f(1) & _f(2) & _f(3) & _f(10) & _f(11) & _f(41) & WellDefinedness_mod_buffer.1,(_f(36) => _f(42));
+_f(1) & _f(2) & _f(3) & _f(10) & _f(11) & _f(39) & WellDefinedness_create_record.1,(_f(36) => _f(40));
+_f(1) & _f(2) & _f(3) & _f(10) & _f(11) & _f(16) & WellDefinedness_load_buffer.4,(_f(18) & _f(36) => _f(38));
+_f(1) & _f(2) & _f(3) & _f(10) & _f(11) & _f(16) & WellDefinedness_load_buffer.3,(_f(18) & _f(36) => _f(19));
+_f(1) & _f(2) & _f(3) & _f(10) & _f(11) & _f(16) & WellDefinedness_load_buffer.2,(_f(17) & _f(36) => _f(37));
+_f(1) & _f(2) & _f(3) & _f(10) & _f(11) & _f(16) & WellDefinedness_load_buffer.1,(_f(17) & _f(36) => _f(22));
+_f(1) & _f(2) & _f(3) & _f(10) & _f(11) & load_buffer.3,(_f(19) & _f(20) & _f(18) & _f(23) & _f(26) => _f(27));
+_f(1) & _f(2) & _f(3) & _f(10) & _f(11) & load_buffer.2,(_f(19) & _f(20) & _f(17) & _f(23) & _f(24) => _f(25));
+_f(1) & _f(2) & _f(3) & _f(10) & _f(11) & load_buffer.1,(_f(19) & _f(20) & _f(17) & _f(21) => _f(22))
+END
+&
+THEORY Formulas IS
+((NAT) = (((0) .. (2147483647)))) & ((INT) = (((-2147483647) .. (2147483647))));
+FIELD: FIN(INTEGER) & not(FIELD = {}) & VALUE: FIN(INTEGER) & not(VALUE = {}) & ((max_rec) : ((NAT-{0})));
+bfile$1 : NATURAL-{0} +-> ((FIELD) --> (VALUE)) & ((bfile$1) : (seq(((FIELD) --> (VALUE))))) & ((buffer$1) : (((dom(bfile$1)) +-> (((FIELD) --> (VALUE)))))) & ((updated$1) : (BOOL)) & ((((updated$1) = (FALSE))) => (buffer$1 : POW( bfile$1))) & ((((updated$1) = (TRUE))) => (not(buffer$1 = {})));
+{} : NATURAL-{0} +-> ((FIELD) --> (VALUE));
+(({}) : (seq(((FIELD) --> (VALUE)))));
+(({}) : (((dom({})) +-> (((FIELD) --> (VALUE))))));
+((FALSE) : (BOOL));
+((((FALSE) = (FALSE))) => ({} : POW( {})));
+((((FALSE) = (TRUE))) => (not({} = {})));
+bfile : NATURAL-{0} +-> ((FIELD) --> (VALUE)) & ((bfile) : (seq(((FIELD) --> (VALUE))))) & ((buffer) : (((dom(bfile)) +-> (((FIELD) --> (VALUE))))));
+((bfile) = (bfile$1)) & ((buffer) = (buffer$1));
+((vv) : (VALUE)) & not(size(bfile) = max_rec);
+((oo$1) = (oo));
+((vv) : (VALUE));
+not(size(bfile$1) = max_rec);
+((oo) : (dom(bfile))) & not(oo : dom(buffer));
+((updated$1) = (TRUE));
+not(((updated$1) = (TRUE)));
+((oo) : (dom(bfile$1)));
+not(oo : dom(buffer$1));
+"Precondition predicate";
+((oo) : (dom(((bfile$1) <+ (buffer$1)))));
+"Refinement is correct";
+"Check invariant ((buffer) = (buffer$1))";
+(({((oo) |-> ((bfile$1 )(oo)))}) = ({((oo) |-> ((((bfile$1) <+ (buffer$1)) )(oo)))}));
+"Check invariant ((bfile) = (bfile$1))";
+((((bfile$1) <+ (buffer$1))) = (bfile$1));
+((vv$1) = (vv));
+((oo) : (((1) .. (size(bfile)))));
+((oo) : (((1) .. (size(bfile$1)))));
+((oo) : (dom(buffer))) & ((ii) : (FIELD)) & ((vv) : (VALUE));
+((oo) : (dom(buffer$1)));
+((ii) : (FIELD));
+((oo) : (dom(buffer))) & ((ii) : (FIELD));
+((bfile) = (bfile$1));
+"Well definedness";
+((((bfile$1) <+ (buffer$1))) : (((dom(((bfile$1) <+ (buffer$1)))) +-> (ran(((bfile$1) <+ (buffer$1)))))));
+((bfile$1) : (((dom(bfile$1)) +-> (ran(bfile$1)))));
+((vv) : (VALUE)) & not(size(bfile) = max_rec) & ((vv) : (VALUE)) & not(size(bfile$1) = max_rec);
+((bfile$1) : (seq(ran(bfile$1))));
+((oo) : (dom(buffer))) & ((ii) : (FIELD)) & ((vv) : (VALUE)) & ((oo) : (dom(buffer$1))) & ((ii) : (FIELD)) & ((vv) : (VALUE));
+((buffer$1) : (((dom(buffer$1)) +-> (ran(buffer$1)))));
+((oo) : (((1) .. (size(bfile))))) & ((oo) : (((1) .. (size(bfile$1)))));
+((oo) : (dom(buffer))) & ((ii) : (FIELD)) & ((oo) : (dom(buffer$1))) & ((ii) : (FIELD));
+((ii) : (dom((buffer$1 )(oo))));
+(((buffer$1 )(oo)) : (((dom((buffer$1 )(oo))) +-> (ran((buffer$1 )(oo))))))
+END
+&
+THEORY EnumerateX
+END

@@ -1,0 +1,114 @@
+<Machine name='BASIC_STATUS' type='abstraction'>
+<Sets>
+<Set>
+<Id value='STATUS' typref='515940807'/>
+<Enumerated_Values>
+<Id value='dead' typref='2246778642'/>
+<Id value='living' typref='2246778642'/>
+</Enumerated_Values>
+</Set>
+</Sets>
+<Concrete_Constants>
+<Id value='code_STATUS' typref='2905916364'/>
+<Id value='decode_STATUS' typref='3781868044'/>
+</Concrete_Constants>
+<Properties>
+<Nary_Pred op='&amp;'>
+<Exp_Comparison op=':'>
+<Id value='code_STATUS' typref='2905916364'/>
+<Binary_Exp op='&gt;-&gt;&gt;' typref='2020880909'>
+<Id value='STATUS' typref='515940807'/>
+<Nary_Exp op='{' typref='3603043417'>
+<Integer_Literal value='0' typref='2701647786'/>
+<Integer_Literal value='1' typref='2701647786'/>
+</Nary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op='='>
+<Id value='decode_STATUS' typref='3781868044'/>
+<Unary_Exp op='~' typref='3781868044'>
+<Id value='code_STATUS' typref='2905916364'/>
+</Unary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Properties>
+<Initialisation>
+<Skip/>
+</Initialisation>
+<Operations>
+<Operation name='STATUS_READ'>
+<Output_Parameters>
+<Id value='rr' typref='2246778642'/>
+</Output_Parameters>
+<Body>
+<Becomes_In>
+<Variables>
+<Id value='rr' typref='2246778642'/>
+</Variables>
+<Value>
+<Id value='STATUS' typref='515940807'/>
+</Value>
+</Becomes_In>
+</Body>
+</Operation>
+<Operation name='STATUS_WRITE'>
+<Input_Parameters>
+<Id value='ii' typref='2246778642'/>
+</Input_Parameters>
+<Precondition>
+<Exp_Comparison op=':'>
+<Id value='ii' typref='2246778642'/>
+<Id value='STATUS' typref='515940807'/>
+</Exp_Comparison>
+</Precondition>
+<Body>
+<Skip/>
+</Body>
+</Operation>
+</Operations>
+<TypeInfos>
+<Type id='515940807'>
+<Unary_Exp op='POW'>
+<Id value='STATUS'/>
+</Unary_Exp>
+</Type>
+<Type id='2246778642'>
+<Id value='STATUS'/>
+</Type>
+<Type id='2905916364'>
+<Unary_Exp op='POW'>
+<Binary_Exp op='*'>
+<Id value='STATUS'/>
+<Id value='INTEGER'/>
+</Binary_Exp>
+</Unary_Exp>
+</Type>
+<Type id='3781868044'>
+<Unary_Exp op='POW'>
+<Binary_Exp op='*'>
+<Id value='INTEGER'/>
+<Id value='STATUS'/>
+</Binary_Exp>
+</Unary_Exp>
+</Type>
+<Type id='2020880909'>
+<Unary_Exp op='POW'>
+<Unary_Exp op='POW'>
+<Binary_Exp op='*'>
+<Id value='STATUS'/>
+<Id value='INTEGER'/>
+</Binary_Exp>
+</Unary_Exp>
+</Unary_Exp>
+</Type>
+<Type id='3603043417'>
+<Unary_Exp op='POW'>
+<Id value='INTEGER'/>
+</Unary_Exp>
+</Type>
+<Type id='2701647786'>
+<Id value='INTEGER'/>
+</Type>
+</TypeInfos>
+
+</Machine>

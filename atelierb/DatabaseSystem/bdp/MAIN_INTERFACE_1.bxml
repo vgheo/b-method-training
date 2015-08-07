@@ -1,0 +1,182 @@
+<Machine name='MAIN_INTERFACE_1' type='implementation'>
+<Abstraction>MAIN_INTERFACE</Abstraction>
+<Imports>
+<Referenced_Machine>
+<Name>INNER_INTERFACE</Name>
+</Referenced_Machine>
+<Referenced_Machine>
+<Name>BASIC_COMMAND</Name>
+</Referenced_Machine>
+<Referenced_Machine>
+<Name>BASIC_SEX</Name>
+</Referenced_Machine>
+<Referenced_Machine>
+<Name>BASIC_STATUS</Name>
+</Referenced_Machine>
+<Referenced_Machine>
+<Name>BASIC_IO</Name>
+</Referenced_Machine>
+</Imports>
+<Initialisation>
+<Skip/>
+</Initialisation>
+<Operations>
+<Operation name='main'>
+<Body>
+<VAR_IN>
+<Variables>
+<Id value='cc' typref='3671739677'/>
+<Id value='xx' typref='2701647786'/>
+</Variables>
+<Body>
+<Nary_Sub op=';'>
+<Operation_Call>
+<Name>
+<Id value='COMMAND_READ'/>
+</Name>
+<Output_Parameters>
+<Id value='cc' typref='3671739677'/>
+</Output_Parameters>
+</Operation_Call>
+<Assignement_Sub>
+<Variables>
+<Id value='xx' typref='2701647786'/>
+</Variables>
+<Values>
+<Id value='MAXINT' typref='2701647786'/>
+</Values>
+</Assignement_Sub>
+<While>
+<Condition>
+<Nary_Pred op='&amp;'>
+<Exp_Comparison op='/='>
+<Id value='cc' typref='3671739677'/>
+<Id value='quit' typref='3671739677'/>
+</Exp_Comparison>
+<Exp_Comparison op='/='>
+<Id value='xx' typref='2701647786'/>
+<Integer_Literal value='0' typref='2701647786'/>
+</Exp_Comparison>
+</Nary_Pred>
+</Condition>
+<Body>
+<Nary_Sub op=';'>
+<Case_Sub>
+<Value>
+<Id value='cc' typref='3671739677'/>
+</Value>
+<Choices>
+<Choice>
+<Value>
+<Id value='new' typref='3671739677'/>
+</Value>
+<Then>
+<Operation_Call>
+<Name>
+<Id value='first_operation'/>
+</Name>
+</Operation_Call>
+</Then>
+</Choice>
+<Choice>
+<Value>
+<Id value='birth' typref='3671739677'/>
+</Value>
+<Then>
+<Operation_Call>
+<Name>
+<Id value='birth_operation'/>
+</Name>
+</Operation_Call>
+</Then>
+</Choice>
+<Choice>
+<Value>
+<Id value='marriage' typref='3671739677'/>
+</Value>
+<Then>
+<Operation_Call>
+<Name>
+<Id value='marriage_operation'/>
+</Name>
+</Operation_Call>
+</Then>
+</Choice>
+<Choice>
+<Value>
+<Id value='death' typref='3671739677'/>
+</Value>
+<Then>
+<Operation_Call>
+<Name>
+<Id value='death_operation'/>
+</Name>
+</Operation_Call>
+</Then>
+</Choice>
+<Choice>
+<Value>
+<Id value='print' typref='3671739677'/>
+</Value>
+<Then>
+<Operation_Call>
+<Name>
+<Id value='print_operation'/>
+</Name>
+</Operation_Call>
+</Then>
+</Choice>
+</Choices>
+</Case_Sub>
+<Operation_Call>
+<Name>
+<Id value='COMMAND_READ'/>
+</Name>
+<Output_Parameters>
+<Id value='cc' typref='3671739677'/>
+</Output_Parameters>
+</Operation_Call>
+<Assignement_Sub>
+<Variables>
+<Id value='xx' typref='2701647786'/>
+</Variables>
+<Values>
+<Binary_Exp op='-' typref='2701647786'>
+<Id value='xx' typref='2701647786'/>
+<Integer_Literal value='1' typref='2701647786'/>
+</Binary_Exp>
+</Values>
+</Assignement_Sub>
+</Nary_Sub>
+</Body>
+<Invariant>
+<Exp_Comparison op=':'>
+<Id value='xx' typref='2701647786'/>
+<Id value='NAT' typref='3603043417'/>
+</Exp_Comparison>
+</Invariant>
+<Variant>
+<Id value='xx' typref='2701647786'/>
+</Variant>
+</While>
+</Nary_Sub>
+</Body>
+</VAR_IN>
+</Body>
+</Operation>
+</Operations>
+<TypeInfos>
+<Type id='3671739677'>
+<Id value='COMMAND'/>
+</Type>
+<Type id='2701647786'>
+<Id value='INTEGER'/>
+</Type>
+<Type id='3603043417'>
+<Unary_Exp op='POW'>
+<Id value='INTEGER'/>
+</Unary_Exp>
+</Type>
+</TypeInfos>
+
+</Machine>
