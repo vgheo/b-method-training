@@ -9,7 +9,10 @@ ProB tools:
 
 ## ProB-core issues
 
-### Documented on wiki
+Valid for: `ProB 1.5.0-final 3bc086f2be4b309869fcab31325ede65f8d27277`
+
+
+### Documented on ProB wiki
 http://stups.hhu.de/ProB/w/Current_Limitations
 
 #### Cardinality
@@ -26,7 +29,6 @@ http://stups.hhu.de/ProB/w/Current_Limitations
 
 ### ProB - Unsupported B language features
 
-Valid for: `ProB 1.5.0-final 3bc086f2be4b309869fcab31325ede65f8d27277`
 
 NOT SUPPORTED:
 - VALUES clause
@@ -40,12 +42,7 @@ NOT SUPPORTED:
     - '&`
     - `<+`
     - (...)
-- Tooltip doesn't display values 
-    -  see [ProB group post](https://groups.google.com/forum/?hl=en-GB#!topic/prob-users/aK23vH5kjUk)     
-	
-- Very large predicates cannot be substituted by a tag
-    -  see [ProB group post](https://groups.google.com/forum/?hl=en-GB#!topic/prob-users/aK23vH5kjUk) 
-	
+
 ### '//' comments not supported
 
 [report on prob-users forum](https://groups.google.com/forum/#!topic/prob-users/FLq1ftxJ34A)
@@ -60,3 +57,17 @@ NOT SUPPORTED:
 - (webkit issue) svg:symbol - symbol definition cannot "use" a symbol defined in another file
     - using symbols in the same file works
 
+### Cannot access features of renamed included/imported machines
+
+
+
+
+### Operations calling other operations are not accessible   
+- Tooltip doesn't display values 
+    -  see [ProB group post](https://groups.google.com/forum/?hl=en-GB#!topic/prob-users/aK23vH5kjUk)     
+    
+### BMS does not provide a UI label for Events
+
+- Very large predicates cannot be substituted by a tag
+    -  see [ProB group post](https://groups.google.com/forum/?hl=en-GB#!topic/prob-users/aK23vH5kjUk) 
+    
