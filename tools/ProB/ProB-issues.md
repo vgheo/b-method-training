@@ -31,7 +31,8 @@ NOT SUPPORTED:
 [issue](https://probjira.atlassian.net/browse/PARSERLIB-37)
 
 
-## BMS/webkit issues
+## bmotionstudio-prob issues
+
 
 ### BMS/webkit - svg:symbol limited usage
 (webkit issue ) - svg:symbol - symbol definition cannot "use" a symbol defined in another file
