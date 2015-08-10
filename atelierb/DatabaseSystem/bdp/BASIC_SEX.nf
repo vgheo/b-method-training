@@ -127,9 +127,9 @@ THEORY ListSubstitutionX IS
 END
 &
 THEORY ListConstantsX IS
-  List_Valuable_Constants(Machine(BASIC_SEX))==(?);
+  List_Valuable_Constants(Machine(BASIC_SEX))==(code_SEX,decode_SEX);
   Inherited_List_Constants(Machine(BASIC_SEX))==(?);
-  List_Constants(Machine(BASIC_SEX))==(?)
+  List_Constants(Machine(BASIC_SEX))==(code_SEX,decode_SEX)
 END
 &
 THEORY ListSetsX IS
@@ -149,8 +149,8 @@ END
 THEORY ListHiddenConstantsX IS
   Abstract_List_HiddenConstants(Machine(BASIC_SEX))==(?);
   Expanded_List_HiddenConstants(Machine(BASIC_SEX))==(?);
-  List_HiddenConstants(Machine(BASIC_SEX))==(decode_SEX,code_SEX);
-  External_List_HiddenConstants(Machine(BASIC_SEX))==(decode_SEX,code_SEX)
+  List_HiddenConstants(Machine(BASIC_SEX))==(?);
+  External_List_HiddenConstants(Machine(BASIC_SEX))==(?)
 END
 &
 THEORY ListPropertiesX IS
@@ -168,9 +168,9 @@ THEORY ListANYVarX IS
 END
 &
 THEORY ListOfIdsX IS
-  List_Of_Ids(Machine(BASIC_SEX)) == (SEX,man,woman | ? | ? | ? | SEX_READ,SEX_WRITE | ? | ? | ? | BASIC_SEX);
-  List_Of_HiddenCst_Ids(Machine(BASIC_SEX)) == (decode_SEX,code_SEX | ?);
-  List_Of_VisibleCst_Ids(Machine(BASIC_SEX)) == (?);
+  List_Of_Ids(Machine(BASIC_SEX)) == (code_SEX,decode_SEX,SEX,man,woman | ? | ? | ? | SEX_READ,SEX_WRITE | ? | ? | ? | BASIC_SEX);
+  List_Of_HiddenCst_Ids(Machine(BASIC_SEX)) == (? | ?);
+  List_Of_VisibleCst_Ids(Machine(BASIC_SEX)) == (code_SEX,decode_SEX);
   List_Of_VisibleVar_Ids(Machine(BASIC_SEX)) == (? | ?);
   List_Of_Ids_SeenBNU(Machine(BASIC_SEX)) == (?: ?)
 END
@@ -180,11 +180,7 @@ THEORY SetsEnvX IS
 END
 &
 THEORY ConstantsEnvX IS
-  Constants(Machine(BASIC_SEX)) == (Type(man) == Cst(etype(SEX,0,1));Type(woman) == Cst(etype(SEX,0,1)))
-END
-&
-THEORY HiddenConstantsEnvX IS
-  HiddenConstants(Machine(BASIC_SEX)) == (Type(decode_SEX) == HCst(SetOf(btype(INTEGER,?,?)*etype(SEX,?,?)));Type(code_SEX) == HCst(SetOf(etype(SEX,0,1)*btype(INTEGER,0,1))))
+  Constants(Machine(BASIC_SEX)) == (Type(man) == Cst(etype(SEX,0,1));Type(woman) == Cst(etype(SEX,0,1));Type(code_SEX) == Cst(SetOf(etype(SEX,0,1)*btype(INTEGER,0,1)));Type(decode_SEX) == Cst(SetOf(btype(INTEGER,?,?)*etype(SEX,?,?))))
 END
 &
 THEORY OperationsEnvX IS

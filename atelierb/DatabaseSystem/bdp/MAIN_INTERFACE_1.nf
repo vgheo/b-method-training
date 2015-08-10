@@ -128,7 +128,7 @@ END
 &
 THEORY ListConstantsX IS
   List_Valuable_Constants(Implementation(MAIN_INTERFACE_1))==(?);
-  Inherited_List_Constants(Implementation(MAIN_INTERFACE_1))==(?);
+  Inherited_List_Constants(Implementation(MAIN_INTERFACE_1))==(code_SEX,decode_SEX,code_STATUS,decode_STATUS);
   List_Constants(Implementation(MAIN_INTERFACE_1))==(?)
 END
 &
@@ -151,9 +151,9 @@ END
 &
 THEORY ListHiddenConstantsX IS
   Abstract_List_HiddenConstants(Implementation(MAIN_INTERFACE_1))==(?);
-  Expanded_List_HiddenConstants(Implementation(MAIN_INTERFACE_1))==(decode_COMMAND,code_COMMAND,decode_SEX,code_SEX,decode_STATUS,code_STATUS);
+  Expanded_List_HiddenConstants(Implementation(MAIN_INTERFACE_1))==(decode_COMMAND,code_COMMAND);
   List_HiddenConstants(Implementation(MAIN_INTERFACE_1))==(?);
-  External_List_HiddenConstants(Implementation(MAIN_INTERFACE_1))==(decode_COMMAND,code_COMMAND,decode_SEX,code_SEX,decode_STATUS,code_STATUS)
+  External_List_HiddenConstants(Implementation(MAIN_INTERFACE_1))==(decode_COMMAND,code_COMMAND)
 END
 &
 THEORY ListPropertiesX IS
@@ -183,18 +183,20 @@ THEORY InheritedEnvX IS
 END
 &
 THEORY ListVisibleStaticX IS
-  List_Constants_Env(Implementation(MAIN_INTERFACE_1),Machine(BASIC_STATUS))==(Type(dead) == Cst(etype(STATUS,0,1));Type(living) == Cst(etype(STATUS,0,1)));
+  List_Constants(Implementation(MAIN_INTERFACE_1),Machine(BASIC_STATUS))==(code_STATUS,decode_STATUS);
+  List_Constants_Env(Implementation(MAIN_INTERFACE_1),Machine(BASIC_STATUS))==(Type(dead) == Cst(etype(STATUS,0,1));Type(living) == Cst(etype(STATUS,0,1));Type(code_STATUS) == Cst(SetOf(etype(STATUS,0,1)*btype(INTEGER,0,1)));Type(decode_STATUS) == Cst(SetOf(btype(INTEGER,?,?)*etype(STATUS,?,?))));
   Enumerate_Definition(Implementation(MAIN_INTERFACE_1),Machine(BASIC_STATUS),STATUS)==({dead,living});
-  List_Constants_Env(Implementation(MAIN_INTERFACE_1),Machine(BASIC_SEX))==(Type(man) == Cst(etype(SEX,0,1));Type(woman) == Cst(etype(SEX,0,1)));
+  List_Constants(Implementation(MAIN_INTERFACE_1),Machine(BASIC_SEX))==(code_SEX,decode_SEX);
+  List_Constants_Env(Implementation(MAIN_INTERFACE_1),Machine(BASIC_SEX))==(Type(man) == Cst(etype(SEX,0,1));Type(woman) == Cst(etype(SEX,0,1));Type(code_SEX) == Cst(SetOf(etype(SEX,0,1)*btype(INTEGER,0,1)));Type(decode_SEX) == Cst(SetOf(btype(INTEGER,?,?)*etype(SEX,?,?))));
   Enumerate_Definition(Implementation(MAIN_INTERFACE_1),Machine(BASIC_SEX),SEX)==({man,woman});
   List_Constants_Env(Implementation(MAIN_INTERFACE_1),Machine(BASIC_COMMAND))==(Type(new) == Cst(etype(COMMAND,0,5));Type(birth) == Cst(etype(COMMAND,0,5));Type(marriage) == Cst(etype(COMMAND,0,5));Type(death) == Cst(etype(COMMAND,0,5));Type(print) == Cst(etype(COMMAND,0,5));Type(quit) == Cst(etype(COMMAND,0,5)));
   Enumerate_Definition(Implementation(MAIN_INTERFACE_1),Machine(BASIC_COMMAND),COMMAND)==({new,birth,marriage,death,print,quit})
 END
 &
 THEORY ListOfIdsX IS
-  List_Of_Ids(Implementation(MAIN_INTERFACE_1)) == (? | STATUS,dead,living,SEX,man,woman,COMMAND,new,birth,marriage,death,print,quit | ? | ? | main | ? | imported(Machine(INNER_INTERFACE)),imported(Machine(BASIC_COMMAND)),imported(Machine(BASIC_SEX)),imported(Machine(BASIC_STATUS)),imported(Machine(BASIC_IO)) | ? | MAIN_INTERFACE_1);
-  List_Of_HiddenCst_Ids(Implementation(MAIN_INTERFACE_1)) == (? | decode_STATUS,code_STATUS,decode_SEX,code_SEX,decode_COMMAND,code_COMMAND);
-  List_Of_VisibleCst_Ids(Implementation(MAIN_INTERFACE_1)) == (?);
+  List_Of_Ids(Implementation(MAIN_INTERFACE_1)) == (? | code_STATUS,decode_STATUS,STATUS,dead,living,code_SEX,decode_SEX,SEX,man,woman,COMMAND,new,birth,marriage,death,print,quit | ? | ? | main | ? | imported(Machine(INNER_INTERFACE)),imported(Machine(BASIC_COMMAND)),imported(Machine(BASIC_SEX)),imported(Machine(BASIC_STATUS)),imported(Machine(BASIC_IO)) | ? | MAIN_INTERFACE_1);
+  List_Of_HiddenCst_Ids(Implementation(MAIN_INTERFACE_1)) == (? | decode_COMMAND,code_COMMAND);
+  List_Of_VisibleCst_Ids(Implementation(MAIN_INTERFACE_1)) == (code_STATUS,decode_STATUS,code_SEX,decode_SEX);
   List_Of_VisibleVar_Ids(Implementation(MAIN_INTERFACE_1)) == (? | ?);
   List_Of_Ids_SeenBNU(Implementation(MAIN_INTERFACE_1)) == (?: ?);
   List_Of_Ids(Machine(BASIC_IO)) == (? | ? | ? | ? | INTERVAL_READ,INT_WRITE,BOOL_READ,BOOL_WRITE,CHAR_READ,CHAR_WRITE,STRING_WRITE | ? | ? | ? | BASIC_IO);
@@ -202,14 +204,14 @@ THEORY ListOfIdsX IS
   List_Of_VisibleCst_Ids(Machine(BASIC_IO)) == (?);
   List_Of_VisibleVar_Ids(Machine(BASIC_IO)) == (? | ?);
   List_Of_Ids_SeenBNU(Machine(BASIC_IO)) == (?: ?);
-  List_Of_Ids(Machine(BASIC_STATUS)) == (STATUS,dead,living | ? | ? | ? | STATUS_READ,STATUS_WRITE | ? | ? | ? | BASIC_STATUS);
-  List_Of_HiddenCst_Ids(Machine(BASIC_STATUS)) == (decode_STATUS,code_STATUS | ?);
-  List_Of_VisibleCst_Ids(Machine(BASIC_STATUS)) == (?);
+  List_Of_Ids(Machine(BASIC_STATUS)) == (code_STATUS,decode_STATUS,STATUS,dead,living | ? | ? | ? | STATUS_READ,STATUS_WRITE | ? | ? | ? | BASIC_STATUS);
+  List_Of_HiddenCst_Ids(Machine(BASIC_STATUS)) == (? | ?);
+  List_Of_VisibleCst_Ids(Machine(BASIC_STATUS)) == (code_STATUS,decode_STATUS);
   List_Of_VisibleVar_Ids(Machine(BASIC_STATUS)) == (? | ?);
   List_Of_Ids_SeenBNU(Machine(BASIC_STATUS)) == (?: ?);
-  List_Of_Ids(Machine(BASIC_SEX)) == (SEX,man,woman | ? | ? | ? | SEX_READ,SEX_WRITE | ? | ? | ? | BASIC_SEX);
-  List_Of_HiddenCst_Ids(Machine(BASIC_SEX)) == (decode_SEX,code_SEX | ?);
-  List_Of_VisibleCst_Ids(Machine(BASIC_SEX)) == (?);
+  List_Of_Ids(Machine(BASIC_SEX)) == (code_SEX,decode_SEX,SEX,man,woman | ? | ? | ? | SEX_READ,SEX_WRITE | ? | ? | ? | BASIC_SEX);
+  List_Of_HiddenCst_Ids(Machine(BASIC_SEX)) == (? | ?);
+  List_Of_VisibleCst_Ids(Machine(BASIC_SEX)) == (code_SEX,decode_SEX);
   List_Of_VisibleVar_Ids(Machine(BASIC_SEX)) == (? | ?);
   List_Of_Ids_SeenBNU(Machine(BASIC_SEX)) == (?: ?);
   List_Of_Ids(Machine(BASIC_COMMAND)) == (COMMAND,new,birth,marriage,death,print,quit | ? | ? | ? | COMMAND_READ,COMMAND_WRITE | ? | ? | ? | BASIC_COMMAND);
@@ -229,7 +231,7 @@ THEORY SetsEnvX IS
 END
 &
 THEORY ConstantsEnvX IS
-  Constants(Implementation(MAIN_INTERFACE_1)) == (Type(quit) == Cst(etype(COMMAND,0,5));Type(print) == Cst(etype(COMMAND,0,5));Type(death) == Cst(etype(COMMAND,0,5));Type(marriage) == Cst(etype(COMMAND,0,5));Type(birth) == Cst(etype(COMMAND,0,5));Type(new) == Cst(etype(COMMAND,0,5));Type(woman) == Cst(etype(SEX,0,1));Type(man) == Cst(etype(SEX,0,1));Type(living) == Cst(etype(STATUS,0,1));Type(dead) == Cst(etype(STATUS,0,1)))
+  Constants(Implementation(MAIN_INTERFACE_1)) == (Type(quit) == Cst(etype(COMMAND,0,5));Type(print) == Cst(etype(COMMAND,0,5));Type(death) == Cst(etype(COMMAND,0,5));Type(marriage) == Cst(etype(COMMAND,0,5));Type(birth) == Cst(etype(COMMAND,0,5));Type(new) == Cst(etype(COMMAND,0,5));Type(decode_SEX) == Cst(SetOf(btype(INTEGER,?,?)*etype(SEX,?,?)));Type(code_SEX) == Cst(SetOf(etype(SEX,0,1)*btype(INTEGER,0,1)));Type(woman) == Cst(etype(SEX,0,1));Type(man) == Cst(etype(SEX,0,1));Type(decode_STATUS) == Cst(SetOf(btype(INTEGER,?,?)*etype(STATUS,?,?)));Type(code_STATUS) == Cst(SetOf(etype(STATUS,0,1)*btype(INTEGER,0,1)));Type(living) == Cst(etype(STATUS,0,1));Type(dead) == Cst(etype(STATUS,0,1)))
 END
 &
 THEORY VariablesLocEnvX IS
