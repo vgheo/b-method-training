@@ -15,7 +15,7 @@ VALUES
     PERSON = 1..10000;
     max_pers = 10000
 INVARIANT
-    /*Warning:possible typo object(not present anywere else) => rename to max_pers*/
+    /*Warning:possible typo object(not present anywhere else) => rename to max_pers*/
     person =1..max_pers &
     partial_field(1) = (sex;code_SEX)&
     partial_field(2)=(status;code_STATUS) &
