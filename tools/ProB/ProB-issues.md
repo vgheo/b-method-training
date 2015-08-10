@@ -40,7 +40,12 @@ NOT SUPPORTED:
     - '&`
     - `<+`
     - (...)
-    
+- Tooltip doesn't display values 
+    -  see [ProB group post](https://groups.google.com/forum/?hl=en-GB#!topic/prob-users/aK23vH5kjUk)     
+	
+- Very large predicates cannot be substituted by a tag
+    -  see [ProB group post](https://groups.google.com/forum/?hl=en-GB#!topic/prob-users/aK23vH5kjUk) 
+	
 ### '//' comments not supported
 
 [report on prob-users forum](https://groups.google.com/forum/#!topic/prob-users/FLq1ftxJ34A)
