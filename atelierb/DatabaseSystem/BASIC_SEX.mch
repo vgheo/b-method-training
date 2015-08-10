@@ -6,7 +6,7 @@ MACHINE
     BASIC_SEX
 SETS
     SEX={man,woman}
-CONSTANTS
+ABSTRACT_CONSTANTS
     code_SEX,decode_SEX
 PROPERTIES
     code_SEX : SEX >->>{0,1} &
