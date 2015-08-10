@@ -127,9 +127,9 @@ THEORY ListSubstitutionX IS
 END
 &
 THEORY ListConstantsX IS
-  List_Valuable_Constants(Machine(BASIC_COMMAND))==(code_COMMAND,decode_COMMAND);
+  List_Valuable_Constants(Machine(BASIC_COMMAND))==(?);
   Inherited_List_Constants(Machine(BASIC_COMMAND))==(?);
-  List_Constants(Machine(BASIC_COMMAND))==(code_COMMAND,decode_COMMAND)
+  List_Constants(Machine(BASIC_COMMAND))==(?)
 END
 &
 THEORY ListSetsX IS
@@ -149,8 +149,8 @@ END
 THEORY ListHiddenConstantsX IS
   Abstract_List_HiddenConstants(Machine(BASIC_COMMAND))==(?);
   Expanded_List_HiddenConstants(Machine(BASIC_COMMAND))==(?);
-  List_HiddenConstants(Machine(BASIC_COMMAND))==(?);
-  External_List_HiddenConstants(Machine(BASIC_COMMAND))==(?)
+  List_HiddenConstants(Machine(BASIC_COMMAND))==(decode_COMMAND,code_COMMAND);
+  External_List_HiddenConstants(Machine(BASIC_COMMAND))==(decode_COMMAND,code_COMMAND)
 END
 &
 THEORY ListPropertiesX IS
@@ -168,9 +168,9 @@ THEORY ListANYVarX IS
 END
 &
 THEORY ListOfIdsX IS
-  List_Of_Ids(Machine(BASIC_COMMAND)) == (code_COMMAND,decode_COMMAND,COMMAND,new,birth,marriage,death,print,quit | ? | ? | ? | COMMAND_READ,COMMAND_WRITE | ? | ? | ? | BASIC_COMMAND);
-  List_Of_HiddenCst_Ids(Machine(BASIC_COMMAND)) == (? | ?);
-  List_Of_VisibleCst_Ids(Machine(BASIC_COMMAND)) == (code_COMMAND,decode_COMMAND);
+  List_Of_Ids(Machine(BASIC_COMMAND)) == (COMMAND,new,birth,marriage,death,print,quit | ? | ? | ? | COMMAND_READ,COMMAND_WRITE | ? | ? | ? | BASIC_COMMAND);
+  List_Of_HiddenCst_Ids(Machine(BASIC_COMMAND)) == (decode_COMMAND,code_COMMAND | ?);
+  List_Of_VisibleCst_Ids(Machine(BASIC_COMMAND)) == (?);
   List_Of_VisibleVar_Ids(Machine(BASIC_COMMAND)) == (? | ?);
   List_Of_Ids_SeenBNU(Machine(BASIC_COMMAND)) == (?: ?)
 END
@@ -180,7 +180,11 @@ THEORY SetsEnvX IS
 END
 &
 THEORY ConstantsEnvX IS
-  Constants(Machine(BASIC_COMMAND)) == (Type(new) == Cst(etype(COMMAND,0,5));Type(birth) == Cst(etype(COMMAND,0,5));Type(marriage) == Cst(etype(COMMAND,0,5));Type(death) == Cst(etype(COMMAND,0,5));Type(print) == Cst(etype(COMMAND,0,5));Type(quit) == Cst(etype(COMMAND,0,5));Type(code_COMMAND) == Cst(SetOf(etype(COMMAND,0,5)*btype(INTEGER,0,5)));Type(decode_COMMAND) == Cst(SetOf(btype(INTEGER,?,?)*etype(COMMAND,?,?))))
+  Constants(Machine(BASIC_COMMAND)) == (Type(new) == Cst(etype(COMMAND,0,5));Type(birth) == Cst(etype(COMMAND,0,5));Type(marriage) == Cst(etype(COMMAND,0,5));Type(death) == Cst(etype(COMMAND,0,5));Type(print) == Cst(etype(COMMAND,0,5));Type(quit) == Cst(etype(COMMAND,0,5)))
+END
+&
+THEORY HiddenConstantsEnvX IS
+  HiddenConstants(Machine(BASIC_COMMAND)) == (Type(decode_COMMAND) == HCst(SetOf(btype(INTEGER,?,?)*etype(COMMAND,?,?)));Type(code_COMMAND) == HCst(SetOf(etype(COMMAND,0,5)*btype(INTEGER,0,5))))
 END
 &
 THEORY OperationsEnvX IS
@@ -194,7 +198,7 @@ THEORY TCIntRdX IS
   B0check_tab == KO;
   local_op == OK;
   abstract_constants_visible_in_values == KO;
-  project_type == VALIDATION_TYPE;
+  project_type == SOFTWARE_TYPE;
   event_b_deadlockfreeness == KO;
   variant_clause_mandatory == KO;
   event_b_coverage == KO;

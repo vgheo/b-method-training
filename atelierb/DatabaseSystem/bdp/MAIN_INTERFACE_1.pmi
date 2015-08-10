@@ -1,40 +1,40 @@
 ﻿THEORY BalanceX IS
-  MAIN_INTERFACE_1,14,14,0,0,0,0,0;
-  main,14,14,0,0,0,0,0
+  MAIN_INTERFACE_1,14,0,0,14,0,0,0;
+  main,14,0,0,14,0,0,0
 END
 &
 THEORY ProofState IS
-  Proved(Util);
-  Proved(Util);
-  Proved(Util);
-  Proved(Util);
-  Proved(Util);
-  Proved(Util);
-  Proved(Util);
-  Proved(Util);
-  Proved(Util);
-  Proved(Util);
-  Proved(Util);
-  Proved(Util);
-  Proved(Util);
-  Proved(Util)
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Proved(0)
 END
 &
 THEORY MethodList IS
-  mp;
-  mp;
-  mp;
-  mp;
-  mp;
-  mp;
-  mp;
-  mp;
-  mp;
-  mp;
-  mp;
-  mp;
-  mp;
-  mp
+  pr;
+  pr;
+  pr;
+  pr;
+  pr;
+  pr;
+  pr;
+  pr;
+  pr;
+  pr;
+  pr;
+  pr;
+  pr;
+  pr
 END
 &
 THEORY PassList IS
