@@ -8,6 +8,22 @@ ProB tools:
 
 
 ## ProB-core issues
+
+### Documented on wiki
+http://stups.hhu.de/ProB/w/Current_Limitations
+
+#### Cardinality
+#### closure operator
+#### VALUES not supported
+#### Parsing
+>ProB will require parentheses around the comma, the relational composition, and parallel product operators.
+#### Multiple Machines and Refinements
+
+> While refinements are supported, the preconditions of operations are not propagated down to refinement machines. 
+> This means that you should rewrite the preconditions of operations (and, if necessary, reformulate them in terms of the variables of the refinement machine)
+
+>Also, the refinement checker does yet check the gluing invariant.
+
 ### ProB - Unsupported B language features
 
 Valid for: `ProB 1.5.0-final 3bc086f2be4b309869fcab31325ede65f8d27277`
@@ -31,10 +47,11 @@ NOT SUPPORTED:
 [issue](https://probjira.atlassian.net/browse/PARSERLIB-37)
 
 
+
 ## bmotionstudio-prob issues
 
 
 ### BMS/webkit - svg:symbol limited usage
-(webkit issue ) - svg:symbol - symbol definition cannot "use" a symbol defined in another file
+- (webkit issue) svg:symbol - symbol definition cannot "use" a symbol defined in another file
     - using symbols in the same file works
 
