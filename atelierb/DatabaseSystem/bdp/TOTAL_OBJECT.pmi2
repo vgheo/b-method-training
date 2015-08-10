@@ -1,0 +1,57 @@
+THEORY BalanceX IS
+TOTAL_OBJECT,13,0,0,0,0,0,0;
+Initialisation,2,0,0,0,0,0,0;
+WellDefinedness_create_total_object,2,0,0,0,0,0,0;
+WellDefinedness_mod_field,2,0,0,0,0,0,0;
+WellDefinedness_val_field,4,0,0,0,0,0,0;
+create_total_object,2,0,0,0,0,0,0;
+mod_field,1,0,0,0,0,0,0
+END
+&
+THEORY ProofState IS
+Unproved;
+Unproved;
+Unproved;
+Unproved;
+Unproved;
+Unproved;
+Unproved;
+Unproved;
+Unproved;
+Unproved;
+Unproved;
+Unproved;
+Unproved
+END
+&
+THEORY MethodList IS
+?;
+?;
+?;
+?;
+?;
+?;
+?;
+?;
+?;
+?;
+?;
+?;
+?
+END
+&
+THEORY PassList IS
+Force(0),?;
+Force(0),?;
+Force(0),?;
+Force(0),?;
+Force(0),?;
+Force(0),?;
+Force(0),?;
+Force(0),?;
+Force(0),?;
+Force(0),?;
+Force(0),?;
+Force(0),?;
+Force(0),?
+END

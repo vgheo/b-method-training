@@ -8,10 +8,10 @@
 </Enumerated_Values>
 </Set>
 </Sets>
-<Concrete_Constants>
+<Abstract_Constants>
 <Id value='code_STATUS' typref='2905916364'/>
 <Id value='decode_STATUS' typref='3781868044'/>
-</Concrete_Constants>
+</Abstract_Constants>
 <Properties>
 <Nary_Pred op='&amp;'>
 <Exp_Comparison op=':'>

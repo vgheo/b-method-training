@@ -6,7 +6,7 @@ MACHINE
     BASIC_STATUS
 SETS
     STATUS = {dead,living}
-CONSTANTS
+ABSTRACT_CONSTANTS
     code_STATUS,decode_STATUS
 PROPERTIES
     code_STATUS : STATUS >->> {0,1} &

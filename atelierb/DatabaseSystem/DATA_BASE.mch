@@ -8,7 +8,7 @@ SETS
     PERSON
 SEES
     BASIC_SEX,BASIC_STATUS
-CONSTANTS
+ABSTRACT_CONSTANTS
     max_pers
 PROPERTIES
     max_pers = card(PERSON)
@@ -30,8 +30,6 @@ INVARIANT
     husband : WOMAN >+> MAN &
     wife = husband~ &
     mother : person+->(MARRIED /\ WOMAN)
-    
-
 INITIALISATION
     person:={} ||
     sex:={} ||
@@ -39,7 +37,6 @@ INITIALISATION
     mother:= {} ||
     husband:={} ||
     wife:={}
-    
 OPERATIONS
     death(pp)=
     PRE

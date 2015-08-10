@@ -12,10 +12,10 @@
 </Enumerated_Values>
 </Set>
 </Sets>
-<Concrete_Constants>
+<Abstract_Constants>
 <Id value='code_COMMAND' typref='103823389'/>
 <Id value='decode_COMMAND' typref='1042935709'/>
-</Concrete_Constants>
+</Abstract_Constants>
 <Properties>
 <Nary_Pred op='&amp;'>
 <Exp_Comparison op=':'>
