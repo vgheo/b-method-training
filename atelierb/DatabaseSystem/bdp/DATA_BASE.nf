@@ -214,9 +214,9 @@ THEORY ListSubstitutionX IS
 END
 &
 THEORY ListConstantsX IS
-  List_Valuable_Constants(Machine(DATA_BASE))==(max_pers);
+  List_Valuable_Constants(Machine(DATA_BASE))==(?);
   Inherited_List_Constants(Machine(DATA_BASE))==(?);
-  List_Constants(Machine(DATA_BASE))==(max_pers)
+  List_Constants(Machine(DATA_BASE))==(?)
 END
 &
 THEORY ListSetsX IS
@@ -238,8 +238,8 @@ END
 THEORY ListHiddenConstantsX IS
   Abstract_List_HiddenConstants(Machine(DATA_BASE))==(?);
   Expanded_List_HiddenConstants(Machine(DATA_BASE))==(?);
-  List_HiddenConstants(Machine(DATA_BASE))==(?);
-  External_List_HiddenConstants(Machine(DATA_BASE))==(?)
+  List_HiddenConstants(Machine(DATA_BASE))==(max_pers);
+  External_List_HiddenConstants(Machine(DATA_BASE))==(max_pers)
 END
 &
 THEORY ListPropertiesX IS
@@ -291,19 +291,19 @@ THEORY ListANYVarX IS
 END
 &
 THEORY ListOfIdsX IS
-  List_Of_Ids(Machine(DATA_BASE)) == (max_pers,PERSON | ? | wife,husband,mother,status,sex,person | ? | death,marriage,first_human,new_born,not_saturated,is_present,is_living,is_woman,is_married,has_mother,val_status,val_sex,val_spouse,val_mother,PERSON_read,PERSON_write | ? | seen(Machine(BASIC_SEX)),seen(Machine(BASIC_STATUS)) | ? | DATA_BASE);
-  List_Of_HiddenCst_Ids(Machine(DATA_BASE)) == (? | ?);
-  List_Of_VisibleCst_Ids(Machine(DATA_BASE)) == (max_pers);
+  List_Of_Ids(Machine(DATA_BASE)) == (PERSON | ? | wife,husband,mother,status,sex,person | ? | death,marriage,first_human,new_born,not_saturated,is_present,is_living,is_woman,is_married,has_mother,val_status,val_sex,val_spouse,val_mother,PERSON_read,PERSON_write | ? | seen(Machine(BASIC_SEX)),seen(Machine(BASIC_STATUS)) | ? | DATA_BASE);
+  List_Of_HiddenCst_Ids(Machine(DATA_BASE)) == (max_pers | ?);
+  List_Of_VisibleCst_Ids(Machine(DATA_BASE)) == (?);
   List_Of_VisibleVar_Ids(Machine(DATA_BASE)) == (? | ?);
   List_Of_Ids_SeenBNU(Machine(DATA_BASE)) == (?: ?);
-  List_Of_Ids(Machine(BASIC_STATUS)) == (code_STATUS,decode_STATUS,STATUS,dead,living | ? | ? | ? | STATUS_READ,STATUS_WRITE | ? | ? | ? | BASIC_STATUS);
-  List_Of_HiddenCst_Ids(Machine(BASIC_STATUS)) == (? | ?);
-  List_Of_VisibleCst_Ids(Machine(BASIC_STATUS)) == (code_STATUS,decode_STATUS);
+  List_Of_Ids(Machine(BASIC_STATUS)) == (STATUS,dead,living | ? | ? | ? | STATUS_READ,STATUS_WRITE | ? | ? | ? | BASIC_STATUS);
+  List_Of_HiddenCst_Ids(Machine(BASIC_STATUS)) == (decode_STATUS,code_STATUS | ?);
+  List_Of_VisibleCst_Ids(Machine(BASIC_STATUS)) == (?);
   List_Of_VisibleVar_Ids(Machine(BASIC_STATUS)) == (? | ?);
   List_Of_Ids_SeenBNU(Machine(BASIC_STATUS)) == (?: ?);
-  List_Of_Ids(Machine(BASIC_SEX)) == (code_SEX,decode_SEX,SEX,man,woman | ? | ? | ? | SEX_READ,SEX_WRITE | ? | ? | ? | BASIC_SEX);
-  List_Of_HiddenCst_Ids(Machine(BASIC_SEX)) == (? | ?);
-  List_Of_VisibleCst_Ids(Machine(BASIC_SEX)) == (code_SEX,decode_SEX);
+  List_Of_Ids(Machine(BASIC_SEX)) == (SEX,man,woman | ? | ? | ? | SEX_READ,SEX_WRITE | ? | ? | ? | BASIC_SEX);
+  List_Of_HiddenCst_Ids(Machine(BASIC_SEX)) == (decode_SEX,code_SEX | ?);
+  List_Of_VisibleCst_Ids(Machine(BASIC_SEX)) == (?);
   List_Of_VisibleVar_Ids(Machine(BASIC_SEX)) == (? | ?);
   List_Of_Ids_SeenBNU(Machine(BASIC_SEX)) == (?: ?)
 END
@@ -312,8 +312,8 @@ THEORY SetsEnvX IS
   Sets(Machine(DATA_BASE)) == (Type(PERSON) == Cst(SetOf(atype(PERSON,"[PERSON","]PERSON"))))
 END
 &
-THEORY ConstantsEnvX IS
-  Constants(Machine(DATA_BASE)) == (Type(max_pers) == Cst(btype(INTEGER,?,?)))
+THEORY HiddenConstantsEnvX IS
+  HiddenConstants(Machine(DATA_BASE)) == (Type(max_pers) == HCst(btype(INTEGER,?,?)))
 END
 &
 THEORY VariablesEnvX IS
@@ -331,7 +331,7 @@ THEORY TCIntRdX IS
   B0check_tab == KO;
   local_op == OK;
   abstract_constants_visible_in_values == KO;
-  project_type == VALIDATION_TYPE;
+  project_type == SOFTWARE_TYPE;
   event_b_deadlockfreeness == KO;
   variant_clause_mandatory == KO;
   event_b_coverage == KO;

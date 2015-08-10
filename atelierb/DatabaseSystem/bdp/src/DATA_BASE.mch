@@ -8,7 +8,7 @@ SETS
     PERSON
 SEES
     BASIC_SEX , BASIC_STATUS
-CONCRETE_CONSTANTS
+ABSTRACT_CONSTANTS
     max_pers
 PROPERTIES
     max_pers = card ( PERSON )
@@ -30,8 +30,6 @@ INVARIANT
     husband : sex ~ [ { woman } ] >+> sex ~ [ { man } ] &
     wife = husband ~ &
     mother : person +-> ( dom ( husband \/ wife ) /\ sex ~ [ { woman } ] )
-
-
 INITIALISATION
     person := {} ||
     sex := {} ||
@@ -39,7 +37,6 @@ INITIALISATION
     mother := {} ||
     husband := {} ||
     wife := {}
-
 OPERATIONS
     death ( pp ) =
     PRE
@@ -47,6 +44,7 @@ OPERATIONS
     THEN
         status ( pp ) := dead
     END ;
+
     marriage ( bride , groom ) =
     PRE
         bride : person - dom ( husband \/ wife ) /\ sex ~ [ { woman } ] &
@@ -55,6 +53,7 @@ OPERATIONS
         husband ( bride ) := groom ||
         wife ( groom ) := bride
     END ;
+
     baby <-- first_human ( ss ) =
     PRE
         PERSON - person /= {} &

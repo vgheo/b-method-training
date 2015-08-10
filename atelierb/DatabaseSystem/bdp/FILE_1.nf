@@ -219,7 +219,7 @@ THEORY TCIntRdX IS
   B0check_tab == KO;
   local_op == OK;
   abstract_constants_visible_in_values == KO;
-  project_type == VALIDATION_TYPE;
+  project_type == SOFTWARE_TYPE;
   event_b_deadlockfreeness == KO;
   variant_clause_mandatory == KO;
   event_b_coverage == KO;
