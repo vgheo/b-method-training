@@ -6,7 +6,7 @@ MACHINE
     BASIC_COMMAND
 SETS
     COMMAND = {new, birth, marriage, death, print, quit}
-CONSTANTS
+ABSTRACT_CONSTANTS
     code_COMMAND,decode_COMMAND
 PROPERTIES
     code_COMMAND : COMMAND >->>{0,1,2,3,4,5} & 
