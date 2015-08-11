@@ -8,9 +8,11 @@ SETS
     PERSON
 SEES
     BASIC_SEX,BASIC_STATUS
-ABSTRACT_CONSTANTS
+
+CONCRETE_CONSTANTS
     max_pers
 PROPERTIES
+     max_pers : NAT &
     max_pers = card(PERSON)
 VARIABLES
     person,sex,status,mother,husband,wife

@@ -6,10 +6,11 @@ MACHINE
     BASIC_STATUS
 SETS
     STATUS = {dead,living}
-ABSTRACT_CONSTANTS
+CONCRETE_CONSTANTS
     code_STATUS,decode_STATUS
 PROPERTIES
-    code_STATUS : STATUS >->> {0,1} &
+    code_STATUS : STATUS >->> (0..1) &
+    decode_STATUS : (0..1) >->> STATUS & /*concrete typing (B0)*/
     decode_STATUS = code_STATUS~
 OPERATIONS
     rr<--STATUS_READ =  
