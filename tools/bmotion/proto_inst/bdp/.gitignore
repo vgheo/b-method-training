@@ -1,0 +1,7 @@
+# Atelier-B lock files
+.usedby_*
+*.lock
+aaaa*
+# temporaries
+src/
+expand_src/

@@ -1,0 +1,9 @@
+{
+  "template": "proto_inst.html",
+  "model": "M1.mch",
+  "autoOpen": [
+    "CurrentTrace",
+    "StateInspector",
+    "Events"
+  ]
+}

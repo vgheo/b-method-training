@@ -1,0 +1,23 @@
+/* M1_i
+ * Author: T0164919
+ * Creation date: 7/27/2015
+ */
+
+IMPLEMENTATION M1_i
+
+REFINES M1
+
+CONCRETE_VARIABLES
+	v1,vv
+
+INITIALISATION
+	v1 := FALSE ;
+    vv := FALSE	
+
+
+OPERATIONS
+    set_v1(xx) = BEGIN v1:=xx END;
+    set(xx) = BEGIN vv:=xx END;
+    MA.set(xx) = BEGIN vv:=xx END;	
+    MB.set(xx) = BEGIN vv:=xx END
+ END
