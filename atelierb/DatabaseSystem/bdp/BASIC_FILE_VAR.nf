@@ -124,8 +124,8 @@ END
 THEORY ListOperationGuardX END
 &
 THEORY ListPreconditionX IS
-  List_Precondition(Machine(BASIC_FILE_VAR),READ_FILE)==(ii: dom(file_vrb));
-  List_Precondition(Machine(BASIC_FILE_VAR),WRITE_FILE)==(ii: dom(file_vrb));
+  List_Precondition(Machine(BASIC_FILE_VAR),READ_FILE)==(ii: NAT & ii: dom(file_vrb));
+  List_Precondition(Machine(BASIC_FILE_VAR),WRITE_FILE)==(ii: NAT & ii: dom(file_vrb));
   List_Precondition(Machine(BASIC_FILE_VAR),NEW_RECORD)==(vv: VALUE & size(file_vrb)/=max_rec);
   List_Precondition(Machine(BASIC_FILE_VAR),SIZE_FILE)==(btrue);
   List_Precondition(Machine(BASIC_FILE_VAR),RESET_FILE)==(btrue)
@@ -135,8 +135,8 @@ THEORY ListSubstitutionX IS
   Expanded_List_Substitution(Machine(BASIC_FILE_VAR),RESET_FILE)==(btrue | file_vrb:=<>);
   Expanded_List_Substitution(Machine(BASIC_FILE_VAR),SIZE_FILE)==(btrue | vv:=size(file_vrb));
   Expanded_List_Substitution(Machine(BASIC_FILE_VAR),NEW_RECORD)==(vv: VALUE & size(file_vrb)/=max_rec | file_vrb:=file_vrb<-INDEX*{vv});
-  Expanded_List_Substitution(Machine(BASIC_FILE_VAR),WRITE_FILE)==(ii: dom(file_vrb) | file_vrb:=file_vrb<+{ii|->buf_vrb});
-  Expanded_List_Substitution(Machine(BASIC_FILE_VAR),READ_FILE)==(ii: dom(file_vrb) | buf_vrb:=file_vrb(ii));
+  Expanded_List_Substitution(Machine(BASIC_FILE_VAR),WRITE_FILE)==(ii: NAT & ii: dom(file_vrb) | file_vrb:=file_vrb<+{ii|->buf_vrb});
+  Expanded_List_Substitution(Machine(BASIC_FILE_VAR),READ_FILE)==(ii: NAT & ii: dom(file_vrb) | buf_vrb:=file_vrb(ii));
   List_Substitution(Machine(BASIC_FILE_VAR),READ_FILE)==(buf_vrb:=file_vrb(ii));
   List_Substitution(Machine(BASIC_FILE_VAR),WRITE_FILE)==(file_vrb(ii):=buf_vrb);
   List_Substitution(Machine(BASIC_FILE_VAR),NEW_RECORD)==(file_vrb:=file_vrb<-INDEX*{vv});
@@ -218,7 +218,7 @@ THEORY TCIntRdX IS
   B0check_tab == KO;
   local_op == OK;
   abstract_constants_visible_in_values == KO;
-  project_type == VALIDATION_TYPE;
+  project_type == SOFTWARE_TYPE;
   event_b_deadlockfreeness == KO;
   variant_clause_mandatory == KO;
   event_b_coverage == KO;

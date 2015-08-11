@@ -57,7 +57,7 @@ THEORY ListInvariantX IS
   Expanded_List_Invariant(Machine(FILE_ACCESS))==(btrue);
   Abstract_List_Invariant(Machine(FILE_ACCESS))==(btrue);
   Context_List_Invariant(Machine(FILE_ACCESS))==(btrue);
-  List_Invariant(Machine(FILE_ACCESS))==(bfile: seq(FIELD --> VALUE) & buffer: dom(bfile) +-> (FIELD --> VALUE) & updated: BOOL & (updated = FALSE => buffer <: bfile) & (updated = TRUE => buffer/={}))
+  List_Invariant(Machine(FILE_ACCESS))==(bfile: NAT1 --> (FIELD --> VALUE) & bfile: seq(FIELD --> VALUE) & buffer: NAT1 --> (FIELD --> VALUE) & buffer: dom(bfile) +-> (FIELD --> VALUE) & updated: BOOL & (updated = FALSE => buffer <: bfile) & (updated = TRUE => buffer/={}))
 END
 &
 THEORY ListAssertionsX IS
@@ -130,23 +130,23 @@ END
 THEORY ListOperationGuardX END
 &
 THEORY ListPreconditionX IS
-  List_Precondition(Machine(FILE_ACCESS),get_record)==(oo: dom(bfile));
+  List_Precondition(Machine(FILE_ACCESS),get_record)==(oo: NAT & oo: dom(bfile));
   List_Precondition(Machine(FILE_ACCESS),put_buffer)==(updated = TRUE);
   List_Precondition(Machine(FILE_ACCESS),create_record)==(vv: VALUE & size(bfile)/=max_rec);
-  List_Precondition(Machine(FILE_ACCESS),not_in_buffer)==(oo: 1..size(bfile));
-  List_Precondition(Machine(FILE_ACCESS),mod_buffer)==(oo: dom(buffer) & ii: FIELD & vv: VALUE);
+  List_Precondition(Machine(FILE_ACCESS),not_in_buffer)==(oo: NAT1 & oo: 1..size(bfile));
+  List_Precondition(Machine(FILE_ACCESS),mod_buffer)==(oo: NAT & oo: dom(buffer) & ii: FIELD & vv: VALUE);
   List_Precondition(Machine(FILE_ACCESS),size_file)==(btrue);
-  List_Precondition(Machine(FILE_ACCESS),val_buffer)==(oo: dom(buffer) & ii: FIELD)
+  List_Precondition(Machine(FILE_ACCESS),val_buffer)==(oo: NAT & oo: dom(buffer) & ii: FIELD)
 END
 &
 THEORY ListSubstitutionX IS
-  Expanded_List_Substitution(Machine(FILE_ACCESS),val_buffer)==(oo: dom(buffer) & ii: FIELD | vv:=buffer(oo)(ii));
+  Expanded_List_Substitution(Machine(FILE_ACCESS),val_buffer)==(oo: NAT & oo: dom(buffer) & ii: FIELD | vv:=buffer(oo)(ii));
   Expanded_List_Substitution(Machine(FILE_ACCESS),size_file)==(btrue | vv:=size(bfile));
-  Expanded_List_Substitution(Machine(FILE_ACCESS),mod_buffer)==(oo: dom(buffer) & ii: FIELD & vv: VALUE | buffer,updated:=buffer<+{oo|->(buffer(oo)<+{ii|->vv})},TRUE);
-  Expanded_List_Substitution(Machine(FILE_ACCESS),not_in_buffer)==(oo: 1..size(bfile) | vv:=bool(oo/:dom(buffer)));
+  Expanded_List_Substitution(Machine(FILE_ACCESS),mod_buffer)==(oo: NAT & oo: dom(buffer) & ii: FIELD & vv: VALUE | buffer,updated:=buffer<+{oo|->(buffer(oo)<+{ii|->vv})},TRUE);
+  Expanded_List_Substitution(Machine(FILE_ACCESS),not_in_buffer)==(oo: NAT1 & oo: 1..size(bfile) | vv:=bool(oo/:dom(buffer)));
   Expanded_List_Substitution(Machine(FILE_ACCESS),create_record)==(vv: VALUE & size(bfile)/=max_rec | bfile,oo:=bfile<-FIELD*{vv},size(bfile)+1);
   Expanded_List_Substitution(Machine(FILE_ACCESS),put_buffer)==(updated = TRUE | bfile:=bfile<+buffer);
-  Expanded_List_Substitution(Machine(FILE_ACCESS),get_record)==(oo: dom(bfile) | buffer,updated:={oo|->bfile(oo)},FALSE);
+  Expanded_List_Substitution(Machine(FILE_ACCESS),get_record)==(oo: NAT & oo: dom(bfile) | buffer,updated:={oo|->bfile(oo)},FALSE);
   List_Substitution(Machine(FILE_ACCESS),get_record)==(buffer:={oo|->bfile(oo)} || updated:=FALSE);
   List_Substitution(Machine(FILE_ACCESS),put_buffer)==(bfile:=bfile<+buffer);
   List_Substitution(Machine(FILE_ACCESS),create_record)==(bfile:=bfile<-FIELD*{vv} || oo:=size(bfile)+1);
@@ -214,7 +214,7 @@ THEORY ParametersEnvX IS
 END
 &
 THEORY VisibleVariablesEnvX IS
-  VisibleVariables(Machine(FILE_ACCESS)) == (Type(updated) == Mvv(btype(BOOL,?,?));Type(buffer) == Mvv(SetOf(btype(INTEGER,?,?)*SetOf(atype(FIELD,?,?)*atype(VALUE,?,?))));Type(bfile) == Mvv(SetOf(btype(INTEGER,?,?)*SetOf(atype(FIELD,?,?)*atype(VALUE,?,?)))))
+  VisibleVariables(Machine(FILE_ACCESS)) == (Type(updated) == Mvv(btype(BOOL,?,?));Type(buffer) == Mvv(SetOf(btype(INTEGER,1,MAXINT)*SetOf(atype(FIELD,?,?)*atype(VALUE,?,?))));Type(bfile) == Mvv(SetOf(btype(INTEGER,1,MAXINT)*SetOf(atype(FIELD,?,?)*atype(VALUE,?,?)))))
 END
 &
 THEORY OperationsEnvX IS
@@ -228,7 +228,7 @@ THEORY TCIntRdX IS
   B0check_tab == KO;
   local_op == OK;
   abstract_constants_visible_in_values == KO;
-  project_type == VALIDATION_TYPE;
+  project_type == SOFTWARE_TYPE;
   event_b_deadlockfreeness == KO;
   variant_clause_mandatory == KO;
   event_b_coverage == KO;

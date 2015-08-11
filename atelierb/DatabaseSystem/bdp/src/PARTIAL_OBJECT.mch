@@ -14,7 +14,6 @@ ABSTRACT_VARIABLES
     partial_object , partial_field
 INITIALISATION
     partial_object := 0 ||
-    /*the original model initiated partial_field with {},but the prover proved false with this initial value.*/
     partial_field := {}
 INVARIANT
     partial_object : 0 .. max_obj &
@@ -61,7 +60,7 @@ OPERATIONS
     vv <-- val_field ( ii , oo ) =
     PRE
         ii : 1 .. max_field &
-        oo : dom ( partial_field ( ii ) )
+        oo : 1 .. partial_object
     THEN
         vv := partial_field ( ii ) ( oo )
     END ;

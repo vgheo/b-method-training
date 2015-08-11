@@ -131,13 +131,13 @@ THEORY ListPreconditionX IS
   List_Precondition(Machine(PARTIAL_OBJECT),mod_field)==(ii: 1..max_field & oo: 1..partial_object & vv: min_val..max_val);
   List_Precondition(Machine(PARTIAL_OBJECT),rem_field)==(ii: 1..max_field & oo: 1..partial_object);
   List_Precondition(Machine(PARTIAL_OBJECT),def_field)==(ii: 1..max_field & oo: 1..partial_object);
-  List_Precondition(Machine(PARTIAL_OBJECT),val_field)==(ii: 1..max_field & oo: dom(partial_field(ii)));
+  List_Precondition(Machine(PARTIAL_OBJECT),val_field)==(ii: 1..max_field & oo: 1..partial_object);
   List_Precondition(Machine(PARTIAL_OBJECT),nbr_object)==(btrue)
 END
 &
 THEORY ListSubstitutionX IS
   Expanded_List_Substitution(Machine(PARTIAL_OBJECT),nbr_object)==(btrue | vv:=partial_object);
-  Expanded_List_Substitution(Machine(PARTIAL_OBJECT),val_field)==(ii: 1..max_field & oo: dom(partial_field(ii)) | vv:=partial_field(ii)(oo));
+  Expanded_List_Substitution(Machine(PARTIAL_OBJECT),val_field)==(ii: 1..max_field & oo: 1..partial_object | vv:=partial_field(ii)(oo));
   Expanded_List_Substitution(Machine(PARTIAL_OBJECT),def_field)==(ii: 1..max_field & oo: 1..partial_object | vv:=bool(oo: dom(partial_field(ii))));
   Expanded_List_Substitution(Machine(PARTIAL_OBJECT),rem_field)==(ii: 1..max_field & oo: 1..partial_object | partial_field:=partial_field<+{ii|->({oo}<<|partial_field(ii))});
   Expanded_List_Substitution(Machine(PARTIAL_OBJECT),mod_field)==(ii: 1..max_field & oo: 1..partial_object & vv: min_val..max_val | partial_field:=partial_field<+{ii|->(partial_field(ii)<+{oo|->vv})});
@@ -221,7 +221,7 @@ THEORY TCIntRdX IS
   B0check_tab == KO;
   local_op == OK;
   abstract_constants_visible_in_values == KO;
-  project_type == VALIDATION_TYPE;
+  project_type == SOFTWARE_TYPE;
   event_b_deadlockfreeness == KO;
   variant_clause_mandatory == KO;
   event_b_coverage == KO;

@@ -65,7 +65,7 @@ THEORY MethodList IS
   pr;
   pr;
   pr;
-  ?;
+  mp & pr;
   pr;
   ?;
   pr;

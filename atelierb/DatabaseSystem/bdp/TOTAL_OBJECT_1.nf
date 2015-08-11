@@ -131,8 +131,8 @@ END
 &
 THEORY ListSubstitutionX IS
   Expanded_List_Substitution(Implementation(TOTAL_OBJECT_1),nbr_object)==(btrue | vv:=size(file));
-  Expanded_List_Substitution(Implementation(TOTAL_OBJECT_1),val_field)==(ii: FIELD & oo: 1..total_object & oo: dom(file) & ii: FIELD | vv:=file(oo)(ii));
-  Expanded_List_Substitution(Implementation(TOTAL_OBJECT_1),mod_field)==(ii: FIELD & oo: 1..total_object & vv: VALUE & oo: dom(file) & ii: FIELD & vv: VALUE | file:=file<+{oo|->(file(oo)<+{ii|->vv})});
+  Expanded_List_Substitution(Implementation(TOTAL_OBJECT_1),val_field)==(ii: FIELD & oo: 1..total_object & oo: NAT & oo: dom(file) & ii: FIELD | vv:=file(oo)(ii));
+  Expanded_List_Substitution(Implementation(TOTAL_OBJECT_1),mod_field)==(ii: FIELD & oo: 1..total_object & vv: VALUE & oo: NAT & oo: dom(file) & ii: FIELD & vv: VALUE | file:=file<+{oo|->(file(oo)<+{ii|->vv})});
   Expanded_List_Substitution(Implementation(TOTAL_OBJECT_1),create_total_object)==(vv: VALUE & total_object/=max_obj & vv: VALUE & size(file)<max_obj | file,oo:=file<-FIELD*{vv},size(file)+1);
   List_Substitution(Implementation(TOTAL_OBJECT_1),create_total_object)==(oo <-- create_record(vv));
   List_Substitution(Implementation(TOTAL_OBJECT_1),mod_field)==(mod_file(oo,ii,vv));

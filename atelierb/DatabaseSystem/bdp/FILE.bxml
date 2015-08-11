@@ -63,6 +63,10 @@
 <Nary_Pred op='&amp;'>
 <Exp_Comparison op=':'>
 <Id value='oo' typref='2701647786'/>
+<Id value='NAT' typref='3603043417'/>
+</Exp_Comparison>
+<Exp_Comparison op=':'>
+<Id value='oo' typref='2701647786'/>
 <Unary_Exp op='dom' typref='3603043417'>
 <Id value='file' typref='277897435'/>
 </Unary_Exp>
@@ -98,6 +102,10 @@
 </Input_Parameters>
 <Precondition>
 <Nary_Pred op='&amp;'>
+<Exp_Comparison op=':'>
+<Id value='oo' typref='2701647786'/>
+<Id value='NAT' typref='3603043417'/>
+</Exp_Comparison>
 <Exp_Comparison op=':'>
 <Id value='oo' typref='2701647786'/>
 <Unary_Exp op='dom' typref='3603043417'>

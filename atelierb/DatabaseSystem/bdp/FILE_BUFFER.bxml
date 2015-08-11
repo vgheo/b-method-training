@@ -123,6 +123,10 @@
 <Nary_Pred op='&amp;'>
 <Exp_Comparison op=':'>
 <Id value='oo' typref='2701647786'/>
+<Id value='NAT' typref='3603043417'/>
+</Exp_Comparison>
+<Exp_Comparison op=':'>
+<Id value='oo' typref='2701647786'/>
 <Unary_Exp op='dom' typref='3603043417'>
 <Id value='bfile' typref='277897435'/>
 </Unary_Exp>
@@ -192,6 +196,11 @@
 <Id value='oo' typref='2701647786'/>
 </Input_Parameters>
 <Precondition>
+<Nary_Pred op='&amp;'>
+<Exp_Comparison op=':'>
+<Id value='oo' typref='2701647786'/>
+<Id value='NAT1' typref='3603043417'/>
+</Exp_Comparison>
 <Exp_Comparison op=':'>
 <Id value='oo' typref='2701647786'/>
 <Binary_Exp op='..' typref='3603043417'>
@@ -201,6 +210,7 @@
 </Unary_Exp>
 </Binary_Exp>
 </Exp_Comparison>
+</Nary_Pred>
 </Precondition>
 <Body>
 <Assignement_Sub>
@@ -228,6 +238,10 @@
 </Input_Parameters>
 <Precondition>
 <Nary_Pred op='&amp;'>
+<Exp_Comparison op=':'>
+<Id value='oo' typref='2701647786'/>
+<Id value='NAT' typref='3603043417'/>
+</Exp_Comparison>
 <Exp_Comparison op=':'>
 <Id value='oo' typref='2701647786'/>
 <Unary_Exp op='dom' typref='3603043417'>
@@ -271,6 +285,10 @@
 </Input_Parameters>
 <Precondition>
 <Nary_Pred op='&amp;'>
+<Exp_Comparison op=':'>
+<Id value='oo' typref='2701647786'/>
+<Id value='NAT' typref='3603043417'/>
+</Exp_Comparison>
 <Exp_Comparison op=':'>
 <Id value='oo' typref='2701647786'/>
 <Unary_Exp op='dom' typref='3603043417'>

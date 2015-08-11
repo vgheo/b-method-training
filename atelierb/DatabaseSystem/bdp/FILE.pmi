@@ -1,70 +1,63 @@
-﻿THEORY BalanceX IS
-  FILE,14,14,0,0,0,0,0;
-  Initialisation,2,2,0,0,0,0,0;
-  WellDefinednessInvariant,1,1,0,0,0,0,0;
-  WellDefinedness_Precondition_create_record,1,1,0,0,0,0,0;
-  WellDefinedness_create_record,1,1,0,0,0,0,0;
-  WellDefinedness_mod_file,1,1,0,0,0,0,0;
-  WellDefinedness_size_file,1,1,0,0,0,0,0;
-  WellDefinedness_val_file,3,3,0,0,0,0,0;
-  create_record,2,2,0,0,0,0,0;
-  mod_file,2,2,0,0,0,0,0
+THEORY BalanceX IS
+FILE,14,0,0,0,0,0,0;
+Initialisation,2,0,0,0,0,0,0;
+WellDefinednessInvariant,1,0,0,0,0,0,0;
+WellDefinedness_Precondition_create_record,1,0,0,0,0,0,0;
+WellDefinedness_create_record,1,0,0,0,0,0,0;
+WellDefinedness_mod_file,1,0,0,0,0,0,0;
+WellDefinedness_size_file,1,0,0,0,0,0,0;
+WellDefinedness_val_file,3,0,0,0,0,0,0;
+create_record,2,0,0,0,0,0,0;
+mod_file,2,0,0,0,0,0,0
 END
 &
 THEORY ProofState IS
-  Proved(Util);
-  Proved(Util);
-  Proved(Util);
-  Proved(Util);
-  Proved(Util);
-  Proved(Util);
-  Proved(Util);
-  Proved(Util);
-  Proved(Util);
-  Proved(Util);
-  Proved(Util);
-  Proved(Util);
-  Proved(Util);
-  Proved(Util)
+Unproved;
+Unproved;
+Unproved;
+Unproved;
+Unproved;
+Unproved;
+Unproved;
+Unproved;
+Unproved;
+Unproved;
+Unproved;
+Unproved;
+Unproved;
+Unproved
 END
 &
 THEORY MethodList IS
-  pp;
-  pp;
-  pp;
-  pp;
-  pp;
-  pp;
-  pp;
-  pp;
-  pp;
-  mp;
-  pp;
-  mp & pp(rp.2) & pr;
-  pp;
-  pp
+?;
+?;
+?;
+?;
+?;
+?;
+?;
+?;
+?;
+?;
+?;
+?;
+?;
+?
 END
 &
 THEORY PassList IS
-  Force(0),?;
-  Force(0),?;
-  Force(0),?;
-  Force(0),?;
-  Force(0),?;
-  Force(0),?;
-  Force(0),?;
-  Force(0),?;
-  Force(0),?;
-  Force(0),?;
-  Force(0),?;
-  Force(0),?;
-  Force(0),?;
-  Force(0),?
-END
-&
-THEORY ManForms 
-END
-&
-THEORY Version IS
-  PRVersion("svn")(CLT == "V4.0-53996")
+Force(0),?;
+Force(0),?;
+Force(0),?;
+Force(0),?;
+Force(0),?;
+Force(0),?;
+Force(0),?;
+Force(0),?;
+Force(0),?;
+Force(0),?;
+Force(0),?;
+Force(0),?;
+Force(0),?;
+Force(0),?
 END

@@ -23,6 +23,10 @@
 <Nary_Pred op='&amp;'>
 <Exp_Comparison op=':'>
 <Id value='name' typref='2701647786'/>
+<Id value='NAT' typref='3603043417'/>
+</Exp_Comparison>
+<Exp_Comparison op=':'>
+<Id value='name' typref='2701647786'/>
 <Binary_Exp op='..' typref='3603043417'>
 <Integer_Literal value='0' typref='2701647786'/>
 <Unary_Exp op='size' typref='2701647786'>

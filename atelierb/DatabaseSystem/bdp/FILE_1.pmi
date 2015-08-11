@@ -1,145 +1,150 @@
-﻿THEORY BalanceX IS
-  FILE_1,39,12,0,20,1,0,0;
-  Initialisation,1,0,0,1,0,0,0;
-  WellDefinedness_create_record,1,1,0,0,0,0,0;
-  WellDefinedness_mod_file,8,3,0,3,0,0,0;
-  WellDefinedness_size_file,1,1,0,0,0,0,0;
-  WellDefinedness_val_file,12,3,0,5,0,0,0;
-  create_record,2,0,0,1,1,0,0;
-  mod_file,6,2,0,4,0,0,0;
-  size_file,1,0,0,1,0,0,0;
-  val_file,7,2,0,5,0,0,0
+THEORY BalanceX IS
+FILE_1,43,0,0,0,0,0,0;
+Initialisation,1,0,0,0,0,0,0;
+WellDefinedness_create_record,1,0,0,0,0,0,0;
+WellDefinedness_mod_file,9,0,0,0,0,0,0;
+WellDefinedness_size_file,1,0,0,0,0,0,0;
+WellDefinedness_val_file,13,0,0,0,0,0,0;
+create_record,2,0,0,0,0,0,0;
+mod_file,7,0,0,0,0,0,0;
+size_file,1,0,0,0,0,0,0;
+val_file,8,0,0,0,0,0,0
 END
 &
 THEORY ProofState IS
-  Proved(Util);
-  Proved(Util);
-  Proved(0);
-  Proved(0);
-  Proved(0);
-  Unproved;
-  Unproved;
-  Unproved;
-  Proved(0);
-  Unproved;
-  Proved(0);
-  Proved(Util);
-  Proved(Util);
-  Proved(Util);
-  Proved(0);
-  Unproved;
-  Proved(0);
-  Unproved;
-  Proved(0);
-  Proved(Util);
-  Proved(Util);
-  Proved(Util);
-  Proved(0);
-  Proved(0);
-  Proved(1);
-  Proved(0);
-  Proved(0);
-  Proved(0);
-  Proved(0);
-  Proved(Util);
-  Proved(Util);
-  Proved(0);
-  Proved(0);
-  Proved(0);
-  Proved(0);
-  Proved(0);
-  Proved(Util);
-  Proved(Util);
-  Proved(0)
+Unproved;
+Unproved;
+Unproved;
+Unproved;
+Unproved;
+Unproved;
+Unproved;
+Unproved;
+Unproved;
+Unproved;
+Unproved;
+Unproved;
+Unproved;
+Unproved;
+Unproved;
+Unproved;
+Unproved;
+Unproved;
+Unproved;
+Unproved;
+Unproved;
+Unproved;
+Unproved;
+Unproved;
+Unproved;
+Unproved;
+Unproved;
+Unproved;
+Unproved;
+Unproved;
+Unproved;
+Unproved;
+Unproved;
+Unproved;
+Unproved;
+Unproved;
+Unproved;
+Unproved;
+Unproved;
+Unproved;
+Unproved;
+Unproved;
+Unproved
 END
 &
 THEORY MethodList IS
-  pp(rp.1);
-  pp(rp.1);
-  pr;
-  pr;
-  pr;
-  ?;
-  ?;
-  mp;
-  pr;
-  mp;
-  pr;
-  pp(rp.1);
-  mp & pp(rp.1);
-  pp(rp.1);
-  pr;
-  mp & pr;
-  pr;
-  mp;
-  pr;
-  pp(rp.1);
-  pp(rp.1);
-  pp(rp.1);
-  pr;
-  pr;
-  pr;
-  pr;
-  pr;
-  pr;
-  pr;
-  pp(rp.1);
-  pp(rp.1);
-  pr;
-  pr;
-  pr;
-  pr;
-  pr;
-  pp(rp.1);
-  pp(rp.1);
-  pr
+?;
+?;
+?;
+?;
+?;
+?;
+?;
+?;
+?;
+?;
+?;
+?;
+?;
+?;
+?;
+?;
+?;
+?;
+?;
+?;
+?;
+?;
+?;
+?;
+?;
+?;
+?;
+?;
+pp(rp.1);
+?;
+pr;
+?;
+?;
+?;
+?;
+?;
+?;
+?;
+?;
+?;
+?;
+?;
+?
 END
 &
 THEORY PassList IS
-  Force(0),(?;0;1;2;3);
-  Force(0),(?;0;1;2;3);
-  Force(0),?;
-  Force(0),?;
-  Force(0),?;
-  Force(0),(?;0;1;2;3);
-  Force(0),(?;0;1;2;3);
-  Force(0),(?;0;1;2;3);
-  Force(0),?;
-  Force(0),(?;0;1;2;3);
-  Force(0),?;
-  Force(0),(?;0;1;2;3);
-  Force(0),(?;0;1;2;3);
-  Force(0),(?;0;1;2;3);
-  Force(0),?;
-  Force(0),(?;0;1;2;3);
-  Force(0),?;
-  Force(0),(?;0;1;2;3);
-  Force(0),?;
-  Force(0),(?;0;1;2;3);
-  Force(0),(?;0;1;2;3);
-  Force(0),(?;0;1;2;3);
-  Force(0),?;
-  Force(0),?;
-  Force(1),(?;0);
-  Force(0),?;
-  Force(0),?;
-  Force(0),?;
-  Force(0),?;
-  Force(0),(?;0;1;2;3);
-  Force(0),(?;0;1;2;3);
-  Force(0),?;
-  Force(0),?;
-  Force(0),?;
-  Force(0),?;
-  Force(0),?;
-  Force(0),(?;0;1;2;3);
-  Force(0),(?;0;1;2;3);
-  Force(0),?
-END
-&
-THEORY ManForms 
-END
-&
-THEORY Version IS
-  PRVersion("svn")(CLT == "V4.0-53996")
+Force(0),?;
+Force(0),?;
+Force(0),?;
+Force(0),?;
+Force(0),?;
+Force(0),?;
+Force(0),?;
+Force(0),?;
+Force(0),?;
+Force(0),?;
+Force(0),?;
+Force(0),?;
+Force(0),?;
+Force(0),?;
+Force(0),?;
+Force(0),?;
+Force(0),?;
+Force(0),?;
+Force(0),?;
+Force(0),?;
+Force(0),?;
+Force(0),?;
+Force(0),?;
+Force(0),?;
+Force(0),?;
+Force(0),?;
+Force(0),?;
+Force(0),?;
+Force(0),(?; 0; 1; 2; 3);
+Force(0),?;
+Force(0),?;
+Force(0),?;
+Force(0),?;
+Force(0),?;
+Force(0),?;
+Force(0),?;
+Force(0),?;
+Force(0),?;
+Force(0),?;
+Force(0),?;
+Force(0),?;
+Force(0),?;
+Force(0),?
 END

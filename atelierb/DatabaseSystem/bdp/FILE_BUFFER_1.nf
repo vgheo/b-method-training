@@ -51,7 +51,7 @@ END
 THEORY ListInvariantX IS
   Gluing_Seen_List_Invariant(Implementation(FILE_BUFFER_1))==(btrue);
   Abstract_List_Invariant(Implementation(FILE_BUFFER_1))==(bfile: seq(FIELD --> VALUE) & buffer: dom(bfile) +-> (FIELD --> VALUE));
-  Expanded_List_Invariant(Implementation(FILE_BUFFER_1))==(bfile: seq(FIELD --> VALUE) & buffer: dom(bfile) +-> (FIELD --> VALUE) & updated: BOOL & (updated = FALSE => buffer <: bfile) & (updated = TRUE => buffer/={}));
+  Expanded_List_Invariant(Implementation(FILE_BUFFER_1))==(bfile: NAT1 --> (FIELD --> VALUE) & bfile: seq(FIELD --> VALUE) & buffer: NAT1 --> (FIELD --> VALUE) & buffer: dom(bfile) +-> (FIELD --> VALUE) & updated: BOOL & (updated = FALSE => buffer <: bfile) & (updated = TRUE => buffer/={}));
   Context_List_Invariant(Implementation(FILE_BUFFER_1))==(btrue);
   List_Invariant(Implementation(FILE_BUFFER_1))==(btrue)
 END
@@ -125,30 +125,30 @@ THEORY ListHeaderX IS
 END
 &
 THEORY ListPreconditionX IS
-  Own_Precondition(Implementation(FILE_BUFFER_1),val_buffer)==(oo: dom(buffer) & ii: FIELD);
-  List_Precondition(Implementation(FILE_BUFFER_1),val_buffer)==(oo: dom(buffer) & ii: FIELD);
+  Own_Precondition(Implementation(FILE_BUFFER_1),val_buffer)==(oo: NAT & oo: dom(buffer) & ii: FIELD);
+  List_Precondition(Implementation(FILE_BUFFER_1),val_buffer)==(oo: NAT & oo: dom(buffer) & ii: FIELD);
   Own_Precondition(Implementation(FILE_BUFFER_1),size_file)==(btrue);
   List_Precondition(Implementation(FILE_BUFFER_1),size_file)==(btrue);
-  Own_Precondition(Implementation(FILE_BUFFER_1),mod_buffer)==(oo: dom(buffer) & ii: FIELD & vv: VALUE);
-  List_Precondition(Implementation(FILE_BUFFER_1),mod_buffer)==(oo: dom(buffer) & ii: FIELD & vv: VALUE);
-  Own_Precondition(Implementation(FILE_BUFFER_1),not_in_buffer)==(oo: 1..size(bfile));
-  List_Precondition(Implementation(FILE_BUFFER_1),not_in_buffer)==(oo: 1..size(bfile));
+  Own_Precondition(Implementation(FILE_BUFFER_1),mod_buffer)==(oo: NAT & oo: dom(buffer) & ii: FIELD & vv: VALUE);
+  List_Precondition(Implementation(FILE_BUFFER_1),mod_buffer)==(oo: NAT & oo: dom(buffer) & ii: FIELD & vv: VALUE);
+  Own_Precondition(Implementation(FILE_BUFFER_1),not_in_buffer)==(oo: NAT1 & oo: 1..size(bfile));
+  List_Precondition(Implementation(FILE_BUFFER_1),not_in_buffer)==(oo: NAT1 & oo: 1..size(bfile));
   Own_Precondition(Implementation(FILE_BUFFER_1),create_record)==(vv: VALUE & size(bfile)/=max_rec);
   List_Precondition(Implementation(FILE_BUFFER_1),create_record)==(vv: VALUE & size(bfile)/=max_rec);
   Own_Precondition(Implementation(FILE_BUFFER_1),load_buffer)==(btrue);
-  List_Precondition(Implementation(FILE_BUFFER_1),load_buffer)==(oo: dom(bfile) & oo/:dom(buffer))
+  List_Precondition(Implementation(FILE_BUFFER_1),load_buffer)==(oo: NAT & oo: dom(bfile) & oo/:dom(buffer))
 END
 &
 THEORY ListSubstitutionX IS
-  Expanded_List_Substitution(Implementation(FILE_BUFFER_1),load_buffer)==(oo: dom(bfile) & oo/:dom(buffer) | updated = TRUE ==> (updated = TRUE | bfile:=bfile<+buffer) [] not(updated = TRUE) ==> skip;(oo: dom(bfile) | buffer,updated:={oo|->bfile(oo)},FALSE));
+  Expanded_List_Substitution(Implementation(FILE_BUFFER_1),load_buffer)==(oo: NAT & oo: dom(bfile) & oo/:dom(buffer) | updated = TRUE ==> (updated = TRUE | bfile:=bfile<+buffer) [] not(updated = TRUE) ==> skip;(oo: NAT & oo: dom(bfile) | buffer,updated:={oo|->bfile(oo)},FALSE));
   List_Substitution(Implementation(FILE_BUFFER_1),val_buffer)==(vv:=buffer(oo)(ii));
-  Expanded_List_Substitution(Implementation(FILE_BUFFER_1),val_buffer)==(oo: dom(buffer) & ii: FIELD | vv:=buffer(oo)(ii));
+  Expanded_List_Substitution(Implementation(FILE_BUFFER_1),val_buffer)==(oo: NAT & oo: dom(buffer) & ii: FIELD | vv:=buffer(oo)(ii));
   List_Substitution(Implementation(FILE_BUFFER_1),size_file)==(vv:=size(bfile));
   Expanded_List_Substitution(Implementation(FILE_BUFFER_1),size_file)==(btrue | vv:=size(bfile));
   List_Substitution(Implementation(FILE_BUFFER_1),mod_buffer)==(buffer(oo)(ii):=vv || updated:=TRUE);
-  Expanded_List_Substitution(Implementation(FILE_BUFFER_1),mod_buffer)==(oo: dom(buffer) & ii: FIELD & vv: VALUE | buffer,updated:=buffer<+{oo|->(buffer(oo)<+{ii|->vv})},TRUE);
+  Expanded_List_Substitution(Implementation(FILE_BUFFER_1),mod_buffer)==(oo: NAT & oo: dom(buffer) & ii: FIELD & vv: VALUE | buffer,updated:=buffer<+{oo|->(buffer(oo)<+{ii|->vv})},TRUE);
   List_Substitution(Implementation(FILE_BUFFER_1),not_in_buffer)==(vv:=bool(oo/:dom(buffer)));
-  Expanded_List_Substitution(Implementation(FILE_BUFFER_1),not_in_buffer)==(oo: 1..size(bfile) | vv:=bool(oo/:dom(buffer)));
+  Expanded_List_Substitution(Implementation(FILE_BUFFER_1),not_in_buffer)==(oo: NAT1 & oo: 1..size(bfile) | vv:=bool(oo/:dom(buffer)));
   List_Substitution(Implementation(FILE_BUFFER_1),create_record)==(bfile:=bfile<-FIELD*{vv} || oo:=size(bfile)+1);
   Expanded_List_Substitution(Implementation(FILE_BUFFER_1),create_record)==(vv: VALUE & size(bfile)/=max_rec | bfile,oo:=bfile<-FIELD*{vv},size(bfile)+1);
   List_Substitution(Implementation(FILE_BUFFER_1),load_buffer)==(IF updated = TRUE THEN put_buffer END;get_record(oo))

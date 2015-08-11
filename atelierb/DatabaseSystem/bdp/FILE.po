@@ -1,11 +1,11 @@
 THEORY ProofList IS
 _f(1) & _f(2) & _f(8) & WellDefinedness_size_file.1,(_f(20) => _f(21));
 _f(1) & _f(2) & _f(8) & _f(13) & WellDefinedness_create_record.1,(_f(20) => _f(21));
-_f(1) & _f(2) & _f(8) & WellDefinedness_Precondition_create_record.1,(_f(27) & _f(20) => _f(21));
-_f(1) & _f(2) & _f(8) & _f(10) & WellDefinedness_mod_file.1,(_f(20) => _f(23));
-_f(1) & _f(2) & _f(8) & _f(9) & WellDefinedness_val_file.3,(_f(20) => _f(25));
-_f(1) & _f(2) & _f(8) & _f(9) & WellDefinedness_val_file.2,(_f(20) => _f(24));
-_f(1) & _f(2) & _f(8) & _f(9) & WellDefinedness_val_file.1,(_f(20) => _f(23));
+_f(1) & _f(2) & _f(8) & WellDefinedness_Precondition_create_record.1,(_f(28) & _f(20) => _f(21));
+_f(1) & _f(2) & _f(8) & _f(10) & WellDefinedness_mod_file.1,(_f(20) => _f(24));
+_f(1) & _f(2) & _f(8) & _f(9) & WellDefinedness_val_file.3,(_f(20) => _f(26));
+_f(1) & _f(2) & _f(8) & _f(9) & WellDefinedness_val_file.2,(_f(20) => _f(25));
+_f(1) & _f(2) & _f(8) & _f(9) & WellDefinedness_val_file.1,(_f(20) => _f(24));
 _f(1) & _f(2) & WellDefinednessInvariant.1,(_f(18) & _f(19) & _f(20) => _f(21));
 _f(1) & _f(2) & _f(8) & _f(13) & create_record.2,(_f(3) & _f(6) => _f(15));
 _f(1) & _f(2) & _f(8) & _f(13) & create_record.1,(_f(3) & _f(4) => _f(14));
@@ -24,8 +24,8 @@ FIELD: FIN(INTEGER) & not(FIELD = {}) & VALUE: FIN(INTEGER) & not(VALUE = {}) & 
 "Check invariant (size(file) <= max_rec)";
 (size({}) <= max_rec);
 file : NATURAL-{0} +-> ((FIELD) --> (VALUE)) & ((file) : (seq(((FIELD) --> (VALUE))))) & (size(file) <= max_rec);
-((oo) : (dom(file))) & ((ii) : (FIELD));
-((oo) : (dom(file))) & ((ii) : (FIELD)) & ((vv) : (VALUE));
+((oo) : (NAT)) & ((oo) : (dom(file))) & ((ii) : (FIELD));
+((oo) : (NAT)) & ((oo) : (dom(file))) & ((ii) : (FIELD)) & ((vv) : (VALUE));
 ((((file) <+ ({((oo) |-> ((((file )(oo)) <+ ({((ii) |-> (vv))}))))}))) : (seq(((FIELD) --> (VALUE)))));
 (size(((file) <+ ({((oo) |-> ((((file )(oo)) <+ ({((ii) |-> (vv))}))))}))) <= max_rec);
 ((vv) : (VALUE)) & (size(file) +1 <= max_rec);
@@ -38,6 +38,7 @@ file : NATURAL-{0} +-> ((FIELD) --> (VALUE));
 "Well definedness";
 ((file) : (seq(ran(file))));
 ((oo) : (dom(file)));
+((oo) : (NAT));
 ((file) : (((dom(file)) +-> (ran(file)))));
 ((ii) : (dom((file )(oo))));
 (((file )(oo)) : (((dom((file )(oo))) +-> (ran((file )(oo))))));

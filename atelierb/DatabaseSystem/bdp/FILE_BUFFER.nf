@@ -128,19 +128,19 @@ THEORY ListOperationGuardX END
 &
 THEORY ListPreconditionX IS
   List_Precondition(Machine(FILE_BUFFER),create_record)==(vv: VALUE & size(bfile)/=max_rec);
-  List_Precondition(Machine(FILE_BUFFER),load_buffer)==(oo: dom(bfile) & oo/:dom(buffer));
+  List_Precondition(Machine(FILE_BUFFER),load_buffer)==(oo: NAT & oo: dom(bfile) & oo/:dom(buffer));
   List_Precondition(Machine(FILE_BUFFER),size_file)==(btrue);
-  List_Precondition(Machine(FILE_BUFFER),not_in_buffer)==(oo: 1..size(bfile));
-  List_Precondition(Machine(FILE_BUFFER),mod_buffer)==(oo: dom(buffer) & ii: FIELD & vv: VALUE);
-  List_Precondition(Machine(FILE_BUFFER),val_buffer)==(oo: dom(buffer) & ii: FIELD)
+  List_Precondition(Machine(FILE_BUFFER),not_in_buffer)==(oo: NAT1 & oo: 1..size(bfile));
+  List_Precondition(Machine(FILE_BUFFER),mod_buffer)==(oo: NAT & oo: dom(buffer) & ii: FIELD & vv: VALUE);
+  List_Precondition(Machine(FILE_BUFFER),val_buffer)==(oo: NAT & oo: dom(buffer) & ii: FIELD)
 END
 &
 THEORY ListSubstitutionX IS
-  Expanded_List_Substitution(Machine(FILE_BUFFER),val_buffer)==(oo: dom(buffer) & ii: FIELD | vv:=buffer(oo)(ii));
-  Expanded_List_Substitution(Machine(FILE_BUFFER),mod_buffer)==(oo: dom(buffer) & ii: FIELD & vv: VALUE | buffer:=buffer<+{oo|->(buffer(oo)<+{ii|->vv})});
-  Expanded_List_Substitution(Machine(FILE_BUFFER),not_in_buffer)==(oo: 1..size(bfile) | vv:=bool(oo/:dom(buffer)));
+  Expanded_List_Substitution(Machine(FILE_BUFFER),val_buffer)==(oo: NAT & oo: dom(buffer) & ii: FIELD | vv:=buffer(oo)(ii));
+  Expanded_List_Substitution(Machine(FILE_BUFFER),mod_buffer)==(oo: NAT & oo: dom(buffer) & ii: FIELD & vv: VALUE | buffer:=buffer<+{oo|->(buffer(oo)<+{ii|->vv})});
+  Expanded_List_Substitution(Machine(FILE_BUFFER),not_in_buffer)==(oo: NAT1 & oo: 1..size(bfile) | vv:=bool(oo/:dom(buffer)));
   Expanded_List_Substitution(Machine(FILE_BUFFER),size_file)==(btrue | vv:=size(bfile));
-  Expanded_List_Substitution(Machine(FILE_BUFFER),load_buffer)==(oo: dom(bfile) & oo/:dom(buffer) | bfile,buffer:=bfile<+buffer,{oo|->bfile(oo)});
+  Expanded_List_Substitution(Machine(FILE_BUFFER),load_buffer)==(oo: NAT & oo: dom(bfile) & oo/:dom(buffer) | bfile,buffer:=bfile<+buffer,{oo|->bfile(oo)});
   Expanded_List_Substitution(Machine(FILE_BUFFER),create_record)==(vv: VALUE & size(bfile)/=max_rec | bfile,oo:=bfile<-FIELD*{vv},size(bfile)+1);
   List_Substitution(Machine(FILE_BUFFER),create_record)==(bfile:=bfile<-FIELD*{vv} || oo:=size(bfile)+1);
   List_Substitution(Machine(FILE_BUFFER),load_buffer)==(bfile:=bfile<+buffer || buffer:={oo|->bfile(oo)});

@@ -280,12 +280,10 @@
 </Exp_Comparison>
 <Exp_Comparison op=':'>
 <Id value='oo' typref='2701647786'/>
-<Unary_Exp op='dom' typref='3603043417'>
-<Binary_Exp op='(' typref='103245008'>
-<Id value='partial_field' typref='4044453162'/>
-<Id value='ii' typref='2701647786'/>
+<Binary_Exp op='..' typref='3603043417'>
+<Integer_Literal value='1' typref='2701647786'/>
+<Id value='partial_object' typref='2701647786'/>
 </Binary_Exp>
-</Unary_Exp>
 </Exp_Comparison>
 </Nary_Pred>
 </Precondition>

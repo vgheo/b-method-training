@@ -22,27 +22,27 @@
 <Define name="inv">
 <Nary_Pred op="&amp;">
 <Exp_Comparison op=":" initialTag="((partial_object) : (((0) .. (max_obj))))">
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:1:1" typref="2701647786" value="partial_object"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:1:1" typref="2701647786" value="partial_object"/>
 <Binary_Exp op=".." typref="3603043417">
-<Integer_Literal tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:1:2:1" typref="2701647786" value="0"/>
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:1:2:2" typref="2701647786" value="max_obj"/>
+<Integer_Literal tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:1:2:1" typref="2701647786" value="0"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:1:2:2" typref="2701647786" value="max_obj"/>
 </Binary_Exp>
 </Exp_Comparison>
 <Exp_Comparison op=":" initialTag="((partial_field) : (((((1) .. (max_field))) --&gt; (((((1) .. (partial_object))) +-&gt; (((min_val) .. (max_val))))))))">
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:2:1" typref="4044453162" value="partial_field"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:2:1" typref="4044453162" value="partial_field"/>
 <Binary_Exp op="--&gt;" typref="2175577561">
 <Binary_Exp op=".." typref="3603043417">
-<Integer_Literal tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:2:2:1:1" typref="2701647786" value="1"/>
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:2:2:1:2" typref="2701647786" value="max_field"/>
+<Integer_Literal tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:2:2:1:1" typref="2701647786" value="1"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:2:2:1:2" typref="2701647786" value="max_field"/>
 </Binary_Exp>
 <Binary_Exp op="+-&gt;" typref="3083833907">
 <Binary_Exp op=".." typref="3603043417">
-<Integer_Literal tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:2:2:2:1:1" typref="2701647786" value="1"/>
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:2:2:2:1:2" typref="2701647786" value="partial_object"/>
+<Integer_Literal tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:2:2:2:1:1" typref="2701647786" value="1"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:2:2:2:1:2" typref="2701647786" value="partial_object"/>
 </Binary_Exp>
 <Binary_Exp op=".." typref="3603043417">
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:2:2:2:2:1" typref="2701647786" value="min_val"/>
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:2:2:2:2:2" typref="2701647786" value="max_val"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:2:2:2:2:1" typref="2701647786" value="min_val"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:2:2:2:2:2" typref="2701647786" value="max_val"/>
 </Binary_Exp>
 </Binary_Exp>
 </Binary_Exp>
@@ -56,24 +56,24 @@
 <Define name="cst">
 <Nary_Pred op="&amp;">
 <Exp_Comparison op=":">
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:2:1:1:1" typref="2701647786" value="max_obj"/>
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:2:1:1:2" typref="3603043417" value="NAT1"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:2:1:1:1" typref="2701647786" value="max_obj"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:2:1:1:2" typref="3603043417" value="NAT1"/>
 </Exp_Comparison>
 <Exp_Comparison op=":">
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:2:1:2:1" typref="2701647786" value="max_field"/>
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:2:1:2:2" typref="3603043417" value="NAT1"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:2:1:2:1" typref="2701647786" value="max_field"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:2:1:2:2" typref="3603043417" value="NAT1"/>
 </Exp_Comparison>
 <Exp_Comparison op=":">
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:2:1:3:1" typref="2701647786" value="min_val"/>
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:2:1:3:2" typref="3603043417" value="NAT"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:2:1:3:1" typref="2701647786" value="min_val"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:2:1:3:2" typref="3603043417" value="NAT"/>
 </Exp_Comparison>
 <Exp_Comparison op=":">
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:2:1:4:1" typref="2701647786" value="max_val"/>
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:2:1:4:2" typref="3603043417" value="NAT"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:2:1:4:1" typref="2701647786" value="max_val"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:2:1:4:2" typref="3603043417" value="NAT"/>
 </Exp_Comparison>
 <Exp_Comparison op="&lt;">
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:2:1:5:1" typref="2701647786" value="max_val"/>
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:2:1:5:2" typref="2701647786" value="MAXINT"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:2:1:5:1" typref="2701647786" value="max_val"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:2:1:5:2" typref="2701647786" value="MAXINT"/>
 </Exp_Comparison>
 </Nary_Pred>
 </Define>
@@ -94,18 +94,18 @@
 <Nary_Sub op="||">
 <Simple_Assignement_Sub>
 <Variables>
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:5:1:1:1:1" typref="2701647786" value="partial_object"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:5:1:1:1:1" typref="2701647786" value="partial_object"/>
 </Variables>
 <Values>
-<Integer_Literal tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:5:1:1:2:1" typref="2701647786" value="0"/>
+<Integer_Literal tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:5:1:1:2:1" typref="2701647786" value="0"/>
 </Values>
 </Simple_Assignement_Sub>
 <Simple_Assignement_Sub>
 <Variables>
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:5:1:2:1:1" typref="4044453162" value="partial_field"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:5:1:2:1:1" typref="4044453162" value="partial_field"/>
 </Variables>
 <Values>
-<EmptySet tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:5:1:2:2:1" typref="3817003670"/>
+<EmptySet tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:5:1:2:2:1" typref="3817003670"/>
 </Values>
 </Simple_Assignement_Sub>
 </Nary_Sub>
@@ -116,27 +116,27 @@
 <Nary_Pred op="&amp;">
 <Nary_Pred op="&amp;">
 <Exp_Comparison op=":" initialTag="((partial_object) : (((0) .. (max_obj))))">
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:1:1" typref="2701647786" value="partial_object"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:1:1" typref="2701647786" value="partial_object"/>
 <Binary_Exp op=".." typref="3603043417">
-<Integer_Literal tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:1:2:1" typref="2701647786" value="0"/>
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:1:2:2" typref="2701647786" value="max_obj"/>
+<Integer_Literal tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:1:2:1" typref="2701647786" value="0"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:1:2:2" typref="2701647786" value="max_obj"/>
 </Binary_Exp>
 </Exp_Comparison>
 <Exp_Comparison op=":" initialTag="((partial_field) : (((((1) .. (max_field))) --&gt; (((((1) .. (partial_object))) +-&gt; (((min_val) .. (max_val))))))))">
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:2:1" typref="4044453162" value="partial_field"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:2:1" typref="4044453162" value="partial_field"/>
 <Binary_Exp op="--&gt;" typref="2175577561">
 <Binary_Exp op=".." typref="3603043417">
-<Integer_Literal tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:2:2:1:1" typref="2701647786" value="1"/>
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:2:2:1:2" typref="2701647786" value="max_field"/>
+<Integer_Literal tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:2:2:1:1" typref="2701647786" value="1"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:2:2:1:2" typref="2701647786" value="max_field"/>
 </Binary_Exp>
 <Binary_Exp op="+-&gt;" typref="3083833907">
 <Binary_Exp op=".." typref="3603043417">
-<Integer_Literal tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:2:2:2:1:1" typref="2701647786" value="1"/>
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:2:2:2:1:2" typref="2701647786" value="partial_object"/>
+<Integer_Literal tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:2:2:2:1:1" typref="2701647786" value="1"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:2:2:2:1:2" typref="2701647786" value="partial_object"/>
 </Binary_Exp>
 <Binary_Exp op=".." typref="3603043417">
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:2:2:2:2:1" typref="2701647786" value="min_val"/>
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:2:2:2:2:2" typref="2701647786" value="max_val"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:2:2:2:2:1" typref="2701647786" value="min_val"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:2:2:2:2:2" typref="2701647786" value="max_val"/>
 </Binary_Exp>
 </Binary_Exp>
 </Binary_Exp>
@@ -163,8 +163,8 @@
 <Definition name="ass"/>
 <Hypothesis>
 <Exp_Comparison op="/=">
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:1:2:1:1" typref="2701647786" value="partial_object"/>
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:1:2:1:2" typref="2701647786" value="max_obj"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:1:2:1:1" typref="2701647786" value="partial_object"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:1:2:1:2" typref="2701647786" value="max_obj"/>
 </Exp_Comparison>
 </Hypothesis>
 <Goal>
@@ -172,23 +172,23 @@
 <Nary_Sub op="||">
 <Simple_Assignement_Sub>
 <Variables>
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:1:3:1:1:1:1" typref="2701647786" value="partial_object"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:1:3:1:1:1:1" typref="2701647786" value="partial_object"/>
 </Variables>
 <Values>
 <Binary_Exp op="+" typref="2701647786">
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:1:3:1:1:2:1:1" typref="2701647786" value="partial_object"/>
-<Integer_Literal tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:1:3:1:1:2:1:2" typref="2701647786" value="1"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:1:3:1:1:2:1:1" typref="2701647786" value="partial_object"/>
+<Integer_Literal tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:1:3:1:1:2:1:2" typref="2701647786" value="1"/>
 </Binary_Exp>
 </Values>
 </Simple_Assignement_Sub>
 <Simple_Assignement_Sub>
 <Variables>
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:1:3:1:2:1:1" typref="2701647786" value="oo"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:1:3:1:2:1:1" typref="2701647786" value="oo"/>
 </Variables>
 <Values>
 <Binary_Exp op="+" typref="2701647786">
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:1:3:1:2:2:1:1" typref="2701647786" value="partial_object"/>
-<Integer_Literal tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:1:3:1:2:2:1:2" typref="2701647786" value="1"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:1:3:1:2:2:1:1" typref="2701647786" value="partial_object"/>
+<Integer_Literal tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:1:3:1:2:2:1:2" typref="2701647786" value="1"/>
 </Binary_Exp>
 </Values>
 </Simple_Assignement_Sub>
@@ -199,27 +199,27 @@
 <Nary_Pred op="&amp;">
 <Nary_Pred op="&amp;">
 <Exp_Comparison op=":" initialTag="((partial_object) : (((0) .. (max_obj))))">
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:1:1" typref="2701647786" value="partial_object"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:1:1" typref="2701647786" value="partial_object"/>
 <Binary_Exp op=".." typref="3603043417">
-<Integer_Literal tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:1:2:1" typref="2701647786" value="0"/>
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:1:2:2" typref="2701647786" value="max_obj"/>
+<Integer_Literal tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:1:2:1" typref="2701647786" value="0"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:1:2:2" typref="2701647786" value="max_obj"/>
 </Binary_Exp>
 </Exp_Comparison>
 <Exp_Comparison op=":" initialTag="((partial_field) : (((((1) .. (max_field))) --&gt; (((((1) .. (partial_object))) +-&gt; (((min_val) .. (max_val))))))))">
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:2:1" typref="4044453162" value="partial_field"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:2:1" typref="4044453162" value="partial_field"/>
 <Binary_Exp op="--&gt;" typref="2175577561">
 <Binary_Exp op=".." typref="3603043417">
-<Integer_Literal tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:2:2:1:1" typref="2701647786" value="1"/>
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:2:2:1:2" typref="2701647786" value="max_field"/>
+<Integer_Literal tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:2:2:1:1" typref="2701647786" value="1"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:2:2:1:2" typref="2701647786" value="max_field"/>
 </Binary_Exp>
 <Binary_Exp op="+-&gt;" typref="3083833907">
 <Binary_Exp op=".." typref="3603043417">
-<Integer_Literal tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:2:2:2:1:1" typref="2701647786" value="1"/>
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:2:2:2:1:2" typref="2701647786" value="partial_object"/>
+<Integer_Literal tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:2:2:2:1:1" typref="2701647786" value="1"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:2:2:2:1:2" typref="2701647786" value="partial_object"/>
 </Binary_Exp>
 <Binary_Exp op=".." typref="3603043417">
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:2:2:2:2:1" typref="2701647786" value="min_val"/>
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:2:2:2:2:2" typref="2701647786" value="max_val"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:2:2:2:2:1" typref="2701647786" value="min_val"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:2:2:2:2:2" typref="2701647786" value="max_val"/>
 </Binary_Exp>
 </Binary_Exp>
 </Binary_Exp>
@@ -247,24 +247,24 @@
 <Hypothesis>
 <Nary_Pred op="&amp;">
 <Exp_Comparison op=":">
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:2:2:1:1:1" typref="2701647786" value="ii"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:2:2:1:1:1" typref="2701647786" value="ii"/>
 <Binary_Exp op=".." typref="3603043417">
-<Integer_Literal tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:2:2:1:1:2:1" typref="2701647786" value="1"/>
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:2:2:1:1:2:2" typref="2701647786" value="max_field"/>
+<Integer_Literal tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:2:2:1:1:2:1" typref="2701647786" value="1"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:2:2:1:1:2:2" typref="2701647786" value="max_field"/>
 </Binary_Exp>
 </Exp_Comparison>
 <Exp_Comparison op=":">
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:2:2:1:2:1" typref="2701647786" value="oo"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:2:2:1:2:1" typref="2701647786" value="oo"/>
 <Binary_Exp op=".." typref="3603043417">
-<Integer_Literal tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:2:2:1:2:2:1" typref="2701647786" value="1"/>
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:2:2:1:2:2:2" typref="2701647786" value="partial_object"/>
+<Integer_Literal tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:2:2:1:2:2:1" typref="2701647786" value="1"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:2:2:1:2:2:2" typref="2701647786" value="partial_object"/>
 </Binary_Exp>
 </Exp_Comparison>
 <Exp_Comparison op=":">
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:2:2:1:3:1" typref="2701647786" value="vv"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:2:2:1:3:1" typref="2701647786" value="vv"/>
 <Binary_Exp op=".." typref="3603043417">
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:2:2:1:3:2:1" typref="2701647786" value="min_val"/>
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:2:2:1:3:2:2" typref="2701647786" value="max_val"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:2:2:1:3:2:1" typref="2701647786" value="min_val"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:2:2:1:3:2:2" typref="2701647786" value="max_val"/>
 </Binary_Exp>
 </Exp_Comparison>
 </Nary_Pred>
@@ -273,23 +273,23 @@
 <Sub_Calculus>
 <Simple_Assignement_Sub>
 <Variables>
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:2:3:1:1:1:1:1" typref="4044453162" value="partial_field"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:2:3:1:1:1:1:1" typref="4044453162" value="partial_field"/>
 </Variables>
 <Values>
 <Binary_Exp op="&lt;+">
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:2:3:1:1:1:1:1" typref="4044453162" value="partial_field"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:2:3:1:1:1:1:1" typref="4044453162" value="partial_field"/>
 <Nary_Exp op="{">
 <Binary_Exp op="|-&gt;">
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:2:3:1:1:1:1:2" typref="2701647786" value="ii"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:2:3:1:1:1:1:2" typref="2701647786" value="ii"/>
 <Binary_Exp op="&lt;+">
 <Binary_Exp op="(" typref="103245008">
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:2:3:1:1:1:1:1" typref="4044453162" value="partial_field"/>
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:2:3:1:1:1:1:2" typref="2701647786" value="ii"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:2:3:1:1:1:1:1" typref="4044453162" value="partial_field"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:2:3:1:1:1:1:2" typref="2701647786" value="ii"/>
 </Binary_Exp>
 <Nary_Exp op="{">
 <Binary_Exp op="|-&gt;">
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:2:3:1:1:1:2" typref="2701647786" value="oo"/>
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:2:3:1:2:1" typref="2701647786" value="vv"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:2:3:1:1:1:2" typref="2701647786" value="oo"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:2:3:1:2:1" typref="2701647786" value="vv"/>
 </Binary_Exp>
 </Nary_Exp>
 </Binary_Exp>
@@ -304,27 +304,27 @@
 <Nary_Pred op="&amp;">
 <Nary_Pred op="&amp;">
 <Exp_Comparison op=":" initialTag="((partial_object) : (((0) .. (max_obj))))">
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:1:1" typref="2701647786" value="partial_object"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:1:1" typref="2701647786" value="partial_object"/>
 <Binary_Exp op=".." typref="3603043417">
-<Integer_Literal tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:1:2:1" typref="2701647786" value="0"/>
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:1:2:2" typref="2701647786" value="max_obj"/>
+<Integer_Literal tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:1:2:1" typref="2701647786" value="0"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:1:2:2" typref="2701647786" value="max_obj"/>
 </Binary_Exp>
 </Exp_Comparison>
 <Exp_Comparison op=":" initialTag="((partial_field) : (((((1) .. (max_field))) --&gt; (((((1) .. (partial_object))) +-&gt; (((min_val) .. (max_val))))))))">
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:2:1" typref="4044453162" value="partial_field"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:2:1" typref="4044453162" value="partial_field"/>
 <Binary_Exp op="--&gt;" typref="2175577561">
 <Binary_Exp op=".." typref="3603043417">
-<Integer_Literal tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:2:2:1:1" typref="2701647786" value="1"/>
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:2:2:1:2" typref="2701647786" value="max_field"/>
+<Integer_Literal tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:2:2:1:1" typref="2701647786" value="1"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:2:2:1:2" typref="2701647786" value="max_field"/>
 </Binary_Exp>
 <Binary_Exp op="+-&gt;" typref="3083833907">
 <Binary_Exp op=".." typref="3603043417">
-<Integer_Literal tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:2:2:2:1:1" typref="2701647786" value="1"/>
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:2:2:2:1:2" typref="2701647786" value="partial_object"/>
+<Integer_Literal tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:2:2:2:1:1" typref="2701647786" value="1"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:2:2:2:1:2" typref="2701647786" value="partial_object"/>
 </Binary_Exp>
 <Binary_Exp op=".." typref="3603043417">
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:2:2:2:2:1" typref="2701647786" value="min_val"/>
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:2:2:2:2:2" typref="2701647786" value="max_val"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:2:2:2:2:1" typref="2701647786" value="min_val"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:2:2:2:2:2" typref="2701647786" value="max_val"/>
 </Binary_Exp>
 </Binary_Exp>
 </Binary_Exp>
@@ -352,17 +352,17 @@
 <Hypothesis>
 <Nary_Pred op="&amp;">
 <Exp_Comparison op=":">
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:3:2:1:1:1" typref="2701647786" value="ii"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:3:2:1:1:1" typref="2701647786" value="ii"/>
 <Binary_Exp op=".." typref="3603043417">
-<Integer_Literal tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:3:2:1:1:2:1" typref="2701647786" value="1"/>
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:3:2:1:1:2:2" typref="2701647786" value="max_field"/>
+<Integer_Literal tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:3:2:1:1:2:1" typref="2701647786" value="1"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:3:2:1:1:2:2" typref="2701647786" value="max_field"/>
 </Binary_Exp>
 </Exp_Comparison>
 <Exp_Comparison op=":">
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:3:2:1:2:1" typref="2701647786" value="oo"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:3:2:1:2:1" typref="2701647786" value="oo"/>
 <Binary_Exp op=".." typref="3603043417">
-<Integer_Literal tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:3:2:1:2:2:1" typref="2701647786" value="1"/>
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:3:2:1:2:2:2" typref="2701647786" value="partial_object"/>
+<Integer_Literal tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:3:2:1:2:2:1" typref="2701647786" value="1"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:3:2:1:2:2:2" typref="2701647786" value="partial_object"/>
 </Binary_Exp>
 </Exp_Comparison>
 </Nary_Pred>
@@ -371,21 +371,21 @@
 <Sub_Calculus>
 <Simple_Assignement_Sub>
 <Variables>
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:3:3:1:1:1:1" typref="4044453162" value="partial_field"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:3:3:1:1:1:1" typref="4044453162" value="partial_field"/>
 </Variables>
 <Values>
 <Binary_Exp op="&lt;+">
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:3:3:1:1:1:1" typref="4044453162" value="partial_field"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:3:3:1:1:1:1" typref="4044453162" value="partial_field"/>
 <Nary_Exp op="{">
 <Binary_Exp op="|-&gt;">
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:3:3:1:1:1:2" typref="2701647786" value="ii"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:3:3:1:1:1:2" typref="2701647786" value="ii"/>
 <Binary_Exp op="&lt;&lt;|" typref="103245008">
 <Nary_Exp op="{" typref="3603043417">
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:3:3:1:2:1:1:1" typref="2701647786" value="oo"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:3:3:1:2:1:1:1" typref="2701647786" value="oo"/>
 </Nary_Exp>
 <Binary_Exp op="(" typref="103245008">
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:3:3:1:2:1:2:1" typref="4044453162" value="partial_field"/>
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:3:3:1:2:1:2:2" typref="2701647786" value="ii"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:3:3:1:2:1:2:1" typref="4044453162" value="partial_field"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:3:3:1:2:1:2:2" typref="2701647786" value="ii"/>
 </Binary_Exp>
 </Binary_Exp>
 </Binary_Exp>
@@ -399,27 +399,27 @@
 <Nary_Pred op="&amp;">
 <Nary_Pred op="&amp;">
 <Exp_Comparison op=":" initialTag="((partial_object) : (((0) .. (max_obj))))">
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:1:1" typref="2701647786" value="partial_object"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:1:1" typref="2701647786" value="partial_object"/>
 <Binary_Exp op=".." typref="3603043417">
-<Integer_Literal tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:1:2:1" typref="2701647786" value="0"/>
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:1:2:2" typref="2701647786" value="max_obj"/>
+<Integer_Literal tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:1:2:1" typref="2701647786" value="0"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:1:2:2" typref="2701647786" value="max_obj"/>
 </Binary_Exp>
 </Exp_Comparison>
 <Exp_Comparison op=":" initialTag="((partial_field) : (((((1) .. (max_field))) --&gt; (((((1) .. (partial_object))) +-&gt; (((min_val) .. (max_val))))))))">
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:2:1" typref="4044453162" value="partial_field"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:2:1" typref="4044453162" value="partial_field"/>
 <Binary_Exp op="--&gt;" typref="2175577561">
 <Binary_Exp op=".." typref="3603043417">
-<Integer_Literal tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:2:2:1:1" typref="2701647786" value="1"/>
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:2:2:1:2" typref="2701647786" value="max_field"/>
+<Integer_Literal tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:2:2:1:1" typref="2701647786" value="1"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:2:2:1:2" typref="2701647786" value="max_field"/>
 </Binary_Exp>
 <Binary_Exp op="+-&gt;" typref="3083833907">
 <Binary_Exp op=".." typref="3603043417">
-<Integer_Literal tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:2:2:2:1:1" typref="2701647786" value="1"/>
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:2:2:2:1:2" typref="2701647786" value="partial_object"/>
+<Integer_Literal tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:2:2:2:1:1" typref="2701647786" value="1"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:2:2:2:1:2" typref="2701647786" value="partial_object"/>
 </Binary_Exp>
 <Binary_Exp op=".." typref="3603043417">
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:2:2:2:2:1" typref="2701647786" value="min_val"/>
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:2:2:2:2:2" typref="2701647786" value="max_val"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:2:2:2:2:1" typref="2701647786" value="min_val"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:2:2:2:2:2" typref="2701647786" value="max_val"/>
 </Binary_Exp>
 </Binary_Exp>
 </Binary_Exp>
@@ -447,17 +447,17 @@
 <Hypothesis>
 <Nary_Pred op="&amp;">
 <Exp_Comparison op=":">
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:4:3:1:1:1" typref="2701647786" value="ii"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:4:3:1:1:1" typref="2701647786" value="ii"/>
 <Binary_Exp op=".." typref="3603043417">
-<Integer_Literal tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:4:3:1:1:2:1" typref="2701647786" value="1"/>
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:4:3:1:1:2:2" typref="2701647786" value="max_field"/>
+<Integer_Literal tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:4:3:1:1:2:1" typref="2701647786" value="1"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:4:3:1:1:2:2" typref="2701647786" value="max_field"/>
 </Binary_Exp>
 </Exp_Comparison>
 <Exp_Comparison op=":">
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:4:3:1:2:1" typref="2701647786" value="oo"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:4:3:1:2:1" typref="2701647786" value="oo"/>
 <Binary_Exp op=".." typref="3603043417">
-<Integer_Literal tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:4:3:1:2:2:1" typref="2701647786" value="1"/>
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:4:3:1:2:2:2" typref="2701647786" value="partial_object"/>
+<Integer_Literal tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:4:3:1:2:2:1" typref="2701647786" value="1"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:4:3:1:2:2:2" typref="2701647786" value="partial_object"/>
 </Binary_Exp>
 </Exp_Comparison>
 </Nary_Pred>
@@ -466,16 +466,16 @@
 <Sub_Calculus>
 <Simple_Assignement_Sub>
 <Variables>
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:4:4:1:1:1" typref="2043437594" value="vv"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:4:4:1:1:1" typref="2043437594" value="vv"/>
 </Variables>
 <Values>
 <Boolean_Exp typref="2043437594">
 <Exp_Comparison op=":">
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:4:4:1:2:1:1:1" typref="2701647786" value="oo"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:4:4:1:2:1:1:1" typref="2701647786" value="oo"/>
 <Unary_Exp op="dom" typref="3603043417">
 <Binary_Exp op="(" typref="103245008">
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:4:4:1:2:1:1:2:1:1" typref="4044453162" value="partial_field"/>
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:4:4:1:2:1:1:2:1:2" typref="2701647786" value="ii"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:4:4:1:2:1:1:2:1:1" typref="4044453162" value="partial_field"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:4:4:1:2:1:1:2:1:2" typref="2701647786" value="ii"/>
 </Binary_Exp>
 </Unary_Exp>
 </Exp_Comparison>
@@ -488,27 +488,27 @@
 <Nary_Pred op="&amp;">
 <Nary_Pred op="&amp;">
 <Exp_Comparison op=":" initialTag="((partial_object) : (((0) .. (max_obj))))">
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:1:1" typref="2701647786" value="partial_object"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:1:1" typref="2701647786" value="partial_object"/>
 <Binary_Exp op=".." typref="3603043417">
-<Integer_Literal tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:1:2:1" typref="2701647786" value="0"/>
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:1:2:2" typref="2701647786" value="max_obj"/>
+<Integer_Literal tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:1:2:1" typref="2701647786" value="0"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:1:2:2" typref="2701647786" value="max_obj"/>
 </Binary_Exp>
 </Exp_Comparison>
 <Exp_Comparison op=":" initialTag="((partial_field) : (((((1) .. (max_field))) --&gt; (((((1) .. (partial_object))) +-&gt; (((min_val) .. (max_val))))))))">
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:2:1" typref="4044453162" value="partial_field"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:2:1" typref="4044453162" value="partial_field"/>
 <Binary_Exp op="--&gt;" typref="2175577561">
 <Binary_Exp op=".." typref="3603043417">
-<Integer_Literal tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:2:2:1:1" typref="2701647786" value="1"/>
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:2:2:1:2" typref="2701647786" value="max_field"/>
+<Integer_Literal tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:2:2:1:1" typref="2701647786" value="1"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:2:2:1:2" typref="2701647786" value="max_field"/>
 </Binary_Exp>
 <Binary_Exp op="+-&gt;" typref="3083833907">
 <Binary_Exp op=".." typref="3603043417">
-<Integer_Literal tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:2:2:2:1:1" typref="2701647786" value="1"/>
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:2:2:2:1:2" typref="2701647786" value="partial_object"/>
+<Integer_Literal tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:2:2:2:1:1" typref="2701647786" value="1"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:2:2:2:1:2" typref="2701647786" value="partial_object"/>
 </Binary_Exp>
 <Binary_Exp op=".." typref="3603043417">
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:2:2:2:2:1" typref="2701647786" value="min_val"/>
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:2:2:2:2:2" typref="2701647786" value="max_val"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:2:2:2:2:1" typref="2701647786" value="min_val"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:2:2:2:2:2" typref="2701647786" value="max_val"/>
 </Binary_Exp>
 </Binary_Exp>
 </Binary_Exp>
@@ -536,20 +536,18 @@
 <Hypothesis>
 <Nary_Pred op="&amp;">
 <Exp_Comparison op=":">
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:5:3:1:1:1" typref="2701647786" value="ii"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:5:3:1:1:1" typref="2701647786" value="ii"/>
 <Binary_Exp op=".." typref="3603043417">
-<Integer_Literal tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:5:3:1:1:2:1" typref="2701647786" value="1"/>
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:5:3:1:1:2:2" typref="2701647786" value="max_field"/>
+<Integer_Literal tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:5:3:1:1:2:1" typref="2701647786" value="1"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:5:3:1:1:2:2" typref="2701647786" value="max_field"/>
 </Binary_Exp>
 </Exp_Comparison>
 <Exp_Comparison op=":">
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:5:3:1:2:1" typref="2701647786" value="oo"/>
-<Unary_Exp op="dom" typref="3603043417">
-<Binary_Exp op="(" typref="103245008">
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:5:3:1:2:2:1:1" typref="4044453162" value="partial_field"/>
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:5:3:1:2:2:1:2" typref="2701647786" value="ii"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:5:3:1:2:1" typref="2701647786" value="oo"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:5:3:1:2:2:1" typref="2701647786" value="1"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:5:3:1:2:2:2" typref="2701647786" value="partial_object"/>
 </Binary_Exp>
-</Unary_Exp>
 </Exp_Comparison>
 </Nary_Pred>
 </Hypothesis>
@@ -557,15 +555,15 @@
 <Sub_Calculus>
 <Simple_Assignement_Sub>
 <Variables>
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:5:4:1:1:1" typref="2701647786" value="vv"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:5:4:1:1:1" typref="2701647786" value="vv"/>
 </Variables>
 <Values>
 <Binary_Exp op="(" typref="2701647786">
 <Binary_Exp op="(" typref="103245008">
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:5:4:1:2:1:1:1" typref="4044453162" value="partial_field"/>
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:5:4:1:2:1:1:2" typref="2701647786" value="ii"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:5:4:1:2:1:1:1" typref="4044453162" value="partial_field"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:5:4:1:2:1:1:2" typref="2701647786" value="ii"/>
 </Binary_Exp>
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:5:4:1:2:1:2" typref="2701647786" value="oo"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:5:4:1:2:1:2" typref="2701647786" value="oo"/>
 </Binary_Exp>
 </Values>
 </Simple_Assignement_Sub>
@@ -575,27 +573,27 @@
 <Nary_Pred op="&amp;">
 <Nary_Pred op="&amp;">
 <Exp_Comparison op=":" initialTag="((partial_object) : (((0) .. (max_obj))))">
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:1:1" typref="2701647786" value="partial_object"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:1:1" typref="2701647786" value="partial_object"/>
 <Binary_Exp op=".." typref="3603043417">
-<Integer_Literal tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:1:2:1" typref="2701647786" value="0"/>
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:1:2:2" typref="2701647786" value="max_obj"/>
+<Integer_Literal tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:1:2:1" typref="2701647786" value="0"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:1:2:2" typref="2701647786" value="max_obj"/>
 </Binary_Exp>
 </Exp_Comparison>
 <Exp_Comparison op=":" initialTag="((partial_field) : (((((1) .. (max_field))) --&gt; (((((1) .. (partial_object))) +-&gt; (((min_val) .. (max_val))))))))">
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:2:1" typref="4044453162" value="partial_field"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:2:1" typref="4044453162" value="partial_field"/>
 <Binary_Exp op="--&gt;" typref="2175577561">
 <Binary_Exp op=".." typref="3603043417">
-<Integer_Literal tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:2:2:1:1" typref="2701647786" value="1"/>
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:2:2:1:2" typref="2701647786" value="max_field"/>
+<Integer_Literal tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:2:2:1:1" typref="2701647786" value="1"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:2:2:1:2" typref="2701647786" value="max_field"/>
 </Binary_Exp>
 <Binary_Exp op="+-&gt;" typref="3083833907">
 <Binary_Exp op=".." typref="3603043417">
-<Integer_Literal tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:2:2:2:1:1" typref="2701647786" value="1"/>
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:2:2:2:1:2" typref="2701647786" value="partial_object"/>
+<Integer_Literal tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:2:2:2:1:1" typref="2701647786" value="1"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:2:2:2:1:2" typref="2701647786" value="partial_object"/>
 </Binary_Exp>
 <Binary_Exp op=".." typref="3603043417">
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:2:2:2:2:1" typref="2701647786" value="min_val"/>
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:2:2:2:2:2" typref="2701647786" value="max_val"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:2:2:2:2:1" typref="2701647786" value="min_val"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:2:2:2:2:2" typref="2701647786" value="max_val"/>
 </Binary_Exp>
 </Binary_Exp>
 </Binary_Exp>
@@ -625,10 +623,10 @@
 <Sub_Calculus>
 <Simple_Assignement_Sub>
 <Variables>
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:6:2:1:1:1" typref="2701647786" value="vv"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:6:2:1:1:1" typref="2701647786" value="vv"/>
 </Variables>
 <Values>
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:6:2:1:2:1" typref="2701647786" value="partial_object"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:6:2:1:2:1" typref="2701647786" value="partial_object"/>
 </Values>
 </Simple_Assignement_Sub>
 <Binary_Pred op="=&gt;">
@@ -637,27 +635,27 @@
 <Nary_Pred op="&amp;">
 <Nary_Pred op="&amp;">
 <Exp_Comparison op=":" initialTag="((partial_object) : (((0) .. (max_obj))))">
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:1:1" typref="2701647786" value="partial_object"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:1:1" typref="2701647786" value="partial_object"/>
 <Binary_Exp op=".." typref="3603043417">
-<Integer_Literal tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:1:2:1" typref="2701647786" value="0"/>
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:1:2:2" typref="2701647786" value="max_obj"/>
+<Integer_Literal tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:1:2:1" typref="2701647786" value="0"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:1:2:2" typref="2701647786" value="max_obj"/>
 </Binary_Exp>
 </Exp_Comparison>
 <Exp_Comparison op=":" initialTag="((partial_field) : (((((1) .. (max_field))) --&gt; (((((1) .. (partial_object))) +-&gt; (((min_val) .. (max_val))))))))">
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:2:1" typref="4044453162" value="partial_field"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:2:1" typref="4044453162" value="partial_field"/>
 <Binary_Exp op="--&gt;" typref="2175577561">
 <Binary_Exp op=".." typref="3603043417">
-<Integer_Literal tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:2:2:1:1" typref="2701647786" value="1"/>
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:2:2:1:2" typref="2701647786" value="max_field"/>
+<Integer_Literal tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:2:2:1:1" typref="2701647786" value="1"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:2:2:1:2" typref="2701647786" value="max_field"/>
 </Binary_Exp>
 <Binary_Exp op="+-&gt;" typref="3083833907">
 <Binary_Exp op=".." typref="3603043417">
-<Integer_Literal tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:2:2:2:1:1" typref="2701647786" value="1"/>
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:2:2:2:1:2" typref="2701647786" value="partial_object"/>
+<Integer_Literal tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:2:2:2:1:1" typref="2701647786" value="1"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:2:2:2:1:2" typref="2701647786" value="partial_object"/>
 </Binary_Exp>
 <Binary_Exp op=".." typref="3603043417">
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:2:2:2:2:1" typref="2701647786" value="min_val"/>
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:2:2:2:2:2" typref="2701647786" value="max_val"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:2:2:2:2:1" typref="2701647786" value="min_val"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:2:2:2:2:2" typref="2701647786" value="max_val"/>
 </Binary_Exp>
 </Binary_Exp>
 </Binary_Exp>
@@ -681,8 +679,8 @@
 </Binary_Pred>
 <Binary_Pred op="=&gt;">
 <Exp_Comparison op=":">
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:2:1:1:1" typref="2701647786" value="max_obj"/>
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:2:1:1:2" typref="3603043417" value="NAT1"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:2:1:1:1" typref="2701647786" value="max_obj"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:2:1:1:2" typref="3603043417" value="NAT1"/>
 </Exp_Comparison>
 <Nary_Pred op="&amp;">
 <Binary_Pred op="&amp;">
@@ -691,8 +689,8 @@
 </Binary_Pred>
 <Binary_Pred op="=&gt;">
 <Exp_Comparison op=":">
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:2:1:2:1" typref="2701647786" value="max_field"/>
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:2:1:2:2" typref="3603043417" value="NAT1"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:2:1:2:1" typref="2701647786" value="max_field"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:2:1:2:2" typref="3603043417" value="NAT1"/>
 </Exp_Comparison>
 <Nary_Pred op="&amp;">
 <Binary_Pred op="&amp;">
@@ -701,8 +699,8 @@
 </Binary_Pred>
 <Binary_Pred op="=&gt;">
 <Exp_Comparison op=":">
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:2:1:3:1" typref="2701647786" value="min_val"/>
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:2:1:3:2" typref="3603043417" value="NAT"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:2:1:3:1" typref="2701647786" value="min_val"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:2:1:3:2" typref="3603043417" value="NAT"/>
 </Exp_Comparison>
 <Nary_Pred op="&amp;">
 <Binary_Pred op="&amp;">
@@ -711,8 +709,8 @@
 </Binary_Pred>
 <Binary_Pred op="=&gt;">
 <Exp_Comparison op=":">
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:2:1:4:1" typref="2701647786" value="max_val"/>
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:2:1:4:2" typref="3603043417" value="NAT"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:2:1:4:1" typref="2701647786" value="max_val"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:2:1:4:2" typref="3603043417" value="NAT"/>
 </Exp_Comparison>
 <Nary_Pred op="&amp;">
 <Binary_Pred op="&amp;">
@@ -766,10 +764,10 @@
 </Binary_Pred>
 <Binary_Pred op="=&gt;">
 <Exp_Comparison op=":" initialTag="((partial_object) : (((0) .. (max_obj))))">
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:1:1" typref="2701647786" value="partial_object"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:1:1" typref="2701647786" value="partial_object"/>
 <Binary_Exp op=".." typref="3603043417">
-<Integer_Literal tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:1:2:1" typref="2701647786" value="0"/>
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:1:2:2" typref="2701647786" value="max_obj"/>
+<Integer_Literal tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:1:2:1" typref="2701647786" value="0"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:4:1:1:2:2" typref="2701647786" value="max_obj"/>
 </Binary_Exp>
 </Exp_Comparison>
 <Nary_Pred op="&amp;">
@@ -876,8 +874,8 @@
 <Definition name="ass"/>
 <Hypothesis>
 <Exp_Comparison op="/=">
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:1:2:1:1" typref="2701647786" value="partial_object"/>
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:1:2:1:2" typref="2701647786" value="max_obj"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:1:2:1:1" typref="2701647786" value="partial_object"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:1:2:1:2" typref="2701647786" value="max_obj"/>
 </Exp_Comparison>
 </Hypothesis>
 <Goal>
@@ -925,10 +923,10 @@
 </Binary_Pred>
 <Binary_Pred op="=&gt;">
 <Exp_Comparison op=":">
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:2:2:1:1:1" typref="2701647786" value="ii"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:2:2:1:1:1" typref="2701647786" value="ii"/>
 <Binary_Exp op=".." typref="3603043417">
-<Integer_Literal tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:2:2:1:1:2:1" typref="2701647786" value="1"/>
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:2:2:1:1:2:2" typref="2701647786" value="max_field"/>
+<Integer_Literal tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:2:2:1:1:2:1" typref="2701647786" value="1"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:2:2:1:1:2:2" typref="2701647786" value="max_field"/>
 </Binary_Exp>
 </Exp_Comparison>
 <Nary_Pred op="&amp;">
@@ -941,10 +939,10 @@
 </Binary_Pred>
 <Binary_Pred op="=&gt;">
 <Exp_Comparison op=":">
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:2:2:1:2:1" typref="2701647786" value="oo"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:2:2:1:2:1" typref="2701647786" value="oo"/>
 <Binary_Exp op=".." typref="3603043417">
-<Integer_Literal tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:2:2:1:2:2:1" typref="2701647786" value="1"/>
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:2:2:1:2:2:2" typref="2701647786" value="partial_object"/>
+<Integer_Literal tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:2:2:1:2:2:1" typref="2701647786" value="1"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:2:2:1:2:2:2" typref="2701647786" value="partial_object"/>
 </Binary_Exp>
 </Exp_Comparison>
 <Nary_Pred op="&amp;">
@@ -980,24 +978,24 @@
 <Hypothesis>
 <Nary_Pred op="&amp;">
 <Exp_Comparison op=":">
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:2:2:1:1:1" typref="2701647786" value="ii"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:2:2:1:1:1" typref="2701647786" value="ii"/>
 <Binary_Exp op=".." typref="3603043417">
-<Integer_Literal tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:2:2:1:1:2:1" typref="2701647786" value="1"/>
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:2:2:1:1:2:2" typref="2701647786" value="max_field"/>
+<Integer_Literal tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:2:2:1:1:2:1" typref="2701647786" value="1"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:2:2:1:1:2:2" typref="2701647786" value="max_field"/>
 </Binary_Exp>
 </Exp_Comparison>
 <Exp_Comparison op=":">
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:2:2:1:2:1" typref="2701647786" value="oo"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:2:2:1:2:1" typref="2701647786" value="oo"/>
 <Binary_Exp op=".." typref="3603043417">
-<Integer_Literal tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:2:2:1:2:2:1" typref="2701647786" value="1"/>
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:2:2:1:2:2:2" typref="2701647786" value="partial_object"/>
+<Integer_Literal tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:2:2:1:2:2:1" typref="2701647786" value="1"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:2:2:1:2:2:2" typref="2701647786" value="partial_object"/>
 </Binary_Exp>
 </Exp_Comparison>
 <Exp_Comparison op=":">
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:2:2:1:3:1" typref="2701647786" value="vv"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:2:2:1:3:1" typref="2701647786" value="vv"/>
 <Binary_Exp op=".." typref="3603043417">
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:2:2:1:3:2:1" typref="2701647786" value="min_val"/>
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:2:2:1:3:2:2" typref="2701647786" value="max_val"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:2:2:1:3:2:1" typref="2701647786" value="min_val"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:2:2:1:3:2:2" typref="2701647786" value="max_val"/>
 </Binary_Exp>
 </Exp_Comparison>
 </Nary_Pred>
@@ -1015,19 +1013,19 @@
 <Nary_Pred op="&amp;"/>
 <Nary_Pred op="&amp;"/>
 <Exp_Comparison op=":">
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:2:3:1:1:1:1:2" typref="2701647786" value="ii"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:2:3:1:1:1:1:2" typref="2701647786" value="ii"/>
 <Unary_Exp op="dom">
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:2:3:1:1:1:1:1" typref="4044453162" value="partial_field"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:2:3:1:1:1:1:1" typref="4044453162" value="partial_field"/>
 </Unary_Exp>
 </Exp_Comparison>
 <Exp_Comparison op=":">
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:2:3:1:1:1:1:1" typref="4044453162" value="partial_field"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:2:3:1:1:1:1:1" typref="4044453162" value="partial_field"/>
 <Binary_Exp op="+-&gt;">
 <Unary_Exp op="dom">
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:2:3:1:1:1:1:1" typref="4044453162" value="partial_field"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:2:3:1:1:1:1:1" typref="4044453162" value="partial_field"/>
 </Unary_Exp>
 <Unary_Exp op="ran">
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:2:3:1:1:1:1:1" typref="4044453162" value="partial_field"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:2:3:1:1:1:1:1" typref="4044453162" value="partial_field"/>
 </Unary_Exp>
 </Binary_Exp>
 </Exp_Comparison>
@@ -1069,10 +1067,10 @@
 </Binary_Pred>
 <Binary_Pred op="=&gt;">
 <Exp_Comparison op=":">
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:3:2:1:1:1" typref="2701647786" value="ii"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:3:2:1:1:1" typref="2701647786" value="ii"/>
 <Binary_Exp op=".." typref="3603043417">
-<Integer_Literal tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:3:2:1:1:2:1" typref="2701647786" value="1"/>
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:3:2:1:1:2:2" typref="2701647786" value="max_field"/>
+<Integer_Literal tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:3:2:1:1:2:1" typref="2701647786" value="1"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:3:2:1:1:2:2" typref="2701647786" value="max_field"/>
 </Binary_Exp>
 </Exp_Comparison>
 <Nary_Pred op="&amp;">
@@ -1106,17 +1104,17 @@
 <Hypothesis>
 <Nary_Pred op="&amp;">
 <Exp_Comparison op=":">
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:3:2:1:1:1" typref="2701647786" value="ii"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:3:2:1:1:1" typref="2701647786" value="ii"/>
 <Binary_Exp op=".." typref="3603043417">
-<Integer_Literal tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:3:2:1:1:2:1" typref="2701647786" value="1"/>
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:3:2:1:1:2:2" typref="2701647786" value="max_field"/>
+<Integer_Literal tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:3:2:1:1:2:1" typref="2701647786" value="1"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:3:2:1:1:2:2" typref="2701647786" value="max_field"/>
 </Binary_Exp>
 </Exp_Comparison>
 <Exp_Comparison op=":">
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:3:2:1:2:1" typref="2701647786" value="oo"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:3:2:1:2:1" typref="2701647786" value="oo"/>
 <Binary_Exp op=".." typref="3603043417">
-<Integer_Literal tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:3:2:1:2:2:1" typref="2701647786" value="1"/>
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:3:2:1:2:2:2" typref="2701647786" value="partial_object"/>
+<Integer_Literal tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:3:2:1:2:2:1" typref="2701647786" value="1"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:3:2:1:2:2:2" typref="2701647786" value="partial_object"/>
 </Binary_Exp>
 </Exp_Comparison>
 </Nary_Pred>
@@ -1135,19 +1133,19 @@
 <Nary_Pred op="&amp;"/>
 <Nary_Pred op="&amp;"/>
 <Exp_Comparison op=":">
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:3:3:1:2:1:2:2" typref="2701647786" value="ii"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:3:3:1:2:1:2:2" typref="2701647786" value="ii"/>
 <Unary_Exp op="dom">
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:3:3:1:2:1:2:1" typref="4044453162" value="partial_field"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:3:3:1:2:1:2:1" typref="4044453162" value="partial_field"/>
 </Unary_Exp>
 </Exp_Comparison>
 <Exp_Comparison op=":">
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:3:3:1:2:1:2:1" typref="4044453162" value="partial_field"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:3:3:1:2:1:2:1" typref="4044453162" value="partial_field"/>
 <Binary_Exp op="+-&gt;">
 <Unary_Exp op="dom">
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:3:3:1:2:1:2:1" typref="4044453162" value="partial_field"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:3:3:1:2:1:2:1" typref="4044453162" value="partial_field"/>
 </Unary_Exp>
 <Unary_Exp op="ran">
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:3:3:1:2:1:2:1" typref="4044453162" value="partial_field"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:3:3:1:2:1:2:1" typref="4044453162" value="partial_field"/>
 </Unary_Exp>
 </Binary_Exp>
 </Exp_Comparison>
@@ -1185,10 +1183,10 @@
 </Binary_Pred>
 <Binary_Pred op="=&gt;">
 <Exp_Comparison op=":">
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:4:3:1:1:1" typref="2701647786" value="ii"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:4:3:1:1:1" typref="2701647786" value="ii"/>
 <Binary_Exp op=".." typref="3603043417">
-<Integer_Literal tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:4:3:1:1:2:1" typref="2701647786" value="1"/>
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:4:3:1:1:2:2" typref="2701647786" value="max_field"/>
+<Integer_Literal tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:4:3:1:1:2:1" typref="2701647786" value="1"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:4:3:1:1:2:2" typref="2701647786" value="max_field"/>
 </Binary_Exp>
 </Exp_Comparison>
 <Nary_Pred op="&amp;">
@@ -1222,17 +1220,17 @@
 <Hypothesis>
 <Nary_Pred op="&amp;">
 <Exp_Comparison op=":">
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:4:3:1:1:1" typref="2701647786" value="ii"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:4:3:1:1:1" typref="2701647786" value="ii"/>
 <Binary_Exp op=".." typref="3603043417">
-<Integer_Literal tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:4:3:1:1:2:1" typref="2701647786" value="1"/>
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:4:3:1:1:2:2" typref="2701647786" value="max_field"/>
+<Integer_Literal tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:4:3:1:1:2:1" typref="2701647786" value="1"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:4:3:1:1:2:2" typref="2701647786" value="max_field"/>
 </Binary_Exp>
 </Exp_Comparison>
 <Exp_Comparison op=":">
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:4:3:1:2:1" typref="2701647786" value="oo"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:4:3:1:2:1" typref="2701647786" value="oo"/>
 <Binary_Exp op=".." typref="3603043417">
-<Integer_Literal tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:4:3:1:2:2:1" typref="2701647786" value="1"/>
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:4:3:1:2:2:2" typref="2701647786" value="partial_object"/>
+<Integer_Literal tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:4:3:1:2:2:1" typref="2701647786" value="1"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:4:3:1:2:2:2" typref="2701647786" value="partial_object"/>
 </Binary_Exp>
 </Exp_Comparison>
 </Nary_Pred>
@@ -1247,19 +1245,19 @@
 <Nary_Pred op="&amp;"/>
 <Nary_Pred op="&amp;"/>
 <Exp_Comparison op=":">
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:4:4:1:2:1:1:2:1:2" typref="2701647786" value="ii"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:4:4:1:2:1:1:2:1:2" typref="2701647786" value="ii"/>
 <Unary_Exp op="dom">
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:4:4:1:2:1:1:2:1:1" typref="4044453162" value="partial_field"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:4:4:1:2:1:1:2:1:1" typref="4044453162" value="partial_field"/>
 </Unary_Exp>
 </Exp_Comparison>
 <Exp_Comparison op=":">
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:4:4:1:2:1:1:2:1:1" typref="4044453162" value="partial_field"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:4:4:1:2:1:1:2:1:1" typref="4044453162" value="partial_field"/>
 <Binary_Exp op="+-&gt;">
 <Unary_Exp op="dom">
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:4:4:1:2:1:1:2:1:1" typref="4044453162" value="partial_field"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:4:4:1:2:1:1:2:1:1" typref="4044453162" value="partial_field"/>
 </Unary_Exp>
 <Unary_Exp op="ran">
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:4:4:1:2:1:1:2:1:1" typref="4044453162" value="partial_field"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:4:4:1:2:1:1:2:1:1" typref="4044453162" value="partial_field"/>
 </Unary_Exp>
 </Binary_Exp>
 </Exp_Comparison>
@@ -1295,36 +1293,19 @@
 </Binary_Pred>
 <Binary_Pred op="=&gt;">
 <Exp_Comparison op=":">
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:5:3:1:1:1" typref="2701647786" value="ii"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:5:3:1:1:1" typref="2701647786" value="ii"/>
 <Binary_Exp op=".." typref="3603043417">
-<Integer_Literal tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:5:3:1:1:2:1" typref="2701647786" value="1"/>
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:5:3:1:1:2:2" typref="2701647786" value="max_field"/>
+<Integer_Literal tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:5:3:1:1:2:1" typref="2701647786" value="1"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:5:3:1:1:2:2" typref="2701647786" value="max_field"/>
 </Binary_Exp>
 </Exp_Comparison>
 <Nary_Pred op="&amp;">
 <Binary_Pred op="&amp;">
 <Nary_Pred op="&amp;"/>
-<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
 <Nary_Pred op="&amp;"/>
 <Nary_Pred op="&amp;"/>
-<Exp_Comparison op=":">
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:5:3:1:2:2:1:2" typref="2701647786" value="ii"/>
-<Unary_Exp op="dom">
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:5:3:1:2:2:1:1" typref="4044453162" value="partial_field"/>
-</Unary_Exp>
-</Exp_Comparison>
-<Exp_Comparison op=":">
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:5:3:1:2:2:1:1" typref="4044453162" value="partial_field"/>
-<Binary_Exp op="+-&gt;">
-<Unary_Exp op="dom">
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:5:3:1:2:2:1:1" typref="4044453162" value="partial_field"/>
-</Unary_Exp>
-<Unary_Exp op="ran">
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:5:3:1:2:2:1:1" typref="4044453162" value="partial_field"/>
-</Unary_Exp>
-</Binary_Exp>
-</Exp_Comparison>
-</Nary_Pred>
+</Binary_Pred>
 </Binary_Pred>
 </Nary_Pred>
 </Binary_Pred>
@@ -1349,20 +1330,18 @@
 <Hypothesis>
 <Nary_Pred op="&amp;">
 <Exp_Comparison op=":">
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:5:3:1:1:1" typref="2701647786" value="ii"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:5:3:1:1:1" typref="2701647786" value="ii"/>
 <Binary_Exp op=".." typref="3603043417">
-<Integer_Literal tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:5:3:1:1:2:1" typref="2701647786" value="1"/>
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:5:3:1:1:2:2" typref="2701647786" value="max_field"/>
+<Integer_Literal tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:5:3:1:1:2:1" typref="2701647786" value="1"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:5:3:1:1:2:2" typref="2701647786" value="max_field"/>
 </Binary_Exp>
 </Exp_Comparison>
 <Exp_Comparison op=":">
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:5:3:1:2:1" typref="2701647786" value="oo"/>
-<Unary_Exp op="dom" typref="3603043417">
-<Binary_Exp op="(" typref="103245008">
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:5:3:1:2:2:1:1" typref="4044453162" value="partial_field"/>
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:5:3:1:2:2:1:2" typref="2701647786" value="ii"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:5:3:1:2:1" typref="2701647786" value="oo"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:5:3:1:2:2:1" typref="2701647786" value="1"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:5:3:1:2:2:2" typref="2701647786" value="partial_object"/>
 </Binary_Exp>
-</Unary_Exp>
 </Exp_Comparison>
 </Nary_Pred>
 </Hypothesis>
@@ -1375,49 +1354,49 @@
 <Nary_Pred op="&amp;"/>
 <Nary_Pred op="&amp;"/>
 <Exp_Comparison op=":">
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:5:4:1:2:1:1:2" typref="2701647786" value="ii"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:5:4:1:2:1:1:2" typref="2701647786" value="ii"/>
 <Unary_Exp op="dom">
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:5:4:1:2:1:1:1" typref="4044453162" value="partial_field"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:5:4:1:2:1:1:1" typref="4044453162" value="partial_field"/>
 </Unary_Exp>
 </Exp_Comparison>
 <Exp_Comparison op=":">
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:5:4:1:2:1:1:1" typref="4044453162" value="partial_field"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:5:4:1:2:1:1:1" typref="4044453162" value="partial_field"/>
 <Binary_Exp op="+-&gt;">
 <Unary_Exp op="dom">
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:5:4:1:2:1:1:1" typref="4044453162" value="partial_field"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:5:4:1:2:1:1:1" typref="4044453162" value="partial_field"/>
 </Unary_Exp>
 <Unary_Exp op="ran">
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:5:4:1:2:1:1:1" typref="4044453162" value="partial_field"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:5:4:1:2:1:1:1" typref="4044453162" value="partial_field"/>
 </Unary_Exp>
 </Binary_Exp>
 </Exp_Comparison>
 </Nary_Pred>
 <Nary_Pred op="&amp;"/>
 <Exp_Comparison op=":">
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:5:4:1:2:1:2" typref="2701647786" value="oo"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:5:4:1:2:1:2" typref="2701647786" value="oo"/>
 <Unary_Exp op="dom">
 <Binary_Exp op="(" typref="103245008">
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:5:4:1:2:1:1:1" typref="4044453162" value="partial_field"/>
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:5:4:1:2:1:1:2" typref="2701647786" value="ii"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:5:4:1:2:1:1:1" typref="4044453162" value="partial_field"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:5:4:1:2:1:1:2" typref="2701647786" value="ii"/>
 </Binary_Exp>
 </Unary_Exp>
 </Exp_Comparison>
 <Exp_Comparison op=":">
 <Binary_Exp op="(" typref="103245008">
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:5:4:1:2:1:1:1" typref="4044453162" value="partial_field"/>
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:5:4:1:2:1:1:2" typref="2701647786" value="ii"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:5:4:1:2:1:1:1" typref="4044453162" value="partial_field"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:5:4:1:2:1:1:2" typref="2701647786" value="ii"/>
 </Binary_Exp>
 <Binary_Exp op="+-&gt;">
 <Unary_Exp op="dom">
 <Binary_Exp op="(" typref="103245008">
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:5:4:1:2:1:1:1" typref="4044453162" value="partial_field"/>
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:5:4:1:2:1:1:2" typref="2701647786" value="ii"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:5:4:1:2:1:1:1" typref="4044453162" value="partial_field"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:5:4:1:2:1:1:2" typref="2701647786" value="ii"/>
 </Binary_Exp>
 </Unary_Exp>
 <Unary_Exp op="ran">
 <Binary_Exp op="(" typref="103245008">
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:5:4:1:2:1:1:1" typref="4044453162" value="partial_field"/>
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:5:4:1:2:1:1:2" typref="2701647786" value="ii"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:5:4:1:2:1:1:1" typref="4044453162" value="partial_field"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:6:5:4:1:2:1:1:2" typref="2701647786" value="ii"/>
 </Binary_Exp>
 </Unary_Exp>
 </Binary_Exp>
@@ -1471,21 +1450,21 @@
 </Proof_Obligation>
 <TypeInfos>
 <Type id="2701647786">
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:7:1:1" value="INTEGER"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:7:1:1" value="INTEGER"/>
 </Type>
 <Type id="3603043417">
 <Unary_Exp op="POW">
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:7:2:1:1" value="INTEGER"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:7:2:1:1" value="INTEGER"/>
 </Unary_Exp>
 </Type>
 <Type id="4044453162">
 <Unary_Exp op="POW">
 <Binary_Exp op="*">
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:7:3:1:1:1" value="INTEGER"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:7:3:1:1:1" value="INTEGER"/>
 <Unary_Exp op="POW">
 <Binary_Exp op="*">
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:7:3:1:1:2:1:1" value="INTEGER"/>
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:7:3:1:1:2:1:2" value="INTEGER"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:7:3:1:1:2:1:1" value="INTEGER"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:7:3:1:1:2:1:2" value="INTEGER"/>
 </Binary_Exp>
 </Unary_Exp>
 </Binary_Exp>
@@ -1495,11 +1474,11 @@
 <Unary_Exp op="POW">
 <Unary_Exp op="POW">
 <Binary_Exp op="*">
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:7:4:1:1:1:1" value="INTEGER"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:7:4:1:1:1:1" value="INTEGER"/>
 <Unary_Exp op="POW">
 <Binary_Exp op="*">
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:7:4:1:1:1:2:1:1" value="INTEGER"/>
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:7:4:1:1:1:2:1:2" value="INTEGER"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:7:4:1:1:1:2:1:1" value="INTEGER"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:7:4:1:1:1:2:1:2" value="INTEGER"/>
 </Binary_Exp>
 </Unary_Exp>
 </Binary_Exp>
@@ -1510,27 +1489,27 @@
 <Unary_Exp op="POW">
 <Unary_Exp op="POW">
 <Binary_Exp op="*">
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:7:5:1:1:1:1" value="INTEGER"/>
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:7:5:1:1:1:2" value="INTEGER"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:7:5:1:1:1:1" value="INTEGER"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:7:5:1:1:1:2" value="INTEGER"/>
 </Binary_Exp>
 </Unary_Exp>
 </Unary_Exp>
 </Type>
 <Type id="3817003670">
 <Unary_Exp op="POW">
-<Generic_Type tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:7:6:1:1"/>
+<Generic_Type tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:7:6:1:1"/>
 </Unary_Exp>
 </Type>
 <Type id="103245008">
 <Unary_Exp op="POW">
 <Binary_Exp op="*">
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:7:7:1:1:1" value="INTEGER"/>
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:7:7:1:1:2" value="INTEGER"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:7:7:1:1:1" value="INTEGER"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:7:7:1:1:2" value="INTEGER"/>
 </Binary_Exp>
 </Unary_Exp>
 </Type>
 <Type id="2043437594">
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:7:8:1" value="BOOL"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT.bxml:1:7:8:1" value="BOOL"/>
 </Type>
 </TypeInfos>
 </Proof_Obligations>

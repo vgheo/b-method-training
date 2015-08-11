@@ -23,6 +23,7 @@ OPERATIONS
     */
     vv <-- val_file ( oo , ii ) =
     PRE
+        oo : NAT & /*concrete typing*/
         oo : dom ( file ) &
         ii : FIELD
     THEN
@@ -34,6 +35,7 @@ OPERATIONS
     */
     mod_file ( oo , ii , vv ) =
     PRE
+         oo : NAT & /*concrete typing*/
         oo : dom ( file ) &
         ii : FIELD &
         vv : VALUE
@@ -46,7 +48,7 @@ OPERATIONS
         vv : VALUE &
         size ( file ) < max_rec
     THEN
-        file := file <- ( FIELD * { vv } ) || // /INDEX in page 613, probably typo
+        file := file <- ( FIELD * { vv } ) || /* /INDEX in page 613, probably typo*/
         oo := size ( file ) + 1
     END ;
     /*returns the size of file*/

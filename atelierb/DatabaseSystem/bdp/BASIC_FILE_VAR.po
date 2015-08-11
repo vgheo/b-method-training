@@ -1,8 +1,8 @@
 THEORY ProofList IS
 _f(1) & _f(2) & _f(11) & WellDefinedness_SIZE_FILE.1,(_f(27) => _f(28));
 _f(1) & _f(2) & _f(11) & _f(17) & WellDefinedness_NEW_RECORD.1,(_f(27) => _f(28));
-_f(1) & _f(2) & _f(11) & WellDefinedness_Precondition_NEW_RECORD.1,(_f(30) & _f(27) => _f(28));
-_f(1) & _f(2) & _f(11) & _f(12) & WellDefinedness_READ_FILE.1,(_f(27) => _f(29));
+_f(1) & _f(2) & _f(11) & WellDefinedness_Precondition_NEW_RECORD.1,(_f(31) & _f(27) => _f(28));
+_f(1) & _f(2) & _f(11) & _f(12) & WellDefinedness_READ_FILE.1,(_f(27) => _f(30));
 _f(1) & _f(2) & WellDefinednessInvariant.1,(_f(24) & _f(25) & _f(26) & _f(22) & _f(23) & _f(27) => _f(28));
 _f(1) & _f(2) & _f(11) & RESET_FILE.2,(_f(6) & _f(9) => _f(10));
 _f(1) & _f(2) & _f(11) & RESET_FILE.1,(_f(6) & _f(7) => _f(8));
@@ -27,7 +27,7 @@ dom(buf_vrb$1) = INDEX;
 "Check invariant (size(file_vrb) +1 <= max_rec)";
 (size({}) +1 <= max_rec);
 buf_vrb : INDEX +-> VALUE & dom(buf_vrb) = INDEX & ((buf_vrb) : (((INDEX) --> (VALUE)))) & file_vrb : NATURAL-{0} +-> ((INDEX) --> (VALUE)) & ((file_vrb) : (seq(((INDEX) --> (VALUE))))) & (size(file_vrb) +1 <= max_rec);
-((ii) : (dom(file_vrb)));
+((ii) : (NAT)) & ((ii) : (dom(file_vrb)));
 "Check invariant ((buf_vrb) : (((INDEX) --> (VALUE))))";
 (((file_vrb )(ii)) : (((INDEX) --> (VALUE))));
 ((((file_vrb) <+ ({((ii) |-> (buf_vrb))}))) : (seq(((INDEX) --> (VALUE)))));
@@ -44,6 +44,7 @@ dom(buf_vrb) = INDEX;
 ((buf_vrb) : (((INDEX) --> (VALUE))));
 "Well definedness";
 ((file_vrb) : (seq(ran(file_vrb))));
+((ii) : (NAT));
 ((file_vrb) : (((dom(file_vrb)) +-> (ran(file_vrb)))));
 ((vv) : (VALUE))
 END

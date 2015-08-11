@@ -1,23 +1,26 @@
 THEORY ProofList IS
-_f(1) & _f(2) & _f(3) & _f(10) & _f(11) & _f(44) & WellDefinedness_val_buffer.3,(_f(36) => _f(46));
-_f(1) & _f(2) & _f(3) & _f(10) & _f(11) & _f(44) & WellDefinedness_val_buffer.2,(_f(36) => _f(45));
-_f(1) & _f(2) & _f(3) & _f(10) & _f(11) & _f(44) & WellDefinedness_val_buffer.1,(_f(36) => _f(42));
-_f(1) & _f(2) & _f(3) & _f(10) & _f(11) & WellDefinedness_size_file.1,(_f(36) => _f(40));
-_f(1) & _f(2) & _f(3) & _f(10) & _f(11) & _f(41) & WellDefinedness_mod_buffer.1,(_f(36) => _f(42));
-_f(1) & _f(2) & _f(3) & _f(10) & _f(11) & _f(39) & WellDefinedness_create_record.1,(_f(36) => _f(40));
-_f(1) & _f(2) & _f(3) & _f(10) & _f(11) & _f(16) & WellDefinedness_load_buffer.4,(_f(18) & _f(36) => _f(38));
-_f(1) & _f(2) & _f(3) & _f(10) & _f(11) & _f(16) & WellDefinedness_load_buffer.3,(_f(18) & _f(36) => _f(19));
-_f(1) & _f(2) & _f(3) & _f(10) & _f(11) & _f(16) & WellDefinedness_load_buffer.2,(_f(17) & _f(36) => _f(37));
-_f(1) & _f(2) & _f(3) & _f(10) & _f(11) & _f(16) & WellDefinedness_load_buffer.1,(_f(17) & _f(36) => _f(22));
-_f(1) & _f(2) & _f(3) & _f(10) & _f(11) & load_buffer.3,(_f(19) & _f(20) & _f(18) & _f(23) & _f(26) => _f(27));
-_f(1) & _f(2) & _f(3) & _f(10) & _f(11) & load_buffer.2,(_f(19) & _f(20) & _f(17) & _f(23) & _f(24) => _f(25));
-_f(1) & _f(2) & _f(3) & _f(10) & _f(11) & load_buffer.1,(_f(19) & _f(20) & _f(17) & _f(21) => _f(22))
+_f(1) & _f(2) & _f(3) & _f(13) & _f(14) & _f(49) & WellDefinedness_val_buffer.3,(_f(41) => _f(51));
+_f(1) & _f(2) & _f(3) & _f(13) & _f(14) & _f(49) & WellDefinedness_val_buffer.2,(_f(41) => _f(50));
+_f(1) & _f(2) & _f(3) & _f(13) & _f(14) & _f(49) & WellDefinedness_val_buffer.1,(_f(41) => _f(47));
+_f(1) & _f(2) & _f(3) & _f(13) & _f(14) & WellDefinedness_size_file.1,(_f(41) => _f(45));
+_f(1) & _f(2) & _f(3) & _f(13) & _f(14) & _f(46) & WellDefinedness_mod_buffer.1,(_f(41) => _f(47));
+_f(1) & _f(2) & _f(3) & _f(13) & _f(14) & _f(44) & WellDefinedness_create_record.1,(_f(41) => _f(45));
+_f(1) & _f(2) & _f(3) & _f(13) & _f(14) & _f(19) & WellDefinedness_load_buffer.4,(_f(21) & _f(41) => _f(43));
+_f(1) & _f(2) & _f(3) & _f(13) & _f(14) & _f(19) & WellDefinedness_load_buffer.3,(_f(21) & _f(41) => _f(23));
+_f(1) & _f(2) & _f(3) & _f(13) & _f(14) & _f(19) & WellDefinedness_load_buffer.2,(_f(20) & _f(41) => _f(42));
+_f(1) & _f(2) & _f(3) & _f(13) & _f(14) & _f(19) & WellDefinedness_load_buffer.1,(_f(20) & _f(41) => _f(26));
+_f(1) & _f(2) & _f(3) & _f(13) & _f(14) & load_buffer.3,(_f(22) & _f(23) & _f(24) & _f(21) & _f(27) & _f(30) => _f(31));
+_f(1) & _f(2) & _f(3) & _f(13) & _f(14) & load_buffer.2,(_f(22) & _f(23) & _f(24) & _f(20) & _f(27) & _f(28) => _f(29));
+_f(1) & _f(2) & _f(3) & _f(13) & _f(14) & load_buffer.1,(_f(22) & _f(23) & _f(24) & _f(20) & _f(25) => _f(26))
 END
 &
 THEORY Formulas IS
 ((NAT) = (((0) .. (2147483647)))) & ((INT) = (((-2147483647) .. (2147483647))));
 FIELD: FIN(INTEGER) & not(FIELD = {}) & VALUE: FIN(INTEGER) & not(VALUE = {}) & ((max_rec) : ((NAT-{0})));
-bfile$1 : NATURAL-{0} +-> ((FIELD) --> (VALUE)) & ((bfile$1) : (seq(((FIELD) --> (VALUE))))) & ((buffer$1) : (((dom(bfile$1)) +-> (((FIELD) --> (VALUE)))))) & ((updated$1) : (BOOL)) & ((((updated$1) = (FALSE))) => (buffer$1 : POW( bfile$1))) & ((((updated$1) = (TRUE))) => (not(buffer$1 = {})));
+bfile$1 : (NAT-{0}) +-> ((FIELD) --> (VALUE)) & dom(bfile$1) = (NAT-{0}) & ((bfile$1) : ((((NAT-{0})) --> (((FIELD) --> (VALUE)))))) & bfile$1 : NATURAL-{0} +-> ((FIELD) --> (VALUE)) & ((bfile$1) : (seq(((FIELD) --> (VALUE))))) & buffer$1 : (NAT-{0}) +-> ((FIELD) --> (VALUE)) & dom(buffer$1) = (NAT-{0}) & ((buffer$1) : ((((NAT-{0})) --> (((FIELD) --> (VALUE)))))) & ((buffer$1) : (((dom(bfile$1)) +-> (((FIELD) --> (VALUE)))))) & ((updated$1) : (BOOL)) & ((((updated$1) = (FALSE))) => (buffer$1 : POW( bfile$1))) & ((((updated$1) = (TRUE))) => (not(buffer$1 = {})));
+{} : (NAT-{0}) +-> ((FIELD) --> (VALUE));
+dom({}) = (NAT-{0});
+(({}) : ((((NAT-{0})) --> (((FIELD) --> (VALUE))))));
 {} : NATURAL-{0} +-> ((FIELD) --> (VALUE));
 (({}) : (seq(((FIELD) --> (VALUE)))));
 (({}) : (((dom({})) +-> (((FIELD) --> (VALUE))))));
@@ -30,9 +33,10 @@ bfile : NATURAL-{0} +-> ((FIELD) --> (VALUE)) & ((bfile) : (seq(((FIELD) --> (VA
 ((oo$1) = (oo));
 ((vv) : (VALUE));
 not(size(bfile$1) = max_rec);
-((oo) : (dom(bfile))) & not(oo : dom(buffer));
+((oo) : (NAT)) & ((oo) : (dom(bfile))) & not(oo : dom(buffer));
 ((updated$1) = (TRUE));
 not(((updated$1) = (TRUE)));
+((oo) : (NAT));
 ((oo) : (dom(bfile$1)));
 not(oo : dom(buffer$1));
 "Precondition predicate";
@@ -43,22 +47,23 @@ not(oo : dom(buffer$1));
 "Check invariant ((bfile) = (bfile$1))";
 ((((bfile$1) <+ (buffer$1))) = (bfile$1));
 ((vv$1) = (vv));
-((oo) : (((1) .. (size(bfile)))));
+((oo) : ((NAT-{0}))) & ((oo) : (((1) .. (size(bfile)))));
+((oo) : ((NAT-{0})));
 ((oo) : (((1) .. (size(bfile$1)))));
-((oo) : (dom(buffer))) & ((ii) : (FIELD)) & ((vv) : (VALUE));
+((oo) : (NAT)) & ((oo) : (dom(buffer))) & ((ii) : (FIELD)) & ((vv) : (VALUE));
 ((oo) : (dom(buffer$1)));
 ((ii) : (FIELD));
-((oo) : (dom(buffer))) & ((ii) : (FIELD));
+((oo) : (NAT)) & ((oo) : (dom(buffer))) & ((ii) : (FIELD));
 ((bfile) = (bfile$1));
 "Well definedness";
 ((((bfile$1) <+ (buffer$1))) : (((dom(((bfile$1) <+ (buffer$1)))) +-> (ran(((bfile$1) <+ (buffer$1)))))));
 ((bfile$1) : (((dom(bfile$1)) +-> (ran(bfile$1)))));
 ((vv) : (VALUE)) & not(size(bfile) = max_rec) & ((vv) : (VALUE)) & not(size(bfile$1) = max_rec);
 ((bfile$1) : (seq(ran(bfile$1))));
-((oo) : (dom(buffer))) & ((ii) : (FIELD)) & ((vv) : (VALUE)) & ((oo) : (dom(buffer$1))) & ((ii) : (FIELD)) & ((vv) : (VALUE));
+((oo) : (NAT)) & ((oo) : (dom(buffer))) & ((ii) : (FIELD)) & ((vv) : (VALUE)) & ((oo) : (NAT)) & ((oo) : (dom(buffer$1))) & ((ii) : (FIELD)) & ((vv) : (VALUE));
 ((buffer$1) : (((dom(buffer$1)) +-> (ran(buffer$1)))));
-((oo) : (((1) .. (size(bfile))))) & ((oo) : (((1) .. (size(bfile$1)))));
-((oo) : (dom(buffer))) & ((ii) : (FIELD)) & ((oo) : (dom(buffer$1))) & ((ii) : (FIELD));
+((oo) : ((NAT-{0}))) & ((oo) : (((1) .. (size(bfile))))) & ((oo) : ((NAT-{0}))) & ((oo) : (((1) .. (size(bfile$1)))));
+((oo) : (NAT)) & ((oo) : (dom(buffer))) & ((ii) : (FIELD)) & ((oo) : (NAT)) & ((oo) : (dom(buffer$1))) & ((ii) : (FIELD));
 ((ii) : (dom((buffer$1 )(oo))));
 (((buffer$1 )(oo)) : (((dom((buffer$1 )(oo))) +-> (ran((buffer$1 )(oo))))))
 END
