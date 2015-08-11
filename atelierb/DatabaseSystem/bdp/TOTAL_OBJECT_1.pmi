@@ -1,77 +1,68 @@
 ﻿THEORY BalanceX IS
-  TOTAL_OBJECT_1,22,0,0,15,0,0,0;
-  Initialisation,1,0,0,1,0,0,0;
-  WellDefinednessInvariant,4,0,0,4,0,0,0;
+  TOTAL_OBJECT_1,22,10,0,0,0,0,0;
+  Initialisation,1,1,0,0,0,0,0;
+  WellDefinednessInvariant,4,4,0,0,0,0,0;
   WellDefinedness_create_total_object,2,0,0,0,0,0,0;
-  WellDefinedness_mod_field,2,0,0,1,0,0,0;
+  WellDefinedness_mod_field,2,1,0,0,0,0,0;
   WellDefinedness_nbr_object,1,0,0,0,0,0,0;
-  WellDefinedness_val_field,4,0,0,3,0,0,0;
-  create_total_object,3,0,0,2,0,0,0;
-  mod_field,2,0,0,1,0,0,0;
-  nbr_object,1,0,0,1,0,0,0;
-  val_field,2,0,0,2,0,0,0
+  WellDefinedness_val_field,4,3,0,0,0,0,0;
+  create_total_object,3,0,0,0,0,0,0;
+  mod_field,2,0,0,0,0,0,0;
+  nbr_object,1,1,0,0,0,0,0;
+  val_field,2,0,0,0,0,0,0
 END
 &
 THEORY ProofState IS
   Unproved;
-  Proved(0);
-  Proved(0);
-  Proved(0);
+  Proved(Util);
+  Proved(Util);
+  Proved(Util);
   Unproved;
-  Proved(0);
+  Proved(Util);
   Unproved;
   Unproved;
   Unproved;
-  Proved(0);
-  Proved(0);
-  Proved(0);
-  Proved(0);
-  Proved(0);
-  Proved(0);
-  Proved(0);
+  Proved(Util);
+  Proved(Util);
+  Proved(Util);
+  Proved(Util);
+  Proved(Util);
   Unproved;
-  Proved(0);
-  Proved(0);
   Unproved;
-  Proved(0);
-  Proved(0)
+  Unproved;
+  Unproved;
+  Unproved;
+  Unproved;
+  Unproved;
+  Proved(Util)
 END
 &
 THEORY MethodList IS
+  mp & pr & pr & pr;
+  mp;
+  mp;
+  mp;
   ?;
-  pr;
-  pr;
-  pr;
-  ?;
-  pr;
+  mp;
   ?;
   ?;
+  mp & pr & pr & pr;
+  mp;
+  mp;
+  mp;
+  mp;
+  mp & pr;
   ?;
-  pr;
-  pr;
-  pr;
-  pr;
-  pr;
-  pr;
-  pr;
   ?;
-  pr;
-  pr;
   ?;
-  pr;
-  pr
+  ?;
+  ?;
+  ?;
+  ?;
+  mp
 END
 &
 THEORY PassList IS
-  Force(0),(?;0);
-  Force(0),?;
-  Force(0),?;
-  Force(0),?;
-  Force(0),(?;0);
-  Force(0),?;
-  Force(0),(?;0);
-  Force(0),(?;0);
-  Force(0),(?;0);
   Force(0),?;
   Force(0),?;
   Force(0),?;
@@ -79,10 +70,19 @@ THEORY PassList IS
   Force(0),?;
   Force(0),?;
   Force(0),?;
-  Force(0),(?;0);
   Force(0),?;
   Force(0),?;
-  Force(0),(?;0);
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
   Force(0),?;
   Force(0),?
 END

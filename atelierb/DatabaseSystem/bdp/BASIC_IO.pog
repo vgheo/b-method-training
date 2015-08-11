@@ -1,14 +1,14 @@
 <Proof_Obligations>
-<Define merge="=" name="B definitions">
+<Define name="B definitions">
 <Nary_Pred op="&amp;" translate="((NAT) = (((0) .. (2147483647)))) &amp; ((INT) = (((-2147483647) .. (2147483647))))">
-<Exp_Comparison op="=">
+<Exp_Comparison op="=" translate="((NAT) = (((0) .. (2147483647))))">
 <Id value="NAT"/>
 <Binary_Exp op="..">
 <Integer_Literal value="0"/>
 <Id value="MAXINT"/>
 </Binary_Exp>
 </Exp_Comparison>
-<Exp_Comparison op="=">
+<Exp_Comparison op="=" translate="((INT) = (((-2147483647) .. (2147483647))))">
 <Id value="INT"/>
 <Binary_Exp op="..">
 <Id value="MININT"/>
@@ -17,15 +17,15 @@
 </Exp_Comparison>
 </Nary_Pred>
 </Define>
-<Define merge="=" name="ctx"/>
-<Define merge="=" name="seext"/>
-<Define merge="=" name="inv"/>
-<Define merge="=" name="ass"/>
-<Define merge="=" name="lprp"/>
-<Define merge="=" name="inprp"/>
-<Define merge="=" name="inext"/>
-<Define merge="=" name="cst"/>
-<Proof_Obligation merge="=">
+<Define name="ctx"/>
+<Define name="seext"/>
+<Define name="inv"/>
+<Define name="ass"/>
+<Define name="lprp"/>
+<Define name="inprp"/>
+<Define name="inext"/>
+<Define name="cst"/>
+<Proof_Obligation>
 <Comment>Initialisation dans une machine abstraite</Comment>
 <Tag>Initialisation</Tag>
 <Tag>Invariant</Tag>
@@ -40,7 +40,7 @@
 <Nary_Pred op="&amp;"/>
 </Local_Hyp>
 </Proof_Obligation>
-<Proof_Obligation merge="=">
+<Proof_Obligation>
 <Comment>Operations dans une machine abstraite</Comment>
 <Tag>INTERVAL_READ</Tag>
 <Tag>INVARIANT</Tag>
@@ -56,16 +56,16 @@
 <Hypothesis>
 <Nary_Pred op="&amp;">
 <Exp_Comparison op=":">
-<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:1:3:1:1:1" typref="2701647786" value="aa"/>
-<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:1:3:1:1:2" typref="3603043417" value="INT"/>
+<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:1:3:1:1:1" typref="2701647786" value="aa"/>
+<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:1:3:1:1:2" typref="3603043417" value="INT"/>
 </Exp_Comparison>
 <Exp_Comparison op=":">
-<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:1:3:1:2:1" typref="2701647786" value="bb"/>
-<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:1:3:1:2:2" typref="3603043417" value="INT"/>
+<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:1:3:1:2:1" typref="2701647786" value="bb"/>
+<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:1:3:1:2:2" typref="3603043417" value="INT"/>
 </Exp_Comparison>
 <Exp_Comparison op="&lt;=">
-<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:1:3:1:3:1" typref="2701647786" value="aa"/>
-<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:1:3:1:3:2" typref="2701647786" value="bb"/>
+<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:1:3:1:3:1" typref="2701647786" value="aa"/>
+<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:1:3:1:3:2" typref="2701647786" value="bb"/>
 </Exp_Comparison>
 </Nary_Pred>
 </Hypothesis>
@@ -74,15 +74,15 @@
 </Local_Hyp>
 <Local_Hyp num="2">
 <Exp_Comparison op=":">
-<Id suffix="1" tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:1:4:1:1:1,A:\b-method-training\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:1:4:1:1:1,A:\b-method-training\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:1:4:1:1:1" typref="2701647786" value="nn"/>
+<Id suffix="1" tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:1:4:1:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:1:4:1:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:1:4:1:1:1" typref="2701647786" value="nn"/>
 <Binary_Exp op=".." typref="3603043417">
-<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:1:4:1:2:1:1" typref="2701647786" value="aa"/>
-<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:1:4:1:2:1:2" typref="2701647786" value="bb"/>
+<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:1:4:1:2:1:1" typref="2701647786" value="aa"/>
+<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:1:4:1:2:1:2" typref="2701647786" value="bb"/>
 </Binary_Exp>
 </Exp_Comparison>
 </Local_Hyp>
 </Proof_Obligation>
-<Proof_Obligation merge="=">
+<Proof_Obligation>
 <Comment>Operations dans une machine abstraite</Comment>
 <Tag>INT_WRITE</Tag>
 <Tag>INVARIANT</Tag>
@@ -97,15 +97,15 @@
 <Definition name="ass"/>
 <Hypothesis>
 <Exp_Comparison op=":">
-<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:2:2:1:1" typref="2701647786" value="nn"/>
-<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:2:2:1:2" typref="3603043417" value="INT"/>
+<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:2:2:1:1" typref="2701647786" value="nn"/>
+<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:2:2:1:2" typref="3603043417" value="INT"/>
 </Exp_Comparison>
 </Hypothesis>
 <Local_Hyp num="1">
 <Nary_Pred op="&amp;"/>
 </Local_Hyp>
 </Proof_Obligation>
-<Proof_Obligation merge="=">
+<Proof_Obligation>
 <Comment>Operations dans une machine abstraite</Comment>
 <Tag>BOOL_READ</Tag>
 <Tag>INVARIANT</Tag>
@@ -124,12 +124,12 @@
 </Local_Hyp>
 <Local_Hyp num="2">
 <Exp_Comparison op=":">
-<Id suffix="1" tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:3:2:1:1:1,A:\b-method-training\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:3:2:1:1:1,A:\b-method-training\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:3:2:1:1:1" typref="2043437594" value="bb"/>
-<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:3:2:1:2:1" typref="4282494527" value="BOOL"/>
+<Id suffix="1" tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:3:2:1:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:3:2:1:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:3:2:1:1:1" typref="2043437594" value="bb"/>
+<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:3:2:1:2:1" typref="4282494527" value="BOOL"/>
 </Exp_Comparison>
 </Local_Hyp>
 </Proof_Obligation>
-<Proof_Obligation merge="=">
+<Proof_Obligation>
 <Comment>Operations dans une machine abstraite</Comment>
 <Tag>BOOL_WRITE</Tag>
 <Tag>INVARIANT</Tag>
@@ -144,15 +144,15 @@
 <Definition name="ass"/>
 <Hypothesis>
 <Exp_Comparison op=":">
-<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:4:2:1:1" typref="2043437594" value="bb"/>
-<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:4:2:1:2" typref="4282494527" value="BOOL"/>
+<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:4:2:1:1" typref="2043437594" value="bb"/>
+<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:4:2:1:2" typref="4282494527" value="BOOL"/>
 </Exp_Comparison>
 </Hypothesis>
 <Local_Hyp num="1">
 <Nary_Pred op="&amp;"/>
 </Local_Hyp>
 </Proof_Obligation>
-<Proof_Obligation merge="=">
+<Proof_Obligation>
 <Comment>Operations dans une machine abstraite</Comment>
 <Tag>CHAR_READ</Tag>
 <Tag>INVARIANT</Tag>
@@ -171,15 +171,15 @@
 </Local_Hyp>
 <Local_Hyp num="2">
 <Exp_Comparison op=":">
-<Id suffix="1" tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:5:2:1:1:1,A:\b-method-training\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:5:2:1:1:1,A:\b-method-training\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:5:2:1:1:1" typref="2701647786" value="bb"/>
+<Id suffix="1" tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:5:2:1:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:5:2:1:1:1,A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:5:2:1:1:1" typref="2701647786" value="bb"/>
 <Binary_Exp op=".." typref="3603043417">
-<Integer_Literal tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:5:2:1:2:1:1" typref="2701647786" value="0"/>
-<Integer_Literal tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:5:2:1:2:1:2" typref="2701647786" value="255"/>
+<Integer_Literal tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:5:2:1:2:1:1" typref="2701647786" value="0"/>
+<Integer_Literal tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:5:2:1:2:1:2" typref="2701647786" value="255"/>
 </Binary_Exp>
 </Exp_Comparison>
 </Local_Hyp>
 </Proof_Obligation>
-<Proof_Obligation merge="=">
+<Proof_Obligation>
 <Comment>Operations dans une machine abstraite</Comment>
 <Tag>CHAR_WRITE</Tag>
 <Tag>INVARIANT</Tag>
@@ -194,10 +194,10 @@
 <Definition name="ass"/>
 <Hypothesis>
 <Exp_Comparison op=":">
-<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:6:2:1:1" typref="2701647786" value="bb"/>
+<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:6:2:1:1" typref="2701647786" value="bb"/>
 <Binary_Exp op=".." typref="3603043417">
-<Integer_Literal tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:6:2:1:2:1" typref="2701647786" value="0"/>
-<Integer_Literal tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:6:2:1:2:2" typref="2701647786" value="255"/>
+<Integer_Literal tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:6:2:1:2:1" typref="2701647786" value="0"/>
+<Integer_Literal tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:6:2:1:2:2" typref="2701647786" value="255"/>
 </Binary_Exp>
 </Exp_Comparison>
 </Hypothesis>
@@ -205,7 +205,7 @@
 <Nary_Pred op="&amp;"/>
 </Local_Hyp>
 </Proof_Obligation>
-<Proof_Obligation merge="=">
+<Proof_Obligation>
 <Comment>Operations dans une machine abstraite</Comment>
 <Tag>STRING_WRITE</Tag>
 <Tag>INVARIANT</Tag>
@@ -220,25 +220,25 @@
 <Definition name="ass"/>
 <Hypothesis>
 <Exp_Comparison op=":">
-<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:7:2:1:1" typref="3239339507" value="ss"/>
-<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:7:2:1:2" typref="4112111142" value="STRING"/>
+<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:7:2:1:1" typref="3239339507" value="ss"/>
+<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:7:2:1:2" typref="4112111142" value="STRING"/>
 </Exp_Comparison>
 </Hypothesis>
 <Local_Hyp num="1">
 <Nary_Pred op="&amp;"/>
 </Local_Hyp>
 </Proof_Obligation>
-<Proof_Obligation merge="=">
+<Proof_Obligation>
 <Tag>WellDefinednessConstraints</Tag>
 </Proof_Obligation>
-<Proof_Obligation merge="=">
+<Proof_Obligation>
 <Tag>WellDefinednessProperties</Tag>
 <Definition name="B definitions"/>
 <Definition name="ctx"/>
 <Definition name="cst"/>
 <Hypothesis/>
 </Proof_Obligation>
-<Proof_Obligation merge="=">
+<Proof_Obligation>
 <Tag>WellDefinednessInvariant</Tag>
 <Definition name="B definitions"/>
 <Definition name="ctx"/>
@@ -248,7 +248,7 @@
 <Definition name="inext"/>
 <Definition name="seext"/>
 </Proof_Obligation>
-<Proof_Obligation merge="=">
+<Proof_Obligation>
 <Tag>WellDefinednessAssertions</Tag>
 <Definition name="B definitions"/>
 <Definition name="ctx"/>
@@ -259,7 +259,7 @@
 <Definition name="seext"/>
 <Definition name="inv"/>
 </Proof_Obligation>
-<Proof_Obligation merge="=">
+<Proof_Obligation>
 <Tag>WellDefinednessInitialisation</Tag>
 <Definition name="B definitions"/>
 <Definition name="ctx"/>
@@ -269,7 +269,7 @@
 <Definition name="inext"/>
 <Definition name="seext"/>
 </Proof_Obligation>
-<Proof_Obligation merge="=">
+<Proof_Obligation>
 <Comment>Operations dans une machine abstraite</Comment>
 <Tag>WellDefinedness_Precondition_INTERVAL_READ</Tag>
 <Tag>INVARIANT</Tag>
@@ -295,7 +295,7 @@
 </Exp_Comparison>
 </Local_Hyp>
 </Proof_Obligation>
-<Proof_Obligation merge="=">
+<Proof_Obligation>
 <Comment>Operations dans une machine abstraite</Comment>
 <Tag>WellDefinedness_INTERVAL_READ</Tag>
 <Tag>INVARIANT</Tag>
@@ -311,21 +311,21 @@
 <Hypothesis>
 <Nary_Pred op="&amp;">
 <Exp_Comparison op=":">
-<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:1:3:1:1:1" typref="2701647786" value="aa"/>
-<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:1:3:1:1:2" typref="3603043417" value="INT"/>
+<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:1:3:1:1:1" typref="2701647786" value="aa"/>
+<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:1:3:1:1:2" typref="3603043417" value="INT"/>
 </Exp_Comparison>
 <Exp_Comparison op=":">
-<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:1:3:1:2:1" typref="2701647786" value="bb"/>
-<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:1:3:1:2:2" typref="3603043417" value="INT"/>
+<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:1:3:1:2:1" typref="2701647786" value="bb"/>
+<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:1:3:1:2:2" typref="3603043417" value="INT"/>
 </Exp_Comparison>
 <Exp_Comparison op="&lt;=">
-<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:1:3:1:3:1" typref="2701647786" value="aa"/>
-<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:1:3:1:3:2" typref="2701647786" value="bb"/>
+<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:1:3:1:3:1" typref="2701647786" value="aa"/>
+<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:1:3:1:3:2" typref="2701647786" value="bb"/>
 </Exp_Comparison>
 </Nary_Pred>
 </Hypothesis>
 </Proof_Obligation>
-<Proof_Obligation merge="=">
+<Proof_Obligation>
 <Comment>Operations dans une machine abstraite</Comment>
 <Tag>WellDefinedness_Precondition_INT_WRITE</Tag>
 <Tag>INVARIANT</Tag>
@@ -339,7 +339,7 @@
 <Definition name="inv"/>
 <Definition name="ass"/>
 </Proof_Obligation>
-<Proof_Obligation merge="=">
+<Proof_Obligation>
 <Comment>Operations dans une machine abstraite</Comment>
 <Tag>WellDefinedness_INT_WRITE</Tag>
 <Tag>INVARIANT</Tag>
@@ -354,12 +354,12 @@
 <Definition name="ass"/>
 <Hypothesis>
 <Exp_Comparison op=":">
-<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:2:2:1:1" typref="2701647786" value="nn"/>
-<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:2:2:1:2" typref="3603043417" value="INT"/>
+<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:2:2:1:1" typref="2701647786" value="nn"/>
+<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:2:2:1:2" typref="3603043417" value="INT"/>
 </Exp_Comparison>
 </Hypothesis>
 </Proof_Obligation>
-<Proof_Obligation merge="=">
+<Proof_Obligation>
 <Comment>Operations dans une machine abstraite</Comment>
 <Tag>WellDefinedness_Precondition_BOOL_READ</Tag>
 <Tag>INVARIANT</Tag>
@@ -373,7 +373,7 @@
 <Definition name="inv"/>
 <Definition name="ass"/>
 </Proof_Obligation>
-<Proof_Obligation merge="=">
+<Proof_Obligation>
 <Comment>Operations dans une machine abstraite</Comment>
 <Tag>WellDefinedness_BOOL_READ</Tag>
 <Tag>INVARIANT</Tag>
@@ -388,7 +388,7 @@
 <Definition name="ass"/>
 <Hypothesis/>
 </Proof_Obligation>
-<Proof_Obligation merge="=">
+<Proof_Obligation>
 <Comment>Operations dans une machine abstraite</Comment>
 <Tag>WellDefinedness_Precondition_BOOL_WRITE</Tag>
 <Tag>INVARIANT</Tag>
@@ -402,7 +402,7 @@
 <Definition name="inv"/>
 <Definition name="ass"/>
 </Proof_Obligation>
-<Proof_Obligation merge="=">
+<Proof_Obligation>
 <Comment>Operations dans une machine abstraite</Comment>
 <Tag>WellDefinedness_BOOL_WRITE</Tag>
 <Tag>INVARIANT</Tag>
@@ -417,12 +417,12 @@
 <Definition name="ass"/>
 <Hypothesis>
 <Exp_Comparison op=":">
-<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:4:2:1:1" typref="2043437594" value="bb"/>
-<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:4:2:1:2" typref="4282494527" value="BOOL"/>
+<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:4:2:1:1" typref="2043437594" value="bb"/>
+<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:4:2:1:2" typref="4282494527" value="BOOL"/>
 </Exp_Comparison>
 </Hypothesis>
 </Proof_Obligation>
-<Proof_Obligation merge="=">
+<Proof_Obligation>
 <Comment>Operations dans une machine abstraite</Comment>
 <Tag>WellDefinedness_Precondition_CHAR_READ</Tag>
 <Tag>INVARIANT</Tag>
@@ -436,7 +436,7 @@
 <Definition name="inv"/>
 <Definition name="ass"/>
 </Proof_Obligation>
-<Proof_Obligation merge="=">
+<Proof_Obligation>
 <Comment>Operations dans une machine abstraite</Comment>
 <Tag>WellDefinedness_CHAR_READ</Tag>
 <Tag>INVARIANT</Tag>
@@ -451,7 +451,7 @@
 <Definition name="ass"/>
 <Hypothesis/>
 </Proof_Obligation>
-<Proof_Obligation merge="=">
+<Proof_Obligation>
 <Comment>Operations dans une machine abstraite</Comment>
 <Tag>WellDefinedness_Precondition_CHAR_WRITE</Tag>
 <Tag>INVARIANT</Tag>
@@ -465,7 +465,7 @@
 <Definition name="inv"/>
 <Definition name="ass"/>
 </Proof_Obligation>
-<Proof_Obligation merge="=">
+<Proof_Obligation>
 <Comment>Operations dans une machine abstraite</Comment>
 <Tag>WellDefinedness_CHAR_WRITE</Tag>
 <Tag>INVARIANT</Tag>
@@ -480,15 +480,15 @@
 <Definition name="ass"/>
 <Hypothesis>
 <Exp_Comparison op=":">
-<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:6:2:1:1" typref="2701647786" value="bb"/>
+<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:6:2:1:1" typref="2701647786" value="bb"/>
 <Binary_Exp op=".." typref="3603043417">
-<Integer_Literal tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:6:2:1:2:1" typref="2701647786" value="0"/>
-<Integer_Literal tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:6:2:1:2:2" typref="2701647786" value="255"/>
+<Integer_Literal tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:6:2:1:2:1" typref="2701647786" value="0"/>
+<Integer_Literal tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:6:2:1:2:2" typref="2701647786" value="255"/>
 </Binary_Exp>
 </Exp_Comparison>
 </Hypothesis>
 </Proof_Obligation>
-<Proof_Obligation merge="=">
+<Proof_Obligation>
 <Comment>Operations dans une machine abstraite</Comment>
 <Tag>WellDefinedness_Precondition_STRING_WRITE</Tag>
 <Tag>INVARIANT</Tag>
@@ -502,7 +502,7 @@
 <Definition name="inv"/>
 <Definition name="ass"/>
 </Proof_Obligation>
-<Proof_Obligation merge="=">
+<Proof_Obligation>
 <Comment>Operations dans une machine abstraite</Comment>
 <Tag>WellDefinedness_STRING_WRITE</Tag>
 <Tag>INVARIANT</Tag>
@@ -517,34 +517,34 @@
 <Definition name="ass"/>
 <Hypothesis>
 <Exp_Comparison op=":">
-<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:7:2:1:1" typref="3239339507" value="ss"/>
-<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:7:2:1:2" typref="4112111142" value="STRING"/>
+<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:7:2:1:1" typref="3239339507" value="ss"/>
+<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:7:2:1:2" typref="4112111142" value="STRING"/>
 </Exp_Comparison>
 </Hypothesis>
 </Proof_Obligation>
-<TypeInfos merge="=">
+<TypeInfos>
 <Type id="2701647786">
-<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:3:1:1" value="INTEGER"/>
+<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:3:1:1" value="INTEGER"/>
 </Type>
 <Type id="3603043417">
 <Unary_Exp op="POW">
-<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:3:2:1:1" value="INTEGER"/>
+<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:3:2:1:1" value="INTEGER"/>
 </Unary_Exp>
 </Type>
 <Type id="2043437594">
-<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:3:3:1" value="BOOL"/>
+<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:3:3:1" value="BOOL"/>
 </Type>
 <Type id="4282494527">
 <Unary_Exp op="POW">
-<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:3:4:1:1" value="BOOL"/>
+<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:3:4:1:1" value="BOOL"/>
 </Unary_Exp>
 </Type>
 <Type id="3239339507">
-<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:3:5:1" value="STRING"/>
+<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:3:5:1" value="STRING"/>
 </Type>
 <Type id="4112111142">
 <Unary_Exp op="POW">
-<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:3:6:1:1" value="STRING"/>
+<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:3:6:1:1" value="STRING"/>
 </Unary_Exp>
 </Type>
 </TypeInfos>

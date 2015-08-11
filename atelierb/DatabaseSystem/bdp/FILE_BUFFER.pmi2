@@ -1,56 +1,56 @@
 ﻿THEORY BalanceX IS
-  FILE_BUFFER,17,4,0,11,1,0,0;
-  Initialisation,2,0,0,2,0,0,0;
+  FILE_BUFFER,17,15,0,1,0,0,0;
+  Initialisation,2,2,0,0,0,0,0;
   WellDefinedness_Precondition_create_record,1,1,0,0,0,0,0;
   WellDefinedness_Precondition_not_in_buffer,1,1,0,0,0,0,0;
   WellDefinedness_create_record,1,1,0,0,0,0,0;
-  WellDefinedness_load_buffer,1,0,0,1,0,0,0;
-  WellDefinedness_mod_buffer,2,0,0,1,0,0,0;
+  WellDefinedness_load_buffer,1,1,0,0,0,0,0;
+  WellDefinedness_mod_buffer,2,1,0,0,0,0,0;
   WellDefinedness_size_file,1,1,0,0,0,0,0;
-  WellDefinedness_val_buffer,3,0,0,3,0,0,0;
-  create_record,2,0,0,2,0,0,0;
-  load_buffer,2,0,0,2,0,0,0;
-  mod_buffer,1,0,0,0,1,0,0
+  WellDefinedness_val_buffer,3,3,0,0,0,0,0;
+  create_record,2,1,0,1,0,0,0;
+  load_buffer,2,2,0,0,0,0,0;
+  mod_buffer,1,1,0,0,0,0,0
 END
 &
 THEORY ProofState IS
-  Proved(0);
-  Proved(0);
-  Proved(0);
-  Proved(0);
+  Proved(Util);
+  Proved(Util);
+  Proved(Util);
+  Proved(Util);
   Unproved;
   Proved(Util);
   Proved(Util);
+  Proved(Util);
+  Proved(Util);
+  Proved(Util);
+  Proved(Util);
+  Proved(Util);
+  Proved(Util);
   Proved(0);
   Proved(Util);
   Proved(Util);
-  Proved(1);
-  Proved(0);
-  Proved(0);
-  Proved(0);
-  Proved(0);
-  Proved(0);
-  Proved(0)
+  Proved(Util)
 END
 &
 THEORY MethodList IS
+  mp;
+  mp;
+  mp;
+  mp;
   pr;
+  pr & pp(rp.1);
+  pr & pp(rp.1);
+  mp;
+  pr & pp(rp.1);
+  pr & pp(rp.1);
+  pr & pp(rp.1);
+  mp;
+  mp;
   pr;
-  pr;
-  pr;
-  pr;
-  pp(rp.1);
-  pp(rp.1);
-  pr;
-  pp(rp.1);
-  pp(rp.1);
-  pr;
-  pr;
-  pr;
-  pr;
-  pr;
-  pr;
-  pr
+  mp;
+  mp;
+  mp
 END
 &
 THEORY PassList IS
@@ -58,13 +58,13 @@ THEORY PassList IS
   Force(0),?;
   Force(0),?;
   Force(0),?;
-  Force(0),(?;0;1;2;3);
-  Force(0),(?;0;1;2;3);
-  Force(0),(?;0;1;2;3);
   Force(0),?;
-  Force(0),(?;0;1;2;3);
-  Force(0),(?;0;1;2;3);
-  Force(1),(?;0);
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
   Force(0),?;
   Force(0),?;
   Force(0),?;

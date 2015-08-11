@@ -39,7 +39,7 @@
 <Goal>
 <Sub_Calculus>
 <Nary_Sub op=";">
-<Skip tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:1:1"/>
+<Skip tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:1:1"/>
 </Nary_Sub>
 <Binary_Pred op="=&gt;">
 <Nary_Pred op="&amp;"/>
@@ -66,16 +66,16 @@
 <Hypothesis>
 <Nary_Pred op="&amp;">
 <Exp_Comparison op=":">
-<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:1:3:1:1:1" typref="2701647786" value="aa"/>
-<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:1:3:1:1:2" typref="3603043417" value="INT"/>
+<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:1:3:1:1:1" typref="2701647786" value="aa"/>
+<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:1:3:1:1:2" typref="3603043417" value="INT"/>
 </Exp_Comparison>
 <Exp_Comparison op=":">
-<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:1:3:1:2:1" typref="2701647786" value="bb"/>
-<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:1:3:1:2:2" typref="3603043417" value="INT"/>
+<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:1:3:1:2:1" typref="2701647786" value="bb"/>
+<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:1:3:1:2:2" typref="3603043417" value="INT"/>
 </Exp_Comparison>
 <Exp_Comparison op="&lt;=">
-<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:1:3:1:3:1" typref="2701647786" value="aa"/>
-<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:1:3:1:3:2" typref="2701647786" value="bb"/>
+<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:1:3:1:3:1" typref="2701647786" value="aa"/>
+<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:1:3:1:3:2" typref="2701647786" value="bb"/>
 </Exp_Comparison>
 </Nary_Pred>
 </Hypothesis>
@@ -83,12 +83,12 @@
 <Sub_Calculus>
 <Becomes_In>
 <Variables>
-<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:1:4:1:1:1" typref="2701647786" value="nn"/>
+<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:1:4:1:1:1" typref="2701647786" value="nn"/>
 </Variables>
 <Value>
 <Binary_Exp op=".." typref="3603043417">
-<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:1:4:1:2:1:1" typref="2701647786" value="aa"/>
-<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:1:4:1:2:1:2" typref="2701647786" value="bb"/>
+<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:1:4:1:2:1:1" typref="2701647786" value="aa"/>
+<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:1:4:1:2:1:2" typref="2701647786" value="bb"/>
 </Binary_Exp>
 </Value>
 </Becomes_In>
@@ -116,13 +116,13 @@
 <Definition name="ass"/>
 <Hypothesis>
 <Exp_Comparison op=":">
-<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:2:2:1:1" typref="2701647786" value="nn"/>
-<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:2:2:1:2" typref="3603043417" value="INT"/>
+<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:2:2:1:1" typref="2701647786" value="nn"/>
+<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:2:2:1:2" typref="3603043417" value="INT"/>
 </Exp_Comparison>
 </Hypothesis>
 <Goal>
 <Sub_Calculus>
-<Skip tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:2:3:1"/>
+<Skip tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:2:3:1"/>
 <Binary_Pred op="=&gt;">
 <Nary_Pred op="&amp;"/>
 <Tag goalTag="Invariant is preserved">
@@ -150,10 +150,10 @@
 <Sub_Calculus>
 <Becomes_In>
 <Variables>
-<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:3:2:1:1:1" typref="2043437594" value="bb"/>
+<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:3:2:1:1:1" typref="2043437594" value="bb"/>
 </Variables>
 <Value>
-<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:3:2:1:2:1" typref="4282494527" value="BOOL"/>
+<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:3:2:1:2:1" typref="4282494527" value="BOOL"/>
 </Value>
 </Becomes_In>
 <Binary_Pred op="=&gt;">
@@ -180,13 +180,13 @@
 <Definition name="ass"/>
 <Hypothesis>
 <Exp_Comparison op=":">
-<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:4:2:1:1" typref="2043437594" value="bb"/>
-<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:4:2:1:2" typref="4282494527" value="BOOL"/>
+<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:4:2:1:1" typref="2043437594" value="bb"/>
+<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:4:2:1:2" typref="4282494527" value="BOOL"/>
 </Exp_Comparison>
 </Hypothesis>
 <Goal>
 <Sub_Calculus>
-<Skip tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:4:3:1"/>
+<Skip tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:4:3:1"/>
 <Binary_Pred op="=&gt;">
 <Nary_Pred op="&amp;"/>
 <Tag goalTag="Invariant is preserved">
@@ -214,12 +214,12 @@
 <Sub_Calculus>
 <Becomes_In>
 <Variables>
-<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:5:2:1:1:1" typref="2701647786" value="bb"/>
+<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:5:2:1:1:1" typref="2701647786" value="bb"/>
 </Variables>
 <Value>
 <Binary_Exp op=".." typref="3603043417">
-<Integer_Literal tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:5:2:1:2:1:1" typref="2701647786" value="0"/>
-<Integer_Literal tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:5:2:1:2:1:2" typref="2701647786" value="255"/>
+<Integer_Literal tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:5:2:1:2:1:1" typref="2701647786" value="0"/>
+<Integer_Literal tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:5:2:1:2:1:2" typref="2701647786" value="255"/>
 </Binary_Exp>
 </Value>
 </Becomes_In>
@@ -247,16 +247,16 @@
 <Definition name="ass"/>
 <Hypothesis>
 <Exp_Comparison op=":">
-<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:6:2:1:1" typref="2701647786" value="bb"/>
+<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:6:2:1:1" typref="2701647786" value="bb"/>
 <Binary_Exp op=".." typref="3603043417">
-<Integer_Literal tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:6:2:1:2:1" typref="2701647786" value="0"/>
-<Integer_Literal tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:6:2:1:2:2" typref="2701647786" value="255"/>
+<Integer_Literal tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:6:2:1:2:1" typref="2701647786" value="0"/>
+<Integer_Literal tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:6:2:1:2:2" typref="2701647786" value="255"/>
 </Binary_Exp>
 </Exp_Comparison>
 </Hypothesis>
 <Goal>
 <Sub_Calculus>
-<Skip tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:6:3:1"/>
+<Skip tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:6:3:1"/>
 <Binary_Pred op="=&gt;">
 <Nary_Pred op="&amp;"/>
 <Tag goalTag="Invariant is preserved">
@@ -281,13 +281,13 @@
 <Definition name="ass"/>
 <Hypothesis>
 <Exp_Comparison op=":">
-<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:7:2:1:1" typref="3239339507" value="ss"/>
-<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:7:2:1:2" typref="4112111142" value="STRING"/>
+<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:7:2:1:1" typref="3239339507" value="ss"/>
+<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:7:2:1:2" typref="4112111142" value="STRING"/>
 </Exp_Comparison>
 </Hypothesis>
 <Goal>
 <Sub_Calculus>
-<Skip tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:7:3:1"/>
+<Skip tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:7:3:1"/>
 <Binary_Pred op="=&gt;">
 <Nary_Pred op="&amp;"/>
 <Tag goalTag="Invariant is preserved">
@@ -388,8 +388,8 @@
 </Binary_Pred>
 <Binary_Pred op="=&gt;">
 <Exp_Comparison op=":">
-<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:1:3:1:1:1" typref="2701647786" value="aa"/>
-<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:1:3:1:1:2" typref="3603043417" value="INT"/>
+<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:1:3:1:1:1" typref="2701647786" value="aa"/>
+<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:1:3:1:1:2" typref="3603043417" value="INT"/>
 </Exp_Comparison>
 <Nary_Pred op="&amp;">
 <Binary_Pred op="&amp;">
@@ -398,8 +398,8 @@
 </Binary_Pred>
 <Binary_Pred op="=&gt;">
 <Exp_Comparison op=":">
-<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:1:3:1:2:1" typref="2701647786" value="bb"/>
-<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:1:3:1:2:2" typref="3603043417" value="INT"/>
+<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:1:3:1:2:1" typref="2701647786" value="bb"/>
+<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:1:3:1:2:2" typref="3603043417" value="INT"/>
 </Exp_Comparison>
 <Nary_Pred op="&amp;">
 <Binary_Pred op="&amp;">
@@ -431,16 +431,16 @@
 <Hypothesis>
 <Nary_Pred op="&amp;">
 <Exp_Comparison op=":">
-<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:1:3:1:1:1" typref="2701647786" value="aa"/>
-<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:1:3:1:1:2" typref="3603043417" value="INT"/>
+<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:1:3:1:1:1" typref="2701647786" value="aa"/>
+<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:1:3:1:1:2" typref="3603043417" value="INT"/>
 </Exp_Comparison>
 <Exp_Comparison op=":">
-<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:1:3:1:2:1" typref="2701647786" value="bb"/>
-<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:1:3:1:2:2" typref="3603043417" value="INT"/>
+<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:1:3:1:2:1" typref="2701647786" value="bb"/>
+<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:1:3:1:2:2" typref="3603043417" value="INT"/>
 </Exp_Comparison>
 <Exp_Comparison op="&lt;=">
-<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:1:3:1:3:1" typref="2701647786" value="aa"/>
-<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:1:3:1:3:2" typref="2701647786" value="bb"/>
+<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:1:3:1:3:1" typref="2701647786" value="aa"/>
+<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:1:3:1:3:2" typref="2701647786" value="bb"/>
 </Exp_Comparison>
 </Nary_Pred>
 </Hypothesis>
@@ -494,8 +494,8 @@
 <Definition name="ass"/>
 <Hypothesis>
 <Exp_Comparison op=":">
-<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:2:2:1:1" typref="2701647786" value="nn"/>
-<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:2:2:1:2" typref="3603043417" value="INT"/>
+<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:2:2:1:1" typref="2701647786" value="nn"/>
+<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:2:2:1:2" typref="3603043417" value="INT"/>
 </Exp_Comparison>
 </Hypothesis>
 <Goal>
@@ -586,8 +586,8 @@
 <Definition name="ass"/>
 <Hypothesis>
 <Exp_Comparison op=":">
-<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:4:2:1:1" typref="2043437594" value="bb"/>
-<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:4:2:1:2" typref="4282494527" value="BOOL"/>
+<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:4:2:1:1" typref="2043437594" value="bb"/>
+<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:4:2:1:2" typref="4282494527" value="BOOL"/>
 </Exp_Comparison>
 </Hypothesis>
 <Goal>
@@ -684,10 +684,10 @@
 <Definition name="ass"/>
 <Hypothesis>
 <Exp_Comparison op=":">
-<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:6:2:1:1" typref="2701647786" value="bb"/>
+<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:6:2:1:1" typref="2701647786" value="bb"/>
 <Binary_Exp op=".." typref="3603043417">
-<Integer_Literal tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:6:2:1:2:1" typref="2701647786" value="0"/>
-<Integer_Literal tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:6:2:1:2:2" typref="2701647786" value="255"/>
+<Integer_Literal tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:6:2:1:2:1" typref="2701647786" value="0"/>
+<Integer_Literal tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:6:2:1:2:2" typref="2701647786" value="255"/>
 </Binary_Exp>
 </Exp_Comparison>
 </Hypothesis>
@@ -738,8 +738,8 @@
 <Definition name="ass"/>
 <Hypothesis>
 <Exp_Comparison op=":">
-<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:7:2:1:1" typref="3239339507" value="ss"/>
-<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:7:2:1:2" typref="4112111142" value="STRING"/>
+<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:7:2:1:1" typref="3239339507" value="ss"/>
+<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:2:7:2:1:2" typref="4112111142" value="STRING"/>
 </Exp_Comparison>
 </Hypothesis>
 <Goal>
@@ -752,27 +752,27 @@
 </Proof_Obligation>
 <TypeInfos>
 <Type id="2701647786">
-<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:3:1:1" value="INTEGER"/>
+<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:3:1:1" value="INTEGER"/>
 </Type>
 <Type id="3603043417">
 <Unary_Exp op="POW">
-<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:3:2:1:1" value="INTEGER"/>
+<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:3:2:1:1" value="INTEGER"/>
 </Unary_Exp>
 </Type>
 <Type id="2043437594">
-<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:3:3:1" value="BOOL"/>
+<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:3:3:1" value="BOOL"/>
 </Type>
 <Type id="4282494527">
 <Unary_Exp op="POW">
-<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:3:4:1:1" value="BOOL"/>
+<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:3:4:1:1" value="BOOL"/>
 </Unary_Exp>
 </Type>
 <Type id="3239339507">
-<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:3:5:1" value="STRING"/>
+<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:3:5:1" value="STRING"/>
 </Type>
 <Type id="4112111142">
 <Unary_Exp op="POW">
-<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:3:6:1:1" value="STRING"/>
+<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\BASIC_IO.bxml:1:3:6:1:1" value="STRING"/>
 </Unary_Exp>
 </Type>
 </TypeInfos>

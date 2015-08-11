@@ -127,9 +127,9 @@ THEORY ListSubstitutionX IS
 END
 &
 THEORY ListConstantsX IS
-  List_Valuable_Constants(Machine(BASIC_STATUS))==(code_STATUS,decode_STATUS);
+  List_Valuable_Constants(Machine(BASIC_STATUS))==(?);
   Inherited_List_Constants(Machine(BASIC_STATUS))==(?);
-  List_Constants(Machine(BASIC_STATUS))==(code_STATUS,decode_STATUS)
+  List_Constants(Machine(BASIC_STATUS))==(?)
 END
 &
 THEORY ListSetsX IS
@@ -149,8 +149,8 @@ END
 THEORY ListHiddenConstantsX IS
   Abstract_List_HiddenConstants(Machine(BASIC_STATUS))==(?);
   Expanded_List_HiddenConstants(Machine(BASIC_STATUS))==(?);
-  List_HiddenConstants(Machine(BASIC_STATUS))==(?);
-  External_List_HiddenConstants(Machine(BASIC_STATUS))==(?)
+  List_HiddenConstants(Machine(BASIC_STATUS))==(decode_STATUS,code_STATUS);
+  External_List_HiddenConstants(Machine(BASIC_STATUS))==(decode_STATUS,code_STATUS)
 END
 &
 THEORY ListPropertiesX IS
@@ -168,9 +168,9 @@ THEORY ListANYVarX IS
 END
 &
 THEORY ListOfIdsX IS
-  List_Of_Ids(Machine(BASIC_STATUS)) == (code_STATUS,decode_STATUS,STATUS,dead,living | ? | ? | ? | STATUS_READ,STATUS_WRITE | ? | ? | ? | BASIC_STATUS);
-  List_Of_HiddenCst_Ids(Machine(BASIC_STATUS)) == (? | ?);
-  List_Of_VisibleCst_Ids(Machine(BASIC_STATUS)) == (code_STATUS,decode_STATUS);
+  List_Of_Ids(Machine(BASIC_STATUS)) == (STATUS,dead,living | ? | ? | ? | STATUS_READ,STATUS_WRITE | ? | ? | ? | BASIC_STATUS);
+  List_Of_HiddenCst_Ids(Machine(BASIC_STATUS)) == (decode_STATUS,code_STATUS | ?);
+  List_Of_VisibleCst_Ids(Machine(BASIC_STATUS)) == (?);
   List_Of_VisibleVar_Ids(Machine(BASIC_STATUS)) == (? | ?);
   List_Of_Ids_SeenBNU(Machine(BASIC_STATUS)) == (?: ?)
 END
@@ -180,7 +180,11 @@ THEORY SetsEnvX IS
 END
 &
 THEORY ConstantsEnvX IS
-  Constants(Machine(BASIC_STATUS)) == (Type(dead) == Cst(etype(STATUS,0,1));Type(living) == Cst(etype(STATUS,0,1));Type(code_STATUS) == Cst(SetOf(etype(STATUS,0,1)*btype(INTEGER,0,1)));Type(decode_STATUS) == Cst(SetOf(btype(INTEGER,?,?)*etype(STATUS,?,?))))
+  Constants(Machine(BASIC_STATUS)) == (Type(dead) == Cst(etype(STATUS,0,1));Type(living) == Cst(etype(STATUS,0,1)))
+END
+&
+THEORY HiddenConstantsEnvX IS
+  HiddenConstants(Machine(BASIC_STATUS)) == (Type(decode_STATUS) == HCst(SetOf(btype(INTEGER,?,?)*etype(STATUS,?,?)));Type(code_STATUS) == HCst(SetOf(etype(STATUS,0,1)*btype(INTEGER,0,1))))
 END
 &
 THEORY OperationsEnvX IS
