@@ -79,12 +79,18 @@
 <Id value='ii' typref='2701647786'/>
 </Input_Parameters>
 <Precondition>
+<Nary_Pred op='&amp;'>
+<Exp_Comparison op=':'>
+<Id value='ii' typref='2701647786'/>
+<Id value='NAT' typref='3603043417'/>
+</Exp_Comparison>
 <Exp_Comparison op=':'>
 <Id value='ii' typref='2701647786'/>
 <Unary_Exp op='dom' typref='3603043417'>
 <Id value='file_vrb' typref='1204907843'/>
 </Unary_Exp>
 </Exp_Comparison>
+</Nary_Pred>
 </Precondition>
 <Body>
 <Assignement_Sub>
@@ -105,12 +111,18 @@
 <Id value='ii' typref='2701647786'/>
 </Input_Parameters>
 <Precondition>
+<Nary_Pred op='&amp;'>
+<Exp_Comparison op=':'>
+<Id value='ii' typref='2701647786'/>
+<Id value='NAT' typref='3603043417'/>
+</Exp_Comparison>
 <Exp_Comparison op=':'>
 <Id value='ii' typref='2701647786'/>
 <Unary_Exp op='dom' typref='3603043417'>
 <Id value='file_vrb' typref='1204907843'/>
 </Unary_Exp>
 </Exp_Comparison>
+</Nary_Pred>
 </Precondition>
 <Body>
 <Assignement_Sub>

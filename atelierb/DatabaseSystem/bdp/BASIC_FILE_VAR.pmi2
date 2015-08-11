@@ -30,14 +30,14 @@ THEORY ProofState IS
 END
 &
 THEORY MethodList IS
-  pp;
-  pp;
-  pp;
+  mp & ch & pr & pp;
+  mp & ch & pr & pp;
+  mp & ch & pr & pp;
   pr;
-  pr & pp;
+  mp & ch & pr & pp;
   pr;
   pr;
-  mp & pr & dc(0<= -2+max_rec-size(file_vrb)) & dd(0) & pr;
+  mp & pr;
   pr;
   pr;
   pr;

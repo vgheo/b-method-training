@@ -1,9 +1,9 @@
 ﻿THEORY BalanceX IS
-  FILE_BUFFER_1,13,0,0,11,0,0,0;
-  WellDefinedness_create_record,1,0,0,0,0,0,0;
+  FILE_BUFFER_1,13,2,0,11,0,0,0;
+  WellDefinedness_create_record,1,1,0,0,0,0,0;
   WellDefinedness_load_buffer,4,0,0,4,0,0,0;
   WellDefinedness_mod_buffer,1,0,0,1,0,0,0;
-  WellDefinedness_size_file,1,0,0,0,0,0,0;
+  WellDefinedness_size_file,1,1,0,0,0,0,0;
   WellDefinedness_val_buffer,3,0,0,3,0,0,0;
   load_buffer,3,0,0,3,0,0,0
 END
@@ -12,9 +12,9 @@ THEORY ProofState IS
   Proved(0);
   Proved(0);
   Proved(0);
-  Unproved;
+  Proved(Util);
   Proved(0);
-  Unproved;
+  Proved(Util);
   Proved(0);
   Proved(0);
   Proved(0);
@@ -28,9 +28,9 @@ THEORY MethodList IS
   pr;
   pr;
   pr;
-  ?;
+  pp(rp.1);
   pr;
-  ?;
+  pp(rp.1);
   pr;
   pr;
   pr;

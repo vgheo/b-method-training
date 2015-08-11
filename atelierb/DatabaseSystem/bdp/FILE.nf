@@ -121,8 +121,8 @@ END
 THEORY ListOperationGuardX END
 &
 THEORY ListPreconditionX IS
-  List_Precondition(Machine(FILE),val_file)==(oo: dom(file) & ii: FIELD);
-  List_Precondition(Machine(FILE),mod_file)==(oo: dom(file) & ii: FIELD & vv: VALUE);
+  List_Precondition(Machine(FILE),val_file)==(oo: NAT & oo: dom(file) & ii: FIELD);
+  List_Precondition(Machine(FILE),mod_file)==(oo: NAT & oo: dom(file) & ii: FIELD & vv: VALUE);
   List_Precondition(Machine(FILE),create_record)==(vv: VALUE & size(file)<max_rec);
   List_Precondition(Machine(FILE),size_file)==(btrue)
 END
@@ -130,8 +130,8 @@ END
 THEORY ListSubstitutionX IS
   Expanded_List_Substitution(Machine(FILE),size_file)==(btrue | vv:=size(file));
   Expanded_List_Substitution(Machine(FILE),create_record)==(vv: VALUE & size(file)<max_rec | file,oo:=file<-FIELD*{vv},size(file)+1);
-  Expanded_List_Substitution(Machine(FILE),mod_file)==(oo: dom(file) & ii: FIELD & vv: VALUE | file:=file<+{oo|->(file(oo)<+{ii|->vv})});
-  Expanded_List_Substitution(Machine(FILE),val_file)==(oo: dom(file) & ii: FIELD | vv:=file(oo)(ii));
+  Expanded_List_Substitution(Machine(FILE),mod_file)==(oo: NAT & oo: dom(file) & ii: FIELD & vv: VALUE | file:=file<+{oo|->(file(oo)<+{ii|->vv})});
+  Expanded_List_Substitution(Machine(FILE),val_file)==(oo: NAT & oo: dom(file) & ii: FIELD | vv:=file(oo)(ii));
   List_Substitution(Machine(FILE),val_file)==(vv:=file(oo)(ii));
   List_Substitution(Machine(FILE),mod_file)==(file(oo)(ii):=vv);
   List_Substitution(Machine(FILE),create_record)==(file:=file<-FIELD*{vv} || oo:=size(file)+1);

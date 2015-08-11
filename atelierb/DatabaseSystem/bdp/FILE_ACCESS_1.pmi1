@@ -1,16 +1,16 @@
 ﻿THEORY BalanceX IS
-  FILE_ACCESS_1,26,2,0,12,0,2,0;
+  FILE_ACCESS_1,26,5,0,12,0,2,1;
   Initialisation,2,0,0,2,0,0,0;
   WellDefinednessInvariant,1,0,0,0,0,0,0;
-  WellDefinedness_create_record,1,0,0,0,0,0,0;
+  WellDefinedness_create_record,1,1,0,0,0,0,0;
   WellDefinedness_get_record,2,0,0,2,0,0,0;
-  WellDefinedness_size_file,1,0,0,0,0,0,0;
+  WellDefinedness_size_file,1,1,0,0,0,0,0;
   WellDefinedness_val_buffer,3,0,0,1,0,2,0;
   create_record,3,0,0,3,0,0,0;
-  get_record,4,1,0,0,0,0,0;
+  get_record,4,2,0,0,0,0,0;
   mod_buffer,3,0,0,1,0,0,0;
   not_in_buffer,1,1,0,0,0,0,0;
-  put_buffer,2,0,0,0,0,0,0;
+  put_buffer,2,0,0,0,0,0,1;
   size_file,1,0,0,1,0,0,0;
   val_buffer,2,0,0,2,0,0,0
 END
@@ -19,8 +19,8 @@ THEORY ProofState IS
   Proved(2);
   Proved(2);
   Proved(0);
-  Unproved;
-  Unproved;
+  Proved(Util);
+  Proved(Util);
   Proved(0);
   Proved(0);
   Unproved;
@@ -34,11 +34,11 @@ THEORY ProofState IS
   Proved(0);
   Proved(0);
   Proved(0);
+  Proved(3);
   Unproved;
   Unproved;
   Unproved;
-  Unproved;
-  Unproved;
+  Proved(Util);
   Proved(Util);
   Proved(0);
   Proved(0)
@@ -48,27 +48,27 @@ THEORY MethodList IS
   pr;
   pr;
   pr;
-  ?;
-  ?;
+  mp & pr & pr & pp(rp.1) & pp;
+  pr & pp(rt.1) & pp;
   pr;
   pr;
   ?;
   pr;
   pr;
   pr;
-  ?;
-  ?;
+  mp & pr & pr;
+  mp & pr;
   pr;
-  mp & pp(rp.5) & pp;
+  mp & pp(rp.1) & pp;
   pr;
   pr;
   pr;
+  pr;
   ?;
-  ?;
-  ?;
-  ?;
-  ?;
-  mp & pp(rp.5) & pp;
+  mp & ah(updated = FALSE => buffer <: bfile) & pr & pr;
+  mp;
+  mp & pr & pr;
+  mp & pp(rp.5) & pr;
   pr;
   pr
 END
@@ -81,7 +81,7 @@ THEORY PassList IS
   Force(0),(?;0;1;2;3);
   Force(0),?;
   Force(0),?;
-  Force(0),(?;0;1;2;3);
+  Force(3),(?;0;1;2;3);
   Force(0),?;
   Force(0),?;
   Force(0),?;
@@ -92,7 +92,7 @@ THEORY PassList IS
   Force(0),?;
   Force(0),?;
   Force(0),?;
-  Force(0),(?;0;1;2;3);
+  Force(3),(?;0;1;2);
   Force(0),(?;0;1;2;3);
   Force(0),(?;0;1;2;3);
   Force(0),(?;0;1;2;3);

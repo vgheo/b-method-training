@@ -8,6 +8,7 @@ REFINES FILE_ACCESS
 
 CONCRETE_VARIABLES
      name , record
+
 /*can not have variables with the same name as in specification*/
 
 INITIALISATION
@@ -16,6 +17,7 @@ INITIALISATION
        buffer , bfile , updated := {} , <> , FALSE
 
 INVARIANT
+      name : NAT & /*concrete typing*/
       name : 0 .. size ( bfile ) &
       record : FIELD --> VALUE &
       buffer = { 0 } <<| { name |-> record }
@@ -29,16 +31,19 @@ OPERATIONS
      BEGIN
          bfile ( name ) := record
      END ;
+
      oo <-- create_record ( vv ) =
      BEGIN
          /*Renamed INDEX to FIELD ,typo*/
          bfile := bfile <- ( FIELD * { vv } ) ||
          oo := size ( bfile ) + 1
      END ;
+
       vv <-- not_in_buffer ( oo ) =
      BEGIN
          vv := bool ( name /= oo )
      END ;
+
      mod_buffer ( oo , ii , vv ) =
      BEGIN
          record ( ii ) := vv ||

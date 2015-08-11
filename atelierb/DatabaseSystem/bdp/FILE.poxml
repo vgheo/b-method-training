@@ -22,19 +22,19 @@
 <Define name="inv">
 <Nary_Pred op="&amp;">
 <Exp_Comparison op=":" initialTag="((file) : (seq(((FIELD) --&gt; (VALUE)))))">
-<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE.bxml:1:4:1:1:1" typref="277897435" value="file"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE.bxml:1:4:1:1:1" typref="277897435" value="file"/>
 <Unary_Exp op="seq" typref="3173643880">
 <Binary_Exp op="--&gt;" typref="1599463524">
-<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE.bxml:1:4:1:1:2:1:1" typref="3988092277" value="FIELD"/>
-<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE.bxml:1:4:1:1:2:1:2" typref="3958993484" value="VALUE"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE.bxml:1:4:1:1:2:1:1" typref="3988092277" value="FIELD"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE.bxml:1:4:1:1:2:1:2" typref="3958993484" value="VALUE"/>
 </Binary_Exp>
 </Unary_Exp>
 </Exp_Comparison>
 <Exp_Comparison op="&lt;=" initialTag="(size(file) &lt;= max_rec)">
 <Unary_Exp op="size" typref="2701647786">
-<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE.bxml:1:4:1:2:1:1" typref="277897435" value="file"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE.bxml:1:4:1:2:1:1" typref="277897435" value="file"/>
 </Unary_Exp>
-<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE.bxml:1:4:1:2:2" typref="2701647786" value="max_rec"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE.bxml:1:4:1:2:2" typref="2701647786" value="max_rec"/>
 </Exp_Comparison>
 </Nary_Pred>
 </Define>
@@ -45,14 +45,14 @@
 <Define name="cst">
 <Nary_Pred op="&amp;">
 <Set>
-<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE.bxml:1:2:1:1:1" typref="3988092277" value="FIELD"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE.bxml:1:2:1:1:1" typref="3988092277" value="FIELD"/>
 </Set>
 <Set>
-<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE.bxml:1:2:1:2:1" typref="3958993484" value="VALUE"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE.bxml:1:2:1:2:1" typref="3958993484" value="VALUE"/>
 </Set>
 <Exp_Comparison op=":">
-<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE.bxml:1:2:1:3:1" typref="2701647786" value="max_rec"/>
-<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE.bxml:1:2:1:3:2" typref="3603043417" value="NAT1"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE.bxml:1:2:1:3:1" typref="2701647786" value="max_rec"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE.bxml:1:2:1:3:2" typref="3603043417" value="NAT1"/>
 </Exp_Comparison>
 </Nary_Pred>
 </Define>
@@ -72,10 +72,10 @@
 <Nary_Sub op=";">
 <Simple_Assignement_Sub>
 <Variables>
-<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE.bxml:1:5:1:1:1" typref="277897435" value="file"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE.bxml:1:5:1:1:1" typref="277897435" value="file"/>
 </Variables>
 <Values>
-<EmptySeq tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE.bxml:1:5:1:2:1" typref="2085061915"/>
+<EmptySeq tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE.bxml:1:5:1:2:1" typref="2085061915"/>
 </Values>
 </Simple_Assignement_Sub>
 </Nary_Sub>
@@ -85,19 +85,19 @@
 <Nary_Pred op="&amp;">
 <Nary_Pred op="&amp;">
 <Exp_Comparison op=":" initialTag="((file) : (seq(((FIELD) --&gt; (VALUE)))))">
-<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE.bxml:1:4:1:1:1" typref="277897435" value="file"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE.bxml:1:4:1:1:1" typref="277897435" value="file"/>
 <Unary_Exp op="seq" typref="3173643880">
 <Binary_Exp op="--&gt;" typref="1599463524">
-<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE.bxml:1:4:1:1:2:1:1" typref="3988092277" value="FIELD"/>
-<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE.bxml:1:4:1:1:2:1:2" typref="3958993484" value="VALUE"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE.bxml:1:4:1:1:2:1:1" typref="3988092277" value="FIELD"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE.bxml:1:4:1:1:2:1:2" typref="3958993484" value="VALUE"/>
 </Binary_Exp>
 </Unary_Exp>
 </Exp_Comparison>
 <Exp_Comparison op="&lt;=" initialTag="(size(file) &lt;= max_rec)">
 <Unary_Exp op="size" typref="2701647786">
-<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE.bxml:1:4:1:2:1:1" typref="277897435" value="file"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE.bxml:1:4:1:2:1:1" typref="277897435" value="file"/>
 </Unary_Exp>
-<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE.bxml:1:4:1:2:2" typref="2701647786" value="max_rec"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE.bxml:1:4:1:2:2" typref="2701647786" value="max_rec"/>
 </Exp_Comparison>
 </Nary_Pred>
 </Nary_Pred>
@@ -122,14 +122,18 @@
 <Hypothesis>
 <Nary_Pred op="&amp;">
 <Exp_Comparison op=":">
-<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:1:3:1:1:1" typref="2701647786" value="oo"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:1:3:1:1:1" typref="2701647786" value="oo"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:1:3:1:1:2" typref="3603043417" value="NAT"/>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:1:3:1:2:1" typref="2701647786" value="oo"/>
 <Unary_Exp op="dom" typref="3603043417">
-<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:1:3:1:1:2:1" typref="277897435" value="file"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:1:3:1:2:2:1" typref="277897435" value="file"/>
 </Unary_Exp>
 </Exp_Comparison>
 <Exp_Comparison op=":">
-<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:1:3:1:2:1" typref="1177923086" value="ii"/>
-<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:1:3:1:2:2" typref="3988092277" value="FIELD"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:1:3:1:3:1" typref="1177923086" value="ii"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:1:3:1:3:2" typref="3988092277" value="FIELD"/>
 </Exp_Comparison>
 </Nary_Pred>
 </Hypothesis>
@@ -137,15 +141,15 @@
 <Sub_Calculus>
 <Simple_Assignement_Sub>
 <Variables>
-<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:1:4:1:1:1" typref="4077266551" value="vv"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:1:4:1:1:1" typref="4077266551" value="vv"/>
 </Variables>
 <Values>
 <Binary_Exp op="(" typref="4077266551">
 <Binary_Exp op="(" typref="2927107167">
-<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:1:4:1:2:1:1:1" typref="277897435" value="file"/>
-<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:1:4:1:2:1:1:2" typref="2701647786" value="oo"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:1:4:1:2:1:1:1" typref="277897435" value="file"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:1:4:1:2:1:1:2" typref="2701647786" value="oo"/>
 </Binary_Exp>
-<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:1:4:1:2:1:2" typref="1177923086" value="ii"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:1:4:1:2:1:2" typref="1177923086" value="ii"/>
 </Binary_Exp>
 </Values>
 </Simple_Assignement_Sub>
@@ -155,19 +159,19 @@
 <Nary_Pred op="&amp;">
 <Nary_Pred op="&amp;">
 <Exp_Comparison op=":" initialTag="((file) : (seq(((FIELD) --&gt; (VALUE)))))">
-<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE.bxml:1:4:1:1:1" typref="277897435" value="file"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE.bxml:1:4:1:1:1" typref="277897435" value="file"/>
 <Unary_Exp op="seq" typref="3173643880">
 <Binary_Exp op="--&gt;" typref="1599463524">
-<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE.bxml:1:4:1:1:2:1:1" typref="3988092277" value="FIELD"/>
-<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE.bxml:1:4:1:1:2:1:2" typref="3958993484" value="VALUE"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE.bxml:1:4:1:1:2:1:1" typref="3988092277" value="FIELD"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE.bxml:1:4:1:1:2:1:2" typref="3958993484" value="VALUE"/>
 </Binary_Exp>
 </Unary_Exp>
 </Exp_Comparison>
 <Exp_Comparison op="&lt;=" initialTag="(size(file) &lt;= max_rec)">
 <Unary_Exp op="size" typref="2701647786">
-<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE.bxml:1:4:1:2:1:1" typref="277897435" value="file"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE.bxml:1:4:1:2:1:1" typref="277897435" value="file"/>
 </Unary_Exp>
-<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE.bxml:1:4:1:2:2" typref="2701647786" value="max_rec"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE.bxml:1:4:1:2:2" typref="2701647786" value="max_rec"/>
 </Exp_Comparison>
 </Nary_Pred>
 </Nary_Pred>
@@ -192,18 +196,22 @@
 <Hypothesis>
 <Nary_Pred op="&amp;">
 <Exp_Comparison op=":">
-<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:2:2:1:1:1" typref="2701647786" value="oo"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:2:2:1:1:1" typref="2701647786" value="oo"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:2:2:1:1:2" typref="3603043417" value="NAT"/>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:2:2:1:2:1" typref="2701647786" value="oo"/>
 <Unary_Exp op="dom" typref="3603043417">
-<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:2:2:1:1:2:1" typref="277897435" value="file"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:2:2:1:2:2:1" typref="277897435" value="file"/>
 </Unary_Exp>
 </Exp_Comparison>
 <Exp_Comparison op=":">
-<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:2:2:1:2:1" typref="1177923086" value="ii"/>
-<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:2:2:1:2:2" typref="3988092277" value="FIELD"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:2:2:1:3:1" typref="1177923086" value="ii"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:2:2:1:3:2" typref="3988092277" value="FIELD"/>
 </Exp_Comparison>
 <Exp_Comparison op=":">
-<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:2:2:1:3:1" typref="4077266551" value="vv"/>
-<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:2:2:1:3:2" typref="3958993484" value="VALUE"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:2:2:1:4:1" typref="4077266551" value="vv"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:2:2:1:4:2" typref="3958993484" value="VALUE"/>
 </Exp_Comparison>
 </Nary_Pred>
 </Hypothesis>
@@ -211,23 +219,23 @@
 <Sub_Calculus>
 <Simple_Assignement_Sub>
 <Variables>
-<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:2:3:1:1:1:1:1" typref="277897435" value="file"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:2:3:1:1:1:1:1" typref="277897435" value="file"/>
 </Variables>
 <Values>
 <Binary_Exp op="&lt;+">
-<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:2:3:1:1:1:1:1" typref="277897435" value="file"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:2:3:1:1:1:1:1" typref="277897435" value="file"/>
 <Nary_Exp op="{">
 <Binary_Exp op="|-&gt;">
-<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:2:3:1:1:1:1:2" typref="2701647786" value="oo"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:2:3:1:1:1:1:2" typref="2701647786" value="oo"/>
 <Binary_Exp op="&lt;+">
 <Binary_Exp op="(" typref="2927107167">
-<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:2:3:1:1:1:1:1" typref="277897435" value="file"/>
-<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:2:3:1:1:1:1:2" typref="2701647786" value="oo"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:2:3:1:1:1:1:1" typref="277897435" value="file"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:2:3:1:1:1:1:2" typref="2701647786" value="oo"/>
 </Binary_Exp>
 <Nary_Exp op="{">
 <Binary_Exp op="|-&gt;">
-<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:2:3:1:1:1:2" typref="1177923086" value="ii"/>
-<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:2:3:1:2:1" typref="4077266551" value="vv"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:2:3:1:1:1:2" typref="1177923086" value="ii"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:2:3:1:2:1" typref="4077266551" value="vv"/>
 </Binary_Exp>
 </Nary_Exp>
 </Binary_Exp>
@@ -242,19 +250,19 @@
 <Nary_Pred op="&amp;">
 <Nary_Pred op="&amp;">
 <Exp_Comparison op=":" initialTag="((file) : (seq(((FIELD) --&gt; (VALUE)))))">
-<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE.bxml:1:4:1:1:1" typref="277897435" value="file"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE.bxml:1:4:1:1:1" typref="277897435" value="file"/>
 <Unary_Exp op="seq" typref="3173643880">
 <Binary_Exp op="--&gt;" typref="1599463524">
-<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE.bxml:1:4:1:1:2:1:1" typref="3988092277" value="FIELD"/>
-<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE.bxml:1:4:1:1:2:1:2" typref="3958993484" value="VALUE"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE.bxml:1:4:1:1:2:1:1" typref="3988092277" value="FIELD"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE.bxml:1:4:1:1:2:1:2" typref="3958993484" value="VALUE"/>
 </Binary_Exp>
 </Unary_Exp>
 </Exp_Comparison>
 <Exp_Comparison op="&lt;=" initialTag="(size(file) &lt;= max_rec)">
 <Unary_Exp op="size" typref="2701647786">
-<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE.bxml:1:4:1:2:1:1" typref="277897435" value="file"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE.bxml:1:4:1:2:1:1" typref="277897435" value="file"/>
 </Unary_Exp>
-<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE.bxml:1:4:1:2:2" typref="2701647786" value="max_rec"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE.bxml:1:4:1:2:2" typref="2701647786" value="max_rec"/>
 </Exp_Comparison>
 </Nary_Pred>
 </Nary_Pred>
@@ -279,14 +287,14 @@
 <Hypothesis>
 <Nary_Pred op="&amp;">
 <Exp_Comparison op=":">
-<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:3:3:1:1:1" typref="4077266551" value="vv"/>
-<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:3:3:1:1:2" typref="3958993484" value="VALUE"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:3:3:1:1:1" typref="4077266551" value="vv"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:3:3:1:1:2" typref="3958993484" value="VALUE"/>
 </Exp_Comparison>
 <Exp_Comparison op="&lt;">
 <Unary_Exp op="size" typref="2701647786">
-<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:3:3:1:2:1:1" typref="277897435" value="file"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:3:3:1:2:1:1" typref="277897435" value="file"/>
 </Unary_Exp>
-<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:3:3:1:2:2" typref="2701647786" value="max_rec"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:3:3:1:2:2" typref="2701647786" value="max_rec"/>
 </Exp_Comparison>
 </Nary_Pred>
 </Hypothesis>
@@ -295,15 +303,15 @@
 <Nary_Sub op="||">
 <Simple_Assignement_Sub>
 <Variables>
-<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:3:4:1:1:1:1" typref="277897435" value="file"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:3:4:1:1:1:1" typref="277897435" value="file"/>
 </Variables>
 <Values>
 <Binary_Exp op="&lt;-" typref="277897435">
-<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:3:4:1:1:2:1:1" typref="277897435" value="file"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:3:4:1:1:2:1:1" typref="277897435" value="file"/>
 <Binary_Exp op="*" typref="2927107167">
-<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:3:4:1:1:2:1:2:1" typref="3988092277" value="FIELD"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:3:4:1:1:2:1:2:1" typref="3988092277" value="FIELD"/>
 <Nary_Exp op="{" typref="3958993484">
-<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:3:4:1:1:2:1:2:2:1" typref="4077266551" value="vv"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:3:4:1:1:2:1:2:2:1" typref="4077266551" value="vv"/>
 </Nary_Exp>
 </Binary_Exp>
 </Binary_Exp>
@@ -311,14 +319,14 @@
 </Simple_Assignement_Sub>
 <Simple_Assignement_Sub>
 <Variables>
-<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:3:4:1:2:1:1" typref="2701647786" value="oo"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:3:4:1:2:1:1" typref="2701647786" value="oo"/>
 </Variables>
 <Values>
 <Binary_Exp op="+" typref="2701647786">
 <Unary_Exp op="size" typref="2701647786">
-<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:3:4:1:2:2:1:1:1" typref="277897435" value="file"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:3:4:1:2:2:1:1:1" typref="277897435" value="file"/>
 </Unary_Exp>
-<Integer_Literal tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:3:4:1:2:2:1:2" typref="2701647786" value="1"/>
+<Integer_Literal tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:3:4:1:2:2:1:2" typref="2701647786" value="1"/>
 </Binary_Exp>
 </Values>
 </Simple_Assignement_Sub>
@@ -329,19 +337,19 @@
 <Nary_Pred op="&amp;">
 <Nary_Pred op="&amp;">
 <Exp_Comparison op=":" initialTag="((file) : (seq(((FIELD) --&gt; (VALUE)))))">
-<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE.bxml:1:4:1:1:1" typref="277897435" value="file"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE.bxml:1:4:1:1:1" typref="277897435" value="file"/>
 <Unary_Exp op="seq" typref="3173643880">
 <Binary_Exp op="--&gt;" typref="1599463524">
-<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE.bxml:1:4:1:1:2:1:1" typref="3988092277" value="FIELD"/>
-<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE.bxml:1:4:1:1:2:1:2" typref="3958993484" value="VALUE"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE.bxml:1:4:1:1:2:1:1" typref="3988092277" value="FIELD"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE.bxml:1:4:1:1:2:1:2" typref="3958993484" value="VALUE"/>
 </Binary_Exp>
 </Unary_Exp>
 </Exp_Comparison>
 <Exp_Comparison op="&lt;=" initialTag="(size(file) &lt;= max_rec)">
 <Unary_Exp op="size" typref="2701647786">
-<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE.bxml:1:4:1:2:1:1" typref="277897435" value="file"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE.bxml:1:4:1:2:1:1" typref="277897435" value="file"/>
 </Unary_Exp>
-<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE.bxml:1:4:1:2:2" typref="2701647786" value="max_rec"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE.bxml:1:4:1:2:2" typref="2701647786" value="max_rec"/>
 </Exp_Comparison>
 </Nary_Pred>
 </Nary_Pred>
@@ -368,11 +376,11 @@
 <Sub_Calculus>
 <Simple_Assignement_Sub>
 <Variables>
-<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:4:2:1:1:1" typref="2701647786" value="vv"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:4:2:1:1:1" typref="2701647786" value="vv"/>
 </Variables>
 <Values>
 <Unary_Exp op="size" typref="2701647786">
-<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:4:2:1:2:1:1" typref="277897435" value="file"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:4:2:1:2:1:1" typref="277897435" value="file"/>
 </Unary_Exp>
 </Values>
 </Simple_Assignement_Sub>
@@ -382,19 +390,19 @@
 <Nary_Pred op="&amp;">
 <Nary_Pred op="&amp;">
 <Exp_Comparison op=":" initialTag="((file) : (seq(((FIELD) --&gt; (VALUE)))))">
-<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE.bxml:1:4:1:1:1" typref="277897435" value="file"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE.bxml:1:4:1:1:1" typref="277897435" value="file"/>
 <Unary_Exp op="seq" typref="3173643880">
 <Binary_Exp op="--&gt;" typref="1599463524">
-<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE.bxml:1:4:1:1:2:1:1" typref="3988092277" value="FIELD"/>
-<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE.bxml:1:4:1:1:2:1:2" typref="3958993484" value="VALUE"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE.bxml:1:4:1:1:2:1:1" typref="3988092277" value="FIELD"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE.bxml:1:4:1:1:2:1:2" typref="3958993484" value="VALUE"/>
 </Binary_Exp>
 </Unary_Exp>
 </Exp_Comparison>
 <Exp_Comparison op="&lt;=" initialTag="(size(file) &lt;= max_rec)">
 <Unary_Exp op="size" typref="2701647786">
-<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE.bxml:1:4:1:2:1:1" typref="277897435" value="file"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE.bxml:1:4:1:2:1:1" typref="277897435" value="file"/>
 </Unary_Exp>
-<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE.bxml:1:4:1:2:2" typref="2701647786" value="max_rec"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE.bxml:1:4:1:2:2" typref="2701647786" value="max_rec"/>
 </Exp_Comparison>
 </Nary_Pred>
 </Nary_Pred>
@@ -412,13 +420,13 @@
 <Nary_Pred op="&amp;"/>
 <Binary_Pred op="=&gt;">
 <Set>
-<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE.bxml:1:2:1:1:1" typref="3988092277" value="FIELD"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE.bxml:1:2:1:1:1" typref="3988092277" value="FIELD"/>
 </Set>
 <Nary_Pred op="&amp;">
 <Nary_Pred op="&amp;"/>
 <Binary_Pred op="=&gt;">
 <Set>
-<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE.bxml:1:2:1:2:1" typref="3958993484" value="VALUE"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE.bxml:1:2:1:2:1" typref="3958993484" value="VALUE"/>
 </Set>
 <Nary_Pred op="&amp;">
 <Binary_Pred op="&amp;">
@@ -468,11 +476,11 @@
 </Binary_Pred>
 <Binary_Pred op="=&gt;">
 <Exp_Comparison op=":" initialTag="((file) : (seq(((FIELD) --&gt; (VALUE)))))">
-<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE.bxml:1:4:1:1:1" typref="277897435" value="file"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE.bxml:1:4:1:1:1" typref="277897435" value="file"/>
 <Unary_Exp op="seq" typref="3173643880">
 <Binary_Exp op="--&gt;" typref="1599463524">
-<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE.bxml:1:4:1:1:2:1:1" typref="3988092277" value="FIELD"/>
-<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE.bxml:1:4:1:1:2:1:2" typref="3958993484" value="VALUE"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE.bxml:1:4:1:1:2:1:1" typref="3988092277" value="FIELD"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE.bxml:1:4:1:1:2:1:2" typref="3958993484" value="VALUE"/>
 </Binary_Exp>
 </Unary_Exp>
 </Exp_Comparison>
@@ -481,10 +489,10 @@
 <Nary_Pred op="&amp;">
 <Nary_Pred op="&amp;"/>
 <Exp_Comparison op=":">
-<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE.bxml:1:4:1:2:1:1" typref="277897435" value="file"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE.bxml:1:4:1:2:1:1" typref="277897435" value="file"/>
 <Unary_Exp op="seq">
 <Unary_Exp op="ran">
-<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE.bxml:1:4:1:2:1:1" typref="277897435" value="file"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE.bxml:1:4:1:2:1:1" typref="277897435" value="file"/>
 </Unary_Exp>
 </Unary_Exp>
 </Exp_Comparison>
@@ -555,15 +563,27 @@
 </Binary_Pred>
 <Binary_Pred op="=&gt;">
 <Exp_Comparison op=":">
-<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:1:3:1:1:1" typref="2701647786" value="oo"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:1:3:1:1:1" typref="2701647786" value="oo"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:1:3:1:1:2" typref="3603043417" value="NAT"/>
+</Exp_Comparison>
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+<Binary_Pred op="=&gt;">
+<Exp_Comparison op=":">
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:1:3:1:2:1" typref="2701647786" value="oo"/>
 <Unary_Exp op="dom" typref="3603043417">
-<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:1:3:1:1:2:1" typref="277897435" value="file"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:1:3:1:2:2:1" typref="277897435" value="file"/>
 </Unary_Exp>
 </Exp_Comparison>
 <Nary_Pred op="&amp;">
 <Binary_Pred op="&amp;">
 <Nary_Pred op="&amp;"/>
 <Nary_Pred op="&amp;"/>
+</Binary_Pred>
+</Nary_Pred>
 </Binary_Pred>
 </Nary_Pred>
 </Binary_Pred>
@@ -588,14 +608,18 @@
 <Hypothesis>
 <Nary_Pred op="&amp;">
 <Exp_Comparison op=":">
-<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:1:3:1:1:1" typref="2701647786" value="oo"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:1:3:1:1:1" typref="2701647786" value="oo"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:1:3:1:1:2" typref="3603043417" value="NAT"/>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:1:3:1:2:1" typref="2701647786" value="oo"/>
 <Unary_Exp op="dom" typref="3603043417">
-<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:1:3:1:1:2:1" typref="277897435" value="file"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:1:3:1:2:2:1" typref="277897435" value="file"/>
 </Unary_Exp>
 </Exp_Comparison>
 <Exp_Comparison op=":">
-<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:1:3:1:2:1" typref="1177923086" value="ii"/>
-<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:1:3:1:2:2" typref="3988092277" value="FIELD"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:1:3:1:3:1" typref="1177923086" value="ii"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:1:3:1:3:2" typref="3988092277" value="FIELD"/>
 </Exp_Comparison>
 </Nary_Pred>
 </Hypothesis>
@@ -608,49 +632,49 @@
 <Nary_Pred op="&amp;"/>
 <Nary_Pred op="&amp;"/>
 <Exp_Comparison op=":">
-<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:1:4:1:2:1:1:2" typref="2701647786" value="oo"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:1:4:1:2:1:1:2" typref="2701647786" value="oo"/>
 <Unary_Exp op="dom">
-<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:1:4:1:2:1:1:1" typref="277897435" value="file"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:1:4:1:2:1:1:1" typref="277897435" value="file"/>
 </Unary_Exp>
 </Exp_Comparison>
 <Exp_Comparison op=":">
-<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:1:4:1:2:1:1:1" typref="277897435" value="file"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:1:4:1:2:1:1:1" typref="277897435" value="file"/>
 <Binary_Exp op="+-&gt;">
 <Unary_Exp op="dom">
-<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:1:4:1:2:1:1:1" typref="277897435" value="file"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:1:4:1:2:1:1:1" typref="277897435" value="file"/>
 </Unary_Exp>
 <Unary_Exp op="ran">
-<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:1:4:1:2:1:1:1" typref="277897435" value="file"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:1:4:1:2:1:1:1" typref="277897435" value="file"/>
 </Unary_Exp>
 </Binary_Exp>
 </Exp_Comparison>
 </Nary_Pred>
 <Nary_Pred op="&amp;"/>
 <Exp_Comparison op=":">
-<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:1:4:1:2:1:2" typref="1177923086" value="ii"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:1:4:1:2:1:2" typref="1177923086" value="ii"/>
 <Unary_Exp op="dom">
 <Binary_Exp op="(" typref="2927107167">
-<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:1:4:1:2:1:1:1" typref="277897435" value="file"/>
-<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:1:4:1:2:1:1:2" typref="2701647786" value="oo"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:1:4:1:2:1:1:1" typref="277897435" value="file"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:1:4:1:2:1:1:2" typref="2701647786" value="oo"/>
 </Binary_Exp>
 </Unary_Exp>
 </Exp_Comparison>
 <Exp_Comparison op=":">
 <Binary_Exp op="(" typref="2927107167">
-<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:1:4:1:2:1:1:1" typref="277897435" value="file"/>
-<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:1:4:1:2:1:1:2" typref="2701647786" value="oo"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:1:4:1:2:1:1:1" typref="277897435" value="file"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:1:4:1:2:1:1:2" typref="2701647786" value="oo"/>
 </Binary_Exp>
 <Binary_Exp op="+-&gt;">
 <Unary_Exp op="dom">
 <Binary_Exp op="(" typref="2927107167">
-<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:1:4:1:2:1:1:1" typref="277897435" value="file"/>
-<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:1:4:1:2:1:1:2" typref="2701647786" value="oo"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:1:4:1:2:1:1:1" typref="277897435" value="file"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:1:4:1:2:1:1:2" typref="2701647786" value="oo"/>
 </Binary_Exp>
 </Unary_Exp>
 <Unary_Exp op="ran">
 <Binary_Exp op="(" typref="2927107167">
-<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:1:4:1:2:1:1:1" typref="277897435" value="file"/>
-<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:1:4:1:2:1:1:2" typref="2701647786" value="oo"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:1:4:1:2:1:1:1" typref="277897435" value="file"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:1:4:1:2:1:1:2" typref="2701647786" value="oo"/>
 </Binary_Exp>
 </Unary_Exp>
 </Binary_Exp>
@@ -683,9 +707,19 @@
 </Binary_Pred>
 <Binary_Pred op="=&gt;">
 <Exp_Comparison op=":">
-<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:2:2:1:1:1" typref="2701647786" value="oo"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:2:2:1:1:1" typref="2701647786" value="oo"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:2:2:1:1:2" typref="3603043417" value="NAT"/>
+</Exp_Comparison>
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+<Binary_Pred op="=&gt;">
+<Exp_Comparison op=":">
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:2:2:1:2:1" typref="2701647786" value="oo"/>
 <Unary_Exp op="dom" typref="3603043417">
-<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:2:2:1:1:2:1" typref="277897435" value="file"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:2:2:1:2:2:1" typref="277897435" value="file"/>
 </Unary_Exp>
 </Exp_Comparison>
 <Nary_Pred op="&amp;">
@@ -695,13 +729,15 @@
 </Binary_Pred>
 <Binary_Pred op="=&gt;">
 <Exp_Comparison op=":">
-<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:2:2:1:2:1" typref="1177923086" value="ii"/>
-<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:2:2:1:2:2" typref="3988092277" value="FIELD"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:2:2:1:3:1" typref="1177923086" value="ii"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:2:2:1:3:2" typref="3988092277" value="FIELD"/>
 </Exp_Comparison>
 <Nary_Pred op="&amp;">
 <Binary_Pred op="&amp;">
 <Nary_Pred op="&amp;"/>
 <Nary_Pred op="&amp;"/>
+</Binary_Pred>
+</Nary_Pred>
 </Binary_Pred>
 </Nary_Pred>
 </Binary_Pred>
@@ -728,18 +764,22 @@
 <Hypothesis>
 <Nary_Pred op="&amp;">
 <Exp_Comparison op=":">
-<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:2:2:1:1:1" typref="2701647786" value="oo"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:2:2:1:1:1" typref="2701647786" value="oo"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:2:2:1:1:2" typref="3603043417" value="NAT"/>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:2:2:1:2:1" typref="2701647786" value="oo"/>
 <Unary_Exp op="dom" typref="3603043417">
-<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:2:2:1:1:2:1" typref="277897435" value="file"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:2:2:1:2:2:1" typref="277897435" value="file"/>
 </Unary_Exp>
 </Exp_Comparison>
 <Exp_Comparison op=":">
-<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:2:2:1:2:1" typref="1177923086" value="ii"/>
-<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:2:2:1:2:2" typref="3988092277" value="FIELD"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:2:2:1:3:1" typref="1177923086" value="ii"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:2:2:1:3:2" typref="3988092277" value="FIELD"/>
 </Exp_Comparison>
 <Exp_Comparison op=":">
-<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:2:2:1:3:1" typref="4077266551" value="vv"/>
-<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:2:2:1:3:2" typref="3958993484" value="VALUE"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:2:2:1:4:1" typref="4077266551" value="vv"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:2:2:1:4:2" typref="3958993484" value="VALUE"/>
 </Exp_Comparison>
 </Nary_Pred>
 </Hypothesis>
@@ -756,19 +796,19 @@
 <Nary_Pred op="&amp;"/>
 <Nary_Pred op="&amp;"/>
 <Exp_Comparison op=":">
-<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:2:3:1:1:1:1:2" typref="2701647786" value="oo"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:2:3:1:1:1:1:2" typref="2701647786" value="oo"/>
 <Unary_Exp op="dom">
-<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:2:3:1:1:1:1:1" typref="277897435" value="file"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:2:3:1:1:1:1:1" typref="277897435" value="file"/>
 </Unary_Exp>
 </Exp_Comparison>
 <Exp_Comparison op=":">
-<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:2:3:1:1:1:1:1" typref="277897435" value="file"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:2:3:1:1:1:1:1" typref="277897435" value="file"/>
 <Binary_Exp op="+-&gt;">
 <Unary_Exp op="dom">
-<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:2:3:1:1:1:1:1" typref="277897435" value="file"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:2:3:1:1:1:1:1" typref="277897435" value="file"/>
 </Unary_Exp>
 <Unary_Exp op="ran">
-<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:2:3:1:1:1:1:1" typref="277897435" value="file"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:2:3:1:1:1:1:1" typref="277897435" value="file"/>
 </Unary_Exp>
 </Binary_Exp>
 </Exp_Comparison>
@@ -807,18 +847,18 @@
 </Binary_Pred>
 <Binary_Pred op="=&gt;">
 <Exp_Comparison op=":">
-<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:3:3:1:1:1" typref="4077266551" value="vv"/>
-<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:3:3:1:1:2" typref="3958993484" value="VALUE"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:3:3:1:1:1" typref="4077266551" value="vv"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:3:3:1:1:2" typref="3958993484" value="VALUE"/>
 </Exp_Comparison>
 <Nary_Pred op="&amp;">
 <Binary_Pred op="&amp;">
 <Nary_Pred op="&amp;">
 <Nary_Pred op="&amp;"/>
 <Exp_Comparison op=":">
-<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:3:3:1:2:1:1" typref="277897435" value="file"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:3:3:1:2:1:1" typref="277897435" value="file"/>
 <Unary_Exp op="seq">
 <Unary_Exp op="ran">
-<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:3:3:1:2:1:1" typref="277897435" value="file"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:3:3:1:2:1:1" typref="277897435" value="file"/>
 </Unary_Exp>
 </Unary_Exp>
 </Exp_Comparison>
@@ -848,14 +888,14 @@
 <Hypothesis>
 <Nary_Pred op="&amp;">
 <Exp_Comparison op=":">
-<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:3:3:1:1:1" typref="4077266551" value="vv"/>
-<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:3:3:1:1:2" typref="3958993484" value="VALUE"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:3:3:1:1:1" typref="4077266551" value="vv"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:3:3:1:1:2" typref="3958993484" value="VALUE"/>
 </Exp_Comparison>
 <Exp_Comparison op="&lt;">
 <Unary_Exp op="size" typref="2701647786">
-<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:3:3:1:2:1:1" typref="277897435" value="file"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:3:3:1:2:1:1" typref="277897435" value="file"/>
 </Unary_Exp>
-<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:3:3:1:2:2" typref="2701647786" value="max_rec"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:3:3:1:2:2" typref="2701647786" value="max_rec"/>
 </Exp_Comparison>
 </Nary_Pred>
 </Hypothesis>
@@ -871,10 +911,10 @@
 <Nary_Pred op="&amp;"/>
 </Binary_Pred>
 <Exp_Comparison op=":">
-<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:3:4:1:1:2:1:1" typref="277897435" value="file"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:3:4:1:1:2:1:1" typref="277897435" value="file"/>
 <Unary_Exp op="seq">
 <Unary_Exp op="ran">
-<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:3:4:1:1:2:1:1" typref="277897435" value="file"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:3:4:1:1:2:1:1" typref="277897435" value="file"/>
 </Unary_Exp>
 </Unary_Exp>
 </Exp_Comparison>
@@ -884,10 +924,10 @@
 <Nary_Pred op="&amp;">
 <Nary_Pred op="&amp;"/>
 <Exp_Comparison op=":">
-<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:3:4:1:2:2:1:1:1" typref="277897435" value="file"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:3:4:1:2:2:1:1:1" typref="277897435" value="file"/>
 <Unary_Exp op="seq">
 <Unary_Exp op="ran">
-<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:3:4:1:2:2:1:1:1" typref="277897435" value="file"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:3:4:1:2:2:1:1:1" typref="277897435" value="file"/>
 </Unary_Exp>
 </Unary_Exp>
 </Exp_Comparison>
@@ -939,10 +979,10 @@
 <Nary_Pred op="&amp;">
 <Nary_Pred op="&amp;"/>
 <Exp_Comparison op=":">
-<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:4:2:1:2:1:1" typref="277897435" value="file"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:4:2:1:2:1:1" typref="277897435" value="file"/>
 <Unary_Exp op="seq">
 <Unary_Exp op="ran">
-<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:4:2:1:2:1:1" typref="277897435" value="file"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE.bxml:1:6:4:2:1:2:1:1" typref="277897435" value="file"/>
 </Unary_Exp>
 </Unary_Exp>
 </Exp_Comparison>
@@ -953,31 +993,31 @@
 </Proof_Obligation>
 <TypeInfos>
 <Type id="2701647786">
-<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE.bxml:1:7:1:1" value="INTEGER"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE.bxml:1:7:1:1" value="INTEGER"/>
 </Type>
 <Type id="3988092277">
 <Unary_Exp op="POW">
-<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE.bxml:1:7:2:1:1" value="FIELD"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE.bxml:1:7:2:1:1" value="FIELD"/>
 </Unary_Exp>
 </Type>
 <Type id="3958993484">
 <Unary_Exp op="POW">
-<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE.bxml:1:7:3:1:1" value="VALUE"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE.bxml:1:7:3:1:1" value="VALUE"/>
 </Unary_Exp>
 </Type>
 <Type id="3603043417">
 <Unary_Exp op="POW">
-<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE.bxml:1:7:4:1:1" value="INTEGER"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE.bxml:1:7:4:1:1" value="INTEGER"/>
 </Unary_Exp>
 </Type>
 <Type id="277897435">
 <Unary_Exp op="POW">
 <Binary_Exp op="*">
-<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE.bxml:1:7:5:1:1:1" value="INTEGER"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE.bxml:1:7:5:1:1:1" value="INTEGER"/>
 <Unary_Exp op="POW">
 <Binary_Exp op="*">
-<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE.bxml:1:7:5:1:1:2:1:1" value="FIELD"/>
-<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE.bxml:1:7:5:1:1:2:1:2" value="VALUE"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE.bxml:1:7:5:1:1:2:1:1" value="FIELD"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE.bxml:1:7:5:1:1:2:1:2" value="VALUE"/>
 </Binary_Exp>
 </Unary_Exp>
 </Binary_Exp>
@@ -987,11 +1027,11 @@
 <Unary_Exp op="POW">
 <Unary_Exp op="POW">
 <Binary_Exp op="*">
-<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE.bxml:1:7:6:1:1:1:1" value="INTEGER"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE.bxml:1:7:6:1:1:1:1" value="INTEGER"/>
 <Unary_Exp op="POW">
 <Binary_Exp op="*">
-<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE.bxml:1:7:6:1:1:1:2:1:1" value="FIELD"/>
-<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE.bxml:1:7:6:1:1:1:2:1:2" value="VALUE"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE.bxml:1:7:6:1:1:1:2:1:1" value="FIELD"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE.bxml:1:7:6:1:1:1:2:1:2" value="VALUE"/>
 </Binary_Exp>
 </Unary_Exp>
 </Binary_Exp>
@@ -1002,8 +1042,8 @@
 <Unary_Exp op="POW">
 <Unary_Exp op="POW">
 <Binary_Exp op="*">
-<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE.bxml:1:7:7:1:1:1:1" value="FIELD"/>
-<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE.bxml:1:7:7:1:1:1:2" value="VALUE"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE.bxml:1:7:7:1:1:1:1" value="FIELD"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE.bxml:1:7:7:1:1:1:2" value="VALUE"/>
 </Binary_Exp>
 </Unary_Exp>
 </Unary_Exp>
@@ -1011,13 +1051,13 @@
 <Type id="2085061915">
 <Unary_Exp op="POW">
 <Binary_Exp op="*">
-<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE.bxml:1:7:8:1:1:1" value="INTEGER"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE.bxml:1:7:8:1:1:1" value="INTEGER"/>
 <Unary_Exp op="POW">
 <Unary_Exp op="POW">
 <Unary_Exp op="POW">
 <Binary_Exp op="*">
-<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE.bxml:1:7:8:1:1:2:1:1:1:1" value="FIELD"/>
-<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE.bxml:1:7:8:1:1:2:1:1:1:2" value="VALUE"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE.bxml:1:7:8:1:1:2:1:1:1:1" value="FIELD"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE.bxml:1:7:8:1:1:2:1:1:1:2" value="VALUE"/>
 </Binary_Exp>
 </Unary_Exp>
 </Unary_Exp>
@@ -1026,16 +1066,16 @@
 </Unary_Exp>
 </Type>
 <Type id="4077266551">
-<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE.bxml:1:7:9:1" value="VALUE"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE.bxml:1:7:9:1" value="VALUE"/>
 </Type>
 <Type id="1177923086">
-<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE.bxml:1:7:10:1" value="FIELD"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE.bxml:1:7:10:1" value="FIELD"/>
 </Type>
 <Type id="2927107167">
 <Unary_Exp op="POW">
 <Binary_Exp op="*">
-<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE.bxml:1:7:11:1:1:1" value="FIELD"/>
-<Id tag="A:\b-method-training-atelierb\atelierb\DatabaseSystem\bdp\FILE.bxml:1:7:11:1:1:2" value="VALUE"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE.bxml:1:7:11:1:1:1" value="FIELD"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE.bxml:1:7:11:1:1:2" value="VALUE"/>
 </Binary_Exp>
 </Unary_Exp>
 </Type>

@@ -23,6 +23,7 @@ OPERATIONS
     */
     vv<--val_file(oo,ii)=
     PRE
+        oo:NAT & /*concrete typing*/
         oo:dom(file) &
         ii:FIELD
     THEN
@@ -33,7 +34,8 @@ OPERATIONS
     mod_file modifies the value of a particular field of a certain record in the file
     */
     mod_file(oo,ii,vv)=
-    PRE
+    PRE 
+         oo:NAT & /*concrete typing*/
         oo:dom(file) &
         ii:FIELD &
         vv:VALUE

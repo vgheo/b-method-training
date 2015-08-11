@@ -17,6 +17,7 @@ INITIALISATION
        buffer,bfile,updated := {},[],FALSE
 
 INVARIANT
+      name : NAT & /*concrete typing*/
       name : 0..size(bfile) &
       record : FIELD --> VALUE &
       buffer = {0} <<|{name|->record}

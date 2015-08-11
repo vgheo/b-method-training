@@ -21,6 +21,7 @@ INVARIANT
 OPERATIONS
     READ_FILE ( ii ) =
     PRE
+        ii : NAT & /*typing expression for B0 check*/
         ii : dom ( file_vrb )
     THEN
         buf_vrb := file_vrb ( ii )
@@ -28,6 +29,7 @@ OPERATIONS
 
     WRITE_FILE ( ii ) =
     PRE
+        ii : NAT & /*typing expression for B0 check*/
         ii : dom ( file_vrb )
     THEN
     file_vrb ( ii ) := buf_vrb

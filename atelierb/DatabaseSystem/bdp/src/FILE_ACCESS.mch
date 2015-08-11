@@ -11,7 +11,9 @@ CONCRETE_VARIABLES
     bfile , buffer , updated
 
 INVARIANT
+    bfile : NAT1 --> ( FIELD --> VALUE ) & /*concrete typing for B0 check*/
     bfile : seq ( FIELD --> VALUE ) &
+    buffer : NAT1 --> ( FIELD --> VALUE ) & /*Valid relation type for concrete type(total function expected) & concrete typing  */
     buffer : dom ( bfile ) +-> ( FIELD --> VALUE ) &
     updated : BOOL &
     ( updated = FALSE => buffer <: bfile ) &
@@ -23,6 +25,7 @@ INITIALISATION
 OPERATIONS
 get_record ( oo ) =
     PRE
+    oo : NAT & /*concrete typing for B0 check*/
     oo : dom ( bfile )
     THEN
     buffer := { oo |-> bfile ( oo ) } ||
@@ -48,6 +51,7 @@ oo <-- create_record ( vv ) =
 
 vv <-- not_in_buffer ( oo ) =
     PRE
+    oo : NAT1 & /*concrete typing for B0 check*/
     oo : 1 .. size ( bfile )
     THEN
     vv := bool ( oo /: dom ( buffer ) )
@@ -55,6 +59,7 @@ vv <-- not_in_buffer ( oo ) =
 
 mod_buffer ( oo , ii , vv ) =
     PRE
+    oo : NAT & /*concrete typing for B0 check*/
     oo : dom ( buffer ) &
     ii : FIELD &
     vv : VALUE
@@ -69,6 +74,7 @@ END ;
 
 vv <-- val_buffer ( oo , ii ) =
     PRE
+    oo : NAT & /*concrete typing for B0 check*/
     oo : dom ( buffer ) &
     ii : FIELD
     THEN

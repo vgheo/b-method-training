@@ -124,14 +124,14 @@ THEORY ListPreconditionX IS
   Own_Precondition(Implementation(FILE_1),create_record)==(vv: VALUE & size(bfile)/=max_rec);
   List_Precondition(Implementation(FILE_1),create_record)==(vv: VALUE & size(bfile)/=max_rec);
   Own_Precondition(Implementation(FILE_1),mod_file)==(btrue);
-  List_Precondition(Implementation(FILE_1),mod_file)==(oo: dom(file) & ii: FIELD & vv: VALUE);
+  List_Precondition(Implementation(FILE_1),mod_file)==(oo: NAT & oo: dom(file) & ii: FIELD & vv: VALUE);
   Own_Precondition(Implementation(FILE_1),val_file)==(btrue);
-  List_Precondition(Implementation(FILE_1),val_file)==(oo: dom(file) & ii: FIELD)
+  List_Precondition(Implementation(FILE_1),val_file)==(oo: NAT & oo: dom(file) & ii: FIELD)
 END
 &
 THEORY ListSubstitutionX IS
-  Expanded_List_Substitution(Implementation(FILE_1),val_file)==(oo: dom(file) & ii: FIELD | @test.((oo: 1..size(bfile) | test:=bool(oo/:dom(buffer)));(test = TRUE ==> (oo: dom(bfile) & oo/:dom(buffer) | bfile,buffer:=bfile<+buffer,{oo|->bfile(oo)}) [] not(test = TRUE) ==> skip);(oo: dom(buffer) & ii: FIELD | vv:=buffer(oo)(ii))));
-  Expanded_List_Substitution(Implementation(FILE_1),mod_file)==(oo: dom(file) & ii: FIELD & vv: VALUE | @test.((oo: 1..size(bfile) | test:=bool(oo/:dom(buffer)));(test = TRUE ==> (oo: dom(bfile) & oo/:dom(buffer) | bfile,buffer:=bfile<+buffer,{oo|->bfile(oo)}) [] not(test = TRUE) ==> skip);(oo: dom(buffer) & ii: FIELD & vv: VALUE | buffer:=buffer<+{oo|->(buffer(oo)<+{ii|->vv})})));
+  Expanded_List_Substitution(Implementation(FILE_1),val_file)==(oo: NAT & oo: dom(file) & ii: FIELD | @test.((oo: NAT1 & oo: 1..size(bfile) | test:=bool(oo/:dom(buffer)));(test = TRUE ==> (oo: NAT & oo: dom(bfile) & oo/:dom(buffer) | bfile,buffer:=bfile<+buffer,{oo|->bfile(oo)}) [] not(test = TRUE) ==> skip);(oo: NAT & oo: dom(buffer) & ii: FIELD | vv:=buffer(oo)(ii))));
+  Expanded_List_Substitution(Implementation(FILE_1),mod_file)==(oo: NAT & oo: dom(file) & ii: FIELD & vv: VALUE | @test.((oo: NAT1 & oo: 1..size(bfile) | test:=bool(oo/:dom(buffer)));(test = TRUE ==> (oo: NAT & oo: dom(bfile) & oo/:dom(buffer) | bfile,buffer:=bfile<+buffer,{oo|->bfile(oo)}) [] not(test = TRUE) ==> skip);(oo: NAT & oo: dom(buffer) & ii: FIELD & vv: VALUE | buffer:=buffer<+{oo|->(buffer(oo)<+{ii|->vv})})));
   List_Substitution(Implementation(FILE_1),size_file)==(vv:=size(bfile));
   Expanded_List_Substitution(Implementation(FILE_1),size_file)==(btrue | vv:=size(bfile));
   List_Substitution(Implementation(FILE_1),create_record)==(bfile:=bfile<-FIELD*{vv} || oo:=size(bfile)+1);
