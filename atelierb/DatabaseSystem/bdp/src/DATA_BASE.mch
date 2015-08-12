@@ -8,9 +8,10 @@ SETS
     PERSON
 SEES
     BASIC_SEX , BASIC_STATUS
-ABSTRACT_CONSTANTS
+CONCRETE_CONSTANTS
     max_pers
 PROPERTIES
+    max_pers : NAT &
     max_pers = card ( PERSON )
 ABSTRACT_VARIABLES
     person , sex , status , mother , husband , wife
@@ -40,6 +41,8 @@ INITIALISATION
 OPERATIONS
     death ( pp ) =
     PRE
+        pp : PERSON &
+        pp : person &
         pp : status ~ [ { living } ]
     THEN
         status ( pp ) := dead
@@ -47,8 +50,13 @@ OPERATIONS
 
     marriage ( bride , groom ) =
     PRE
+        bride : PERSON & /* concrete typing*/
+        bride : person & /* concrete typing*/
         bride : person - dom ( husband \/ wife ) /\ sex ~ [ { woman } ] &
+        groom : PERSON & /* concrete typing*/
+        groom : person & /* concrete typing*/
         groom : person - dom ( husband \/ wife ) /\ sex ~ [ { man } ]
+
     THEN
         husband ( bride ) := groom ||
         wife ( groom ) := bride
@@ -72,6 +80,7 @@ OPERATIONS
     PRE
         PERSON - person /= {} &
         ss : SEX &
+        mm : PERSON & /*Invalid ident type abstrat variable for identifier person(concrete data expected) */
         mm : dom ( husband \/ wife ) /\ sex ~ [ { woman } ]
     THEN
         ANY angel WHERE
@@ -97,12 +106,14 @@ OPERATIONS
 
     report <-- is_living ( pp ) =
     PRE
+        pp : PERSON & /*Invalid ident type abstrat variable for identifier person(concrete data expected) */
         pp : person
     THEN
         report := bool ( pp : status ~ [ { living } ] )
     END ;
     report <-- is_woman ( pp ) =
     PRE
+        pp : PERSON & /*Invalid ident type abstrat variable for identifier person(concrete data expected) */
         pp : person
     THEN
         report := bool ( pp : sex ~ [ { woman } ] )
@@ -110,6 +121,7 @@ OPERATIONS
 
     report <-- is_married ( pp ) =
     PRE
+        pp : PERSON & /*Invalid ident type abstrat variable for identifier person(concrete data expected) */
         pp : person
     THEN
         report := bool ( pp : dom ( husband \/ wife ) )
@@ -117,6 +129,7 @@ OPERATIONS
 
     report <-- has_mother ( pp ) =
     PRE
+        pp : PERSON & /*Invalid ident type abstrat variable for identifier person(concrete data expected) */
         pp : person
     THEN
         report := bool ( pp : dom ( mother ) )
@@ -124,6 +137,7 @@ OPERATIONS
 
     vv <-- val_status ( pp ) =
     PRE
+        pp : PERSON & /*Invalid ident type abstrat variable for identifier person(concrete data expected) */
         pp : person
     THEN
         vv := status ( pp )
@@ -132,6 +146,7 @@ OPERATIONS
 
     vv <-- val_sex ( pp ) =
     PRE
+        pp : PERSON & /*Invalid ident type abstrat variable for identifier person(concrete data expected) */
         pp : person
     THEN
         vv := sex ( pp )
@@ -139,14 +154,20 @@ OPERATIONS
 
     vv <-- val_spouse ( pp ) =
     PRE
-        pp : dom ( husband \/ wife )
+        pp : PERSON & /*Invalid ident type abstrat variable for identifier person(concrete data expected) */
+        pp : person & /* concrete typing*/
+        pp : dom ( husband \/ wife ) &
+        vv : PERSON
     THEN
         vv := ( husband \/ wife ) ( pp )
     END ;
 
     vv <-- val_mother ( pp ) =
     PRE
-        pp : dom ( mother )
+        pp : PERSON &
+        pp : person &
+        pp : dom ( mother ) &
+        vv : PERSON
     THEN
         vv := ( mother ) ( pp )
     END ;
