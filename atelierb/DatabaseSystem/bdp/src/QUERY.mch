@@ -18,7 +18,7 @@ SEES
 OPERATIONS
     pp , bb <-- get_new_dead_person =
     CHOICE
-        pp :: status ~ [ { living } ] ||
+        pp :: PERSON /\ status ~ [ { living } ] || /*parameter is not implementable(typed with abstract variable person)*/
         bb := TRUE
     OR
         pp :: PERSON ||
@@ -35,8 +35,8 @@ OPERATIONS
 
     mm , ww , bb <-- get_new_couple =
     CHOICE
-        mm :: person - dom ( husband \/ wife ) /\ sex ~ [ { man } ] ||
-        ww :: person - dom ( husband \/ wife ) /\ sex ~ [ { woman } ] ||
+        mm :: PERSON /\ ( person - dom ( husband \/ wife ) /\ sex ~ [ { man } ] ) || /*parameter is not implementable(typed with abstract variable person)*/
+        ww :: PERSON /\ ( person - dom ( husband \/ wife ) /\ sex ~ [ { woman } ] ) || /*parameter is not implementable(typed with abstract variable person)*/
         bb := TRUE
     OR
         mm :: PERSON ||
@@ -47,7 +47,7 @@ OPERATIONS
     ss , ww , bb <-- get_sex_and_mother =
     CHOICE
         ss :: SEX ||
-        ww :: dom ( husband \/ wife ) /\ sex ~ [ { woman } ] ||
+        ww :: PERSON /\ ( dom ( husband \/ wife ) /\ sex ~ [ { woman } ] ) || /*parameter is not implementable(typed with abstract variable person)*/
         bb := bool ( PERSON - person /= {} )
     OR
         ss :: SEX ||

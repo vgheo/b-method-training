@@ -136,16 +136,16 @@ THEORY ListPreconditionX IS
 END
 &
 THEORY ListSubstitutionX IS
-  Expanded_List_Substitution(Machine(QUERY),get_sex_and_mother)==(btrue | @(ss$0).(ss$0: SEX ==> ss:=ss$0) || @(ww$0).(ww$0: dom(husband\/wife)/\sex~[{woman}] ==> ww:=ww$0) || bb:=bool(PERSON-person/={}) [] (@(ss$0).(ss$0: SEX ==> ss:=ss$0) || @(ww$0).(ww$0: PERSON ==> ww:=ww$0) || bb:=FALSE));
-  Expanded_List_Substitution(Machine(QUERY),get_new_couple)==(btrue | @(mm$0).(mm$0: person-dom(husband\/wife)/\sex~[{man}] ==> mm:=mm$0) || @(ww$0).(ww$0: person-dom(husband\/wife)/\sex~[{woman}] ==> ww:=ww$0) || bb:=TRUE [] (@(mm$0).(mm$0: PERSON ==> mm:=mm$0) || @(ww$0).(ww$0: PERSON ==> ww:=ww$0) || bb:=FALSE));
+  Expanded_List_Substitution(Machine(QUERY),get_sex_and_mother)==(btrue | @(ss$0).(ss$0: SEX ==> ss:=ss$0) || @(ww$0).(ww$0: PERSON/\(dom(husband\/wife)/\sex~[{woman}]) ==> ww:=ww$0) || bb:=bool(PERSON-person/={}) [] (@(ss$0).(ss$0: SEX ==> ss:=ss$0) || @(ww$0).(ww$0: PERSON ==> ww:=ww$0) || bb:=FALSE));
+  Expanded_List_Substitution(Machine(QUERY),get_new_couple)==(btrue | @(mm$0).(mm$0: PERSON/\(person-dom(husband\/wife)/\sex~[{man}]) ==> mm:=mm$0) || @(ww$0).(ww$0: PERSON/\(person-dom(husband\/wife)/\sex~[{woman}]) ==> ww:=ww$0) || bb:=TRUE [] (@(mm$0).(mm$0: PERSON ==> mm:=mm$0) || @(ww$0).(ww$0: PERSON ==> ww:=ww$0) || bb:=FALSE));
   Expanded_List_Substitution(Machine(QUERY),get_and_print_person)==(btrue | skip);
   Expanded_List_Substitution(Machine(QUERY),get_sex_of_new)==(btrue | @(ss$0).(ss$0: SEX ==> ss:=ss$0) || bb:=bool(PERSON-person/={}));
-  Expanded_List_Substitution(Machine(QUERY),get_new_dead_person)==(btrue | @(pp$0).(pp$0: status~[{living}] ==> pp:=pp$0) || bb:=TRUE [] (@(pp$0).(pp$0: PERSON ==> pp:=pp$0) || bb:=FALSE));
-  List_Substitution(Machine(QUERY),get_new_dead_person)==(CHOICE pp:: status~[{living}] || bb:=TRUE OR pp:: PERSON || bb:=FALSE END);
+  Expanded_List_Substitution(Machine(QUERY),get_new_dead_person)==(btrue | @(pp$0).(pp$0: PERSON/\status~[{living}] ==> pp:=pp$0) || bb:=TRUE [] (@(pp$0).(pp$0: PERSON ==> pp:=pp$0) || bb:=FALSE));
+  List_Substitution(Machine(QUERY),get_new_dead_person)==(CHOICE pp:: PERSON/\status~[{living}] || bb:=TRUE OR pp:: PERSON || bb:=FALSE END);
   List_Substitution(Machine(QUERY),get_sex_of_new)==(ss:: SEX || bb:=bool(PERSON-person/={}));
   List_Substitution(Machine(QUERY),get_and_print_person)==(skip);
-  List_Substitution(Machine(QUERY),get_new_couple)==(CHOICE mm:: person-dom(husband\/wife)/\sex~[{man}] || ww:: person-dom(husband\/wife)/\sex~[{woman}] || bb:=TRUE OR mm:: PERSON || ww:: PERSON || bb:=FALSE END);
-  List_Substitution(Machine(QUERY),get_sex_and_mother)==(CHOICE ss:: SEX || ww:: dom(husband\/wife)/\sex~[{woman}] || bb:=bool(PERSON-person/={}) OR ss:: SEX || ww:: PERSON || bb:=FALSE END)
+  List_Substitution(Machine(QUERY),get_new_couple)==(CHOICE mm:: PERSON/\(person-dom(husband\/wife)/\sex~[{man}]) || ww:: PERSON/\(person-dom(husband\/wife)/\sex~[{woman}]) || bb:=TRUE OR mm:: PERSON || ww:: PERSON || bb:=FALSE END);
+  List_Substitution(Machine(QUERY),get_sex_and_mother)==(CHOICE ss:: SEX || ww:: PERSON/\(dom(husband\/wife)/\sex~[{woman}]) || bb:=bool(PERSON-person/={}) OR ss:: SEX || ww:: PERSON || bb:=FALSE END)
 END
 &
 THEORY ListConstantsX IS
@@ -178,7 +178,7 @@ END
 &
 THEORY ListPropertiesX IS
   Abstract_List_Properties(Machine(QUERY))==(btrue);
-  Context_List_Properties(Machine(QUERY))==(max_pers = card(PERSON) & PERSON: FIN(INTEGER) & not(PERSON = {}) & code_SEX: SEX >->> {0,1} & decode_SEX = code_SEX~ & SEX: FIN(INTEGER) & not(SEX = {}) & code_STATUS: STATUS >->> {0,1} & decode_STATUS = code_STATUS~ & STATUS: FIN(INTEGER) & not(STATUS = {}));
+  Context_List_Properties(Machine(QUERY))==(max_pers: NAT & max_pers = card(PERSON) & PERSON: FIN(INTEGER) & not(PERSON = {}) & code_SEX: SEX >->> 0..1 & decode_SEX: 0..1 >->> SEX & decode_SEX = code_SEX~ & SEX: FIN(INTEGER) & not(SEX = {}) & code_STATUS: STATUS >->> {0,1} & decode_STATUS = code_STATUS~ & STATUS: FIN(INTEGER) & not(STATUS = {}));
   Inherited_List_Properties(Machine(QUERY))==(btrue);
   List_Properties(Machine(QUERY))==(btrue)
 END
@@ -188,7 +188,7 @@ THEORY ListSeenInfoX IS
   Seen_Context_List_Enumerated(Machine(QUERY))==(SEX,STATUS);
   Seen_Context_List_Invariant(Machine(QUERY))==(btrue);
   Seen_Context_List_Assertions(Machine(QUERY))==(btrue);
-  Seen_Context_List_Properties(Machine(QUERY))==(code_SEX: SEX >->> {0,1} & decode_SEX = code_SEX~ & SEX: FIN(INTEGER) & not(SEX = {}) & code_STATUS: STATUS >->> {0,1} & decode_STATUS = code_STATUS~ & STATUS: FIN(INTEGER) & not(STATUS = {}));
+  Seen_Context_List_Properties(Machine(QUERY))==(code_SEX: SEX >->> 0..1 & decode_SEX: 0..1 >->> SEX & decode_SEX = code_SEX~ & SEX: FIN(INTEGER) & not(SEX = {}) & code_STATUS: STATUS >->> {0,1} & decode_STATUS = code_STATUS~ & STATUS: FIN(INTEGER) & not(STATUS = {}));
   Seen_List_Constraints(Machine(QUERY))==(btrue);
   Seen_List_Precondition(Machine(QUERY),STATUS_WRITE)==(ii: STATUS);
   Seen_Expanded_List_Substitution(Machine(QUERY),STATUS_WRITE)==(skip);
@@ -208,33 +208,33 @@ THEORY ListSeenInfoX IS
   Seen_Expanded_List_Substitution(Machine(QUERY),PERSON_write)==(skip);
   Seen_List_Precondition(Machine(QUERY),PERSON_read)==(btrue);
   Seen_Expanded_List_Substitution(Machine(QUERY),PERSON_read)==(@(pp$0).(pp$0: PERSON ==> pp:=pp$0));
-  Seen_List_Precondition(Machine(QUERY),val_mother)==(pp: dom(mother));
+  Seen_List_Precondition(Machine(QUERY),val_mother)==(pp: PERSON & pp: person & pp: dom(mother) & vv: PERSON);
   Seen_Expanded_List_Substitution(Machine(QUERY),val_mother)==(vv:=mother(pp));
-  Seen_List_Precondition(Machine(QUERY),val_spouse)==(pp: dom(husband\/wife));
+  Seen_List_Precondition(Machine(QUERY),val_spouse)==(pp: PERSON & pp: person & pp: dom(husband\/wife) & vv: PERSON);
   Seen_Expanded_List_Substitution(Machine(QUERY),val_spouse)==(vv:=(husband\/wife)(pp));
-  Seen_List_Precondition(Machine(QUERY),val_sex)==(pp: person);
+  Seen_List_Precondition(Machine(QUERY),val_sex)==(pp: PERSON & pp: person);
   Seen_Expanded_List_Substitution(Machine(QUERY),val_sex)==(vv:=sex(pp));
-  Seen_List_Precondition(Machine(QUERY),val_status)==(pp: person);
+  Seen_List_Precondition(Machine(QUERY),val_status)==(pp: PERSON & pp: person);
   Seen_Expanded_List_Substitution(Machine(QUERY),val_status)==(vv:=status(pp));
-  Seen_List_Precondition(Machine(QUERY),has_mother)==(pp: person);
+  Seen_List_Precondition(Machine(QUERY),has_mother)==(pp: PERSON & pp: person);
   Seen_Expanded_List_Substitution(Machine(QUERY),has_mother)==(report:=bool(pp: dom(mother)));
-  Seen_List_Precondition(Machine(QUERY),is_married)==(pp: person);
+  Seen_List_Precondition(Machine(QUERY),is_married)==(pp: PERSON & pp: person);
   Seen_Expanded_List_Substitution(Machine(QUERY),is_married)==(report:=bool(pp: dom(husband\/wife)));
-  Seen_List_Precondition(Machine(QUERY),is_woman)==(pp: person);
+  Seen_List_Precondition(Machine(QUERY),is_woman)==(pp: PERSON & pp: person);
   Seen_Expanded_List_Substitution(Machine(QUERY),is_woman)==(report:=bool(pp: sex~[{woman}]));
-  Seen_List_Precondition(Machine(QUERY),is_living)==(pp: person);
+  Seen_List_Precondition(Machine(QUERY),is_living)==(pp: PERSON & pp: person);
   Seen_Expanded_List_Substitution(Machine(QUERY),is_living)==(report:=bool(pp: status~[{living}]));
   Seen_List_Precondition(Machine(QUERY),is_present)==(pp: PERSON);
   Seen_Expanded_List_Substitution(Machine(QUERY),is_present)==(report:=bool(pp: person));
   Seen_List_Precondition(Machine(QUERY),not_saturated)==(btrue);
   Seen_Expanded_List_Substitution(Machine(QUERY),not_saturated)==(report:=bool(PERSON-person/={}));
-  Seen_List_Precondition(Machine(QUERY),new_born)==(PERSON-person/={} & ss: SEX & mm: dom(husband\/wife)/\sex~[{woman}]);
+  Seen_List_Precondition(Machine(QUERY),new_born)==(PERSON-person/={} & ss: SEX & mm: PERSON & mm: dom(husband\/wife)/\sex~[{woman}]);
   Seen_Expanded_List_Substitution(Machine(QUERY),new_born)==(@angel.(angel: PERSON-person ==> person,status,sex,mother,baby:=person\/{angel},status<+{angel|->living},sex<+{angel|->ss},mother<+{angel|->mm},angel));
   Seen_List_Precondition(Machine(QUERY),first_human)==(PERSON-person/={} & ss: SEX);
   Seen_Expanded_List_Substitution(Machine(QUERY),first_human)==(@angel.(angel: PERSON-person ==> person,status,sex,baby:=person\/{angel},status<+{angel|->living},sex<+{angel|->ss},angel));
-  Seen_List_Precondition(Machine(QUERY),marriage)==(bride: person-dom(husband\/wife)/\sex~[{woman}] & groom: person-dom(husband\/wife)/\sex~[{man}]);
+  Seen_List_Precondition(Machine(QUERY),marriage)==(bride: PERSON & bride: person & bride: person-dom(husband\/wife)/\sex~[{woman}] & groom: PERSON & groom: person & groom: person-dom(husband\/wife)/\sex~[{man}]);
   Seen_Expanded_List_Substitution(Machine(QUERY),marriage)==(husband,wife:=husband<+{bride|->groom},wife<+{groom|->bride});
-  Seen_List_Precondition(Machine(QUERY),death)==(pp: status~[{living}]);
+  Seen_List_Precondition(Machine(QUERY),death)==(pp: PERSON & pp: person & pp: status~[{living}]);
   Seen_Expanded_List_Substitution(Machine(QUERY),death)==(status:=status<+{pp|->dead});
   Seen_List_Operations(Machine(QUERY),Machine(DATA_BASE))==(death,marriage,first_human,new_born,not_saturated,is_present,is_living,is_woman,is_married,has_mother,val_status,val_sex,val_spouse,val_mother,PERSON_read,PERSON_write);
   Seen_Expanded_List_Invariant(Machine(QUERY),Machine(DATA_BASE))==(btrue);
@@ -261,14 +261,14 @@ THEORY ListOfIdsX IS
   List_Of_VisibleCst_Ids(Machine(BASIC_STATUS)) == (?);
   List_Of_VisibleVar_Ids(Machine(BASIC_STATUS)) == (? | ?);
   List_Of_Ids_SeenBNU(Machine(BASIC_STATUS)) == (?: ?);
-  List_Of_Ids(Machine(BASIC_SEX)) == (SEX,man,woman | ? | ? | ? | SEX_READ,SEX_WRITE | ? | ? | ? | BASIC_SEX);
-  List_Of_HiddenCst_Ids(Machine(BASIC_SEX)) == (decode_SEX,code_SEX | ?);
-  List_Of_VisibleCst_Ids(Machine(BASIC_SEX)) == (?);
+  List_Of_Ids(Machine(BASIC_SEX)) == (code_SEX,decode_SEX,SEX,man,woman | ? | ? | ? | SEX_READ,SEX_WRITE | ? | ? | ? | BASIC_SEX);
+  List_Of_HiddenCst_Ids(Machine(BASIC_SEX)) == (? | ?);
+  List_Of_VisibleCst_Ids(Machine(BASIC_SEX)) == (code_SEX,decode_SEX);
   List_Of_VisibleVar_Ids(Machine(BASIC_SEX)) == (? | ?);
   List_Of_Ids_SeenBNU(Machine(BASIC_SEX)) == (?: ?);
-  List_Of_Ids(Machine(DATA_BASE)) == (PERSON | ? | wife,husband,mother,status,sex,person | ? | death,marriage,first_human,new_born,not_saturated,is_present,is_living,is_woman,is_married,has_mother,val_status,val_sex,val_spouse,val_mother,PERSON_read,PERSON_write | ? | seen(Machine(BASIC_SEX)),seen(Machine(BASIC_STATUS)) | ? | DATA_BASE);
-  List_Of_HiddenCst_Ids(Machine(DATA_BASE)) == (max_pers | ?);
-  List_Of_VisibleCst_Ids(Machine(DATA_BASE)) == (?);
+  List_Of_Ids(Machine(DATA_BASE)) == (max_pers,PERSON | ? | wife,husband,mother,status,sex,person | ? | death,marriage,first_human,new_born,not_saturated,is_present,is_living,is_woman,is_married,has_mother,val_status,val_sex,val_spouse,val_mother,PERSON_read,PERSON_write | ? | seen(Machine(BASIC_SEX)),seen(Machine(BASIC_STATUS)) | ? | DATA_BASE);
+  List_Of_HiddenCst_Ids(Machine(DATA_BASE)) == (? | ?);
+  List_Of_VisibleCst_Ids(Machine(DATA_BASE)) == (max_pers);
   List_Of_VisibleVar_Ids(Machine(DATA_BASE)) == (? | ?);
   List_Of_Ids_SeenBNU(Machine(DATA_BASE)) == (?: ?)
 END
