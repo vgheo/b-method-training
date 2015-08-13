@@ -3,18 +3,26 @@ END
 &
 THEORY Formulas IS
 ((NAT) = (((0) .. (2147483647)))) & ((INT) = (((-2147483647) .. (2147483647))));
-((1..2)*{SEX}): FIN(NATURAL*{SEX}) & not(((1..2)*{SEX}) = {}) & code_SEX : ((1..2)*{SEX}) +-> {0}\/{1} & code_SEX : ((1..2)*{SEX}) >+> {0}\/{1} & code_SEX : ((1..2)*{SEX}) +->> {0}\/{1} & code_SEX : ((1..2)*{SEX}) --> {0}\/{1} & dom(code_SEX) = ((1..2)*{SEX}) & code_SEX~ : {0}\/{1} +-> ((1..2)*{SEX}) & ran(code_SEX) = {0}\/{1} & ((code_SEX) : (((((1..2)*{SEX})) >->> ({0}\/{1})))) & ((decode_SEX) = ((code_SEX)~));
+((1..2)*{SEX}): FIN(NATURAL*{SEX}) & not(((1..2)*{SEX}) = {}) & code_SEX : ((1..2)*{SEX}) +-> ((0) .. (1)) & code_SEX : ((1..2)*{SEX}) >+> ((0) .. (1)) & code_SEX : ((1..2)*{SEX}) +->> ((0) .. (1)) & code_SEX : ((1..2)*{SEX}) --> ((0) .. (1)) & dom(code_SEX) = ((1..2)*{SEX}) & code_SEX~ : ((0) .. (1)) +-> ((1..2)*{SEX}) & ran(code_SEX) = ((0) .. (1)) & ((code_SEX) : (((((1..2)*{SEX})) >->> (((0) .. (1)))))) & decode_SEX : ((0) .. (1)) +-> ((1..2)*{SEX}) & decode_SEX : ((0) .. (1)) >+> ((1..2)*{SEX}) & decode_SEX : ((0) .. (1)) +->> ((1..2)*{SEX}) & decode_SEX : ((0) .. (1)) --> ((1..2)*{SEX}) & dom(decode_SEX) = ((0) .. (1)) & decode_SEX~ : ((1..2)*{SEX}) +-> ((0) .. (1)) & ran(decode_SEX) = ((1..2)*{SEX}) & ((decode_SEX) : (((((0) .. (1))) >->> (((1..2)*{SEX}))))) & ((decode_SEX) = ((code_SEX)~));
 ((rr$1) : (((1..2)*{SEX})));
 ((ii) : (((1..2)*{SEX})));
 ((1..2)*{SEX}): FIN(NATURAL*{SEX}) & not(((1..2)*{SEX}) = {});
-code_SEX : ((1..2)*{SEX}) +-> {0}\/{1};
-code_SEX : ((1..2)*{SEX}) >+> {0}\/{1};
-code_SEX : ((1..2)*{SEX}) +->> {0}\/{1};
-code_SEX : ((1..2)*{SEX}) --> {0}\/{1};
+decode_SEX : ((0) .. (1)) +-> ((1..2)*{SEX});
+decode_SEX : ((0) .. (1)) >+> ((1..2)*{SEX});
+decode_SEX : ((0) .. (1)) +->> ((1..2)*{SEX});
+decode_SEX : ((0) .. (1)) --> ((1..2)*{SEX});
+dom(decode_SEX) = ((0) .. (1));
+decode_SEX~ : ((1..2)*{SEX}) +-> ((0) .. (1));
+ran(decode_SEX) = ((1..2)*{SEX});
+((decode_SEX) : (((((0) .. (1))) >->> (((1..2)*{SEX})))));
+code_SEX : ((1..2)*{SEX}) +-> ((0) .. (1));
+code_SEX : ((1..2)*{SEX}) >+> ((0) .. (1));
+code_SEX : ((1..2)*{SEX}) +->> ((0) .. (1));
+code_SEX : ((1..2)*{SEX}) --> ((0) .. (1));
 dom(code_SEX) = ((1..2)*{SEX});
-code_SEX~ : {0}\/{1} +-> ((1..2)*{SEX});
-ran(code_SEX) = {0}\/{1};
-((code_SEX) : (((((1..2)*{SEX})) >->> ({0}\/{1}))))
+code_SEX~ : ((0) .. (1)) +-> ((1..2)*{SEX});
+ran(code_SEX) = ((0) .. (1));
+((code_SEX) : (((((1..2)*{SEX})) >->> (((0) .. (1))))))
 END
 &
 THEORY EnumerateX IS

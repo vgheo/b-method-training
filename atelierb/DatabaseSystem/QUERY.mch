@@ -18,8 +18,14 @@ DEFINITIONS
 OPERATIONS
     pp,bb<--get_new_dead_person =
     CHOICE
-        pp::LIVING ||
-        bb:=TRUE
+        /*parameter is not implementable(typed with abstract variable person)*/
+        ANY pp0 WHERE 
+            pp0 : PERSON
+            & pp0 : LIVING /* original statement */
+        THEN
+            pp:=pp0 || 
+            bb:=TRUE
+        END
     OR
         pp::PERSON||
         bb:=FALSE
@@ -35,9 +41,17 @@ OPERATIONS
     
     mm,ww,bb<--get_new_couple=
     CHOICE
-        mm::SINGLE/\MAN ||
-        ww::SINGLE /\ WOMAN ||
+    /*parameter is not implementable(typed with abstract variable person)*/
+    ANY mm0,ww0 WHERE
+        mm0:PERSON &
+        mm0:SINGLE/\MAN &
+        ww0:PERSON &
+        ww0:SINGLE /\ WOMAN
+    THEN
+        mm:=mm0 || 
+        ww:=ww0 || 
         bb:=TRUE
+    END
     OR
         mm::PERSON ||
         ww::PERSON ||
@@ -46,9 +60,15 @@ OPERATIONS
     
     ss,ww,bb<--get_sex_and_mother=
     CHOICE
+    /*parameter is not implementable(typed with abstract variable person)*/
+    ANY  ww0 WHERE
+        ww0:PERSON &
+        ww0:(MARRIED /\ WOMAN)
+    THEN        
         ss::SEX ||
-        ww::MARRIED /\ WOMAN ||
+        ww:=ww0 ||
         bb:=bool(ANGEL /={})
+    END
     OR
         ss::SEX ||
         ww::PERSON||
