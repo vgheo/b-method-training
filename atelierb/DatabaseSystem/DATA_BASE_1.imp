@@ -2,15 +2,12 @@
  * Author: T0164919
  * Creation date: 7/30/2015
  */
-
-
 IMPLEMENTATION DATA_BASE_1
 REFINES DATA_BASE
 IMPORTS
     PARTIAL_OBJECT(10000,4,0,10000)
 SEES
     BASIC_IO,BASIC_SEX,BASIC_STATUS
-
 VALUES
     PERSON = 1..10000;
     max_pers = 10000
@@ -64,13 +61,20 @@ OPERATIONS
     report<--is_living(pp)=
     VAR ss IN 
         ss<--val_field(2,pp);
-        report:=bool(ss=code_STATUS(living))
+        //report:=bool(ss=code_STATUS(living))
+        IF ss=code_STATUS(living) THEN
+            report:=TRUE
+        ELSE
+            report:=FALSE
+        END
+         //report:=bool(ss=1)
     END;
     
     report<--is_woman(pp)=
     VAR ss IN
         ss<--val_field(1,pp);
-        report:=bool(ss=code_SEX(woman))
+        /*report:=bool(ss=code_SEX(woman))*/
+        report:=bool(ss=1)
     END;
     
     report<--is_married(pp)=
