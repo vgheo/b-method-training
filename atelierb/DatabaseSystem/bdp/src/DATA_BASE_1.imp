@@ -2,20 +2,17 @@
  * Author: T0164919
  * Creation date: 7/30/2015
  */
-
-
 IMPLEMENTATION DATA_BASE_1
 REFINES DATA_BASE
 IMPORTS
     PARTIAL_OBJECT ( 10000 , 4 , 0 , 10000 )
 SEES
     BASIC_IO , BASIC_SEX , BASIC_STATUS
-
 VALUES
     PERSON = 1 .. 10000 ;
     max_pers = 10000
 INVARIANT
-    /*Warning:possible typo object(not present anywere else) => rename to max_pers*/
+    /*Warning:possible typo object(not present anywhere else) => rename to max_pers*/
     person = 1 .. max_pers &
     partial_field ( 1 ) = ( sex ; code_SEX ) &
     partial_field ( 2 ) = ( status ; code_STATUS ) &
@@ -24,8 +21,9 @@ INVARIANT
 
 OPERATIONS
     death ( pp ) =
-    BEGIN
-        mod_field ( 2 , pp , code_STATUS ( dead ) )
+    VAR tt IN
+        tt := code_STATUS ( dead ) ;
+        mod_field ( 2 , pp , tt )
     END ;
 
     marriage ( bride , groom ) =
@@ -62,15 +60,24 @@ OPERATIONS
     END ;
 
     report <-- is_living ( pp ) =
-    VAR ss IN
+    VAR ss , tt IN
         ss <-- val_field ( 2 , pp ) ;
-        report := bool ( ss = code_STATUS ( living ) )
+        tt := code_STATUS ( living ) ;
+        report := bool ( ss = tt )
+        /*Workaround for "array item is not a simple term" error*/
+//        tt:=code_STATUS(living);
+//        IF ss=tt THEN
+//            report:=TRUE
+//        ELSE
+//            report:=FALSE
+//        END
     END ;
 
     report <-- is_woman ( pp ) =
-    VAR ss IN
-        ss <-- val_field ( 1 , pp ) ;
-        report := bool ( ss = code_SEX ( woman ) )
+    VAR ss , tt IN
+        ss <-- val_field ( 2 , pp ) ;
+        tt := code_SEX ( woman ) ;
+        report := bool ( ss = tt )
     END ;
 
     report <-- is_married ( pp ) =

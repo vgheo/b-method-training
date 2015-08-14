@@ -21,8 +21,9 @@ INVARIANT
     
 OPERATIONS
     death(pp)=
-    BEGIN
-        mod_field(2,pp,code_STATUS(dead))
+    VAR tt IN
+        tt:=code_STATUS(dead);
+        mod_field(2,pp,tt)
     END;
     
     marriage(bride,groom)=
@@ -59,22 +60,24 @@ OPERATIONS
     END;
     
     report<--is_living(pp)=
-    VAR ss IN 
+    VAR ss,tt IN 
         ss<--val_field(2,pp);
-        //report:=bool(ss=code_STATUS(living))
-        IF ss=code_STATUS(living) THEN
-            report:=TRUE
-        ELSE
-            report:=FALSE
-        END
-         //report:=bool(ss=1)
+        tt:=code_STATUS(living);
+        report:=bool(ss=tt)
+        /*Workaround for "array item is not a simple term" error*/
+//        tt:=code_STATUS(living);
+//        IF ss=tt THEN
+//            report:=TRUE
+//        ELSE
+//            report:=FALSE
+//        END
     END;
     
     report<--is_woman(pp)=
-    VAR ss IN
-        ss<--val_field(1,pp);
-        /*report:=bool(ss=code_SEX(woman))*/
-        report:=bool(ss=1)
+    VAR ss,tt IN 
+        ss<--val_field(2,pp);
+        tt:=code_SEX(woman);
+        report:=bool(ss=tt)
     END;
     
     report<--is_married(pp)=
