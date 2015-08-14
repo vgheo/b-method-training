@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extended_test_suite>
+  <test_case>
+    <initialisation>
+      <value type="constant" name="link">{(topleft|->top_middle),(top_middle|->bot_middle),(bot_middle|->bot_left),(bot_middle|->leftlink),(leftlink|->top_middle)}</value>
+      <value type="constant" name="restrict">{((topleft|->top_middle)|->{}),((top_middle|->bot_middle)|->{A,B}),((bot_middle|->bot_left)|->{}),((bot_middle|->leftlink)|->{}),((leftlink|->top_middle)|->{})}</value>
+      <value type="variable" name="occ">{(topleft|->{(1|->engine)}),(top_middle|->{(1|->A)}),(bot_left|->{}),(bot_middle|->{(1|->B)}),(leftlink|->{})}</value>
+    </initialisation>
+    <step name="Move">
+      <value name="Seq">{(1|->engine)}</value>
+      <value name="T1">topleft</value>
+      <value name="T2">top_middle</value>
+      <value name="Rest">{}</value>
+      <modified name="occ">{(topleft|->{}),(top_middle|->{(1|->engine),(2|->A)}),(bot_left|->{}),(bot_middle|->{(1|->B)}),(leftlink|->{})}</modified>
+    </step>
+  </test_case>
+  <test_case>
+    <initialisation>
+      <value type="constant" name="link">{(topleft|->top_middle),(top_middle|->bot_middle),(bot_middle|->bot_left),(bot_middle|->leftlink),(leftlink|->top_middle)}</value>
+      <value type="constant" name="restrict">{((topleft|->top_middle)|->{}),((top_middle|->bot_middle)|->{A,B}),((bot_middle|->bot_left)|->{}),((bot_middle|->leftlink)|->{}),((leftlink|->top_middle)|->{})}</value>
+      <value type="variable" name="occ">{(topleft|->{(1|->engine)}),(top_middle|->{(1|->A)}),(bot_left|->{}),(bot_middle|->{(1|->B)}),(leftlink|->{})}</value>
+    </initialisation>
+    <step name="Move">
+      <value name="Seq">{(1|->engine)}</value>
+      <value name="T1">topleft</value>
+      <value name="T2">top_middle</value>
+      <value name="Rest">{}</value>
+      <modified name="occ">{(topleft|->{}),(top_middle|->{(1|->engine),(2|->A)}),(bot_left|->{}),(bot_middle|->{(1|->B)}),(leftlink|->{})}</modified>
+    </step>
+    <step name="MoveRev">
+      <value name="Seq">{(1|->engine)}</value>
+      <value name="T1">top_middle</value>
+      <value name="T2">topleft</value>
+      <value name="Rest">{(1|->A)}</value>
+      <modified name="occ">{(topleft|->{(1|->engine)}),(top_middle|->{(1|->A)}),(bot_left|->{}),(bot_middle|->{(1|->B)}),(leftlink|->{})}</modified>
+    </step>
+  </test_case>
+</extended_test_suite>
