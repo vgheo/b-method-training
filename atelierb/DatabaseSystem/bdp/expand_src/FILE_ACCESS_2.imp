@@ -7,25 +7,21 @@ IMPLEMENTATION FILE_ACCESS_2 ( max_rec , FIELD , VALUE )
 REFINES FILE_ACCESS_1
 IMPORTS
     BASIC_FILE_VAR ( max_rec , FIELD , VALUE )
-    /*
-    
-    VISIBLE_VARIABLES
-    updated,name
-    */
-INITIALISATION
-    updated := FALSE ;
-    name := 0 ;
-    buffer , bfile := {} , [] ;
-    record := {}
-
 INVARIANT
     bfile = file_vrb &
     record = buf_vrb
-OPERATIONS
+INITIALISATION
+    updated := FALSE ;
+    name := 0 ;
+   /* buffer,bfile := {},[]; */ /*Simultaneous affectation is not implementable*/
 
+      RESET_FILE ;
+      RESET_RECORD ;
+      buffer := {}
+OPERATIONS
     get_record ( oo ) =
     BEGIN
-        /*corection name:=1 instead of 0 becau8se 0 /: dom(file_vrb(N) as requested i theb PRECONDITION clause of READ_FILE*/
+        /*corection name:=1 instead of 0 because 0 /: dom(file_vrb(N)) as requested in then PRECONDITION clause of READ_FILE*/
         name := 1 ;
         READ_FILE ( name ) ;
         updated := FALSE
@@ -65,8 +61,4 @@ OPERATIONS
     BEGIN
         vv := buffer ( oo ) ( ii )
     END
-
-
-
-
 END

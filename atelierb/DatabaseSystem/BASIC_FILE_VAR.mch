@@ -1,4 +1,4 @@
-﻿/* BASIC_FILE_VAR
+/* BASIC_FILE_VAR
  * Author: T0164919
  * Creation date: 7/30/2015
  */
@@ -51,7 +51,12 @@ OPERATIONS
     RESET_FILE =
     BEGIN
         file_vrb := []
-    END
-
+    END;
+    
+    RESET_RECORD=
+     BEGIN
+         buf_vrb:={}
+     END
+    
 
 END

@@ -1,4 +1,4 @@
-﻿/* FILE_ACCESS
+/* FILE_ACCESS
  * Author: T0164919
  * Creation date: 7/29/2015
  */
@@ -79,7 +79,5 @@ vv <-- val_buffer ( oo , ii ) =
     ii : FIELD
     THEN
     vv := buffer ( oo ) ( ii )
-    END
-
-
+END
 END

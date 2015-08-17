@@ -79,7 +79,5 @@ vv <-- val_buffer ( oo , ii ) =
     ii : FIELD
     THEN
     vv := buffer ( oo ) ( ii )
-    END
-
-
+END
 END

@@ -51,7 +51,12 @@ OPERATIONS
     RESET_FILE =
     BEGIN
         file_vrb := <>
-    END
+    END ;
+
+    RESET_RECORD =
+     BEGIN
+         buf_vrb := {}
+     END
 
 
 END

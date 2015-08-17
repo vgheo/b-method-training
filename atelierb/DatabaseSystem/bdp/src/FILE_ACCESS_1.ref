@@ -55,7 +55,4 @@ OPERATIONS
      BEGIN
         vv := size ( bfile )
      END
-
-
-
- END
+END
