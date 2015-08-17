@@ -26,6 +26,8 @@
 <Id value='pp' typref='555065967'/>
 </Variables>
 <Value>
+<Binary_Exp op='/\' typref='917286058'>
+<Id value='PERSON' typref='917286058'/>
 <Binary_Exp op='[' typref='917286058'>
 <Unary_Exp op='~' typref='400612467'>
 <Id value='status' typref='1872266093'/>
@@ -33,6 +35,7 @@
 <Nary_Exp op='{' typref='515940807'>
 <Id value='living' typref='2246778642'/>
 </Nary_Exp>
+</Binary_Exp>
 </Binary_Exp>
 </Value>
 </Becomes_In>
@@ -110,6 +113,8 @@
 </Variables>
 <Value>
 <Binary_Exp op='/\' typref='917286058'>
+<Id value='PERSON' typref='917286058'/>
+<Binary_Exp op='/\' typref='917286058'>
 <Binary_Exp op='-' typref='917286058'>
 <Id value='person' typref='917286058'/>
 <Unary_Exp op='dom' typref='917286058'>
@@ -126,6 +131,7 @@
 <Nary_Exp op='{' typref='845307297'>
 <Id value='man' typref='3153412450'/>
 </Nary_Exp>
+</Binary_Exp>
 </Binary_Exp>
 </Binary_Exp>
 </Value>

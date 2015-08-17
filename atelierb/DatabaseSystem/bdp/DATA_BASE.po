@@ -1,11 +1,11 @@
 THEORY ProofList IS
-_f(1) & _f(2) & _f(3) & _f(17) & _f(36) & WellDefinedness_val_mother.1,(_f(43) => _f(64));
-_f(1) & _f(2) & _f(3) & _f(17) & _f(35) & WellDefinedness_val_spouse.1,(_f(43) => _f(63));
-_f(1) & _f(2) & _f(3) & _f(17) & _f(34) & WellDefinedness_val_sex.2,(_f(43) => _f(62));
-_f(1) & _f(2) & _f(3) & _f(17) & _f(34) & WellDefinedness_val_sex.1,(_f(43) => _f(61));
-_f(1) & _f(2) & _f(3) & _f(17) & _f(34) & WellDefinedness_val_status.2,(_f(43) => _f(60));
-_f(1) & _f(2) & _f(3) & _f(17) & _f(34) & WellDefinedness_val_status.1,(_f(43) => _f(59));
-_f(1) & _f(2) & _f(42) & WellDefinednessProperties.1,(_f(43) => _f(44));
+_f(1) & _f(2) & _f(3) & _f(17) & _f(36) & WellDefinedness_val_mother.1,(_f(44) => _f(73));
+_f(1) & _f(2) & _f(3) & _f(17) & _f(35) & WellDefinedness_val_spouse.1,(_f(44) => _f(71));
+_f(1) & _f(2) & _f(3) & _f(17) & _f(34) & WellDefinedness_val_sex.2,(_f(44) => _f(69));
+_f(1) & _f(2) & _f(3) & _f(17) & _f(34) & WellDefinedness_val_sex.1,(_f(44) => _f(68));
+_f(1) & _f(2) & _f(3) & _f(17) & _f(34) & WellDefinedness_val_status.2,(_f(44) => _f(67));
+_f(1) & _f(2) & _f(3) & _f(17) & _f(34) & WellDefinedness_val_status.1,(_f(44) => _f(66));
+_f(1) & _f(2) & _f(42) & WellDefinednessProperties.1,(_f(43) & _f(44) => _f(45));
 _f(1) & _f(2) & _f(3) & _f(17) & _f(31) & new_born.5,(_f(25) & _f(4) & _f(15) => _f(32));
 _f(1) & _f(2) & _f(3) & _f(17) & _f(31) & new_born.4,(_f(25) & _f(4) & _f(11) => _f(29));
 _f(1) & _f(2) & _f(3) & _f(17) & _f(31) & new_born.3,(_f(25) & _f(4) & _f(9) => _f(28));
@@ -30,8 +30,8 @@ END
 &
 THEORY Formulas IS
 ((NAT) = (((0) .. (2147483647)))) & ((INT) = (((-2147483647) .. (2147483647))));
-((1..2)*{SEX}): FIN(NATURAL*{SEX}) & not(((1..2)*{SEX}) = {}) & ((1..2)*{STATUS}): FIN(NATURAL*{STATUS}) & not(((1..2)*{STATUS}) = {}) & code_SEX : ((1..2)*{SEX}) +-> {0}\/{1} & code_SEX : ((1..2)*{SEX}) >+> {0}\/{1} & code_SEX : ((1..2)*{SEX}) +->> {0}\/{1} & code_SEX : ((1..2)*{SEX}) --> {0}\/{1} & dom(code_SEX) = ((1..2)*{SEX}) & code_SEX~ : {0}\/{1} +-> ((1..2)*{SEX}) & ran(code_SEX) = {0}\/{1} & ((code_SEX) : (((((1..2)*{SEX})) >->> ({0}\/{1})))) & ((decode_SEX) = ((code_SEX)~)) & code_STATUS : ((1..2)*{STATUS}) +-> {0}\/{1} & code_STATUS : ((1..2)*{STATUS}) >+> {0}\/{1} & code_STATUS : ((1..2)*{STATUS}) +->> {0}\/{1} & code_STATUS : ((1..2)*{STATUS}) --> {0}\/{1} & dom(code_STATUS) = ((1..2)*{STATUS}) & code_STATUS~ : {0}\/{1} +-> ((1..2)*{STATUS}) & ran(code_STATUS) = {0}\/{1} & ((code_STATUS) : (((((1..2)*{STATUS})) >->> ({0}\/{1})))) & ((decode_STATUS) = ((code_STATUS)~));
-PERSON: FIN(INTEGER) & not(PERSON = {}) & ((max_pers) = (card(PERSON)));
+((1..2)*{SEX}): FIN(NATURAL*{SEX}) & not(((1..2)*{SEX}) = {}) & ((1..2)*{STATUS}): FIN(NATURAL*{STATUS}) & not(((1..2)*{STATUS}) = {}) & code_SEX : ((1..2)*{SEX}) +-> ((0) .. (1)) & code_SEX : ((1..2)*{SEX}) >+> ((0) .. (1)) & code_SEX : ((1..2)*{SEX}) +->> ((0) .. (1)) & code_SEX : ((1..2)*{SEX}) --> ((0) .. (1)) & dom(code_SEX) = ((1..2)*{SEX}) & code_SEX~ : ((0) .. (1)) +-> ((1..2)*{SEX}) & ran(code_SEX) = ((0) .. (1)) & ((code_SEX) : (((((1..2)*{SEX})) >->> (((0) .. (1)))))) & decode_SEX : ((0) .. (1)) +-> ((1..2)*{SEX}) & decode_SEX : ((0) .. (1)) >+> ((1..2)*{SEX}) & decode_SEX : ((0) .. (1)) +->> ((1..2)*{SEX}) & decode_SEX : ((0) .. (1)) --> ((1..2)*{SEX}) & dom(decode_SEX) = ((0) .. (1)) & decode_SEX~ : ((1..2)*{SEX}) +-> ((0) .. (1)) & ran(decode_SEX) = ((1..2)*{SEX}) & ((decode_SEX) : (((((0) .. (1))) >->> (((1..2)*{SEX}))))) & ((decode_SEX) = ((code_SEX)~)) & code_STATUS : ((1..2)*{STATUS}) +-> ((0) .. (1)) & code_STATUS : ((1..2)*{STATUS}) >+> ((0) .. (1)) & code_STATUS : ((1..2)*{STATUS}) +->> ((0) .. (1)) & code_STATUS : ((1..2)*{STATUS}) --> ((0) .. (1)) & dom(code_STATUS) = ((1..2)*{STATUS}) & code_STATUS~ : ((0) .. (1)) +-> ((1..2)*{STATUS}) & ran(code_STATUS) = ((0) .. (1)) & ((code_STATUS) : (((((1..2)*{STATUS})) >->> (((0) .. (1)))))) & decode_STATUS : ((0) .. (1)) +-> ((1..2)*{STATUS}) & decode_STATUS : ((0) .. (1)) >+> ((1..2)*{STATUS}) & decode_STATUS : ((0) .. (1)) +->> ((1..2)*{STATUS}) & decode_STATUS : ((0) .. (1)) --> ((1..2)*{STATUS}) & dom(decode_STATUS) = ((0) .. (1)) & decode_STATUS~ : ((1..2)*{STATUS}) +-> ((0) .. (1)) & ran(decode_STATUS) = ((1..2)*{STATUS}) & ((decode_STATUS) : (((((0) .. (1))) >->> (((1..2)*{STATUS}))))) & ((decode_STATUS) = ((code_STATUS)~));
+PERSON: FIN(INTEGER) & not(PERSON = {}) & ((max_pers) : (NAT)) & ((max_pers) = (card(PERSON)));
 "Invariant is preserved";
 "Check invariant person : POW( PERSON)";
 {} : POW( PERSON);
@@ -46,9 +46,9 @@ PERSON: FIN(INTEGER) & not(PERSON = {}) & ((max_pers) = (card(PERSON)));
 "Check invariant ((mother) : (((person) +-> (((dom(((husband) \/ (wife)))) /\ (((sex)~ )[{woman}]))))))";
 (({}) : ((({}) +-> (((dom((({}) \/ ({})))) /\ ((({})~ )[{(2|->SEX)}]))))));
 person : POW( PERSON) & sex : person +-> ((1..2)*{SEX}) & dom(sex) = person & ((sex) : (((person) --> (((1..2)*{SEX}))))) & status : person +-> ((1..2)*{STATUS}) & dom(status) = person & ((status) : (((person) --> (((1..2)*{STATUS}))))) & husband : ((sex)~ )[{(2|->SEX)}] +-> ((sex)~ )[{(1|->SEX)}] & husband~ : ((sex)~ )[{(1|->SEX)}] +-> ((sex)~ )[{(2|->SEX)}] & ((husband) : (((((sex)~ )[{(2|->SEX)}]) >+> (((sex)~ )[{(1|->SEX)}])))) & ((wife) = ((husband)~)) & ((mother) : (((person) +-> (((dom(((husband) \/ (wife)))) /\ (((sex)~ )[{(2|->SEX)}]))))));
-((pp) : (((status)~ )[{(2|->STATUS)}]));
+((pp) : (PERSON)) & ((pp) : (person)) & ((pp) : (((status)~ )[{(2|->STATUS)}]));
 ((((status) <+ ({((pp) |-> ((1|->STATUS)))}))) : (((person) --> (((1..2)*{STATUS})))));
-((bride) : ((((person - dom(((husband) \/ (wife))))) /\ (((sex)~ )[{(2|->SEX)}])))) & ((groom) : ((((person - dom(((husband) \/ (wife))))) /\ (((sex)~ )[{(1|->SEX)}]))));
+((bride) : (PERSON)) & ((bride) : (person)) & ((bride) : ((((person - dom(((husband) \/ (wife))))) /\ (((sex)~ )[{(2|->SEX)}])))) & ((groom) : (PERSON)) & ((groom) : (person)) & ((groom) : ((((person - dom(((husband) \/ (wife))))) /\ (((sex)~ )[{(1|->SEX)}]))));
 ((((husband) <+ ({((bride) |-> (groom))}))) : (((((sex)~ )[{(2|->SEX)}]) >+> (((sex)~ )[{(1|->SEX)}]))));
 ((((wife) <+ ({((groom) |-> (bride))}))) = ((((husband) <+ ({((bride) |-> (groom))})))~));
 ((mother) : (((person) +-> (((dom(((((husband) <+ ({((bride) |-> (groom))}))) \/ (((wife) <+ ({((groom) |-> (bride))})))))) /\ (((sex)~ )[{(2|->SEX)}]))))));
@@ -59,18 +59,19 @@ not((PERSON - person) = {}) & ((ss) : (((1..2)*{SEX})));
 ((((status) <+ ({((angel) |-> ((2|->STATUS)))}))) : (((((person) \/ ({angel}))) --> (((1..2)*{STATUS})))));
 ((husband) : (((((((sex) <+ ({((angel) |-> (ss))})))~ )[{(2|->SEX)}]) >+> (((((sex) <+ ({((angel) |-> (ss))})))~ )[{(1|->SEX)}]))));
 ((mother) : (((((person) \/ ({angel}))) +-> (((dom(((husband) \/ (wife)))) /\ (((((sex) <+ ({((angel) |-> (ss))})))~ )[{(2|->SEX)}]))))));
-not((PERSON - person) = {}) & ((ss) : (((1..2)*{SEX}))) & ((mm) : (((dom(((husband) \/ (wife)))) /\ (((sex)~ )[{(2|->SEX)}]))));
+not((PERSON - person) = {}) & ((ss) : (((1..2)*{SEX}))) & ((mm) : (PERSON)) & ((mm) : (((dom(((husband) \/ (wife)))) /\ (((sex)~ )[{(2|->SEX)}]))));
 ((((mother) <+ ({((angel) |-> (mm))}))) : (((((person) \/ ({angel}))) +-> (((dom(((husband) \/ (wife)))) /\ (((((sex) <+ ({((angel) |-> (ss))})))~ )[{(2|->SEX)}]))))));
 ((pp) : (PERSON));
-((pp) : (person));
-((pp) : (dom(((husband) \/ (wife)))));
-((pp) : (dom(mother)));
+((pp) : (PERSON)) & ((pp) : (person));
+((pp) : (PERSON)) & ((pp) : (person)) & ((pp) : (dom(((husband) \/ (wife))))) & ((vv) : (PERSON));
+((pp) : (PERSON)) & ((pp) : (person)) & ((pp) : (dom(mother))) & ((vv) : (PERSON));
 ((pp$1) : (PERSON));
 ((rr$1) : (((1..2)*{SEX})));
 ((ii) : (((1..2)*{SEX})));
 ((rr$1) : (((1..2)*{STATUS})));
 ((ii) : (((1..2)*{STATUS})));
 PERSON: FIN(INTEGER) & not(PERSON = {});
+((max_pers) : (NAT));
 "Well definedness";
 ((PERSON) : (FIN(PERSON)));
 ((wife) = ((husband)~));
@@ -84,14 +85,22 @@ sex : person +-> ((1..2)*{SEX});
 dom(sex) = person;
 ((sex) : (((person) --> (((1..2)*{SEX})))));
 person : POW( PERSON);
+((pp) : (person));
+((groom) : (person));
+((groom) : (PERSON));
 ((bride) : ((((person - dom(((husband) \/ (wife))))) /\ (((sex)~ )[{(2|->SEX)}]))));
+((bride) : (person));
+((bride) : (PERSON));
 not((PERSON - person) = {});
+((mm) : (PERSON));
 ((ss) : (((1..2)*{SEX})));
 ((pp) : (dom(status)));
 ((status) : (((dom(status)) +-> (ran(status)))));
 ((pp) : (dom(sex)));
 ((sex) : (((dom(sex)) +-> (ran(sex)))));
+((pp) : (dom(((husband) \/ (wife)))));
 ((((husband) \/ (wife))) : (((dom(((husband) \/ (wife)))) +-> (ran(((husband) \/ (wife)))))));
+((pp) : (dom(mother)));
 ((mother) : (((dom(mother)) +-> (ran(mother)))))
 END
 &

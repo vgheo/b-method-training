@@ -1,4 +1,4 @@
-/* FILE
+﻿/* FILE
  * Author: T0164919
  * Creation date: 7/29/2015
  */
@@ -7,53 +7,53 @@
 A "record_value is a total function from FIELD set to VALUE set"
  */
 MACHINE
-    FILE(max_rec, FIELD, VALUE)
+    FILE ( max_rec , FIELD , VALUE )
 CONSTRAINTS
     max_rec : NAT1
-VARIABLES
+ABSTRACT_VARIABLES
     file
 INITIALISATION
-    file :=[]
+    file := []
 INVARIANT
-    file : seq(FIELD --> VALUE)&
-    size(file)<= max_rec
+    file : seq ( FIELD --> VALUE ) &
+    size ( file ) <= max_rec
 OPERATIONS
     /*
     val_file acceses the value of a particular field of a certain record in the file
     */
-    vv<--val_file(oo,ii)=
+    vv <-- val_file ( oo , ii ) =
     PRE
-        oo:NAT & /*concrete typing*/
-        oo:dom(file) &
-        ii:FIELD
+        oo : NAT & /*concrete typing*/
+        oo : dom ( file ) &
+        ii : FIELD
     THEN
-        vv:=file(oo)(ii)
-    END;
-    
+        vv := file ( oo ) ( ii )
+    END ;
+
     /*
     mod_file modifies the value of a particular field of a certain record in the file
     */
-    mod_file(oo,ii,vv)=
-    PRE 
-         oo:NAT & /*concrete typing*/
-        oo:dom(file) &
-        ii:FIELD &
-        vv:VALUE
-    THEN
-        file(oo)(ii):=vv
-    END;
-    /*add a new record*/
-    oo<--create_record(vv)=
+    mod_file ( oo , ii , vv ) =
     PRE
-        vv: VALUE &
-        size(file) < max_rec
+        oo : NAT & /*concrete typing*/
+        oo : dom ( file ) &
+        ii : FIELD &
+        vv : VALUE
     THEN
-        file:= file<-(FIELD * {vv}) || /* /INDEX in page 613, probably typo*/
-        oo := size(file) +1
-    END;
+        file ( oo ) ( ii ) := vv
+    END ;
+    /*add a new record*/
+    oo <-- create_record ( vv ) =
+    PRE
+        vv : VALUE &
+        size ( file ) < max_rec
+    THEN
+        file := file <- ( FIELD * { vv } ) || /* /INDEX in page 613, probably typo*/
+        oo := size ( file ) + 1
+    END ;
     /*returns the size of file*/
-    vv<--size_file=
+    vv <-- size_file =
     BEGIN
-        vv:=size(file)
+        vv := size ( file )
     END
 END

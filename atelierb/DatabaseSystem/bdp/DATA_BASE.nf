@@ -244,7 +244,7 @@ END
 &
 THEORY ListPropertiesX IS
   Abstract_List_Properties(Machine(DATA_BASE))==(btrue);
-  Context_List_Properties(Machine(DATA_BASE))==(code_SEX: SEX >->> 0..1 & decode_SEX: 0..1 >->> SEX & decode_SEX = code_SEX~ & SEX: FIN(INTEGER) & not(SEX = {}) & code_STATUS: STATUS >->> {0,1} & decode_STATUS = code_STATUS~ & STATUS: FIN(INTEGER) & not(STATUS = {}));
+  Context_List_Properties(Machine(DATA_BASE))==(code_SEX: SEX >->> 0..1 & decode_SEX: 0..1 >->> SEX & decode_SEX = code_SEX~ & SEX: FIN(INTEGER) & not(SEX = {}) & code_STATUS: STATUS >->> 0..1 & decode_STATUS: 0..1 >->> STATUS & decode_STATUS = code_STATUS~ & STATUS: FIN(INTEGER) & not(STATUS = {}));
   Inherited_List_Properties(Machine(DATA_BASE))==(btrue);
   List_Properties(Machine(DATA_BASE))==(max_pers: NAT & max_pers = card(PERSON) & PERSON: FIN(INTEGER) & not(PERSON = {}))
 END
@@ -296,9 +296,9 @@ THEORY ListOfIdsX IS
   List_Of_VisibleCst_Ids(Machine(DATA_BASE)) == (max_pers);
   List_Of_VisibleVar_Ids(Machine(DATA_BASE)) == (? | ?);
   List_Of_Ids_SeenBNU(Machine(DATA_BASE)) == (?: ?);
-  List_Of_Ids(Machine(BASIC_STATUS)) == (STATUS,dead,living | ? | ? | ? | STATUS_READ,STATUS_WRITE | ? | ? | ? | BASIC_STATUS);
-  List_Of_HiddenCst_Ids(Machine(BASIC_STATUS)) == (decode_STATUS,code_STATUS | ?);
-  List_Of_VisibleCst_Ids(Machine(BASIC_STATUS)) == (?);
+  List_Of_Ids(Machine(BASIC_STATUS)) == (code_STATUS,decode_STATUS,STATUS,dead,living | ? | ? | ? | STATUS_READ,STATUS_WRITE | ? | ? | ? | BASIC_STATUS);
+  List_Of_HiddenCst_Ids(Machine(BASIC_STATUS)) == (? | ?);
+  List_Of_VisibleCst_Ids(Machine(BASIC_STATUS)) == (code_STATUS,decode_STATUS);
   List_Of_VisibleVar_Ids(Machine(BASIC_STATUS)) == (? | ?);
   List_Of_Ids_SeenBNU(Machine(BASIC_STATUS)) == (?: ?);
   List_Of_Ids(Machine(BASIC_SEX)) == (code_SEX,decode_SEX,SEX,man,woman | ? | ? | ? | SEX_READ,SEX_WRITE | ? | ? | ? | BASIC_SEX);

@@ -18,14 +18,8 @@ DEFINITIONS
 OPERATIONS
     pp , bb <-- get_new_dead_person =
     CHOICE
-        /*parameter is not implementable(typed with abstract variable person)*/
-        ANY pp0 WHERE
-            pp0 : PERSON
-            & pp0 : LIVING /* original statement */
-        THEN
-            pp := pp0 ||
-            bb := TRUE
-        END
+        pp :: PERSON /\ LIVING || /*parameter is not implementable(typed with abstract variable person)*/
+        bb := TRUE
     OR
         pp :: PERSON ||
         bb := FALSE
@@ -41,17 +35,9 @@ OPERATIONS
 
     mm , ww , bb <-- get_new_couple =
     CHOICE
-    /*parameter is not implementable(typed with abstract variable person)*/
-    ANY mm0 , ww0 WHERE
-        mm0 : PERSON &
-        mm0 : SINGLE /\ MAN &
-        ww0 : PERSON &
-        ww0 : SINGLE /\ WOMAN
-    THEN
-        mm := mm0 ||
-        ww := ww0 ||
+        mm :: PERSON /\ ( SINGLE /\ MAN ) || /*parameter is not implementable(typed with abstract variable person)*/
+        ww :: PERSON /\ ( SINGLE /\ WOMAN ) || /*parameter is not implementable(typed with abstract variable person)*/
         bb := TRUE
-    END
     OR
         mm :: PERSON ||
         ww :: PERSON ||
@@ -60,15 +46,9 @@ OPERATIONS
 
     ss , ww , bb <-- get_sex_and_mother =
     CHOICE
-    /*parameter is not implementable(typed with abstract variable person)*/
-    ANY  ww0 WHERE
-        ww0 : PERSON &
-        ww0 : ( MARRIED /\ WOMAN )
-    THEN
         ss :: SEX ||
-        ww := ww0 ||
+        ww :: PERSON /\ ( MARRIED /\ WOMAN ) || /*parameter is not implementable(typed with abstract variable person)*/
         bb := bool ( ANGEL /= {} )
-    END
     OR
         ss :: SEX ||
         ww :: PERSON ||

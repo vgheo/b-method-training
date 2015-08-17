@@ -1,16 +1,16 @@
 ﻿THEORY BalanceX IS
-  FILE_ACCESS_2,28,0,0,9,2,3,0;
+  FILE_ACCESS_2,28,0,0,8,1,3,5;
   Initialisation,2,0,0,0,0,0,0;
-  WellDefinedness_create_record,4,0,0,1,0,0,0;
-  WellDefinedness_get_record,2,0,0,1,1,0,0;
-  WellDefinedness_size_file,1,0,0,0,0,0,0;
+  WellDefinedness_create_record,4,0,0,2,0,0,0;
+  WellDefinedness_get_record,2,0,0,1,0,0,1;
+  WellDefinedness_size_file,1,0,0,1,0,0,0;
   WellDefinedness_val_buffer,4,0,0,2,0,2,0;
-  create_record,4,0,0,2,0,0,0;
-  get_record,4,0,0,1,0,0,0;
+  create_record,4,0,0,0,1,0,2;
+  get_record,4,0,0,1,0,0,1;
   mod_buffer,1,0,0,0,0,0,0;
   not_in_buffer,1,0,0,1,0,0,0;
-  put_buffer,3,0,0,0,1,0,0;
-  size_file,1,0,0,1,0,0,0;
+  put_buffer,3,0,0,0,0,0,0;
+  size_file,1,0,0,0,0,0,1;
   val_buffer,1,0,0,0,0,1,0
 END
 &
@@ -19,28 +19,28 @@ THEORY ProofState IS
   Proved(2);
   Proved(0);
   Proved(0);
-  Unproved;
-  Unproved;
   Proved(0);
   Unproved;
-  Unproved;
   Proved(0);
-  Proved(1);
+  Proved(0);
+  Unproved;
+  Proved(3);
+  Proved(0);
   Proved(2);
-  Proved(0);
+  Proved(3);
   Unproved;
   Proved(0);
-  Proved(0);
-  Unproved;
-  Unproved;
-  Proved(0);
-  Unproved;
+  Proved(3);
   Unproved;
   Proved(1);
+  Proved(3);
+  Unproved;
   Unproved;
   Unproved;
   Unproved;
   Proved(0);
+  Unproved;
+  Proved(3);
   Unproved;
   Unproved
 END
@@ -51,10 +51,10 @@ THEORY MethodList IS
   pr;
   pr;
   pr;
-  mp & pr & ch & pr & ch & ss;
+  ?;
   pr;
-  mp & pr & ch & pr & ch & ss;
-  mp & pr & ch & pr & ch & ss;
+  pr;
+  ?;
   pr;
   pr;
   pr;
@@ -63,17 +63,17 @@ THEORY MethodList IS
   pr;
   pr;
   ?;
-  ?;
   pr;
-  ?;
-  ?;
   pr;
   ?;
   pr;
   pr;
+  ?;
+  pr;
+  mp & pr;
   pr;
   ?;
-  mp & pr & ah({}: NATURAL-{0} +-> (FIELD --> VALUE)) & dd
+  mp & pr
 END
 &
 THEORY PassList IS
@@ -81,30 +81,30 @@ THEORY PassList IS
   Force(2),(?;0;1);
   Force(0),?;
   Force(0),?;
-  Force(0),(?;0;1;2);
-  Force(0),(?;0;1;2);
   Force(0),?;
-  Force(0),(?;0;1;2);
-  Force(0),(?;0;1;2);
+  Force(0),(?;0;1;2;3);
   Force(0),?;
-  Force(1),(?;0);
+  Force(0),?;
+  Force(0),(?;0;1;2;3);
+  Force(3),(?;0;1;2);
+  Force(0),?;
   Force(2),(?;0;1);
+  Force(3),(?;0;1;2);
+  Force(0),(?;0;1;2;3);
   Force(0),?;
-  Force(0),(?;0;1;2);
-  Force(0),?;
-  Force(0),?;
-  Force(0),(?;0;1;2);
-  Force(0),(?;0;1;2);
-  Force(0),?;
-  Force(0),(?;0;1;2);
-  Force(0),(?;0;1;2);
+  Force(3),(?;0;1;2);
+  Force(0),(?;0;1;2;3);
   Force(1),(?;0);
-  Force(0),(?;0;1;2);
-  Force(0),(?;0;1;2);
-  Force(0),(?;0;1;2);
+  Force(3),(?;0;1;2);
+  Force(0),(?;0;1;2;3);
+  Force(0),(?;0;1;2;3);
+  Force(0),(?;0;1;2;3);
+  Force(0),(?;0;1;2;3);
   Force(0),?;
-  Force(0),(?;0;1;2);
-  Force(0),(?;0;1;2)
+  Force(0),(?;0;1;2;3);
+  Force(3),(?;0;1;2);
+  Force(0),(?;0;1;2;3);
+  Force(0),(?;0;1;2;3)
 END
 &
 THEORY ManForms 

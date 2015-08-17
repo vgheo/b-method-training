@@ -21,7 +21,11 @@ typedef enum
 
 /* Clause CONCRETE_CONSTANTS */
 /* Basic constants */
+
+
 /* Array and record constants */
+
+extern const BASIC_STATUS__STATUS BASIC_STATUS__decode_STATUS[2];
 extern void BASIC_STATUS__INITIALISATION(void);
 
 /* Clause OPERATIONS */

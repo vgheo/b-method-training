@@ -1,46 +1,75 @@
-﻿THEORY BalanceX IS
-  INNER_INTERFACE_1,8,5,0,0,0,0,0;
-  birth_operation,4,2,0,0,0,0,0;
-  death_operation,1,1,0,0,0,0,0;
-  marriage_operation,3,2,0,0,0,0,0
+THEORY BalanceX IS
+INNER_INTERFACE_1,20,0,0,0,0,0,0;
+birth_operation,5,0,0,0,0,0,0;
+death_operation,5,0,0,0,0,0,0;
+marriage_operation,10,0,0,0,0,0,0
 END
 &
 THEORY ProofState IS
-  Proved(Util);
-  Proved(Util);
-  Unproved;
-  Unproved;
-  Proved(Util);
-  Proved(Util);
-  Unproved;
-  Proved(Util)
+Unproved;
+Unproved;
+Unproved;
+Unproved;
+Unproved;
+Unproved;
+Unproved;
+Unproved;
+Unproved;
+Unproved;
+Unproved;
+Unproved;
+Unproved;
+Unproved;
+Unproved;
+Unproved;
+Unproved;
+Unproved;
+Unproved;
+Unproved
 END
 &
 THEORY MethodList IS
-  mp;
-  mp;
-  mp & ch & ch & pr;
-  ss & ch & pr;
-  mp;
-  mp;
-  mp & pr & ah(ww: PERSON) & pr;
-  mp
+?;
+?;
+?;
+?;
+?;
+?;
+?;
+?;
+?;
+?;
+?;
+?;
+?;
+?;
+?;
+?;
+?;
+?;
+?;
+?
 END
 &
 THEORY PassList IS
-  Force(0),?;
-  Force(0),?;
-  Force(0),(?;0;1;2;3);
-  Force(0),(?;0;1;2;3);
-  Force(0),?;
-  Force(0),?;
-  Force(0),(?;0;1;2;3);
-  Force(0),?
-END
-&
-THEORY ManForms 
-END
-&
-THEORY Version IS
-  PRVersion("svn")(CLT == "V4.0-53996")
+Force(0),?;
+Force(0),?;
+Force(0),?;
+Force(0),?;
+Force(0),?;
+Force(0),?;
+Force(0),?;
+Force(0),?;
+Force(0),?;
+Force(0),?;
+Force(0),?;
+Force(0),?;
+Force(0),?;
+Force(0),?;
+Force(0),?;
+Force(0),?;
+Force(0),?;
+Force(0),?;
+Force(0),?;
+Force(0),?
 END

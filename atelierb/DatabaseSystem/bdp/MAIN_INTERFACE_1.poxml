@@ -106,16 +106,26 @@
 <Id tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\BASIC_STATUS.bxml:1:3:1:1:1" typref="2905916364" value="code_STATUS"/>
 <Binary_Exp op="&gt;-&gt;&gt;" typref="2020880909">
 <Id tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\BASIC_STATUS.bxml:1:3:1:1:2:1" typref="515940807" value="STATUS"/>
-<Nary_Exp op="{" typref="3603043417">
+<Binary_Exp op=".." typref="3603043417">
 <Integer_Literal tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\BASIC_STATUS.bxml:1:3:1:1:2:2:1" typref="2701647786" value="0"/>
 <Integer_Literal tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\BASIC_STATUS.bxml:1:3:1:1:2:2:2" typref="2701647786" value="1"/>
-</Nary_Exp>
+</Binary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Id tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\BASIC_STATUS.bxml:1:3:1:2:1" typref="3781868044" value="decode_STATUS"/>
+<Binary_Exp op="&gt;-&gt;&gt;" typref="1382452173">
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\BASIC_STATUS.bxml:1:3:1:2:2:1:1" typref="2701647786" value="0"/>
+<Integer_Literal tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\BASIC_STATUS.bxml:1:3:1:2:2:1:2" typref="2701647786" value="1"/>
+</Binary_Exp>
+<Id tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\BASIC_STATUS.bxml:1:3:1:2:2:2" typref="515940807" value="STATUS"/>
 </Binary_Exp>
 </Exp_Comparison>
 <Exp_Comparison op="=">
-<Id tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\BASIC_STATUS.bxml:1:3:1:2:1" typref="3781868044" value="decode_STATUS"/>
+<Id tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\BASIC_STATUS.bxml:1:3:1:3:1" typref="3781868044" value="decode_STATUS"/>
 <Unary_Exp op="~" typref="3781868044">
-<Id tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\BASIC_STATUS.bxml:1:3:1:2:2:1" typref="2905916364" value="code_STATUS"/>
+<Id tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\BASIC_STATUS.bxml:1:3:1:3:2:1" typref="2905916364" value="code_STATUS"/>
 </Unary_Exp>
 </Exp_Comparison>
 </Nary_Pred>
@@ -256,16 +266,26 @@
 <Id tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\BASIC_STATUS.bxml:1:3:1:1:1" typref="2905916364" value="code_STATUS"/>
 <Binary_Exp op="&gt;-&gt;&gt;" typref="2020880909">
 <Id tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\BASIC_STATUS.bxml:1:3:1:1:2:1" typref="515940807" value="STATUS"/>
-<Nary_Exp op="{" typref="3603043417">
+<Binary_Exp op=".." typref="3603043417">
 <Integer_Literal tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\BASIC_STATUS.bxml:1:3:1:1:2:2:1" typref="2701647786" value="0"/>
 <Integer_Literal tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\BASIC_STATUS.bxml:1:3:1:1:2:2:2" typref="2701647786" value="1"/>
-</Nary_Exp>
+</Binary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Id tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\BASIC_STATUS.bxml:1:3:1:2:1" typref="3781868044" value="decode_STATUS"/>
+<Binary_Exp op="&gt;-&gt;&gt;" typref="1382452173">
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\BASIC_STATUS.bxml:1:3:1:2:2:1:1" typref="2701647786" value="0"/>
+<Integer_Literal tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\BASIC_STATUS.bxml:1:3:1:2:2:1:2" typref="2701647786" value="1"/>
+</Binary_Exp>
+<Id tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\BASIC_STATUS.bxml:1:3:1:2:2:2" typref="515940807" value="STATUS"/>
 </Binary_Exp>
 </Exp_Comparison>
 <Exp_Comparison op="=">
-<Id tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\BASIC_STATUS.bxml:1:3:1:2:1" typref="3781868044" value="decode_STATUS"/>
+<Id tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\BASIC_STATUS.bxml:1:3:1:3:1" typref="3781868044" value="decode_STATUS"/>
 <Unary_Exp op="~" typref="3781868044">
-<Id tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\BASIC_STATUS.bxml:1:3:1:2:2:1" typref="2905916364" value="code_STATUS"/>
+<Id tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\BASIC_STATUS.bxml:1:3:1:3:2:1" typref="2905916364" value="code_STATUS"/>
 </Unary_Exp>
 </Exp_Comparison>
 </Nary_Pred>
@@ -1073,6 +1093,16 @@
 </Type>
 <Type id="2701647786">
 <Id tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\BASIC_STATUS.bxml:1:6:7:1" value="INTEGER"/>
+</Type>
+<Type id="1382452173">
+<Unary_Exp op="POW">
+<Unary_Exp op="POW">
+<Binary_Exp op="*">
+<Id tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\BASIC_STATUS.bxml:1:6:8:1:1:1:1" value="INTEGER"/>
+<Id tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\BASIC_STATUS.bxml:1:6:8:1:1:1:2" value="STATUS"/>
+</Binary_Exp>
+</Unary_Exp>
+</Unary_Exp>
 </Type>
 <Type id="2701647786">
 <Id tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\BASIC_IO.bxml:1:3:1:1" value="INTEGER"/>

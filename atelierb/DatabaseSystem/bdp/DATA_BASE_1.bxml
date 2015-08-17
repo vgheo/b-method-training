@@ -90,6 +90,23 @@
 <Id value='pp' typref='2701647786'/>
 </Input_Parameters>
 <Body>
+<VAR_IN>
+<Variables>
+<Id value='tt' typref='2701647786'/>
+</Variables>
+<Body>
+<Nary_Sub op=';'>
+<Assignement_Sub>
+<Variables>
+<Id value='tt' typref='2701647786'/>
+</Variables>
+<Values>
+<Binary_Exp op='(' typref='2701647786'>
+<Id value='code_STATUS' typref='2905916364'/>
+<Id value='dead' typref='2246778642'/>
+</Binary_Exp>
+</Values>
+</Assignement_Sub>
 <Operation_Call>
 <Name>
 <Id value='mod_field'/>
@@ -97,12 +114,12 @@
 <Input_Parameters>
 <Integer_Literal value='2' typref='2701647786'/>
 <Id value='pp' typref='2701647786'/>
-<Binary_Exp op='(' typref='2701647786'>
-<Id value='code_STATUS' typref='2905916364'/>
-<Id value='dead' typref='2246778642'/>
-</Binary_Exp>
+<Id value='tt' typref='2701647786'/>
 </Input_Parameters>
 </Operation_Call>
+</Nary_Sub>
+</Body>
+</VAR_IN>
 </Body>
 </Operation>
 <Operation name='marriage'>
@@ -326,6 +343,7 @@
 <VAR_IN>
 <Variables>
 <Id value='ss' typref='2701647786'/>
+<Id value='tt' typref='2701647786'/>
 </Variables>
 <Body>
 <Nary_Sub op=';'>
@@ -343,16 +361,24 @@
 </Operation_Call>
 <Assignement_Sub>
 <Variables>
+<Id value='tt' typref='2701647786'/>
+</Variables>
+<Values>
+<Binary_Exp op='(' typref='2701647786'>
+<Id value='code_STATUS' typref='2905916364'/>
+<Id value='living' typref='2246778642'/>
+</Binary_Exp>
+</Values>
+</Assignement_Sub>
+<Assignement_Sub>
+<Variables>
 <Id value='report' typref='2043437594'/>
 </Variables>
 <Values>
 <Boolean_Exp typref='2043437594'>
 <Exp_Comparison op='='>
 <Id value='ss' typref='2701647786'/>
-<Binary_Exp op='(' typref='2701647786'>
-<Id value='code_STATUS' typref='2905916364'/>
-<Id value='living' typref='2246778642'/>
-</Binary_Exp>
+<Id value='tt' typref='2701647786'/>
 </Exp_Comparison>
 </Boolean_Exp>
 </Values>
@@ -373,6 +399,7 @@
 <VAR_IN>
 <Variables>
 <Id value='ss' typref='2701647786'/>
+<Id value='tt' typref='2701647786'/>
 </Variables>
 <Body>
 <Nary_Sub op=';'>
@@ -381,7 +408,7 @@
 <Id value='val_field'/>
 </Name>
 <Input_Parameters>
-<Integer_Literal value='1' typref='2701647786'/>
+<Integer_Literal value='2' typref='2701647786'/>
 <Id value='pp' typref='2701647786'/>
 </Input_Parameters>
 <Output_Parameters>
@@ -390,16 +417,24 @@
 </Operation_Call>
 <Assignement_Sub>
 <Variables>
+<Id value='tt' typref='2701647786'/>
+</Variables>
+<Values>
+<Binary_Exp op='(' typref='2701647786'>
+<Id value='code_SEX' typref='3611811608'/>
+<Id value='woman' typref='3153412450'/>
+</Binary_Exp>
+</Values>
+</Assignement_Sub>
+<Assignement_Sub>
+<Variables>
 <Id value='report' typref='2043437594'/>
 </Variables>
 <Values>
 <Boolean_Exp typref='2043437594'>
 <Exp_Comparison op='='>
 <Id value='ss' typref='2701647786'/>
-<Binary_Exp op='(' typref='2701647786'>
-<Id value='code_SEX' typref='3611811608'/>
-<Id value='woman' typref='3153412450'/>
-</Binary_Exp>
+<Id value='tt' typref='2701647786'/>
 </Exp_Comparison>
 </Boolean_Exp>
 </Values>

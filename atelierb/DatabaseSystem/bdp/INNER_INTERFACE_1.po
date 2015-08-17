@@ -1,17 +1,29 @@
 THEORY ProofList IS
-_f(1) & _f(2) & _f(3) & birth_operation.4,(_f(30) & _f(23) & _f(18) & _f(21) => _f(32));
-_f(1) & _f(2) & _f(3) & birth_operation.3,(_f(30) & _f(23) & _f(18) & _f(21) => _f(28));
-_f(1) & _f(2) & _f(3) & birth_operation.2,(_f(30) & _f(15) & _f(21) => _f(31));
-_f(1) & _f(2) & _f(3) & birth_operation.1,(_f(30) & _f(15) & _f(21) => _f(28));
-_f(1) & _f(2) & _f(3) & marriage_operation.3,(_f(24) & _f(23) & _f(18) & _f(21) => _f(22));
-_f(1) & _f(2) & _f(3) & marriage_operation.2,(_f(24) & _f(23) & _f(18) & _f(21) => _f(26));
-_f(1) & _f(2) & _f(3) & marriage_operation.1,(_f(22) & _f(15) & _f(21) => _f(25));
-_f(1) & _f(2) & _f(3) & death_operation.1,(_f(20) & _f(18) & _f(21) => _f(17))
+_f(1) & _f(2) & _f(3) & birth_operation.5,(_f(37) & _f(25) & _f(18) & _f(21) => _f(39));
+_f(1) & _f(2) & _f(3) & birth_operation.4,(_f(37) & _f(25) & _f(18) & _f(21) => _f(35));
+_f(1) & _f(2) & _f(3) & birth_operation.3,(_f(37) & _f(15) & _f(21) => _f(38));
+_f(1) & _f(2) & _f(3) & birth_operation.2,(_f(37) & _f(15) & _f(21) => _f(27));
+_f(1) & _f(2) & _f(3) & birth_operation.1,(_f(37) & _f(15) & _f(21) => _f(35));
+_f(1) & _f(2) & _f(3) & marriage_operation.10,(_f(26) & _f(25) & _f(18) & _f(21) => _f(31));
+_f(1) & _f(2) & _f(3) & marriage_operation.9,(_f(26) & _f(25) & _f(18) & _f(21) => _f(30));
+_f(1) & _f(2) & _f(3) & marriage_operation.8,(_f(26) & _f(25) & _f(18) & _f(21) => _f(33));
+_f(1) & _f(2) & _f(3) & marriage_operation.7,(_f(26) & _f(25) & _f(18) & _f(21) => _f(32));
+_f(1) & _f(2) & _f(3) & marriage_operation.6,(_f(24) & _f(15) & _f(21) => _f(31));
+_f(1) & _f(2) & _f(3) & marriage_operation.5,(_f(24) & _f(15) & _f(21) => _f(30));
+_f(1) & _f(2) & _f(3) & marriage_operation.4,(_f(24) & _f(15) & _f(21) => _f(26));
+_f(1) & _f(2) & _f(3) & marriage_operation.3,(_f(24) & _f(15) & _f(21) => _f(29));
+_f(1) & _f(2) & _f(3) & marriage_operation.2,(_f(24) & _f(15) & _f(21) => _f(28));
+_f(1) & _f(2) & _f(3) & marriage_operation.1,(_f(24) & _f(15) & _f(21) => _f(27));
+_f(1) & _f(2) & _f(3) & death_operation.5,(_f(20) & _f(18) & _f(21) => _f(23));
+_f(1) & _f(2) & _f(3) & death_operation.4,(_f(20) & _f(18) & _f(21) => _f(22));
+_f(1) & _f(2) & _f(3) & death_operation.3,(_f(17) & _f(15) & _f(21) => _f(23));
+_f(1) & _f(2) & _f(3) & death_operation.2,(_f(17) & _f(15) & _f(21) => _f(22));
+_f(1) & _f(2) & _f(3) & death_operation.1,(_f(17) & _f(15) & _f(21) => _f(20))
 END
 &
 THEORY Formulas IS
 ((NAT) = (((0) .. (2147483647)))) & ((INT) = (((-2147483647) .. (2147483647))));
-PERSON: FIN(INTEGER) & not(PERSON = {}) & ((max_pers) = (card(PERSON)));
+PERSON: FIN(INTEGER) & not(PERSON = {}) & ((max_pers) : (NAT)) & ((max_pers) = (card(PERSON)));
 person$1 : POW( PERSON) & sex$1 : person$1 +-> SEX & dom(sex$1) = person$1 & ((sex$1) : (((person$1) --> (SEX)))) & status$1 : person$1 +-> STATUS & dom(status$1) = person$1 & ((status$1) : (((person$1) --> (STATUS)))) & husband$1 : ((sex$1)~ )[{woman}] +-> ((sex$1)~ )[{man}] & husband$1~ : ((sex$1)~ )[{man}] +-> ((sex$1)~ )[{woman}] & ((husband$1) : (((((sex$1)~ )[{woman}]) >+> (((sex$1)~ )[{man}])))) & ((wife$1) = ((husband$1)~)) & ((mother$1) : (((person$1) +-> (((dom(((husband$1) \/ (wife$1)))) /\ (((sex$1)~ )[{woman}]))))));
 {} : POW( PERSON);
 {} : {} +-> SEX;
@@ -26,15 +38,22 @@ dom({}) = {};
 (({}) : ((({}) +-> (((dom((({}) \/ ({})))) /\ ((({})~ )[{woman}]))))));
 ((bb) = (TRUE));
 not(((bb) = (TRUE)));
-((pp$1) : (((status$1)~ )[{living}]));
+((pp$1) : (((PERSON) /\ (((status$1)~ )[{living}]))));
 ((FALSE) = (TRUE));
 not(((FALSE) = (TRUE)));
 ((pp$1) : (PERSON));
 "Precondition predicate";
-((mm$1) : ((((person$1 - dom(((husband$1) \/ (wife$1))))) /\ (((sex$1)~ )[{man}]))));
+((pp$1) : (person$1));
+((pp$1) : (((status$1)~ )[{living}]));
+((mm$1) : (((PERSON) /\ ((((person$1 - dom(((husband$1) \/ (wife$1))))) /\ (((sex$1)~ )[{man}]))))));
 ((ww$1) : (PERSON));
 ((mm$1) : (PERSON));
+((ww) : (PERSON));
+((ww) : (person$1));
 ((ww) : ((((person$1 - dom(((husband$1) \/ (wife$1))))) /\ (((sex$1)~ )[{woman}]))));
+((mm$1) : (person$1));
+((mm$1) : ((((person$1 - dom(((husband$1) \/ (wife$1))))) /\ (((sex$1)~ )[{man}]))));
+((ww$1) : (person$1));
 ((ww$1) : ((((person$1 - dom(((husband$1) \/ (wife$1))))) /\ (((sex$1)~ )[{woman}]))));
 ((angel) : ((PERSON - person$1)));
 not((PERSON - person$1) = {});
@@ -42,7 +61,10 @@ not(not((PERSON - person$1) = {}));
 ((ss$1) : (SEX));
 ((ww) : (((dom(((husband$1) \/ (wife$1)))) /\ (((sex$1)~ )[{woman}]))));
 ((ww$1) : (((dom(((husband$1) \/ (wife$1)))) /\ (((sex$1)~ )[{woman}]))));
+((groom) : (person$1));
+((groom) : (PERSON));
 ((mm$1) : ((((person$1 - dom(((husband$1) \/ (wife$1))))) /\ (((sex$1)~ )[{woman}]))));
+((mm) : (PERSON));
 ((ww) : (SEX));
 ((ww$1) : (SEX))
 END

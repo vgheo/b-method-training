@@ -159,33 +159,33 @@ END
 &
 THEORY ListPreconditionX IS
   Own_Precondition(Implementation(DATA_BASE_1),death)==(btrue);
-  List_Precondition(Implementation(DATA_BASE_1),death)==(pp: status~[{living}]);
+  List_Precondition(Implementation(DATA_BASE_1),death)==(pp: PERSON & pp: person & pp: status~[{living}]);
   Own_Precondition(Implementation(DATA_BASE_1),marriage)==(btrue);
-  List_Precondition(Implementation(DATA_BASE_1),marriage)==(bride: person-dom(husband\/wife)/\sex~[{woman}] & groom: person-dom(husband\/wife)/\sex~[{man}]);
+  List_Precondition(Implementation(DATA_BASE_1),marriage)==(bride: PERSON & bride: person & bride: person-dom(husband\/wife)/\sex~[{woman}] & groom: PERSON & groom: person & groom: person-dom(husband\/wife)/\sex~[{man}]);
   Own_Precondition(Implementation(DATA_BASE_1),first_human)==(btrue);
   List_Precondition(Implementation(DATA_BASE_1),first_human)==(PERSON-person/={} & ss: SEX);
   Own_Precondition(Implementation(DATA_BASE_1),not_saturated)==(btrue);
   List_Precondition(Implementation(DATA_BASE_1),not_saturated)==(btrue);
   Own_Precondition(Implementation(DATA_BASE_1),new_born)==(btrue);
-  List_Precondition(Implementation(DATA_BASE_1),new_born)==(PERSON-person/={} & ss: SEX & mm: dom(husband\/wife)/\sex~[{woman}]);
+  List_Precondition(Implementation(DATA_BASE_1),new_born)==(PERSON-person/={} & ss: SEX & mm: PERSON & mm: dom(husband\/wife)/\sex~[{woman}]);
   Own_Precondition(Implementation(DATA_BASE_1),is_present)==(btrue);
   List_Precondition(Implementation(DATA_BASE_1),is_present)==(pp: PERSON);
   Own_Precondition(Implementation(DATA_BASE_1),is_living)==(btrue);
-  List_Precondition(Implementation(DATA_BASE_1),is_living)==(pp: person);
+  List_Precondition(Implementation(DATA_BASE_1),is_living)==(pp: PERSON & pp: person);
   Own_Precondition(Implementation(DATA_BASE_1),is_woman)==(btrue);
-  List_Precondition(Implementation(DATA_BASE_1),is_woman)==(pp: person);
+  List_Precondition(Implementation(DATA_BASE_1),is_woman)==(pp: PERSON & pp: person);
   Own_Precondition(Implementation(DATA_BASE_1),is_married)==(btrue);
-  List_Precondition(Implementation(DATA_BASE_1),is_married)==(pp: person);
+  List_Precondition(Implementation(DATA_BASE_1),is_married)==(pp: PERSON & pp: person);
   Own_Precondition(Implementation(DATA_BASE_1),has_mother)==(btrue);
-  List_Precondition(Implementation(DATA_BASE_1),has_mother)==(pp: person);
+  List_Precondition(Implementation(DATA_BASE_1),has_mother)==(pp: PERSON & pp: person);
   Own_Precondition(Implementation(DATA_BASE_1),val_status)==(btrue);
-  List_Precondition(Implementation(DATA_BASE_1),val_status)==(pp: person);
+  List_Precondition(Implementation(DATA_BASE_1),val_status)==(pp: PERSON & pp: person);
   Own_Precondition(Implementation(DATA_BASE_1),val_sex)==(btrue);
-  List_Precondition(Implementation(DATA_BASE_1),val_sex)==(pp: person);
+  List_Precondition(Implementation(DATA_BASE_1),val_sex)==(pp: PERSON & pp: person);
   Own_Precondition(Implementation(DATA_BASE_1),val_spouse)==(btrue);
-  List_Precondition(Implementation(DATA_BASE_1),val_spouse)==(pp: dom(husband\/wife));
+  List_Precondition(Implementation(DATA_BASE_1),val_spouse)==(pp: PERSON & pp: person & pp: dom(husband\/wife) & vv: PERSON);
   Own_Precondition(Implementation(DATA_BASE_1),val_mother)==(btrue);
-  List_Precondition(Implementation(DATA_BASE_1),val_mother)==(pp: dom(mother));
+  List_Precondition(Implementation(DATA_BASE_1),val_mother)==(pp: PERSON & pp: person & pp: dom(mother) & vv: PERSON);
   Own_Precondition(Implementation(DATA_BASE_1),PERSON_read)==(btrue);
   List_Precondition(Implementation(DATA_BASE_1),PERSON_read)==(btrue);
   Own_Precondition(Implementation(DATA_BASE_1),PERSON_write)==(btrue);
@@ -195,28 +195,28 @@ END
 THEORY ListSubstitutionX IS
   Expanded_List_Substitution(Implementation(DATA_BASE_1),PERSON_write)==(pp: PERSON & pp: INT | skip);
   Expanded_List_Substitution(Implementation(DATA_BASE_1),PERSON_read)==(btrue & 1: INT & max_pers: INT & 1<=max_pers | @(nn$0).(nn$0: 1..max_pers ==> pp:=nn$0));
-  Expanded_List_Substitution(Implementation(DATA_BASE_1),val_mother)==(pp: dom(mother) & 3: 1..4 & pp: dom(partial_field(3)) | vv:=partial_field(3)(pp));
-  Expanded_List_Substitution(Implementation(DATA_BASE_1),val_spouse)==(pp: dom(husband\/wife) & 4: 1..4 & pp: dom(partial_field(4)) | vv:=partial_field(4)(pp));
-  Expanded_List_Substitution(Implementation(DATA_BASE_1),val_sex)==(pp: person | @ss.((1: 1..4 & pp: dom(partial_field(1)) | ss:=partial_field(1)(pp));(ss: dom(decode_SEX) | vv:=decode_SEX(ss))));
-  Expanded_List_Substitution(Implementation(DATA_BASE_1),val_status)==(pp: person | @ss.((2: 1..4 & pp: dom(partial_field(2)) | ss:=partial_field(2)(pp));(ss: dom(decode_STATUS) | vv:=decode_STATUS(ss))));
-  Expanded_List_Substitution(Implementation(DATA_BASE_1),has_mother)==(pp: person & 3: 1..4 & pp: 1..partial_object | report:=bool(pp: dom(partial_field(3))));
-  Expanded_List_Substitution(Implementation(DATA_BASE_1),is_married)==(pp: person & 4: 1..4 & pp: 1..partial_object | report:=bool(pp: dom(partial_field(4))));
-  Expanded_List_Substitution(Implementation(DATA_BASE_1),is_woman)==(pp: person | @ss.((1: 1..4 & pp: dom(partial_field(1)) | ss:=partial_field(1)(pp));(woman: dom(code_SEX) | report:=bool(ss = code_SEX(woman)))));
-  Expanded_List_Substitution(Implementation(DATA_BASE_1),is_living)==(pp: person | @ss.((2: 1..4 & pp: dom(partial_field(2)) | ss:=partial_field(2)(pp));(living: dom(code_STATUS) | report:=bool(ss = code_STATUS(living)))));
+  Expanded_List_Substitution(Implementation(DATA_BASE_1),val_mother)==(pp: PERSON & pp: person & pp: dom(mother) & vv: PERSON & 3: 1..4 & pp: 1..partial_object | vv:=partial_field(3)(pp));
+  Expanded_List_Substitution(Implementation(DATA_BASE_1),val_spouse)==(pp: PERSON & pp: person & pp: dom(husband\/wife) & vv: PERSON & 4: 1..4 & pp: 1..partial_object | vv:=partial_field(4)(pp));
+  Expanded_List_Substitution(Implementation(DATA_BASE_1),val_sex)==(pp: PERSON & pp: person | @ss.((1: 1..4 & pp: 1..partial_object | ss:=partial_field(1)(pp));(ss: dom(decode_SEX) | vv:=decode_SEX(ss))));
+  Expanded_List_Substitution(Implementation(DATA_BASE_1),val_status)==(pp: PERSON & pp: person | @ss.((2: 1..4 & pp: 1..partial_object | ss:=partial_field(2)(pp));(ss: dom(decode_STATUS) | vv:=decode_STATUS(ss))));
+  Expanded_List_Substitution(Implementation(DATA_BASE_1),has_mother)==(pp: PERSON & pp: person & 3: 1..4 & pp: 1..partial_object | report:=bool(pp: dom(partial_field(3))));
+  Expanded_List_Substitution(Implementation(DATA_BASE_1),is_married)==(pp: PERSON & pp: person & 4: 1..4 & pp: 1..partial_object | report:=bool(pp: dom(partial_field(4))));
+  Expanded_List_Substitution(Implementation(DATA_BASE_1),is_woman)==(pp: PERSON & pp: person | @(ss,tt).((2: 1..4 & pp: 1..partial_object | ss:=partial_field(2)(pp));(woman: dom(code_SEX) | tt:=code_SEX(woman));report:=bool(ss = tt)));
+  Expanded_List_Substitution(Implementation(DATA_BASE_1),is_living)==(pp: PERSON & pp: person | @(ss,tt).((2: 1..4 & pp: 1..partial_object | ss:=partial_field(2)(pp));(living: dom(code_STATUS) | tt:=code_STATUS(living));report:=bool(ss = tt)));
   Expanded_List_Substitution(Implementation(DATA_BASE_1),is_present)==(pp: PERSON | @nn.((btrue | nn:=partial_object);report:=bool(nn/=max_pers)));
-  Expanded_List_Substitution(Implementation(DATA_BASE_1),new_born)==(PERSON-person/={} & ss: SEX & mm: dom(husband\/wife)/\sex~[{woman}] | (partial_object/=10000 | partial_object,baby:=partial_object+1,partial_object+1);(ss: dom(code_SEX) & 1: 1..4 & baby: 1..partial_object & code_SEX(ss): 0..10000 | partial_field:=partial_field<+{1|->(partial_field(1)<+{baby|->code_SEX(ss)})});(living: dom(code_STATUS) & 2: 1..4 & baby: 1..partial_object & code_STATUS(living): 0..10000 | partial_field:=partial_field<+{2|->(partial_field(2)<+{baby|->code_STATUS(living)})});(3: 1..4 & baby: 1..partial_object & mm: 0..10000 | partial_field:=partial_field<+{3|->(partial_field(3)<+{baby|->mm})}));
+  Expanded_List_Substitution(Implementation(DATA_BASE_1),new_born)==(PERSON-person/={} & ss: SEX & mm: PERSON & mm: dom(husband\/wife)/\sex~[{woman}] | (partial_object/=10000 | partial_object,baby:=partial_object+1,partial_object+1);(ss: dom(code_SEX) & 1: 1..4 & baby: 1..partial_object & code_SEX(ss): 0..10000 | partial_field:=partial_field<+{1|->(partial_field(1)<+{baby|->code_SEX(ss)})});(living: dom(code_STATUS) & 2: 1..4 & baby: 1..partial_object & code_STATUS(living): 0..10000 | partial_field:=partial_field<+{2|->(partial_field(2)<+{baby|->code_STATUS(living)})});(3: 1..4 & baby: 1..partial_object & mm: 0..10000 | partial_field:=partial_field<+{3|->(partial_field(3)<+{baby|->mm})}));
   Expanded_List_Substitution(Implementation(DATA_BASE_1),not_saturated)==(btrue | @nn.((btrue | nn:=partial_object);report:=bool(nn/=max_pers)));
   Expanded_List_Substitution(Implementation(DATA_BASE_1),first_human)==(PERSON-person/={} & ss: SEX | (partial_object/=10000 | partial_object,baby:=partial_object+1,partial_object+1);(ss: dom(code_SEX) & 1: 1..4 & baby: 1..partial_object & code_SEX(ss): 0..10000 | partial_field:=partial_field<+{1|->(partial_field(1)<+{baby|->code_SEX(ss)})});(living: dom(code_STATUS) & 2: 1..4 & baby: 1..partial_object & code_STATUS(living): 0..10000 | partial_field:=partial_field<+{2|->(partial_field(2)<+{baby|->code_STATUS(living)})}));
-  Expanded_List_Substitution(Implementation(DATA_BASE_1),marriage)==(bride: person-dom(husband\/wife)/\sex~[{woman}] & groom: person-dom(husband\/wife)/\sex~[{man}] | (4: 1..4 & bride: 1..partial_object & groom: 0..10000 | partial_field:=partial_field<+{4|->(partial_field(4)<+{bride|->groom})});(4: 1..4 & groom: 1..partial_object & bride: 0..10000 | partial_field:=partial_field<+{4|->(partial_field(4)<+{groom|->bride})}));
-  Expanded_List_Substitution(Implementation(DATA_BASE_1),death)==(pp: status~[{living}] & dead: dom(code_STATUS) & 2: 1..4 & pp: 1..partial_object & code_STATUS(dead): 0..10000 | partial_field:=partial_field<+{2|->(partial_field(2)<+{pp|->code_STATUS(dead)})});
-  List_Substitution(Implementation(DATA_BASE_1),death)==(mod_field(2,pp,code_STATUS(dead)));
+  Expanded_List_Substitution(Implementation(DATA_BASE_1),marriage)==(bride: PERSON & bride: person & bride: person-dom(husband\/wife)/\sex~[{woman}] & groom: PERSON & groom: person & groom: person-dom(husband\/wife)/\sex~[{man}] | (4: 1..4 & bride: 1..partial_object & groom: 0..10000 | partial_field:=partial_field<+{4|->(partial_field(4)<+{bride|->groom})});(4: 1..4 & groom: 1..partial_object & bride: 0..10000 | partial_field:=partial_field<+{4|->(partial_field(4)<+{groom|->bride})}));
+  Expanded_List_Substitution(Implementation(DATA_BASE_1),death)==(pp: PERSON & pp: person & pp: status~[{living}] | @tt.((dead: dom(code_STATUS) | tt:=code_STATUS(dead));(2: 1..4 & pp: 1..partial_object & tt: 0..10000 | partial_field:=partial_field<+{2|->(partial_field(2)<+{pp|->tt})})));
+  List_Substitution(Implementation(DATA_BASE_1),death)==(VAR tt IN tt:=code_STATUS(dead);mod_field(2,pp,tt) END);
   List_Substitution(Implementation(DATA_BASE_1),marriage)==(mod_field(4,bride,groom);mod_field(4,groom,bride));
   List_Substitution(Implementation(DATA_BASE_1),first_human)==(baby <-- create_partial_object;mod_field(1,baby,code_SEX(ss));mod_field(2,baby,code_STATUS(living)));
   List_Substitution(Implementation(DATA_BASE_1),not_saturated)==(VAR nn IN nn <-- nbr_object;report:=bool(nn/=max_pers) END);
   List_Substitution(Implementation(DATA_BASE_1),new_born)==(baby <-- create_partial_object;mod_field(1,baby,code_SEX(ss));mod_field(2,baby,code_STATUS(living));mod_field(3,baby,mm));
   List_Substitution(Implementation(DATA_BASE_1),is_present)==(VAR nn IN nn <-- nbr_object;report:=bool(nn/=max_pers) END);
-  List_Substitution(Implementation(DATA_BASE_1),is_living)==(VAR ss IN ss <-- val_field(2,pp);report:=bool(ss = code_STATUS(living)) END);
-  List_Substitution(Implementation(DATA_BASE_1),is_woman)==(VAR ss IN ss <-- val_field(1,pp);report:=bool(ss = code_SEX(woman)) END);
+  List_Substitution(Implementation(DATA_BASE_1),is_living)==(VAR ss,tt IN ss <-- val_field(2,pp);tt:=code_STATUS(living);report:=bool(ss = tt) END);
+  List_Substitution(Implementation(DATA_BASE_1),is_woman)==(VAR ss,tt IN ss <-- val_field(2,pp);tt:=code_SEX(woman);report:=bool(ss = tt) END);
   List_Substitution(Implementation(DATA_BASE_1),is_married)==(report <-- def_field(4,pp));
   List_Substitution(Implementation(DATA_BASE_1),has_mother)==(report <-- def_field(3,pp));
   List_Substitution(Implementation(DATA_BASE_1),val_status)==(VAR ss IN ss <-- val_field(2,pp);vv:=decode_STATUS(ss) END);
@@ -258,8 +258,8 @@ THEORY ListHiddenConstantsX IS
 END
 &
 THEORY ListPropertiesX IS
-  Abstract_List_Properties(Implementation(DATA_BASE_1))==(max_pers = card(PERSON) & PERSON: FIN(INTEGER) & not(PERSON = {}));
-  Context_List_Properties(Implementation(DATA_BASE_1))==(code_SEX: SEX >->> {0,1} & decode_SEX = code_SEX~ & SEX: FIN(INTEGER) & not(SEX = {}) & code_STATUS: STATUS >->> {0,1} & decode_STATUS = code_STATUS~ & STATUS: FIN(INTEGER) & not(STATUS = {}));
+  Abstract_List_Properties(Implementation(DATA_BASE_1))==(max_pers: NAT & max_pers = card(PERSON) & PERSON: FIN(INTEGER) & not(PERSON = {}));
+  Context_List_Properties(Implementation(DATA_BASE_1))==(code_SEX: SEX >->> 0..1 & decode_SEX: 0..1 >->> SEX & decode_SEX = code_SEX~ & SEX: FIN(INTEGER) & not(SEX = {}) & code_STATUS: STATUS >->> 0..1 & decode_STATUS: 0..1 >->> STATUS & decode_STATUS = code_STATUS~ & STATUS: FIN(INTEGER) & not(STATUS = {}));
   Inherited_List_Properties(Implementation(DATA_BASE_1))==(btrue);
   List_Properties(Implementation(DATA_BASE_1))==(btrue)
 END
@@ -323,10 +323,10 @@ END
 &
 THEORY ListVisibleStaticX IS
   List_Constants(Implementation(DATA_BASE_1),Machine(BASIC_STATUS))==(code_STATUS,decode_STATUS);
-  List_Constants_Env(Implementation(DATA_BASE_1),Machine(BASIC_STATUS))==(Type(dead) == Cst(etype(STATUS,0,1));Type(living) == Cst(etype(STATUS,0,1));Type(code_STATUS) == Cst(SetOf(etype(STATUS,0,1)*btype(INTEGER,0,1)));Type(decode_STATUS) == Cst(SetOf(btype(INTEGER,?,?)*etype(STATUS,?,?))));
+  List_Constants_Env(Implementation(DATA_BASE_1),Machine(BASIC_STATUS))==(Type(dead) == Cst(etype(STATUS,0,1));Type(living) == Cst(etype(STATUS,0,1));Type(code_STATUS) == Cst(SetOf(etype(STATUS,0,1)*btype(INTEGER,0,1)));Type(decode_STATUS) == Cst(SetOf(btype(INTEGER,0,1)*etype(STATUS,0,1))));
   Enumerate_Definition(Implementation(DATA_BASE_1),Machine(BASIC_STATUS),STATUS)==({dead,living});
   List_Constants(Implementation(DATA_BASE_1),Machine(BASIC_SEX))==(code_SEX,decode_SEX);
-  List_Constants_Env(Implementation(DATA_BASE_1),Machine(BASIC_SEX))==(Type(man) == Cst(etype(SEX,0,1));Type(woman) == Cst(etype(SEX,0,1));Type(code_SEX) == Cst(SetOf(etype(SEX,0,1)*btype(INTEGER,0,1)));Type(decode_SEX) == Cst(SetOf(btype(INTEGER,?,?)*etype(SEX,?,?))));
+  List_Constants_Env(Implementation(DATA_BASE_1),Machine(BASIC_SEX))==(Type(man) == Cst(etype(SEX,0,1));Type(woman) == Cst(etype(SEX,0,1));Type(code_SEX) == Cst(SetOf(etype(SEX,0,1)*btype(INTEGER,0,1)));Type(decode_SEX) == Cst(SetOf(btype(INTEGER,0,1)*etype(SEX,0,1))));
   Enumerate_Definition(Implementation(DATA_BASE_1),Machine(BASIC_SEX),SEX)==({man,woman})
 END
 &
@@ -367,10 +367,11 @@ THEORY ConstantsEnvX IS
 END
 &
 THEORY VariablesLocEnvX IS
+  Variables_Loc(Implementation(DATA_BASE_1),death, 1) == (Type(tt) == Lvl(btype(INTEGER,?,?)));
   Variables_Loc(Implementation(DATA_BASE_1),not_saturated, 1) == (Type(nn) == Lvl(btype(INTEGER,?,?)));
   Variables_Loc(Implementation(DATA_BASE_1),is_present, 1) == (Type(nn) == Lvl(btype(INTEGER,?,?)));
-  Variables_Loc(Implementation(DATA_BASE_1),is_living, 1) == (Type(ss) == Lvl(btype(INTEGER,?,?)));
-  Variables_Loc(Implementation(DATA_BASE_1),is_woman, 1) == (Type(ss) == Lvl(btype(INTEGER,?,?)));
+  Variables_Loc(Implementation(DATA_BASE_1),is_living, 1) == (Type(ss) == Lvl(btype(INTEGER,?,?));Type(tt) == Lvl(btype(INTEGER,?,?)));
+  Variables_Loc(Implementation(DATA_BASE_1),is_woman, 1) == (Type(ss) == Lvl(btype(INTEGER,?,?));Type(tt) == Lvl(btype(INTEGER,?,?)));
   Variables_Loc(Implementation(DATA_BASE_1),val_status, 1) == (Type(ss) == Lvl(btype(INTEGER,?,?)));
   Variables_Loc(Implementation(DATA_BASE_1),val_sex, 1) == (Type(ss) == Lvl(btype(INTEGER,?,?)))
 END
@@ -381,7 +382,7 @@ THEORY TCIntRdX IS
   B0check_tab == KO;
   local_op == OK;
   abstract_constants_visible_in_values == KO;
-  project_type == VALIDATION_TYPE;
+  project_type == SOFTWARE_TYPE;
   event_b_deadlockfreeness == KO;
   variant_clause_mandatory == KO;
   event_b_coverage == KO;

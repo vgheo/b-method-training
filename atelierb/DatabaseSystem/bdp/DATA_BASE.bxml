@@ -24,12 +24,18 @@
 <Id value='wife' typref='2068808656'/>
 </Abstract_Variables>
 <Properties>
+<Nary_Pred op='&amp;'>
+<Exp_Comparison op=':'>
+<Id value='max_pers' typref='2701647786'/>
+<Id value='NAT' typref='3603043417'/>
+</Exp_Comparison>
 <Exp_Comparison op='='>
 <Id value='max_pers' typref='2701647786'/>
 <Unary_Exp op='card' typref='2701647786'>
 <Id value='PERSON' typref='917286058'/>
 </Unary_Exp>
 </Exp_Comparison>
+</Nary_Pred>
 </Properties>
 <Invariant>
 <Nary_Pred op='&amp;'>
@@ -160,6 +166,15 @@
 <Id value='pp' typref='555065967'/>
 </Input_Parameters>
 <Precondition>
+<Nary_Pred op='&amp;'>
+<Exp_Comparison op=':'>
+<Id value='pp' typref='555065967'/>
+<Id value='PERSON' typref='917286058'/>
+</Exp_Comparison>
+<Exp_Comparison op=':'>
+<Id value='pp' typref='555065967'/>
+<Id value='person' typref='917286058'/>
+</Exp_Comparison>
 <Exp_Comparison op=':'>
 <Id value='pp' typref='555065967'/>
 <Binary_Exp op='[' typref='917286058'>
@@ -171,6 +186,7 @@
 </Nary_Exp>
 </Binary_Exp>
 </Exp_Comparison>
+</Nary_Pred>
 </Precondition>
 <Body>
 <Assignement_Sub>
@@ -195,6 +211,14 @@
 <Nary_Pred op='&amp;'>
 <Exp_Comparison op=':'>
 <Id value='bride' typref='555065967'/>
+<Id value='PERSON' typref='917286058'/>
+</Exp_Comparison>
+<Exp_Comparison op=':'>
+<Id value='bride' typref='555065967'/>
+<Id value='person' typref='917286058'/>
+</Exp_Comparison>
+<Exp_Comparison op=':'>
+<Id value='bride' typref='555065967'/>
 <Binary_Exp op='/\' typref='917286058'>
 <Binary_Exp op='-' typref='917286058'>
 <Id value='person' typref='917286058'/>
@@ -214,6 +238,14 @@
 </Nary_Exp>
 </Binary_Exp>
 </Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=':'>
+<Id value='groom' typref='555065967'/>
+<Id value='PERSON' typref='917286058'/>
+</Exp_Comparison>
+<Exp_Comparison op=':'>
+<Id value='groom' typref='555065967'/>
+<Id value='person' typref='917286058'/>
 </Exp_Comparison>
 <Exp_Comparison op=':'>
 <Id value='groom' typref='555065967'/>
@@ -375,6 +407,10 @@
 </Exp_Comparison>
 <Exp_Comparison op=':'>
 <Id value='mm' typref='555065967'/>
+<Id value='PERSON' typref='917286058'/>
+</Exp_Comparison>
+<Exp_Comparison op=':'>
+<Id value='mm' typref='555065967'/>
 <Binary_Exp op='/\' typref='917286058'>
 <Unary_Exp op='dom' typref='917286058'>
 <Binary_Exp op='\/' typref='2068808656'>
@@ -529,10 +565,16 @@
 <Id value='pp' typref='555065967'/>
 </Input_Parameters>
 <Precondition>
+<Nary_Pred op='&amp;'>
+<Exp_Comparison op=':'>
+<Id value='pp' typref='555065967'/>
+<Id value='PERSON' typref='917286058'/>
+</Exp_Comparison>
 <Exp_Comparison op=':'>
 <Id value='pp' typref='555065967'/>
 <Id value='person' typref='917286058'/>
 </Exp_Comparison>
+</Nary_Pred>
 </Precondition>
 <Body>
 <Assignement_Sub>
@@ -565,10 +607,16 @@
 <Id value='pp' typref='555065967'/>
 </Input_Parameters>
 <Precondition>
+<Nary_Pred op='&amp;'>
+<Exp_Comparison op=':'>
+<Id value='pp' typref='555065967'/>
+<Id value='PERSON' typref='917286058'/>
+</Exp_Comparison>
 <Exp_Comparison op=':'>
 <Id value='pp' typref='555065967'/>
 <Id value='person' typref='917286058'/>
 </Exp_Comparison>
+</Nary_Pred>
 </Precondition>
 <Body>
 <Assignement_Sub>
@@ -601,10 +649,16 @@
 <Id value='pp' typref='555065967'/>
 </Input_Parameters>
 <Precondition>
+<Nary_Pred op='&amp;'>
+<Exp_Comparison op=':'>
+<Id value='pp' typref='555065967'/>
+<Id value='PERSON' typref='917286058'/>
+</Exp_Comparison>
 <Exp_Comparison op=':'>
 <Id value='pp' typref='555065967'/>
 <Id value='person' typref='917286058'/>
 </Exp_Comparison>
+</Nary_Pred>
 </Precondition>
 <Body>
 <Assignement_Sub>
@@ -635,10 +689,16 @@
 <Id value='pp' typref='555065967'/>
 </Input_Parameters>
 <Precondition>
+<Nary_Pred op='&amp;'>
+<Exp_Comparison op=':'>
+<Id value='pp' typref='555065967'/>
+<Id value='PERSON' typref='917286058'/>
+</Exp_Comparison>
 <Exp_Comparison op=':'>
 <Id value='pp' typref='555065967'/>
 <Id value='person' typref='917286058'/>
 </Exp_Comparison>
+</Nary_Pred>
 </Precondition>
 <Body>
 <Assignement_Sub>
@@ -666,10 +726,16 @@
 <Id value='pp' typref='555065967'/>
 </Input_Parameters>
 <Precondition>
+<Nary_Pred op='&amp;'>
+<Exp_Comparison op=':'>
+<Id value='pp' typref='555065967'/>
+<Id value='PERSON' typref='917286058'/>
+</Exp_Comparison>
 <Exp_Comparison op=':'>
 <Id value='pp' typref='555065967'/>
 <Id value='person' typref='917286058'/>
 </Exp_Comparison>
+</Nary_Pred>
 </Precondition>
 <Body>
 <Assignement_Sub>
@@ -693,10 +759,16 @@
 <Id value='pp' typref='555065967'/>
 </Input_Parameters>
 <Precondition>
+<Nary_Pred op='&amp;'>
+<Exp_Comparison op=':'>
+<Id value='pp' typref='555065967'/>
+<Id value='PERSON' typref='917286058'/>
+</Exp_Comparison>
 <Exp_Comparison op=':'>
 <Id value='pp' typref='555065967'/>
 <Id value='person' typref='917286058'/>
 </Exp_Comparison>
+</Nary_Pred>
 </Precondition>
 <Body>
 <Assignement_Sub>
@@ -720,6 +792,15 @@
 <Id value='pp' typref='555065967'/>
 </Input_Parameters>
 <Precondition>
+<Nary_Pred op='&amp;'>
+<Exp_Comparison op=':'>
+<Id value='pp' typref='555065967'/>
+<Id value='PERSON' typref='917286058'/>
+</Exp_Comparison>
+<Exp_Comparison op=':'>
+<Id value='pp' typref='555065967'/>
+<Id value='person' typref='917286058'/>
+</Exp_Comparison>
 <Exp_Comparison op=':'>
 <Id value='pp' typref='555065967'/>
 <Unary_Exp op='dom' typref='917286058'>
@@ -729,6 +810,11 @@
 </Binary_Exp>
 </Unary_Exp>
 </Exp_Comparison>
+<Exp_Comparison op=':'>
+<Id value='vv' typref='555065967'/>
+<Id value='PERSON' typref='917286058'/>
+</Exp_Comparison>
+</Nary_Pred>
 </Precondition>
 <Body>
 <Assignement_Sub>
@@ -755,12 +841,26 @@
 <Id value='pp' typref='555065967'/>
 </Input_Parameters>
 <Precondition>
+<Nary_Pred op='&amp;'>
+<Exp_Comparison op=':'>
+<Id value='pp' typref='555065967'/>
+<Id value='PERSON' typref='917286058'/>
+</Exp_Comparison>
+<Exp_Comparison op=':'>
+<Id value='pp' typref='555065967'/>
+<Id value='person' typref='917286058'/>
+</Exp_Comparison>
 <Exp_Comparison op=':'>
 <Id value='pp' typref='555065967'/>
 <Unary_Exp op='dom' typref='917286058'>
 <Id value='mother' typref='2068808656'/>
 </Unary_Exp>
 </Exp_Comparison>
+<Exp_Comparison op=':'>
+<Id value='vv' typref='555065967'/>
+<Id value='PERSON' typref='917286058'/>
+</Exp_Comparison>
+</Nary_Pred>
 </Precondition>
 <Body>
 <Assignement_Sub>
@@ -837,6 +937,11 @@
 <Id value='PERSON'/>
 <Id value='PERSON'/>
 </Binary_Exp>
+</Unary_Exp>
+</Type>
+<Type id='3603043417'>
+<Unary_Exp op='POW'>
+<Id value='INTEGER'/>
 </Unary_Exp>
 </Type>
 <Type id='2707207074'>

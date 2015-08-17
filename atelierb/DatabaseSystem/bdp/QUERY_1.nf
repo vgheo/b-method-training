@@ -179,7 +179,7 @@ END
 &
 THEORY ListPropertiesX IS
   Abstract_List_Properties(Implementation(QUERY_1))==(btrue);
-  Context_List_Properties(Implementation(QUERY_1))==(max_pers: NAT & max_pers = card(PERSON) & PERSON: FIN(INTEGER) & not(PERSON = {}) & code_SEX: SEX >->> 0..1 & decode_SEX: 0..1 >->> SEX & decode_SEX = code_SEX~ & SEX: FIN(INTEGER) & not(SEX = {}) & code_STATUS: STATUS >->> {0,1} & decode_STATUS = code_STATUS~ & STATUS: FIN(INTEGER) & not(STATUS = {}));
+  Context_List_Properties(Implementation(QUERY_1))==(max_pers: NAT & max_pers = card(PERSON) & PERSON: FIN(INTEGER) & not(PERSON = {}) & code_SEX: SEX >->> 0..1 & decode_SEX: 0..1 >->> SEX & decode_SEX = code_SEX~ & SEX: FIN(INTEGER) & not(SEX = {}) & code_STATUS: STATUS >->> 0..1 & decode_STATUS: 0..1 >->> STATUS & decode_STATUS = code_STATUS~ & STATUS: FIN(INTEGER) & not(STATUS = {}));
   Inherited_List_Properties(Implementation(QUERY_1))==(btrue);
   List_Properties(Implementation(QUERY_1))==(btrue)
 END
@@ -194,7 +194,7 @@ THEORY ListSeenInfoX IS
   Seen_Context_List_Enumerated(Implementation(QUERY_1))==(SEX,STATUS);
   Seen_Context_List_Invariant(Implementation(QUERY_1))==(btrue);
   Seen_Context_List_Assertions(Implementation(QUERY_1))==(btrue);
-  Seen_Context_List_Properties(Implementation(QUERY_1))==(code_SEX: SEX >->> 0..1 & decode_SEX: 0..1 >->> SEX & decode_SEX = code_SEX~ & SEX: FIN(INTEGER) & not(SEX = {}) & code_STATUS: STATUS >->> {0,1} & decode_STATUS = code_STATUS~ & STATUS: FIN(INTEGER) & not(STATUS = {}));
+  Seen_Context_List_Properties(Implementation(QUERY_1))==(code_SEX: SEX >->> 0..1 & decode_SEX: 0..1 >->> SEX & decode_SEX = code_SEX~ & SEX: FIN(INTEGER) & not(SEX = {}) & code_STATUS: STATUS >->> 0..1 & decode_STATUS: 0..1 >->> STATUS & decode_STATUS = code_STATUS~ & STATUS: FIN(INTEGER) & not(STATUS = {}));
   Seen_List_Constraints(Implementation(QUERY_1))==(btrue);
   Seen_List_Precondition(Implementation(QUERY_1),STATUS_WRITE)==(ii: STATUS);
   Seen_Expanded_List_Substitution(Implementation(QUERY_1),STATUS_WRITE)==(skip);
@@ -277,7 +277,8 @@ THEORY InheritedEnvX IS
 END
 &
 THEORY ListVisibleStaticX IS
-  List_Constants_Env(Implementation(QUERY_1),Machine(BASIC_STATUS))==(Type(dead) == Cst(etype(STATUS,0,1));Type(living) == Cst(etype(STATUS,0,1)));
+  List_Constants(Implementation(QUERY_1),Machine(BASIC_STATUS))==(code_STATUS,decode_STATUS);
+  List_Constants_Env(Implementation(QUERY_1),Machine(BASIC_STATUS))==(Type(dead) == Cst(etype(STATUS,0,1));Type(living) == Cst(etype(STATUS,0,1));Type(code_STATUS) == Cst(SetOf(etype(STATUS,0,1)*btype(INTEGER,0,1)));Type(decode_STATUS) == Cst(SetOf(btype(INTEGER,0,1)*etype(STATUS,0,1))));
   Enumerate_Definition(Implementation(QUERY_1),Machine(BASIC_STATUS),STATUS)==({dead,living});
   List_Constants(Implementation(QUERY_1),Machine(BASIC_SEX))==(code_SEX,decode_SEX);
   List_Constants_Env(Implementation(QUERY_1),Machine(BASIC_SEX))==(Type(man) == Cst(etype(SEX,0,1));Type(woman) == Cst(etype(SEX,0,1));Type(code_SEX) == Cst(SetOf(etype(SEX,0,1)*btype(INTEGER,0,1)));Type(decode_SEX) == Cst(SetOf(btype(INTEGER,0,1)*etype(SEX,0,1))));
@@ -293,9 +294,9 @@ THEORY ListOfIdsX IS
   List_Of_VisibleCst_Ids(Implementation(QUERY_1)) == (?);
   List_Of_VisibleVar_Ids(Implementation(QUERY_1)) == (? | ?);
   List_Of_Ids_SeenBNU(Implementation(QUERY_1)) == (?: ?);
-  List_Of_Ids(Machine(BASIC_STATUS)) == (STATUS,dead,living | ? | ? | ? | STATUS_READ,STATUS_WRITE | ? | ? | ? | BASIC_STATUS);
-  List_Of_HiddenCst_Ids(Machine(BASIC_STATUS)) == (decode_STATUS,code_STATUS | ?);
-  List_Of_VisibleCst_Ids(Machine(BASIC_STATUS)) == (?);
+  List_Of_Ids(Machine(BASIC_STATUS)) == (code_STATUS,decode_STATUS,STATUS,dead,living | ? | ? | ? | STATUS_READ,STATUS_WRITE | ? | ? | ? | BASIC_STATUS);
+  List_Of_HiddenCst_Ids(Machine(BASIC_STATUS)) == (? | ?);
+  List_Of_VisibleCst_Ids(Machine(BASIC_STATUS)) == (code_STATUS,decode_STATUS);
   List_Of_VisibleVar_Ids(Machine(BASIC_STATUS)) == (? | ?);
   List_Of_Ids_SeenBNU(Machine(BASIC_STATUS)) == (?: ?);
   List_Of_Ids(Machine(BASIC_SEX)) == (code_SEX,decode_SEX,SEX,man,woman | ? | ? | ? | SEX_READ,SEX_WRITE | ? | ? | ? | BASIC_SEX);

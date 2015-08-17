@@ -137,10 +137,10 @@ END
 &
 THEORY ListSubstitutionX IS
   Expanded_List_Substitution(Implementation(INNER_INTERFACE_1),print_operation)==(btrue | skip);
-  Expanded_List_Substitution(Implementation(INNER_INTERFACE_1),birth_operation)==(btrue | @(ww,ss,bb,pp).((btrue | @(ss$1).(ss$1: SEX ==> ss:=ss$1) || @(ww$1).(ww$1: dom(husband\/wife)/\sex~[{woman}] ==> ww:=ww$1) || bb:=bool(PERSON-person/={}) [] (@(ss$1).(ss$1: SEX ==> ss:=ss$1) || @(ww$1).(ww$1: PERSON ==> ww:=ww$1) || bb:=FALSE));(bb = TRUE ==> (PERSON-person/={} & ss: SEX & ww: dom(husband\/wife)/\sex~[{woman}] | @angel.(angel: PERSON-person ==> person,status,sex,mother,pp:=person\/{angel},status<+{angel|->living},sex<+{angel|->ss},mother<+{angel|->ww},angel)) [] not(bb = TRUE) ==> skip)));
+  Expanded_List_Substitution(Implementation(INNER_INTERFACE_1),birth_operation)==(btrue | @(ww,ss,bb,pp).((btrue | @(ss$1).(ss$1: SEX ==> ss:=ss$1) || @(ww$1).(ww$1: PERSON/\(dom(husband\/wife)/\sex~[{woman}]) ==> ww:=ww$1) || bb:=bool(PERSON-person/={}) [] (@(ss$1).(ss$1: SEX ==> ss:=ss$1) || @(ww$1).(ww$1: PERSON ==> ww:=ww$1) || bb:=FALSE));(bb = TRUE ==> (PERSON-person/={} & ss: SEX & ww: PERSON & ww: dom(husband\/wife)/\sex~[{woman}] | @angel.(angel: PERSON-person ==> person,status,sex,mother,pp:=person\/{angel},status<+{angel|->living},sex<+{angel|->ss},mother<+{angel|->ww},angel)) [] not(bb = TRUE) ==> skip)));
   Expanded_List_Substitution(Implementation(INNER_INTERFACE_1),first_operation)==(btrue | @(ss,bb,pp).((btrue | @(ss$1).(ss$1: SEX ==> ss:=ss$1) || bb:=bool(PERSON-person/={}));(bb = TRUE ==> (PERSON-person/={} & ss: SEX | @angel.(angel: PERSON-person ==> person,status,sex,pp:=person\/{angel},status<+{angel|->living},sex<+{angel|->ss},angel)) [] not(bb = TRUE) ==> skip)));
-  Expanded_List_Substitution(Implementation(INNER_INTERFACE_1),marriage_operation)==(btrue | @(ww,mm,bb).((btrue | @(mm$1).(mm$1: person-dom(husband\/wife)/\sex~[{man}] ==> mm:=mm$1) || @(ww$1).(ww$1: person-dom(husband\/wife)/\sex~[{woman}] ==> ww:=ww$1) || bb:=TRUE [] (@(mm$1).(mm$1: PERSON ==> mm:=mm$1) || @(ww$1).(ww$1: PERSON ==> ww:=ww$1) || bb:=FALSE));(bb = TRUE ==> (ww: person-dom(husband\/wife)/\sex~[{woman}] & mm: person-dom(husband\/wife)/\sex~[{man}] | husband,wife:=husband<+{ww|->mm},wife<+{mm|->ww}) [] not(bb = TRUE) ==> skip)));
-  Expanded_List_Substitution(Implementation(INNER_INTERFACE_1),death_operation)==(btrue | @(pp,bb).((btrue | @(pp$1).(pp$1: status~[{living}] ==> pp:=pp$1) || bb:=TRUE [] (@(pp$1).(pp$1: PERSON ==> pp:=pp$1) || bb:=FALSE));(bb = TRUE ==> (pp: status~[{living}] | status:=status<+{pp|->dead}) [] not(bb = TRUE) ==> skip)));
+  Expanded_List_Substitution(Implementation(INNER_INTERFACE_1),marriage_operation)==(btrue | @(ww,mm,bb).((btrue | @(mm$1).(mm$1: PERSON/\(person-dom(husband\/wife)/\sex~[{man}]) ==> mm:=mm$1) || @(ww$1).(ww$1: PERSON/\(person-dom(husband\/wife)/\sex~[{woman}]) ==> ww:=ww$1) || bb:=TRUE [] (@(mm$1).(mm$1: PERSON ==> mm:=mm$1) || @(ww$1).(ww$1: PERSON ==> ww:=ww$1) || bb:=FALSE));(bb = TRUE ==> (ww: PERSON & ww: person & ww: person-dom(husband\/wife)/\sex~[{woman}] & mm: PERSON & mm: person & mm: person-dom(husband\/wife)/\sex~[{man}] | husband,wife:=husband<+{ww|->mm},wife<+{mm|->ww}) [] not(bb = TRUE) ==> skip)));
+  Expanded_List_Substitution(Implementation(INNER_INTERFACE_1),death_operation)==(btrue | @(pp,bb).((btrue | @(pp$1).(pp$1: PERSON/\status~[{living}] ==> pp:=pp$1) || bb:=TRUE [] (@(pp$1).(pp$1: PERSON ==> pp:=pp$1) || bb:=FALSE));(bb = TRUE ==> (pp: PERSON & pp: person & pp: status~[{living}] | status:=status<+{pp|->dead}) [] not(bb = TRUE) ==> skip)));
   List_Substitution(Implementation(INNER_INTERFACE_1),death_operation)==(VAR pp,bb IN pp,bb <-- get_new_dead_person;IF bb = TRUE THEN death(pp) END END);
   List_Substitution(Implementation(INNER_INTERFACE_1),marriage_operation)==(VAR ww,mm,bb IN mm,ww,bb <-- get_new_couple;IF bb = TRUE THEN marriage(ww,mm) END END);
   List_Substitution(Implementation(INNER_INTERFACE_1),first_operation)==(VAR ss,bb,pp IN ss,bb <-- get_sex_of_new;IF bb = TRUE THEN pp <-- first_human(ss) END END);
@@ -179,7 +179,7 @@ END
 THEORY ListPropertiesX IS
   Abstract_List_Properties(Implementation(INNER_INTERFACE_1))==(btrue);
   Context_List_Properties(Implementation(INNER_INTERFACE_1))==(btrue);
-  Inherited_List_Properties(Implementation(INNER_INTERFACE_1))==(max_pers = card(PERSON) & PERSON: FIN(INTEGER) & not(PERSON = {}));
+  Inherited_List_Properties(Implementation(INNER_INTERFACE_1))==(max_pers: NAT & max_pers = card(PERSON) & PERSON: FIN(INTEGER) & not(PERSON = {}));
   List_Properties(Implementation(INNER_INTERFACE_1))==(btrue)
 END
 &
@@ -254,7 +254,7 @@ THEORY TCIntRdX IS
   B0check_tab == KO;
   local_op == OK;
   abstract_constants_visible_in_values == KO;
-  project_type == VALIDATION_TYPE;
+  project_type == SOFTWARE_TYPE;
   event_b_deadlockfreeness == KO;
   variant_clause_mandatory == KO;
   event_b_coverage == KO;

@@ -8,20 +8,30 @@
 </Enumerated_Values>
 </Set>
 </Sets>
-<Abstract_Constants>
+<Concrete_Constants>
 <Id value='code_STATUS' typref='2905916364'/>
 <Id value='decode_STATUS' typref='3781868044'/>
-</Abstract_Constants>
+</Concrete_Constants>
 <Properties>
 <Nary_Pred op='&amp;'>
 <Exp_Comparison op=':'>
 <Id value='code_STATUS' typref='2905916364'/>
 <Binary_Exp op='&gt;-&gt;&gt;' typref='2020880909'>
 <Id value='STATUS' typref='515940807'/>
-<Nary_Exp op='{' typref='3603043417'>
+<Binary_Exp op='..' typref='3603043417'>
 <Integer_Literal value='0' typref='2701647786'/>
 <Integer_Literal value='1' typref='2701647786'/>
-</Nary_Exp>
+</Binary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=':'>
+<Id value='decode_STATUS' typref='3781868044'/>
+<Binary_Exp op='&gt;-&gt;&gt;' typref='1382452173'>
+<Binary_Exp op='..' typref='3603043417'>
+<Integer_Literal value='0' typref='2701647786'/>
+<Integer_Literal value='1' typref='2701647786'/>
+</Binary_Exp>
+<Id value='STATUS' typref='515940807'/>
 </Binary_Exp>
 </Exp_Comparison>
 <Exp_Comparison op='='>
@@ -108,6 +118,16 @@
 </Type>
 <Type id='2701647786'>
 <Id value='INTEGER'/>
+</Type>
+<Type id='1382452173'>
+<Unary_Exp op='POW'>
+<Unary_Exp op='POW'>
+<Binary_Exp op='*'>
+<Id value='INTEGER'/>
+<Id value='STATUS'/>
+</Binary_Exp>
+</Unary_Exp>
+</Unary_Exp>
 </Type>
 </TypeInfos>
 

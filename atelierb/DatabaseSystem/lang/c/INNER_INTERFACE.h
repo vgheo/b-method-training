@@ -3,6 +3,10 @@
 
 #include <stdint.h>
 #include <stdbool.h>
+/* Clause IMPORTS */
+#include "DATA_BASE.h"
+#include "QUERY.h"
+
 #ifdef __cplusplus
 extern "C" {
 #endif /* __cplusplus */
