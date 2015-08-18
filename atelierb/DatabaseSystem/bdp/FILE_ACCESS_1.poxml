@@ -194,14 +194,20 @@
 </Becomes_In>
 <Simple_Assignement_Sub>
 <Variables>
-<Id suffix="1" tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\FILE_ACCESS.bxml:1:3:2,A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE_ACCESS_1.bxml:1:6:1:3:1:1," typref="277897435" value="buffer"/>
-<Id suffix="1" tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\FILE_ACCESS.bxml:1:3:1,A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE_ACCESS_1.bxml:1:6:1:3:1:2," typref="277897435" value="bfile"/>
-<Id suffix="1" tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\FILE_ACCESS.bxml:1:3:3,A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE_ACCESS_1.bxml:1:6:1:3:1:3," typref="2043437594" value="updated"/>
+<Id suffix="1" tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\FILE_ACCESS.bxml:1:3:1,A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE_ACCESS_1.bxml:1:6:1:3:1:1," typref="277897435" value="bfile"/>
+<Id suffix="1" tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\FILE_ACCESS.bxml:1:3:3,A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE_ACCESS_1.bxml:1:6:1:3:1:2," typref="2043437594" value="updated"/>
 </Variables>
 <Values>
-<EmptySet tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE_ACCESS_1.bxml:1:6:1:3:2:1" typref="3817003670"/>
-<EmptySeq tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE_ACCESS_1.bxml:1:6:1:3:2:2" typref="2085061915"/>
-<Boolean_Literal tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE_ACCESS_1.bxml:1:6:1:3:2:3" typref="2043437594" value="FALSE"/>
+<EmptySeq tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE_ACCESS_1.bxml:1:6:1:3:2:1" typref="2085061915"/>
+<Boolean_Literal tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE_ACCESS_1.bxml:1:6:1:3:2:2" typref="2043437594" value="FALSE"/>
+</Values>
+</Simple_Assignement_Sub>
+<Simple_Assignement_Sub>
+<Variables>
+<Id suffix="1" tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\FILE_ACCESS.bxml:1:3:2,A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE_ACCESS_1.bxml:1:6:1:4:1:1," typref="277897435" value="buffer"/>
+</Variables>
+<Values>
+<EmptySet tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE_ACCESS_1.bxml:1:6:1:4:2:1" typref="3817003670"/>
 </Values>
 </Simple_Assignement_Sub>
 </Nary_Sub>
@@ -2397,26 +2403,26 @@
 <Type id="2043437594">
 <Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE_ACCESS_1.bxml:1:8:9:1" value="BOOL"/>
 </Type>
-<Type id="3817003670">
-<Unary_Exp op="POW">
-<Generic_Type tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE_ACCESS_1.bxml:1:8:10:1:1"/>
-</Unary_Exp>
-</Type>
 <Type id="2085061915">
 <Unary_Exp op="POW">
 <Binary_Exp op="*">
-<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE_ACCESS_1.bxml:1:8:11:1:1:1" value="INTEGER"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE_ACCESS_1.bxml:1:8:10:1:1:1" value="INTEGER"/>
 <Unary_Exp op="POW">
 <Unary_Exp op="POW">
 <Unary_Exp op="POW">
 <Binary_Exp op="*">
-<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE_ACCESS_1.bxml:1:8:11:1:1:2:1:1:1:1" value="FIELD"/>
-<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE_ACCESS_1.bxml:1:8:11:1:1:2:1:1:1:2" value="VALUE"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE_ACCESS_1.bxml:1:8:10:1:1:2:1:1:1:1" value="FIELD"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE_ACCESS_1.bxml:1:8:10:1:1:2:1:1:1:2" value="VALUE"/>
 </Binary_Exp>
 </Unary_Exp>
 </Unary_Exp>
 </Unary_Exp>
 </Binary_Exp>
+</Unary_Exp>
+</Type>
+<Type id="3817003670">
+<Unary_Exp op="POW">
+<Generic_Type tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\FILE_ACCESS_1.bxml:1:8:11:1:1"/>
 </Unary_Exp>
 </Type>
 <Type id="4077266551">

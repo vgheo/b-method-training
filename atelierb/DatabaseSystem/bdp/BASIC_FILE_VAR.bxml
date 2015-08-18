@@ -1,13 +1,13 @@
 <Machine name='BASIC_FILE_VAR' type='abstraction'>
 <Parameters>
 <Id value='max_rec' typref='2701647786'/>
-<Id value='INDEX' typref='3666687245'/>
+<Id value='FIELD' typref='3988092277'/>
 <Id value='VALUE' typref='3958993484'/>
 </Parameters>
 <Constraints>
 <Nary_Pred op='&amp;'>
 <Set>
-<Id value='INDEX' typref='3666687245'/>
+<Id value='FIELD' typref='3988092277'/>
 </Set>
 <Set>
 <Id value='VALUE' typref='3958993484'/>
@@ -18,33 +18,41 @@
 </Exp_Comparison>
 </Nary_Pred>
 </Constraints>
-<Abstract_Variables>
-<Id value='file_vrb' typref='1204907843'/>
-</Abstract_Variables>
 <Concrete_Variables>
-<Id value='buf_vrb' typref='1963249655'/>
+<Id value='buf_vrb' typref='2927107167'/>
+<Id value='file_vrb' typref='277897435'/>
 </Concrete_Variables>
 <Invariant>
 <Nary_Pred op='&amp;'>
 <Exp_Comparison op=':'>
-<Id value='buf_vrb' typref='1963249655'/>
-<Binary_Exp op='--&gt;' typref='4102281932'>
-<Id value='INDEX' typref='3666687245'/>
+<Id value='buf_vrb' typref='2927107167'/>
+<Binary_Exp op='--&gt;' typref='1599463524'>
+<Id value='FIELD' typref='3988092277'/>
 <Id value='VALUE' typref='3958993484'/>
 </Binary_Exp>
 </Exp_Comparison>
 <Exp_Comparison op=':'>
-<Id value='file_vrb' typref='1204907843'/>
-<Unary_Exp op='seq' typref='3206855168'>
-<Binary_Exp op='--&gt;' typref='4102281932'>
-<Id value='INDEX' typref='3666687245'/>
+<Id value='file_vrb' typref='277897435'/>
+<Binary_Exp op='--&gt;' typref='3173643880'>
+<Id value='NAT' typref='3603043417'/>
+<Binary_Exp op='--&gt;' typref='1599463524'>
+<Id value='FIELD' typref='3988092277'/>
+<Id value='VALUE' typref='3958993484'/>
+</Binary_Exp>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=':'>
+<Id value='file_vrb' typref='277897435'/>
+<Unary_Exp op='seq' typref='3173643880'>
+<Binary_Exp op='--&gt;' typref='1599463524'>
+<Id value='FIELD' typref='3988092277'/>
 <Id value='VALUE' typref='3958993484'/>
 </Binary_Exp>
 </Unary_Exp>
 </Exp_Comparison>
 <Exp_Comparison op='&lt;'>
 <Unary_Exp op='size' typref='2701647786'>
-<Id value='file_vrb' typref='1204907843'/>
+<Id value='file_vrb' typref='277897435'/>
 </Unary_Exp>
 <Id value='max_rec' typref='2701647786'/>
 </Exp_Comparison>
@@ -54,21 +62,21 @@
 <Nary_Sub op='||'>
 <Becomes_In>
 <Variables>
-<Id value='buf_vrb' typref='1963249655'/>
+<Id value='buf_vrb' typref='2927107167'/>
 </Variables>
 <Value>
-<Binary_Exp op='--&gt;' typref='4102281932'>
-<Id value='INDEX' typref='3666687245'/>
+<Binary_Exp op='--&gt;' typref='1599463524'>
+<Id value='FIELD' typref='3988092277'/>
 <Id value='VALUE' typref='3958993484'/>
 </Binary_Exp>
 </Value>
 </Becomes_In>
 <Assignement_Sub>
 <Variables>
-<Id value='file_vrb' typref='1204907843'/>
+<Id value='file_vrb' typref='277897435'/>
 </Variables>
 <Values>
-<EmptySeq typref='3183177603'/>
+<EmptySeq typref='2085061915'/>
 </Values>
 </Assignement_Sub>
 </Nary_Sub>
@@ -87,7 +95,7 @@
 <Exp_Comparison op=':'>
 <Id value='ii' typref='2701647786'/>
 <Unary_Exp op='dom' typref='3603043417'>
-<Id value='file_vrb' typref='1204907843'/>
+<Id value='file_vrb' typref='277897435'/>
 </Unary_Exp>
 </Exp_Comparison>
 </Nary_Pred>
@@ -95,11 +103,11 @@
 <Body>
 <Assignement_Sub>
 <Variables>
-<Id value='buf_vrb' typref='1963249655'/>
+<Id value='buf_vrb' typref='2927107167'/>
 </Variables>
 <Values>
-<Binary_Exp op='(' typref='1963249655'>
-<Id value='file_vrb' typref='1204907843'/>
+<Binary_Exp op='(' typref='2927107167'>
+<Id value='file_vrb' typref='277897435'/>
 <Id value='ii' typref='2701647786'/>
 </Binary_Exp>
 </Values>
@@ -119,7 +127,7 @@
 <Exp_Comparison op=':'>
 <Id value='ii' typref='2701647786'/>
 <Unary_Exp op='dom' typref='3603043417'>
-<Id value='file_vrb' typref='1204907843'/>
+<Id value='file_vrb' typref='277897435'/>
 </Unary_Exp>
 </Exp_Comparison>
 </Nary_Pred>
@@ -127,13 +135,13 @@
 <Body>
 <Assignement_Sub>
 <Variables>
-<Binary_Exp op='(' typref='1963249655'>
-<Id value='file_vrb' typref='1204907843'/>
+<Binary_Exp op='(' typref='2927107167'>
+<Id value='file_vrb' typref='277897435'/>
 <Id value='ii' typref='2701647786'/>
 </Binary_Exp>
 </Variables>
 <Values>
-<Id value='buf_vrb' typref='1963249655'/>
+<Id value='buf_vrb' typref='2927107167'/>
 </Values>
 </Assignement_Sub>
 </Body>
@@ -150,7 +158,7 @@
 </Exp_Comparison>
 <Exp_Comparison op='/='>
 <Unary_Exp op='size' typref='2701647786'>
-<Id value='file_vrb' typref='1204907843'/>
+<Id value='file_vrb' typref='277897435'/>
 </Unary_Exp>
 <Id value='max_rec' typref='2701647786'/>
 </Exp_Comparison>
@@ -159,13 +167,13 @@
 <Body>
 <Assignement_Sub>
 <Variables>
-<Id value='file_vrb' typref='1204907843'/>
+<Id value='file_vrb' typref='277897435'/>
 </Variables>
 <Values>
-<Binary_Exp op='&lt;-' typref='1204907843'>
-<Id value='file_vrb' typref='1204907843'/>
-<Binary_Exp op='*' typref='1963249655'>
-<Id value='INDEX' typref='3666687245'/>
+<Binary_Exp op='&lt;-' typref='277897435'>
+<Id value='file_vrb' typref='277897435'/>
+<Binary_Exp op='*' typref='2927107167'>
+<Id value='FIELD' typref='3988092277'/>
 <Nary_Exp op='{' typref='3958993484'>
 <Id value='vv' typref='4077266551'/>
 </Nary_Exp>
@@ -186,7 +194,7 @@
 </Variables>
 <Values>
 <Unary_Exp op='size' typref='2701647786'>
-<Id value='file_vrb' typref='1204907843'/>
+<Id value='file_vrb' typref='277897435'/>
 </Unary_Exp>
 </Values>
 </Assignement_Sub>
@@ -196,10 +204,10 @@
 <Body>
 <Assignement_Sub>
 <Variables>
-<Id value='file_vrb' typref='1204907843'/>
+<Id value='file_vrb' typref='277897435'/>
 </Variables>
 <Values>
-<EmptySeq typref='3183177603'/>
+<EmptySeq typref='2085061915'/>
 </Values>
 </Assignement_Sub>
 </Body>
@@ -208,7 +216,7 @@
 <Body>
 <Assignement_Sub>
 <Variables>
-<Id value='buf_vrb' typref='1963249655'/>
+<Id value='buf_vrb' typref='2927107167'/>
 </Variables>
 <Values>
 <EmptySet typref='3817003670'/>
@@ -221,9 +229,9 @@
 <Type id='2701647786'>
 <Id value='INTEGER'/>
 </Type>
-<Type id='3666687245'>
+<Type id='3988092277'>
 <Unary_Exp op='POW'>
-<Id value='INDEX'/>
+<Id value='FIELD'/>
 </Unary_Exp>
 </Type>
 <Type id='3958993484'>
@@ -236,45 +244,45 @@
 <Id value='INTEGER'/>
 </Unary_Exp>
 </Type>
-<Type id='1204907843'>
+<Type id='2927107167'>
+<Unary_Exp op='POW'>
+<Binary_Exp op='*'>
+<Id value='FIELD'/>
+<Id value='VALUE'/>
+</Binary_Exp>
+</Unary_Exp>
+</Type>
+<Type id='277897435'>
 <Unary_Exp op='POW'>
 <Binary_Exp op='*'>
 <Id value='INTEGER'/>
 <Unary_Exp op='POW'>
 <Binary_Exp op='*'>
-<Id value='INDEX'/>
+<Id value='FIELD'/>
 <Id value='VALUE'/>
 </Binary_Exp>
 </Unary_Exp>
 </Binary_Exp>
 </Unary_Exp>
 </Type>
-<Type id='1963249655'>
-<Unary_Exp op='POW'>
-<Binary_Exp op='*'>
-<Id value='INDEX'/>
-<Id value='VALUE'/>
-</Binary_Exp>
-</Unary_Exp>
-</Type>
-<Type id='4102281932'>
+<Type id='1599463524'>
 <Unary_Exp op='POW'>
 <Unary_Exp op='POW'>
 <Binary_Exp op='*'>
-<Id value='INDEX'/>
+<Id value='FIELD'/>
 <Id value='VALUE'/>
 </Binary_Exp>
 </Unary_Exp>
 </Unary_Exp>
 </Type>
-<Type id='3206855168'>
+<Type id='3173643880'>
 <Unary_Exp op='POW'>
 <Unary_Exp op='POW'>
 <Binary_Exp op='*'>
 <Id value='INTEGER'/>
 <Unary_Exp op='POW'>
 <Binary_Exp op='*'>
-<Id value='INDEX'/>
+<Id value='FIELD'/>
 <Id value='VALUE'/>
 </Binary_Exp>
 </Unary_Exp>
@@ -282,7 +290,7 @@
 </Unary_Exp>
 </Unary_Exp>
 </Type>
-<Type id='3183177603'>
+<Type id='2085061915'>
 <Unary_Exp op='POW'>
 <Binary_Exp op='*'>
 <Id value='INTEGER'/>
@@ -290,7 +298,7 @@
 <Unary_Exp op='POW'>
 <Unary_Exp op='POW'>
 <Binary_Exp op='*'>
-<Id value='INDEX'/>
+<Id value='FIELD'/>
 <Id value='VALUE'/>
 </Binary_Exp>
 </Unary_Exp>

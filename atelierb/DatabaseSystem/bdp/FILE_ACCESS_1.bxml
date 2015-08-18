@@ -80,14 +80,20 @@
 </Becomes_In>
 <Assignement_Sub>
 <Variables>
-<Id value='buffer' typref='277897435'/>
 <Id value='bfile' typref='277897435'/>
 <Id value='updated' typref='2043437594'/>
 </Variables>
 <Values>
-<EmptySet typref='3817003670'/>
 <EmptySeq typref='2085061915'/>
 <Boolean_Literal value='FALSE' typref='2043437594'/>
+</Values>
+</Assignement_Sub>
+<Assignement_Sub>
+<Variables>
+<Id value='buffer' typref='277897435'/>
+</Variables>
+<Values>
+<EmptySet typref='3817003670'/>
 </Values>
 </Assignement_Sub>
 </Nary_Sub>
@@ -306,11 +312,6 @@
 <Type id='2043437594'>
 <Id value='BOOL'/>
 </Type>
-<Type id='3817003670'>
-<Unary_Exp op='POW'>
-<Generic_Type/>
-</Unary_Exp>
-</Type>
 <Type id='2085061915'>
 <Unary_Exp op='POW'>
 <Binary_Exp op='*'>
@@ -326,6 +327,11 @@
 </Unary_Exp>
 </Unary_Exp>
 </Binary_Exp>
+</Unary_Exp>
+</Type>
+<Type id='3817003670'>
+<Unary_Exp op='POW'>
+<Generic_Type/>
 </Unary_Exp>
 </Type>
 <Type id='4077266551'>

@@ -28,12 +28,12 @@
 <Invariant>
 <Nary_Pred op='&amp;'>
 <Exp_Comparison op='='>
-<Id value='bfile' typref='277897435'/>
-<Id value='file_vrb' typref='277897435'/>
-</Exp_Comparison>
-<Exp_Comparison op='='>
 <Id value='record' typref='2927107167'/>
 <Id value='buf_vrb' typref='2927107167'/>
+</Exp_Comparison>
+<Exp_Comparison op='='>
+<Id value='bfile' typref='277897435'/>
+<Id value='file_vrb' typref='277897435'/>
 </Exp_Comparison>
 </Nary_Pred>
 </Invariant>
@@ -58,11 +58,17 @@
 <Assignement_Sub>
 <Variables>
 <Id value='buffer' typref='277897435'/>
+</Variables>
+<Values>
+<Id value='file_vrb' typref='277897435'/>
+</Values>
+</Assignement_Sub>
+<Assignement_Sub>
+<Variables>
 <Id value='bfile' typref='277897435'/>
 </Variables>
 <Values>
-<EmptySet typref='3817003670'/>
-<EmptySeq typref='2085061915'/>
+<Id value='file_vrb' typref='277897435'/>
 </Values>
 </Assignement_Sub>
 <Assignement_Sub>
@@ -70,7 +76,7 @@
 <Id value='record' typref='2927107167'/>
 </Variables>
 <Values>
-<EmptySet typref='3817003670'/>
+<Id value='buf_vrb' typref='2927107167'/>
 </Values>
 </Assignement_Sub>
 </Nary_Sub>
@@ -257,6 +263,14 @@
 <Id value='VALUE'/>
 </Unary_Exp>
 </Type>
+<Type id='2927107167'>
+<Unary_Exp op='POW'>
+<Binary_Exp op='*'>
+<Id value='FIELD'/>
+<Id value='VALUE'/>
+</Binary_Exp>
+</Unary_Exp>
+</Type>
 <Type id='277897435'>
 <Unary_Exp op='POW'>
 <Binary_Exp op='*'>
@@ -270,38 +284,8 @@
 </Binary_Exp>
 </Unary_Exp>
 </Type>
-<Type id='2927107167'>
-<Unary_Exp op='POW'>
-<Binary_Exp op='*'>
-<Id value='FIELD'/>
-<Id value='VALUE'/>
-</Binary_Exp>
-</Unary_Exp>
-</Type>
 <Type id='2043437594'>
 <Id value='BOOL'/>
-</Type>
-<Type id='3817003670'>
-<Unary_Exp op='POW'>
-<Generic_Type/>
-</Unary_Exp>
-</Type>
-<Type id='2085061915'>
-<Unary_Exp op='POW'>
-<Binary_Exp op='*'>
-<Id value='INTEGER'/>
-<Unary_Exp op='POW'>
-<Unary_Exp op='POW'>
-<Unary_Exp op='POW'>
-<Binary_Exp op='*'>
-<Id value='FIELD'/>
-<Id value='VALUE'/>
-</Binary_Exp>
-</Unary_Exp>
-</Unary_Exp>
-</Unary_Exp>
-</Binary_Exp>
-</Unary_Exp>
 </Type>
 <Type id='4077266551'>
 <Id value='VALUE'/>

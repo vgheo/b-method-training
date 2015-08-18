@@ -3,19 +3,19 @@
  * Creation date: 7/30/2015
  */
 MACHINE
-    BASIC_FILE_VAR ( max_rec , INDEX , VALUE )
+    BASIC_FILE_VAR ( max_rec , FIELD , VALUE )
 CONSTRAINTS
     max_rec : NAT1
-ABSTRACT_VARIABLES
-    file_vrb
+
 CONCRETE_VARIABLES
-    buf_vrb
+    buf_vrb, file_vrb
 INITIALISATION
-    buf_vrb :: INDEX --> VALUE ||
+    buf_vrb :: FIELD --> VALUE ||
     file_vrb := []
 INVARIANT
-    buf_vrb : INDEX --> VALUE &
-    file_vrb : seq ( INDEX --> VALUE ) &
+    buf_vrb : FIELD --> VALUE &
+    file_vrb : NAT -->(FIELD-->VALUE)&
+    file_vrb : seq ( FIELD --> VALUE ) &
     size ( file_vrb ) < max_rec
 
 OPERATIONS
@@ -40,7 +40,7 @@ OPERATIONS
         vv : VALUE &
         size ( file_vrb ) /= max_rec
     THEN
-    file_vrb := file_vrb <- ( INDEX * { vv } )
+    file_vrb := file_vrb <- ( FIELD * { vv } )
     END ;
 
     vv <-- SIZE_FILE =

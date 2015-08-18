@@ -80,9 +80,9 @@ THEORY ListExclusivityX IS
 END
 &
 THEORY ListInitialisationX IS
-  Expanded_List_Initialisation(Refinement(FILE_ACCESS_1))==(name:=0 || @(record$0).(record$0: FIELD --> VALUE ==> record:=record$0) || buffer,bfile,updated:={},<>,FALSE);
+  Expanded_List_Initialisation(Refinement(FILE_ACCESS_1))==(name:=0 || @(record$0).(record$0: FIELD --> VALUE ==> record:=record$0) || bfile,updated:=<>,FALSE || buffer:={});
   Context_List_Initialisation(Refinement(FILE_ACCESS_1))==(skip);
-  List_Initialisation(Refinement(FILE_ACCESS_1))==(name:=0 || record:: FIELD --> VALUE || buffer,bfile,updated:={},<>,FALSE)
+  List_Initialisation(Refinement(FILE_ACCESS_1))==(name:=0 || record:: FIELD --> VALUE || bfile,updated:=<>,FALSE || buffer:={})
 END
 &
 THEORY ListOperationsX IS
