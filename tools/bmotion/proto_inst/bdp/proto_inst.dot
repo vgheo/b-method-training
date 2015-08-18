@@ -1,0 +1,6 @@
+digraph {
+M1 [ label=" M1 " shape= box ]
+M2 [ label=" M2 " shape= box ]
+M3 [ label=" M3 " shape= box ]
+
+}
