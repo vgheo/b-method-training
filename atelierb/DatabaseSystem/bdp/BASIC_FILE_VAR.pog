@@ -126,7 +126,7 @@
 <Proof_State proofState="Proved(0)" methodList="pr" passList="Force(0),?"/>
 </Simple_Goal>
 </Proof_Obligation>
-<Proof_Obligation merge="-">
+<Proof_Obligation merge="=">
 <Comment>Operations dans une machine abstraite</Comment>
 <Tag>READ_FILE</Tag>
 <Tag>INVARIANT</Tag>
@@ -176,7 +176,7 @@
 <Proof_State proofState="Unproved" methodList="pr" passList="Force(0),?"/>
 </Simple_Goal>
 </Proof_Obligation>
-<Proof_Obligation merge="-">
+<Proof_Obligation merge="=">
 <Comment>Operations dans une machine abstraite</Comment>
 <Tag>WRITE_FILE</Tag>
 <Tag>INVARIANT</Tag>
@@ -405,6 +405,39 @@
 <Proof_State proofState="Proved(0)" methodList="pr" passList="Force(0),?"/>
 </Simple_Goal>
 </Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>RESET_RECORD</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis/>
+<Local_Hyp num="1">
+<Nary_Pred op="&amp;"/>
+</Local_Hyp>
+<Simple_Goal>
+<Tag>Invariant is preserved</Tag>
+<Goal>
+<Binary_Pred op="=>">
+<Ref_Hyp num="1"/>
+<Exp_Comparison op=":" initialTag="((buf_vrb) : (((INDEX) --> (VALUE))))" goalTag="Invariant is preserved">
+<EmptySet tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\BASIC_FILE_VAR.bxml:1:7:6:1:1:2:1,A:\b-method-training\atelierb\DatabaseSystem\bdp\BASIC_FILE_VAR.bxml:1:5:1:1:1,A:\b-method-training\atelierb\DatabaseSystem\bdp\BASIC_FILE_VAR.bxml:1:7:6:1:1:1:1" typref="1963249655"/>
+<Binary_Exp op="-->" typref="4102281932">
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\BASIC_FILE_VAR.bxml:1:5:1:1:2:1" typref="3666687245" value="INDEX"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\BASIC_FILE_VAR.bxml:1:5:1:1:2:2" typref="3958993484" value="VALUE"/>
+</Binary_Exp>
+</Exp_Comparison>
+</Binary_Pred>
+</Goal>
+</Simple_Goal>
+</Proof_Obligation>
 <Proof_Obligation merge="=">
 <Tag>WellDefinednessConstraints</Tag>
 <Local_Hyp num="1">
@@ -516,7 +549,7 @@
 </Exp_Comparison>
 </Local_Hyp>
 </Proof_Obligation>
-<Proof_Obligation merge="-">
+<Proof_Obligation merge="=">
 <Comment>Operations dans une machine abstraite</Comment>
 <Tag>WellDefinedness_READ_FILE</Tag>
 <Tag>INVARIANT</Tag>
@@ -581,7 +614,7 @@
 </Exp_Comparison>
 </Local_Hyp>
 </Proof_Obligation>
-<Proof_Obligation merge="-">
+<Proof_Obligation merge="=">
 <Comment>Operations dans une machine abstraite</Comment>
 <Tag>WellDefinedness_WRITE_FILE</Tag>
 <Tag>INVARIANT</Tag>
@@ -760,6 +793,35 @@
 <Definition name="ass"/>
 <Hypothesis/>
 </Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_Precondition_RESET_RECORD</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_RESET_RECORD</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis/>
+</Proof_Obligation>
 <TypeInfos merge="=">
 <Type id="2701647786">
 <Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\BASIC_FILE_VAR.bxml:1:8:1:1" value="INTEGER"/>
@@ -844,6 +906,11 @@
 </Type>
 <Type id="4077266551">
 <Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\BASIC_FILE_VAR.bxml:1:8:10:1" value="VALUE"/>
+</Type>
+<Type id="3817003670">
+<Unary_Exp op="POW">
+<Generic_Type tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\BASIC_FILE_VAR.bxml:1:8:11:1:1"/>
+</Unary_Exp>
 </Type>
 </TypeInfos>
 </Proof_Obligations>

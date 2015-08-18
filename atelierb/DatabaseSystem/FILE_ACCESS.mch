@@ -11,9 +11,9 @@ CONCRETE_VARIABLES
     bfile , buffer , updated
 
 INVARIANT
-    bfile : NAT1 --> ( FIELD --> VALUE ) & /*concrete typing for B0 check*/
+    bfile : NAT --> ( FIELD --> VALUE ) & /*concrete typing for B0 check*/
     bfile : seq ( FIELD --> VALUE ) &
-    buffer : NAT1 --> ( FIELD --> VALUE ) & /*Valid relation type for concrete type(total function expected) & concrete typing  */
+    buffer : NAT --> ( FIELD --> VALUE ) & /*Valid relation type for concrete type(total function expected) & concrete typing  */
     buffer : dom ( bfile ) +-> ( FIELD --> VALUE ) &
     updated : BOOL &
     ( updated = FALSE => buffer <: bfile ) &

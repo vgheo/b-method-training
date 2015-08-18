@@ -41,7 +41,7 @@ dom(record$2) = FIELD;
 ((0) : (((0) .. (size({})))));
 "Check invariant ((buffer$1) = ((({0}) <<| ({((name$1) |-> (record$1))}))))";
 (({}) = ((({0}) <<| ({((0) |-> (record$2))}))));
-bfile : (NAT-{0}) +-> ((FIELD) --> (VALUE)) & dom(bfile) = (NAT-{0}) & ((bfile) : ((((NAT-{0})) --> (((FIELD) --> (VALUE)))))) & bfile : NATURAL-{0} +-> ((FIELD) --> (VALUE)) & ((bfile) : (seq(((FIELD) --> (VALUE))))) & buffer : (NAT-{0}) +-> ((FIELD) --> (VALUE)) & dom(buffer) = (NAT-{0}) & ((buffer) : ((((NAT-{0})) --> (((FIELD) --> (VALUE)))))) & ((buffer) : (((dom(bfile)) +-> (((FIELD) --> (VALUE)))))) & ((updated) : (BOOL)) & ((((updated) = (FALSE))) => (buffer : POW( bfile))) & ((((updated) = (TRUE))) => (not(buffer = {})));
+bfile : NAT +-> ((FIELD) --> (VALUE)) & dom(bfile) = NAT & ((bfile) : (((NAT) --> (((FIELD) --> (VALUE)))))) & bfile : NATURAL-{0} +-> ((FIELD) --> (VALUE)) & ((bfile) : (seq(((FIELD) --> (VALUE))))) & buffer : NAT +-> ((FIELD) --> (VALUE)) & dom(buffer) = NAT & ((buffer) : (((NAT) --> (((FIELD) --> (VALUE)))))) & ((buffer) : (((dom(bfile)) +-> (((FIELD) --> (VALUE)))))) & ((updated) : (BOOL)) & ((((updated) = (FALSE))) => (buffer : POW( bfile))) & ((((updated) = (TRUE))) => (not(buffer = {})));
 ((name$1) : (NAT)) & ((name$1) : (((0) .. (size(bfile$1))))) & record$1 : FIELD +-> VALUE & dom(record$1) = FIELD & ((record$1) : (((FIELD) --> (VALUE)))) & ((buffer$1) = ((({0}) <<| ({((name$1) |-> (record$1))})))) & ((bfile) = (bfile$1)) & ((buffer) = (buffer$1)) & ((updated) = (updated$1));
 ((oo) : (NAT)) & ((oo) : (dom(bfile)));
 ((oo) : (((0) .. (size(bfile$1)))));

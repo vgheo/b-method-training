@@ -57,7 +57,7 @@ THEORY ListInvariantX IS
   Expanded_List_Invariant(Machine(FILE_ACCESS))==(btrue);
   Abstract_List_Invariant(Machine(FILE_ACCESS))==(btrue);
   Context_List_Invariant(Machine(FILE_ACCESS))==(btrue);
-  List_Invariant(Machine(FILE_ACCESS))==(bfile: NAT1 --> (FIELD --> VALUE) & bfile: seq(FIELD --> VALUE) & buffer: NAT1 --> (FIELD --> VALUE) & buffer: dom(bfile) +-> (FIELD --> VALUE) & updated: BOOL & (updated = FALSE => buffer <: bfile) & (updated = TRUE => buffer/={}))
+  List_Invariant(Machine(FILE_ACCESS))==(bfile: NAT --> (FIELD --> VALUE) & bfile: seq(FIELD --> VALUE) & buffer: NAT --> (FIELD --> VALUE) & buffer: dom(bfile) +-> (FIELD --> VALUE) & updated: BOOL & (updated = FALSE => buffer <: bfile) & (updated = TRUE => buffer/={}))
 END
 &
 THEORY ListAssertionsX IS
@@ -214,7 +214,7 @@ THEORY ParametersEnvX IS
 END
 &
 THEORY VisibleVariablesEnvX IS
-  VisibleVariables(Machine(FILE_ACCESS)) == (Type(updated) == Mvv(btype(BOOL,?,?));Type(buffer) == Mvv(SetOf(btype(INTEGER,1,MAXINT)*SetOf(atype(FIELD,?,?)*atype(VALUE,?,?))));Type(bfile) == Mvv(SetOf(btype(INTEGER,1,MAXINT)*SetOf(atype(FIELD,?,?)*atype(VALUE,?,?)))))
+  VisibleVariables(Machine(FILE_ACCESS)) == (Type(updated) == Mvv(btype(BOOL,?,?));Type(buffer) == Mvv(SetOf(btype(INTEGER,0,MAXINT)*SetOf(atype(FIELD,?,?)*atype(VALUE,?,?))));Type(bfile) == Mvv(SetOf(btype(INTEGER,0,MAXINT)*SetOf(atype(FIELD,?,?)*atype(VALUE,?,?)))))
 END
 &
 THEORY OperationsEnvX IS

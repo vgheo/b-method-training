@@ -14,9 +14,8 @@ INITIALISATION
     updated := FALSE ;
     name := 0 ;
    /* buffer,bfile := {},[]; */ /*Simultaneous affectation is not implementable*/
-
-      RESET_FILE ;
-      RESET_RECORD ;
+      bfile := [] ;
+      record := {} ;
       buffer := {}
 OPERATIONS
     get_record ( oo ) =

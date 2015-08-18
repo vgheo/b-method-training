@@ -90,10 +90,10 @@
 <Define name="aprp"/>
 <Define name="abs">
 <Nary_Pred op="&amp;">
-<Exp_Comparison op=":" initialTag="((bfile) : ((((NAT-{0})) --&gt; (((FIELD) --&gt; (VALUE))))))">
+<Exp_Comparison op=":" initialTag="((bfile) : (((NAT) --&gt; (((FIELD) --&gt; (VALUE))))))">
 <Id tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\FILE_ACCESS.bxml:1:4:1:1:1" typref="277897435" value="bfile"/>
 <Binary_Exp op="--&gt;" typref="3173643880">
-<Id tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\FILE_ACCESS.bxml:1:4:1:1:2:1" typref="3603043417" value="NAT1"/>
+<Id tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\FILE_ACCESS.bxml:1:4:1:1:2:1" typref="3603043417" value="NAT"/>
 <Binary_Exp op="--&gt;" typref="1599463524">
 <Id tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\FILE_ACCESS.bxml:1:4:1:1:2:2:1" typref="3988092277" value="FIELD"/>
 <Id tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\FILE_ACCESS.bxml:1:4:1:1:2:2:2" typref="3958993484" value="VALUE"/>
@@ -109,10 +109,10 @@
 </Binary_Exp>
 </Unary_Exp>
 </Exp_Comparison>
-<Exp_Comparison op=":" initialTag="((buffer) : ((((NAT-{0})) --&gt; (((FIELD) --&gt; (VALUE))))))">
+<Exp_Comparison op=":" initialTag="((buffer) : (((NAT) --&gt; (((FIELD) --&gt; (VALUE))))))">
 <Id tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\FILE_ACCESS.bxml:1:4:1:3:1" typref="277897435" value="buffer"/>
 <Binary_Exp op="--&gt;" typref="3173643880">
-<Id tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\FILE_ACCESS.bxml:1:4:1:3:2:1" typref="3603043417" value="NAT1"/>
+<Id tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\FILE_ACCESS.bxml:1:4:1:3:2:1" typref="3603043417" value="NAT"/>
 <Binary_Exp op="--&gt;" typref="1599463524">
 <Id tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\FILE_ACCESS.bxml:1:4:1:3:2:2:1" typref="3988092277" value="FIELD"/>
 <Id tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\FILE_ACCESS.bxml:1:4:1:3:2:2:2" typref="3958993484" value="VALUE"/>

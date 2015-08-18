@@ -51,7 +51,7 @@ END
 THEORY ListInvariantX IS
   Gluing_Seen_List_Invariant(Implementation(FILE_BUFFER_1))==(btrue);
   Abstract_List_Invariant(Implementation(FILE_BUFFER_1))==(bfile: seq(FIELD --> VALUE) & buffer: dom(bfile) +-> (FIELD --> VALUE));
-  Expanded_List_Invariant(Implementation(FILE_BUFFER_1))==(bfile: NAT1 --> (FIELD --> VALUE) & bfile: seq(FIELD --> VALUE) & buffer: NAT1 --> (FIELD --> VALUE) & buffer: dom(bfile) +-> (FIELD --> VALUE) & updated: BOOL & (updated = FALSE => buffer <: bfile) & (updated = TRUE => buffer/={}));
+  Expanded_List_Invariant(Implementation(FILE_BUFFER_1))==(bfile: NAT --> (FIELD --> VALUE) & bfile: seq(FIELD --> VALUE) & buffer: NAT --> (FIELD --> VALUE) & buffer: dom(bfile) +-> (FIELD --> VALUE) & updated: BOOL & (updated = FALSE => buffer <: bfile) & (updated = TRUE => buffer/={}));
   Context_List_Invariant(Implementation(FILE_BUFFER_1))==(btrue);
   List_Invariant(Implementation(FILE_BUFFER_1))==(btrue)
 END

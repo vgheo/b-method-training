@@ -28,7 +28,7 @@
 <Exp_Comparison op=':'>
 <Id value='bfile' typref='277897435'/>
 <Binary_Exp op='--&gt;' typref='3173643880'>
-<Id value='NAT1' typref='3603043417'/>
+<Id value='NAT' typref='3603043417'/>
 <Binary_Exp op='--&gt;' typref='1599463524'>
 <Id value='FIELD' typref='3988092277'/>
 <Id value='VALUE' typref='3958993484'/>
@@ -47,7 +47,7 @@
 <Exp_Comparison op=':'>
 <Id value='buffer' typref='277897435'/>
 <Binary_Exp op='--&gt;' typref='3173643880'>
-<Id value='NAT1' typref='3603043417'/>
+<Id value='NAT' typref='3603043417'/>
 <Binary_Exp op='--&gt;' typref='1599463524'>
 <Id value='FIELD' typref='3988092277'/>
 <Id value='VALUE' typref='3958993484'/>

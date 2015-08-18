@@ -17,10 +17,10 @@ END
 THEORY Formulas IS
 ((NAT) = (((0) .. (2147483647)))) & ((INT) = (((-2147483647) .. (2147483647))));
 FIELD: FIN(INTEGER) & not(FIELD = {}) & VALUE: FIN(INTEGER) & not(VALUE = {}) & ((max_rec) : ((NAT-{0})));
-bfile$1 : (NAT-{0}) +-> ((FIELD) --> (VALUE)) & dom(bfile$1) = (NAT-{0}) & ((bfile$1) : ((((NAT-{0})) --> (((FIELD) --> (VALUE)))))) & bfile$1 : NATURAL-{0} +-> ((FIELD) --> (VALUE)) & ((bfile$1) : (seq(((FIELD) --> (VALUE))))) & buffer$1 : (NAT-{0}) +-> ((FIELD) --> (VALUE)) & dom(buffer$1) = (NAT-{0}) & ((buffer$1) : ((((NAT-{0})) --> (((FIELD) --> (VALUE)))))) & ((buffer$1) : (((dom(bfile$1)) +-> (((FIELD) --> (VALUE)))))) & ((updated$1) : (BOOL)) & ((((updated$1) = (FALSE))) => (buffer$1 : POW( bfile$1))) & ((((updated$1) = (TRUE))) => (not(buffer$1 = {})));
-{} : (NAT-{0}) +-> ((FIELD) --> (VALUE));
-dom({}) = (NAT-{0});
-(({}) : ((((NAT-{0})) --> (((FIELD) --> (VALUE))))));
+bfile$1 : NAT +-> ((FIELD) --> (VALUE)) & dom(bfile$1) = NAT & ((bfile$1) : (((NAT) --> (((FIELD) --> (VALUE)))))) & bfile$1 : NATURAL-{0} +-> ((FIELD) --> (VALUE)) & ((bfile$1) : (seq(((FIELD) --> (VALUE))))) & buffer$1 : NAT +-> ((FIELD) --> (VALUE)) & dom(buffer$1) = NAT & ((buffer$1) : (((NAT) --> (((FIELD) --> (VALUE)))))) & ((buffer$1) : (((dom(bfile$1)) +-> (((FIELD) --> (VALUE)))))) & ((updated$1) : (BOOL)) & ((((updated$1) = (FALSE))) => (buffer$1 : POW( bfile$1))) & ((((updated$1) = (TRUE))) => (not(buffer$1 = {})));
+{} : NAT +-> ((FIELD) --> (VALUE));
+dom({}) = NAT;
+(({}) : (((NAT) --> (((FIELD) --> (VALUE))))));
 {} : NATURAL-{0} +-> ((FIELD) --> (VALUE));
 (({}) : (seq(((FIELD) --> (VALUE)))));
 (({}) : (((dom({})) +-> (((FIELD) --> (VALUE))))));

@@ -55,7 +55,7 @@ END
 THEORY ListInvariantX IS
   Gluing_Seen_List_Invariant(Refinement(FILE_ACCESS_1))==(btrue);
   Expanded_List_Invariant(Refinement(FILE_ACCESS_1))==(btrue);
-  Abstract_List_Invariant(Refinement(FILE_ACCESS_1))==(bfile: NAT1 --> (FIELD --> VALUE) & bfile: seq(FIELD --> VALUE) & buffer: NAT1 --> (FIELD --> VALUE) & buffer: dom(bfile) +-> (FIELD --> VALUE) & updated: BOOL & (updated = FALSE => buffer <: bfile) & (updated = TRUE => buffer/={}));
+  Abstract_List_Invariant(Refinement(FILE_ACCESS_1))==(bfile: NAT --> (FIELD --> VALUE) & bfile: seq(FIELD --> VALUE) & buffer: NAT --> (FIELD --> VALUE) & buffer: dom(bfile) +-> (FIELD --> VALUE) & updated: BOOL & (updated = FALSE => buffer <: bfile) & (updated = TRUE => buffer/={}));
   Context_List_Invariant(Refinement(FILE_ACCESS_1))==(btrue);
   List_Invariant(Refinement(FILE_ACCESS_1))==(name: NAT & name: 0..size(bfile) & record: FIELD --> VALUE & buffer = {0}<<|{name|->record})
 END
@@ -225,7 +225,7 @@ THEORY ParametersEnvX IS
 END
 &
 THEORY VisibleVariablesEnvX IS
-  VisibleVariables(Refinement(FILE_ACCESS_1)) == (Type(record) == Mvv(SetOf(atype(FIELD,?,?)*atype(VALUE,?,?)));Type(name) == Mvv(btype(INTEGER,?,?));Type(bfile) == Mvv(SetOf(btype(INTEGER,1,MAXINT)*SetOf(atype(FIELD,?,?)*atype(VALUE,?,?))));Type(buffer) == Mvv(SetOf(btype(INTEGER,1,MAXINT)*SetOf(atype(FIELD,?,?)*atype(VALUE,?,?))));Type(updated) == Mvv(btype(BOOL,?,?)))
+  VisibleVariables(Refinement(FILE_ACCESS_1)) == (Type(record) == Mvv(SetOf(atype(FIELD,?,?)*atype(VALUE,?,?)));Type(name) == Mvv(btype(INTEGER,?,?));Type(bfile) == Mvv(SetOf(btype(INTEGER,0,MAXINT)*SetOf(atype(FIELD,?,?)*atype(VALUE,?,?))));Type(buffer) == Mvv(SetOf(btype(INTEGER,0,MAXINT)*SetOf(atype(FIELD,?,?)*atype(VALUE,?,?))));Type(updated) == Mvv(btype(BOOL,?,?)))
 END
 &
 THEORY OperationsEnvX IS
