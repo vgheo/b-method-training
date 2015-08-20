@@ -6,7 +6,7 @@
  The buffer is a part of the file that resides in the core for further processing.Therefore all changes or acceses of the file are made through the buffer
  */
 MACHINE
-    FILE_BUFFER ( max_rec , FIELD , VALUE )
+    FILE_BUFFER ( max_rec )
 CONSTRAINTS
     max_rec : NAT1
 ABSTRACT_VARIABLES
@@ -17,6 +17,9 @@ INITIALISATION
 INVARIANT
     bfile : seq ( FIELD --> VALUE ) &
     buffer : dom ( bfile ) +-> ( FIELD --> VALUE )
+DEFINITIONS
+    FIELD == ( 1 .. 4 ) ;
+    VALUE == ( 0 .. 10000 )
 OPERATIONS
     oo <-- create_record ( vv ) =
     PRE

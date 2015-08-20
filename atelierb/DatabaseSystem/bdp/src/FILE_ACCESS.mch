@@ -3,7 +3,7 @@
  * Creation date: 7/29/2015
  */
 MACHINE
-    FILE_ACCESS ( max_rec , FIELD )
+    FILE_ACCESS ( max_rec  )
 CONSTRAINTS
     max_rec : NAT1
 
@@ -11,23 +11,23 @@ CONCRETE_VARIABLES
     bfile , buffer , updated
 
 INVARIANT
-    bfile : NAT --> ( FIELD --> 0 .. 10000 ) &
-    bfile : seq ( FIELD --> 0 .. 10000 ) &
-    buffer : NAT --> ( FIELD --> 0 .. 10000 ) &
-    buffer : dom ( bfile ) +-> ( FIELD --> 0 .. 10000 ) &
+    bfile : NAT --> ( ( 0 .. 4 ) --> ( 0 .. 10000 ) ) &
+    bfile : seq ( ( 0 .. 4 ) --> ( 0 .. 10000 ) ) &
+    buffer : NAT --> ( ( 0 .. 4 ) --> ( 0 .. 10000 ) ) &
+    buffer : dom ( bfile ) +-> ( ( 0 .. 4 ) --> ( 0 .. 10000 ) ) &
     updated : BOOL &
     ( updated = FALSE => buffer <: bfile ) &
     ( updated = TRUE => buffer /= {} )
 
-
-
 INITIALISATION
     bfile , buffer , updated := <> , {} , FALSE
+
+
 
 OPERATIONS
 get_record ( oo ) =
     PRE
-    oo : NAT & /*concrete typing for B0 check*/
+    oo : NAT1 & /*concrete typing for B0 check*/
     oo : dom ( bfile )
     THEN
     buffer := { oo |-> bfile ( oo ) } ||
@@ -43,11 +43,11 @@ put_buffer =
 
 oo <-- create_record ( vv ) =
     PRE
-    vv : 0 .. 10000 &
+    vv : ( 0 .. 10000 ) &
     size ( bfile ) /= max_rec
     THEN
     /*Warning possible typo => renamed INDEX to FIELD*/
-    bfile := bfile <- ( FIELD * { vv } ) ||
+    bfile := bfile <- ( ( 0 .. 4 ) * { vv } ) ||
     oo := size ( bfile ) + 1
     END ;
 
@@ -61,10 +61,10 @@ vv <-- not_in_buffer ( oo ) =
 
 mod_buffer ( oo , ii , vv ) =
     PRE
-    oo : NAT & /*concrete typing for B0 check*/
+    oo : NAT1 & /*concrete typing for B0 check*/
     oo : dom ( buffer ) &
-    ii : FIELD &
-    vv : 0 .. 10000
+    ii : ( 0 .. 4 ) &
+    vv : ( 0 .. 10000 )
     THEN
     buffer ( oo ) ( ii ) := vv ||
     updated := TRUE
@@ -76,9 +76,9 @@ END ;
 
 vv <-- val_buffer ( oo , ii ) =
     PRE
-    oo : NAT & /*concrete typing for B0 check*/
+    oo : NAT1 & /*concrete typing for B0 check*/
     oo : dom ( buffer ) &
-    ii : FIELD
+    ii : ( 0 .. 4 )
     THEN
     vv := buffer ( oo ) ( ii )
 END

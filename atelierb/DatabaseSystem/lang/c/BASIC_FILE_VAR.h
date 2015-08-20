@@ -12,8 +12,8 @@ extern "C" {
 
 /* Clause CONCRETE_VARIABLES */
 
-extern 
-extern 
+extern int32_t BASIC_FILE_VAR__buf_vrb[5];
+extern int32_t BASIC_FILE_VAR__file_vrb[2147483647+1][5];
 
 /* Clause CONCRETE_CONSTANTS */
 /* Basic constants */
@@ -24,4 +24,14 @@ extern void BASIC_FILE_VAR__INITIALISATION(void);
 
 extern void BASIC_FILE_VAR__READ_FILE(int32_t ii);
 extern void BASIC_FILE_VAR__WRITE_FILE(int32_t ii);
-extern void BASIC_FILE_VAR__NEW_RECORD(
+extern void BASIC_FILE_VAR__NEW_RECORD(int32_t vv);
+extern void BASIC_FILE_VAR__SIZE_FILE(int32_t *vv);
+extern void BASIC_FILE_VAR__RESET_FILE(void);
+extern void BASIC_FILE_VAR__RESET_RECORD(void);
+
+#ifdef __cplusplus
+}
+#endif /* __cplusplus */
+
+
+#endif /* _BASIC_FILE_VAR_h */

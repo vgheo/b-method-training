@@ -1,23 +1,28 @@
 ﻿/* FILE_BUFFER_1
- * Author: T0164919
- * Creation date: 7/29/2015
- */
+* Author: T0164919
+* Creation date: 7/29/2015
+*/
 
-IMPLEMENTATION FILE_BUFFER_1 ( max_rec , FIELD , VALUE )
-REFINES FILE_BUFFER
+IMPLEMENTATION
+    FILE_BUFFER_1 ( max_rec )
+REFINES
+    FILE_BUFFER
 IMPORTS
-    FILE_ACCESS ( max_rec , FIELD , VALUE )
+    FILE_ACCESS ( max_rec )
 PROMOTES
     create_record , not_in_buffer , mod_buffer , val_buffer , size_file
+DEFINITIONS
+    FIELD == ( 1 .. 4 ) ;
+    VALUE == ( 0 .. 10000 )
 OPERATIONS
     load_buffer ( oo ) =
     BEGIN
-    IF
-        updated = TRUE
-    THEN
-        put_buffer
-    END ;
-    get_record ( oo )
+        IF
+            updated = TRUE
+        THEN
+            put_buffer
+        END ;
+        get_record ( oo )
     END
 
- END
+END

@@ -7,7 +7,7 @@
 A "record_value is a total function from FIELD set to VALUE set"
  */
 MACHINE
-    FILE ( max_rec , FIELD , VALUE )
+    FILE ( max_rec )
 CONSTRAINTS
     max_rec : NAT1
 ABSTRACT_VARIABLES
@@ -17,6 +17,9 @@ INITIALISATION
 INVARIANT
     file : seq ( FIELD --> VALUE ) &
     size ( file ) <= max_rec
+DEFINITIONS
+    FIELD == ( 1 .. 4 ) ;
+    VALUE == ( 0 .. 10000 )
 OPERATIONS
     /*
     val_file acceses the value of a particular field of a certain record in the file
@@ -35,7 +38,7 @@ OPERATIONS
     */
     mod_file ( oo , ii , vv ) =
     PRE
-         oo : NAT & /*concrete typing*/
+        oo : NAT & /*concrete typing*/
         oo : dom ( file ) &
         ii : FIELD &
         vv : VALUE

@@ -50,10 +50,10 @@ END
 &
 THEORY ListInvariantX IS
   Gluing_Seen_List_Invariant(Implementation(TOTAL_OBJECT_1))==(btrue);
-  Abstract_List_Invariant(Implementation(TOTAL_OBJECT_1))==(total_object: 0..max_obj & total_field: FIELD --> (1..total_object --> VALUE));
-  Expanded_List_Invariant(Implementation(TOTAL_OBJECT_1))==(file: seq(FIELD --> VALUE) & size(file)<=max_obj);
+  Abstract_List_Invariant(Implementation(TOTAL_OBJECT_1))==(total_object: 0..max_obj & total_field: 1..4 --> (1..total_object --> 0..10000));
+  Expanded_List_Invariant(Implementation(TOTAL_OBJECT_1))==(file: seq(1..4 --> 0..10000) & size(file)<=max_obj);
   Context_List_Invariant(Implementation(TOTAL_OBJECT_1))==(btrue);
-  List_Invariant(Implementation(TOTAL_OBJECT_1))==(file = %oo.(oo: 1..total_object | %ii.(ii: FIELD | total_field(ii)(oo))))
+  List_Invariant(Implementation(TOTAL_OBJECT_1))==(file = %oo.(oo: 1..total_object | %ii.(ii: 1..4 | total_field(ii)(oo))))
 END
 &
 THEORY ListAssertionsX IS
@@ -78,17 +78,17 @@ THEORY ListInitialisationX IS
 END
 &
 THEORY ListParametersX IS
-  List_Parameters(Implementation(TOTAL_OBJECT_1))==(max_obj,FIELD,VALUE)
+  List_Parameters(Implementation(TOTAL_OBJECT_1))==(max_obj)
 END
 &
 THEORY ListInstanciatedParametersX IS
   Precond_Instanciated_Parameters(Implementation(TOTAL_OBJECT_1),Machine(FILE))==(btrue);
-  List_Instanciated_Parameters(Implementation(TOTAL_OBJECT_1),Machine(FILE))==(max_obj,FIELD,VALUE)
+  List_Instanciated_Parameters(Implementation(TOTAL_OBJECT_1),Machine(FILE))==(max_obj)
 END
 &
 THEORY ListConstraintsX IS
-  List_Constraints(Implementation(TOTAL_OBJECT_1),Machine(FILE))==(max_obj: NAT1 & FIELD: FIN(INTEGER) & not(FIELD = {}) & VALUE: FIN(INTEGER) & not(VALUE = {}));
-  List_Constraints(Implementation(TOTAL_OBJECT_1))==(max_obj: NAT1 & FIELD: FIN(INTEGER) & not(FIELD = {}) & VALUE: FIN(INTEGER) & not(VALUE = {}));
+  List_Constraints(Implementation(TOTAL_OBJECT_1),Machine(FILE))==(max_obj: NAT1);
+  List_Constraints(Implementation(TOTAL_OBJECT_1))==(max_obj: NAT1);
   List_Context_Constraints(Implementation(TOTAL_OBJECT_1))==(btrue)
 END
 &
@@ -120,20 +120,20 @@ END
 &
 THEORY ListPreconditionX IS
   Own_Precondition(Implementation(TOTAL_OBJECT_1),create_total_object)==(btrue);
-  List_Precondition(Implementation(TOTAL_OBJECT_1),create_total_object)==(vv: VALUE & total_object/=max_obj);
+  List_Precondition(Implementation(TOTAL_OBJECT_1),create_total_object)==(vv: 0..10000 & total_object/=max_obj);
   Own_Precondition(Implementation(TOTAL_OBJECT_1),mod_field)==(btrue);
-  List_Precondition(Implementation(TOTAL_OBJECT_1),mod_field)==(ii: FIELD & oo: 1..total_object & vv: VALUE);
+  List_Precondition(Implementation(TOTAL_OBJECT_1),mod_field)==(ii: 1..4 & oo: 1..total_object & vv: 0..10000);
   Own_Precondition(Implementation(TOTAL_OBJECT_1),val_field)==(btrue);
-  List_Precondition(Implementation(TOTAL_OBJECT_1),val_field)==(ii: FIELD & oo: 1..total_object);
+  List_Precondition(Implementation(TOTAL_OBJECT_1),val_field)==(ii: 1..4 & oo: 1..total_object);
   Own_Precondition(Implementation(TOTAL_OBJECT_1),nbr_object)==(btrue);
   List_Precondition(Implementation(TOTAL_OBJECT_1),nbr_object)==(btrue)
 END
 &
 THEORY ListSubstitutionX IS
   Expanded_List_Substitution(Implementation(TOTAL_OBJECT_1),nbr_object)==(btrue | vv:=size(file));
-  Expanded_List_Substitution(Implementation(TOTAL_OBJECT_1),val_field)==(ii: FIELD & oo: 1..total_object & oo: NAT & oo: dom(file) & ii: FIELD | vv:=file(oo)(ii));
-  Expanded_List_Substitution(Implementation(TOTAL_OBJECT_1),mod_field)==(ii: FIELD & oo: 1..total_object & vv: VALUE & oo: NAT & oo: dom(file) & ii: FIELD & vv: VALUE | file:=file<+{oo|->(file(oo)<+{ii|->vv})});
-  Expanded_List_Substitution(Implementation(TOTAL_OBJECT_1),create_total_object)==(vv: VALUE & total_object/=max_obj & vv: VALUE & size(file)<max_obj | file,oo:=file<-FIELD*{vv},size(file)+1);
+  Expanded_List_Substitution(Implementation(TOTAL_OBJECT_1),val_field)==(ii: 1..4 & oo: 1..total_object & oo: NAT & oo: dom(file) & ii: 1..4 | vv:=file(oo)(ii));
+  Expanded_List_Substitution(Implementation(TOTAL_OBJECT_1),mod_field)==(ii: 1..4 & oo: 1..total_object & vv: 0..10000 & oo: NAT & oo: dom(file) & ii: 1..4 & vv: 0..10000 | file:=file<+{oo|->(file(oo)<+{ii|->vv})});
+  Expanded_List_Substitution(Implementation(TOTAL_OBJECT_1),create_total_object)==(vv: 0..10000 & total_object/=max_obj & vv: 0..10000 & size(file)<max_obj | file,oo:=file<-(1..4)*{vv},size(file)+1);
   List_Substitution(Implementation(TOTAL_OBJECT_1),create_total_object)==(oo <-- create_record(vv));
   List_Substitution(Implementation(TOTAL_OBJECT_1),mod_field)==(mod_file(oo,ii,vv));
   List_Substitution(Implementation(TOTAL_OBJECT_1),val_field)==(vv <-- val_file(oo,ii));
@@ -186,18 +186,18 @@ THEORY ListIncludedOperationsX IS
 END
 &
 THEORY InheritedEnvX IS
-  Operations(Implementation(TOTAL_OBJECT_1))==(Type(nbr_object) == Cst(btype(INTEGER,?,?),No_type);Type(val_field) == Cst(atype(VALUE,?,?),atype(FIELD,?,?)*btype(INTEGER,?,?));Type(mod_field) == Cst(No_type,atype(FIELD,?,?)*btype(INTEGER,?,?)*atype(VALUE,?,?));Type(create_total_object) == Cst(btype(INTEGER,?,?),atype(VALUE,?,?)))
+  Operations(Implementation(TOTAL_OBJECT_1))==(Type(nbr_object) == Cst(btype(INTEGER,?,?),No_type);Type(val_field) == Cst(btype(INTEGER,?,?),btype(INTEGER,?,?)*btype(INTEGER,?,?));Type(mod_field) == Cst(No_type,btype(INTEGER,?,?)*btype(INTEGER,?,?)*btype(INTEGER,?,?));Type(create_total_object) == Cst(btype(INTEGER,?,?),btype(INTEGER,?,?)))
 END
 &
 THEORY ListVisibleStaticX END
 &
 THEORY ListOfIdsX IS
-  List_Of_Ids(Implementation(TOTAL_OBJECT_1)) == (? | ? | ? | file | create_total_object,mod_field,val_field,nbr_object | ? | imported(Machine(FILE)) | max_obj,FIELD,VALUE | TOTAL_OBJECT_1);
+  List_Of_Ids(Implementation(TOTAL_OBJECT_1)) == (? | ? | ? | file | create_total_object,mod_field,val_field,nbr_object | ? | imported(Machine(FILE)) | max_obj | TOTAL_OBJECT_1);
   List_Of_HiddenCst_Ids(Implementation(TOTAL_OBJECT_1)) == (? | ?);
   List_Of_VisibleCst_Ids(Implementation(TOTAL_OBJECT_1)) == (?);
   List_Of_VisibleVar_Ids(Implementation(TOTAL_OBJECT_1)) == (? | ?);
   List_Of_Ids_SeenBNU(Implementation(TOTAL_OBJECT_1)) == (?: ?);
-  List_Of_Ids(Machine(FILE)) == (? | ? | file | ? | val_file,mod_file,create_record,size_file | ? | ? | max_rec,FIELD,VALUE | FILE);
+  List_Of_Ids(Machine(FILE)) == (? | ? | file | ? | val_file,mod_file,create_record,size_file | ? | ? | max_rec | FILE);
   List_Of_HiddenCst_Ids(Machine(FILE)) == (? | ?);
   List_Of_VisibleCst_Ids(Machine(FILE)) == (?);
   List_Of_VisibleVar_Ids(Machine(FILE)) == (? | ?);
@@ -205,7 +205,7 @@ THEORY ListOfIdsX IS
 END
 &
 THEORY ParametersEnvX IS
-  Parameters(Implementation(TOTAL_OBJECT_1)) == (Type(VALUE) == Prm(SetOf(atype(VALUE,?,?)));Type(FIELD) == Prm(SetOf(atype(FIELD,?,?)));Type(max_obj) == Prm(btype(INTEGER,?,?)))
+  Parameters(Implementation(TOTAL_OBJECT_1)) == (Type(max_obj) == Prm(btype(INTEGER,?,?)))
 END
 &
 THEORY TCIntRdX IS

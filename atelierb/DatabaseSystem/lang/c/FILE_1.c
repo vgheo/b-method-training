@@ -20,4 +20,27 @@ void FILE__INITIALISATION(void)
 
 /* Clause OPERATIONS */
 
-void FILE__mod_file(int32_t oo
+void FILE__mod_file(int32_t oo, int32_t ii, int32_t vv)
+{
+    bool test;
+    
+    FILE_BUFFER__not_in_buffer(oo, &test);
+    if(test == true)
+    {
+        FILE_BUFFER__load_buffer(oo);
+    }
+    FILE_BUFFER__mod_buffer(oo, ii, vv);
+}
+
+void FILE__val_file(int32_t oo, int32_t ii, int32_t *vv)
+{
+    bool test;
+    
+    FILE_BUFFER__not_in_buffer(oo, &test);
+    if(test == true)
+    {
+        FILE_BUFFER__load_buffer(oo);
+    }
+    FILE_BUFFER__val_buffer(oo, ii, vv);
+}
+

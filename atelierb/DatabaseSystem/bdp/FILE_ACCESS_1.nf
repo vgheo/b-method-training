@@ -55,9 +55,9 @@ END
 THEORY ListInvariantX IS
   Gluing_Seen_List_Invariant(Refinement(FILE_ACCESS_1))==(btrue);
   Expanded_List_Invariant(Refinement(FILE_ACCESS_1))==(btrue);
-  Abstract_List_Invariant(Refinement(FILE_ACCESS_1))==(bfile: NAT --> (FIELD --> VALUE) & bfile: seq(FIELD --> VALUE) & buffer: NAT --> (FIELD --> VALUE) & buffer: dom(bfile) +-> (FIELD --> VALUE) & updated: BOOL & (updated = FALSE => buffer <: bfile) & (updated = TRUE => buffer/={}));
+  Abstract_List_Invariant(Refinement(FILE_ACCESS_1))==(bfile: NAT --> (0..4 --> 0..10000) & bfile: seq(0..4 --> 0..10000) & buffer: NAT --> (0..4 --> 0..10000) & buffer: dom(bfile) +-> (0..4 --> 0..10000) & updated: BOOL & (updated = FALSE => buffer <: bfile) & (updated = TRUE => buffer/={}));
   Context_List_Invariant(Refinement(FILE_ACCESS_1))==(btrue);
-  List_Invariant(Refinement(FILE_ACCESS_1))==(name: NAT & name: 0..size(bfile) & record: FIELD --> VALUE & buffer = {0}<<|{name|->record})
+  List_Invariant(Refinement(FILE_ACCESS_1))==(name: NAT & name: 0..size(bfile) & record: 0..4 --> 0..10000 & buffer = {0}<<|{name|->record})
 END
 &
 THEORY ListVariantX IS
@@ -80,9 +80,9 @@ THEORY ListExclusivityX IS
 END
 &
 THEORY ListInitialisationX IS
-  Expanded_List_Initialisation(Refinement(FILE_ACCESS_1))==(name:=0 || @(record$0).(record$0: FIELD --> VALUE ==> record:=record$0) || bfile,updated:=<>,FALSE || buffer:={});
+  Expanded_List_Initialisation(Refinement(FILE_ACCESS_1))==(name:=0 || @(record$0).(record$0: 0..4 --> 0..10000 ==> record:=record$0) || bfile,updated:=<>,FALSE || buffer:={});
   Context_List_Initialisation(Refinement(FILE_ACCESS_1))==(skip);
-  List_Initialisation(Refinement(FILE_ACCESS_1))==(name:=0 || record:: FIELD --> VALUE || bfile,updated:=<>,FALSE || buffer:={})
+  List_Initialisation(Refinement(FILE_ACCESS_1))==(name:=0 || record:: 0..4 --> 0..10000 || bfile,updated:=<>,FALSE || buffer:={})
 END
 &
 THEORY ListOperationsX IS
@@ -123,47 +123,47 @@ END
 THEORY ListOperationGuardX END
 &
 THEORY ListPreconditionX IS
-  Own_Precondition(Refinement(FILE_ACCESS_1),val_buffer)==(oo: NAT & oo: dom(buffer) & ii: FIELD);
-  List_Precondition(Refinement(FILE_ACCESS_1),val_buffer)==(oo: NAT & oo: dom(buffer) & ii: FIELD);
+  Own_Precondition(Refinement(FILE_ACCESS_1),val_buffer)==(oo: NAT1 & oo: dom(buffer) & ii: 0..4);
+  List_Precondition(Refinement(FILE_ACCESS_1),val_buffer)==(oo: NAT1 & oo: dom(buffer) & ii: 0..4);
   Own_Precondition(Refinement(FILE_ACCESS_1),get_record)==(btrue);
-  List_Precondition(Refinement(FILE_ACCESS_1),get_record)==(oo: NAT & oo: dom(bfile));
+  List_Precondition(Refinement(FILE_ACCESS_1),get_record)==(oo: NAT1 & oo: dom(bfile));
   Own_Precondition(Refinement(FILE_ACCESS_1),put_buffer)==(btrue);
   List_Precondition(Refinement(FILE_ACCESS_1),put_buffer)==(updated = TRUE);
   Own_Precondition(Refinement(FILE_ACCESS_1),create_record)==(btrue);
-  List_Precondition(Refinement(FILE_ACCESS_1),create_record)==(vv: VALUE & size(bfile)/=max_rec);
+  List_Precondition(Refinement(FILE_ACCESS_1),create_record)==(vv: 0..10000 & size(bfile)/=max_rec);
   Own_Precondition(Refinement(FILE_ACCESS_1),not_in_buffer)==(btrue);
   List_Precondition(Refinement(FILE_ACCESS_1),not_in_buffer)==(oo: NAT1 & oo: 1..size(bfile));
   Own_Precondition(Refinement(FILE_ACCESS_1),mod_buffer)==(btrue);
-  List_Precondition(Refinement(FILE_ACCESS_1),mod_buffer)==(oo: NAT & oo: dom(buffer) & ii: FIELD & vv: VALUE);
+  List_Precondition(Refinement(FILE_ACCESS_1),mod_buffer)==(oo: NAT1 & oo: dom(buffer) & ii: 0..4 & vv: 0..10000);
   Own_Precondition(Refinement(FILE_ACCESS_1),size_file)==(btrue);
   List_Precondition(Refinement(FILE_ACCESS_1),size_file)==(btrue)
 END
 &
 THEORY ListSubstitutionX IS
-  Expanded_List_Substitution(Refinement(FILE_ACCESS_1),val_buffer)==(oo: NAT & oo: dom(buffer) & ii: FIELD | vv:=buffer(oo)(ii));
+  Expanded_List_Substitution(Refinement(FILE_ACCESS_1),val_buffer)==(oo: NAT1 & oo: dom(buffer) & ii: 0..4 | vv:=buffer(oo)(ii));
   List_Substitution(Refinement(FILE_ACCESS_1),val_buffer)==(vv:=buffer(oo)(ii));
   Expanded_List_Substitution(Refinement(FILE_ACCESS_1),size_file)==(btrue | vv:=size(bfile));
-  Expanded_List_Substitution(Refinement(FILE_ACCESS_1),mod_buffer)==(oo: NAT & oo: dom(buffer) & ii: FIELD & vv: VALUE | record,updated:=record<+{ii|->vv},TRUE);
+  Expanded_List_Substitution(Refinement(FILE_ACCESS_1),mod_buffer)==(oo: NAT1 & oo: dom(buffer) & ii: 0..4 & vv: 0..10000 | record,updated:=record<+{ii|->vv},TRUE);
   Expanded_List_Substitution(Refinement(FILE_ACCESS_1),not_in_buffer)==(oo: NAT1 & oo: 1..size(bfile) | vv:=bool(name/=oo));
-  Expanded_List_Substitution(Refinement(FILE_ACCESS_1),create_record)==(vv: VALUE & size(bfile)/=max_rec | bfile,oo:=bfile<-FIELD*{vv},size(bfile)+1);
+  Expanded_List_Substitution(Refinement(FILE_ACCESS_1),create_record)==(vv: 0..10000 & size(bfile)/=max_rec | bfile,oo:=bfile<-(0..4)*{vv},size(bfile)+1);
   Expanded_List_Substitution(Refinement(FILE_ACCESS_1),put_buffer)==(updated = TRUE | bfile:=bfile<+{name|->record});
-  Expanded_List_Substitution(Refinement(FILE_ACCESS_1),get_record)==(oo: NAT & oo: dom(bfile) | name,record,updated:=oo,bfile(oo),FALSE);
+  Expanded_List_Substitution(Refinement(FILE_ACCESS_1),get_record)==(oo: NAT1 & oo: dom(bfile) | name,record,updated:=oo,bfile(oo),FALSE);
   List_Substitution(Refinement(FILE_ACCESS_1),get_record)==(name,record,updated:=oo,bfile(oo),FALSE);
   List_Substitution(Refinement(FILE_ACCESS_1),put_buffer)==(bfile(name):=record);
-  List_Substitution(Refinement(FILE_ACCESS_1),create_record)==(bfile:=bfile<-FIELD*{vv} || oo:=size(bfile)+1);
+  List_Substitution(Refinement(FILE_ACCESS_1),create_record)==(bfile:=bfile<-(0..4)*{vv} || oo:=size(bfile)+1);
   List_Substitution(Refinement(FILE_ACCESS_1),not_in_buffer)==(vv:=bool(name/=oo));
   List_Substitution(Refinement(FILE_ACCESS_1),mod_buffer)==(record(ii):=vv || updated:=TRUE);
   List_Substitution(Refinement(FILE_ACCESS_1),size_file)==(vv:=size(bfile))
 END
 &
 THEORY ListParametersX IS
-  List_Parameters(Refinement(FILE_ACCESS_1))==(max_rec,FIELD,VALUE)
+  List_Parameters(Refinement(FILE_ACCESS_1))==(max_rec)
 END
 &
 THEORY ListInstanciatedParametersX END
 &
 THEORY ListConstraintsX IS
-  List_Constraints(Refinement(FILE_ACCESS_1))==(max_rec: NAT1 & FIELD: FIN(INTEGER) & not(FIELD = {}) & VALUE: FIN(INTEGER) & not(VALUE = {}));
+  List_Constraints(Refinement(FILE_ACCESS_1))==(max_rec: NAT1);
   List_Context_Constraints(Refinement(FILE_ACCESS_1))==(btrue)
 END
 &
@@ -213,7 +213,7 @@ THEORY ListANYVarX IS
 END
 &
 THEORY ListOfIdsX IS
-  List_Of_Ids(Refinement(FILE_ACCESS_1)) == (? | ? | ? | ? | get_record,put_buffer,create_record,not_in_buffer,mod_buffer,size_file | ? | ? | max_rec,FIELD,VALUE | FILE_ACCESS_1);
+  List_Of_Ids(Refinement(FILE_ACCESS_1)) == (? | ? | ? | ? | get_record,put_buffer,create_record,not_in_buffer,mod_buffer,size_file | ? | ? | max_rec | FILE_ACCESS_1);
   List_Of_HiddenCst_Ids(Refinement(FILE_ACCESS_1)) == (? | ?);
   List_Of_VisibleCst_Ids(Refinement(FILE_ACCESS_1)) == (?);
   List_Of_VisibleVar_Ids(Refinement(FILE_ACCESS_1)) == (record,name | ?);
@@ -221,15 +221,15 @@ THEORY ListOfIdsX IS
 END
 &
 THEORY ParametersEnvX IS
-  Parameters(Refinement(FILE_ACCESS_1)) == (Type(VALUE) == Prm(SetOf(atype(VALUE,?,?)));Type(FIELD) == Prm(SetOf(atype(FIELD,?,?)));Type(max_rec) == Prm(btype(INTEGER,?,?)))
+  Parameters(Refinement(FILE_ACCESS_1)) == (Type(max_rec) == Prm(btype(INTEGER,?,?)))
 END
 &
 THEORY VisibleVariablesEnvX IS
-  VisibleVariables(Refinement(FILE_ACCESS_1)) == (Type(record) == Mvv(SetOf(atype(FIELD,?,?)*atype(VALUE,?,?)));Type(name) == Mvv(btype(INTEGER,?,?));Type(bfile) == Mvv(SetOf(btype(INTEGER,0,MAXINT)*SetOf(atype(FIELD,?,?)*atype(VALUE,?,?))));Type(buffer) == Mvv(SetOf(btype(INTEGER,0,MAXINT)*SetOf(atype(FIELD,?,?)*atype(VALUE,?,?))));Type(updated) == Mvv(btype(BOOL,?,?)))
+  VisibleVariables(Refinement(FILE_ACCESS_1)) == (Type(record) == Mvv(SetOf(btype(INTEGER,0,4)*btype(INTEGER,0,10000)));Type(name) == Mvv(btype(INTEGER,?,?));Type(bfile) == Mvv(SetOf(btype(INTEGER,0,MAXINT)*SetOf(btype(INTEGER,0,4)*btype(INTEGER,0,10000))));Type(buffer) == Mvv(SetOf(btype(INTEGER,0,MAXINT)*SetOf(btype(INTEGER,0,4)*btype(INTEGER,0,10000))));Type(updated) == Mvv(btype(BOOL,?,?)))
 END
 &
 THEORY OperationsEnvX IS
-  Operations(Refinement(FILE_ACCESS_1)) == (Type(val_buffer) == Cst(atype(VALUE,?,?),btype(INTEGER,?,?)*atype(FIELD,?,?));Type(size_file) == Cst(btype(INTEGER,?,?),No_type);Type(mod_buffer) == Cst(No_type,btype(INTEGER,?,?)*atype(FIELD,?,?)*atype(VALUE,?,?));Type(not_in_buffer) == Cst(btype(BOOL,?,?),btype(INTEGER,?,?));Type(create_record) == Cst(btype(INTEGER,?,?),atype(VALUE,?,?));Type(put_buffer) == Cst(No_type,No_type);Type(get_record) == Cst(No_type,btype(INTEGER,?,?)))
+  Operations(Refinement(FILE_ACCESS_1)) == (Type(val_buffer) == Cst(btype(INTEGER,?,?),btype(INTEGER,?,?)*btype(INTEGER,?,?));Type(size_file) == Cst(btype(INTEGER,?,?),No_type);Type(mod_buffer) == Cst(No_type,btype(INTEGER,?,?)*btype(INTEGER,?,?)*btype(INTEGER,?,?));Type(not_in_buffer) == Cst(btype(BOOL,?,?),btype(INTEGER,?,?));Type(create_record) == Cst(btype(INTEGER,?,?),btype(INTEGER,?,?));Type(put_buffer) == Cst(No_type,No_type);Type(get_record) == Cst(No_type,btype(INTEGER,?,?)))
 END
 &
 THEORY TCIntRdX IS

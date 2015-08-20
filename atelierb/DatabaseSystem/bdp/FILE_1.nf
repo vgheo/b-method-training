@@ -50,8 +50,8 @@ END
 &
 THEORY ListInvariantX IS
   Gluing_Seen_List_Invariant(Implementation(FILE_1))==(btrue);
-  Abstract_List_Invariant(Implementation(FILE_1))==(file: seq(FIELD --> VALUE) & size(file)<=max_rec);
-  Expanded_List_Invariant(Implementation(FILE_1))==(bfile: seq(FIELD --> VALUE) & buffer: dom(bfile) +-> (FIELD --> VALUE));
+  Abstract_List_Invariant(Implementation(FILE_1))==(file: seq(1..4 --> 0..10000) & size(file)<=max_rec);
+  Expanded_List_Invariant(Implementation(FILE_1))==(bfile: seq(1..4 --> 0..10000) & buffer: dom(bfile) +-> (1..4 --> 0..10000));
   Context_List_Invariant(Implementation(FILE_1))==(btrue);
   List_Invariant(Implementation(FILE_1))==(file = bfile<+buffer)
 END
@@ -78,17 +78,17 @@ THEORY ListInitialisationX IS
 END
 &
 THEORY ListParametersX IS
-  List_Parameters(Implementation(FILE_1))==(max_rec,FIELD,VALUE)
+  List_Parameters(Implementation(FILE_1))==(max_rec)
 END
 &
 THEORY ListInstanciatedParametersX IS
   Precond_Instanciated_Parameters(Implementation(FILE_1),Machine(FILE_BUFFER))==(btrue);
-  List_Instanciated_Parameters(Implementation(FILE_1),Machine(FILE_BUFFER))==(max_rec,FIELD,VALUE)
+  List_Instanciated_Parameters(Implementation(FILE_1),Machine(FILE_BUFFER))==(max_rec)
 END
 &
 THEORY ListConstraintsX IS
-  List_Constraints(Implementation(FILE_1),Machine(FILE_BUFFER))==(max_rec: NAT1 & FIELD: FIN(INTEGER) & not(FIELD = {}) & VALUE: FIN(INTEGER) & not(VALUE = {}));
-  List_Constraints(Implementation(FILE_1))==(max_rec: NAT1 & FIELD: FIN(INTEGER) & not(FIELD = {}) & VALUE: FIN(INTEGER) & not(VALUE = {}));
+  List_Constraints(Implementation(FILE_1),Machine(FILE_BUFFER))==(max_rec: NAT1);
+  List_Constraints(Implementation(FILE_1))==(max_rec: NAT1);
   List_Context_Constraints(Implementation(FILE_1))==(btrue)
 END
 &
@@ -121,21 +121,21 @@ END
 THEORY ListPreconditionX IS
   Own_Precondition(Implementation(FILE_1),size_file)==(btrue);
   List_Precondition(Implementation(FILE_1),size_file)==(btrue);
-  Own_Precondition(Implementation(FILE_1),create_record)==(vv: VALUE & size(bfile)/=max_rec);
-  List_Precondition(Implementation(FILE_1),create_record)==(vv: VALUE & size(bfile)/=max_rec);
+  Own_Precondition(Implementation(FILE_1),create_record)==(vv: 0..10000 & size(bfile)/=max_rec);
+  List_Precondition(Implementation(FILE_1),create_record)==(vv: 0..10000 & size(bfile)/=max_rec);
   Own_Precondition(Implementation(FILE_1),mod_file)==(btrue);
-  List_Precondition(Implementation(FILE_1),mod_file)==(oo: NAT & oo: dom(file) & ii: FIELD & vv: VALUE);
+  List_Precondition(Implementation(FILE_1),mod_file)==(oo: NAT & oo: dom(file) & ii: 1..4 & vv: 0..10000);
   Own_Precondition(Implementation(FILE_1),val_file)==(btrue);
-  List_Precondition(Implementation(FILE_1),val_file)==(oo: NAT & oo: dom(file) & ii: FIELD)
+  List_Precondition(Implementation(FILE_1),val_file)==(oo: NAT & oo: dom(file) & ii: 1..4)
 END
 &
 THEORY ListSubstitutionX IS
-  Expanded_List_Substitution(Implementation(FILE_1),val_file)==(oo: NAT & oo: dom(file) & ii: FIELD | @test.((oo: NAT1 & oo: 1..size(bfile) | test:=bool(oo/:dom(buffer)));(test = TRUE ==> (oo: NAT & oo: dom(bfile) & oo/:dom(buffer) | bfile,buffer:=bfile<+buffer,{oo|->bfile(oo)}) [] not(test = TRUE) ==> skip);(oo: NAT & oo: dom(buffer) & ii: FIELD | vv:=buffer(oo)(ii))));
-  Expanded_List_Substitution(Implementation(FILE_1),mod_file)==(oo: NAT & oo: dom(file) & ii: FIELD & vv: VALUE | @test.((oo: NAT1 & oo: 1..size(bfile) | test:=bool(oo/:dom(buffer)));(test = TRUE ==> (oo: NAT & oo: dom(bfile) & oo/:dom(buffer) | bfile,buffer:=bfile<+buffer,{oo|->bfile(oo)}) [] not(test = TRUE) ==> skip);(oo: NAT & oo: dom(buffer) & ii: FIELD & vv: VALUE | buffer:=buffer<+{oo|->(buffer(oo)<+{ii|->vv})})));
+  Expanded_List_Substitution(Implementation(FILE_1),val_file)==(oo: NAT & oo: dom(file) & ii: 1..4 | @test.((oo: NAT1 & oo: 1..size(bfile) | test:=bool(oo/:dom(buffer)));(test = TRUE ==> (oo: NAT & oo: dom(bfile) & oo/:dom(buffer) | bfile,buffer:=bfile<+buffer,{oo|->bfile(oo)}) [] not(test = TRUE) ==> skip);(oo: NAT & oo: dom(buffer) & ii: 1..4 | vv:=buffer(oo)(ii))));
+  Expanded_List_Substitution(Implementation(FILE_1),mod_file)==(oo: NAT & oo: dom(file) & ii: 1..4 & vv: 0..10000 | @test.((oo: NAT1 & oo: 1..size(bfile) | test:=bool(oo/:dom(buffer)));(test = TRUE ==> (oo: NAT & oo: dom(bfile) & oo/:dom(buffer) | bfile,buffer:=bfile<+buffer,{oo|->bfile(oo)}) [] not(test = TRUE) ==> skip);(oo: NAT & oo: dom(buffer) & ii: 1..4 & vv: 0..10000 | buffer:=buffer<+{oo|->(buffer(oo)<+{ii|->vv})})));
   List_Substitution(Implementation(FILE_1),size_file)==(vv:=size(bfile));
   Expanded_List_Substitution(Implementation(FILE_1),size_file)==(btrue | vv:=size(bfile));
-  List_Substitution(Implementation(FILE_1),create_record)==(bfile:=bfile<-FIELD*{vv} || oo:=size(bfile)+1);
-  Expanded_List_Substitution(Implementation(FILE_1),create_record)==(vv: VALUE & size(bfile)/=max_rec | bfile,oo:=bfile<-FIELD*{vv},size(bfile)+1);
+  List_Substitution(Implementation(FILE_1),create_record)==(bfile:=bfile<-(1..4)*{vv} || oo:=size(bfile)+1);
+  Expanded_List_Substitution(Implementation(FILE_1),create_record)==(vv: 0..10000 & size(bfile)/=max_rec | bfile,oo:=bfile<-(1..4)*{vv},size(bfile)+1);
   List_Substitution(Implementation(FILE_1),mod_file)==(VAR test IN test <-- not_in_buffer(oo);IF test = TRUE THEN load_buffer(oo) END;mod_buffer(oo,ii,vv) END);
   List_Substitution(Implementation(FILE_1),val_file)==(VAR test IN test <-- not_in_buffer(oo);IF test = TRUE THEN load_buffer(oo) END;vv <-- val_buffer(oo,ii) END)
 END
@@ -186,18 +186,18 @@ THEORY ListIncludedOperationsX IS
 END
 &
 THEORY InheritedEnvX IS
-  Operations(Implementation(FILE_1))==(Type(size_file) == Cst(btype(INTEGER,?,?),No_type);Type(create_record) == Cst(btype(INTEGER,?,?),atype(VALUE,?,?));Type(mod_file) == Cst(No_type,btype(INTEGER,?,?)*atype(FIELD,?,?)*atype(VALUE,?,?));Type(val_file) == Cst(atype(VALUE,?,?),btype(INTEGER,?,?)*atype(FIELD,?,?)))
+  Operations(Implementation(FILE_1))==(Type(size_file) == Cst(btype(INTEGER,?,?),No_type);Type(create_record) == Cst(btype(INTEGER,?,?),btype(INTEGER,?,?));Type(mod_file) == Cst(No_type,btype(INTEGER,?,?)*btype(INTEGER,?,?)*btype(INTEGER,?,?));Type(val_file) == Cst(btype(INTEGER,?,?),btype(INTEGER,?,?)*btype(INTEGER,?,?)))
 END
 &
 THEORY ListVisibleStaticX END
 &
 THEORY ListOfIdsX IS
-  List_Of_Ids(Implementation(FILE_1)) == (? | ? | ? | bfile,buffer | mod_file,val_file | ? | imported(Machine(FILE_BUFFER)) | max_rec,FIELD,VALUE | FILE_1);
+  List_Of_Ids(Implementation(FILE_1)) == (? | ? | ? | bfile,buffer | mod_file,val_file | ? | imported(Machine(FILE_BUFFER)) | max_rec | FILE_1);
   List_Of_HiddenCst_Ids(Implementation(FILE_1)) == (? | ?);
   List_Of_VisibleCst_Ids(Implementation(FILE_1)) == (?);
   List_Of_VisibleVar_Ids(Implementation(FILE_1)) == (? | ?);
   List_Of_Ids_SeenBNU(Implementation(FILE_1)) == (?: ?);
-  List_Of_Ids(Machine(FILE_BUFFER)) == (? | ? | bfile,buffer | ? | create_record,load_buffer,size_file,not_in_buffer,mod_buffer,val_buffer | ? | ? | max_rec,FIELD,VALUE | FILE_BUFFER);
+  List_Of_Ids(Machine(FILE_BUFFER)) == (? | ? | bfile,buffer | ? | create_record,load_buffer,size_file,not_in_buffer,mod_buffer,val_buffer | ? | ? | max_rec | FILE_BUFFER);
   List_Of_HiddenCst_Ids(Machine(FILE_BUFFER)) == (? | ?);
   List_Of_VisibleCst_Ids(Machine(FILE_BUFFER)) == (?);
   List_Of_VisibleVar_Ids(Machine(FILE_BUFFER)) == (? | ?);
@@ -205,7 +205,7 @@ THEORY ListOfIdsX IS
 END
 &
 THEORY ParametersEnvX IS
-  Parameters(Implementation(FILE_1)) == (Type(VALUE) == Prm(SetOf(atype(VALUE,?,?)));Type(FIELD) == Prm(SetOf(atype(FIELD,?,?)));Type(max_rec) == Prm(btype(INTEGER,?,?)))
+  Parameters(Implementation(FILE_1)) == (Type(max_rec) == Prm(btype(INTEGER,?,?)))
 END
 &
 THEORY VariablesLocEnvX IS

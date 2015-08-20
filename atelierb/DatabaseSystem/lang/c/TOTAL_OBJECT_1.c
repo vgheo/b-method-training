@@ -20,4 +20,23 @@ void TOTAL_OBJECT__INITIALISATION(void)
 
 /* Clause OPERATIONS */
 
-void TOTAL_OBJECT__create_total_object(
+void TOTAL_OBJECT__create_total_object(int32_t vv, int32_t *oo)
+{
+    FILE__create_record(vv, oo);
+}
+
+void TOTAL_OBJECT__mod_field(int32_t ii, int32_t oo, int32_t vv)
+{
+    FILE__mod_file(oo, ii, vv);
+}
+
+void TOTAL_OBJECT__val_field(int32_t ii, int32_t oo, int32_t *vv)
+{
+    FILE__val_file(oo, ii, vv);
+}
+
+void TOTAL_OBJECT__nbr_object(int32_t *vv)
+{
+    FILE__size_file(vv);
+}
+

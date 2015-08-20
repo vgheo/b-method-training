@@ -3,24 +3,25 @@
 * Creation date: 7/30/2015
 */
 
-IMPLEMENTATION FILE_ACCESS_2 ( max_rec , FIELD , VALUE )
+IMPLEMENTATION FILE_ACCESS_2 ( max_rec )
 REFINES FILE_ACCESS_1
 IMPORTS
-    BASIC_FILE_VAR ( max_rec , FIELD , VALUE )
+    BASIC_FILE_VAR ( max_rec )
 
 INVARIANT
     record = buf_vrb &
     bfile = file_vrb
+
 INITIALISATION
     updated := FALSE ;
     name := 0 ;
     buffer := file_vrb ;
     bfile := file_vrb ;
-    record := buf_vrb //;
+    record := buf_vrb /* neccessary modifications in order to pass typecheck */
     /* buffer,bfile := {},[]; */ /*Simultaneous affectation is not implementable*/
-//    record:={}
-
-
+DEFINITIONS
+    FIELD == ( 1 .. 4 ) ;
+    VALUE == ( 0 .. 10000 )
 OPERATIONS
     get_record ( oo ) =
     BEGIN

@@ -3,13 +3,15 @@
  * Creation date: 7/30/2015
  */
 
-IMPLEMENTATION TOTAL_OBJECT_1 ( max_obj , FIELD , VALUE )
+IMPLEMENTATION TOTAL_OBJECT_1 ( max_obj )
 REFINES TOTAL_OBJECT
 
 IMPORTS
-    FILE ( max_obj , FIELD , VALUE )
+    FILE ( max_obj )
 INVARIANT
-    file = % oo . ( oo : 1 .. total_object | % ii . ( ii : FIELD | total_field ( ii ) ( oo ) ) )
+    file = % oo . ( oo : 1 .. total_object | % ii . ( ii : ( 1 .. 4 ) | total_field ( ii ) ( oo ) ) )
+
+
 
 
 

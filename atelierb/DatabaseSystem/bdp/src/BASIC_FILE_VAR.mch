@@ -3,20 +3,22 @@
  * Creation date: 7/30/2015
  */
 MACHINE
-    BASIC_FILE_VAR ( max_rec , FIELD , VALUE )
+    BASIC_FILE_VAR ( max_rec  )
 CONSTRAINTS
     max_rec : NAT1
 
 CONCRETE_VARIABLES
     buf_vrb , file_vrb
 INITIALISATION
-    buf_vrb :: FIELD --> VALUE ||
+    buf_vrb :: ( 0 .. 4 ) --> ( 0 .. 10000 ) ||
     file_vrb := <>
 INVARIANT
-    buf_vrb : FIELD --> VALUE &
-    file_vrb : NAT --> ( FIELD --> VALUE ) &
-    file_vrb : seq ( FIELD --> VALUE ) &
+    buf_vrb : ( 0 .. 4 ) --> ( 0 .. 10000 ) &
+    file_vrb : NAT --> ( ( 0 .. 4 ) --> ( 0 .. 10000 ) ) &
+    file_vrb : seq ( ( 0 .. 4 ) --> ( 0 .. 10000 ) ) &
     size ( file_vrb ) < max_rec
+
+
 
 OPERATIONS
     READ_FILE ( ii ) =
@@ -37,10 +39,10 @@ OPERATIONS
 
     NEW_RECORD ( vv ) =
     PRE
-        vv : VALUE &
+        vv : ( 0 .. 10000 ) &
         size ( file_vrb ) /= max_rec
     THEN
-    file_vrb := file_vrb <- ( FIELD * { vv } )
+    file_vrb := file_vrb <- (  ( 0 .. 4 ) * { vv } )
     END ;
 
     vv <-- SIZE_FILE =

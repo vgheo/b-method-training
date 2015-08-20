@@ -4,13 +4,16 @@
 */
 
 IMPLEMENTATION 
-    FILE_BUFFER_1(max_rec,FIELD,VALUE)
+    FILE_BUFFER_1(max_rec)
 REFINES 
     FILE_BUFFER
 IMPORTS
-    FILE_ACCESS(max_rec,FIELD,VALUE)
+    FILE_ACCESS(max_rec)
 PROMOTES
     create_record,not_in_buffer,mod_buffer,val_buffer,size_file
+DEFINITIONS
+    FIELD == (0..4);
+    VALUE == (0..10000)
 OPERATIONS
     load_buffer(oo)=
     BEGIN

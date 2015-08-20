@@ -3,7 +3,7 @@
  * Creation date: 7/29/2015
  */
 MACHINE
-    FILE_ACCESS ( max_rec , FIELD )
+    FILE_ACCESS ( max_rec  )
 CONSTRAINTS
     max_rec : NAT1
 
@@ -18,16 +18,16 @@ INVARIANT
     updated : BOOL &
     ( updated = FALSE => buffer <: bfile ) &
     ( updated = TRUE => buffer /= {} )
-DEFINITIONS
-    VALUE == 0 .. 10000
 
 INITIALISATION
     bfile , buffer , updated := [] , {} , FALSE
-
+DEFINITIONS
+    FIELD == ( 0 .. 4 ) ;
+    VALUE == ( 0 .. 10000 )
 OPERATIONS
 get_record ( oo ) =
     PRE
-    oo : NAT & /*concrete typing for B0 check*/
+    oo : NAT1 & /*concrete typing for B0 check*/
     oo : dom ( bfile )
     THEN
     buffer := { oo |-> bfile ( oo ) } ||
@@ -61,7 +61,7 @@ vv <-- not_in_buffer ( oo ) =
 
 mod_buffer ( oo , ii , vv ) =
     PRE
-    oo : NAT & /*concrete typing for B0 check*/
+    oo : NAT1 & /*concrete typing for B0 check*/
     oo : dom ( buffer ) &
     ii : FIELD &
     vv : VALUE
@@ -76,7 +76,7 @@ END ;
 
 vv <-- val_buffer ( oo , ii ) =
     PRE
-    oo : NAT & /*concrete typing for B0 check*/
+    oo : NAT1 & /*concrete typing for B0 check*/
     oo : dom ( buffer ) &
     ii : FIELD
     THEN

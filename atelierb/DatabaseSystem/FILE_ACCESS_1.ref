@@ -3,7 +3,7 @@
 * Creation date: 7/29/2015
 */
 
-REFINEMENT FILE_ACCESS_1(max_rec,FIELD,VALUE)
+REFINEMENT FILE_ACCESS_1(max_rec)
 REFINES FILE_ACCESS
     
 CONCRETE_VARIABLES
@@ -22,6 +22,11 @@ INVARIANT
     name : 0..size(bfile) &
     record : FIELD --> VALUE &
     buffer = {0} <<|{name|->record}
+
+DEFINITIONS
+    FIELD == (0..4);
+    VALUE == (0..10000)
+
 OPERATIONS
     get_record(oo)=
     BEGIN

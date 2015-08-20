@@ -57,7 +57,7 @@ THEORY ListInvariantX IS
   Expanded_List_Invariant(Machine(FILE_BUFFER))==(btrue);
   Abstract_List_Invariant(Machine(FILE_BUFFER))==(btrue);
   Context_List_Invariant(Machine(FILE_BUFFER))==(btrue);
-  List_Invariant(Machine(FILE_BUFFER))==(bfile: seq(FIELD --> VALUE) & buffer: dom(bfile) +-> (FIELD --> VALUE))
+  List_Invariant(Machine(FILE_BUFFER))==(bfile: seq(1..4 --> 0..10000) & buffer: dom(bfile) +-> (1..4 --> 0..10000))
 END
 &
 THEORY ListAssertionsX IS
@@ -82,14 +82,14 @@ THEORY ListInitialisationX IS
 END
 &
 THEORY ListParametersX IS
-  List_Parameters(Machine(FILE_BUFFER))==(max_rec,FIELD,VALUE)
+  List_Parameters(Machine(FILE_BUFFER))==(max_rec)
 END
 &
 THEORY ListInstanciatedParametersX END
 &
 THEORY ListConstraintsX IS
   List_Context_Constraints(Machine(FILE_BUFFER))==(btrue);
-  List_Constraints(Machine(FILE_BUFFER))==(max_rec: NAT1 & FIELD: FIN(INTEGER) & not(FIELD = {}) & VALUE: FIN(INTEGER) & not(VALUE = {}))
+  List_Constraints(Machine(FILE_BUFFER))==(max_rec: NAT1)
 END
 &
 THEORY ListOperationsX IS
@@ -127,22 +127,22 @@ END
 THEORY ListOperationGuardX END
 &
 THEORY ListPreconditionX IS
-  List_Precondition(Machine(FILE_BUFFER),create_record)==(vv: VALUE & size(bfile)/=max_rec);
+  List_Precondition(Machine(FILE_BUFFER),create_record)==(vv: 0..10000 & size(bfile)/=max_rec);
   List_Precondition(Machine(FILE_BUFFER),load_buffer)==(oo: NAT & oo: dom(bfile) & oo/:dom(buffer));
   List_Precondition(Machine(FILE_BUFFER),size_file)==(btrue);
   List_Precondition(Machine(FILE_BUFFER),not_in_buffer)==(oo: NAT1 & oo: 1..size(bfile));
-  List_Precondition(Machine(FILE_BUFFER),mod_buffer)==(oo: NAT & oo: dom(buffer) & ii: FIELD & vv: VALUE);
-  List_Precondition(Machine(FILE_BUFFER),val_buffer)==(oo: NAT & oo: dom(buffer) & ii: FIELD)
+  List_Precondition(Machine(FILE_BUFFER),mod_buffer)==(oo: NAT & oo: dom(buffer) & ii: 1..4 & vv: 0..10000);
+  List_Precondition(Machine(FILE_BUFFER),val_buffer)==(oo: NAT & oo: dom(buffer) & ii: 1..4)
 END
 &
 THEORY ListSubstitutionX IS
-  Expanded_List_Substitution(Machine(FILE_BUFFER),val_buffer)==(oo: NAT & oo: dom(buffer) & ii: FIELD | vv:=buffer(oo)(ii));
-  Expanded_List_Substitution(Machine(FILE_BUFFER),mod_buffer)==(oo: NAT & oo: dom(buffer) & ii: FIELD & vv: VALUE | buffer:=buffer<+{oo|->(buffer(oo)<+{ii|->vv})});
+  Expanded_List_Substitution(Machine(FILE_BUFFER),val_buffer)==(oo: NAT & oo: dom(buffer) & ii: 1..4 | vv:=buffer(oo)(ii));
+  Expanded_List_Substitution(Machine(FILE_BUFFER),mod_buffer)==(oo: NAT & oo: dom(buffer) & ii: 1..4 & vv: 0..10000 | buffer:=buffer<+{oo|->(buffer(oo)<+{ii|->vv})});
   Expanded_List_Substitution(Machine(FILE_BUFFER),not_in_buffer)==(oo: NAT1 & oo: 1..size(bfile) | vv:=bool(oo/:dom(buffer)));
   Expanded_List_Substitution(Machine(FILE_BUFFER),size_file)==(btrue | vv:=size(bfile));
   Expanded_List_Substitution(Machine(FILE_BUFFER),load_buffer)==(oo: NAT & oo: dom(bfile) & oo/:dom(buffer) | bfile,buffer:=bfile<+buffer,{oo|->bfile(oo)});
-  Expanded_List_Substitution(Machine(FILE_BUFFER),create_record)==(vv: VALUE & size(bfile)/=max_rec | bfile,oo:=bfile<-FIELD*{vv},size(bfile)+1);
-  List_Substitution(Machine(FILE_BUFFER),create_record)==(bfile:=bfile<-FIELD*{vv} || oo:=size(bfile)+1);
+  Expanded_List_Substitution(Machine(FILE_BUFFER),create_record)==(vv: 0..10000 & size(bfile)/=max_rec | bfile,oo:=bfile<-(1..4)*{vv},size(bfile)+1);
+  List_Substitution(Machine(FILE_BUFFER),create_record)==(bfile:=bfile<-(1..4)*{vv} || oo:=size(bfile)+1);
   List_Substitution(Machine(FILE_BUFFER),load_buffer)==(bfile:=bfile<+buffer || buffer:={oo|->bfile(oo)});
   List_Substitution(Machine(FILE_BUFFER),size_file)==(vv:=size(bfile));
   List_Substitution(Machine(FILE_BUFFER),not_in_buffer)==(vv:=bool(oo/:dom(buffer)));
@@ -195,7 +195,7 @@ THEORY ListANYVarX IS
 END
 &
 THEORY ListOfIdsX IS
-  List_Of_Ids(Machine(FILE_BUFFER)) == (? | ? | bfile,buffer | ? | create_record,load_buffer,size_file,not_in_buffer,mod_buffer,val_buffer | ? | ? | max_rec,FIELD,VALUE | FILE_BUFFER);
+  List_Of_Ids(Machine(FILE_BUFFER)) == (? | ? | bfile,buffer | ? | create_record,load_buffer,size_file,not_in_buffer,mod_buffer,val_buffer | ? | ? | max_rec | FILE_BUFFER);
   List_Of_HiddenCst_Ids(Machine(FILE_BUFFER)) == (? | ?);
   List_Of_VisibleCst_Ids(Machine(FILE_BUFFER)) == (?);
   List_Of_VisibleVar_Ids(Machine(FILE_BUFFER)) == (? | ?);
@@ -203,16 +203,16 @@ THEORY ListOfIdsX IS
 END
 &
 THEORY ParametersEnvX IS
-  Parameters(Machine(FILE_BUFFER)) == (Type(VALUE) == Prm(SetOf(atype(VALUE,?,?)));Type(FIELD) == Prm(SetOf(atype(FIELD,?,?)));Type(max_rec) == Prm(btype(INTEGER,?,?)))
+  Parameters(Machine(FILE_BUFFER)) == (Type(max_rec) == Prm(btype(INTEGER,?,?)))
 END
 &
 THEORY VariablesEnvX IS
-  Variables(Machine(FILE_BUFFER)) == (Type(bfile) == Mvl(SetOf(btype(INTEGER,?,?)*SetOf(atype(FIELD,?,?)*atype(VALUE,?,?))));Type(buffer) == Mvl(SetOf(btype(INTEGER,?,?)*SetOf(atype(FIELD,?,?)*atype(VALUE,?,?)))))
+  Variables(Machine(FILE_BUFFER)) == (Type(bfile) == Mvl(SetOf(btype(INTEGER,?,?)*SetOf(btype(INTEGER,?,?)*btype(INTEGER,?,?))));Type(buffer) == Mvl(SetOf(btype(INTEGER,?,?)*SetOf(btype(INTEGER,?,?)*btype(INTEGER,?,?)))))
 END
 &
 THEORY OperationsEnvX IS
-  Operations(Machine(FILE_BUFFER)) == (Type(val_buffer) == Cst(atype(VALUE,?,?),btype(INTEGER,?,?)*atype(FIELD,?,?));Type(mod_buffer) == Cst(No_type,btype(INTEGER,?,?)*atype(FIELD,?,?)*atype(VALUE,?,?));Type(not_in_buffer) == Cst(btype(BOOL,?,?),btype(INTEGER,?,?));Type(size_file) == Cst(btype(INTEGER,?,?),No_type);Type(load_buffer) == Cst(No_type,btype(INTEGER,?,?));Type(create_record) == Cst(btype(INTEGER,?,?),atype(VALUE,?,?)));
-  Observers(Machine(FILE_BUFFER)) == (Type(val_buffer) == Cst(atype(VALUE,?,?),btype(INTEGER,?,?)*atype(FIELD,?,?));Type(not_in_buffer) == Cst(btype(BOOL,?,?),btype(INTEGER,?,?));Type(size_file) == Cst(btype(INTEGER,?,?),No_type))
+  Operations(Machine(FILE_BUFFER)) == (Type(val_buffer) == Cst(btype(INTEGER,?,?),btype(INTEGER,?,?)*btype(INTEGER,?,?));Type(mod_buffer) == Cst(No_type,btype(INTEGER,?,?)*btype(INTEGER,?,?)*btype(INTEGER,?,?));Type(not_in_buffer) == Cst(btype(BOOL,?,?),btype(INTEGER,?,?));Type(size_file) == Cst(btype(INTEGER,?,?),No_type);Type(load_buffer) == Cst(No_type,btype(INTEGER,?,?));Type(create_record) == Cst(btype(INTEGER,?,?),btype(INTEGER,?,?)));
+  Observers(Machine(FILE_BUFFER)) == (Type(val_buffer) == Cst(btype(INTEGER,?,?),btype(INTEGER,?,?)*btype(INTEGER,?,?));Type(not_in_buffer) == Cst(btype(BOOL,?,?),btype(INTEGER,?,?));Type(size_file) == Cst(btype(INTEGER,?,?),No_type))
 END
 &
 THEORY TCIntRdX IS

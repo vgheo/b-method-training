@@ -3,15 +3,18 @@
  * Creation date: 7/29/2015
  */
 
-IMPLEMENTATION FILE_1(max_rec,FIELD,VALUE)
+IMPLEMENTATION FILE_1(max_rec)
 REFINES FILE
 
 IMPORTS
-    FILE_BUFFER(max_rec,FIELD,VALUE)
+    FILE_BUFFER(max_rec)
 PROMOTES
     create_record,size_file
 INVARIANT
     file=bfile<+buffer
+DEFINITIONS
+    FIELD == (1..4);
+    VALUE == (0..10000)
 OPERATIONS
     mod_file(oo,ii,vv)=
     VAR test IN 

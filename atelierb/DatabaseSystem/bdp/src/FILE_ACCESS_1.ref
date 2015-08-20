@@ -3,7 +3,7 @@
 * Creation date: 7/29/2015
 */
 
-REFINEMENT FILE_ACCESS_1 ( max_rec , FIELD , VALUE )
+REFINEMENT FILE_ACCESS_1 ( max_rec )
 REFINES FILE_ACCESS
 
 CONCRETE_VARIABLES
@@ -13,15 +13,20 @@ CONCRETE_VARIABLES
 
 INITIALISATION
     name := 0 ||
-    record :: FIELD --> VALUE ||
+    record :: ( 0 .. 4 ) --> ( 0 .. 10000 ) ||
     bfile , updated := <> , FALSE ||
-    buffer := {} /*added because of TypeChecke error :"buffer should be initialised."*/
+    buffer := {}
 
 INVARIANT
-    name : NAT & /*concrete typing*/
+    name : NAT &
     name : 0 .. size ( bfile ) &
-    record : FIELD --> VALUE &
+    record : ( 0 .. 4 ) --> ( 0 .. 10000 ) &
     buffer = { 0 } <<| { name |-> record }
+
+
+
+
+
 OPERATIONS
     get_record ( oo ) =
     BEGIN
@@ -36,7 +41,7 @@ OPERATIONS
     oo <-- create_record ( vv ) =
     BEGIN
         /*Renamed INDEX to FIELD ,typo*/
-        bfile := bfile <- ( FIELD * { vv } ) ||
+        bfile := bfile <- ( ( 0 .. 4 ) * { vv } ) ||
         oo := size ( bfile ) + 1
     END ;
 

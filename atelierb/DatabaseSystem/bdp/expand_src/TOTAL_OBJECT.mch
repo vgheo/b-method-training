@@ -1,9 +1,9 @@
 ﻿/* TOTAL_OBJECT
- * Author: T0164919
- * Creation date: 7/30/2015
- */
+* Author: T0164919
+* Creation date: 7/30/2015
+*/
 MACHINE
-    TOTAL_OBJECT ( max_obj , FIELD , VALUE )
+    TOTAL_OBJECT ( max_obj )
 CONSTRAINTS
     max_obj : NAT1
 ABSTRACT_VARIABLES
@@ -17,8 +17,9 @@ INVARIANT
     total_field : FIELD --> ( OBJECT --> VALUE )
 
 DEFINITIONS
-    OBJECT == 1 .. total_object
-
+    OBJECT == 1 .. total_object ;
+    FIELD == ( 1 .. 4 ) ;
+    VALUE == ( 0 .. 10000 )
 OPERATIONS
     oo <-- create_total_object ( vv ) =
     PRE
@@ -29,6 +30,7 @@ OPERATIONS
         total_field := % ii . ( ii : FIELD | total_field ( ii ) \/ { ( total_object + 1 ) |-> vv } ) ||
         oo := total_object + 1
     END ;
+
     mod_field ( ii , oo , vv ) =
     PRE
         ii : FIELD &
@@ -49,7 +51,4 @@ OPERATIONS
     BEGIN
         vv := total_object
     END
-
-
-
 END

@@ -1,4 +1,4 @@
-﻿/* FILE
+/* FILE
  * Author: T0164919
  * Creation date: 7/29/2015
  */
@@ -7,7 +7,7 @@
 A "record_value is a total function from FIELD set to VALUE set"
  */
 MACHINE
-    FILE ( max_rec , FIELD , VALUE )
+    FILE ( max_rec )
 CONSTRAINTS
     max_rec : NAT1
 ABSTRACT_VARIABLES
@@ -17,6 +17,9 @@ INITIALISATION
 INVARIANT
     file : seq ( FIELD --> VALUE ) &
     size ( file ) <= max_rec
+DEFINITIONS
+    FIELD == (1..4);
+    VALUE == (0..10000)
 OPERATIONS
     /*
     val_file acceses the value of a particular field of a certain record in the file

@@ -57,7 +57,7 @@ THEORY ListInvariantX IS
   Expanded_List_Invariant(Machine(FILE))==(btrue);
   Abstract_List_Invariant(Machine(FILE))==(btrue);
   Context_List_Invariant(Machine(FILE))==(btrue);
-  List_Invariant(Machine(FILE))==(file: seq(FIELD --> VALUE) & size(file)<=max_rec)
+  List_Invariant(Machine(FILE))==(file: seq(1..4 --> 0..10000) & size(file)<=max_rec)
 END
 &
 THEORY ListAssertionsX IS
@@ -82,14 +82,14 @@ THEORY ListInitialisationX IS
 END
 &
 THEORY ListParametersX IS
-  List_Parameters(Machine(FILE))==(max_rec,FIELD,VALUE)
+  List_Parameters(Machine(FILE))==(max_rec)
 END
 &
 THEORY ListInstanciatedParametersX END
 &
 THEORY ListConstraintsX IS
   List_Context_Constraints(Machine(FILE))==(btrue);
-  List_Constraints(Machine(FILE))==(max_rec: NAT1 & FIELD: FIN(INTEGER) & not(FIELD = {}) & VALUE: FIN(INTEGER) & not(VALUE = {}))
+  List_Constraints(Machine(FILE))==(max_rec: NAT1)
 END
 &
 THEORY ListOperationsX IS
@@ -121,20 +121,20 @@ END
 THEORY ListOperationGuardX END
 &
 THEORY ListPreconditionX IS
-  List_Precondition(Machine(FILE),val_file)==(oo: NAT & oo: dom(file) & ii: FIELD);
-  List_Precondition(Machine(FILE),mod_file)==(oo: NAT & oo: dom(file) & ii: FIELD & vv: VALUE);
-  List_Precondition(Machine(FILE),create_record)==(vv: VALUE & size(file)<max_rec);
+  List_Precondition(Machine(FILE),val_file)==(oo: NAT & oo: dom(file) & ii: 1..4);
+  List_Precondition(Machine(FILE),mod_file)==(oo: NAT & oo: dom(file) & ii: 1..4 & vv: 0..10000);
+  List_Precondition(Machine(FILE),create_record)==(vv: 0..10000 & size(file)<max_rec);
   List_Precondition(Machine(FILE),size_file)==(btrue)
 END
 &
 THEORY ListSubstitutionX IS
   Expanded_List_Substitution(Machine(FILE),size_file)==(btrue | vv:=size(file));
-  Expanded_List_Substitution(Machine(FILE),create_record)==(vv: VALUE & size(file)<max_rec | file,oo:=file<-FIELD*{vv},size(file)+1);
-  Expanded_List_Substitution(Machine(FILE),mod_file)==(oo: NAT & oo: dom(file) & ii: FIELD & vv: VALUE | file:=file<+{oo|->(file(oo)<+{ii|->vv})});
-  Expanded_List_Substitution(Machine(FILE),val_file)==(oo: NAT & oo: dom(file) & ii: FIELD | vv:=file(oo)(ii));
+  Expanded_List_Substitution(Machine(FILE),create_record)==(vv: 0..10000 & size(file)<max_rec | file,oo:=file<-(1..4)*{vv},size(file)+1);
+  Expanded_List_Substitution(Machine(FILE),mod_file)==(oo: NAT & oo: dom(file) & ii: 1..4 & vv: 0..10000 | file:=file<+{oo|->(file(oo)<+{ii|->vv})});
+  Expanded_List_Substitution(Machine(FILE),val_file)==(oo: NAT & oo: dom(file) & ii: 1..4 | vv:=file(oo)(ii));
   List_Substitution(Machine(FILE),val_file)==(vv:=file(oo)(ii));
   List_Substitution(Machine(FILE),mod_file)==(file(oo)(ii):=vv);
-  List_Substitution(Machine(FILE),create_record)==(file:=file<-FIELD*{vv} || oo:=size(file)+1);
+  List_Substitution(Machine(FILE),create_record)==(file:=file<-(1..4)*{vv} || oo:=size(file)+1);
   List_Substitution(Machine(FILE),size_file)==(vv:=size(file))
 END
 &
@@ -181,7 +181,7 @@ THEORY ListANYVarX IS
 END
 &
 THEORY ListOfIdsX IS
-  List_Of_Ids(Machine(FILE)) == (? | ? | file | ? | val_file,mod_file,create_record,size_file | ? | ? | max_rec,FIELD,VALUE | FILE);
+  List_Of_Ids(Machine(FILE)) == (? | ? | file | ? | val_file,mod_file,create_record,size_file | ? | ? | max_rec | FILE);
   List_Of_HiddenCst_Ids(Machine(FILE)) == (? | ?);
   List_Of_VisibleCst_Ids(Machine(FILE)) == (?);
   List_Of_VisibleVar_Ids(Machine(FILE)) == (? | ?);
@@ -189,16 +189,16 @@ THEORY ListOfIdsX IS
 END
 &
 THEORY ParametersEnvX IS
-  Parameters(Machine(FILE)) == (Type(VALUE) == Prm(SetOf(atype(VALUE,?,?)));Type(FIELD) == Prm(SetOf(atype(FIELD,?,?)));Type(max_rec) == Prm(btype(INTEGER,?,?)))
+  Parameters(Machine(FILE)) == (Type(max_rec) == Prm(btype(INTEGER,?,?)))
 END
 &
 THEORY VariablesEnvX IS
-  Variables(Machine(FILE)) == (Type(file) == Mvl(SetOf(btype(INTEGER,?,?)*SetOf(atype(FIELD,?,?)*atype(VALUE,?,?)))))
+  Variables(Machine(FILE)) == (Type(file) == Mvl(SetOf(btype(INTEGER,?,?)*SetOf(btype(INTEGER,?,?)*btype(INTEGER,?,?)))))
 END
 &
 THEORY OperationsEnvX IS
-  Operations(Machine(FILE)) == (Type(size_file) == Cst(btype(INTEGER,?,?),No_type);Type(create_record) == Cst(btype(INTEGER,?,?),atype(VALUE,?,?));Type(mod_file) == Cst(No_type,btype(INTEGER,?,?)*atype(FIELD,?,?)*atype(VALUE,?,?));Type(val_file) == Cst(atype(VALUE,?,?),btype(INTEGER,?,?)*atype(FIELD,?,?)));
-  Observers(Machine(FILE)) == (Type(size_file) == Cst(btype(INTEGER,?,?),No_type);Type(val_file) == Cst(atype(VALUE,?,?),btype(INTEGER,?,?)*atype(FIELD,?,?)))
+  Operations(Machine(FILE)) == (Type(size_file) == Cst(btype(INTEGER,?,?),No_type);Type(create_record) == Cst(btype(INTEGER,?,?),btype(INTEGER,?,?));Type(mod_file) == Cst(No_type,btype(INTEGER,?,?)*btype(INTEGER,?,?)*btype(INTEGER,?,?));Type(val_file) == Cst(btype(INTEGER,?,?),btype(INTEGER,?,?)*btype(INTEGER,?,?)));
+  Observers(Machine(FILE)) == (Type(size_file) == Cst(btype(INTEGER,?,?),No_type);Type(val_file) == Cst(btype(INTEGER,?,?),btype(INTEGER,?,?)*btype(INTEGER,?,?)))
 END
 &
 THEORY TCIntRdX IS

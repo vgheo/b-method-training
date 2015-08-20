@@ -3,16 +3,18 @@
  * Creation date: 7/30/2015
  */
 
-IMPLEMENTATION TOTAL_OBJECT_1 ( max_obj , FIELD , VALUE )
+IMPLEMENTATION TOTAL_OBJECT_1 ( max_obj )
 REFINES TOTAL_OBJECT
 
 IMPORTS
-    FILE ( max_obj , FIELD , VALUE )
+    FILE ( max_obj )
 INVARIANT
     file = % oo . ( oo : OBJECT | % ii . ( ii : FIELD | total_field ( ii ) ( oo ) ) )
-/*Added DEFINITINS clause because visibility rues  do not exist for definitions clause in an implementation*/
+/*Added DEFINITINS clause because visibility rules  do not exist for definitions clause in an implementation*/
 DEFINITIONS
-    OBJECT == 1 .. total_object
+    OBJECT == 1 .. total_object ;
+    FIELD == ( 1 .. 4 ) ;
+    VALUE == ( 0 .. 10000 )
 OPERATIONS
     oo <-- create_total_object ( vv ) =
     BEGIN

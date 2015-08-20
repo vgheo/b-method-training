@@ -3,7 +3,7 @@
  * Creation date: 7/30/2015
  */
 MACHINE
-    BASIC_FILE_VAR ( max_rec , FIELD , VALUE )
+    BASIC_FILE_VAR ( max_rec  )
 CONSTRAINTS
     max_rec : NAT1
 
@@ -17,7 +17,9 @@ INVARIANT
     file_vrb : NAT -->(FIELD-->VALUE)&
     file_vrb : seq ( FIELD --> VALUE ) &
     size ( file_vrb ) < max_rec
-
+DEFINITIONS
+    FIELD == (0..4);
+    VALUE == (0..10000)
 OPERATIONS
     READ_FILE ( ii ) =
     PRE
@@ -40,7 +42,7 @@ OPERATIONS
         vv : VALUE &
         size ( file_vrb ) /= max_rec
     THEN
-    file_vrb := file_vrb <- ( FIELD * { vv } )
+    file_vrb := file_vrb <- (  FIELD *  {vv}  )
     END ;
 
     vv <-- SIZE_FILE =

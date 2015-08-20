@@ -8,7 +8,7 @@ IMPLEMENTATION
 REFINES
     PARTIAL_OBJECT
 IMPORTS
-    TOTAL_OBJECT ( max_obj , 1 .. max_field , min_val .. MAXINT )
+    TOTAL_OBJECT ( max_obj )
 PROMOTES
     mod_field , val_field , nbr_object
 INVARIANT
@@ -22,7 +22,7 @@ DEFINITIONS
 OPERATIONS
     oo <-- create_partial_object =
    BEGIN
-       oo <-- create_total_object ( 2147483647 )
+       oo <-- create_total_object ( 2147483647 ) /*unknown value MAXINT*/
     END ;
 
 

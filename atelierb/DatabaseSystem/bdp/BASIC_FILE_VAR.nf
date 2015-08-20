@@ -57,7 +57,7 @@ THEORY ListInvariantX IS
   Expanded_List_Invariant(Machine(BASIC_FILE_VAR))==(btrue);
   Abstract_List_Invariant(Machine(BASIC_FILE_VAR))==(btrue);
   Context_List_Invariant(Machine(BASIC_FILE_VAR))==(btrue);
-  List_Invariant(Machine(BASIC_FILE_VAR))==(buf_vrb: FIELD --> VALUE & file_vrb: NAT --> (FIELD --> VALUE) & file_vrb: seq(FIELD --> VALUE) & size(file_vrb)<max_rec)
+  List_Invariant(Machine(BASIC_FILE_VAR))==(buf_vrb: 0..4 --> 0..10000 & file_vrb: NAT --> (0..4 --> 0..10000) & file_vrb: seq(0..4 --> 0..10000) & size(file_vrb)<max_rec)
 END
 &
 THEORY ListAssertionsX IS
@@ -76,20 +76,20 @@ THEORY ListExclusivityX IS
 END
 &
 THEORY ListInitialisationX IS
-  Expanded_List_Initialisation(Machine(BASIC_FILE_VAR))==(@(buf_vrb$0).(buf_vrb$0: FIELD --> VALUE ==> buf_vrb:=buf_vrb$0) || file_vrb:=<>);
+  Expanded_List_Initialisation(Machine(BASIC_FILE_VAR))==(@(buf_vrb$0).(buf_vrb$0: 0..4 --> 0..10000 ==> buf_vrb:=buf_vrb$0) || file_vrb:=<>);
   Context_List_Initialisation(Machine(BASIC_FILE_VAR))==(skip);
-  List_Initialisation(Machine(BASIC_FILE_VAR))==(buf_vrb:: FIELD --> VALUE || file_vrb:=<>)
+  List_Initialisation(Machine(BASIC_FILE_VAR))==(buf_vrb:: 0..4 --> 0..10000 || file_vrb:=<>)
 END
 &
 THEORY ListParametersX IS
-  List_Parameters(Machine(BASIC_FILE_VAR))==(max_rec,FIELD,VALUE)
+  List_Parameters(Machine(BASIC_FILE_VAR))==(max_rec)
 END
 &
 THEORY ListInstanciatedParametersX END
 &
 THEORY ListConstraintsX IS
   List_Context_Constraints(Machine(BASIC_FILE_VAR))==(btrue);
-  List_Constraints(Machine(BASIC_FILE_VAR))==(max_rec: NAT1 & FIELD: FIN(INTEGER) & not(FIELD = {}) & VALUE: FIN(INTEGER) & not(VALUE = {}))
+  List_Constraints(Machine(BASIC_FILE_VAR))==(max_rec: NAT1)
 END
 &
 THEORY ListOperationsX IS
@@ -129,7 +129,7 @@ THEORY ListOperationGuardX END
 THEORY ListPreconditionX IS
   List_Precondition(Machine(BASIC_FILE_VAR),READ_FILE)==(ii: NAT & ii: dom(file_vrb));
   List_Precondition(Machine(BASIC_FILE_VAR),WRITE_FILE)==(ii: NAT & ii: dom(file_vrb));
-  List_Precondition(Machine(BASIC_FILE_VAR),NEW_RECORD)==(vv: VALUE & size(file_vrb)/=max_rec);
+  List_Precondition(Machine(BASIC_FILE_VAR),NEW_RECORD)==(vv: 0..10000 & size(file_vrb)/=max_rec);
   List_Precondition(Machine(BASIC_FILE_VAR),SIZE_FILE)==(btrue);
   List_Precondition(Machine(BASIC_FILE_VAR),RESET_FILE)==(btrue);
   List_Precondition(Machine(BASIC_FILE_VAR),RESET_RECORD)==(btrue)
@@ -139,12 +139,12 @@ THEORY ListSubstitutionX IS
   Expanded_List_Substitution(Machine(BASIC_FILE_VAR),RESET_RECORD)==(btrue | buf_vrb:={});
   Expanded_List_Substitution(Machine(BASIC_FILE_VAR),RESET_FILE)==(btrue | file_vrb:=<>);
   Expanded_List_Substitution(Machine(BASIC_FILE_VAR),SIZE_FILE)==(btrue | vv:=size(file_vrb));
-  Expanded_List_Substitution(Machine(BASIC_FILE_VAR),NEW_RECORD)==(vv: VALUE & size(file_vrb)/=max_rec | file_vrb:=file_vrb<-FIELD*{vv});
+  Expanded_List_Substitution(Machine(BASIC_FILE_VAR),NEW_RECORD)==(vv: 0..10000 & size(file_vrb)/=max_rec | file_vrb:=file_vrb<-(0..4)*{vv});
   Expanded_List_Substitution(Machine(BASIC_FILE_VAR),WRITE_FILE)==(ii: NAT & ii: dom(file_vrb) | file_vrb:=file_vrb<+{ii|->buf_vrb});
   Expanded_List_Substitution(Machine(BASIC_FILE_VAR),READ_FILE)==(ii: NAT & ii: dom(file_vrb) | buf_vrb:=file_vrb(ii));
   List_Substitution(Machine(BASIC_FILE_VAR),READ_FILE)==(buf_vrb:=file_vrb(ii));
   List_Substitution(Machine(BASIC_FILE_VAR),WRITE_FILE)==(file_vrb(ii):=buf_vrb);
-  List_Substitution(Machine(BASIC_FILE_VAR),NEW_RECORD)==(file_vrb:=file_vrb<-FIELD*{vv});
+  List_Substitution(Machine(BASIC_FILE_VAR),NEW_RECORD)==(file_vrb:=file_vrb<-(0..4)*{vv});
   List_Substitution(Machine(BASIC_FILE_VAR),SIZE_FILE)==(vv:=size(file_vrb));
   List_Substitution(Machine(BASIC_FILE_VAR),RESET_FILE)==(file_vrb:=<>);
   List_Substitution(Machine(BASIC_FILE_VAR),RESET_RECORD)==(buf_vrb:={})
@@ -195,7 +195,7 @@ THEORY ListANYVarX IS
 END
 &
 THEORY ListOfIdsX IS
-  List_Of_Ids(Machine(BASIC_FILE_VAR)) == (? | ? | ? | ? | READ_FILE,WRITE_FILE,NEW_RECORD,SIZE_FILE,RESET_FILE,RESET_RECORD | ? | ? | max_rec,FIELD,VALUE | BASIC_FILE_VAR);
+  List_Of_Ids(Machine(BASIC_FILE_VAR)) == (? | ? | ? | ? | READ_FILE,WRITE_FILE,NEW_RECORD,SIZE_FILE,RESET_FILE,RESET_RECORD | ? | ? | max_rec | BASIC_FILE_VAR);
   List_Of_HiddenCst_Ids(Machine(BASIC_FILE_VAR)) == (? | ?);
   List_Of_VisibleCst_Ids(Machine(BASIC_FILE_VAR)) == (?);
   List_Of_VisibleVar_Ids(Machine(BASIC_FILE_VAR)) == (file_vrb,buf_vrb | ?);
@@ -203,15 +203,15 @@ THEORY ListOfIdsX IS
 END
 &
 THEORY ParametersEnvX IS
-  Parameters(Machine(BASIC_FILE_VAR)) == (Type(VALUE) == Prm(SetOf(atype(VALUE,?,?)));Type(FIELD) == Prm(SetOf(atype(FIELD,?,?)));Type(max_rec) == Prm(btype(INTEGER,?,?)))
+  Parameters(Machine(BASIC_FILE_VAR)) == (Type(max_rec) == Prm(btype(INTEGER,?,?)))
 END
 &
 THEORY VisibleVariablesEnvX IS
-  VisibleVariables(Machine(BASIC_FILE_VAR)) == (Type(file_vrb) == Mvv(SetOf(btype(INTEGER,0,MAXINT)*SetOf(atype(FIELD,?,?)*atype(VALUE,?,?))));Type(buf_vrb) == Mvv(SetOf(atype(FIELD,?,?)*atype(VALUE,?,?))))
+  VisibleVariables(Machine(BASIC_FILE_VAR)) == (Type(file_vrb) == Mvv(SetOf(btype(INTEGER,0,MAXINT)*SetOf(btype(INTEGER,0,4)*btype(INTEGER,0,10000))));Type(buf_vrb) == Mvv(SetOf(btype(INTEGER,0,4)*btype(INTEGER,0,10000))))
 END
 &
 THEORY OperationsEnvX IS
-  Operations(Machine(BASIC_FILE_VAR)) == (Type(RESET_RECORD) == Cst(No_type,No_type);Type(RESET_FILE) == Cst(No_type,No_type);Type(SIZE_FILE) == Cst(btype(INTEGER,?,?),No_type);Type(NEW_RECORD) == Cst(No_type,atype(VALUE,?,?));Type(WRITE_FILE) == Cst(No_type,btype(INTEGER,?,?));Type(READ_FILE) == Cst(No_type,btype(INTEGER,?,?)));
+  Operations(Machine(BASIC_FILE_VAR)) == (Type(RESET_RECORD) == Cst(No_type,No_type);Type(RESET_FILE) == Cst(No_type,No_type);Type(SIZE_FILE) == Cst(btype(INTEGER,?,?),No_type);Type(NEW_RECORD) == Cst(No_type,btype(INTEGER,?,?));Type(WRITE_FILE) == Cst(No_type,btype(INTEGER,?,?));Type(READ_FILE) == Cst(No_type,btype(INTEGER,?,?)));
   Observers(Machine(BASIC_FILE_VAR)) == (Type(SIZE_FILE) == Cst(btype(INTEGER,?,?),No_type))
 END
 &
