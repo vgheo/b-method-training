@@ -337,7 +337,7 @@
 <Id tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\DATA_BASE.bxml:1:5:1:1:2" typref="3603043417" value="NAT"/>
 </Exp_Comparison>
 </Goal>
-<Proof_State proofState="Unproved" methodList="?" passList="Force(0),?"/>
+<Proof_State proofState="Proved(0)" methodList="pr" passList="Force(0),?"/>
 </Simple_Goal>
 <Simple_Goal merge="0">
 <Tag>Valuation is correct</Tag>
@@ -498,7 +498,7 @@
 <Proof_State proofState="Proved(0)" methodList="pr" passList="Force(0),?"/>
 </Simple_Goal>
 </Proof_Obligation>
-<Proof_Obligation merge="-">
+<Proof_Obligation merge="=">
 <Comment>Operations dans une implantation / Precondition</Comment>
 <Tag>death</Tag>
 <Tag>PRECONDITION</Tag>
@@ -844,7 +844,7 @@
 </Goal>
 </Simple_Goal>
 </Proof_Obligation>
-<Proof_Obligation merge="-">
+<Proof_Obligation merge="=">
 <Comment>Operations dans une implantation / Precondition</Comment>
 <Tag>marriage</Tag>
 <Tag>PRECONDITION</Tag>
@@ -2068,7 +2068,7 @@
 </Goal>
 </Simple_Goal>
 </Proof_Obligation>
-<Proof_Obligation merge="-">
+<Proof_Obligation merge="=">
 <Comment>Operations dans une implantation / Precondition</Comment>
 <Tag>new_born</Tag>
 <Tag>PRECONDITION</Tag>
@@ -3366,7 +3366,7 @@
 </Goal>
 </Simple_Goal>
 </Proof_Obligation>
-<Proof_Obligation merge="-">
+<Proof_Obligation merge="=">
 <Comment>Operations dans une implantation / Precondition</Comment>
 <Tag>is_living</Tag>
 <Tag>PRECONDITION</Tag>
@@ -3457,7 +3457,7 @@
 </Binary_Pred>
 </Goal>
 </Simple_Goal>
-<Simple_Goal merge="">
+<Simple_Goal merge="1">
 <Tag>Precondition predicate</Tag>
 <Goal>
 <Binary_Pred op="=>">
@@ -3474,9 +3474,9 @@
 </Exp_Comparison>
 </Binary_Pred>
 </Goal>
-<Proof_State proofState="Unproved" methodList="?" passList="Force(0),?"/>
+<Proof_State proofState="Unproved" methodList="pr" passList="Force(0),?"/>
 </Simple_Goal>
-<Simple_Goal merge="">
+<Simple_Goal merge="2">
 <Tag>Refinement is correct</Tag>
 <Goal>
 <Binary_Pred op="=>">
@@ -3517,7 +3517,7 @@
 </Exp_Comparison>
 </Binary_Pred>
 </Goal>
-<Proof_State proofState="Unproved" methodList="?" passList="Force(0),?"/>
+<Proof_State proofState="Proved(0)" methodList="pr" passList="Force(0),?"/>
 </Simple_Goal>
 <Simple_Goal merge="3">
 <Tag>Instruction Well Definess</Tag>
@@ -3537,7 +3537,7 @@
 </Goal>
 </Simple_Goal>
 </Proof_Obligation>
-<Proof_Obligation merge="-">
+<Proof_Obligation merge="=">
 <Comment>Operations dans une implantation / Precondition</Comment>
 <Tag>is_woman</Tag>
 <Tag>PRECONDITION</Tag>
@@ -3610,7 +3610,7 @@
 </Nary_Pred>
 </Nary_Pred>
 </Local_Hyp>
-<Simple_Goal merge="">
+<Simple_Goal merge="0">
 <Tag>Precondition predicate</Tag>
 <Goal>
 <Binary_Pred op="=>">
@@ -3627,9 +3627,9 @@
 </Exp_Comparison>
 </Binary_Pred>
 </Goal>
-<Proof_State proofState="Unproved" methodList="?" passList="Force(0),?"/>
+<Proof_State proofState="Unproved" methodList="pr" passList="Force(0),?"/>
 </Simple_Goal>
-<Simple_Goal merge="">
+<Simple_Goal merge="1">
 <Tag>Precondition predicate</Tag>
 <Goal>
 <Binary_Pred op="=>">
@@ -3646,9 +3646,9 @@
 </Exp_Comparison>
 </Binary_Pred>
 </Goal>
-<Proof_State proofState="Unproved" methodList="?" passList="Force(0),?"/>
+<Proof_State proofState="Unproved" methodList="pr" passList="Force(1),(?; 0)"/>
 </Simple_Goal>
-<Simple_Goal merge="">
+<Simple_Goal merge="2">
 <Tag>Refinement is correct</Tag>
 <Goal>
 <Binary_Pred op="=>">
@@ -3689,7 +3689,7 @@
 </Exp_Comparison>
 </Binary_Pred>
 </Goal>
-<Proof_State proofState="Unproved" methodList="?" passList="Force(0),?"/>
+<Proof_State proofState="Proved(0)" methodList="pr" passList="Force(0),?"/>
 </Simple_Goal>
 <Simple_Goal merge="3">
 <Tag>Instruction Well Definess</Tag>
@@ -3709,7 +3709,7 @@
 </Goal>
 </Simple_Goal>
 </Proof_Obligation>
-<Proof_Obligation merge="-">
+<Proof_Obligation merge="=">
 <Comment>Operations dans une implantation / Precondition</Comment>
 <Tag>is_married</Tag>
 <Tag>PRECONDITION</Tag>
@@ -3845,7 +3845,7 @@
 </Goal>
 </Simple_Goal>
 </Proof_Obligation>
-<Proof_Obligation merge="-">
+<Proof_Obligation merge="=">
 <Comment>Operations dans une implantation / Precondition</Comment>
 <Tag>has_mother</Tag>
 <Tag>PRECONDITION</Tag>
@@ -3978,7 +3978,7 @@
 </Goal>
 </Simple_Goal>
 </Proof_Obligation>
-<Proof_Obligation merge="-">
+<Proof_Obligation merge="=">
 <Comment>Operations dans une implantation / Precondition</Comment>
 <Tag>val_status</Tag>
 <Tag>PRECONDITION</Tag>
@@ -4069,7 +4069,7 @@
 </Binary_Pred>
 </Goal>
 </Simple_Goal>
-<Simple_Goal merge="">
+<Simple_Goal merge="1">
 <Tag>Precondition predicate</Tag>
 <Goal>
 <Binary_Pred op="=>">
@@ -4086,7 +4086,7 @@
 </Exp_Comparison>
 </Binary_Pred>
 </Goal>
-<Proof_State proofState="Unproved" methodList="?" passList="Force(0),?"/>
+<Proof_State proofState="Unproved" methodList="pr" passList="Force(0),?"/>
 </Simple_Goal>
 <Simple_Goal merge="2">
 <Tag>Refinement is correct</Tag>
@@ -4140,7 +4140,7 @@
 </Goal>
 </Simple_Goal>
 </Proof_Obligation>
-<Proof_Obligation merge="-">
+<Proof_Obligation merge="=">
 <Comment>Operations dans une implantation / Precondition</Comment>
 <Tag>val_sex</Tag>
 <Tag>PRECONDITION</Tag>
@@ -4231,7 +4231,7 @@
 </Binary_Pred>
 </Goal>
 </Simple_Goal>
-<Simple_Goal merge="">
+<Simple_Goal merge="1">
 <Tag>Precondition predicate</Tag>
 <Goal>
 <Binary_Pred op="=>">
@@ -4248,7 +4248,7 @@
 </Exp_Comparison>
 </Binary_Pred>
 </Goal>
-<Proof_State proofState="Unproved" methodList="?" passList="Force(0),?"/>
+<Proof_State proofState="Unproved" methodList="pr" passList="Force(0),?"/>
 </Simple_Goal>
 <Simple_Goal merge="2">
 <Tag>Refinement is correct</Tag>
@@ -4302,7 +4302,7 @@
 </Goal>
 </Simple_Goal>
 </Proof_Obligation>
-<Proof_Obligation merge="-">
+<Proof_Obligation merge="=">
 <Comment>Operations dans une implantation / Precondition</Comment>
 <Tag>val_spouse</Tag>
 <Tag>PRECONDITION</Tag>
@@ -4427,7 +4427,7 @@
 </Exp_Comparison>
 </Binary_Pred>
 </Goal>
-<Proof_State proofState="Unproved" methodList="?" passList="Force(0),?"/>
+<Proof_State proofState="Proved(0)" methodList="pr" passList="Force(0),?"/>
 </Simple_Goal>
 <Simple_Goal merge="2">
 <Tag>Refinement is correct</Tag>
@@ -4457,7 +4457,7 @@
 </Goal>
 </Simple_Goal>
 </Proof_Obligation>
-<Proof_Obligation merge="-">
+<Proof_Obligation merge="=">
 <Comment>Operations dans une implantation / Precondition</Comment>
 <Tag>val_mother</Tag>
 <Tag>PRECONDITION</Tag>
@@ -4576,7 +4576,7 @@
 </Exp_Comparison>
 </Binary_Pred>
 </Goal>
-<Proof_State proofState="Unproved" methodList="?" passList="Force(0),?"/>
+<Proof_State proofState="Proved(0)" methodList="pr" passList="Force(0),?"/>
 </Simple_Goal>
 <Simple_Goal merge="2">
 <Tag>Refinement is correct</Tag>
@@ -5337,7 +5337,7 @@
 <Definition name="imext"/>
 <Definition name="seext"/>
 </Proof_Obligation>
-<Proof_Obligation merge="-">
+<Proof_Obligation merge="=">
 <Comment>Operations dans une implementation</Comment>
 <Tag>WellDefinedness_death</Tag>
 <Tag>INVARIANT</Tag>
@@ -5408,7 +5408,7 @@
 </Unary_Exp>
 </Exp_Comparison>
 </Goal>
-<Proof_State proofState="Unproved" methodList="?" passList="Force(0),?"/>
+<Proof_State proofState="Unproved" methodList="?" passList="Force(0),(?; 0; 1; 2)"/>
 </Simple_Goal>
 <Simple_Goal merge="">
 <Tag>Well definedness</Tag>
@@ -5425,7 +5425,7 @@
 </Binary_Exp>
 </Exp_Comparison>
 </Goal>
-<Proof_State proofState="Unproved" methodList="?" passList="Force(0),?"/>
+<Proof_State proofState="Proved(0)" methodList="pr" passList="Force(0),?"/>
 </Simple_Goal>
 <Simple_Goal merge="">
 <Tag>Well definedness</Tag>
@@ -5440,7 +5440,7 @@
 </Unary_Exp>
 </Exp_Comparison>
 </Goal>
-<Proof_State proofState="Unproved" methodList="?" passList="Force(0),?"/>
+<Proof_State proofState="Proved(0)" methodList="pr" passList="Force(0),?"/>
 </Simple_Goal>
 <Simple_Goal merge="1">
 <Tag>Well definedness</Tag>
@@ -5459,7 +5459,7 @@
 </Goal>
 </Simple_Goal>
 </Proof_Obligation>
-<Proof_Obligation merge="-">
+<Proof_Obligation merge="=">
 <Comment>Operations dans une implementation</Comment>
 <Tag>WellDefinedness_marriage</Tag>
 <Tag>INVARIANT</Tag>
@@ -6057,7 +6057,7 @@
 <Nary_Pred op="&amp;"/>
 </Hypothesis>
 </Proof_Obligation>
-<Proof_Obligation merge="-">
+<Proof_Obligation merge="=">
 <Comment>Operations dans une implementation</Comment>
 <Tag>WellDefinedness_new_born</Tag>
 <Tag>INVARIANT</Tag>
@@ -6774,7 +6774,7 @@
 </Nary_Pred>
 </Hypothesis>
 </Proof_Obligation>
-<Proof_Obligation merge="-">
+<Proof_Obligation merge="=">
 <Comment>Operations dans une implementation</Comment>
 <Tag>WellDefinedness_is_living</Tag>
 <Tag>INVARIANT</Tag>
@@ -6901,7 +6901,7 @@
 </Binary_Exp>
 </Exp_Comparison>
 </Goal>
-<Proof_State proofState="Unproved" methodList="?" passList="Force(0),?"/>
+<Proof_State proofState="Proved(0)" methodList="pr" passList="Force(0),?"/>
 </Simple_Goal>
 <Simple_Goal merge="8">
 <Tag>Well definedness</Tag>
@@ -6931,7 +6931,7 @@
 </Goal>
 </Simple_Goal>
 </Proof_Obligation>
-<Proof_Obligation merge="-">
+<Proof_Obligation merge="=">
 <Comment>Operations dans une implementation</Comment>
 <Tag>WellDefinedness_is_woman</Tag>
 <Tag>INVARIANT</Tag>
@@ -7046,7 +7046,7 @@
 </Binary_Exp>
 </Exp_Comparison>
 </Goal>
-<Proof_State proofState="Unproved" methodList="?" passList="Force(0),?"/>
+<Proof_State proofState="Proved(0)" methodList="pr" passList="Force(0),?"/>
 </Simple_Goal>
 <Simple_Goal merge="">
 <Tag>Precondition predicate</Tag>
@@ -7059,7 +7059,7 @@
 </Binary_Exp>
 </Exp_Comparison>
 </Goal>
-<Proof_State proofState="Unproved" methodList="?" passList="Force(0),?"/>
+<Proof_State proofState="Proved(0)" methodList="pr" passList="Force(0),?"/>
 </Simple_Goal>
 <Simple_Goal merge="8">
 <Tag>Well definedness</Tag>
@@ -7089,7 +7089,7 @@
 </Goal>
 </Simple_Goal>
 </Proof_Obligation>
-<Proof_Obligation merge="-">
+<Proof_Obligation merge="=">
 <Comment>Operations dans une implementation</Comment>
 <Tag>WellDefinedness_is_married</Tag>
 <Tag>INVARIANT</Tag>
@@ -7155,7 +7155,7 @@
 </Goal>
 </Simple_Goal>
 </Proof_Obligation>
-<Proof_Obligation merge="-">
+<Proof_Obligation merge="=">
 <Comment>Operations dans une implementation</Comment>
 <Tag>WellDefinedness_has_mother</Tag>
 <Tag>INVARIANT</Tag>
@@ -7221,7 +7221,7 @@
 </Goal>
 </Simple_Goal>
 </Proof_Obligation>
-<Proof_Obligation merge="-">
+<Proof_Obligation merge="=">
 <Comment>Operations dans une implementation</Comment>
 <Tag>WellDefinedness_val_status</Tag>
 <Tag>INVARIANT</Tag>
@@ -7348,7 +7348,7 @@
 </Binary_Exp>
 </Exp_Comparison>
 </Goal>
-<Proof_State proofState="Unproved" methodList="?" passList="Force(0),?"/>
+<Proof_State proofState="Proved(0)" methodList="pr" passList="Force(0),?"/>
 </Simple_Goal>
 <Simple_Goal merge="8">
 <Tag>Well definedness</Tag>
@@ -7384,7 +7384,7 @@
 </Goal>
 </Simple_Goal>
 </Proof_Obligation>
-<Proof_Obligation merge="-">
+<Proof_Obligation merge="=">
 <Comment>Operations dans une implementation</Comment>
 <Tag>WellDefinedness_val_sex</Tag>
 <Tag>INVARIANT</Tag>
@@ -7511,7 +7511,7 @@
 </Binary_Exp>
 </Exp_Comparison>
 </Goal>
-<Proof_State proofState="Unproved" methodList="?" passList="Force(0),?"/>
+<Proof_State proofState="Proved(0)" methodList="pr" passList="Force(0),?"/>
 </Simple_Goal>
 <Simple_Goal merge="8">
 <Tag>Well definedness</Tag>
@@ -7547,7 +7547,7 @@
 </Goal>
 </Simple_Goal>
 </Proof_Obligation>
-<Proof_Obligation merge="-">
+<Proof_Obligation merge="=">
 <Comment>Operations dans une implementation</Comment>
 <Tag>WellDefinedness_val_spouse</Tag>
 <Tag>INVARIANT</Tag>
@@ -7665,7 +7665,7 @@
 </Goal>
 </Simple_Goal>
 </Proof_Obligation>
-<Proof_Obligation merge="-">
+<Proof_Obligation merge="=">
 <Comment>Operations dans une implementation</Comment>
 <Tag>WellDefinedness_val_mother</Tag>
 <Tag>INVARIANT</Tag>

@@ -380,7 +380,7 @@
 </Exp_Comparison>
 </Local_Hyp>
 </Proof_Obligation>
-<Proof_Obligation merge="-">
+<Proof_Obligation merge="=">
 <Comment>Operations des machines vues dans une machine abstraite</Comment>
 <Tag>death</Tag>
 <Tag>INVARIANT</Tag>
@@ -421,7 +421,7 @@
 <Nary_Pred op="&amp;"/>
 </Local_Hyp>
 </Proof_Obligation>
-<Proof_Obligation merge="-">
+<Proof_Obligation merge="=">
 <Comment>Operations des machines vues dans une machine abstraite</Comment>
 <Tag>marriage</Tag>
 <Tag>INVARIANT</Tag>
@@ -545,7 +545,7 @@
 </Exp_Comparison>
 </Local_Hyp>
 </Proof_Obligation>
-<Proof_Obligation merge="-">
+<Proof_Obligation merge="=">
 <Comment>Operations des machines vues dans une machine abstraite</Comment>
 <Tag>new_born</Tag>
 <Tag>INVARIANT</Tag>
@@ -653,7 +653,7 @@
 <Nary_Pred op="&amp;"/>
 </Local_Hyp>
 </Proof_Obligation>
-<Proof_Obligation merge="-">
+<Proof_Obligation merge="=">
 <Comment>Operations des machines vues dans une machine abstraite</Comment>
 <Tag>is_living</Tag>
 <Tag>INVARIANT</Tag>
@@ -683,7 +683,7 @@
 <Nary_Pred op="&amp;"/>
 </Local_Hyp>
 </Proof_Obligation>
-<Proof_Obligation merge="-">
+<Proof_Obligation merge="=">
 <Comment>Operations des machines vues dans une machine abstraite</Comment>
 <Tag>is_woman</Tag>
 <Tag>INVARIANT</Tag>
@@ -713,7 +713,7 @@
 <Nary_Pred op="&amp;"/>
 </Local_Hyp>
 </Proof_Obligation>
-<Proof_Obligation merge="-">
+<Proof_Obligation merge="=">
 <Comment>Operations des machines vues dans une machine abstraite</Comment>
 <Tag>is_married</Tag>
 <Tag>INVARIANT</Tag>
@@ -743,7 +743,7 @@
 <Nary_Pred op="&amp;"/>
 </Local_Hyp>
 </Proof_Obligation>
-<Proof_Obligation merge="-">
+<Proof_Obligation merge="=">
 <Comment>Operations des machines vues dans une machine abstraite</Comment>
 <Tag>has_mother</Tag>
 <Tag>INVARIANT</Tag>
@@ -773,7 +773,7 @@
 <Nary_Pred op="&amp;"/>
 </Local_Hyp>
 </Proof_Obligation>
-<Proof_Obligation merge="-">
+<Proof_Obligation merge="=">
 <Comment>Operations des machines vues dans une machine abstraite</Comment>
 <Tag>val_status</Tag>
 <Tag>INVARIANT</Tag>
@@ -803,7 +803,7 @@
 <Nary_Pred op="&amp;"/>
 </Local_Hyp>
 </Proof_Obligation>
-<Proof_Obligation merge="-">
+<Proof_Obligation merge="=">
 <Comment>Operations des machines vues dans une machine abstraite</Comment>
 <Tag>val_sex</Tag>
 <Tag>INVARIANT</Tag>
@@ -833,7 +833,7 @@
 <Nary_Pred op="&amp;"/>
 </Local_Hyp>
 </Proof_Obligation>
-<Proof_Obligation merge="-">
+<Proof_Obligation merge="=">
 <Comment>Operations des machines vues dans une machine abstraite</Comment>
 <Tag>val_spouse</Tag>
 <Tag>INVARIANT</Tag>
@@ -876,7 +876,7 @@
 <Nary_Pred op="&amp;"/>
 </Local_Hyp>
 </Proof_Obligation>
-<Proof_Obligation merge="-">
+<Proof_Obligation merge="=">
 <Comment>Operations des machines vues dans une machine abstraite</Comment>
 <Tag>val_mother</Tag>
 <Tag>INVARIANT</Tag>

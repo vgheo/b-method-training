@@ -3,8 +3,10 @@
  * Creation date: 7/30/2015
  */
 
-IMPLEMENTATION PARTIAL_OBJECT_1 ( max_obj , max_field , min_val , max_val )
-REFINES PARTIAL_OBJECT
+IMPLEMENTATION
+    PARTIAL_OBJECT_1 ( max_obj , max_field , min_val , max_val )
+REFINES
+    PARTIAL_OBJECT
 IMPORTS
     TOTAL_OBJECT ( max_obj , 1 .. max_field , min_val .. MAXINT )
 PROMOTES
@@ -20,7 +22,7 @@ INVARIANT
 OPERATIONS
     oo <-- create_partial_object =
    BEGIN
-       oo <-- create_total_object ( MAXINT )
+       oo <-- create_total_object ( 2147483647 )
     END ;
 
 
@@ -31,7 +33,6 @@ OPERATIONS
 
 
 vv <-- def_field ( ii , oo ) =
-
     VAR ww IN
     ww <-- val_field ( ii , oo ) ;
     vv := bool ( ww /= MAXINT )

@@ -1,4 +1,4 @@
-﻿/* BASIC_STATUS
+/* BASIC_STATUS
  * Author: T0164919
  * Creation date: 7/30/2015
  */

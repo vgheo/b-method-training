@@ -3,7 +3,7 @@
  * Creation date: 7/29/2015
  */
 MACHINE
-    FILE_ACCESS ( max_rec , FIELD , VALUE )
+    FILE_ACCESS ( max_rec , FIELD )
 CONSTRAINTS
     max_rec : NAT1
 
@@ -11,13 +11,15 @@ CONCRETE_VARIABLES
     bfile , buffer , updated
 
 INVARIANT
-    bfile : NAT --> ( FIELD --> VALUE ) & /*concrete typing for B0 check*/
-    bfile : seq ( FIELD --> VALUE ) &
-    buffer : NAT --> ( FIELD --> VALUE ) & /*Valid relation type for concrete type(total function expected) & concrete typing  */
-    buffer : dom ( bfile ) +-> ( FIELD --> VALUE ) &
+    bfile : NAT --> ( FIELD --> 0 .. 10000 ) &
+    bfile : seq ( FIELD --> 0 .. 10000 ) &
+    buffer : NAT --> ( FIELD --> 0 .. 10000 ) &
+    buffer : dom ( bfile ) +-> ( FIELD --> 0 .. 10000 ) &
     updated : BOOL &
     ( updated = FALSE => buffer <: bfile ) &
     ( updated = TRUE => buffer /= {} )
+
+
 
 INITIALISATION
     bfile , buffer , updated := <> , {} , FALSE
@@ -41,7 +43,7 @@ put_buffer =
 
 oo <-- create_record ( vv ) =
     PRE
-    vv : VALUE &
+    vv : 0 .. 10000 &
     size ( bfile ) /= max_rec
     THEN
     /*Warning possible typo => renamed INDEX to FIELD*/
@@ -62,7 +64,7 @@ mod_buffer ( oo , ii , vv ) =
     oo : NAT & /*concrete typing for B0 check*/
     oo : dom ( buffer ) &
     ii : FIELD &
-    vv : VALUE
+    vv : 0 .. 10000
     THEN
     buffer ( oo ) ( ii ) := vv ||
     updated := TRUE

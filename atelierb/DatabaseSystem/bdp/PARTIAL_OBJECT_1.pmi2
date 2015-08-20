@@ -65,20 +65,15 @@ THEORY MethodList IS
   pr;
   pr;
   pr;
-  mp & pr;
-  pr;
-  ?;
-  pr;
-  pr;
-  pr;
-  pr;
-  pr;
-  pr;
-  pr;
-  pr;
   ?;
   pr;
   ?;
+  pr;
+  pr;
+  pr;
+  pr;
+  pr;
+  pr;
   pr;
   pr;
   ?;
@@ -86,8 +81,13 @@ THEORY MethodList IS
   ?;
   pr;
   pr;
+  ?;
   pr;
   ?;
+  pr;
+  pr;
+  pr;
+  pr;
   pr;
   pr
 END

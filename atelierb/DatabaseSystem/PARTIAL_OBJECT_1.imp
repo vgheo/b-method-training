@@ -18,11 +18,11 @@ DEFINITIONS
     FIELD == 1..max_field;
     OBJECT == 1..partial_object;
     VALUE == min_val..max_val
-
+    
 OPERATIONS
     oo<--create_partial_object=
    BEGIN
-       oo<--create_total_object(MAXINT)
+       oo<--create_total_object(2147483647)
     END;
     
     

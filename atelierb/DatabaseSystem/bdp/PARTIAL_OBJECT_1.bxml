@@ -80,7 +80,7 @@
 <Id value='create_total_object'/>
 </Name>
 <Input_Parameters>
-<Id value='MAXINT' typref='2701647786'/>
+<Integer_Literal value='2147483647' typref='2701647786'/>
 </Input_Parameters>
 <Output_Parameters>
 <Id value='oo' typref='2701647786'/>

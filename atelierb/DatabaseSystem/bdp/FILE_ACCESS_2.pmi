@@ -1,6 +1,6 @@
 ﻿THEORY BalanceX IS
-  FILE_ACCESS_2,29,0,0,24,0,5,0;
-  WellDefinedness_create_record,4,0,0,4,0,0,0;
+  FILE_ACCESS_2,29,0,0,22,0,7,0;
+  WellDefinedness_create_record,4,0,0,2,0,2,0;
   WellDefinedness_get_record,3,0,0,3,0,0,0;
   WellDefinedness_size_file,1,0,0,1,0,0,0;
   WellDefinedness_val_buffer,4,0,0,2,0,2,0;
@@ -20,9 +20,9 @@ THEORY ProofState IS
   Proved(0);
   Proved(0);
   Proved(0);
+  Proved(2);
   Proved(0);
-  Proved(0);
-  Proved(0);
+  Proved(2);
   Proved(0);
   Proved(0);
   Proved(0);
@@ -84,9 +84,9 @@ THEORY PassList IS
   Force(0),?;
   Force(0),?;
   Force(0),?;
+  Force(2),(?;0;1);
   Force(0),?;
-  Force(0),?;
-  Force(0),?;
+  Force(2),(?;0;1);
   Force(0),?;
   Force(0),?;
   Force(0),?;

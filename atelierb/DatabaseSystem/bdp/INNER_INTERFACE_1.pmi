@@ -1,8 +1,8 @@
 ﻿THEORY BalanceX IS
-  INNER_INTERFACE_1,20,0,0,14,0,0,0;
+  INNER_INTERFACE_1,20,0,0,10,0,0,0;
   birth_operation,5,0,0,2,0,0,0;
   death_operation,5,0,0,5,0,0,0;
-  marriage_operation,10,0,0,7,0,0,0
+  marriage_operation,10,0,0,3,0,0,0
 END
 &
 THEORY ProofState IS
@@ -12,12 +12,12 @@ THEORY ProofState IS
   Unproved;
   Unproved;
   Proved(0);
+  Unproved;
   Proved(0);
+  Unproved;
   Proved(0);
-  Proved(0);
-  Proved(0);
-  Proved(0);
-  Proved(0);
+  Unproved;
+  Unproved;
   Unproved;
   Unproved;
   Unproved;
@@ -32,18 +32,18 @@ THEORY MethodList IS
   pr;
   pr;
   ?;
+  pr;
   ?;
+  pr;
   ?;
   pr;
-  pr;
-  pr;
-  pr;
-  pr;
-  pr;
+  ?;
   pr;
   ?;
   ?;
   ?;
+  pr;
+  pr;
   pr;
   pr;
   pr;
@@ -58,12 +58,12 @@ THEORY PassList IS
   Force(0),(?;0;1;2;3);
   Force(0),(?;0;1;2;3);
   Force(0),?;
+  Force(0),(?;0;1;2;3);
   Force(0),?;
+  Force(0),(?;0;1;2;3);
   Force(0),?;
-  Force(0),?;
-  Force(0),?;
-  Force(0),?;
-  Force(0),?;
+  Force(0),(?;0;1;2;3);
+  Force(0),(?;0;1;2;3);
   Force(0),(?;0;1;2;3);
   Force(0),(?;0;1;2;3);
   Force(0),(?;0;1;2;3);

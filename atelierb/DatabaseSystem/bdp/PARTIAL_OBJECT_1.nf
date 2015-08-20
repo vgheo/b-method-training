@@ -142,14 +142,14 @@ END
 THEORY ListSubstitutionX IS
   Expanded_List_Substitution(Implementation(PARTIAL_OBJECT_1),def_field)==(ii: 1..max_field & oo: 1..partial_object | @ww.((ii: 1..max_field & oo: 1..total_object | ww:=total_field(ii)(oo));vv:=bool(ww/=MAXINT)));
   Expanded_List_Substitution(Implementation(PARTIAL_OBJECT_1),rem_field)==(ii: 1..max_field & oo: 1..partial_object & ii: 1..max_field & oo: 1..total_object & MAXINT: min_val..MAXINT | total_field:=total_field<+{ii|->(total_field(ii)<+{oo|->MAXINT})});
-  Expanded_List_Substitution(Implementation(PARTIAL_OBJECT_1),create_partial_object)==(partial_object/=max_obj & MAXINT: min_val..MAXINT & total_object/=max_obj | total_object,total_field,oo:=total_object+1,%ii.(ii: 1..max_field | total_field(ii)\/{total_object+1|->MAXINT}),total_object+1);
+  Expanded_List_Substitution(Implementation(PARTIAL_OBJECT_1),create_partial_object)==(partial_object/=max_obj & 2147483647: min_val..MAXINT & total_object/=max_obj | total_object,total_field,oo:=total_object+1,%ii.(ii: 1..max_field | total_field(ii)\/{total_object+1|->2147483647}),total_object+1);
   List_Substitution(Implementation(PARTIAL_OBJECT_1),nbr_object)==(vv:=total_object);
   Expanded_List_Substitution(Implementation(PARTIAL_OBJECT_1),nbr_object)==(btrue | vv:=total_object);
   List_Substitution(Implementation(PARTIAL_OBJECT_1),val_field)==(vv:=total_field(ii)(oo));
   Expanded_List_Substitution(Implementation(PARTIAL_OBJECT_1),val_field)==(ii: 1..max_field & oo: 1..total_object | vv:=total_field(ii)(oo));
   List_Substitution(Implementation(PARTIAL_OBJECT_1),mod_field)==(total_field(ii)(oo):=vv);
   Expanded_List_Substitution(Implementation(PARTIAL_OBJECT_1),mod_field)==(ii: 1..max_field & oo: 1..total_object & vv: min_val..MAXINT | total_field:=total_field<+{ii|->(total_field(ii)<+{oo|->vv})});
-  List_Substitution(Implementation(PARTIAL_OBJECT_1),create_partial_object)==(oo <-- create_total_object(MAXINT));
+  List_Substitution(Implementation(PARTIAL_OBJECT_1),create_partial_object)==(oo <-- create_total_object(2147483647));
   List_Substitution(Implementation(PARTIAL_OBJECT_1),rem_field)==(mod_field(ii,oo,MAXINT));
   List_Substitution(Implementation(PARTIAL_OBJECT_1),def_field)==(VAR ww IN ww <-- val_field(ii,oo);vv:=bool(ww/=MAXINT) END)
 END

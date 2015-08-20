@@ -3,7 +3,7 @@
  * Creation date: 7/29/2015
  */
 MACHINE
-    FILE_ACCESS ( max_rec , FIELD , VALUE )
+    FILE_ACCESS ( max_rec , FIELD )
 CONSTRAINTS
     max_rec : NAT1
 
@@ -18,6 +18,8 @@ INVARIANT
     updated : BOOL &
     ( updated = FALSE => buffer <: bfile ) &
     ( updated = TRUE => buffer /= {} )
+DEFINITIONS
+    VALUE == 0 .. 10000
 
 INITIALISATION
     bfile , buffer , updated := [] , {} , FALSE
