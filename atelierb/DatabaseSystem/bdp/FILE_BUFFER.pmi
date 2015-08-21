@@ -1,54 +1,54 @@
 ﻿THEORY BalanceX IS
-  FILE_BUFFER,16,0,0,11,1,0,0;
-  Initialisation,2,0,0,2,0,0,0;
+  FILE_BUFFER,16,0,0,0,0,0,0;
+  Initialisation,2,0,0,0,0,0,0;
   WellDefinedness_Precondition_create_record,1,0,0,0,0,0,0;
   WellDefinedness_Precondition_not_in_buffer,1,0,0,0,0,0,0;
   WellDefinedness_create_record,1,0,0,0,0,0,0;
-  WellDefinedness_load_buffer,1,0,0,1,0,0,0;
-  WellDefinedness_mod_buffer,1,0,0,1,0,0,0;
+  WellDefinedness_load_buffer,1,0,0,0,0,0,0;
+  WellDefinedness_mod_buffer,1,0,0,0,0,0,0;
   WellDefinedness_size_file,1,0,0,0,0,0,0;
-  WellDefinedness_val_buffer,3,0,0,3,0,0,0;
-  create_record,2,0,0,2,0,0,0;
-  load_buffer,2,0,0,2,0,0,0;
-  mod_buffer,1,0,0,0,1,0,0
+  WellDefinedness_val_buffer,3,0,0,0,0,0,0;
+  create_record,2,0,0,0,0,0,0;
+  load_buffer,2,0,0,0,0,0,0;
+  mod_buffer,1,0,0,0,0,0,0
 END
 &
 THEORY ProofState IS
-  Proved(0);
-  Proved(0);
-  Proved(0);
-  Proved(0);
   Unproved;
   Unproved;
-  Proved(0);
   Unproved;
   Unproved;
-  Proved(1);
-  Proved(0);
-  Proved(0);
-  Proved(0);
-  Proved(0);
-  Proved(0);
-  Proved(0)
+  Unproved;
+  Unproved;
+  Unproved;
+  Unproved;
+  Unproved;
+  Unproved;
+  Unproved;
+  Unproved;
+  Unproved;
+  Unproved;
+  Unproved;
+  Unproved
 END
 &
 THEORY MethodList IS
-  pr;
-  pr;
-  pr;
-  pr;
   ?;
   ?;
-  pr;
   ?;
   ?;
-  pr;
-  pr;
-  pr;
-  pr;
-  pr;
-  pr;
-  pr
+  ?;
+  ?;
+  ?;
+  ?;
+  ?;
+  ?;
+  ?;
+  ?;
+  ?;
+  ?;
+  ?;
+  ?
 END
 &
 THEORY PassList IS
@@ -56,12 +56,12 @@ THEORY PassList IS
   Force(0),?;
   Force(0),?;
   Force(0),?;
-  Force(0),(?;0;1;2;3);
-  Force(0),(?;0;1;2;3);
   Force(0),?;
-  Force(0),(?;0;1;2;3);
-  Force(0),(?;0;1;2;3);
-  Force(1),(?;0);
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
   Force(0),?;
   Force(0),?;
   Force(0),?;

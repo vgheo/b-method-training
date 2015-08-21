@@ -1,12 +1,12 @@
 THEORY ProofList IS
-_f(1) & _f(2) & _f(8) & _f(14) & WellDefinedness_val_field.4,(_f(20) => _f(25));
-_f(1) & _f(2) & _f(8) & _f(14) & WellDefinedness_val_field.3,(_f(20) => _f(24));
-_f(1) & _f(2) & _f(8) & _f(14) & WellDefinedness_val_field.2,(_f(20) => _f(22));
-_f(1) & _f(2) & _f(8) & _f(14) & WellDefinedness_val_field.1,(_f(20) => _f(21));
-_f(1) & _f(2) & _f(8) & _f(12) & WellDefinedness_mod_field.2,(_f(20) => _f(22));
-_f(1) & _f(2) & _f(8) & _f(12) & WellDefinedness_mod_field.1,(_f(20) => _f(21));
-_f(1) & _f(2) & _f(8) & _f(9) & WellDefinedness_create_total_object.2,(_f(19) & _f(20) => _f(22));
-_f(1) & _f(2) & _f(8) & _f(9) & WellDefinedness_create_total_object.1,(_f(19) & _f(20) => _f(21));
+_f(1) & _f(2) & _f(8) & _f(14) & WellDefinedness_val_field.4,(_f(18) => _f(23));
+_f(1) & _f(2) & _f(8) & _f(14) & WellDefinedness_val_field.3,(_f(18) => _f(22));
+_f(1) & _f(2) & _f(8) & _f(14) & WellDefinedness_val_field.2,(_f(18) => _f(20));
+_f(1) & _f(2) & _f(8) & _f(14) & WellDefinedness_val_field.1,(_f(18) => _f(19));
+_f(1) & _f(2) & _f(8) & _f(12) & WellDefinedness_mod_field.2,(_f(18) => _f(20));
+_f(1) & _f(2) & _f(8) & _f(12) & WellDefinedness_mod_field.1,(_f(18) => _f(19));
+_f(1) & _f(2) & _f(8) & _f(9) & WellDefinedness_create_total_object.2,(_f(17) & _f(18) => _f(20));
+_f(1) & _f(2) & _f(8) & _f(9) & WellDefinedness_create_total_object.1,(_f(17) & _f(18) => _f(19));
 _f(1) & _f(2) & _f(8) & _f(12) & mod_field.1,(_f(3) & _f(6) => _f(13));
 _f(1) & _f(2) & _f(8) & _f(9) & create_total_object.2,(_f(3) & _f(6) => _f(11));
 _f(1) & _f(2) & _f(8) & _f(9) & create_total_object.1,(_f(3) & _f(4) => _f(10));
@@ -16,24 +16,22 @@ END
 &
 THEORY Formulas IS
 ((NAT) = (((0) .. (2147483647)))) & ((INT) = (((-2147483647) .. (2147483647))));
-FIELD: FIN(INTEGER) & not(FIELD = {}) & VALUE: FIN(INTEGER) & not(VALUE = {}) & ((max_obj) : ((NAT-{0})));
+((max_obj) : ((NAT-{0})));
 "Invariant is preserved";
 "Check invariant ((total_object) : (((0) .. (max_obj))))";
 ((0) : (((0) .. (max_obj))));
-"Check invariant ((total_field) : (((FIELD) --> (((((1) .. (total_object))) --> (VALUE))))))";
-(((FIELD * {{}})) : (((FIELD) --> (((((1) .. (0))) --> (VALUE))))));
-((total_object) : (((0) .. (max_obj)))) & total_field : FIELD +-> ((((1) .. (total_object))) --> (VALUE)) & dom(total_field) = FIELD & ((total_field) : (((FIELD) --> (((((1) .. (total_object))) --> (VALUE))))));
-((vv) : (VALUE)) & not(total_object = max_obj);
+"Check invariant ((total_field) : (((((0) .. (4))) --> (((((1) .. (total_object))) --> (((0) .. (10000))))))))";
+(((((0) .. (4)) * {{}})) : (((((0) .. (4))) --> (((((1) .. (0))) --> (((0) .. (10000))))))));
+((total_object) : (((0) .. (max_obj)))) & total_field : ((0) .. (4)) +-> ((((1) .. (total_object))) --> (((0) .. (10000)))) & dom(total_field) = ((0) .. (4)) & ((total_field) : (((((0) .. (4))) --> (((((1) .. (total_object))) --> (((0) .. (10000))))))));
+((vv) : (((0) .. (10000)))) & not(total_object = max_obj);
 (((total_object + 1)) : (((0) .. (max_obj))));
-((%(ii).(((ii) : (FIELD)) | (((total_field )(ii)) \/ ({(((total_object + 1)) |-> (vv))})))) : (((FIELD) --> (((((1) .. ((total_object + 1)))) --> (VALUE))))));
-((ii) : (FIELD)) & ((oo) : (((1) .. (total_object)))) & ((vv) : (VALUE));
-((((total_field) <+ ({((ii) |-> ((((total_field )(ii)) <+ ({((oo) |-> (vv))}))))}))) : (((FIELD) --> (((((1) .. (total_object))) --> (VALUE))))));
-((ii) : (FIELD)) & ((oo) : (((1) .. (total_object))));
-VALUE: FIN(INTEGER) & not(VALUE = {});
-FIELD: FIN(INTEGER) & not(FIELD = {});
+((%(ii).(((ii) : (((0) .. (4)))) | (((total_field )(ii)) \/ ({(((total_object + 1)) |-> (vv))})))) : (((((0) .. (4))) --> (((((1) .. ((total_object + 1)))) --> (((0) .. (10000))))))));
+((ii) : (((0) .. (4)))) & ((oo) : (((1) .. (total_object)))) & ((vv) : (((0) .. (10000))));
+((((total_field) <+ ({((ii) |-> ((((total_field )(ii)) <+ ({((oo) |-> (vv))}))))}))) : (((((0) .. (4))) --> (((((1) .. (total_object))) --> (((0) .. (10000))))))));
+((ii) : (((0) .. (4)))) & ((oo) : (((1) .. (total_object))));
 ((total_object) : (((0) .. (max_obj))));
-((vv) : (VALUE));
-((ii) : (FIELD));
+((vv) : (((0) .. (10000))));
+((ii) : (((0) .. (4))));
 "Well definedness";
 ((ii) : (dom(total_field)));
 ((total_field) : (((dom(total_field)) +-> (ran(total_field)))));

@@ -9,7 +9,7 @@ REFINES TOTAL_OBJECT
 IMPORTS
     FILE ( max_obj )
 INVARIANT
-    file = % oo . ( oo : 1 .. total_object | % ii . ( ii : ( 1 .. 4 ) | total_field ( ii ) ( oo ) ) )
+    file = % oo . ( oo : 1 .. total_object | % ii . ( ii : ( 0 .. 4 ) | total_field ( ii ) ( oo ) ) )
 
 
 

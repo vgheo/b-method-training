@@ -18,7 +18,7 @@ INVARIANT
     bfile : seq ( FIELD --> VALUE ) &
     buffer : dom ( bfile ) +-> ( FIELD --> VALUE )
 DEFINITIONS
-    FIELD == ( 1 .. 4 ) ;
+    FIELD == ( 0 .. 4 ) ;
     VALUE == ( 0 .. 10000 )
 OPERATIONS
     oo <-- create_record ( vv ) =

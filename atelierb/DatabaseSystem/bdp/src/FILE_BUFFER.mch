@@ -15,8 +15,8 @@ INITIALISATION
     /*WARNING: typo in pag614: sfile renamed to bfile*/
     bfile , buffer := <> , {}
 INVARIANT
-    bfile : seq ( ( 1 .. 4 ) --> ( 0 .. 10000 ) ) &
-    buffer : dom ( bfile ) +-> ( ( 1 .. 4 ) --> ( 0 .. 10000 ) )
+    bfile : seq ( ( 0 .. 4 ) --> ( 0 .. 10000 ) ) &
+    buffer : dom ( bfile ) +-> ( ( 0 .. 4 ) --> ( 0 .. 10000 ) )
 
 
 
@@ -27,7 +27,7 @@ OPERATIONS
         size ( bfile ) /= max_rec
     THEN
         /*Warning: possible typo: renamed INDEX to FIELD*/
-        bfile := bfile <- ( ( 1 .. 4 ) * { vv } ) ||
+        bfile := bfile <- ( ( 0 .. 4 ) * { vv } ) ||
         oo := size ( bfile ) + 1
     END ;
 
@@ -59,7 +59,7 @@ OPERATIONS
         /*possible typo=>renamed bfile in buffer because model would have been false -- bfile not included in bfile so it possible to apply buufer on something out of his domaine*/
         oo : NAT & /*concrete typing B0*/
         oo : dom ( buffer ) &
-        ii : ( 1 .. 4 ) &
+        ii : ( 0 .. 4 ) &
         vv : ( 0 .. 10000 )
     THEN
         buffer ( oo ) ( ii ) := vv
@@ -69,7 +69,7 @@ OPERATIONS
     PRE
         oo : NAT & /*concrete typing B0*/
         oo : dom ( buffer ) &
-        ii : ( 1 .. 4 )
+        ii : ( 0 .. 4 )
     THEN
         vv := buffer ( oo ) ( ii )
     END

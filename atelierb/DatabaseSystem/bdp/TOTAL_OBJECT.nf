@@ -57,7 +57,7 @@ THEORY ListInvariantX IS
   Expanded_List_Invariant(Machine(TOTAL_OBJECT))==(btrue);
   Abstract_List_Invariant(Machine(TOTAL_OBJECT))==(btrue);
   Context_List_Invariant(Machine(TOTAL_OBJECT))==(btrue);
-  List_Invariant(Machine(TOTAL_OBJECT))==(total_object: 0..max_obj & total_field: 1..4 --> (1..total_object --> 0..10000))
+  List_Invariant(Machine(TOTAL_OBJECT))==(total_object: 0..max_obj & total_field: 0..4 --> (1..total_object --> 0..10000))
 END
 &
 THEORY ListAssertionsX IS
@@ -76,9 +76,9 @@ THEORY ListExclusivityX IS
 END
 &
 THEORY ListInitialisationX IS
-  Expanded_List_Initialisation(Machine(TOTAL_OBJECT))==(total_object,total_field:=0,(1..4)*{{}});
+  Expanded_List_Initialisation(Machine(TOTAL_OBJECT))==(total_object,total_field:=0,(0..4)*{{}});
   Context_List_Initialisation(Machine(TOTAL_OBJECT))==(skip);
-  List_Initialisation(Machine(TOTAL_OBJECT))==(total_object,total_field:=0,(1..4)*{{}})
+  List_Initialisation(Machine(TOTAL_OBJECT))==(total_object,total_field:=0,(0..4)*{{}})
 END
 &
 THEORY ListParametersX IS
@@ -122,17 +122,17 @@ THEORY ListOperationGuardX END
 &
 THEORY ListPreconditionX IS
   List_Precondition(Machine(TOTAL_OBJECT),create_total_object)==(vv: 0..10000 & total_object/=max_obj);
-  List_Precondition(Machine(TOTAL_OBJECT),mod_field)==(ii: 1..4 & oo: 1..total_object & vv: 0..10000);
-  List_Precondition(Machine(TOTAL_OBJECT),val_field)==(ii: 1..4 & oo: 1..total_object);
+  List_Precondition(Machine(TOTAL_OBJECT),mod_field)==(ii: 0..4 & oo: 1..total_object & vv: 0..10000);
+  List_Precondition(Machine(TOTAL_OBJECT),val_field)==(ii: 0..4 & oo: 1..total_object);
   List_Precondition(Machine(TOTAL_OBJECT),nbr_object)==(btrue)
 END
 &
 THEORY ListSubstitutionX IS
   Expanded_List_Substitution(Machine(TOTAL_OBJECT),nbr_object)==(btrue | vv:=total_object);
-  Expanded_List_Substitution(Machine(TOTAL_OBJECT),val_field)==(ii: 1..4 & oo: 1..total_object | vv:=total_field(ii)(oo));
-  Expanded_List_Substitution(Machine(TOTAL_OBJECT),mod_field)==(ii: 1..4 & oo: 1..total_object & vv: 0..10000 | total_field:=total_field<+{ii|->(total_field(ii)<+{oo|->vv})});
-  Expanded_List_Substitution(Machine(TOTAL_OBJECT),create_total_object)==(vv: 0..10000 & total_object/=max_obj | total_object,total_field,oo:=total_object+1,%ii.(ii: 1..4 | total_field(ii)\/{total_object+1|->vv}),total_object+1);
-  List_Substitution(Machine(TOTAL_OBJECT),create_total_object)==(total_object:=total_object+1 || total_field:=%ii.(ii: 1..4 | total_field(ii)\/{total_object+1|->vv}) || oo:=total_object+1);
+  Expanded_List_Substitution(Machine(TOTAL_OBJECT),val_field)==(ii: 0..4 & oo: 1..total_object | vv:=total_field(ii)(oo));
+  Expanded_List_Substitution(Machine(TOTAL_OBJECT),mod_field)==(ii: 0..4 & oo: 1..total_object & vv: 0..10000 | total_field:=total_field<+{ii|->(total_field(ii)<+{oo|->vv})});
+  Expanded_List_Substitution(Machine(TOTAL_OBJECT),create_total_object)==(vv: 0..10000 & total_object/=max_obj | total_object,total_field,oo:=total_object+1,%ii.(ii: 0..4 | total_field(ii)\/{total_object+1|->vv}),total_object+1);
+  List_Substitution(Machine(TOTAL_OBJECT),create_total_object)==(total_object:=total_object+1 || total_field:=%ii.(ii: 0..4 | total_field(ii)\/{total_object+1|->vv}) || oo:=total_object+1);
   List_Substitution(Machine(TOTAL_OBJECT),mod_field)==(total_field(ii)(oo):=vv);
   List_Substitution(Machine(TOTAL_OBJECT),val_field)==(vv:=total_field(ii)(oo));
   List_Substitution(Machine(TOTAL_OBJECT),nbr_object)==(vv:=total_object)
@@ -193,7 +193,7 @@ THEORY ParametersEnvX IS
 END
 &
 THEORY VariablesEnvX IS
-  Variables(Machine(TOTAL_OBJECT)) == (Type(total_field) == Mvl(SetOf(btype(INTEGER,1,4)*SetOf(btype(INTEGER,1,total_object)*btype(INTEGER,0,10000))));Type(total_object) == Mvl(btype(INTEGER,?,?)))
+  Variables(Machine(TOTAL_OBJECT)) == (Type(total_field) == Mvl(SetOf(btype(INTEGER,0,4)*SetOf(btype(INTEGER,1,total_object)*btype(INTEGER,0,10000))));Type(total_object) == Mvl(btype(INTEGER,?,?)))
 END
 &
 THEORY OperationsEnvX IS

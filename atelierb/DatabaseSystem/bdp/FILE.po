@@ -1,12 +1,12 @@
 THEORY ProofList IS
-_f(1) & _f(2) & _f(8) & WellDefinedness_size_file.1,(_f(20) => _f(21));
-_f(1) & _f(2) & _f(8) & _f(13) & WellDefinedness_create_record.1,(_f(20) => _f(21));
-_f(1) & _f(2) & _f(8) & WellDefinedness_Precondition_create_record.1,(_f(28) & _f(20) => _f(21));
-_f(1) & _f(2) & _f(8) & _f(10) & WellDefinedness_mod_file.1,(_f(20) => _f(24));
-_f(1) & _f(2) & _f(8) & _f(9) & WellDefinedness_val_file.3,(_f(20) => _f(26));
-_f(1) & _f(2) & _f(8) & _f(9) & WellDefinedness_val_file.2,(_f(20) => _f(25));
-_f(1) & _f(2) & _f(8) & _f(9) & WellDefinedness_val_file.1,(_f(20) => _f(24));
-_f(1) & _f(2) & WellDefinednessInvariant.1,(_f(18) & _f(19) & _f(20) => _f(21));
+_f(1) & _f(2) & _f(8) & WellDefinedness_size_file.1,(_f(18) => _f(19));
+_f(1) & _f(2) & _f(8) & _f(13) & WellDefinedness_create_record.1,(_f(18) => _f(19));
+_f(1) & _f(2) & _f(8) & WellDefinedness_Precondition_create_record.1,(_f(26) & _f(18) => _f(19));
+_f(1) & _f(2) & _f(8) & _f(10) & WellDefinedness_mod_file.1,(_f(18) => _f(22));
+_f(1) & _f(2) & _f(8) & _f(9) & WellDefinedness_val_file.3,(_f(18) => _f(24));
+_f(1) & _f(2) & _f(8) & _f(9) & WellDefinedness_val_file.2,(_f(18) => _f(23));
+_f(1) & _f(2) & _f(8) & _f(9) & WellDefinedness_val_file.1,(_f(18) => _f(22));
+_f(1) & _f(2) & WellDefinednessInvariant.1,(_f(16) & _f(17) & _f(18) => _f(19));
 _f(1) & _f(2) & _f(8) & _f(13) & create_record.2,(_f(3) & _f(6) => _f(15));
 _f(1) & _f(2) & _f(8) & _f(13) & create_record.1,(_f(3) & _f(4) => _f(14));
 _f(1) & _f(2) & _f(8) & _f(10) & mod_file.2,(_f(3) & _f(6) => _f(12));
@@ -17,24 +17,22 @@ END
 &
 THEORY Formulas IS
 ((NAT) = (((0) .. (2147483647)))) & ((INT) = (((-2147483647) .. (2147483647))));
-FIELD: FIN(INTEGER) & not(FIELD = {}) & VALUE: FIN(INTEGER) & not(VALUE = {}) & ((max_rec) : ((NAT-{0})));
+((max_rec) : ((NAT-{0})));
 "Invariant is preserved";
-"Check invariant ((file) : (seq(((FIELD) --> (VALUE)))))";
-(({}) : (seq(((FIELD) --> (VALUE)))));
+"Check invariant ((file) : (seq(((((0) .. (4))) --> (((0) .. (10000)))))))";
+(({}) : (seq(((((0) .. (4))) --> (((0) .. (10000)))))));
 "Check invariant (size(file) <= max_rec)";
 (size({}) <= max_rec);
-file : NATURAL-{0} +-> ((FIELD) --> (VALUE)) & ((file) : (seq(((FIELD) --> (VALUE))))) & (size(file) <= max_rec);
-((oo) : (NAT)) & ((oo) : (dom(file))) & ((ii) : (FIELD));
-((oo) : (NAT)) & ((oo) : (dom(file))) & ((ii) : (FIELD)) & ((vv) : (VALUE));
-((((file) <+ ({((oo) |-> ((((file )(oo)) <+ ({((ii) |-> (vv))}))))}))) : (seq(((FIELD) --> (VALUE)))));
+file : NATURAL-{0} +-> ((((0) .. (4))) --> (((0) .. (10000)))) & ((file) : (seq(((((0) .. (4))) --> (((0) .. (10000))))))) & (size(file) <= max_rec);
+((oo) : (NAT)) & ((oo) : (dom(file))) & ((ii) : (((0) .. (4))));
+((oo) : (NAT)) & ((oo) : (dom(file))) & ((ii) : (((0) .. (4)))) & ((vv) : (((0) .. (10000))));
+((((file) <+ ({((oo) |-> ((((file )(oo)) <+ ({((ii) |-> (vv))}))))}))) : (seq(((((0) .. (4))) --> (((0) .. (10000)))))));
 (size(((file) <+ ({((oo) |-> ((((file )(oo)) <+ ({((ii) |-> (vv))}))))}))) <= max_rec);
-((vv) : (VALUE)) & (size(file) +1 <= max_rec);
-((((file) <- ((FIELD * {vv})))) : (seq(((FIELD) --> (VALUE)))));
-(size(((file) <- ((FIELD * {vv})))) <= max_rec);
-VALUE: FIN(INTEGER) & not(VALUE = {});
-FIELD: FIN(INTEGER) & not(FIELD = {});
-file : NATURAL-{0} +-> ((FIELD) --> (VALUE));
-((file) : (seq(((FIELD) --> (VALUE)))));
+((vv) : (((0) .. (10000)))) & (size(file) +1 <= max_rec);
+((((file) <- ((((0) .. (4)) * {vv})))) : (seq(((((0) .. (4))) --> (((0) .. (10000)))))));
+(size(((file) <- ((((0) .. (4)) * {vv})))) <= max_rec);
+file : NATURAL-{0} +-> ((((0) .. (4))) --> (((0) .. (10000))));
+((file) : (seq(((((0) .. (4))) --> (((0) .. (10000)))))));
 "Well definedness";
 ((file) : (seq(ran(file))));
 ((oo) : (dom(file)));
@@ -42,8 +40,8 @@ file : NATURAL-{0} +-> ((FIELD) --> (VALUE));
 ((file) : (((dom(file)) +-> (ran(file)))));
 ((ii) : (dom((file )(oo))));
 (((file )(oo)) : (((dom((file )(oo))) +-> (ran((file )(oo))))));
-((ii) : (FIELD));
-((vv) : (VALUE))
+((ii) : (((0) .. (4))));
+((vv) : (((0) .. (10000))))
 END
 &
 THEORY EnumerateX

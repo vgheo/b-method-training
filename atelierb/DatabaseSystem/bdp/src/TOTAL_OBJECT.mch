@@ -9,12 +9,12 @@ CONSTRAINTS
 ABSTRACT_VARIABLES
     total_object , total_field
 INITIALISATION
-    total_object , total_field := 0 , ( 1 .. 4 ) * { {} }
+    total_object , total_field := 0 , ( 0 .. 4 ) * { {} }
 
 
 INVARIANT
     total_object : 0 .. max_obj &
-    total_field : ( 1 .. 4 ) --> ( 1 .. total_object --> ( 0 .. 10000 ) )
+    total_field : ( 0 .. 4 ) --> ( 1 .. total_object --> ( 0 .. 10000 ) )
 
 
 
@@ -27,13 +27,13 @@ OPERATIONS
         total_object /= max_obj
     THEN
         total_object := total_object + 1 ||
-        total_field := % ii . ( ii : ( 1 .. 4 ) | total_field ( ii ) \/ { ( total_object + 1 ) |-> vv } ) ||
+        total_field := % ii . ( ii : ( 0 .. 4 ) | total_field ( ii ) \/ { ( total_object + 1 ) |-> vv } ) ||
         oo := total_object + 1
     END ;
 
     mod_field ( ii , oo , vv ) =
     PRE
-        ii : ( 1 .. 4 ) &
+        ii : ( 0 .. 4 ) &
         oo : 1 .. total_object &
         vv : ( 0 .. 10000 )
     THEN
@@ -41,7 +41,7 @@ OPERATIONS
     END ;
     vv <-- val_field ( ii , oo ) =
     PRE
-        ii : ( 1 .. 4 ) &
+        ii : ( 0 .. 4 ) &
         oo : 1 .. total_object
     THEN
         vv := total_field ( ii ) ( oo )

@@ -13,7 +13,7 @@ PROMOTES
 INVARIANT
     file=bfile<+buffer
 DEFINITIONS
-    FIELD == (1..4);
+    FIELD == (0..4);
     VALUE == (0..10000)
 OPERATIONS
     mod_file(oo,ii,vv)=

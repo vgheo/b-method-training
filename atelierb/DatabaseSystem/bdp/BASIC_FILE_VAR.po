@@ -1,9 +1,9 @@
 THEORY ProofList IS
-_f(1) & _f(2) & _f(13) & WellDefinedness_SIZE_FILE.1,(_f(35) => _f(36));
-_f(1) & _f(2) & _f(13) & _f(20) & WellDefinedness_NEW_RECORD.1,(_f(35) => _f(36));
-_f(1) & _f(2) & _f(13) & WellDefinedness_Precondition_NEW_RECORD.1,(_f(39) & _f(35) => _f(36));
-_f(1) & _f(2) & _f(13) & _f(14) & WellDefinedness_READ_FILE.1,(_f(35) => _f(38));
-_f(1) & _f(2) & WellDefinednessInvariant.1,(_f(32) & _f(33) & _f(34) & _f(29) & _f(30) & _f(31) & _f(27) & _f(28) & _f(35) => _f(36));
+_f(1) & _f(2) & _f(13) & WellDefinedness_SIZE_FILE.1,(_f(33) => _f(34));
+_f(1) & _f(2) & _f(13) & _f(20) & WellDefinedness_NEW_RECORD.1,(_f(33) => _f(34));
+_f(1) & _f(2) & _f(13) & WellDefinedness_Precondition_NEW_RECORD.1,(_f(37) & _f(33) => _f(34));
+_f(1) & _f(2) & _f(13) & _f(14) & WellDefinedness_READ_FILE.1,(_f(33) => _f(36));
+_f(1) & _f(2) & WellDefinednessInvariant.1,(_f(30) & _f(31) & _f(32) & _f(27) & _f(28) & _f(29) & _f(25) & _f(26) & _f(33) => _f(34));
 _f(1) & _f(2) & _f(13) & RESET_RECORD.1,(_f(6) & _f(15) => _f(24));
 _f(1) & _f(2) & _f(13) & RESET_FILE.3,(_f(6) & _f(11) => _f(12));
 _f(1) & _f(2) & _f(13) & RESET_FILE.2,(_f(6) & _f(9) => _f(10));
@@ -22,44 +22,42 @@ END
 &
 THEORY Formulas IS
 ((NAT) = (((0) .. (2147483647)))) & ((INT) = (((-2147483647) .. (2147483647))));
-FIELD: FIN(INTEGER) & not(FIELD = {}) & VALUE: FIN(INTEGER) & not(VALUE = {}) & ((max_rec) : ((NAT-{0})));
-buf_vrb$1 : FIELD +-> VALUE;
-dom(buf_vrb$1) = FIELD;
-((buf_vrb$1) : (((FIELD) --> (VALUE))));
+((max_rec) : ((NAT-{0})));
+buf_vrb$1 : ((0) .. (4)) +-> ((0) .. (10000));
+dom(buf_vrb$1) = ((0) .. (4));
+((buf_vrb$1) : (((((0) .. (4))) --> (((0) .. (10000))))));
 "Invariant is preserved";
-"Check invariant ((file_vrb) : (((NAT) --> (((FIELD) --> (VALUE))))))";
-(({}) : (((NAT) --> (((FIELD) --> (VALUE))))));
-"Check invariant ((file_vrb) : (seq(((FIELD) --> (VALUE)))))";
-(({}) : (seq(((FIELD) --> (VALUE)))));
+"Check invariant ((file_vrb) : (((NAT) --> (((((0) .. (4))) --> (((0) .. (10000))))))))";
+(({}) : (((NAT) --> (((((0) .. (4))) --> (((0) .. (10000))))))));
+"Check invariant ((file_vrb) : (seq(((((0) .. (4))) --> (((0) .. (10000)))))))";
+(({}) : (seq(((((0) .. (4))) --> (((0) .. (10000)))))));
 "Check invariant (size(file_vrb) +1 <= max_rec)";
 (size({}) +1 <= max_rec);
-buf_vrb : FIELD +-> VALUE & dom(buf_vrb) = FIELD & ((buf_vrb) : (((FIELD) --> (VALUE)))) & file_vrb : NAT +-> ((FIELD) --> (VALUE)) & dom(file_vrb) = NAT & ((file_vrb) : (((NAT) --> (((FIELD) --> (VALUE)))))) & file_vrb : NATURAL-{0} +-> ((FIELD) --> (VALUE)) & ((file_vrb) : (seq(((FIELD) --> (VALUE))))) & (size(file_vrb) +1 <= max_rec);
+buf_vrb : ((0) .. (4)) +-> ((0) .. (10000)) & dom(buf_vrb) = ((0) .. (4)) & ((buf_vrb) : (((((0) .. (4))) --> (((0) .. (10000)))))) & file_vrb : NAT +-> ((((0) .. (4))) --> (((0) .. (10000)))) & dom(file_vrb) = NAT & ((file_vrb) : (((NAT) --> (((((0) .. (4))) --> (((0) .. (10000)))))))) & file_vrb : NATURAL-{0} +-> ((((0) .. (4))) --> (((0) .. (10000)))) & ((file_vrb) : (seq(((((0) .. (4))) --> (((0) .. (10000))))))) & (size(file_vrb) +1 <= max_rec);
 ((ii) : (NAT)) & ((ii) : (dom(file_vrb)));
-"Check invariant ((buf_vrb) : (((FIELD) --> (VALUE))))";
-(((file_vrb )(ii)) : (((FIELD) --> (VALUE))));
-((((file_vrb) <+ ({((ii) |-> (buf_vrb))}))) : (((NAT) --> (((FIELD) --> (VALUE))))));
-((((file_vrb) <+ ({((ii) |-> (buf_vrb))}))) : (seq(((FIELD) --> (VALUE)))));
+"Check invariant ((buf_vrb) : (((((0) .. (4))) --> (((0) .. (10000))))))";
+(((file_vrb )(ii)) : (((((0) .. (4))) --> (((0) .. (10000))))));
+((((file_vrb) <+ ({((ii) |-> (buf_vrb))}))) : (((NAT) --> (((((0) .. (4))) --> (((0) .. (10000))))))));
+((((file_vrb) <+ ({((ii) |-> (buf_vrb))}))) : (seq(((((0) .. (4))) --> (((0) .. (10000)))))));
 (size(((file_vrb) <+ ({((ii) |-> (buf_vrb))}))) +1 <= max_rec);
-((vv) : (VALUE)) & not(size(file_vrb) = max_rec);
-((((file_vrb) <- ((FIELD * {vv})))) : (((NAT) --> (((FIELD) --> (VALUE))))));
-((((file_vrb) <- ((FIELD * {vv})))) : (seq(((FIELD) --> (VALUE)))));
-(size(((file_vrb) <- ((FIELD * {vv})))) +1 <= max_rec);
-(({}) : (((FIELD) --> (VALUE))));
-VALUE: FIN(INTEGER) & not(VALUE = {});
-FIELD: FIN(INTEGER) & not(FIELD = {});
-file_vrb : NATURAL-{0} +-> ((FIELD) --> (VALUE));
-((file_vrb) : (seq(((FIELD) --> (VALUE)))));
-file_vrb : NAT +-> ((FIELD) --> (VALUE));
+((vv) : (((0) .. (10000)))) & not(size(file_vrb) = max_rec);
+((((file_vrb) <- ((((0) .. (4)) * {vv})))) : (((NAT) --> (((((0) .. (4))) --> (((0) .. (10000))))))));
+((((file_vrb) <- ((((0) .. (4)) * {vv})))) : (seq(((((0) .. (4))) --> (((0) .. (10000)))))));
+(size(((file_vrb) <- ((((0) .. (4)) * {vv})))) +1 <= max_rec);
+(({}) : (((((0) .. (4))) --> (((0) .. (10000))))));
+file_vrb : NATURAL-{0} +-> ((((0) .. (4))) --> (((0) .. (10000))));
+((file_vrb) : (seq(((((0) .. (4))) --> (((0) .. (10000)))))));
+file_vrb : NAT +-> ((((0) .. (4))) --> (((0) .. (10000))));
 dom(file_vrb) = NAT;
-((file_vrb) : (((NAT) --> (((FIELD) --> (VALUE))))));
-buf_vrb : FIELD +-> VALUE;
-dom(buf_vrb) = FIELD;
-((buf_vrb) : (((FIELD) --> (VALUE))));
+((file_vrb) : (((NAT) --> (((((0) .. (4))) --> (((0) .. (10000))))))));
+buf_vrb : ((0) .. (4)) +-> ((0) .. (10000));
+dom(buf_vrb) = ((0) .. (4));
+((buf_vrb) : (((((0) .. (4))) --> (((0) .. (10000))))));
 "Well definedness";
 ((file_vrb) : (seq(ran(file_vrb))));
 ((ii) : (NAT));
 ((file_vrb) : (((dom(file_vrb)) +-> (ran(file_vrb)))));
-((vv) : (VALUE))
+((vv) : (((0) .. (10000))))
 END
 &
 THEORY EnumerateX

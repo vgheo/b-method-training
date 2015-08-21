@@ -18,7 +18,7 @@ INVARIANT
 
 DEFINITIONS
     OBJECT == 1 .. total_object ;
-    FIELD == ( 1 .. 4 ) ;
+    FIELD == ( 0 .. 4 ) ;
     VALUE == ( 0 .. 10000 )
 OPERATIONS
     oo <-- create_total_object ( vv ) =

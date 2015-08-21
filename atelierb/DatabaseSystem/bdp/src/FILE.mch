@@ -15,7 +15,7 @@ ABSTRACT_VARIABLES
 INITIALISATION
     file := <>
 INVARIANT
-    file : seq ( ( 1 .. 4 ) --> ( 0 .. 10000 ) ) &
+    file : seq ( ( 0 .. 4 ) --> ( 0 .. 10000 ) ) &
     size ( file ) <= max_rec
 
 
@@ -28,7 +28,7 @@ OPERATIONS
     PRE
         oo : NAT & /*concrete typing*/
         oo : dom ( file ) &
-        ii : ( 1 .. 4 )
+        ii : ( 0 .. 4 )
     THEN
         vv := file ( oo ) ( ii )
     END ;
@@ -40,7 +40,7 @@ OPERATIONS
     PRE
         oo : NAT & /*concrete typing*/
         oo : dom ( file ) &
-        ii : ( 1 .. 4 ) &
+        ii : ( 0 .. 4 ) &
         vv : ( 0 .. 10000 )
     THEN
         file ( oo ) ( ii ) := vv
@@ -51,7 +51,7 @@ OPERATIONS
         vv : ( 0 .. 10000 ) &
         size ( file ) < max_rec
     THEN
-        file := file <- ( ( 1 .. 4 ) * { vv } ) || /* /INDEX in page 613, probably typo*/
+        file := file <- ( ( 0 .. 4 ) * { vv } ) || /* /INDEX in page 613, probably typo*/
         oo := size ( file ) + 1
     END ;
     /*returns the size of file*/

@@ -50,8 +50,8 @@ END
 &
 THEORY ListInvariantX IS
   Gluing_Seen_List_Invariant(Implementation(FILE_1))==(btrue);
-  Abstract_List_Invariant(Implementation(FILE_1))==(file: seq(1..4 --> 0..10000) & size(file)<=max_rec);
-  Expanded_List_Invariant(Implementation(FILE_1))==(bfile: seq(1..4 --> 0..10000) & buffer: dom(bfile) +-> (1..4 --> 0..10000));
+  Abstract_List_Invariant(Implementation(FILE_1))==(file: seq(0..4 --> 0..10000) & size(file)<=max_rec);
+  Expanded_List_Invariant(Implementation(FILE_1))==(bfile: seq(0..4 --> 0..10000) & buffer: dom(bfile) +-> (0..4 --> 0..10000));
   Context_List_Invariant(Implementation(FILE_1))==(btrue);
   List_Invariant(Implementation(FILE_1))==(file = bfile<+buffer)
 END
@@ -124,18 +124,18 @@ THEORY ListPreconditionX IS
   Own_Precondition(Implementation(FILE_1),create_record)==(vv: 0..10000 & size(bfile)/=max_rec);
   List_Precondition(Implementation(FILE_1),create_record)==(vv: 0..10000 & size(bfile)/=max_rec);
   Own_Precondition(Implementation(FILE_1),mod_file)==(btrue);
-  List_Precondition(Implementation(FILE_1),mod_file)==(oo: NAT & oo: dom(file) & ii: 1..4 & vv: 0..10000);
+  List_Precondition(Implementation(FILE_1),mod_file)==(oo: NAT & oo: dom(file) & ii: 0..4 & vv: 0..10000);
   Own_Precondition(Implementation(FILE_1),val_file)==(btrue);
-  List_Precondition(Implementation(FILE_1),val_file)==(oo: NAT & oo: dom(file) & ii: 1..4)
+  List_Precondition(Implementation(FILE_1),val_file)==(oo: NAT & oo: dom(file) & ii: 0..4)
 END
 &
 THEORY ListSubstitutionX IS
-  Expanded_List_Substitution(Implementation(FILE_1),val_file)==(oo: NAT & oo: dom(file) & ii: 1..4 | @test.((oo: NAT1 & oo: 1..size(bfile) | test:=bool(oo/:dom(buffer)));(test = TRUE ==> (oo: NAT & oo: dom(bfile) & oo/:dom(buffer) | bfile,buffer:=bfile<+buffer,{oo|->bfile(oo)}) [] not(test = TRUE) ==> skip);(oo: NAT & oo: dom(buffer) & ii: 1..4 | vv:=buffer(oo)(ii))));
-  Expanded_List_Substitution(Implementation(FILE_1),mod_file)==(oo: NAT & oo: dom(file) & ii: 1..4 & vv: 0..10000 | @test.((oo: NAT1 & oo: 1..size(bfile) | test:=bool(oo/:dom(buffer)));(test = TRUE ==> (oo: NAT & oo: dom(bfile) & oo/:dom(buffer) | bfile,buffer:=bfile<+buffer,{oo|->bfile(oo)}) [] not(test = TRUE) ==> skip);(oo: NAT & oo: dom(buffer) & ii: 1..4 & vv: 0..10000 | buffer:=buffer<+{oo|->(buffer(oo)<+{ii|->vv})})));
+  Expanded_List_Substitution(Implementation(FILE_1),val_file)==(oo: NAT & oo: dom(file) & ii: 0..4 | @test.((oo: NAT1 & oo: 1..size(bfile) | test:=bool(oo/:dom(buffer)));(test = TRUE ==> (oo: NAT & oo: dom(bfile) & oo/:dom(buffer) | bfile,buffer:=bfile<+buffer,{oo|->bfile(oo)}) [] not(test = TRUE) ==> skip);(oo: NAT & oo: dom(buffer) & ii: 0..4 | vv:=buffer(oo)(ii))));
+  Expanded_List_Substitution(Implementation(FILE_1),mod_file)==(oo: NAT & oo: dom(file) & ii: 0..4 & vv: 0..10000 | @test.((oo: NAT1 & oo: 1..size(bfile) | test:=bool(oo/:dom(buffer)));(test = TRUE ==> (oo: NAT & oo: dom(bfile) & oo/:dom(buffer) | bfile,buffer:=bfile<+buffer,{oo|->bfile(oo)}) [] not(test = TRUE) ==> skip);(oo: NAT & oo: dom(buffer) & ii: 0..4 & vv: 0..10000 | buffer:=buffer<+{oo|->(buffer(oo)<+{ii|->vv})})));
   List_Substitution(Implementation(FILE_1),size_file)==(vv:=size(bfile));
   Expanded_List_Substitution(Implementation(FILE_1),size_file)==(btrue | vv:=size(bfile));
-  List_Substitution(Implementation(FILE_1),create_record)==(bfile:=bfile<-(1..4)*{vv} || oo:=size(bfile)+1);
-  Expanded_List_Substitution(Implementation(FILE_1),create_record)==(vv: 0..10000 & size(bfile)/=max_rec | bfile,oo:=bfile<-(1..4)*{vv},size(bfile)+1);
+  List_Substitution(Implementation(FILE_1),create_record)==(bfile:=bfile<-(0..4)*{vv} || oo:=size(bfile)+1);
+  Expanded_List_Substitution(Implementation(FILE_1),create_record)==(vv: 0..10000 & size(bfile)/=max_rec | bfile,oo:=bfile<-(0..4)*{vv},size(bfile)+1);
   List_Substitution(Implementation(FILE_1),mod_file)==(VAR test IN test <-- not_in_buffer(oo);IF test = TRUE THEN load_buffer(oo) END;mod_buffer(oo,ii,vv) END);
   List_Substitution(Implementation(FILE_1),val_file)==(VAR test IN test <-- not_in_buffer(oo);IF test = TRUE THEN load_buffer(oo) END;vv <-- val_buffer(oo,ii) END)
 END

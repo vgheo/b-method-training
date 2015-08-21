@@ -18,7 +18,7 @@ INVARIANT
     file : seq ( FIELD --> VALUE ) &
     size ( file ) <= max_rec
 DEFINITIONS
-    FIELD == (1..4);
+    FIELD == (0..4);
     VALUE == (0..10000)
 OPERATIONS
     /*

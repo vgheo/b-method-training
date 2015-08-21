@@ -57,7 +57,7 @@ THEORY ListInvariantX IS
   Expanded_List_Invariant(Machine(FILE))==(btrue);
   Abstract_List_Invariant(Machine(FILE))==(btrue);
   Context_List_Invariant(Machine(FILE))==(btrue);
-  List_Invariant(Machine(FILE))==(file: seq(1..4 --> 0..10000) & size(file)<=max_rec)
+  List_Invariant(Machine(FILE))==(file: seq(0..4 --> 0..10000) & size(file)<=max_rec)
 END
 &
 THEORY ListAssertionsX IS
@@ -121,20 +121,20 @@ END
 THEORY ListOperationGuardX END
 &
 THEORY ListPreconditionX IS
-  List_Precondition(Machine(FILE),val_file)==(oo: NAT & oo: dom(file) & ii: 1..4);
-  List_Precondition(Machine(FILE),mod_file)==(oo: NAT & oo: dom(file) & ii: 1..4 & vv: 0..10000);
+  List_Precondition(Machine(FILE),val_file)==(oo: NAT & oo: dom(file) & ii: 0..4);
+  List_Precondition(Machine(FILE),mod_file)==(oo: NAT & oo: dom(file) & ii: 0..4 & vv: 0..10000);
   List_Precondition(Machine(FILE),create_record)==(vv: 0..10000 & size(file)<max_rec);
   List_Precondition(Machine(FILE),size_file)==(btrue)
 END
 &
 THEORY ListSubstitutionX IS
   Expanded_List_Substitution(Machine(FILE),size_file)==(btrue | vv:=size(file));
-  Expanded_List_Substitution(Machine(FILE),create_record)==(vv: 0..10000 & size(file)<max_rec | file,oo:=file<-(1..4)*{vv},size(file)+1);
-  Expanded_List_Substitution(Machine(FILE),mod_file)==(oo: NAT & oo: dom(file) & ii: 1..4 & vv: 0..10000 | file:=file<+{oo|->(file(oo)<+{ii|->vv})});
-  Expanded_List_Substitution(Machine(FILE),val_file)==(oo: NAT & oo: dom(file) & ii: 1..4 | vv:=file(oo)(ii));
+  Expanded_List_Substitution(Machine(FILE),create_record)==(vv: 0..10000 & size(file)<max_rec | file,oo:=file<-(0..4)*{vv},size(file)+1);
+  Expanded_List_Substitution(Machine(FILE),mod_file)==(oo: NAT & oo: dom(file) & ii: 0..4 & vv: 0..10000 | file:=file<+{oo|->(file(oo)<+{ii|->vv})});
+  Expanded_List_Substitution(Machine(FILE),val_file)==(oo: NAT & oo: dom(file) & ii: 0..4 | vv:=file(oo)(ii));
   List_Substitution(Machine(FILE),val_file)==(vv:=file(oo)(ii));
   List_Substitution(Machine(FILE),mod_file)==(file(oo)(ii):=vv);
-  List_Substitution(Machine(FILE),create_record)==(file:=file<-(1..4)*{vv} || oo:=size(file)+1);
+  List_Substitution(Machine(FILE),create_record)==(file:=file<-(0..4)*{vv} || oo:=size(file)+1);
   List_Substitution(Machine(FILE),size_file)==(vv:=size(file))
 END
 &

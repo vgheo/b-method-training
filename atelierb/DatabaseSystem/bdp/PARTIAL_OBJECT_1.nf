@@ -51,7 +51,7 @@ END
 THEORY ListInvariantX IS
   Gluing_Seen_List_Invariant(Implementation(PARTIAL_OBJECT_1))==(btrue);
   Abstract_List_Invariant(Implementation(PARTIAL_OBJECT_1))==(partial_object: 0..max_obj & partial_field: 1..max_field --> (1..partial_object +-> min_val..max_val));
-  Expanded_List_Invariant(Implementation(PARTIAL_OBJECT_1))==(total_object: 0..max_obj & total_field: 1..4 --> (1..total_object --> 0..10000));
+  Expanded_List_Invariant(Implementation(PARTIAL_OBJECT_1))==(total_object: 0..max_obj & total_field: 0..4 --> (1..total_object --> 0..10000));
   Context_List_Invariant(Implementation(PARTIAL_OBJECT_1))==(btrue);
   List_Invariant(Implementation(PARTIAL_OBJECT_1))==(partial_object = total_object & !ii.(ii: 1..max_field => partial_field(ii) = total_field(ii)|>>{MAXINT}))
 END
@@ -72,7 +72,7 @@ THEORY ListExclusivityX IS
 END
 &
 THEORY ListInitialisationX IS
-  Expanded_List_Initialisation(Implementation(PARTIAL_OBJECT_1))==(total_object,total_field:=0,(1..4)*{{}});
+  Expanded_List_Initialisation(Implementation(PARTIAL_OBJECT_1))==(total_object,total_field:=0,(0..4)*{{}});
   Context_List_Initialisation(Implementation(PARTIAL_OBJECT_1))==(skip);
   List_Initialisation(Implementation(PARTIAL_OBJECT_1))==(skip)
 END
@@ -127,10 +127,10 @@ END
 THEORY ListPreconditionX IS
   Own_Precondition(Implementation(PARTIAL_OBJECT_1),nbr_object)==(btrue);
   List_Precondition(Implementation(PARTIAL_OBJECT_1),nbr_object)==(btrue);
-  Own_Precondition(Implementation(PARTIAL_OBJECT_1),val_field)==(ii: 1..4 & oo: 1..total_object);
-  List_Precondition(Implementation(PARTIAL_OBJECT_1),val_field)==(ii: 1..4 & oo: 1..total_object);
-  Own_Precondition(Implementation(PARTIAL_OBJECT_1),mod_field)==(ii: 1..4 & oo: 1..total_object & vv: 0..10000);
-  List_Precondition(Implementation(PARTIAL_OBJECT_1),mod_field)==(ii: 1..4 & oo: 1..total_object & vv: 0..10000);
+  Own_Precondition(Implementation(PARTIAL_OBJECT_1),val_field)==(ii: 0..4 & oo: 1..total_object);
+  List_Precondition(Implementation(PARTIAL_OBJECT_1),val_field)==(ii: 0..4 & oo: 1..total_object);
+  Own_Precondition(Implementation(PARTIAL_OBJECT_1),mod_field)==(ii: 0..4 & oo: 1..total_object & vv: 0..10000);
+  List_Precondition(Implementation(PARTIAL_OBJECT_1),mod_field)==(ii: 0..4 & oo: 1..total_object & vv: 0..10000);
   Own_Precondition(Implementation(PARTIAL_OBJECT_1),create_partial_object)==(btrue);
   List_Precondition(Implementation(PARTIAL_OBJECT_1),create_partial_object)==(partial_object/=max_obj);
   Own_Precondition(Implementation(PARTIAL_OBJECT_1),rem_field)==(btrue);
@@ -140,15 +140,15 @@ THEORY ListPreconditionX IS
 END
 &
 THEORY ListSubstitutionX IS
-  Expanded_List_Substitution(Implementation(PARTIAL_OBJECT_1),def_field)==(ii: 1..max_field & oo: 1..partial_object | @ww.((ii: 1..4 & oo: 1..total_object | ww:=total_field(ii)(oo));vv:=bool(ww/=MAXINT)));
-  Expanded_List_Substitution(Implementation(PARTIAL_OBJECT_1),rem_field)==(ii: 1..max_field & oo: 1..partial_object & ii: 1..4 & oo: 1..total_object & MAXINT: 0..10000 | total_field:=total_field<+{ii|->(total_field(ii)<+{oo|->MAXINT})});
-  Expanded_List_Substitution(Implementation(PARTIAL_OBJECT_1),create_partial_object)==(partial_object/=max_obj & 2147483647: 0..10000 & total_object/=max_obj | total_object,total_field,oo:=total_object+1,%ii.(ii: 1..4 | total_field(ii)\/{total_object+1|->2147483647}),total_object+1);
+  Expanded_List_Substitution(Implementation(PARTIAL_OBJECT_1),def_field)==(ii: 1..max_field & oo: 1..partial_object | @ww.((ii: 0..4 & oo: 1..total_object | ww:=total_field(ii)(oo));vv:=bool(ww/=MAXINT)));
+  Expanded_List_Substitution(Implementation(PARTIAL_OBJECT_1),rem_field)==(ii: 1..max_field & oo: 1..partial_object & ii: 0..4 & oo: 1..total_object & MAXINT: 0..10000 | total_field:=total_field<+{ii|->(total_field(ii)<+{oo|->MAXINT})});
+  Expanded_List_Substitution(Implementation(PARTIAL_OBJECT_1),create_partial_object)==(partial_object/=max_obj & 2147483647: 0..10000 & total_object/=max_obj | total_object,total_field,oo:=total_object+1,%ii.(ii: 0..4 | total_field(ii)\/{total_object+1|->2147483647}),total_object+1);
   List_Substitution(Implementation(PARTIAL_OBJECT_1),nbr_object)==(vv:=total_object);
   Expanded_List_Substitution(Implementation(PARTIAL_OBJECT_1),nbr_object)==(btrue | vv:=total_object);
   List_Substitution(Implementation(PARTIAL_OBJECT_1),val_field)==(vv:=total_field(ii)(oo));
-  Expanded_List_Substitution(Implementation(PARTIAL_OBJECT_1),val_field)==(ii: 1..4 & oo: 1..total_object | vv:=total_field(ii)(oo));
+  Expanded_List_Substitution(Implementation(PARTIAL_OBJECT_1),val_field)==(ii: 0..4 & oo: 1..total_object | vv:=total_field(ii)(oo));
   List_Substitution(Implementation(PARTIAL_OBJECT_1),mod_field)==(total_field(ii)(oo):=vv);
-  Expanded_List_Substitution(Implementation(PARTIAL_OBJECT_1),mod_field)==(ii: 1..4 & oo: 1..total_object & vv: 0..10000 | total_field:=total_field<+{ii|->(total_field(ii)<+{oo|->vv})});
+  Expanded_List_Substitution(Implementation(PARTIAL_OBJECT_1),mod_field)==(ii: 0..4 & oo: 1..total_object & vv: 0..10000 | total_field:=total_field<+{ii|->(total_field(ii)<+{oo|->vv})});
   List_Substitution(Implementation(PARTIAL_OBJECT_1),create_partial_object)==(oo <-- create_total_object(2147483647));
   List_Substitution(Implementation(PARTIAL_OBJECT_1),rem_field)==(mod_field(ii,oo,MAXINT));
   List_Substitution(Implementation(PARTIAL_OBJECT_1),def_field)==(VAR ww IN ww <-- val_field(ii,oo);vv:=bool(ww/=MAXINT) END)

@@ -50,10 +50,10 @@ END
 &
 THEORY ListInvariantX IS
   Gluing_Seen_List_Invariant(Implementation(TOTAL_OBJECT_1))==(btrue);
-  Abstract_List_Invariant(Implementation(TOTAL_OBJECT_1))==(total_object: 0..max_obj & total_field: 1..4 --> (1..total_object --> 0..10000));
-  Expanded_List_Invariant(Implementation(TOTAL_OBJECT_1))==(file: seq(1..4 --> 0..10000) & size(file)<=max_obj);
+  Abstract_List_Invariant(Implementation(TOTAL_OBJECT_1))==(total_object: 0..max_obj & total_field: 0..4 --> (1..total_object --> 0..10000));
+  Expanded_List_Invariant(Implementation(TOTAL_OBJECT_1))==(file: seq(0..4 --> 0..10000) & size(file)<=max_obj);
   Context_List_Invariant(Implementation(TOTAL_OBJECT_1))==(btrue);
-  List_Invariant(Implementation(TOTAL_OBJECT_1))==(file = %oo.(oo: 1..total_object | %ii.(ii: 1..4 | total_field(ii)(oo))))
+  List_Invariant(Implementation(TOTAL_OBJECT_1))==(file = %oo.(oo: 1..total_object | %ii.(ii: 0..4 | total_field(ii)(oo))))
 END
 &
 THEORY ListAssertionsX IS
@@ -122,18 +122,18 @@ THEORY ListPreconditionX IS
   Own_Precondition(Implementation(TOTAL_OBJECT_1),create_total_object)==(btrue);
   List_Precondition(Implementation(TOTAL_OBJECT_1),create_total_object)==(vv: 0..10000 & total_object/=max_obj);
   Own_Precondition(Implementation(TOTAL_OBJECT_1),mod_field)==(btrue);
-  List_Precondition(Implementation(TOTAL_OBJECT_1),mod_field)==(ii: 1..4 & oo: 1..total_object & vv: 0..10000);
+  List_Precondition(Implementation(TOTAL_OBJECT_1),mod_field)==(ii: 0..4 & oo: 1..total_object & vv: 0..10000);
   Own_Precondition(Implementation(TOTAL_OBJECT_1),val_field)==(btrue);
-  List_Precondition(Implementation(TOTAL_OBJECT_1),val_field)==(ii: 1..4 & oo: 1..total_object);
+  List_Precondition(Implementation(TOTAL_OBJECT_1),val_field)==(ii: 0..4 & oo: 1..total_object);
   Own_Precondition(Implementation(TOTAL_OBJECT_1),nbr_object)==(btrue);
   List_Precondition(Implementation(TOTAL_OBJECT_1),nbr_object)==(btrue)
 END
 &
 THEORY ListSubstitutionX IS
   Expanded_List_Substitution(Implementation(TOTAL_OBJECT_1),nbr_object)==(btrue | vv:=size(file));
-  Expanded_List_Substitution(Implementation(TOTAL_OBJECT_1),val_field)==(ii: 1..4 & oo: 1..total_object & oo: NAT & oo: dom(file) & ii: 1..4 | vv:=file(oo)(ii));
-  Expanded_List_Substitution(Implementation(TOTAL_OBJECT_1),mod_field)==(ii: 1..4 & oo: 1..total_object & vv: 0..10000 & oo: NAT & oo: dom(file) & ii: 1..4 & vv: 0..10000 | file:=file<+{oo|->(file(oo)<+{ii|->vv})});
-  Expanded_List_Substitution(Implementation(TOTAL_OBJECT_1),create_total_object)==(vv: 0..10000 & total_object/=max_obj & vv: 0..10000 & size(file)<max_obj | file,oo:=file<-(1..4)*{vv},size(file)+1);
+  Expanded_List_Substitution(Implementation(TOTAL_OBJECT_1),val_field)==(ii: 0..4 & oo: 1..total_object & oo: NAT & oo: dom(file) & ii: 0..4 | vv:=file(oo)(ii));
+  Expanded_List_Substitution(Implementation(TOTAL_OBJECT_1),mod_field)==(ii: 0..4 & oo: 1..total_object & vv: 0..10000 & oo: NAT & oo: dom(file) & ii: 0..4 & vv: 0..10000 | file:=file<+{oo|->(file(oo)<+{ii|->vv})});
+  Expanded_List_Substitution(Implementation(TOTAL_OBJECT_1),create_total_object)==(vv: 0..10000 & total_object/=max_obj & vv: 0..10000 & size(file)<max_obj | file,oo:=file<-(0..4)*{vv},size(file)+1);
   List_Substitution(Implementation(TOTAL_OBJECT_1),create_total_object)==(oo <-- create_record(vv));
   List_Substitution(Implementation(TOTAL_OBJECT_1),mod_field)==(mod_file(oo,ii,vv));
   List_Substitution(Implementation(TOTAL_OBJECT_1),val_field)==(vv <-- val_file(oo,ii));

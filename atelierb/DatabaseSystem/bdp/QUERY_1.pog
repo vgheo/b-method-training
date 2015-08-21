@@ -4031,7 +4031,7 @@
 </Exp_Comparison>
 </Binary_Pred>
 </Goal>
-<Proof_State proofState="Unproved" methodList="?" passList="Force(0),(?; 0; 1; 2; 3)"/>
+<Proof_State proofState="Unproved" methodList="pr" passList="Force(0),(?; 0; 1; 2; 3)"/>
 </Simple_Goal>
 <Simple_Goal merge="11">
 <Tag>Refinement is correct</Tag>
@@ -4128,7 +4128,7 @@
 </Exp_Comparison>
 </Binary_Pred>
 </Goal>
-<Proof_State proofState="Unproved" methodList="?" passList="Force(0),(?; 0; 1; 2; 3)"/>
+<Proof_State proofState="Unproved" methodList="pr" passList="Force(0),(?; 0; 1; 2; 3)"/>
 </Simple_Goal>
 <Simple_Goal merge="11">
 <Tag>Refinement is correct</Tag>
@@ -4249,7 +4249,7 @@
 </Exp_Comparison>
 </Binary_Pred>
 </Goal>
-<Proof_State proofState="Unproved" methodList="?" passList="Force(0),(?; 0; 1; 2; 3)"/>
+<Proof_State proofState="Unproved" methodList="pr" passList="Force(0),(?; 0; 1; 2; 3)"/>
 </Simple_Goal>
 <Simple_Goal merge="11">
 <Tag>Refinement is correct</Tag>
@@ -4346,7 +4346,7 @@
 </Exp_Comparison>
 </Binary_Pred>
 </Goal>
-<Proof_State proofState="Unproved" methodList="?" passList="Force(0),(?; 0; 1; 2; 3)"/>
+<Proof_State proofState="Unproved" methodList="pr" passList="Force(0),(?; 0; 1; 2; 3)"/>
 </Simple_Goal>
 <Simple_Goal merge="11">
 <Tag>Refinement is correct</Tag>
@@ -4490,7 +4490,7 @@
 </Exp_Comparison>
 </Binary_Pred>
 </Goal>
-<Proof_State proofState="Unproved" methodList="?" passList="Force(0),(?; 0; 1; 2; 3)"/>
+<Proof_State proofState="Unproved" methodList="pr" passList="Force(0),(?; 0; 1; 2; 3)"/>
 </Simple_Goal>
 <Simple_Goal merge="11">
 <Tag>Refinement is correct</Tag>
@@ -4587,7 +4587,7 @@
 </Exp_Comparison>
 </Binary_Pred>
 </Goal>
-<Proof_State proofState="Unproved" methodList="?" passList="Force(0),(?; 0; 1; 2; 3)"/>
+<Proof_State proofState="Unproved" methodList="pr" passList="Force(0),(?; 0; 1; 2; 3)"/>
 </Simple_Goal>
 <Simple_Goal merge="11">
 <Tag>Refinement is correct</Tag>
@@ -4708,7 +4708,7 @@
 </Exp_Comparison>
 </Binary_Pred>
 </Goal>
-<Proof_State proofState="Unproved" methodList="?" passList="Force(0),(?; 0; 1; 2; 3)"/>
+<Proof_State proofState="Unproved" methodList="pr" passList="Force(0),(?; 0; 1; 2; 3)"/>
 </Simple_Goal>
 <Simple_Goal merge="11">
 <Tag>Refinement is correct</Tag>
@@ -4805,7 +4805,7 @@
 </Exp_Comparison>
 </Binary_Pred>
 </Goal>
-<Proof_State proofState="Unproved" methodList="?" passList="Force(0),(?; 0; 1; 2; 3)"/>
+<Proof_State proofState="Unproved" methodList="pr" passList="Force(0),(?; 0; 1; 2; 3)"/>
 </Simple_Goal>
 <Simple_Goal merge="11">
 <Tag>Refinement is correct</Tag>
@@ -4971,7 +4971,7 @@
 </Exp_Comparison>
 </Binary_Pred>
 </Goal>
-<Proof_State proofState="Unproved" methodList="?" passList="Force(0),(?; 0; 1; 2; 3)"/>
+<Proof_State proofState="Unproved" methodList="pr" passList="Force(0),(?; 0; 1; 2; 3)"/>
 </Simple_Goal>
 <Simple_Goal merge="11">
 <Tag>Refinement is correct</Tag>
@@ -5068,7 +5068,7 @@
 </Exp_Comparison>
 </Binary_Pred>
 </Goal>
-<Proof_State proofState="Unproved" methodList="?" passList="Force(0),(?; 0; 1; 2; 3)"/>
+<Proof_State proofState="Unproved" methodList="pr" passList="Force(0),(?; 0; 1; 2; 3)"/>
 </Simple_Goal>
 <Simple_Goal merge="11">
 <Tag>Refinement is correct</Tag>
@@ -5189,7 +5189,7 @@
 </Exp_Comparison>
 </Binary_Pred>
 </Goal>
-<Proof_State proofState="Unproved" methodList="?" passList="Force(0),(?; 0; 1; 2; 3)"/>
+<Proof_State proofState="Unproved" methodList="pr" passList="Force(0),(?; 0; 1; 2; 3)"/>
 </Simple_Goal>
 <Simple_Goal merge="11">
 <Tag>Refinement is correct</Tag>
@@ -5286,7 +5286,7 @@
 </Exp_Comparison>
 </Binary_Pred>
 </Goal>
-<Proof_State proofState="Unproved" methodList="?" passList="Force(0),(?; 0; 1; 2; 3)"/>
+<Proof_State proofState="Unproved" methodList="pr" passList="Force(0),(?; 0; 1; 2; 3)"/>
 </Simple_Goal>
 <Simple_Goal merge="11">
 <Tag>Refinement is correct</Tag>
@@ -5430,7 +5430,7 @@
 </Exp_Comparison>
 </Binary_Pred>
 </Goal>
-<Proof_State proofState="Unproved" methodList="?" passList="Force(0),(?; 0; 1; 2; 3)"/>
+<Proof_State proofState="Unproved" methodList="pr" passList="Force(0),(?; 0; 1; 2; 3)"/>
 </Simple_Goal>
 <Simple_Goal merge="11">
 <Tag>Refinement is correct</Tag>
@@ -5527,7 +5527,7 @@
 </Exp_Comparison>
 </Binary_Pred>
 </Goal>
-<Proof_State proofState="Unproved" methodList="?" passList="Force(0),(?; 0; 1; 2; 3)"/>
+<Proof_State proofState="Unproved" methodList="pr" passList="Force(0),(?; 0; 1; 2; 3)"/>
 </Simple_Goal>
 <Simple_Goal merge="11">
 <Tag>Refinement is correct</Tag>
@@ -5648,7 +5648,7 @@
 </Exp_Comparison>
 </Binary_Pred>
 </Goal>
-<Proof_State proofState="Unproved" methodList="?" passList="Force(0),(?; 0; 1; 2; 3)"/>
+<Proof_State proofState="Unproved" methodList="pr" passList="Force(0),(?; 0; 1; 2; 3)"/>
 </Simple_Goal>
 <Simple_Goal merge="11">
 <Tag>Refinement is correct</Tag>
@@ -5745,7 +5745,7 @@
 </Exp_Comparison>
 </Binary_Pred>
 </Goal>
-<Proof_State proofState="Unproved" methodList="?" passList="Force(0),(?; 0; 1; 2; 3)"/>
+<Proof_State proofState="Unproved" methodList="pr" passList="Force(0),(?; 0; 1; 2; 3)"/>
 </Simple_Goal>
 <Simple_Goal merge="11">
 <Tag>Refinement is correct</Tag>
@@ -5838,7 +5838,7 @@
 </Exp_Comparison>
 </Binary_Pred>
 </Goal>
-<Proof_State proofState="Unproved" methodList="?" passList="Force(0),(?; 0; 1; 2; 3)"/>
+<Proof_State proofState="Unproved" methodList="pr" passList="Force(0),(?; 0; 1; 2; 3)"/>
 </Simple_Goal>
 <Simple_Goal merge="11">
 <Tag>Refinement is correct</Tag>
@@ -6057,7 +6057,7 @@
 </Exp_Comparison>
 </Binary_Pred>
 </Goal>
-<Proof_State proofState="Unproved" methodList="?" passList="Force(0),(?; 0; 1; 2; 3)"/>
+<Proof_State proofState="Unproved" methodList="pr" passList="Force(0),(?; 0; 1; 2; 3)"/>
 </Simple_Goal>
 <Simple_Goal merge="11">
 <Tag>Refinement is correct</Tag>
@@ -6154,7 +6154,7 @@
 </Exp_Comparison>
 </Binary_Pred>
 </Goal>
-<Proof_State proofState="Unproved" methodList="?" passList="Force(0),(?; 0; 1; 2; 3)"/>
+<Proof_State proofState="Unproved" methodList="pr" passList="Force(0),(?; 0; 1; 2; 3)"/>
 </Simple_Goal>
 <Simple_Goal merge="11">
 <Tag>Refinement is correct</Tag>
@@ -6275,7 +6275,7 @@
 </Exp_Comparison>
 </Binary_Pred>
 </Goal>
-<Proof_State proofState="Unproved" methodList="?" passList="Force(0),(?; 0; 1; 2; 3)"/>
+<Proof_State proofState="Unproved" methodList="pr" passList="Force(0),(?; 0; 1; 2; 3)"/>
 </Simple_Goal>
 <Simple_Goal merge="11">
 <Tag>Refinement is correct</Tag>
@@ -6372,7 +6372,7 @@
 </Exp_Comparison>
 </Binary_Pred>
 </Goal>
-<Proof_State proofState="Unproved" methodList="?" passList="Force(0),(?; 0; 1; 2; 3)"/>
+<Proof_State proofState="Unproved" methodList="pr" passList="Force(0),(?; 0; 1; 2; 3)"/>
 </Simple_Goal>
 <Simple_Goal merge="11">
 <Tag>Refinement is correct</Tag>
@@ -6516,7 +6516,7 @@
 </Exp_Comparison>
 </Binary_Pred>
 </Goal>
-<Proof_State proofState="Unproved" methodList="?" passList="Force(0),(?; 0; 1; 2; 3)"/>
+<Proof_State proofState="Unproved" methodList="pr" passList="Force(0),(?; 0; 1; 2; 3)"/>
 </Simple_Goal>
 <Simple_Goal merge="11">
 <Tag>Refinement is correct</Tag>
@@ -6613,7 +6613,7 @@
 </Exp_Comparison>
 </Binary_Pred>
 </Goal>
-<Proof_State proofState="Unproved" methodList="?" passList="Force(0),(?; 0; 1; 2; 3)"/>
+<Proof_State proofState="Unproved" methodList="pr" passList="Force(0),(?; 0; 1; 2; 3)"/>
 </Simple_Goal>
 <Simple_Goal merge="11">
 <Tag>Refinement is correct</Tag>
@@ -6734,7 +6734,7 @@
 </Exp_Comparison>
 </Binary_Pred>
 </Goal>
-<Proof_State proofState="Unproved" methodList="?" passList="Force(0),(?; 0; 1; 2; 3)"/>
+<Proof_State proofState="Unproved" methodList="pr" passList="Force(0),(?; 0; 1; 2; 3)"/>
 </Simple_Goal>
 <Simple_Goal merge="11">
 <Tag>Refinement is correct</Tag>
@@ -6831,7 +6831,7 @@
 </Exp_Comparison>
 </Binary_Pred>
 </Goal>
-<Proof_State proofState="Unproved" methodList="?" passList="Force(0),(?; 0; 1; 2; 3)"/>
+<Proof_State proofState="Unproved" methodList="pr" passList="Force(0),(?; 0; 1; 2; 3)"/>
 </Simple_Goal>
 <Simple_Goal merge="11">
 <Tag>Refinement is correct</Tag>
@@ -6997,7 +6997,7 @@
 </Exp_Comparison>
 </Binary_Pred>
 </Goal>
-<Proof_State proofState="Unproved" methodList="?" passList="Force(0),(?; 0; 1; 2; 3)"/>
+<Proof_State proofState="Unproved" methodList="pr" passList="Force(0),(?; 0; 1; 2; 3)"/>
 </Simple_Goal>
 <Simple_Goal merge="11">
 <Tag>Refinement is correct</Tag>
@@ -7094,7 +7094,7 @@
 </Exp_Comparison>
 </Binary_Pred>
 </Goal>
-<Proof_State proofState="Unproved" methodList="?" passList="Force(0),(?; 0; 1; 2; 3)"/>
+<Proof_State proofState="Unproved" methodList="pr" passList="Force(0),(?; 0; 1; 2; 3)"/>
 </Simple_Goal>
 <Simple_Goal merge="11">
 <Tag>Refinement is correct</Tag>
@@ -7215,7 +7215,7 @@
 </Exp_Comparison>
 </Binary_Pred>
 </Goal>
-<Proof_State proofState="Unproved" methodList="?" passList="Force(0),(?; 0; 1; 2; 3)"/>
+<Proof_State proofState="Unproved" methodList="pr" passList="Force(0),(?; 0; 1; 2; 3)"/>
 </Simple_Goal>
 <Simple_Goal merge="11">
 <Tag>Refinement is correct</Tag>
@@ -7312,7 +7312,7 @@
 </Exp_Comparison>
 </Binary_Pred>
 </Goal>
-<Proof_State proofState="Unproved" methodList="?" passList="Force(0),(?; 0; 1; 2; 3)"/>
+<Proof_State proofState="Unproved" methodList="pr" passList="Force(0),(?; 0; 1; 2; 3)"/>
 </Simple_Goal>
 <Simple_Goal merge="11">
 <Tag>Refinement is correct</Tag>
@@ -7456,7 +7456,7 @@
 </Exp_Comparison>
 </Binary_Pred>
 </Goal>
-<Proof_State proofState="Unproved" methodList="?" passList="Force(0),(?; 0; 1; 2; 3)"/>
+<Proof_State proofState="Unproved" methodList="pr" passList="Force(0),(?; 0; 1; 2; 3)"/>
 </Simple_Goal>
 <Simple_Goal merge="11">
 <Tag>Refinement is correct</Tag>
@@ -7553,7 +7553,7 @@
 </Exp_Comparison>
 </Binary_Pred>
 </Goal>
-<Proof_State proofState="Unproved" methodList="?" passList="Force(0),(?; 0; 1; 2; 3)"/>
+<Proof_State proofState="Unproved" methodList="pr" passList="Force(0),(?; 0; 1; 2; 3)"/>
 </Simple_Goal>
 <Simple_Goal merge="11">
 <Tag>Refinement is correct</Tag>
@@ -7674,7 +7674,7 @@
 </Exp_Comparison>
 </Binary_Pred>
 </Goal>
-<Proof_State proofState="Unproved" methodList="?" passList="Force(0),(?; 0; 1; 2; 3)"/>
+<Proof_State proofState="Unproved" methodList="pr" passList="Force(0),(?; 0; 1; 2; 3)"/>
 </Simple_Goal>
 <Simple_Goal merge="11">
 <Tag>Refinement is correct</Tag>
@@ -7771,7 +7771,7 @@
 </Exp_Comparison>
 </Binary_Pred>
 </Goal>
-<Proof_State proofState="Unproved" methodList="?" passList="Force(0),(?; 0; 1; 2; 3)"/>
+<Proof_State proofState="Unproved" methodList="pr" passList="Force(0),(?; 0; 1; 2; 3)"/>
 </Simple_Goal>
 <Simple_Goal merge="11">
 <Tag>Refinement is correct</Tag>
@@ -7864,7 +7864,7 @@
 </Exp_Comparison>
 </Binary_Pred>
 </Goal>
-<Proof_State proofState="Unproved" methodList="?" passList="Force(0),(?; 0; 1; 2; 3)"/>
+<Proof_State proofState="Unproved" methodList="pr" passList="Force(0),(?; 0; 1; 2; 3)"/>
 </Simple_Goal>
 <Simple_Goal merge="11">
 <Tag>Refinement is correct</Tag>
@@ -8102,7 +8102,7 @@
 </Exp_Comparison>
 </Binary_Pred>
 </Goal>
-<Proof_State proofState="Unproved" methodList="?" passList="Force(0),(?; 0; 1; 2; 3)"/>
+<Proof_State proofState="Unproved" methodList="pr" passList="Force(0),(?; 0; 1; 2; 3)"/>
 </Simple_Goal>
 <Simple_Goal merge="11">
 <Tag>Refinement is correct</Tag>
@@ -8199,7 +8199,7 @@
 </Exp_Comparison>
 </Binary_Pred>
 </Goal>
-<Proof_State proofState="Unproved" methodList="?" passList="Force(0),(?; 0; 1; 2; 3)"/>
+<Proof_State proofState="Unproved" methodList="pr" passList="Force(0),(?; 0; 1; 2; 3)"/>
 </Simple_Goal>
 <Simple_Goal merge="11">
 <Tag>Refinement is correct</Tag>
@@ -8320,7 +8320,7 @@
 </Exp_Comparison>
 </Binary_Pred>
 </Goal>
-<Proof_State proofState="Unproved" methodList="?" passList="Force(0),(?; 0; 1; 2; 3)"/>
+<Proof_State proofState="Unproved" methodList="pr" passList="Force(0),(?; 0; 1; 2; 3)"/>
 </Simple_Goal>
 <Simple_Goal merge="11">
 <Tag>Refinement is correct</Tag>
@@ -8417,7 +8417,7 @@
 </Exp_Comparison>
 </Binary_Pred>
 </Goal>
-<Proof_State proofState="Unproved" methodList="?" passList="Force(0),(?; 0; 1; 2; 3)"/>
+<Proof_State proofState="Unproved" methodList="pr" passList="Force(0),(?; 0; 1; 2; 3)"/>
 </Simple_Goal>
 <Simple_Goal merge="11">
 <Tag>Refinement is correct</Tag>
@@ -8561,7 +8561,7 @@
 </Exp_Comparison>
 </Binary_Pred>
 </Goal>
-<Proof_State proofState="Unproved" methodList="?" passList="Force(0),(?; 0; 1; 2; 3)"/>
+<Proof_State proofState="Unproved" methodList="pr" passList="Force(0),(?; 0; 1; 2; 3)"/>
 </Simple_Goal>
 <Simple_Goal merge="11">
 <Tag>Refinement is correct</Tag>
@@ -8658,7 +8658,7 @@
 </Exp_Comparison>
 </Binary_Pred>
 </Goal>
-<Proof_State proofState="Unproved" methodList="?" passList="Force(0),(?; 0; 1; 2; 3)"/>
+<Proof_State proofState="Unproved" methodList="pr" passList="Force(0),(?; 0; 1; 2; 3)"/>
 </Simple_Goal>
 <Simple_Goal merge="11">
 <Tag>Refinement is correct</Tag>
@@ -8779,7 +8779,7 @@
 </Exp_Comparison>
 </Binary_Pred>
 </Goal>
-<Proof_State proofState="Unproved" methodList="?" passList="Force(0),(?; 0; 1; 2; 3)"/>
+<Proof_State proofState="Unproved" methodList="pr" passList="Force(0),(?; 0; 1; 2; 3)"/>
 </Simple_Goal>
 <Simple_Goal merge="11">
 <Tag>Refinement is correct</Tag>
@@ -8876,7 +8876,7 @@
 </Exp_Comparison>
 </Binary_Pred>
 </Goal>
-<Proof_State proofState="Unproved" methodList="?" passList="Force(0),(?; 0; 1; 2; 3)"/>
+<Proof_State proofState="Unproved" methodList="pr" passList="Force(0),(?; 0; 1; 2; 3)"/>
 </Simple_Goal>
 <Simple_Goal merge="11">
 <Tag>Refinement is correct</Tag>
@@ -9042,7 +9042,7 @@
 </Exp_Comparison>
 </Binary_Pred>
 </Goal>
-<Proof_State proofState="Unproved" methodList="?" passList="Force(0),(?; 0; 1; 2; 3)"/>
+<Proof_State proofState="Unproved" methodList="pr" passList="Force(0),(?; 0; 1; 2; 3)"/>
 </Simple_Goal>
 <Simple_Goal merge="11">
 <Tag>Refinement is correct</Tag>
@@ -9139,7 +9139,7 @@
 </Exp_Comparison>
 </Binary_Pred>
 </Goal>
-<Proof_State proofState="Unproved" methodList="?" passList="Force(0),(?; 0; 1; 2; 3)"/>
+<Proof_State proofState="Unproved" methodList="pr" passList="Force(0),(?; 0; 1; 2; 3)"/>
 </Simple_Goal>
 <Simple_Goal merge="11">
 <Tag>Refinement is correct</Tag>
@@ -9260,7 +9260,7 @@
 </Exp_Comparison>
 </Binary_Pred>
 </Goal>
-<Proof_State proofState="Unproved" methodList="?" passList="Force(0),(?; 0; 1; 2; 3)"/>
+<Proof_State proofState="Unproved" methodList="pr" passList="Force(0),(?; 0; 1; 2; 3)"/>
 </Simple_Goal>
 <Simple_Goal merge="11">
 <Tag>Refinement is correct</Tag>
@@ -9357,7 +9357,7 @@
 </Exp_Comparison>
 </Binary_Pred>
 </Goal>
-<Proof_State proofState="Unproved" methodList="?" passList="Force(0),(?; 0; 1; 2; 3)"/>
+<Proof_State proofState="Unproved" methodList="pr" passList="Force(0),(?; 0; 1; 2; 3)"/>
 </Simple_Goal>
 <Simple_Goal merge="11">
 <Tag>Refinement is correct</Tag>
@@ -9501,7 +9501,7 @@
 </Exp_Comparison>
 </Binary_Pred>
 </Goal>
-<Proof_State proofState="Unproved" methodList="?" passList="Force(0),(?; 0; 1; 2; 3)"/>
+<Proof_State proofState="Unproved" methodList="pr" passList="Force(0),(?; 0; 1; 2; 3)"/>
 </Simple_Goal>
 <Simple_Goal merge="11">
 <Tag>Refinement is correct</Tag>
@@ -9598,7 +9598,7 @@
 </Exp_Comparison>
 </Binary_Pred>
 </Goal>
-<Proof_State proofState="Unproved" methodList="?" passList="Force(0),(?; 0; 1; 2; 3)"/>
+<Proof_State proofState="Unproved" methodList="pr" passList="Force(0),(?; 0; 1; 2; 3)"/>
 </Simple_Goal>
 <Simple_Goal merge="11">
 <Tag>Refinement is correct</Tag>
@@ -9719,7 +9719,7 @@
 </Exp_Comparison>
 </Binary_Pred>
 </Goal>
-<Proof_State proofState="Unproved" methodList="?" passList="Force(0),(?; 0; 1; 2; 3)"/>
+<Proof_State proofState="Unproved" methodList="pr" passList="Force(0),(?; 0; 1; 2; 3)"/>
 </Simple_Goal>
 <Simple_Goal merge="11">
 <Tag>Refinement is correct</Tag>
@@ -9816,7 +9816,7 @@
 </Exp_Comparison>
 </Binary_Pred>
 </Goal>
-<Proof_State proofState="Unproved" methodList="?" passList="Force(0),(?; 0; 1; 2; 3)"/>
+<Proof_State proofState="Unproved" methodList="pr" passList="Force(0),(?; 0; 1; 2; 3)"/>
 </Simple_Goal>
 <Simple_Goal merge="11">
 <Tag>Refinement is correct</Tag>
@@ -9909,7 +9909,7 @@
 </Exp_Comparison>
 </Binary_Pred>
 </Goal>
-<Proof_State proofState="Unproved" methodList="?" passList="Force(0),(?; 0; 1; 2; 3)"/>
+<Proof_State proofState="Unproved" methodList="pr" passList="Force(0),(?; 0; 1; 2; 3)"/>
 </Simple_Goal>
 <Simple_Goal merge="11">
 <Tag>Refinement is correct</Tag>
@@ -10128,7 +10128,7 @@
 </Exp_Comparison>
 </Binary_Pred>
 </Goal>
-<Proof_State proofState="Unproved" methodList="?" passList="Force(0),(?; 0; 1; 2; 3)"/>
+<Proof_State proofState="Unproved" methodList="pr" passList="Force(0),(?; 0; 1; 2; 3)"/>
 </Simple_Goal>
 <Simple_Goal merge="11">
 <Tag>Refinement is correct</Tag>
@@ -10225,7 +10225,7 @@
 </Exp_Comparison>
 </Binary_Pred>
 </Goal>
-<Proof_State proofState="Unproved" methodList="?" passList="Force(0),(?; 0; 1; 2; 3)"/>
+<Proof_State proofState="Unproved" methodList="pr" passList="Force(0),(?; 0; 1; 2; 3)"/>
 </Simple_Goal>
 <Simple_Goal merge="11">
 <Tag>Refinement is correct</Tag>
@@ -10346,7 +10346,7 @@
 </Exp_Comparison>
 </Binary_Pred>
 </Goal>
-<Proof_State proofState="Unproved" methodList="?" passList="Force(0),(?; 0; 1; 2; 3)"/>
+<Proof_State proofState="Unproved" methodList="pr" passList="Force(0),(?; 0; 1; 2; 3)"/>
 </Simple_Goal>
 <Simple_Goal merge="11">
 <Tag>Refinement is correct</Tag>
@@ -10443,7 +10443,7 @@
 </Exp_Comparison>
 </Binary_Pred>
 </Goal>
-<Proof_State proofState="Unproved" methodList="?" passList="Force(0),(?; 0; 1; 2; 3)"/>
+<Proof_State proofState="Unproved" methodList="pr" passList="Force(0),(?; 0; 1; 2; 3)"/>
 </Simple_Goal>
 <Simple_Goal merge="11">
 <Tag>Refinement is correct</Tag>
@@ -10587,7 +10587,7 @@
 </Exp_Comparison>
 </Binary_Pred>
 </Goal>
-<Proof_State proofState="Unproved" methodList="?" passList="Force(0),(?; 0; 1; 2; 3)"/>
+<Proof_State proofState="Unproved" methodList="pr" passList="Force(0),(?; 0; 1; 2; 3)"/>
 </Simple_Goal>
 <Simple_Goal merge="11">
 <Tag>Refinement is correct</Tag>
@@ -10684,7 +10684,7 @@
 </Exp_Comparison>
 </Binary_Pred>
 </Goal>
-<Proof_State proofState="Unproved" methodList="?" passList="Force(0),(?; 0; 1; 2; 3)"/>
+<Proof_State proofState="Unproved" methodList="pr" passList="Force(0),(?; 0; 1; 2; 3)"/>
 </Simple_Goal>
 <Simple_Goal merge="11">
 <Tag>Refinement is correct</Tag>
@@ -10805,7 +10805,7 @@
 </Exp_Comparison>
 </Binary_Pred>
 </Goal>
-<Proof_State proofState="Unproved" methodList="?" passList="Force(0),(?; 0; 1; 2; 3)"/>
+<Proof_State proofState="Unproved" methodList="pr" passList="Force(0),(?; 0; 1; 2; 3)"/>
 </Simple_Goal>
 <Simple_Goal merge="11">
 <Tag>Refinement is correct</Tag>
@@ -10902,7 +10902,7 @@
 </Exp_Comparison>
 </Binary_Pred>
 </Goal>
-<Proof_State proofState="Unproved" methodList="?" passList="Force(0),(?; 0; 1; 2; 3)"/>
+<Proof_State proofState="Unproved" methodList="pr" passList="Force(0),(?; 0; 1; 2; 3)"/>
 </Simple_Goal>
 <Simple_Goal merge="11">
 <Tag>Refinement is correct</Tag>
@@ -11068,7 +11068,7 @@
 </Exp_Comparison>
 </Binary_Pred>
 </Goal>
-<Proof_State proofState="Unproved" methodList="?" passList="Force(0),(?; 0; 1; 2; 3)"/>
+<Proof_State proofState="Unproved" methodList="pr" passList="Force(0),(?; 0; 1; 2; 3)"/>
 </Simple_Goal>
 <Simple_Goal merge="11">
 <Tag>Refinement is correct</Tag>
@@ -11165,7 +11165,7 @@
 </Exp_Comparison>
 </Binary_Pred>
 </Goal>
-<Proof_State proofState="Unproved" methodList="?" passList="Force(0),(?; 0; 1; 2; 3)"/>
+<Proof_State proofState="Unproved" methodList="pr" passList="Force(0),(?; 0; 1; 2; 3)"/>
 </Simple_Goal>
 <Simple_Goal merge="11">
 <Tag>Refinement is correct</Tag>
@@ -11286,7 +11286,7 @@
 </Exp_Comparison>
 </Binary_Pred>
 </Goal>
-<Proof_State proofState="Unproved" methodList="?" passList="Force(0),(?; 0; 1; 2; 3)"/>
+<Proof_State proofState="Unproved" methodList="pr" passList="Force(0),(?; 0; 1; 2; 3)"/>
 </Simple_Goal>
 <Simple_Goal merge="11">
 <Tag>Refinement is correct</Tag>
@@ -11383,7 +11383,7 @@
 </Exp_Comparison>
 </Binary_Pred>
 </Goal>
-<Proof_State proofState="Unproved" methodList="?" passList="Force(0),(?; 0; 1; 2; 3)"/>
+<Proof_State proofState="Unproved" methodList="pr" passList="Force(0),(?; 0; 1; 2; 3)"/>
 </Simple_Goal>
 <Simple_Goal merge="11">
 <Tag>Refinement is correct</Tag>
@@ -11527,7 +11527,7 @@
 </Exp_Comparison>
 </Binary_Pred>
 </Goal>
-<Proof_State proofState="Unproved" methodList="?" passList="Force(0),(?; 0; 1; 2; 3)"/>
+<Proof_State proofState="Unproved" methodList="pr" passList="Force(0),(?; 0; 1; 2; 3)"/>
 </Simple_Goal>
 <Simple_Goal merge="11">
 <Tag>Refinement is correct</Tag>
@@ -11624,7 +11624,7 @@
 </Exp_Comparison>
 </Binary_Pred>
 </Goal>
-<Proof_State proofState="Unproved" methodList="?" passList="Force(0),(?; 0; 1; 2; 3)"/>
+<Proof_State proofState="Unproved" methodList="pr" passList="Force(0),(?; 0; 1; 2; 3)"/>
 </Simple_Goal>
 <Simple_Goal merge="11">
 <Tag>Refinement is correct</Tag>
@@ -11745,7 +11745,7 @@
 </Exp_Comparison>
 </Binary_Pred>
 </Goal>
-<Proof_State proofState="Unproved" methodList="?" passList="Force(0),(?; 0; 1; 2; 3)"/>
+<Proof_State proofState="Unproved" methodList="pr" passList="Force(0),(?; 0; 1; 2; 3)"/>
 </Simple_Goal>
 <Simple_Goal merge="11">
 <Tag>Refinement is correct</Tag>
@@ -11842,7 +11842,7 @@
 </Exp_Comparison>
 </Binary_Pred>
 </Goal>
-<Proof_State proofState="Unproved" methodList="?" passList="Force(0),(?; 0; 1; 2; 3)"/>
+<Proof_State proofState="Unproved" methodList="pr" passList="Force(0),(?; 0; 1; 2; 3)"/>
 </Simple_Goal>
 <Simple_Goal merge="11">
 <Tag>Refinement is correct</Tag>
@@ -11935,7 +11935,7 @@
 </Exp_Comparison>
 </Binary_Pred>
 </Goal>
-<Proof_State proofState="Unproved" methodList="?" passList="Force(0),(?; 0; 1; 2; 3)"/>
+<Proof_State proofState="Unproved" methodList="pr" passList="Force(0),(?; 0; 1; 2; 3)"/>
 </Simple_Goal>
 <Simple_Goal merge="11">
 <Tag>Refinement is correct</Tag>
@@ -18732,7 +18732,7 @@
 </Exp_Comparison>
 </Binary_Pred>
 </Goal>
-<Proof_State proofState="Unproved" methodList="pr" passList="Force(0),?"/>
+<Proof_State proofState="Unproved" methodList="?" passList="Force(0),(?; 0; 1; 2; 3)"/>
 </Simple_Goal>
 <Simple_Goal merge="15">
 <Tag>Precondition predicate</Tag>

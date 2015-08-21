@@ -116,8 +116,8 @@
 </Define>
 <Define merge="=" name="imlprp"/>
 <Define merge="=" name="imprp"/>
-<Define merge="=" name="imext">
-<Nary_Pred op="&amp;" translate="((total_object$1) : (((0) .. (max_obj)))) &amp; total_field$1 : ((1) .. (max_field)) +-> ((((1) .. (total_object$1))) --> (((min_val) .. (2147483647)))) &amp; dom(total_field$1) = ((1) .. (max_field)) &amp; ((total_field$1) : (((((1) .. (max_field))) --> (((((1) .. (total_object$1))) --> (((min_val) .. (2147483647))))))))">
+<Define merge="-" name="imext">
+<Nary_Pred op="&amp;" translate="((total_object$1) : (((0) .. (max_obj)))) &amp; total_field$1 : ((0) .. (4)) +-> ((((1) .. (total_object$1))) --> (((0) .. (10000)))) &amp; dom(total_field$1) = ((0) .. (4)) &amp; ((total_field$1) : (((((0) .. (4))) --> (((((1) .. (total_object$1))) --> (((0) .. (10000))))))))">
 <Exp_Comparison op=":" initialTag="((total_object$1) : (((0) .. (max_obj))))">
 <Id suffix="1" tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:3:1,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:4:1:1:1," typref="2701647786" value="total_object"/>
 <Binary_Exp op=".." typref="3603043417">
@@ -125,21 +125,21 @@
 <Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:3:1:2:1,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:4:1:1:2:2,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:1:1" typref="2701647786" value="max_obj"/>
 </Binary_Exp>
 </Exp_Comparison>
-<Exp_Comparison op=":" initialTag="((total_field$1) : (((((1) .. (max_field))) --> (((((1) .. (total_object$1))) --> (((min_val) .. (2147483647))))))))">
-<Id suffix="1" tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:3:2,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:4:1:2:1," typref="2104432147" value="total_field"/>
-<Binary_Exp op="-->" typref="2260678448">
-<Binary_Exp op=".." tag=",A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:4:1:2:2:1,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:1:2" typref="3988092277">
-<Integer_Literal tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:3:1:2:2:1" typref="2701647786" value="1"/>
-<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:3:1:2:2:2" typref="2701647786" value="max_field"/>
+<Exp_Comparison op=":" initialTag="((total_field$1) : (((((0) .. (4))) --> (((((1) .. (total_object$1))) --> (((0) .. (10000))))))))">
+<Id suffix="1" tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:3:2,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:4:1:2:1," typref="4044453162" value="total_field"/>
+<Binary_Exp op="-->" typref="2175577561">
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:4:1:2:2:1:1" typref="2701647786" value="0"/>
+<Integer_Literal tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:4:1:2:2:1:2" typref="2701647786" value="4"/>
 </Binary_Exp>
-<Binary_Exp op="-->" typref="2837179008">
+<Binary_Exp op="-->" typref="3083833907">
 <Binary_Exp op=".." typref="3603043417">
 <Integer_Literal tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:4:1:2:2:2:1:1" typref="2701647786" value="1"/>
 <Id suffix="1" tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:3:1,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:4:1:2:2:2:1:2," typref="2701647786" value="total_object"/>
 </Binary_Exp>
-<Binary_Exp op=".." tag=",A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:4:1:2:2:2:2,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:1:3" typref="3958993484">
-<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:3:1:2:3:1" typref="2701647786" value="min_val"/>
-<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:3:1:2:3:2" typref="2701647786" value="MAXINT"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:4:1:2:2:2:2:1" typref="2701647786" value="0"/>
+<Integer_Literal tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:4:1:2:2:2:2:2" typref="2701647786" value="10000"/>
 </Binary_Exp>
 </Binary_Exp>
 </Binary_Exp>
@@ -155,26 +155,6 @@
 <Definition name="mchcst"/>
 <Definition name="aprp"/>
 <Definition name="imlprp"/>
-<Simple_Goal merge="0">
-<Goal>
-<Set>
-<Binary_Exp op=".." tag=",B:/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:2:1:1:1,B:/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:1:2" typref="3988092277">
-<Integer_Literal tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:3:1:2:2:1" typref="2701647786" value="1"/>
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:3:1:2:2:2" typref="2701647786" value="max_field"/>
-</Binary_Exp>
-</Set>
-</Goal>
-</Simple_Goal>
-<Simple_Goal merge="1">
-<Goal>
-<Set>
-<Binary_Exp op=".." tag=",B:/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:2:1:2:1,B:/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:1:3" typref="3958993484">
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:3:1:2:3:1" typref="2701647786" value="min_val"/>
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:3:1:2:3:2" typref="2701647786" value="MAXINT"/>
-</Binary_Exp>
-</Set>
-</Goal>
-</Simple_Goal>
 </Proof_Obligation>
 <Proof_Obligation merge="=">
 <Comment>Valuation dans une implantation</Comment>
@@ -184,7 +164,7 @@
 <Definition name="ctx"/>
 <Definition name="imprp"/>
 </Proof_Obligation>
-<Proof_Obligation merge="=">
+<Proof_Obligation merge="-">
 <Comment>Initialisation dans une implantation</Comment>
 <Tag>Initialisation</Tag>
 <Tag>INVARIANT</Tag>
@@ -198,10 +178,10 @@
 <Definition name="seext"/>
 <Local_Hyp num="1">
 <Exp_Comparison op=":">
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:5:1:2:2:1:1:1" typref="2701647786" value="ii"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:5:1:2:2:1:1:1" typref="2701647786" value="ii"/>
 <Binary_Exp op=".." typref="3603043417">
-<Integer_Literal tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:5:1:2:2:1:1:2:1" typref="2701647786" value="1"/>
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:5:1:2:2:1:1:2:2" typref="2701647786" value="max_field"/>
+<Integer_Literal tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:5:1:2:2:1:1:2:1" typref="2701647786" value="1"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:5:1:2:2:1:1:2:2" typref="2701647786" value="max_field"/>
 </Binary_Exp>
 </Exp_Comparison>
 </Local_Hyp>
@@ -209,35 +189,35 @@
 <Nary_Pred op="&amp;">
 <Nary_Pred op="&amp;">
 <Exp_Comparison op=":" initialTag="((total_object$1) : (((0) .. (max_obj))))">
-<Integer_Literal tag="B:/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:5:1:2:1,B:/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:3:1,B:/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:4:1:1:1,,B:/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:3:1,B:/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:5:1:1:1," typref="2701647786" value="0"/>
+<Integer_Literal tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:5:1:2:1,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:3:1,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:4:1:1:1,,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:3:1,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:5:1:1:1," typref="2701647786" value="0"/>
 <Binary_Exp op=".." typref="3603043417">
-<Integer_Literal tag="B:/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:4:1:1:2:1" typref="2701647786" value="0"/>
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:3:1:2:1,B:/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:4:1:1:2:2,B:/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:1:1" typref="2701647786" value="max_obj"/>
+<Integer_Literal tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:4:1:1:2:1" typref="2701647786" value="0"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:3:1:2:1,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:4:1:1:2:2,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:1:1" typref="2701647786" value="max_obj"/>
 </Binary_Exp>
 </Exp_Comparison>
-<Exp_Comparison op=":" initialTag="((total_field$1) : (((((1) .. (max_field))) --> (((((1) .. (total_object$1))) --> (((min_val) .. (2147483647))))))))">
-<Binary_Exp op="*" tag=",B:/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:3:2,B:/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:4:1:2:1,,B:/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:3:2,B:/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:5:1:1:2," typref="2104432147">
-<Binary_Exp op=".." tag=",B:/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:5:1:2:2:1,B:/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:1:2" typref="3988092277">
-<Integer_Literal tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:3:1:2:2:1" typref="2701647786" value="1"/>
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:3:1:2:2:2" typref="2701647786" value="max_field"/>
+<Exp_Comparison op=":" initialTag="((total_field$1) : (((((0) .. (4))) --> (((((1) .. (total_object$1))) --> (((0) .. (10000))))))))">
+<Binary_Exp op="*" tag=",A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:3:2,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:4:1:2:1,,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:3:2,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:5:1:1:2," typref="4044453162">
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:5:1:2:2:1:1" typref="2701647786" value="0"/>
+<Integer_Literal tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:5:1:2:2:1:2" typref="2701647786" value="4"/>
 </Binary_Exp>
 <Nary_Exp op="{" typref="4012934509">
-<EmptySet tag="B:/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:5:1:2:2:2:1" typref="3817003670"/>
+<EmptySet tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:5:1:2:2:2:1" typref="3817003670"/>
 </Nary_Exp>
 </Binary_Exp>
-<Binary_Exp op="-->" typref="2260678448">
-<Binary_Exp op=".." tag=",B:/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:4:1:2:2:1,B:/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:1:2" typref="3988092277">
-<Integer_Literal tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:3:1:2:2:1" typref="2701647786" value="1"/>
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:3:1:2:2:2" typref="2701647786" value="max_field"/>
-</Binary_Exp>
-<Binary_Exp op="-->" typref="2837179008">
+<Binary_Exp op="-->" typref="2175577561">
 <Binary_Exp op=".." typref="3603043417">
-<Integer_Literal tag="B:/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:4:1:2:2:2:1:1" typref="2701647786" value="1"/>
-<Integer_Literal tag="B:/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:5:1:2:1,B:/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:3:1,B:/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:4:1:2:2:2:1:2,,B:/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:3:1,B:/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:5:1:1:1," typref="2701647786" value="0"/>
+<Integer_Literal tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:4:1:2:2:1:1" typref="2701647786" value="0"/>
+<Integer_Literal tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:4:1:2:2:1:2" typref="2701647786" value="4"/>
 </Binary_Exp>
-<Binary_Exp op=".." tag=",B:/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:4:1:2:2:2:2,B:/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:1:3" typref="3958993484">
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:3:1:2:3:1" typref="2701647786" value="min_val"/>
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:3:1:2:3:2" typref="2701647786" value="MAXINT"/>
+<Binary_Exp op="-->" typref="3083833907">
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:4:1:2:2:2:1:1" typref="2701647786" value="1"/>
+<Integer_Literal tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:5:1:2:1,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:3:1,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:4:1:2:2:2:1:2,,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:3:1,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:5:1:1:1," typref="2701647786" value="0"/>
+</Binary_Exp>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:4:1:2:2:2:2:1" typref="2701647786" value="0"/>
+<Integer_Literal tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:4:1:2:2:2:2:2" typref="2701647786" value="10000"/>
 </Binary_Exp>
 </Binary_Exp>
 </Binary_Exp>
@@ -255,33 +235,33 @@
 </Nary_Pred>
 <Exp_Comparison op="=">
 <Binary_Exp op="(" typref="103245008">
-<EmptySet tag="B:/DatabaseSystem/bdp\PARTIAL_OBJECT.bxml:1:5:1:2:2:1,B:\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:5:1:2:2:1:2:1:1,B:/DatabaseSystem/bdp\PARTIAL_OBJECT.bxml:1:5:1:2:1:1" typref="4044453162"/>
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:5:1:2:2:1:2:1:2" typref="2701647786" value="ii"/>
+<EmptySet tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\PARTIAL_OBJECT.bxml:1:5:1:2:2:1,A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:5:1:2:2:1:2:1:1,A:/b-method-training/atelierb/DatabaseSystem/bdp\PARTIAL_OBJECT.bxml:1:5:1:2:1:1" typref="4044453162"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:5:1:2:2:1:2:1:2" typref="2701647786" value="ii"/>
 </Binary_Exp>
 <Binary_Exp op="|>>" typref="103245008">
 <Binary_Exp op="(" typref="103245008">
-<Binary_Exp op="*" tag=",B:/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:3:2,B:\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:5:1:2:2:1:2:2:1:1,,B:/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:3:2,B:/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:5:1:1:2," typref="4044453162">
-<Binary_Exp op=".." tag=",B:/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:5:1:2:2:1,B:/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:1:2" typref="3988092277">
-<Integer_Literal tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:3:1:2:2:1" typref="2701647786" value="1"/>
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:3:1:2:2:2" typref="2701647786" value="max_field"/>
+<Binary_Exp op="*" tag=",A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:3:2,A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:5:1:2:2:1:2:2:1:1,,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:3:2,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:5:1:1:2," typref="4044453162">
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:5:1:2:2:1:1" typref="2701647786" value="0"/>
+<Integer_Literal tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:5:1:2:2:1:2" typref="2701647786" value="4"/>
 </Binary_Exp>
 <Nary_Exp op="{" typref="4012934509">
-<EmptySet tag="B:/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:5:1:2:2:2:1" typref="3817003670"/>
+<EmptySet tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:5:1:2:2:2:1" typref="3817003670"/>
 </Nary_Exp>
 </Binary_Exp>
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:5:1:2:2:1:2:2:1:2" typref="2701647786" value="ii"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:5:1:2:2:1:2:2:1:2" typref="2701647786" value="ii"/>
 </Binary_Exp>
 <Nary_Exp op="{" typref="3603043417">
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:5:1:2:2:1:2:2:2:1" typref="2701647786" value="MAXINT"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:5:1:2:2:1:2:2:2:1" typref="2701647786" value="MAXINT"/>
 </Nary_Exp>
 </Binary_Exp>
 </Exp_Comparison>
 </Binary_Pred>
 </Goal>
-<Proof_State proofState="Proved(1)" methodList="pr" passList="Force(1),(?; 0)"/>
+<Proof_State proofState="Unproved" methodList="pr" passList="Force(0),?"/>
 </Simple_Goal>
 </Proof_Obligation>
-<Proof_Obligation merge="=">
+<Proof_Obligation merge="-">
 <Comment>Operations dans une implantation / Precondition</Comment>
 <Tag>create_partial_object</Tag>
 <Tag>PRECONDITION</Tag>
@@ -305,7 +285,7 @@
 </Nary_Pred>
 </Hypothesis>
 </Proof_Obligation>
-<Proof_Obligation merge="=">
+<Proof_Obligation merge="-">
 <Comment>Operations dans une implantation</Comment>
 <Tag>create_partial_object</Tag>
 <Tag>INVARIANT</Tag>
@@ -354,15 +334,15 @@
 <Binary_Pred op="=>">
 <Ref_Hyp num="3"/>
 <Exp_Comparison op=":" goalTag="Precondition predicate">
-<Integer_Literal tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:1:2:1:2:1,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:1:3:1:1:1,A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:1:2:1:1:1,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:1:2:1,A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:1:2:1:1:1" typref="4077266551" value="2147483647"/>
-<Binary_Exp op=".." tag=",A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:1:3:1:1:2,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:1:3,A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:1:2:1:1:1" typref="3958993484">
-<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:3:1:2:3:1,A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:1:2:1:1:1" typref="2701647786" value="min_val"/>
-<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:3:1:2:3:2,A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:1:2:1:1:1" typref="2701647786" value="MAXINT"/>
+<Integer_Literal tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:1:2:1:2:1,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:1:3:1:1:1,A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:1:2:1:1:1,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:1:2:1,A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:1:2:1:1:1" typref="2701647786" value="2147483647"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:1:3:1:1:2:1,A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:1:2:1:1:1" typref="2701647786" value="0"/>
+<Integer_Literal tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:1:3:1:1:2:2,A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:1:2:1:1:1" typref="2701647786" value="10000"/>
 </Binary_Exp>
 </Exp_Comparison>
 </Binary_Pred>
 </Goal>
-<Proof_State proofState="Unproved" methodList="?" passList="Force(0),?"/>
+<Proof_State proofState="Unproved" methodList="pr" passList="Force(0),?"/>
 </Simple_Goal>
 <Simple_Goal merge="1">
 <Tag>Precondition predicate</Tag>
@@ -415,30 +395,30 @@
 <Binary_Exp op="(" typref="103245008">
 <Quantified_Exp tag=",A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:3:2,A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:5:1:2:2:1:2:2:1:1,,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:3:2,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:1:4:1:2:1:1,,A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:1:2:1:1:1" typref="4044453162" type="%">
 <Variables>
-<Id tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:1:4:1:2:2:1:1:1,A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:1:2:1:1:1" typref="1177923086" value="ii"/>
+<Id tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:1:4:1:2:2:1:1:1,A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:1:2:1:1:1" typref="2701647786" value="ii"/>
 </Variables>
 <Pred>
 <Exp_Comparison op=":">
-<Id tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:1:4:1:2:2:1:2:1:1,A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:1:2:1:1:1" typref="1177923086" value="ii"/>
-<Binary_Exp op=".." tag=",A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:1:4:1:2:2:1:2:1:2,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:1:2,A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:1:2:1:1:1" typref="3988092277">
-<Integer_Literal tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:3:1:2:2:1,A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:1:2:1:1:1" typref="2701647786" value="1"/>
-<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:3:1:2:2:2,A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:1:2:1:1:1" typref="2701647786" value="max_field"/>
+<Id tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:1:4:1:2:2:1:2:1:1,A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:1:2:1:1:1" typref="2701647786" value="ii"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:1:4:1:2:2:1:2:1:2:1,A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:1:2:1:1:1" typref="2701647786" value="0"/>
+<Integer_Literal tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:1:4:1:2:2:1:2:1:2:2,A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:1:2:1:1:1" typref="2701647786" value="4"/>
 </Binary_Exp>
 </Exp_Comparison>
 </Pred>
 <Body>
-<Binary_Exp op="\/" typref="1089793219">
-<Binary_Exp op="(" typref="1089793219">
-<Id suffix="1" tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:3:2,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:1:4:1:2:2:1:3:1:1:1,,A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:1:2:1:1:1" typref="2104432147" value="total_field" fixed="false"/>
-<Id tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:1:4:1:2:2:1:3:1:1:2,A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:1:2:1:1:1" typref="1177923086" value="ii"/>
+<Binary_Exp op="\/" typref="103245008">
+<Binary_Exp op="(" typref="103245008">
+<Id suffix="1" tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:3:2,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:1:4:1:2:2:1:3:1:1:1,,A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:1:2:1:1:1" typref="4044453162" value="total_field" fixed="false"/>
+<Id tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:1:4:1:2:2:1:3:1:1:2,A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:1:2:1:1:1" typref="2701647786" value="ii"/>
 </Binary_Exp>
-<Nary_Exp op="{" typref="1089793219">
-<Binary_Exp op="|->" typref="1014510400">
+<Nary_Exp op="{" typref="103245008">
+<Binary_Exp op="|->" typref="3672872563">
 <Binary_Exp op="+" typref="2701647786">
 <Id suffix="1" tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:3:1,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:1:4:1:2:2:1:3:1:2:1:1:1,,A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:1:2:1:1:1" typref="2701647786" value="total_object" fixed="false"/>
 <Integer_Literal tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:1:4:1:2:2:1:3:1:2:1:1:2,A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:1:2:1:1:1" typref="2701647786" value="1"/>
 </Binary_Exp>
-<Integer_Literal tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:1:2:1:2:1,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:1:4:1:2:2:1:3:1:2:1:2,A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:1:2:1:1:1,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:1:2:1,A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:1:2:1:1:1" typref="4077266551" value="2147483647"/>
+<Integer_Literal tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:1:2:1:2:1,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:1:4:1:2:2:1:3:1:2:1:2,A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:1:2:1:1:1,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:1:2:1,A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:1:2:1:1:1" typref="2701647786" value="2147483647"/>
 </Binary_Exp>
 </Nary_Exp>
 </Binary_Exp>
@@ -453,7 +433,7 @@
 </Exp_Comparison>
 </Binary_Pred>
 </Goal>
-<Proof_State proofState="Unproved" methodList="?" passList="Force(0),?"/>
+<Proof_State proofState="Unproved" methodList="pr" passList="Force(0),?"/>
 </Simple_Goal>
 <Simple_Goal merge="4">
 <Tag>Refinement is correct</Tag>
@@ -477,7 +457,7 @@
 </Goal>
 </Simple_Goal>
 </Proof_Obligation>
-<Proof_Obligation merge="=">
+<Proof_Obligation merge="-">
 <Comment>Operations dans une implantation / Precondition</Comment>
 <Tag>mod_field</Tag>
 <Tag>PRECONDITION</Tag>
@@ -520,7 +500,7 @@
 </Nary_Pred>
 </Hypothesis>
 </Proof_Obligation>
-<Proof_Obligation merge="=">
+<Proof_Obligation merge="-">
 <Comment>Operations dans une implantation</Comment>
 <Tag>mod_field</Tag>
 <Tag>INVARIANT</Tag>
@@ -540,10 +520,10 @@
 </Hypothesis>
 <Local_Hyp num="1">
 <Exp_Comparison op=":">
-<Id suffix="1" tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:5:1:2:1:1,B:\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:5:1:2:2:1:1:1," typref="2701647786" value="ii"/>
+<Id suffix="1" tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:5:1:2:1:1,A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:5:1:2:2:1:1:1," typref="2701647786" value="ii"/>
 <Binary_Exp op=".." typref="3603043417">
-<Integer_Literal tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:5:1:2:2:1:1:2:1" typref="2701647786" value="1"/>
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:5:1:2:2:1:1:2:2" typref="2701647786" value="max_field"/>
+<Integer_Literal tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:5:1:2:2:1:1:2:1" typref="2701647786" value="1"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:5:1:2:2:1:1:2:2" typref="2701647786" value="max_field"/>
 </Binary_Exp>
 </Exp_Comparison>
 </Local_Hyp>
@@ -554,53 +534,53 @@
 <Nary_Pred op="&amp;">
 <Nary_Pred op="&amp;">
 <Exp_Comparison op=":">
-<Id tag="B:/DatabaseSystem/bdp\PARTIAL_OBJECT.bxml:1:6:2:2:1:1:1" typref="2701647786" value="ii"/>
+<Id tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\PARTIAL_OBJECT.bxml:1:6:2:2:1:1:1" typref="2701647786" value="ii"/>
 <Binary_Exp op=".." typref="3603043417">
-<Integer_Literal tag="B:/DatabaseSystem/bdp\PARTIAL_OBJECT.bxml:1:6:2:2:1:1:2:1" typref="2701647786" value="1"/>
-<Id tag="B:/DatabaseSystem/bdp\PARTIAL_OBJECT.bxml:1:6:2:2:1:1:2:2" typref="2701647786" value="max_field"/>
+<Integer_Literal tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\PARTIAL_OBJECT.bxml:1:6:2:2:1:1:2:1" typref="2701647786" value="1"/>
+<Id tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\PARTIAL_OBJECT.bxml:1:6:2:2:1:1:2:2" typref="2701647786" value="max_field"/>
 </Binary_Exp>
 </Exp_Comparison>
 <Exp_Comparison op=":">
-<Id tag="B:/DatabaseSystem/bdp\PARTIAL_OBJECT.bxml:1:6:2:2:1:2:1" typref="2701647786" value="oo"/>
+<Id tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\PARTIAL_OBJECT.bxml:1:6:2:2:1:2:1" typref="2701647786" value="oo"/>
 <Binary_Exp op=".." typref="3603043417">
-<Integer_Literal tag="B:/DatabaseSystem/bdp\PARTIAL_OBJECT.bxml:1:6:2:2:1:2:2:1" typref="2701647786" value="1"/>
-<Id tag="B:/DatabaseSystem/bdp\PARTIAL_OBJECT.bxml:1:6:2:2:1:2:2:2" typref="2701647786" value="partial_object"/>
+<Integer_Literal tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\PARTIAL_OBJECT.bxml:1:6:2:2:1:2:2:1" typref="2701647786" value="1"/>
+<Id tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\PARTIAL_OBJECT.bxml:1:6:2:2:1:2:2:2" typref="2701647786" value="partial_object"/>
 </Binary_Exp>
 </Exp_Comparison>
 <Exp_Comparison op=":">
-<Id tag="B:/DatabaseSystem/bdp\PARTIAL_OBJECT.bxml:1:6:2:2:1:3:1" typref="2701647786" value="vv"/>
+<Id tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\PARTIAL_OBJECT.bxml:1:6:2:2:1:3:1" typref="2701647786" value="vv"/>
 <Binary_Exp op=".." typref="3603043417">
-<Id tag="B:/DatabaseSystem/bdp\PARTIAL_OBJECT.bxml:1:6:2:2:1:3:2:1" typref="2701647786" value="min_val"/>
-<Id tag="B:/DatabaseSystem/bdp\PARTIAL_OBJECT.bxml:1:6:2:2:1:3:2:2" typref="2701647786" value="max_val"/>
+<Id tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\PARTIAL_OBJECT.bxml:1:6:2:2:1:3:2:1" typref="2701647786" value="min_val"/>
+<Id tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\PARTIAL_OBJECT.bxml:1:6:2:2:1:3:2:2" typref="2701647786" value="max_val"/>
 </Binary_Exp>
 </Exp_Comparison>
 </Nary_Pred>
 <Nary_Pred op="&amp;">
 <Exp_Comparison op=":">
-<Id tag="B:/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:2:2:1:1:1" typref="1177923086" value="ii"/>
-<Binary_Exp op=".." tag=",B:/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:2:2:1:1:2,B:/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:1:2" typref="3988092277">
-<Integer_Literal tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:3:1:2:2:1" typref="2701647786" value="1"/>
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:3:1:2:2:2" typref="2701647786" value="max_field"/>
-</Binary_Exp>
-</Exp_Comparison>
-<Exp_Comparison op=":">
-<Id tag="B:/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:2:2:1:2:1" typref="2701647786" value="oo"/>
+<Id tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:2:2:1:1:1" typref="2701647786" value="ii"/>
 <Binary_Exp op=".." typref="3603043417">
-<Integer_Literal tag="B:/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:2:2:1:2:2:1" typref="2701647786" value="1"/>
-<Id suffix="1" tag="B:/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:3:1,B:/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:2:2:1:2:2:2," typref="2701647786" value="total_object"/>
+<Integer_Literal tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:2:2:1:1:2:1" typref="2701647786" value="0"/>
+<Integer_Literal tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:2:2:1:1:2:2" typref="2701647786" value="4"/>
 </Binary_Exp>
 </Exp_Comparison>
 <Exp_Comparison op=":">
-<Id tag="B:/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:2:2:1:3:1" typref="4077266551" value="vv"/>
-<Binary_Exp op=".." tag=",B:/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:2:2:1:3:2,B:/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:1:3" typref="3958993484">
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:3:1:2:3:1" typref="2701647786" value="min_val"/>
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:3:1:2:3:2" typref="2701647786" value="MAXINT"/>
+<Id tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:2:2:1:2:1" typref="2701647786" value="oo"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:2:2:1:2:2:1" typref="2701647786" value="1"/>
+<Id suffix="1" tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:3:1,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:2:2:1:2:2:2," typref="2701647786" value="total_object"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=":">
+<Id tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:2:2:1:3:1" typref="2701647786" value="vv"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:2:2:1:3:2:1" typref="2701647786" value="0"/>
+<Integer_Literal tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:2:2:1:3:2:2" typref="2701647786" value="10000"/>
 </Binary_Exp>
 </Exp_Comparison>
 </Nary_Pred>
 </Nary_Pred>
 </Local_Hyp>
-<Simple_Goal merge="0">
+<Simple_Goal merge="">
 <Tag>Refinement is correct</Tag>
 <Goal>
 <Binary_Pred op="=>">
@@ -611,62 +591,63 @@
 </Nary_Pred>
 <Exp_Comparison op="=">
 <Binary_Exp op="(" typref="103245008">
-<Binary_Exp op="&lt;+" tag=",B:\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:5:1:2:2:1:2:1:1,B:/DatabaseSystem/bdp\PARTIAL_OBJECT.bxml:1:6:2:3:1:1:1:1:1" typref="4044453162">
-<Id tag="B:/DatabaseSystem/bdp\PARTIAL_OBJECT.bxml:1:6:2:3:1:1:1:1:1" typref="4044453162" value="partial_field"/>
+<Binary_Exp op="&lt;+" tag=",A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:5:1:2:2:1:2:1:1,A:/b-method-training/atelierb/DatabaseSystem/bdp\PARTIAL_OBJECT.bxml:1:6:2:3:1:1:1:1:1" typref="4044453162">
+<Id tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\PARTIAL_OBJECT.bxml:1:6:2:3:1:1:1:1:1" typref="4044453162" value="partial_field"/>
 <Nary_Exp op="{">
 <Binary_Exp op="|->">
-<Id tag="B:/DatabaseSystem/bdp\PARTIAL_OBJECT.bxml:1:6:2:3:1:1:1:1:2" typref="2701647786" value="ii"/>
+<Id tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\PARTIAL_OBJECT.bxml:1:6:2:3:1:1:1:1:2" typref="2701647786" value="ii"/>
 <Binary_Exp op="&lt;+">
 <Binary_Exp op="(" typref="103245008">
-<Id tag="B:/DatabaseSystem/bdp\PARTIAL_OBJECT.bxml:1:6:2:3:1:1:1:1:1" typref="4044453162" value="partial_field"/>
-<Id tag="B:/DatabaseSystem/bdp\PARTIAL_OBJECT.bxml:1:6:2:3:1:1:1:1:2" typref="2701647786" value="ii"/>
+<Id tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\PARTIAL_OBJECT.bxml:1:6:2:3:1:1:1:1:1" typref="4044453162" value="partial_field"/>
+<Id tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\PARTIAL_OBJECT.bxml:1:6:2:3:1:1:1:1:2" typref="2701647786" value="ii"/>
 </Binary_Exp>
 <Nary_Exp op="{">
 <Binary_Exp op="|->">
-<Id tag="B:/DatabaseSystem/bdp\PARTIAL_OBJECT.bxml:1:6:2:3:1:1:1:2" typref="2701647786" value="oo"/>
-<Id tag="B:/DatabaseSystem/bdp\PARTIAL_OBJECT.bxml:1:6:2:3:1:2:1" typref="2701647786" value="vv"/>
+<Id tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\PARTIAL_OBJECT.bxml:1:6:2:3:1:1:1:2" typref="2701647786" value="oo"/>
+<Id tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\PARTIAL_OBJECT.bxml:1:6:2:3:1:2:1" typref="2701647786" value="vv"/>
 </Binary_Exp>
 </Nary_Exp>
 </Binary_Exp>
 </Binary_Exp>
 </Nary_Exp>
 </Binary_Exp>
-<Id suffix="1" tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:5:1:2:1:1,B:\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:5:1:2:2:1:2:1:2," typref="2701647786" value="ii"/>
+<Id suffix="1" tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:5:1:2:1:1,A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:5:1:2:2:1:2:1:2," typref="2701647786" value="ii"/>
 </Binary_Exp>
 <Binary_Exp op="|>>" typref="103245008">
 <Binary_Exp op="(" typref="103245008">
-<Binary_Exp op="&lt;+" tag=",B:/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:3:2,B:\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:5:1:2:2:1:2:2:1:1,,B:/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:3:2,B:/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:2:3:1:1:1:1:1," typref="4044453162">
-<Id suffix="1" tag="B:/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:3:2,B:/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:2:3:1:1:1:1:1," typref="2104432147" value="total_field"/>
+<Binary_Exp op="&lt;+" tag=",A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:3:2,A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:5:1:2:2:1:2:2:1:1,,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:3:2,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:2:3:1:1:1:1:1," typref="4044453162">
+<Id suffix="1" tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:3:2,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:2:3:1:1:1:1:1," typref="4044453162" value="total_field"/>
 <Nary_Exp op="{">
 <Binary_Exp op="|->">
-<Id tag="B:/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:2:3:1:1:1:1:2" typref="1177923086" value="ii"/>
+<Id tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:2:3:1:1:1:1:2" typref="2701647786" value="ii"/>
 <Binary_Exp op="&lt;+">
-<Binary_Exp op="(" typref="1089793219">
-<Id suffix="1" tag="B:/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:3:2,B:/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:2:3:1:1:1:1:1," typref="2104432147" value="total_field"/>
-<Id tag="B:/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:2:3:1:1:1:1:2" typref="1177923086" value="ii"/>
+<Binary_Exp op="(" typref="103245008">
+<Id suffix="1" tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:3:2,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:2:3:1:1:1:1:1," typref="4044453162" value="total_field"/>
+<Id tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:2:3:1:1:1:1:2" typref="2701647786" value="ii"/>
 </Binary_Exp>
 <Nary_Exp op="{">
 <Binary_Exp op="|->">
-<Id tag="B:/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:2:3:1:1:1:2" typref="2701647786" value="oo"/>
-<Id tag="B:/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:2:3:1:2:1" typref="4077266551" value="vv"/>
+<Id tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:2:3:1:1:1:2" typref="2701647786" value="oo"/>
+<Id tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:2:3:1:2:1" typref="2701647786" value="vv"/>
 </Binary_Exp>
 </Nary_Exp>
 </Binary_Exp>
 </Binary_Exp>
 </Nary_Exp>
 </Binary_Exp>
-<Id suffix="1" tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:5:1:2:1:1,B:\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:5:1:2:2:1:2:2:1:2," typref="2701647786" value="ii"/>
+<Id suffix="1" tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:5:1:2:1:1,A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:5:1:2:2:1:2:2:1:2," typref="2701647786" value="ii"/>
 </Binary_Exp>
 <Nary_Exp op="{" typref="3603043417">
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:5:1:2:2:1:2:2:2:1" typref="2701647786" value="MAXINT"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:5:1:2:2:1:2:2:2:1" typref="2701647786" value="MAXINT"/>
 </Nary_Exp>
 </Binary_Exp>
 </Exp_Comparison>
 </Binary_Pred>
 </Goal>
+<Proof_State proofState="Unproved" methodList="?" passList="Force(0),?"/>
 </Simple_Goal>
 </Proof_Obligation>
-<Proof_Obligation merge="=">
+<Proof_Obligation merge="-">
 <Comment>Operations dans une implantation / Precondition</Comment>
 <Tag>rem_field</Tag>
 <Tag>PRECONDITION</Tag>
@@ -702,7 +683,7 @@
 </Nary_Pred>
 </Hypothesis>
 </Proof_Obligation>
-<Proof_Obligation merge="=">
+<Proof_Obligation merge="-">
 <Comment>Operations dans une implantation</Comment>
 <Tag>rem_field</Tag>
 <Tag>INVARIANT</Tag>
@@ -722,10 +703,10 @@
 </Hypothesis>
 <Local_Hyp num="1">
 <Exp_Comparison op=":">
-<Id suffix="1" tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:5:1:2:1:1,B:\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:5:1:2:2:1:1:1," typref="2701647786" value="ii"/>
+<Id suffix="1" tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:5:1:2:1:1,A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:5:1:2:2:1:1:1," typref="2701647786" value="ii"/>
 <Binary_Exp op=".." typref="3603043417">
-<Integer_Literal tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:5:1:2:2:1:1:2:1" typref="2701647786" value="1"/>
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:5:1:2:2:1:1:2:2" typref="2701647786" value="max_field"/>
+<Integer_Literal tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:5:1:2:2:1:1:2:1" typref="2701647786" value="1"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:5:1:2:2:1:1:2:2" typref="2701647786" value="max_field"/>
 </Binary_Exp>
 </Exp_Comparison>
 </Local_Hyp>
@@ -736,53 +717,70 @@
 <Nary_Pred op="&amp;">
 <Nary_Pred op="&amp;">
 <Exp_Comparison op=":">
-<Id tag="B:/DatabaseSystem/bdp\PARTIAL_OBJECT.bxml:1:6:3:2:1:1:1" typref="2701647786" value="ii"/>
+<Id tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\PARTIAL_OBJECT.bxml:1:6:3:2:1:1:1" typref="2701647786" value="ii"/>
 <Binary_Exp op=".." typref="3603043417">
-<Integer_Literal tag="B:/DatabaseSystem/bdp\PARTIAL_OBJECT.bxml:1:6:3:2:1:1:2:1" typref="2701647786" value="1"/>
-<Id tag="B:/DatabaseSystem/bdp\PARTIAL_OBJECT.bxml:1:6:3:2:1:1:2:2" typref="2701647786" value="max_field"/>
+<Integer_Literal tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\PARTIAL_OBJECT.bxml:1:6:3:2:1:1:2:1" typref="2701647786" value="1"/>
+<Id tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\PARTIAL_OBJECT.bxml:1:6:3:2:1:1:2:2" typref="2701647786" value="max_field"/>
 </Binary_Exp>
 </Exp_Comparison>
 <Exp_Comparison op=":">
-<Id tag="B:/DatabaseSystem/bdp\PARTIAL_OBJECT.bxml:1:6:3:2:1:2:1" typref="2701647786" value="oo"/>
+<Id tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\PARTIAL_OBJECT.bxml:1:6:3:2:1:2:1" typref="2701647786" value="oo"/>
 <Binary_Exp op=".." typref="3603043417">
-<Integer_Literal tag="B:/DatabaseSystem/bdp\PARTIAL_OBJECT.bxml:1:6:3:2:1:2:2:1" typref="2701647786" value="1"/>
-<Id tag="B:/DatabaseSystem/bdp\PARTIAL_OBJECT.bxml:1:6:3:2:1:2:2:2" typref="2701647786" value="partial_object"/>
+<Integer_Literal tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\PARTIAL_OBJECT.bxml:1:6:3:2:1:2:2:1" typref="2701647786" value="1"/>
+<Id tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\PARTIAL_OBJECT.bxml:1:6:3:2:1:2:2:2" typref="2701647786" value="partial_object"/>
 </Binary_Exp>
 </Exp_Comparison>
 </Nary_Pred>
 </Nary_Pred>
 </Local_Hyp>
+<Simple_Goal merge="">
+<Tag>Precondition predicate</Tag>
+<Goal>
+<Binary_Pred op="=>">
+<Ref_Hyp num="3"/>
+<Exp_Comparison op=":" goalTag="Precondition predicate">
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:2:2:1:2:1,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:2:2:1:1:1,A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:2:2:1:1:1,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:2:1:1,A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:2:2:1:1:1" typref="2701647786" value="ii"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:2:2:1:1:2:1,A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:2:2:1:1:1" typref="2701647786" value="0"/>
+<Integer_Literal tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:2:2:1:1:2:2,A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:2:2:1:1:1" typref="2701647786" value="4"/>
+</Binary_Exp>
+</Exp_Comparison>
+</Binary_Pred>
+</Goal>
+<Proof_State proofState="Unproved" methodList="?" passList="Force(0),?"/>
+</Simple_Goal>
 <Simple_Goal merge="0">
 <Tag>Precondition predicate</Tag>
 <Goal>
 <Binary_Pred op="=>">
 <Ref_Hyp num="3"/>
 <Exp_Comparison op=":" goalTag="Precondition predicate">
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:2:2:1:2:2,B:/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:2:2:1:2:1,B:\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:2:2:1:1:1,B:/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:2:1:2,B:\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:2:2:1:1:1" typref="2701647786" value="oo"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:2:2:1:2:2,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:2:2:1:2:1,A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:2:2:1:1:1,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:2:1:2,A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:2:2:1:1:1" typref="2701647786" value="oo"/>
 <Binary_Exp op=".." typref="3603043417">
-<Integer_Literal tag="B:/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:2:2:1:2:2:1,B:\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:2:2:1:1:1" typref="2701647786" value="1"/>
-<Id suffix="1" tag="B:/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:3:1,B:/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:2:2:1:2:2:2,,B:\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:2:2:1:1:1" typref="2701647786" value="total_object"/>
+<Integer_Literal tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:2:2:1:2:2:1,A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:2:2:1:1:1" typref="2701647786" value="1"/>
+<Id suffix="1" tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:3:1,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:2:2:1:2:2:2,,A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:2:2:1:1:1" typref="2701647786" value="total_object"/>
 </Binary_Exp>
 </Exp_Comparison>
 </Binary_Pred>
 </Goal>
 </Simple_Goal>
-<Simple_Goal merge="1">
+<Simple_Goal merge="">
 <Tag>Precondition predicate</Tag>
 <Goal>
 <Binary_Pred op="=>">
 <Ref_Hyp num="3"/>
 <Exp_Comparison op=":" goalTag="Precondition predicate">
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:2:2:1:2:3,B:/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:2:2:1:3:1,B:\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:2:2:1:1:1,B:/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:2:1:3,B:\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:2:2:1:1:1" typref="4077266551" value="MAXINT"/>
-<Binary_Exp op=".." tag=",B:/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:2:2:1:3:2,B:/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:1:3,B:\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:2:2:1:1:1" typref="3958993484">
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:3:1:2:3:1,B:\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:2:2:1:1:1" typref="2701647786" value="min_val"/>
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:3:1:2:3:2,B:\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:2:2:1:1:1" typref="2701647786" value="MAXINT"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:2:2:1:2:3,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:2:2:1:3:1,A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:2:2:1:1:1,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:2:1:3,A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:2:2:1:1:1" typref="2701647786" value="MAXINT"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:2:2:1:3:2:1,A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:2:2:1:1:1" typref="2701647786" value="0"/>
+<Integer_Literal tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:2:2:1:3:2:2,A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:2:2:1:1:1" typref="2701647786" value="10000"/>
 </Binary_Exp>
 </Exp_Comparison>
 </Binary_Pred>
 </Goal>
+<Proof_State proofState="Unproved" methodList="?" passList="Force(0),?"/>
 </Simple_Goal>
-<Simple_Goal merge="2">
+<Simple_Goal merge="">
 <Tag>Refinement is correct</Tag>
 <Goal>
 <Binary_Pred op="=>">
@@ -793,59 +791,60 @@
 </Nary_Pred>
 <Exp_Comparison op="=">
 <Binary_Exp op="(" typref="103245008">
-<Binary_Exp op="&lt;+" tag=",B:\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:5:1:2:2:1:2:1:1,B:/DatabaseSystem/bdp\PARTIAL_OBJECT.bxml:1:6:3:3:1:1:1:1" typref="4044453162">
-<Id tag="B:/DatabaseSystem/bdp\PARTIAL_OBJECT.bxml:1:6:3:3:1:1:1:1" typref="4044453162" value="partial_field"/>
+<Binary_Exp op="&lt;+" tag=",A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:5:1:2:2:1:2:1:1,A:/b-method-training/atelierb/DatabaseSystem/bdp\PARTIAL_OBJECT.bxml:1:6:3:3:1:1:1:1" typref="4044453162">
+<Id tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\PARTIAL_OBJECT.bxml:1:6:3:3:1:1:1:1" typref="4044453162" value="partial_field"/>
 <Nary_Exp op="{">
 <Binary_Exp op="|->">
-<Id tag="B:/DatabaseSystem/bdp\PARTIAL_OBJECT.bxml:1:6:3:3:1:1:1:2" typref="2701647786" value="ii"/>
+<Id tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\PARTIAL_OBJECT.bxml:1:6:3:3:1:1:1:2" typref="2701647786" value="ii"/>
 <Binary_Exp op="&lt;&lt;|" typref="103245008">
 <Nary_Exp op="{" typref="3603043417">
-<Id tag="B:/DatabaseSystem/bdp\PARTIAL_OBJECT.bxml:1:6:3:3:1:2:1:1:1" typref="2701647786" value="oo"/>
+<Id tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\PARTIAL_OBJECT.bxml:1:6:3:3:1:2:1:1:1" typref="2701647786" value="oo"/>
 </Nary_Exp>
 <Binary_Exp op="(" typref="103245008">
-<Id tag="B:/DatabaseSystem/bdp\PARTIAL_OBJECT.bxml:1:6:3:3:1:2:1:2:1" typref="4044453162" value="partial_field"/>
-<Id tag="B:/DatabaseSystem/bdp\PARTIAL_OBJECT.bxml:1:6:3:3:1:2:1:2:2" typref="2701647786" value="ii"/>
+<Id tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\PARTIAL_OBJECT.bxml:1:6:3:3:1:2:1:2:1" typref="4044453162" value="partial_field"/>
+<Id tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\PARTIAL_OBJECT.bxml:1:6:3:3:1:2:1:2:2" typref="2701647786" value="ii"/>
 </Binary_Exp>
 </Binary_Exp>
 </Binary_Exp>
 </Nary_Exp>
 </Binary_Exp>
-<Id suffix="1" tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:5:1:2:1:1,B:\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:5:1:2:2:1:2:1:2," typref="2701647786" value="ii"/>
+<Id suffix="1" tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:5:1:2:1:1,A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:5:1:2:2:1:2:1:2," typref="2701647786" value="ii"/>
 </Binary_Exp>
 <Binary_Exp op="|>>" typref="103245008">
 <Binary_Exp op="(" typref="103245008">
-<Binary_Exp op="&lt;+" tag=",B:/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:3:2,B:\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:5:1:2:2:1:2:2:1:1,,B:/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:3:2,B:/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:2:3:1:1:1:1:1,,B:\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:2:2:1:1:1" typref="4044453162">
-<Id suffix="1" tag="B:/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:3:2,B:/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:2:3:1:1:1:1:1,,B:\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:2:2:1:1:1" typref="2104432147" value="total_field"/>
+<Binary_Exp op="&lt;+" tag=",A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:3:2,A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:5:1:2:2:1:2:2:1:1,,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:3:2,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:2:3:1:1:1:1:1,,A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:2:2:1:1:1" typref="4044453162">
+<Id suffix="1" tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:3:2,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:2:3:1:1:1:1:1,,A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:2:2:1:1:1" typref="4044453162" value="total_field"/>
 <Nary_Exp op="{">
 <Binary_Exp op="|->">
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:2:2:1:2:1,B:/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:2:3:1:1:1:1:2,B:\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:2:2:1:1:1,B:/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:2:1:1,B:\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:2:2:1:1:1" typref="1177923086" value="ii"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:2:2:1:2:1,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:2:3:1:1:1:1:2,A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:2:2:1:1:1,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:2:1:1,A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:2:2:1:1:1" typref="2701647786" value="ii"/>
 <Binary_Exp op="&lt;+">
-<Binary_Exp op="(" typref="1089793219">
-<Id suffix="1" tag="B:/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:3:2,B:/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:2:3:1:1:1:1:1,,B:\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:2:2:1:1:1" typref="2104432147" value="total_field"/>
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:2:2:1:2:1,B:/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:2:3:1:1:1:1:2,B:\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:2:2:1:1:1,B:/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:2:1:1,B:\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:2:2:1:1:1" typref="1177923086" value="ii"/>
+<Binary_Exp op="(" typref="103245008">
+<Id suffix="1" tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:3:2,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:2:3:1:1:1:1:1,,A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:2:2:1:1:1" typref="4044453162" value="total_field"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:2:2:1:2:1,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:2:3:1:1:1:1:2,A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:2:2:1:1:1,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:2:1:1,A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:2:2:1:1:1" typref="2701647786" value="ii"/>
 </Binary_Exp>
 <Nary_Exp op="{">
 <Binary_Exp op="|->">
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:2:2:1:2:2,B:/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:2:3:1:1:1:2,B:\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:2:2:1:1:1,B:/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:2:1:2,B:\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:2:2:1:1:1" typref="2701647786" value="oo"/>
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:2:2:1:2:3,B:/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:2:3:1:2:1,B:\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:2:2:1:1:1,B:/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:2:1:3,B:\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:2:2:1:1:1" typref="4077266551" value="MAXINT"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:2:2:1:2:2,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:2:3:1:1:1:2,A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:2:2:1:1:1,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:2:1:2,A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:2:2:1:1:1" typref="2701647786" value="oo"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:2:2:1:2:3,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:2:3:1:2:1,A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:2:2:1:1:1,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:2:1:3,A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:2:2:1:1:1" typref="2701647786" value="MAXINT"/>
 </Binary_Exp>
 </Nary_Exp>
 </Binary_Exp>
 </Binary_Exp>
 </Nary_Exp>
 </Binary_Exp>
-<Id suffix="1" tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:5:1:2:1:1,B:\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:5:1:2:2:1:2:2:1:2," typref="2701647786" value="ii"/>
+<Id suffix="1" tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:5:1:2:1:1,A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:5:1:2:2:1:2:2:1:2," typref="2701647786" value="ii"/>
 </Binary_Exp>
 <Nary_Exp op="{" typref="3603043417">
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:5:1:2:2:1:2:2:2:1" typref="2701647786" value="MAXINT"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:5:1:2:2:1:2:2:2:1" typref="2701647786" value="MAXINT"/>
 </Nary_Exp>
 </Binary_Exp>
 </Exp_Comparison>
 </Binary_Pred>
 </Goal>
+<Proof_State proofState="Unproved" methodList="?" passList="Force(0),?"/>
 </Simple_Goal>
 </Proof_Obligation>
-<Proof_Obligation merge="=">
+<Proof_Obligation merge="-">
 <Comment>Operations dans une implantation / Precondition</Comment>
 <Tag>def_field</Tag>
 <Tag>PRECONDITION</Tag>
@@ -881,7 +880,7 @@
 </Nary_Pred>
 </Hypothesis>
 </Proof_Obligation>
-<Proof_Obligation merge="=">
+<Proof_Obligation merge="-">
 <Comment>Operations dans une implantation</Comment>
 <Tag>def_field</Tag>
 <Tag>INVARIANT</Tag>
@@ -930,6 +929,25 @@
 </Nary_Pred>
 </Nary_Pred>
 </Local_Hyp>
+<Simple_Goal merge="">
+<Tag>Precondition predicate</Tag>
+<Goal>
+<Binary_Pred op="=>">
+<Nary_Pred op="&amp;">
+<Ref_Hyp num="3"/>
+<Ref_Hyp num="2"/>
+</Nary_Pred>
+<Exp_Comparison op=":" goalTag="Precondition predicate">
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:3:3:1:2:1:1:2:1,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:3:3:1:1:1,A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:3:3:1:2:1:1:1:1,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:3:2:1,A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:3:3:1:2:1:1:1:1" typref="2701647786" value="ii"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:3:3:1:1:2:1,A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:3:3:1:2:1:1:1:1" typref="2701647786" value="0"/>
+<Integer_Literal tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:3:3:1:1:2:2,A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:3:3:1:2:1:1:1:1" typref="2701647786" value="4"/>
+</Binary_Exp>
+</Exp_Comparison>
+</Binary_Pred>
+</Goal>
+<Proof_State proofState="Unproved" methodList="?" passList="Force(0),?"/>
+</Simple_Goal>
 <Simple_Goal merge="0">
 <Tag>Precondition predicate</Tag>
 <Goal>
@@ -948,7 +966,7 @@
 </Binary_Pred>
 </Goal>
 </Simple_Goal>
-<Simple_Goal merge="1">
+<Simple_Goal merge="">
 <Tag>Refinement is correct</Tag>
 <Goal>
 <Binary_Pred op="=>">
@@ -961,9 +979,9 @@
 <Boolean_Exp tag=",A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:3:1:1,A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:3:1:1,A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:3:3:1:2:1:2:1:1," typref="2043437594">
 <Exp_Comparison op="/=">
 <Binary_Exp op="(" tag=",A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:3:3:1:1:1,A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:3:3:1:2:1:2:2:1:1:1,A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:3:3:1:1:1,A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:3:3:1:1:1,A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:3:3:1:2:1:1:3:1,A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:3:3:1:1:1,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:3:4:1:1:1,A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:3:3:1:2:1:1:1:1,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:3:1:1,A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:3:3:1:2:1:1:1:1" typref="2701647786">
-<Binary_Exp op="(" typref="1089793219">
-<Id suffix="1" tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:3:2,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:3:4:1:2:1:1:1,,A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:3:3:1:2:1:1:1:1" typref="2104432147" value="total_field"/>
-<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:3:3:1:2:1:1:2:1,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:3:4:1:2:1:1:2,A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:3:3:1:2:1:1:1:1,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:3:2:1,A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:3:3:1:2:1:1:1:1" typref="1177923086" value="ii"/>
+<Binary_Exp op="(" typref="103245008">
+<Id suffix="1" tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:3:2,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:3:4:1:2:1:1:1,,A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:3:3:1:2:1:1:1:1" typref="4044453162" value="total_field"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:3:3:1:2:1:1:2:1,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:3:4:1:2:1:1:2,A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:3:3:1:2:1:1:1:1,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:3:2:1,A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:3:3:1:2:1:1:1:1" typref="2701647786" value="ii"/>
 </Binary_Exp>
 <Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:3:3:1:2:1:1:2:2,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:3:4:1:2:1:2,A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:3:3:1:2:1:1:1:1,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:3:2:2,A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:3:3:1:2:1:1:1:1" typref="2701647786" value="oo"/>
 </Binary_Exp>
@@ -984,9 +1002,10 @@
 </Exp_Comparison>
 </Binary_Pred>
 </Goal>
+<Proof_State proofState="Unproved" methodList="?" passList="Force(0),?"/>
 </Simple_Goal>
 </Proof_Obligation>
-<Proof_Obligation merge="=">
+<Proof_Obligation merge="-">
 <Comment>Operations dans une implantation / Precondition</Comment>
 <Tag>val_field</Tag>
 <Tag>PRECONDITION</Tag>
@@ -1022,7 +1041,7 @@
 </Nary_Pred>
 </Hypothesis>
 </Proof_Obligation>
-<Proof_Obligation merge="=">
+<Proof_Obligation merge="-">
 <Comment>Operations dans une implantation</Comment>
 <Tag>val_field</Tag>
 <Tag>INVARIANT</Tag>
@@ -1040,7 +1059,7 @@
 <Hypothesis>
 <Nary_Pred op="&amp;">
 <Exp_Comparison op="=">
-<Id suffix="1" tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:3:1:1" typref="4077266551" value="vv"/>
+<Id suffix="1" tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:3:1:1" typref="2701647786" value="vv"/>
 <Id suffix="" typref="2701647786" value="vv"/>
 </Exp_Comparison>
 </Nary_Pred>
@@ -1068,10 +1087,10 @@
 </Nary_Pred>
 <Nary_Pred op="&amp;">
 <Exp_Comparison op=":">
-<Id tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:3:3:1:1:1" typref="1177923086" value="ii"/>
-<Binary_Exp op=".." tag=",A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:3:3:1:1:2,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:1:2" typref="3988092277">
-<Integer_Literal tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:3:1:2:2:1" typref="2701647786" value="1"/>
-<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:3:1:2:2:2" typref="2701647786" value="max_field"/>
+<Id tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:3:3:1:1:1" typref="2701647786" value="ii"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:3:3:1:1:2:1" typref="2701647786" value="0"/>
+<Integer_Literal tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:3:3:1:1:2:2" typref="2701647786" value="4"/>
 </Binary_Exp>
 </Exp_Comparison>
 <Exp_Comparison op=":">
@@ -1084,7 +1103,7 @@
 </Nary_Pred>
 </Nary_Pred>
 </Local_Hyp>
-<Simple_Goal merge="0">
+<Simple_Goal merge="">
 <Tag>Refinement is correct</Tag>
 <Goal>
 <Binary_Pred op="=>">
@@ -1093,10 +1112,10 @@
 <Ref_Hyp num="1"/>
 </Nary_Pred>
 <Exp_Comparison op="=">
-<Binary_Exp op="(" tag=",A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:3:1:1,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:3:1:1,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:3:1:1,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:3:4:1:1:1,," typref="4077266551">
-<Binary_Exp op="(" typref="1089793219">
-<Id suffix="1" tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:3:2,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:3:4:1:2:1:1:1," typref="2104432147" value="total_field"/>
-<Id tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:3:4:1:2:1:1:2" typref="1177923086" value="ii"/>
+<Binary_Exp op="(" tag=",A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:3:1:1,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:3:1:1,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:3:1:1,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:3:4:1:1:1,," typref="2701647786">
+<Binary_Exp op="(" typref="103245008">
+<Id suffix="1" tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:3:2,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:3:4:1:2:1:1:1," typref="4044453162" value="total_field"/>
+<Id tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:3:4:1:2:1:1:2" typref="2701647786" value="ii"/>
 </Binary_Exp>
 <Id tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:3:4:1:2:1:2" typref="2701647786" value="oo"/>
 </Binary_Exp>
@@ -1110,9 +1129,10 @@
 </Exp_Comparison>
 </Binary_Pred>
 </Goal>
+<Proof_State proofState="Unproved" methodList="?" passList="Force(0),?"/>
 </Simple_Goal>
 </Proof_Obligation>
-<Proof_Obligation merge="=">
+<Proof_Obligation merge="-">
 <Comment>Operations dans une implantation / Precondition</Comment>
 <Tag>nbr_object</Tag>
 <Tag>PRECONDITION</Tag>
@@ -1131,7 +1151,7 @@
 <Nary_Pred op="&amp;"/>
 </Hypothesis>
 </Proof_Obligation>
-<Proof_Obligation merge="=">
+<Proof_Obligation merge="-">
 <Comment>Operations dans une implantation</Comment>
 <Tag>nbr_object</Tag>
 <Tag>INVARIANT</Tag>
@@ -1169,8 +1189,8 @@
 <Ref_Hyp num="1"/>
 </Nary_Pred>
 <Exp_Comparison op="=">
-<Id suffix="1" tag="B:/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:3:1,B:/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:4:2:1:2:1,,B:/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:4:1:1,B:/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:4:1:1,B:/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:4:1:1,B:/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:4:2:1:1:1,," typref="2701647786" value="total_object"/>
-<Id tag="B:/DatabaseSystem/bdp\PARTIAL_OBJECT.bxml:1:6:6:2:1:2:1,,B:/DatabaseSystem/bdp\PARTIAL_OBJECT.bxml:1:6:6:2:1:1:1" typref="2701647786" value="partial_object"/>
+<Id suffix="1" tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:3:1,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:4:2:1:2:1,,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:4:1:1,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:4:1:1,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:4:1:1,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:4:2:1:1:1,," typref="2701647786" value="total_object"/>
+<Id tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\PARTIAL_OBJECT.bxml:1:6:6:2:1:2:1,,A:/b-method-training/atelierb/DatabaseSystem/bdp\PARTIAL_OBJECT.bxml:1:6:6:2:1:1:1" typref="2701647786" value="partial_object"/>
 </Exp_Comparison>
 </Binary_Pred>
 </Goal>
@@ -1185,7 +1205,7 @@
 <Definition name="imprp"/>
 <Hypothesis/>
 </Proof_Obligation>
-<Proof_Obligation merge="=">
+<Proof_Obligation merge="-">
 <Tag>WellDefinednessInvariant</Tag>
 <Definition name="B definitions"/>
 <Definition name="ctx"/>
@@ -1198,17 +1218,17 @@
 <Definition name="abs"/>
 <Local_Hyp num="1">
 <Exp_Comparison op=":">
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:5:1:2:2:1:1:1" typref="2701647786" value="ii"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:5:1:2:2:1:1:1" typref="2701647786" value="ii"/>
 <Binary_Exp op=".." typref="3603043417">
-<Integer_Literal tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:5:1:2:2:1:1:2:1" typref="2701647786" value="1"/>
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:5:1:2:2:1:1:2:2" typref="2701647786" value="max_field"/>
+<Integer_Literal tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:5:1:2:2:1:1:2:1" typref="2701647786" value="1"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:5:1:2:2:1:1:2:2" typref="2701647786" value="max_field"/>
 </Binary_Exp>
 </Exp_Comparison>
 </Local_Hyp>
 <Local_Hyp num="2">
 <Exp_Comparison op="=" initialTag="((partial_object) = (total_object$1))">
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:5:1:1:1" typref="2701647786" value="partial_object"/>
-<Id suffix="1" tag="B:/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:3:1,B:\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:5:1:1:2," typref="2701647786" value="total_object"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:5:1:1:1" typref="2701647786" value="partial_object"/>
+<Id suffix="1" tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:3:1,A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:5:1:1:2," typref="2701647786" value="total_object"/>
 </Exp_Comparison>
 </Local_Hyp>
 <Simple_Goal merge="0">
@@ -1220,9 +1240,9 @@
 <Ref_Hyp num="1"/>
 </Nary_Pred>
 <Exp_Comparison op=":">
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:5:1:2:2:1:2:1:2" typref="2701647786" value="ii"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:5:1:2:2:1:2:1:2" typref="2701647786" value="ii"/>
 <Unary_Exp op="dom">
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:5:1:2:2:1:2:1:1" typref="4044453162" value="partial_field"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:5:1:2:2:1:2:1:1" typref="4044453162" value="partial_field"/>
 </Unary_Exp>
 </Exp_Comparison>
 </Binary_Pred>
@@ -1237,13 +1257,13 @@
 <Ref_Hyp num="1"/>
 </Nary_Pred>
 <Exp_Comparison op=":">
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:5:1:2:2:1:2:1:1" typref="4044453162" value="partial_field"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:5:1:2:2:1:2:1:1" typref="4044453162" value="partial_field"/>
 <Binary_Exp op="+->">
 <Unary_Exp op="dom">
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:5:1:2:2:1:2:1:1" typref="4044453162" value="partial_field"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:5:1:2:2:1:2:1:1" typref="4044453162" value="partial_field"/>
 </Unary_Exp>
 <Unary_Exp op="ran">
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:5:1:2:2:1:2:1:1" typref="4044453162" value="partial_field"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:5:1:2:2:1:2:1:1" typref="4044453162" value="partial_field"/>
 </Unary_Exp>
 </Binary_Exp>
 </Exp_Comparison>
@@ -1259,9 +1279,9 @@
 <Ref_Hyp num="1"/>
 </Nary_Pred>
 <Exp_Comparison op=":">
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:5:1:2:2:1:2:2:1:2" typref="2701647786" value="ii"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:5:1:2:2:1:2:2:1:2" typref="2701647786" value="ii"/>
 <Unary_Exp op="dom">
-<Id suffix="1" tag="B:/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:3:2,B:\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:5:1:2:2:1:2:2:1:1," typref="4044453162" value="total_field"/>
+<Id suffix="1" tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:3:2,A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:5:1:2:2:1:2:2:1:1," typref="4044453162" value="total_field"/>
 </Unary_Exp>
 </Exp_Comparison>
 </Binary_Pred>
@@ -1276,13 +1296,13 @@
 <Ref_Hyp num="1"/>
 </Nary_Pred>
 <Exp_Comparison op=":">
-<Id suffix="1" tag="B:/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:3:2,B:\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:5:1:2:2:1:2:2:1:1," typref="4044453162" value="total_field"/>
+<Id suffix="1" tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:3:2,A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:5:1:2:2:1:2:2:1:1," typref="4044453162" value="total_field"/>
 <Binary_Exp op="+->">
 <Unary_Exp op="dom">
-<Id suffix="1" tag="B:/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:3:2,B:\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:5:1:2:2:1:2:2:1:1," typref="4044453162" value="total_field"/>
+<Id suffix="1" tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:3:2,A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:5:1:2:2:1:2:2:1:1," typref="4044453162" value="total_field"/>
 </Unary_Exp>
 <Unary_Exp op="ran">
-<Id suffix="1" tag="B:/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:3:2,B:\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:5:1:2:2:1:2:2:1:1," typref="4044453162" value="total_field"/>
+<Id suffix="1" tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:3:2,A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:5:1:2:2:1:2:2:1:1," typref="4044453162" value="total_field"/>
 </Unary_Exp>
 </Binary_Exp>
 </Exp_Comparison>
@@ -1290,7 +1310,7 @@
 </Goal>
 </Simple_Goal>
 </Proof_Obligation>
-<Proof_Obligation merge="=">
+<Proof_Obligation merge="-">
 <Tag>WellDefinednessAssertions</Tag>
 <Definition name="B definitions"/>
 <Definition name="ctx"/>
@@ -1303,7 +1323,7 @@
 <Definition name="abs"/>
 <Definition name="inv"/>
 </Proof_Obligation>
-<Proof_Obligation merge="=">
+<Proof_Obligation merge="-">
 <Tag>WellDefinednessInitialisation</Tag>
 <Definition name="B definitions"/>
 <Definition name="ctx"/>
@@ -1314,7 +1334,7 @@
 <Definition name="imext"/>
 <Definition name="seext"/>
 </Proof_Obligation>
-<Proof_Obligation merge="=">
+<Proof_Obligation merge="-">
 <Comment>Operations dans une implementation</Comment>
 <Tag>WellDefinedness_create_partial_object</Tag>
 <Tag>INVARIANT</Tag>
@@ -1339,57 +1359,59 @@
 </Hypothesis>
 <Local_Hyp num="1">
 <Exp_Comparison op=":">
-<Id tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:1:3:1:1:1,A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:1:2:1:1:1" typref="4077266551" value="vv"/>
-<Binary_Exp op=".." tag=",A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:1:3:1:1:2,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:1:3,A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:1:2:1:1:1" typref="3958993484">
-<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:3:1:2:3:1,A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:1:2:1:1:1" typref="2701647786" value="min_val"/>
-<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:3:1:2:3:2,A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:1:2:1:1:1" typref="2701647786" value="MAXINT"/>
+<Id tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:1:3:1:1:1,A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:1:2:1:1:1" typref="2701647786" value="vv"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:1:3:1:1:2:1,A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:1:2:1:1:1" typref="2701647786" value="0"/>
+<Integer_Literal tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:1:3:1:1:2:2,A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:1:2:1:1:1" typref="2701647786" value="10000"/>
 </Binary_Exp>
 </Exp_Comparison>
 </Local_Hyp>
 <Local_Hyp num="2">
 <Exp_Comparison op=":">
-<Id tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:1:4:1:2:2:1:2:1:1,A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:1:2:1:1:1" typref="1177923086" value="ii"/>
-<Binary_Exp op=".." tag=",A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:1:4:1:2:2:1:2:1:2,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:1:2,A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:1:2:1:1:1" typref="3988092277">
-<Integer_Literal tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:3:1:2:2:1,A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:1:2:1:1:1" typref="2701647786" value="1"/>
-<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:3:1:2:2:2,A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:1:2:1:1:1" typref="2701647786" value="max_field"/>
+<Id tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:1:4:1:2:2:1:2:1:1,A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:1:2:1:1:1" typref="2701647786" value="ii"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:1:4:1:2:2:1:2:1:2:1,A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:1:2:1:1:1" typref="2701647786" value="0"/>
+<Integer_Literal tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:1:4:1:2:2:1:2:1:2:2,A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:1:2:1:1:1" typref="2701647786" value="4"/>
 </Binary_Exp>
 </Exp_Comparison>
 </Local_Hyp>
-<Simple_Goal merge="0">
+<Simple_Goal merge="">
 <Tag>Well definedness</Tag>
 <Goal>
 <Binary_Pred op="=>">
 <Ref_Hyp num="2"/>
 <Exp_Comparison op=":">
-<Id tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:1:4:1:2:2:1:3:1:1:2,A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:1:2:1:1:1" typref="1177923086" value="ii"/>
+<Id tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:1:4:1:2:2:1:3:1:1:2,A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:1:2:1:1:1" typref="2701647786" value="ii"/>
 <Unary_Exp op="dom">
-<Id suffix="1" tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:3:2,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:1:4:1:2:2:1:3:1:1:1,,A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:1:2:1:1:1" typref="2104432147" value="total_field"/>
+<Id suffix="1" tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:3:2,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:1:4:1:2:2:1:3:1:1:1,,A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:1:2:1:1:1" typref="4044453162" value="total_field"/>
 </Unary_Exp>
 </Exp_Comparison>
 </Binary_Pred>
 </Goal>
+<Proof_State proofState="Unproved" methodList="?" passList="Force(0),?"/>
 </Simple_Goal>
-<Simple_Goal merge="1">
+<Simple_Goal merge="">
 <Tag>Well definedness</Tag>
 <Goal>
 <Binary_Pred op="=>">
 <Ref_Hyp num="2"/>
 <Exp_Comparison op=":">
-<Id suffix="1" tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:3:2,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:1:4:1:2:2:1:3:1:1:1,,A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:1:2:1:1:1" typref="2104432147" value="total_field"/>
+<Id suffix="1" tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:3:2,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:1:4:1:2:2:1:3:1:1:1,,A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:1:2:1:1:1" typref="4044453162" value="total_field"/>
 <Binary_Exp op="+->">
 <Unary_Exp op="dom">
-<Id suffix="1" tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:3:2,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:1:4:1:2:2:1:3:1:1:1,,A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:1:2:1:1:1" typref="2104432147" value="total_field"/>
+<Id suffix="1" tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:3:2,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:1:4:1:2:2:1:3:1:1:1,,A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:1:2:1:1:1" typref="4044453162" value="total_field"/>
 </Unary_Exp>
 <Unary_Exp op="ran">
-<Id suffix="1" tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:3:2,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:1:4:1:2:2:1:3:1:1:1,,A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:1:2:1:1:1" typref="2104432147" value="total_field"/>
+<Id suffix="1" tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:3:2,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:1:4:1:2:2:1:3:1:1:1,,A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:1:2:1:1:1" typref="4044453162" value="total_field"/>
 </Unary_Exp>
 </Binary_Exp>
 </Exp_Comparison>
 </Binary_Pred>
 </Goal>
+<Proof_State proofState="Unproved" methodList="?" passList="Force(0),?"/>
 </Simple_Goal>
 </Proof_Obligation>
-<Proof_Obligation merge="=">
+<Proof_Obligation merge="-">
 <Comment>Operations dans une implementation</Comment>
 <Tag>WellDefinedness_rem_field</Tag>
 <Tag>INVARIANT</Tag>
@@ -1426,51 +1448,53 @@
 </Hypothesis>
 <Local_Hyp num="1">
 <Exp_Comparison op=":">
-<Id tag="B:/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:2:2:1:2:1,B:\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:2:2:1:1:1" typref="2701647786" value="oo"/>
+<Id tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:2:2:1:2:1,A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:2:2:1:1:1" typref="2701647786" value="oo"/>
 <Binary_Exp op=".." typref="3603043417">
-<Integer_Literal tag="B:/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:2:2:1:2:2:1,B:\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:2:2:1:1:1" typref="2701647786" value="1"/>
-<Id suffix="1" tag="B:/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:3:1,B:/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:2:2:1:2:2:2,,B:\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:2:2:1:1:1" typref="2701647786" value="total_object"/>
+<Integer_Literal tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:2:2:1:2:2:1,A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:2:2:1:1:1" typref="2701647786" value="1"/>
+<Id suffix="1" tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:3:1,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:2:2:1:2:2:2,,A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:2:2:1:1:1" typref="2701647786" value="total_object"/>
 </Binary_Exp>
 </Exp_Comparison>
 </Local_Hyp>
 <Local_Hyp num="2">
 <Exp_Comparison op=":">
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:2:2:1:2:3,B:/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:2:2:1:1:1,B:\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:2:2:1:1:1,B:/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:2:1:1,B:\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:2:2:1:1:1" typref="1177923086" value="MAXINT"/>
-<Binary_Exp op=".." tag=",B:/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:2:2:1:1:2,B:/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:1:2,B:\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:2:2:1:1:1" typref="3988092277">
-<Integer_Literal tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:3:1:2:2:1,B:\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:2:2:1:1:1" typref="2701647786" value="1"/>
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:3:1:2:2:2,B:\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:2:2:1:1:1" typref="2701647786" value="max_field"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:2:2:1:2:3,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:2:2:1:1:1,A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:2:2:1:1:1,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:2:1:1,A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:2:2:1:1:1" typref="2701647786" value="MAXINT"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:2:2:1:1:2:1,A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:2:2:1:1:1" typref="2701647786" value="0"/>
+<Integer_Literal tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:2:2:1:1:2:2,A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:2:2:1:1:1" typref="2701647786" value="4"/>
 </Binary_Exp>
 </Exp_Comparison>
 </Local_Hyp>
-<Simple_Goal merge="0">
+<Simple_Goal merge="">
 <Tag>Well definedness</Tag>
 <Goal>
 <Exp_Comparison op=":">
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:2:2:1:2:3,B:/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:2:3:1:1:1:1:2,B:\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:2:2:1:1:1,B:/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:2:1:1,B:\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:2:2:1:1:1" typref="1177923086" value="MAXINT"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:2:2:1:2:3,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:2:3:1:1:1:1:2,A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:2:2:1:1:1,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:2:1:1,A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:2:2:1:1:1" typref="2701647786" value="MAXINT"/>
 <Unary_Exp op="dom">
-<Id suffix="1" tag="B:/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:3:2,B:/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:2:3:1:1:1:1:1,,B:\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:2:2:1:1:1" typref="2104432147" value="total_field"/>
+<Id suffix="1" tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:3:2,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:2:3:1:1:1:1:1,,A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:2:2:1:1:1" typref="4044453162" value="total_field"/>
 </Unary_Exp>
 </Exp_Comparison>
 </Goal>
+<Proof_State proofState="Unproved" methodList="?" passList="Force(0),?"/>
 </Simple_Goal>
-<Simple_Goal merge="1">
+<Simple_Goal merge="">
 <Tag>Well definedness</Tag>
 <Goal>
 <Exp_Comparison op=":">
-<Id suffix="1" tag="B:/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:3:2,B:/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:2:3:1:1:1:1:1,,B:\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:2:2:1:1:1" typref="2104432147" value="total_field"/>
+<Id suffix="1" tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:3:2,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:2:3:1:1:1:1:1,,A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:2:2:1:1:1" typref="4044453162" value="total_field"/>
 <Binary_Exp op="+->">
 <Unary_Exp op="dom">
-<Id suffix="1" tag="B:/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:3:2,B:/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:2:3:1:1:1:1:1,,B:\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:2:2:1:1:1" typref="2104432147" value="total_field"/>
+<Id suffix="1" tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:3:2,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:2:3:1:1:1:1:1,,A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:2:2:1:1:1" typref="4044453162" value="total_field"/>
 </Unary_Exp>
 <Unary_Exp op="ran">
-<Id suffix="1" tag="B:/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:3:2,B:/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:2:3:1:1:1:1:1,,B:\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:2:2:1:1:1" typref="2104432147" value="total_field"/>
+<Id suffix="1" tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:3:2,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:2:3:1:1:1:1:1,,A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:2:2:1:1:1" typref="4044453162" value="total_field"/>
 </Unary_Exp>
 </Binary_Exp>
 </Exp_Comparison>
 </Goal>
+<Proof_State proofState="Unproved" methodList="?" passList="Force(0),?"/>
 </Simple_Goal>
 </Proof_Obligation>
-<Proof_Obligation merge="=">
+<Proof_Obligation merge="-">
 <Comment>Operations dans une implementation</Comment>
 <Tag>WellDefinedness_def_field</Tag>
 <Tag>INVARIANT</Tag>
@@ -1507,93 +1531,110 @@
 </Hypothesis>
 <Local_Hyp num="1">
 <Exp_Comparison op=":">
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:3:3:1:2:1:1:2:2,B:/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:3:3:1:1:1,B:\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:3:3:1:2:1:1:1:1,B:/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:3:2:1,B:\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:3:3:1:2:1:1:1:1" typref="1177923086" value="oo"/>
-<Binary_Exp op=".." tag=",B:/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:3:3:1:1:2,B:/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:1:2,B:\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:3:3:1:2:1:1:1:1" typref="3988092277">
-<Integer_Literal tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:3:1:2:2:1,B:\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:3:3:1:2:1:1:1:1" typref="2701647786" value="1"/>
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:3:1:2:2:2,B:\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:3:3:1:2:1:1:1:1" typref="2701647786" value="max_field"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:3:3:1:2:1:1:2:2,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:3:3:1:1:1,A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:3:3:1:2:1:1:1:1,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:3:2:1,A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:3:3:1:2:1:1:1:1" typref="2701647786" value="oo"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:3:3:1:1:2:1,A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:3:3:1:2:1:1:1:1" typref="2701647786" value="0"/>
+<Integer_Literal tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:3:3:1:1:2:2,A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:3:3:1:2:1:1:1:1" typref="2701647786" value="4"/>
 </Binary_Exp>
 </Exp_Comparison>
 </Local_Hyp>
-<Simple_Goal merge="0">
+<Simple_Goal merge="">
 <Tag>Well definedness</Tag>
 <Goal>
 <Exp_Comparison op=":">
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:3:3:1:2:1:1:2:2,B:/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:3:4:1:2:1:1:2,B:\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:3:3:1:2:1:1:1:1,B:/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:3:2:1,B:\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:3:3:1:2:1:1:1:1" typref="1177923086" value="oo"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:3:3:1:2:1:1:2:2,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:3:4:1:2:1:1:2,A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:3:3:1:2:1:1:1:1,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:3:2:1,A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:3:3:1:2:1:1:1:1" typref="2701647786" value="oo"/>
 <Unary_Exp op="dom">
-<Id suffix="1" tag="B:/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:3:2,B:/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:3:4:1:2:1:1:1,,B:\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:3:3:1:2:1:1:1:1" typref="2104432147" value="total_field"/>
+<Id suffix="1" tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:3:2,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:3:4:1:2:1:1:1,,A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:3:3:1:2:1:1:1:1" typref="4044453162" value="total_field"/>
 </Unary_Exp>
 </Exp_Comparison>
 </Goal>
+<Proof_State proofState="Unproved" methodList="?" passList="Force(0),?"/>
 </Simple_Goal>
-<Simple_Goal merge="1">
+<Simple_Goal merge="">
 <Tag>Well definedness</Tag>
 <Goal>
 <Exp_Comparison op=":">
-<Id suffix="1" tag="B:/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:3:2,B:/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:3:4:1:2:1:1:1,,B:\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:3:3:1:2:1:1:1:1" typref="2104432147" value="total_field"/>
+<Id suffix="1" tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:3:2,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:3:4:1:2:1:1:1,,A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:3:3:1:2:1:1:1:1" typref="4044453162" value="total_field"/>
 <Binary_Exp op="+->">
 <Unary_Exp op="dom">
-<Id suffix="1" tag="B:/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:3:2,B:/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:3:4:1:2:1:1:1,,B:\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:3:3:1:2:1:1:1:1" typref="2104432147" value="total_field"/>
+<Id suffix="1" tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:3:2,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:3:4:1:2:1:1:1,,A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:3:3:1:2:1:1:1:1" typref="4044453162" value="total_field"/>
 </Unary_Exp>
 <Unary_Exp op="ran">
-<Id suffix="1" tag="B:/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:3:2,B:/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:3:4:1:2:1:1:1,,B:\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:3:3:1:2:1:1:1:1" typref="2104432147" value="total_field"/>
+<Id suffix="1" tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:3:2,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:3:4:1:2:1:1:1,,A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:3:3:1:2:1:1:1:1" typref="4044453162" value="total_field"/>
 </Unary_Exp>
 </Binary_Exp>
 </Exp_Comparison>
 </Goal>
+<Proof_State proofState="Unproved" methodList="?" passList="Force(0),?"/>
 </Simple_Goal>
-<Simple_Goal merge="2">
+<Simple_Goal merge="">
 <Tag>Well definedness</Tag>
 <Goal>
 <Exp_Comparison op=":">
-<Id tag="B:/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:3:4:1:2:1:2,B:\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:3:3:1:2:1:1:1:1" typref="2701647786" value="oo"/>
+<Id tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:3:4:1:2:1:2,A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:3:3:1:2:1:1:1:1" typref="2701647786" value="oo"/>
 <Unary_Exp op="dom">
-<Binary_Exp op="(" typref="1089793219">
-<Id suffix="1" tag="B:/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:3:2,B:/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:3:4:1:2:1:1:1,,B:\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:3:3:1:2:1:1:1:1" typref="2104432147" value="total_field"/>
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:3:3:1:2:1:1:2:2,B:/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:3:4:1:2:1:1:2,B:\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:3:3:1:2:1:1:1:1,B:/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:3:2:1,B:\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:3:3:1:2:1:1:1:1" typref="1177923086" value="oo"/>
+<Binary_Exp op="(" typref="103245008">
+<Id suffix="1" tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:3:2,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:3:4:1:2:1:1:1,,A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:3:3:1:2:1:1:1:1" typref="4044453162" value="total_field"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:3:3:1:2:1:1:2:2,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:3:4:1:2:1:1:2,A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:3:3:1:2:1:1:1:1,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:3:2:1,A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:3:3:1:2:1:1:1:1" typref="2701647786" value="oo"/>
 </Binary_Exp>
 </Unary_Exp>
 </Exp_Comparison>
 </Goal>
+<Proof_State proofState="Unproved" methodList="?" passList="Force(0),?"/>
 </Simple_Goal>
-<Simple_Goal merge="3">
+<Simple_Goal merge="">
 <Tag>Well definedness</Tag>
 <Goal>
 <Exp_Comparison op=":">
-<Binary_Exp op="(" typref="1089793219">
-<Id suffix="1" tag="B:/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:3:2,B:/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:3:4:1:2:1:1:1,,B:\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:3:3:1:2:1:1:1:1" typref="2104432147" value="total_field"/>
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:3:3:1:2:1:1:2:2,B:/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:3:4:1:2:1:1:2,B:\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:3:3:1:2:1:1:1:1,B:/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:3:2:1,B:\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:3:3:1:2:1:1:1:1" typref="1177923086" value="oo"/>
+<Binary_Exp op="(" typref="103245008">
+<Id suffix="1" tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:3:2,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:3:4:1:2:1:1:1,,A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:3:3:1:2:1:1:1:1" typref="4044453162" value="total_field"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:3:3:1:2:1:1:2:2,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:3:4:1:2:1:1:2,A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:3:3:1:2:1:1:1:1,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:3:2:1,A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:3:3:1:2:1:1:1:1" typref="2701647786" value="oo"/>
 </Binary_Exp>
 <Binary_Exp op="+->">
 <Unary_Exp op="dom">
-<Binary_Exp op="(" typref="1089793219">
-<Id suffix="1" tag="B:/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:3:2,B:/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:3:4:1:2:1:1:1,,B:\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:3:3:1:2:1:1:1:1" typref="2104432147" value="total_field"/>
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:3:3:1:2:1:1:2:2,B:/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:3:4:1:2:1:1:2,B:\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:3:3:1:2:1:1:1:1,B:/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:3:2:1,B:\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:3:3:1:2:1:1:1:1" typref="1177923086" value="oo"/>
+<Binary_Exp op="(" typref="103245008">
+<Id suffix="1" tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:3:2,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:3:4:1:2:1:1:1,,A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:3:3:1:2:1:1:1:1" typref="4044453162" value="total_field"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:3:3:1:2:1:1:2:2,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:3:4:1:2:1:1:2,A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:3:3:1:2:1:1:1:1,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:3:2:1,A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:3:3:1:2:1:1:1:1" typref="2701647786" value="oo"/>
 </Binary_Exp>
 </Unary_Exp>
 <Unary_Exp op="ran">
-<Binary_Exp op="(" typref="1089793219">
-<Id suffix="1" tag="B:/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:3:2,B:/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:3:4:1:2:1:1:1,,B:\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:3:3:1:2:1:1:1:1" typref="2104432147" value="total_field"/>
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:3:3:1:2:1:1:2:2,B:/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:3:4:1:2:1:1:2,B:\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:3:3:1:2:1:1:1:1,B:/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:3:2:1,B:\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:3:3:1:2:1:1:1:1" typref="1177923086" value="oo"/>
+<Binary_Exp op="(" typref="103245008">
+<Id suffix="1" tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:3:2,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:3:4:1:2:1:1:1,,A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:3:3:1:2:1:1:1:1" typref="4044453162" value="total_field"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:3:3:1:2:1:1:2:2,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:3:4:1:2:1:1:2,A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:3:3:1:2:1:1:1:1,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:3:2:1,A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:3:3:1:2:1:1:1:1" typref="2701647786" value="oo"/>
 </Binary_Exp>
 </Unary_Exp>
 </Binary_Exp>
 </Exp_Comparison>
 </Goal>
+<Proof_State proofState="Unproved" methodList="?" passList="Force(0),?"/>
+</Simple_Goal>
+<Simple_Goal merge="">
+<Tag>Precondition predicate</Tag>
+<Goal>
+<Exp_Comparison op=":">
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:3:3:1:2:1:1:2:1,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:3:3:1:1:1,A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:3:3:1:2:1:1:1:1,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:3:2:1,A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:3:3:1:2:1:1:1:1" typref="2701647786" value="ii"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:3:3:1:1:2:1,A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:3:3:1:2:1:1:1:1" typref="2701647786" value="0"/>
+<Integer_Literal tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:3:3:1:1:2:2,A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:3:3:1:2:1:1:1:1" typref="2701647786" value="4"/>
+</Binary_Exp>
+</Exp_Comparison>
+</Goal>
+<Proof_State proofState="Unproved" methodList="?" passList="Force(0),?"/>
 </Simple_Goal>
 <Simple_Goal merge="4">
 <Tag>Precondition predicate</Tag>
 <Goal>
 <Exp_Comparison op=":">
-<Id tag="B:\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:3:3:1:2:1:1:2:2,B:/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:3:3:1:2:1,B:\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:3:3:1:2:1:1:1:1,B:/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:3:2:2,B:\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:3:3:1:2:1:1:1:1" typref="2701647786" value="oo"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:3:3:1:2:1:1:2:2,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:3:3:1:2:1,A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:3:3:1:2:1:1:1:1,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:3:2:2,A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:3:3:1:2:1:1:1:1" typref="2701647786" value="oo"/>
 <Binary_Exp op=".." typref="3603043417">
-<Integer_Literal tag="B:/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:3:3:1:2:2:1,B:\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:3:3:1:2:1:1:1:1" typref="2701647786" value="1"/>
-<Id suffix="1" tag="B:/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:3:1,B:/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:3:3:1:2:2:2,,B:\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:3:3:1:2:1:1:1:1" typref="2701647786" value="total_object"/>
+<Integer_Literal tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:3:3:1:2:2:1,A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:3:3:1:2:1:1:1:1" typref="2701647786" value="1"/>
+<Id suffix="1" tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:3:1,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:3:3:1:2:2:2,,A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:7:3:3:1:2:1:1:1:1" typref="2701647786" value="total_object"/>
 </Binary_Exp>
 </Exp_Comparison>
 </Goal>
 </Simple_Goal>
 </Proof_Obligation>
-<Proof_Obligation merge="=">
+<Proof_Obligation merge="-">
 <Comment>Operations dans une implementation</Comment>
 <Tag>WellDefinedness_mod_field</Tag>
 <Tag>INVARIANT</Tag>
@@ -1635,10 +1676,10 @@
 </Nary_Pred>
 <Nary_Pred op="&amp;">
 <Exp_Comparison op=":">
-<Id tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:2:2:1:1:1" typref="1177923086" value="ii"/>
-<Binary_Exp op=".." tag=",A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:2:2:1:1:2,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:1:2" typref="3988092277">
-<Integer_Literal tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:3:1:2:2:1" typref="2701647786" value="1"/>
-<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:3:1:2:2:2" typref="2701647786" value="max_field"/>
+<Id tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:2:2:1:1:1" typref="2701647786" value="ii"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:2:2:1:1:2:1" typref="2701647786" value="0"/>
+<Integer_Literal tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:2:2:1:1:2:2" typref="2701647786" value="4"/>
 </Binary_Exp>
 </Exp_Comparison>
 <Exp_Comparison op=":">
@@ -1649,44 +1690,46 @@
 </Binary_Exp>
 </Exp_Comparison>
 <Exp_Comparison op=":">
-<Id tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:2:2:1:3:1" typref="4077266551" value="vv"/>
-<Binary_Exp op=".." tag=",A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:2:2:1:3:2,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:1:3" typref="3958993484">
-<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:3:1:2:3:1" typref="2701647786" value="min_val"/>
-<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:3:1:2:3:2" typref="2701647786" value="MAXINT"/>
+<Id tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:2:2:1:3:1" typref="2701647786" value="vv"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:2:2:1:3:2:1" typref="2701647786" value="0"/>
+<Integer_Literal tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:2:2:1:3:2:2" typref="2701647786" value="10000"/>
 </Binary_Exp>
 </Exp_Comparison>
 </Nary_Pred>
 </Nary_Pred>
 </Hypothesis>
-<Simple_Goal merge="0">
+<Simple_Goal merge="">
 <Tag>Well definedness</Tag>
 <Goal>
 <Exp_Comparison op=":">
-<Id tag="B:/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:2:3:1:1:1:1:2" typref="1177923086" value="ii"/>
+<Id tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:2:3:1:1:1:1:2" typref="2701647786" value="ii"/>
 <Unary_Exp op="dom">
-<Id suffix="1" tag="B:/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:3:2,B:/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:2:3:1:1:1:1:1," typref="2104432147" value="total_field"/>
+<Id suffix="1" tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:3:2,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:2:3:1:1:1:1:1," typref="4044453162" value="total_field"/>
 </Unary_Exp>
 </Exp_Comparison>
 </Goal>
+<Proof_State proofState="Unproved" methodList="?" passList="Force(0),?"/>
 </Simple_Goal>
-<Simple_Goal merge="1">
+<Simple_Goal merge="">
 <Tag>Well definedness</Tag>
 <Goal>
 <Exp_Comparison op=":">
-<Id suffix="1" tag="B:/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:3:2,B:/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:2:3:1:1:1:1:1," typref="2104432147" value="total_field"/>
+<Id suffix="1" tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:3:2,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:2:3:1:1:1:1:1," typref="4044453162" value="total_field"/>
 <Binary_Exp op="+->">
 <Unary_Exp op="dom">
-<Id suffix="1" tag="B:/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:3:2,B:/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:2:3:1:1:1:1:1," typref="2104432147" value="total_field"/>
+<Id suffix="1" tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:3:2,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:2:3:1:1:1:1:1," typref="4044453162" value="total_field"/>
 </Unary_Exp>
 <Unary_Exp op="ran">
-<Id suffix="1" tag="B:/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:3:2,B:/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:2:3:1:1:1:1:1," typref="2104432147" value="total_field"/>
+<Id suffix="1" tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:3:2,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:2:3:1:1:1:1:1," typref="4044453162" value="total_field"/>
 </Unary_Exp>
 </Binary_Exp>
 </Exp_Comparison>
 </Goal>
+<Proof_State proofState="Unproved" methodList="?" passList="Force(0),?"/>
 </Simple_Goal>
 </Proof_Obligation>
-<Proof_Obligation merge="=">
+<Proof_Obligation merge="-">
 <Comment>Operations dans une implementation</Comment>
 <Tag>WellDefinedness_nbr_object</Tag>
 <Tag>INVARIANT</Tag>
@@ -1705,7 +1748,7 @@
 <Nary_Pred op="&amp;"/>
 </Hypothesis>
 </Proof_Obligation>
-<Proof_Obligation merge="=">
+<Proof_Obligation merge="-">
 <Comment>Operations dans une implementation</Comment>
 <Tag>WellDefinedness_val_field</Tag>
 <Tag>INVARIANT</Tag>
@@ -1740,10 +1783,10 @@
 </Nary_Pred>
 <Nary_Pred op="&amp;">
 <Exp_Comparison op=":">
-<Id tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:3:3:1:1:1" typref="1177923086" value="ii"/>
-<Binary_Exp op=".." tag=",A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:3:3:1:1:2,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:1:2" typref="3988092277">
-<Integer_Literal tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:3:1:2:2:1" typref="2701647786" value="1"/>
-<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:3:1:2:2:2" typref="2701647786" value="max_field"/>
+<Id tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:3:3:1:1:1" typref="2701647786" value="ii"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:3:3:1:1:2:1" typref="2701647786" value="0"/>
+<Integer_Literal tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:3:3:1:1:2:2" typref="2701647786" value="4"/>
 </Binary_Exp>
 </Exp_Comparison>
 <Exp_Comparison op=":">
@@ -1756,71 +1799,75 @@
 </Nary_Pred>
 </Nary_Pred>
 </Hypothesis>
-<Simple_Goal merge="0">
+<Simple_Goal merge="">
 <Tag>Well definedness</Tag>
 <Goal>
 <Exp_Comparison op=":">
-<Id tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:3:4:1:2:1:1:2" typref="1177923086" value="ii"/>
+<Id tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:3:4:1:2:1:1:2" typref="2701647786" value="ii"/>
 <Unary_Exp op="dom">
-<Id suffix="1" tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:3:2,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:3:4:1:2:1:1:1," typref="2104432147" value="total_field"/>
+<Id suffix="1" tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:3:2,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:3:4:1:2:1:1:1," typref="4044453162" value="total_field"/>
 </Unary_Exp>
 </Exp_Comparison>
 </Goal>
+<Proof_State proofState="Unproved" methodList="?" passList="Force(0),?"/>
 </Simple_Goal>
-<Simple_Goal merge="1">
+<Simple_Goal merge="">
 <Tag>Well definedness</Tag>
 <Goal>
 <Exp_Comparison op=":">
-<Id suffix="1" tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:3:2,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:3:4:1:2:1:1:1," typref="2104432147" value="total_field"/>
+<Id suffix="1" tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:3:2,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:3:4:1:2:1:1:1," typref="4044453162" value="total_field"/>
 <Binary_Exp op="+->">
 <Unary_Exp op="dom">
-<Id suffix="1" tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:3:2,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:3:4:1:2:1:1:1," typref="2104432147" value="total_field"/>
+<Id suffix="1" tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:3:2,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:3:4:1:2:1:1:1," typref="4044453162" value="total_field"/>
 </Unary_Exp>
 <Unary_Exp op="ran">
-<Id suffix="1" tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:3:2,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:3:4:1:2:1:1:1," typref="2104432147" value="total_field"/>
+<Id suffix="1" tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:3:2,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:3:4:1:2:1:1:1," typref="4044453162" value="total_field"/>
 </Unary_Exp>
 </Binary_Exp>
 </Exp_Comparison>
 </Goal>
+<Proof_State proofState="Unproved" methodList="?" passList="Force(0),?"/>
 </Simple_Goal>
-<Simple_Goal merge="2">
+<Simple_Goal merge="">
 <Tag>Well definedness</Tag>
 <Goal>
 <Exp_Comparison op=":">
 <Id tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:3:4:1:2:1:2" typref="2701647786" value="oo"/>
 <Unary_Exp op="dom">
-<Binary_Exp op="(" typref="1089793219">
-<Id suffix="1" tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:3:2,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:3:4:1:2:1:1:1," typref="2104432147" value="total_field"/>
-<Id tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:3:4:1:2:1:1:2" typref="1177923086" value="ii"/>
+<Binary_Exp op="(" typref="103245008">
+<Id suffix="1" tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:3:2,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:3:4:1:2:1:1:1," typref="4044453162" value="total_field"/>
+<Id tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:3:4:1:2:1:1:2" typref="2701647786" value="ii"/>
 </Binary_Exp>
 </Unary_Exp>
 </Exp_Comparison>
 </Goal>
+<Proof_State proofState="Unproved" methodList="?" passList="Force(0),?"/>
 </Simple_Goal>
-<Simple_Goal merge="3">
+<Simple_Goal merge="">
 <Tag>Well definedness</Tag>
 <Goal>
 <Exp_Comparison op=":">
-<Binary_Exp op="(" typref="1089793219">
-<Id suffix="1" tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:3:2,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:3:4:1:2:1:1:1," typref="2104432147" value="total_field"/>
-<Id tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:3:4:1:2:1:1:2" typref="1177923086" value="ii"/>
+<Binary_Exp op="(" typref="103245008">
+<Id suffix="1" tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:3:2,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:3:4:1:2:1:1:1," typref="4044453162" value="total_field"/>
+<Id tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:3:4:1:2:1:1:2" typref="2701647786" value="ii"/>
 </Binary_Exp>
 <Binary_Exp op="+->">
 <Unary_Exp op="dom">
-<Binary_Exp op="(" typref="1089793219">
-<Id suffix="1" tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:3:2,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:3:4:1:2:1:1:1," typref="2104432147" value="total_field"/>
-<Id tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:3:4:1:2:1:1:2" typref="1177923086" value="ii"/>
+<Binary_Exp op="(" typref="103245008">
+<Id suffix="1" tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:3:2,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:3:4:1:2:1:1:1," typref="4044453162" value="total_field"/>
+<Id tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:3:4:1:2:1:1:2" typref="2701647786" value="ii"/>
 </Binary_Exp>
 </Unary_Exp>
 <Unary_Exp op="ran">
-<Binary_Exp op="(" typref="1089793219">
-<Id suffix="1" tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:3:2,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:3:4:1:2:1:1:1," typref="2104432147" value="total_field"/>
-<Id tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:3:4:1:2:1:1:2" typref="1177923086" value="ii"/>
+<Binary_Exp op="(" typref="103245008">
+<Id suffix="1" tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:3:2,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:3:4:1:2:1:1:1," typref="4044453162" value="total_field"/>
+<Id tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:6:3:4:1:2:1:1:2" typref="2701647786" value="ii"/>
 </Binary_Exp>
 </Unary_Exp>
 </Binary_Exp>
 </Exp_Comparison>
 </Goal>
+<Proof_State proofState="Unproved" methodList="?" passList="Force(0),?"/>
 </Simple_Goal>
 </Proof_Obligation>
 <TypeInfos merge="=">
@@ -1921,89 +1968,55 @@
 <Type id="2701647786">
 <Id tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:7:1:1" value="INTEGER"/>
 </Type>
-<Type id="3988092277">
-<Unary_Exp op="POW">
-<Binary_Exp op=".." tag=",A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:7:2:1:1,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:1:2" typref="">
-<Integer_Literal tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:3:1:2:2:1" typref="2701647786" value="1"/>
-<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:3:1:2:2:2" typref="2701647786" value="max_field"/>
-</Binary_Exp>
-</Unary_Exp>
-</Type>
-<Type id="3958993484">
-<Unary_Exp op="POW">
-<Binary_Exp op=".." tag=",A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:7:3:1:1,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:1:3" typref="">
-<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:3:1:2:3:1" typref="2701647786" value="min_val"/>
-<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:3:1:2:3:2" typref="2701647786" value="MAXINT"/>
-</Binary_Exp>
-</Unary_Exp>
-</Type>
 <Type id="3603043417">
 <Unary_Exp op="POW">
-<Id tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:7:4:1:1" value="INTEGER"/>
+<Id tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:7:2:1:1" value="INTEGER"/>
 </Unary_Exp>
 </Type>
-<Type id="2104432147">
+<Type id="4044453162">
 <Unary_Exp op="POW">
 <Binary_Exp op="*">
-<Binary_Exp op=".." tag=",A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:7:5:1:1:1,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:1:2" typref="">
-<Integer_Literal tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:3:1:2:2:1" typref="2701647786" value="1"/>
-<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:3:1:2:2:2" typref="2701647786" value="max_field"/>
-</Binary_Exp>
+<Id tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:7:3:1:1:1" value="INTEGER"/>
 <Unary_Exp op="POW">
 <Binary_Exp op="*">
-<Id tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:7:5:1:1:2:1:1" value="INTEGER"/>
-<Binary_Exp op=".." tag=",A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:7:5:1:1:2:1:2,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:1:3" typref="">
-<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:3:1:2:3:1" typref="2701647786" value="min_val"/>
-<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:3:1:2:3:2" typref="2701647786" value="MAXINT"/>
-</Binary_Exp>
+<Id tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:7:3:1:1:2:1:1" value="INTEGER"/>
+<Id tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:7:3:1:1:2:1:2" value="INTEGER"/>
 </Binary_Exp>
 </Unary_Exp>
 </Binary_Exp>
 </Unary_Exp>
 </Type>
-<Type id="2260678448">
+<Type id="2175577561">
 <Unary_Exp op="POW">
 <Unary_Exp op="POW">
 <Binary_Exp op="*">
-<Binary_Exp op=".." tag=",A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:7:6:1:1:1:1,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:1:2" typref="">
-<Integer_Literal tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:3:1:2:2:1" typref="2701647786" value="1"/>
-<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:3:1:2:2:2" typref="2701647786" value="max_field"/>
-</Binary_Exp>
+<Id tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:7:4:1:1:1:1" value="INTEGER"/>
 <Unary_Exp op="POW">
 <Binary_Exp op="*">
-<Id tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:7:6:1:1:1:2:1:1" value="INTEGER"/>
-<Binary_Exp op=".." tag=",A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:7:6:1:1:1:2:1:2,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:1:3" typref="">
-<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:3:1:2:3:1" typref="2701647786" value="min_val"/>
-<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:3:1:2:3:2" typref="2701647786" value="MAXINT"/>
-</Binary_Exp>
+<Id tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:7:4:1:1:1:2:1:1" value="INTEGER"/>
+<Id tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:7:4:1:1:1:2:1:2" value="INTEGER"/>
 </Binary_Exp>
 </Unary_Exp>
 </Binary_Exp>
 </Unary_Exp>
 </Unary_Exp>
 </Type>
-<Type id="2837179008">
+<Type id="3083833907">
 <Unary_Exp op="POW">
 <Unary_Exp op="POW">
 <Binary_Exp op="*">
-<Id tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:7:7:1:1:1:1" value="INTEGER"/>
-<Binary_Exp op=".." tag=",A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:7:7:1:1:1:2,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:1:3" typref="">
-<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:3:1:2:3:1" typref="2701647786" value="min_val"/>
-<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:3:1:2:3:2" typref="2701647786" value="MAXINT"/>
-</Binary_Exp>
+<Id tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:7:5:1:1:1:1" value="INTEGER"/>
+<Id tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:7:5:1:1:1:2" value="INTEGER"/>
 </Binary_Exp>
 </Unary_Exp>
 </Unary_Exp>
 </Type>
-<Type id="2851765888">
+<Type id="3431145700">
 <Unary_Exp op="POW">
 <Binary_Exp op="*">
-<Binary_Exp op=".." tag=",A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:7:8:1:1:1,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:1:2" typref="">
-<Integer_Literal tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:3:1:2:2:1" typref="2701647786" value="1"/>
-<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:3:1:2:2:2" typref="2701647786" value="max_field"/>
-</Binary_Exp>
+<Id tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:7:6:1:1:1" value="INTEGER"/>
 <Unary_Exp op="POW">
-<Generic_Type tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:7:8:1:1:2:1"/>
+<Generic_Type tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:7:6:1:1:2:1"/>
 </Unary_Exp>
 </Binary_Exp>
 </Unary_Exp>
@@ -2011,45 +2024,27 @@
 <Type id="4012934509">
 <Unary_Exp op="POW">
 <Unary_Exp op="POW">
-<Generic_Type tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:7:9:1:1:1"/>
+<Generic_Type tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:7:7:1:1:1"/>
 </Unary_Exp>
 </Unary_Exp>
 </Type>
 <Type id="3817003670">
 <Unary_Exp op="POW">
-<Generic_Type tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:7:10:1:1"/>
+<Generic_Type tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:7:8:1:1"/>
 </Unary_Exp>
 </Type>
-<Type id="4077266551">
-<Binary_Exp op=".." tag=",A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:7:11:1,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:1:3" typref="">
-<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:3:1:2:3:1" typref="2701647786" value="min_val"/>
-<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:3:1:2:3:2" typref="2701647786" value="MAXINT"/>
-</Binary_Exp>
-</Type>
-<Type id="1177923086">
-<Binary_Exp op=".." tag=",A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:7:12:1,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:1:2" typref="">
-<Integer_Literal tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:3:1:2:2:1" typref="2701647786" value="1"/>
-<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:3:1:2:2:2" typref="2701647786" value="max_field"/>
-</Binary_Exp>
-</Type>
-<Type id="1089793219">
+<Type id="103245008">
 <Unary_Exp op="POW">
 <Binary_Exp op="*">
-<Id tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:7:13:1:1:1" value="INTEGER"/>
-<Binary_Exp op=".." tag=",A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:7:13:1:1:2,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:1:3" typref="">
-<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:3:1:2:3:1" typref="2701647786" value="min_val"/>
-<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:3:1:2:3:2" typref="2701647786" value="MAXINT"/>
-</Binary_Exp>
+<Id tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:7:9:1:1:1" value="INTEGER"/>
+<Id tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:7:9:1:1:2" value="INTEGER"/>
 </Binary_Exp>
 </Unary_Exp>
 </Type>
-<Type id="1014510400">
+<Type id="3672872563">
 <Binary_Exp op="*">
-<Id tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:7:14:1:1" value="INTEGER"/>
-<Binary_Exp op=".." tag=",A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:7:14:1:2,A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:1:3" typref="">
-<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:3:1:2:3:1" typref="2701647786" value="min_val"/>
-<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\PARTIAL_OBJECT_1.bxml:1:3:1:2:3:2" typref="2701647786" value="MAXINT"/>
-</Binary_Exp>
+<Id tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:7:10:1:1" value="INTEGER"/>
+<Id tag="A:/b-method-training/atelierb/DatabaseSystem/bdp\TOTAL_OBJECT.bxml:1:7:10:1:2" value="INTEGER"/>
 </Binary_Exp>
 </Type>
 </TypeInfos>

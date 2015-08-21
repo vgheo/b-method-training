@@ -11,14 +11,6 @@
 <Name>TOTAL_OBJECT</Name>
 <Parameters>
 <Id value='max_obj' typref='2701647786'/>
-<Binary_Exp op='..' typref='3603043417'>
-<Integer_Literal value='1' typref='2701647786'/>
-<Id value='max_field' typref='2701647786'/>
-</Binary_Exp>
-<Binary_Exp op='..' typref='3603043417'>
-<Id value='min_val' typref='2701647786'/>
-<Id value='MAXINT' typref='2701647786'/>
-</Binary_Exp>
 </Parameters>
 </Referenced_Machine>
 </Imports>

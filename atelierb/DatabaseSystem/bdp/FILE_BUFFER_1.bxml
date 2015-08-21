@@ -2,26 +2,12 @@
 <Abstraction>FILE_BUFFER</Abstraction>
 <Parameters>
 <Id value='max_rec' typref='2701647786'/>
-<Id value='FIELD' typref='3988092277'/>
-<Id value='VALUE' typref='3958993484'/>
 </Parameters>
-<Constraints>
-<Nary_Pred op='&amp;'>
-<Set>
-<Id value='FIELD' typref='3988092277'/>
-</Set>
-<Set>
-<Id value='VALUE' typref='3958993484'/>
-</Set>
-</Nary_Pred>
-</Constraints>
 <Imports>
 <Referenced_Machine>
 <Name>FILE_ACCESS</Name>
 <Parameters>
 <Id value='max_rec' typref='2701647786'/>
-<Id value='FIELD' typref='3988092277'/>
-<Id value='VALUE' typref='3958993484'/>
 </Parameters>
 </Referenced_Machine>
 </Imports>
@@ -72,16 +58,6 @@
 <TypeInfos>
 <Type id='2701647786'>
 <Id value='INTEGER'/>
-</Type>
-<Type id='3988092277'>
-<Unary_Exp op='POW'>
-<Id value='FIELD'/>
-</Unary_Exp>
-</Type>
-<Type id='3958993484'>
-<Unary_Exp op='POW'>
-<Id value='VALUE'/>
-</Unary_Exp>
 </Type>
 <Type id='2043437594'>
 <Id value='BOOL'/>
