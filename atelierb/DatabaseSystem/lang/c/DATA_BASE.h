@@ -4,15 +4,19 @@
 #include <stdint.h>
 #include <stdbool.h>
 /* Clause SEES */
+#include "BASIC_IO.h"
 #include "BASIC_SEX.h"
 #include "BASIC_STATUS.h"
+
+/* Clause IMPORTS */
+#include "PARTIAL_OBJECT.h"
 
 #ifdef __cplusplus
 extern "C" {
 #endif /* __cplusplus */
 
 
-/* TODO : #define DATA_BASE__PERSON__max */
+#define DATA_BASE__PERSON__max 10000
 /* Clause SETS */
 typedef int DATA_BASE__PERSON;
 
@@ -21,7 +25,7 @@ typedef int DATA_BASE__PERSON;
 
 /* Clause CONCRETE_CONSTANTS */
 /* Basic constants */
-/* TO DO: #define DATA_BASE__max_pers */
+#define DATA_BASE__max_pers 10000
 /* Array and record constants */
 
 extern void DATA_BASE__INITIALISATION(void);

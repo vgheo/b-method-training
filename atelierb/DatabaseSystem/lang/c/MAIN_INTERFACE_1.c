@@ -28,13 +28,14 @@ void MAIN_INTERFACE__INITIALISATION(void)
 
 /* Clause OPERATIONS */
 
-void MAIN_INTERFACE__main(void)
+//void MAIN_INTERFACE__main(void)
+void main(void)
 {
     BASIC_COMMAND__COMMAND cc;
     int32_t xx;
     
     BASIC_COMMAND__COMMAND_READ(&cc);
-    xx = 2147483647;
+    xx = INT_MAX;
     while((((cc) != (BASIC_COMMAND__quit))) &&
     (((xx) != (0))))
     {

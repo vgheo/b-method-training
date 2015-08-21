@@ -3,10 +3,6 @@
 
 #include <stdint.h>
 #include <stdbool.h>
-#include <string.h>
-/* Clause IMPORTS */
-#include "BASIC_FILE_VAR.h"
-
 #ifdef __cplusplus
 extern "C" {
 #endif /* __cplusplus */
@@ -16,8 +12,8 @@ extern "C" {
 
 /* Clause CONCRETE_VARIABLES */
 
-extern int32_t FILE_ACCESS__bfile[2147483647+1][5];
-extern int32_t FILE_ACCESS__buffer[2147483647+1][5];
+extern int32_t FILE_ACCESS__bfile[10000][5];
+extern int32_t FILE_ACCESS__buffer[10000][5];
 extern bool FILE_ACCESS__updated;
 
 /* Clause CONCRETE_CONSTANTS */

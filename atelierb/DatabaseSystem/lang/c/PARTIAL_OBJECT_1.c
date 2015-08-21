@@ -1,7 +1,7 @@
 /* WARNING if type checker is not performed, translation could contain errors ! */
 
 #include "PARTIAL_OBJECT.h"
-
+#include<limits.h>
 /* Clause IMPORTS */
 #include "TOTAL_OBJECT.h"
 
@@ -22,12 +22,12 @@ void PARTIAL_OBJECT__INITIALISATION(void)
 
 void PARTIAL_OBJECT__create_partial_object(int32_t *oo)
 {
-    TOTAL_OBJECT__create_total_object(2147483647, oo);
+    TOTAL_OBJECT__create_total_object(INT_MAX, oo);
 }
 
 void PARTIAL_OBJECT__rem_field(int32_t ii, int32_t oo)
 {
-    TOTAL_OBJECT__mod_field(ii, oo, 2147483647);
+    TOTAL_OBJECT__mod_field(ii, oo, INT_MAX);
 }
 
 void PARTIAL_OBJECT__def_field(int32_t ii, int32_t oo, bool *vv)
@@ -35,6 +35,6 @@ void PARTIAL_OBJECT__def_field(int32_t ii, int32_t oo, bool *vv)
     int32_t ww;
     
     TOTAL_OBJECT__val_field(ii, oo, &ww);
-    (*vv) = (((ww) != (2147483647)) ? true : false);
+    (*vv) = (((ww) != (INT_MAX)) ? true : false);
 }
 

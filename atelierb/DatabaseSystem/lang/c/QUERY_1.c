@@ -180,7 +180,7 @@ void QUERY__get_and_print_person(void)
         DATA_BASE__is_married(pp, &bb);
         if(bb == true)
         {
-            BASIC_IO__STRING_WRITE("\n Spu=ouse: ");
+            BASIC_IO__STRING_WRITE("\n Spuouse: ");
             DATA_BASE__val_spouse(pp, &tt);
             DATA_BASE__PERSON_write(tt);
         }

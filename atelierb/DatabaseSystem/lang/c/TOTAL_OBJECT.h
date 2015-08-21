@@ -3,6 +3,9 @@
 
 #include <stdint.h>
 #include <stdbool.h>
+/* Clause IMPORTS */
+#include "FILE.h"
+
 #ifdef __cplusplus
 extern "C" {
 #endif /* __cplusplus */
