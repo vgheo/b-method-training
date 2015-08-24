@@ -1,2 +1,0 @@
-Test 1. Covering Move. Trace = Move 
-Test 2. Covering MoveRev. Trace = Move MoveRev 

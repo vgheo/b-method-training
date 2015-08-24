@@ -13,7 +13,3 @@ In ProB:
 	- Target event must be final only (don't check)
 Use translator (script/program in java, c, python) to convert .xml in cppunit:
 	- tbd
-	
-	
-	
-##### And research: http://stups.hhu.de/ProB/w/Test_Case_Generation
