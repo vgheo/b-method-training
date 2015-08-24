@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extended_test_suite>
+  <test_case id="1">
+    <global>
+      <step id="1">--></step>
+      <step id="2">--></step>
+      <step id="3">DATA_BASE.marriage</step>
+    </global>
+  </test_case>
+  <test_case id="2">
+    <global>
+      <step id="1">--></step>
+      <step id="2">DATA_BASE.death</step>
+    </global>
+  </test_case>
+  <test_case id="3">
+    <global>
+      <step id="1">BASIC_IO.BOOL_WRITE</step>
+    </global>
+  </test_case>
+  <test_case id="4">
+    <global>
+      <step id="1">BASIC_IO.CHAR_WRITE</step>
+    </global>
+  </test_case>
+  <test_case id="5">
+    <global>
+      <step id="1">BASIC_IO.INT_WRITE</step>
+    </global>
+  </test_case>
+  <test_case id="6">
+    <global>
+      <step id="1">BASIC_IO.STRING_WRITE</step>
+    </global>
+  </test_case>
+  <test_case id="7">
+    <global>
+      <step id="1">BASIC_SEX.SEX_WRITE</step>
+    </global>
+  </test_case>
+  <test_case id="8">
+    <global>
+      <step id="1">BASIC_STATUS.STATUS_WRITE</step>
+    </global>
+  </test_case>
+  <test_case id="9">
+    <global>
+      <step id="1">DATA_BASE.PERSON_write</step>
+    </global>
+  </test_case>
+  <test_case id="10">
+    <global>
+      <step id="1">get_and_print_person</step>
+    </global>
+  </test_case>
+</extended_test_suite>
