@@ -3,13 +3,14 @@
 
 #include <stdint.h>
 #include <stdbool.h>
+#include <stdio.h>
 
 /* Clause SEES */
 #include "DATA_BASE.h"
 #include "BASIC_IO.h"
 #include "BASIC_SEX.h"
 #include "BASIC_STATUS.h"
-
+#include "BASIC_FILE_VAR.h"
 #ifdef __cplusplus
 extern "C" {
 #endif /* __cplusplus */

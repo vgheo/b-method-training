@@ -51,7 +51,7 @@ void FILE_ACCESS__create_record(int32_t vv, int32_t *oo)
 
 void FILE_ACCESS__mod_buffer(int32_t oo, int32_t ii, int32_t vv)
 {
-    FILE_ACCESS__record[ii] = vv;
+    FILE_ACCESS__buffer[oo][ii] = vv;
     FILE_ACCESS__updated = true;
 }
 

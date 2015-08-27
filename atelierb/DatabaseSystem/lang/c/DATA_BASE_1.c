@@ -42,8 +42,9 @@ void DATA_BASE__marriage(DATA_BASE__PERSON bride, DATA_BASE__PERSON groom)
 }
 
 void DATA_BASE__first_human(BASIC_SEX__SEX ss, DATA_BASE__PERSON *baby)
-{
-    PARTIAL_OBJECT__create_partial_object(baby);
+{	
+	PARTIAL_OBJECT__create_partial_object(baby);
+	printf("Person id :%d\n",*baby);
     PARTIAL_OBJECT__mod_field(1, *baby, BASIC_SEX__code_SEX[ss]);
     PARTIAL_OBJECT__mod_field(2, *baby, BASIC_STATUS__code_STATUS[BASIC_STATUS__living]);
 }
@@ -69,7 +70,7 @@ void DATA_BASE__is_present(DATA_BASE__PERSON pp, bool *report)
     int32_t nn;
     
     PARTIAL_OBJECT__nbr_object(&nn);
-    (*report) = (((nn) != (DATA_BASE__max_pers)) ? true : false);
+    (*report) = (((pp) <= (nn)) ? true : false);
 }
 
 void DATA_BASE__is_living(DATA_BASE__PERSON pp, bool *report)
@@ -87,7 +88,7 @@ void DATA_BASE__is_woman(DATA_BASE__PERSON pp, bool *report)
     int32_t ss;
     int32_t tt;
     
-    PARTIAL_OBJECT__val_field(2, pp, &ss);
+    PARTIAL_OBJECT__val_field(1, pp, &ss);
     tt = BASIC_SEX__code_SEX[BASIC_SEX__woman];
     (*report) = ((ss == tt) ? true : false);
 }

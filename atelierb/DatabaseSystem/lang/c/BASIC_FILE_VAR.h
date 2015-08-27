@@ -14,7 +14,7 @@ extern "C" {
 
 extern int32_t BASIC_FILE_VAR__buf_vrb[5];
 extern int32_t BASIC_FILE_VAR__file_vrb[10000][5];
-extern int32_t BASIC_FILE_VAR_size ;//see helper.c
+extern int32_t BASIC_FILE_VAR_size ;//see external_declarations.c
 /* Clause CONCRETE_CONSTANTS */
 /* Basic constants */
 /* Array and record constants */

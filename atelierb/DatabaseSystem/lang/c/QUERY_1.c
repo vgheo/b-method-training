@@ -24,7 +24,7 @@ void QUERY__INITIALISATION(void)
 
 void QUERY__get_new_dead_person(DATA_BASE__PERSON *pp, bool *bb)
 {
-    BASIC_IO__STRING_WRITE("Mother Id:");
+    BASIC_IO__STRING_WRITE("Person Id:");
     DATA_BASE__PERSON_read(pp);
     DATA_BASE__is_present(*pp, bb);
     if((*bb) == false)
@@ -115,8 +115,9 @@ void QUERY__get_new_couple(DATA_BASE__PERSON *mm, DATA_BASE__PERSON *ww, bool *b
         (*bb) = false;
         BASIC_IO__STRING_WRITE("Second person does not exist\n");
     }
+    //printf("[QUERY]:Both persons are present in database.\n");
     if((*bb) == true)
-    {
+    {	
         DATA_BASE__is_woman(*mm, &bm);
         DATA_BASE__is_married(*mm, &bms);
         DATA_BASE__is_woman(*ww, &bw);
@@ -129,7 +130,7 @@ void QUERY__get_new_couple(DATA_BASE__PERSON *mm, DATA_BASE__PERSON *ww, bool *b
         if(bms == true)
         {
             (*bb) = false;
-            BASIC_IO__STRING_WRITE("First person must be a woman\n");
+            BASIC_IO__STRING_WRITE("First person must not be married\n");
         }
         if(bw == false)
         {
@@ -162,25 +163,25 @@ void QUERY__get_and_print_person(void)
     }
     else
     {
-        BASIC_IO__STRING_WRITE("\n Person: ");
+        BASIC_IO__STRING_WRITE(" Person: ");
         DATA_BASE__PERSON_write(pp);
-        BASIC_IO__STRING_WRITE("\n Sex: ");
+        BASIC_IO__STRING_WRITE(" Sex: ");
         DATA_BASE__val_sex(pp, &vv);
         BASIC_SEX__SEX_WRITE(vv);
-        BASIC_IO__STRING_WRITE("\n Status: ");
+        BASIC_IO__STRING_WRITE("Status: ");
         DATA_BASE__val_status(pp, &uu);
         BASIC_STATUS__STATUS_WRITE(uu);
         DATA_BASE__has_mother(pp, &bb);
         if(bb == true)
         {
-            BASIC_IO__STRING_WRITE("\n Mother: ");
+            BASIC_IO__STRING_WRITE(" Mother: ");
             DATA_BASE__val_mother(pp, &ww);
             DATA_BASE__PERSON_write(ww);
         }
         DATA_BASE__is_married(pp, &bb);
         if(bb == true)
         {
-            BASIC_IO__STRING_WRITE("\n Spuouse: ");
+            BASIC_IO__STRING_WRITE(" Spuouse: ");
             DATA_BASE__val_spouse(pp, &tt);
             DATA_BASE__PERSON_write(tt);
         }

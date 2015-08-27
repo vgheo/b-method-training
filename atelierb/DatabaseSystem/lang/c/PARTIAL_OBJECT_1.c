@@ -35,6 +35,6 @@ void PARTIAL_OBJECT__def_field(int32_t ii, int32_t oo, bool *vv)
     int32_t ww;
     
     TOTAL_OBJECT__val_field(ii, oo, &ww);
-    (*vv) = (((ww) != (INT_MAX)) ? true : false);
+    (*vv) = (((ww) != (0)) ? true : false);//modified from MAX_INT to 0
 }
 

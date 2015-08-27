@@ -3,11 +3,12 @@
 
 #include <stdint.h>
 #include <stdbool.h>
+#include <stdio.h>
 /* Clause SEES */
 #include "BASIC_IO.h"
 #include "BASIC_SEX.h"
 #include "BASIC_STATUS.h"
-
+#include "BASIC_FILE_VAR.h"
 /* Clause IMPORTS */
 #include "PARTIAL_OBJECT.h"
 
