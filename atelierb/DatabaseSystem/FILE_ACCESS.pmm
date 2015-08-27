@@ -1,18 +1,16 @@
 ﻿THEORY User_Pass IS
-
 Operation(Initialisation) & ff(0) & pr;
 Operation(get_record) & ff(0) & pr;
 Operation(put_buffer) & ff(0) & pr;
-Operation(create_record) & ff(0) & ch;
+Operation(create_record) & ff(0) & mp & ch & pp;
 Operation(create_record) & ff(0) & pr;
 Operation(mod_buffer) & ff(0) & pr;
 Operation(mod_buffer) & ff(1) & pr;
 Operation(WellDefinedness_get_record) & ff(0) & pr;
-Operation(WellDefinedness_Precondition_create_record) & ff(0) & ch & pp;
-Operation(WellDefinedness_create_record) & ff(0) & pp;
-Operation(WellDefinedness_Precondition_not_in_buffer) & ff(0) & pp;
+Operation(WellDefinedness_Precondition_create_record) & ff(0) & mp & ch & pp;
+Operation(WellDefinedness_create_record) & ff(0) & mp & ch & pp;
+Operation(WellDefinedness_Precondition_not_in_buffer) & ff(0) & mp & ch & pp;
 Operation(WellDefinedness_mod_buffer) & ff(0) & pr;
-Operation(WellDefinedness_size_file) & ff(0) & pp;
-Operation(WellDefinedness_val_buffer) & ff(0) & pr;
-Operation(mod_buffer) & ff(0) & mp & pr & pp
+Operation(WellDefinedness_size_file) & ff(0) & mp & ch & pp;
+Operation(WellDefinedness_val_buffer) & ff(0) & pr
 END 

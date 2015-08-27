@@ -203,7 +203,7 @@ END
 THEORY ListSeenInfoX END
 &
 THEORY ListIncludedOperationsX IS
-  List_Included_Operations(Implementation(FILE_ACCESS_2),Machine(BASIC_FILE_VAR))==(READ_FILE,WRITE_FILE,NEW_RECORD,SIZE_FILE,RESET_FILE,RESET_RECORD)
+  List_Included_Operations(Implementation(FILE_ACCESS_2),Machine(BASIC_FILE_VAR))==(READ_FILE,WRITE_FILE,NEW_RECORD,SIZE_FILE,RESET_FILE)
 END
 &
 THEORY InheritedEnvX IS
@@ -219,7 +219,7 @@ THEORY ListOfIdsX IS
   List_Of_VisibleCst_Ids(Implementation(FILE_ACCESS_2)) == (?);
   List_Of_VisibleVar_Ids(Implementation(FILE_ACCESS_2)) == (? | file_vrb,buf_vrb);
   List_Of_Ids_SeenBNU(Implementation(FILE_ACCESS_2)) == (?: ?);
-  List_Of_Ids(Machine(BASIC_FILE_VAR)) == (? | ? | ? | ? | READ_FILE,WRITE_FILE,NEW_RECORD,SIZE_FILE,RESET_FILE,RESET_RECORD | ? | ? | max_rec | BASIC_FILE_VAR);
+  List_Of_Ids(Machine(BASIC_FILE_VAR)) == (? | ? | ? | ? | READ_FILE,WRITE_FILE,NEW_RECORD,SIZE_FILE,RESET_FILE | ? | ? | max_rec | BASIC_FILE_VAR);
   List_Of_HiddenCst_Ids(Machine(BASIC_FILE_VAR)) == (? | ?);
   List_Of_VisibleCst_Ids(Machine(BASIC_FILE_VAR)) == (?);
   List_Of_VisibleVar_Ids(Machine(BASIC_FILE_VAR)) == (file_vrb,buf_vrb | ?);

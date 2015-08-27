@@ -93,8 +93,8 @@ THEORY ListConstraintsX IS
 END
 &
 THEORY ListOperationsX IS
-  Internal_List_Operations(Machine(BASIC_FILE_VAR))==(READ_FILE,WRITE_FILE,NEW_RECORD,SIZE_FILE,RESET_FILE,RESET_RECORD);
-  List_Operations(Machine(BASIC_FILE_VAR))==(READ_FILE,WRITE_FILE,NEW_RECORD,SIZE_FILE,RESET_FILE,RESET_RECORD)
+  Internal_List_Operations(Machine(BASIC_FILE_VAR))==(READ_FILE,WRITE_FILE,NEW_RECORD,SIZE_FILE,RESET_FILE);
+  List_Operations(Machine(BASIC_FILE_VAR))==(READ_FILE,WRITE_FILE,NEW_RECORD,SIZE_FILE,RESET_FILE)
 END
 &
 THEORY ListInputX IS
@@ -102,8 +102,7 @@ THEORY ListInputX IS
   List_Input(Machine(BASIC_FILE_VAR),WRITE_FILE)==(ii);
   List_Input(Machine(BASIC_FILE_VAR),NEW_RECORD)==(vv);
   List_Input(Machine(BASIC_FILE_VAR),SIZE_FILE)==(?);
-  List_Input(Machine(BASIC_FILE_VAR),RESET_FILE)==(?);
-  List_Input(Machine(BASIC_FILE_VAR),RESET_RECORD)==(?)
+  List_Input(Machine(BASIC_FILE_VAR),RESET_FILE)==(?)
 END
 &
 THEORY ListOutputX IS
@@ -111,8 +110,7 @@ THEORY ListOutputX IS
   List_Output(Machine(BASIC_FILE_VAR),WRITE_FILE)==(?);
   List_Output(Machine(BASIC_FILE_VAR),NEW_RECORD)==(?);
   List_Output(Machine(BASIC_FILE_VAR),SIZE_FILE)==(vv);
-  List_Output(Machine(BASIC_FILE_VAR),RESET_FILE)==(?);
-  List_Output(Machine(BASIC_FILE_VAR),RESET_RECORD)==(?)
+  List_Output(Machine(BASIC_FILE_VAR),RESET_FILE)==(?)
 END
 &
 THEORY ListHeaderX IS
@@ -120,8 +118,7 @@ THEORY ListHeaderX IS
   List_Header(Machine(BASIC_FILE_VAR),WRITE_FILE)==(WRITE_FILE(ii));
   List_Header(Machine(BASIC_FILE_VAR),NEW_RECORD)==(NEW_RECORD(vv));
   List_Header(Machine(BASIC_FILE_VAR),SIZE_FILE)==(vv <-- SIZE_FILE);
-  List_Header(Machine(BASIC_FILE_VAR),RESET_FILE)==(RESET_FILE);
-  List_Header(Machine(BASIC_FILE_VAR),RESET_RECORD)==(RESET_RECORD)
+  List_Header(Machine(BASIC_FILE_VAR),RESET_FILE)==(RESET_FILE)
 END
 &
 THEORY ListOperationGuardX END
@@ -131,12 +128,10 @@ THEORY ListPreconditionX IS
   List_Precondition(Machine(BASIC_FILE_VAR),WRITE_FILE)==(ii: NAT & ii: dom(file_vrb));
   List_Precondition(Machine(BASIC_FILE_VAR),NEW_RECORD)==(vv: 0..10000 & size(file_vrb)/=max_rec);
   List_Precondition(Machine(BASIC_FILE_VAR),SIZE_FILE)==(btrue);
-  List_Precondition(Machine(BASIC_FILE_VAR),RESET_FILE)==(btrue);
-  List_Precondition(Machine(BASIC_FILE_VAR),RESET_RECORD)==(btrue)
+  List_Precondition(Machine(BASIC_FILE_VAR),RESET_FILE)==(btrue)
 END
 &
 THEORY ListSubstitutionX IS
-  Expanded_List_Substitution(Machine(BASIC_FILE_VAR),RESET_RECORD)==(btrue | buf_vrb:={});
   Expanded_List_Substitution(Machine(BASIC_FILE_VAR),RESET_FILE)==(btrue | file_vrb:=<>);
   Expanded_List_Substitution(Machine(BASIC_FILE_VAR),SIZE_FILE)==(btrue | vv:=size(file_vrb));
   Expanded_List_Substitution(Machine(BASIC_FILE_VAR),NEW_RECORD)==(vv: 0..10000 & size(file_vrb)/=max_rec | file_vrb:=file_vrb<-(0..4)*{vv});
@@ -146,8 +141,7 @@ THEORY ListSubstitutionX IS
   List_Substitution(Machine(BASIC_FILE_VAR),WRITE_FILE)==(file_vrb(ii):=buf_vrb);
   List_Substitution(Machine(BASIC_FILE_VAR),NEW_RECORD)==(file_vrb:=file_vrb<-(0..4)*{vv});
   List_Substitution(Machine(BASIC_FILE_VAR),SIZE_FILE)==(vv:=size(file_vrb));
-  List_Substitution(Machine(BASIC_FILE_VAR),RESET_FILE)==(file_vrb:=<>);
-  List_Substitution(Machine(BASIC_FILE_VAR),RESET_RECORD)==(buf_vrb:={})
+  List_Substitution(Machine(BASIC_FILE_VAR),RESET_FILE)==(file_vrb:=<>)
 END
 &
 THEORY ListConstantsX IS
@@ -190,12 +184,11 @@ THEORY ListANYVarX IS
   List_ANY_Var(Machine(BASIC_FILE_VAR),WRITE_FILE)==(?);
   List_ANY_Var(Machine(BASIC_FILE_VAR),NEW_RECORD)==(?);
   List_ANY_Var(Machine(BASIC_FILE_VAR),SIZE_FILE)==(?);
-  List_ANY_Var(Machine(BASIC_FILE_VAR),RESET_FILE)==(?);
-  List_ANY_Var(Machine(BASIC_FILE_VAR),RESET_RECORD)==(?)
+  List_ANY_Var(Machine(BASIC_FILE_VAR),RESET_FILE)==(?)
 END
 &
 THEORY ListOfIdsX IS
-  List_Of_Ids(Machine(BASIC_FILE_VAR)) == (? | ? | ? | ? | READ_FILE,WRITE_FILE,NEW_RECORD,SIZE_FILE,RESET_FILE,RESET_RECORD | ? | ? | max_rec | BASIC_FILE_VAR);
+  List_Of_Ids(Machine(BASIC_FILE_VAR)) == (? | ? | ? | ? | READ_FILE,WRITE_FILE,NEW_RECORD,SIZE_FILE,RESET_FILE | ? | ? | max_rec | BASIC_FILE_VAR);
   List_Of_HiddenCst_Ids(Machine(BASIC_FILE_VAR)) == (? | ?);
   List_Of_VisibleCst_Ids(Machine(BASIC_FILE_VAR)) == (?);
   List_Of_VisibleVar_Ids(Machine(BASIC_FILE_VAR)) == (file_vrb,buf_vrb | ?);
@@ -211,7 +204,7 @@ THEORY VisibleVariablesEnvX IS
 END
 &
 THEORY OperationsEnvX IS
-  Operations(Machine(BASIC_FILE_VAR)) == (Type(RESET_RECORD) == Cst(No_type,No_type);Type(RESET_FILE) == Cst(No_type,No_type);Type(SIZE_FILE) == Cst(btype(INTEGER,?,?),No_type);Type(NEW_RECORD) == Cst(No_type,btype(INTEGER,?,?));Type(WRITE_FILE) == Cst(No_type,btype(INTEGER,?,?));Type(READ_FILE) == Cst(No_type,btype(INTEGER,?,?)));
+  Operations(Machine(BASIC_FILE_VAR)) == (Type(RESET_FILE) == Cst(No_type,No_type);Type(SIZE_FILE) == Cst(btype(INTEGER,?,?),No_type);Type(NEW_RECORD) == Cst(No_type,btype(INTEGER,?,?));Type(WRITE_FILE) == Cst(No_type,btype(INTEGER,?,?));Type(READ_FILE) == Cst(No_type,btype(INTEGER,?,?)));
   Observers(Machine(BASIC_FILE_VAR)) == (Type(SIZE_FILE) == Cst(btype(INTEGER,?,?),No_type))
 END
 &

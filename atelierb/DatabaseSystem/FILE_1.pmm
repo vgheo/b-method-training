@@ -1,5 +1,18 @@
 ﻿THEORY User_Pass IS
-Operation(WellDefinedness_mod_file) & ff(0) & pr & pp(rp.1);
-Operation(WellDefinedness_val_file) & ff(0) & mp & pp(rp.1);
-Operation(WellDefinedness_mod_file) & ff(0) & mp & pr
+Operation(Initialisation) & ff(0) & pr;
+Operation(val_file) & ff(0) & pr;
+Operation(val_file) & ff(0) & ch;
+Operation(mod_file) & ff(0) & pr;
+Operation(mod_file) & ff(0) & mp & ch;
+Operation(create_record) & ff(1) & pr;
+Operation(create_record) & ff(0) & pr;
+Operation(size_file) & ff(0) & pr;
+Operation(WellDefinedness_mod_file) & ff(0) & pr;
+Operation(WellDefinedness_val_file) & ff(0) & ch & pp;
+Operation(WellDefinedness_val_file) & ff(0) & pr;
+Operation(WellDefinedness_val_file) & ff(0) & mp & ch;
+Operation(WellDefinedness_val_file) & ff(0) & mp & pp;
+Operation(WellDefinedness_val_file) & ff(0) & mp;
+Operation(WellDefinedness_create_record) & ff(0) & ch & pp;
+Operation(WellDefinedness_size_file) & ff(0) & ch & pp
 END 

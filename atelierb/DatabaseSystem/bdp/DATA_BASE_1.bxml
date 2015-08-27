@@ -320,9 +320,9 @@
 </Variables>
 <Values>
 <Boolean_Exp typref='2043437594'>
-<Exp_Comparison op='/='>
+<Exp_Comparison op='&lt;='>
+<Id value='pp' typref='2701647786'/>
 <Id value='nn' typref='2701647786'/>
-<Id value='max_pers' typref='2701647786'/>
 </Exp_Comparison>
 </Boolean_Exp>
 </Values>
@@ -408,7 +408,7 @@
 <Id value='val_field'/>
 </Name>
 <Input_Parameters>
-<Integer_Literal value='2' typref='2701647786'/>
+<Integer_Literal value='1' typref='2701647786'/>
 <Id value='pp' typref='2701647786'/>
 </Input_Parameters>
 <Output_Parameters>

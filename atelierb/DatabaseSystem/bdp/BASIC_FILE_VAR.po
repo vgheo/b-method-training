@@ -1,10 +1,9 @@
 THEORY ProofList IS
-_f(1) & _f(2) & _f(13) & WellDefinedness_SIZE_FILE.1,(_f(33) => _f(34));
-_f(1) & _f(2) & _f(13) & _f(20) & WellDefinedness_NEW_RECORD.1,(_f(33) => _f(34));
-_f(1) & _f(2) & _f(13) & WellDefinedness_Precondition_NEW_RECORD.1,(_f(37) & _f(33) => _f(34));
-_f(1) & _f(2) & _f(13) & _f(14) & WellDefinedness_READ_FILE.1,(_f(33) => _f(36));
-_f(1) & _f(2) & WellDefinednessInvariant.1,(_f(30) & _f(31) & _f(32) & _f(27) & _f(28) & _f(29) & _f(25) & _f(26) & _f(33) => _f(34));
-_f(1) & _f(2) & _f(13) & RESET_RECORD.1,(_f(6) & _f(15) => _f(24));
+_f(1) & _f(2) & _f(13) & WellDefinedness_SIZE_FILE.1,(_f(32) => _f(33));
+_f(1) & _f(2) & _f(13) & _f(20) & WellDefinedness_NEW_RECORD.1,(_f(32) => _f(33));
+_f(1) & _f(2) & _f(13) & WellDefinedness_Precondition_NEW_RECORD.1,(_f(36) & _f(32) => _f(33));
+_f(1) & _f(2) & _f(13) & _f(14) & WellDefinedness_READ_FILE.1,(_f(32) => _f(35));
+_f(1) & _f(2) & WellDefinednessInvariant.1,(_f(29) & _f(30) & _f(31) & _f(26) & _f(27) & _f(28) & _f(24) & _f(25) & _f(32) => _f(33));
 _f(1) & _f(2) & _f(13) & RESET_FILE.3,(_f(6) & _f(11) => _f(12));
 _f(1) & _f(2) & _f(13) & RESET_FILE.2,(_f(6) & _f(9) => _f(10));
 _f(1) & _f(2) & _f(13) & RESET_FILE.1,(_f(6) & _f(7) => _f(8));
@@ -44,7 +43,6 @@ buf_vrb : ((0) .. (4)) +-> ((0) .. (10000)) & dom(buf_vrb) = ((0) .. (4)) & ((bu
 ((((file_vrb) <- ((((0) .. (4)) * {vv})))) : (((NAT) --> (((((0) .. (4))) --> (((0) .. (10000))))))));
 ((((file_vrb) <- ((((0) .. (4)) * {vv})))) : (seq(((((0) .. (4))) --> (((0) .. (10000)))))));
 (size(((file_vrb) <- ((((0) .. (4)) * {vv})))) +1 <= max_rec);
-(({}) : (((((0) .. (4))) --> (((0) .. (10000))))));
 file_vrb : NATURAL-{0} +-> ((((0) .. (4))) --> (((0) .. (10000))));
 ((file_vrb) : (seq(((((0) .. (4))) --> (((0) .. (10000)))))));
 file_vrb : NAT +-> ((((0) .. (4))) --> (((0) .. (10000))));

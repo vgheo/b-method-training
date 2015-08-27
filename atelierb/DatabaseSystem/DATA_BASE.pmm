@@ -1,12 +1,16 @@
 ﻿THEORY User_Pass IS
-Operation(death) & ff(0) & mp & pr;
-Operation(marriage) & ff(0) & mp & pr;
-Operation(marriage) & ff(0) & mp & pr & pp(rp.2);
-Operation(first_human) & ff(0) & mp & pr;
-Operation(new_born) & ff(0) & mp & pr;
-Operation(WellDefinedness_val_spouse) & ff(0) & mp & pr & pp(rp.2);
-Operation(first_human) & ff(0) & mp & pr & pr & pp(rp.2);
-Operation(new_born) & ff(0) & mp & pr & pr;
-Operation(first_human) & ff(0) & mp & pr & pr & pr & pr & pr;
-Operation(new_born) & ff(0) & mp & pr & pr & pr & pr & pr
+Operation(Initialisation) & ff(0) & pr;
+Operation(death) & ff(0) & pr;
+Operation(marriage) & ff(0) & pr;
+Operation(marriage) & ff(1) & pr;
+Operation(first_human) & ff(0) & pr;
+Operation(new_born) & ff(0) & pr;
+Operation(WellDefinednessProperties) & ff(0) & pr;
+Operation(WellDefinedness_val_status) & ff(0) & pr;
+Operation(WellDefinedness_val_sex) & ff(0) & pr;
+Operation(WellDefinedness_val_mother) & ff(0) & pr;
+Operation(marriage) & ff(0) & mp & ch & pr & pp(rp.1);
+Operation(first_human) & ff(0) & mp & ch & pr & pp(rp.1) & pp(rp.1);
+Operation(new_born) & ff(0) & mp & ch & pr & pp(rp.1) & pp(rp.1);
+Operation(WellDefinedness_val_spouse) & ff(0) & mp & ch & pr
 END 

@@ -686,92 +686,6 @@
 </Goal>
 </Proof_Obligation>
 <Proof_Obligation>
-<Comment>Operations dans une machine abstraite</Comment>
-<Tag>RESET_RECORD</Tag>
-<Tag>INVARIANT</Tag>
-<Definition name="B definitions"/>
-<Definition name="ctx"/>
-<Definition name="cst"/>
-<Definition name="lprp"/>
-<Definition name="inprp"/>
-<Definition name="inext"/>
-<Definition name="seext"/>
-<Definition name="inv"/>
-<Definition name="ass"/>
-<Hypothesis/>
-<Goal>
-<Sub_Calculus>
-<Simple_Assignement_Sub>
-<Variables>
-<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\BASIC_FILE_VAR.bxml:1:6:6:1:1:1:1" typref="103245008" value="buf_vrb"/>
-</Variables>
-<Values>
-<EmptySet tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\BASIC_FILE_VAR.bxml:1:6:6:1:1:2:1" typref="3817003670"/>
-</Values>
-</Simple_Assignement_Sub>
-<Binary_Pred op="=&gt;">
-<Nary_Pred op="&amp;"/>
-<Tag goalTag="Invariant is preserved">
-<Nary_Pred op="&amp;">
-<Nary_Pred op="&amp;">
-<Exp_Comparison op=":" initialTag="((buf_vrb) : (((((0) .. (4))) --&gt; (((0) .. (10000))))))">
-<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\BASIC_FILE_VAR.bxml:1:4:1:1:1" typref="103245008" value="buf_vrb"/>
-<Binary_Exp op="--&gt;" typref="3083833907">
-<Binary_Exp op=".." typref="3603043417">
-<Integer_Literal tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\BASIC_FILE_VAR.bxml:1:4:1:1:2:1:1" typref="2701647786" value="0"/>
-<Integer_Literal tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\BASIC_FILE_VAR.bxml:1:4:1:1:2:1:2" typref="2701647786" value="4"/>
-</Binary_Exp>
-<Binary_Exp op=".." typref="3603043417">
-<Integer_Literal tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\BASIC_FILE_VAR.bxml:1:4:1:1:2:2:1" typref="2701647786" value="0"/>
-<Integer_Literal tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\BASIC_FILE_VAR.bxml:1:4:1:1:2:2:2" typref="2701647786" value="10000"/>
-</Binary_Exp>
-</Binary_Exp>
-</Exp_Comparison>
-<Exp_Comparison op=":" initialTag="((file_vrb) : (((NAT) --&gt; (((((0) .. (4))) --&gt; (((0) .. (10000))))))))">
-<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\BASIC_FILE_VAR.bxml:1:4:1:2:1" typref="4044453162" value="file_vrb"/>
-<Binary_Exp op="--&gt;" typref="2175577561">
-<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\BASIC_FILE_VAR.bxml:1:4:1:2:2:1" typref="3603043417" value="NAT"/>
-<Binary_Exp op="--&gt;" typref="3083833907">
-<Binary_Exp op=".." typref="3603043417">
-<Integer_Literal tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\BASIC_FILE_VAR.bxml:1:4:1:2:2:2:1:1" typref="2701647786" value="0"/>
-<Integer_Literal tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\BASIC_FILE_VAR.bxml:1:4:1:2:2:2:1:2" typref="2701647786" value="4"/>
-</Binary_Exp>
-<Binary_Exp op=".." typref="3603043417">
-<Integer_Literal tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\BASIC_FILE_VAR.bxml:1:4:1:2:2:2:2:1" typref="2701647786" value="0"/>
-<Integer_Literal tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\BASIC_FILE_VAR.bxml:1:4:1:2:2:2:2:2" typref="2701647786" value="10000"/>
-</Binary_Exp>
-</Binary_Exp>
-</Binary_Exp>
-</Exp_Comparison>
-<Exp_Comparison op=":" initialTag="((file_vrb) : (seq(((((0) .. (4))) --&gt; (((0) .. (10000)))))))">
-<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\BASIC_FILE_VAR.bxml:1:4:1:3:1" typref="4044453162" value="file_vrb"/>
-<Unary_Exp op="seq" typref="2175577561">
-<Binary_Exp op="--&gt;" typref="3083833907">
-<Binary_Exp op=".." typref="3603043417">
-<Integer_Literal tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\BASIC_FILE_VAR.bxml:1:4:1:3:2:1:1:1" typref="2701647786" value="0"/>
-<Integer_Literal tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\BASIC_FILE_VAR.bxml:1:4:1:3:2:1:1:2" typref="2701647786" value="4"/>
-</Binary_Exp>
-<Binary_Exp op=".." typref="3603043417">
-<Integer_Literal tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\BASIC_FILE_VAR.bxml:1:4:1:3:2:1:2:1" typref="2701647786" value="0"/>
-<Integer_Literal tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\BASIC_FILE_VAR.bxml:1:4:1:3:2:1:2:2" typref="2701647786" value="10000"/>
-</Binary_Exp>
-</Binary_Exp>
-</Unary_Exp>
-</Exp_Comparison>
-<Exp_Comparison op="&lt;" initialTag="(size(file_vrb) +1 &lt;= max_rec)">
-<Unary_Exp op="size" typref="2701647786">
-<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\BASIC_FILE_VAR.bxml:1:4:1:4:1:1" typref="4044453162" value="file_vrb"/>
-</Unary_Exp>
-<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\BASIC_FILE_VAR.bxml:1:4:1:4:2" typref="2701647786" value="max_rec"/>
-</Exp_Comparison>
-</Nary_Pred>
-</Nary_Pred>
-</Tag>
-</Binary_Pred>
-</Sub_Calculus>
-</Goal>
-</Proof_Obligation>
-<Proof_Obligation>
 <Tag>WellDefinednessConstraints</Tag>
 <Goal>
 <Tag goalTag="Well definedness">
@@ -1352,48 +1266,6 @@
 </Tag>
 </Goal>
 </Proof_Obligation>
-<Proof_Obligation>
-<Comment>Operations dans une machine abstraite</Comment>
-<Tag>WellDefinedness_Precondition_RESET_RECORD</Tag>
-<Tag>INVARIANT</Tag>
-<Definition name="B definitions"/>
-<Definition name="ctx"/>
-<Definition name="cst"/>
-<Definition name="lprp"/>
-<Definition name="inprp"/>
-<Definition name="inext"/>
-<Definition name="seext"/>
-<Definition name="inv"/>
-<Definition name="ass"/>
-<Goal>
-<Tag goalTag="Well definedness">
-<Nary_Pred op="&amp;"/>
-</Tag>
-</Goal>
-</Proof_Obligation>
-<Proof_Obligation>
-<Comment>Operations dans une machine abstraite</Comment>
-<Tag>WellDefinedness_RESET_RECORD</Tag>
-<Tag>INVARIANT</Tag>
-<Definition name="B definitions"/>
-<Definition name="ctx"/>
-<Definition name="cst"/>
-<Definition name="lprp"/>
-<Definition name="inprp"/>
-<Definition name="inext"/>
-<Definition name="seext"/>
-<Definition name="inv"/>
-<Definition name="ass"/>
-<Hypothesis/>
-<Goal>
-<Tag goalTag="Well definedness">
-<Nary_Pred op="&amp;">
-<Nary_Pred op="&amp;"/>
-<Nary_Pred op="&amp;"/>
-</Nary_Pred>
-</Tag>
-</Goal>
-</Proof_Obligation>
 <TypeInfos>
 <Type id="2701647786">
 <Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\BASIC_FILE_VAR.bxml:1:7:1:1" value="INTEGER"/>
@@ -1464,11 +1336,6 @@
 </Unary_Exp>
 </Unary_Exp>
 </Binary_Exp>
-</Unary_Exp>
-</Type>
-<Type id="3817003670">
-<Unary_Exp op="POW">
-<Generic_Type tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\BASIC_FILE_VAR.bxml:1:7:8:1:1"/>
 </Unary_Exp>
 </Type>
 </TypeInfos>

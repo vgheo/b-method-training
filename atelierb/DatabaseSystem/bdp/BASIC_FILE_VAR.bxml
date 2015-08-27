@@ -234,18 +234,6 @@
 </Assignement_Sub>
 </Body>
 </Operation>
-<Operation name='RESET_RECORD'>
-<Body>
-<Assignement_Sub>
-<Variables>
-<Id value='buf_vrb' typref='103245008'/>
-</Variables>
-<Values>
-<EmptySet typref='3817003670'/>
-</Values>
-</Assignement_Sub>
-</Body>
-</Operation>
 </Operations>
 <TypeInfos>
 <Type id='2701647786'>
@@ -317,11 +305,6 @@
 </Unary_Exp>
 </Unary_Exp>
 </Binary_Exp>
-</Unary_Exp>
-</Type>
-<Type id='3817003670'>
-<Unary_Exp op='POW'>
-<Generic_Type/>
 </Unary_Exp>
 </Type>
 </TypeInfos>

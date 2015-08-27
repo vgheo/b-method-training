@@ -1,8 +1,15 @@
 ﻿THEORY User_Pass IS
-
-Operation(NEW_RECORD) & ff(0) & mp & pr;
-Operation(WellDefinednessInvariant) & ff(0) & mp & ch & pr & pp;
+Operation(Initialisation) & ff(0) & pr;
+Operation(READ_FILE) & ff(0) & pr;
+Operation(WRITE_FILE) & ff(0) & pr;
+Operation(NEW_RECORD) & ff(0) & mp & pp;
+Operation(NEW_RECORD) & ff(0) & pr;
+Operation(RESET_FILE) & ff(0) & mp;
+Operation(RESET_FILE) & ff(0) & pr;
+Operation(WellDefinednessInvariant) & ff(0) & ch & pp;
+Operation(WellDefinedness_READ_FILE) & ff(0) & pr;
+Operation(WellDefinedness_NEW_RECORD) & ff(0) & mp & ch & pp;
+Operation(Initialisation) & ff(0) & ch & pr;
 Operation(WellDefinedness_Precondition_NEW_RECORD) & ff(0) & mp & ch & pr & pp;
-Operation(WellDefinedness_NEW_RECORD) & ff(0) & mp & ch & pr & pp;
 Operation(WellDefinedness_SIZE_FILE) & ff(0) & mp & ch & pr & pp
 END 

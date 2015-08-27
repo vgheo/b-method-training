@@ -56,7 +56,7 @@ OPERATIONS
     report<--is_present(pp)=
     VAR nn IN
         nn<--nbr_object;
-        report:=bool(nn/=max_pers)
+        report:=bool(pp<=nn)
     END;
     
     report<--is_living(pp)=
@@ -75,7 +75,7 @@ OPERATIONS
     
     report<--is_woman(pp)=
     VAR ss,tt IN 
-        ss<--val_field(2,pp);
+        ss<--val_field(1,pp);
         tt:=code_SEX(woman);
         report:=bool(ss=tt)
     END;

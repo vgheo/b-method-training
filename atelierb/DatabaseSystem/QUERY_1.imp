@@ -42,7 +42,7 @@ OPERATIONS
     BEGIN
        STRING_WRITE("Sex: ");
        ss<--SEX_READ;
-       STRING_WRITE("Mother Id: ");
+       STRING_WRITE("Person Id: ");/*Mdofication from original model,improper message :"Mother Id"*/
        ww<--PERSON_read;
        bb<--is_present(ww);
        IF bb=FALSE THEN

@@ -30,7 +30,7 @@ _f(1) & _f(2) & _f(3) & _f(4) & _f(13) & _f(29) & _f(30) & _f(90) & WellDefinedn
 _f(1) & _f(2) & _f(3) & _f(4) & _f(13) & _f(29) & _f(30) & _f(90) & WellDefinedness_is_woman.8,(_f(131) => _f(158));
 _f(1) & _f(2) & _f(3) & _f(4) & _f(13) & _f(29) & _f(30) & _f(90) & WellDefinedness_is_woman.7,(_f(131) => _f(93));
 _f(1) & _f(2) & _f(3) & _f(4) & _f(13) & _f(29) & _f(30) & _f(90) & WellDefinedness_is_woman.6,(_f(35) => _f(37));
-_f(1) & _f(2) & _f(3) & _f(4) & _f(13) & _f(29) & _f(30) & _f(90) & WellDefinedness_is_woman.5,(_f(35) => _f(36));
+_f(1) & _f(2) & _f(3) & _f(4) & _f(13) & _f(29) & _f(30) & _f(90) & WellDefinedness_is_woman.5,(_f(35) => _f(66));
 _f(1) & _f(2) & _f(3) & _f(4) & _f(13) & _f(29) & _f(30) & _f(90) & WellDefinedness_is_woman.4,(_f(131) => _f(157));
 _f(1) & _f(2) & _f(3) & _f(4) & _f(13) & _f(29) & _f(30) & _f(90) & WellDefinedness_is_woman.3,(_f(131) => _f(156));
 _f(1) & _f(2) & _f(3) & _f(4) & _f(13) & _f(29) & _f(30) & _f(90) & WellDefinedness_is_woman.2,(_f(131) => _f(133));
@@ -110,7 +110,7 @@ _f(1) & _f(2) & _f(3) & _f(4) & _f(13) & _f(29) & _f(30) & _f(87) & is_married.1
 _f(1) & _f(2) & _f(3) & _f(4) & _f(13) & _f(29) & _f(30) & _f(87) & is_woman.4,(_f(32) & _f(33) & _f(43) => _f(93));
 _f(1) & _f(2) & _f(3) & _f(4) & _f(13) & _f(29) & _f(30) & _f(87) & is_woman.3,(_f(32) & _f(33) & _f(18) => _f(92));
 _f(1) & _f(2) & _f(3) & _f(4) & _f(13) & _f(29) & _f(30) & _f(87) & is_woman.2,(_f(32) & _f(33) & _f(35) => _f(37));
-_f(1) & _f(2) & _f(3) & _f(4) & _f(13) & _f(29) & _f(30) & _f(87) & is_woman.1,(_f(32) & _f(33) & _f(35) => _f(36));
+_f(1) & _f(2) & _f(3) & _f(4) & _f(13) & _f(29) & _f(30) & _f(87) & is_woman.1,(_f(32) & _f(33) & _f(35) => _f(66));
 _f(1) & _f(2) & _f(3) & _f(4) & _f(13) & _f(29) & _f(30) & _f(87) & is_living.4,(_f(32) & _f(33) & _f(43) => _f(76));
 _f(1) & _f(2) & _f(3) & _f(4) & _f(13) & _f(29) & _f(30) & _f(87) & is_living.3,(_f(32) & _f(33) & _f(18) => _f(91));
 _f(1) & _f(2) & _f(3) & _f(4) & _f(13) & _f(29) & _f(30) & _f(87) & is_living.2,(_f(32) & _f(33) & _f(35) => _f(37));
@@ -268,10 +268,10 @@ not((PERSON - person) = {}) & ((ss) : (((1..2)*{SEX}))) & ((mm) : (PERSON)) & ((
 (((((((((partial_field$1) <+ ({((1) |-> ((((partial_field$1 )(1)) <+ ({(((partial_object$1 + 1)) |-> ((code_SEX )(ss)))}))))}))) <+ ({((2) |-> ((((((partial_field$1) <+ ({((1) |-> ((((partial_field$1 )(1)) <+ ({(((partial_object$1 + 1)) |-> ((code_SEX )(ss)))}))))})) )(2)) <+ ({(((partial_object$1 + 1)) |-> ((code_STATUS )((2|->STATUS))))}))))}))) <+ ({((3) |-> ((((((((partial_field$1) <+ ({((1) |-> ((((partial_field$1 )(1)) <+ ({(((partial_object$1 + 1)) |-> ((code_SEX )(ss)))}))))}))) <+ ({((2) |-> ((((((partial_field$1) <+ ({((1) |-> ((((partial_field$1 )(1)) <+ ({(((partial_object$1 + 1)) |-> ((code_SEX )(ss)))}))))})) )(2)) <+ ({(((partial_object$1 + 1)) |-> ((code_STATUS )((2|->STATUS))))}))))})) )(3)) <+ ({(((partial_object$1 + 1)) |-> (mm))}))))})) )(4)) = (((husband) \/ (wife))));
 ((report$1) = (report));
 ((bool(not(partial_object$1 = max_pers))) = (bool(not((PERSON - person) = {}))));
-((bool(not(partial_object$1 = max_pers))) = (bool(((pp) : (person)))));
+((bool((pp <= partial_object$1))) = (bool(((pp) : (person)))));
 ((pp) : (PERSON)) & ((pp) : (person));
 ((bool(((((partial_field$1 )(2) )(pp)) = ((code_STATUS )((2|->STATUS)))))) = (bool(((pp) : (((status)~ )[{(2|->STATUS)}])))));
-((bool(((((partial_field$1 )(2) )(pp)) = ((code_SEX )((2|->SEX)))))) = (bool(((pp) : (((sex)~ )[{(2|->SEX)}])))));
+((bool(((((partial_field$1 )(1) )(pp)) = ((code_SEX )((2|->SEX)))))) = (bool(((pp) : (((sex)~ )[{(2|->SEX)}])))));
 (((2|->SEX)) : (dom(code_SEX)));
 ((bool(((pp) : (dom((partial_field$1 )(4)))))) = (bool(((pp) : (dom(((husband) \/ (wife))))))));
 ((bool(((pp) : (dom((partial_field$1 )(3)))))) = (bool(((pp) : (dom(mother))))));

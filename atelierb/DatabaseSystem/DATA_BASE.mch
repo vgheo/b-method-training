@@ -1,4 +1,4 @@
-﻿/* DATA_BASE
+/* DATA_BASE
  * Author: T0164919
  * Creation date: 7/30/2015
  */

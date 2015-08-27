@@ -46,22 +46,22 @@ END
 &
 THEORY Formulas IS
 ((NAT) = (((0) .. (2147483647)))) & ((INT) = (((-2147483647) .. (2147483647))));
-FIELD: FIN(INTEGER) & not(FIELD = {}) & VALUE: FIN(INTEGER) & not(VALUE = {}) & ((max_rec) : ((NAT-{0})));
-bfile$1 : NATURAL-{0} +-> ((FIELD) --> (VALUE)) & ((bfile$1) : (seq(((FIELD) --> (VALUE))))) & ((buffer$1) : (((dom(bfile$1)) +-> (((FIELD) --> (VALUE))))));
-{} : NATURAL-{0} +-> ((FIELD) --> (VALUE));
-(({}) : (seq(((FIELD) --> (VALUE)))));
-(({}) : (((dom({})) +-> (((FIELD) --> (VALUE))))));
+((max_rec) : ((NAT-{0})));
+bfile$1 : NATURAL-{0} +-> ((((0) .. (4))) --> (((0) .. (10000)))) & ((bfile$1) : (seq(((((0) .. (4))) --> (((0) .. (10000))))))) & ((buffer$1) : (((dom(bfile$1)) +-> (((((0) .. (4))) --> (((0) .. (10000))))))));
+{} : NATURAL-{0} +-> ((((0) .. (4))) --> (((0) .. (10000))));
+(({}) : (seq(((((0) .. (4))) --> (((0) .. (10000)))))));
+(({}) : (((dom({})) +-> (((((0) .. (4))) --> (((0) .. (10000))))))));
 "Refinement is correct";
 (({}) = ((({}) <+ ({}))));
-file : NATURAL-{0} +-> ((FIELD) --> (VALUE)) & ((file) : (seq(((FIELD) --> (VALUE))))) & (size(file) <= max_rec);
+file : NATURAL-{0} +-> ((((0) .. (4))) --> (((0) .. (10000)))) & ((file) : (seq(((((0) .. (4))) --> (((0) .. (10000))))))) & (size(file) <= max_rec);
 ((file) = (((bfile$1) <+ (buffer$1))));
-((oo) : (NAT)) & ((oo) : (dom(file))) & ((ii) : (FIELD));
+((oo) : (NAT)) & ((oo) : (dom(file))) & ((ii) : (((0) .. (4))));
 ((vv$1) = (vv));
 not(oo : dom(buffer$1));
 not(not(oo : dom(buffer$1)));
 ((oo) : (NAT));
 ((oo) : (dom(file)));
-((ii) : (FIELD));
+((ii) : (((0) .. (4))));
 "Precondition predicate";
 ((oo) : ((NAT-{0})));
 ((oo) : (((1) .. (size(bfile$1)))));
@@ -71,15 +71,15 @@ not(not(oo : dom(buffer$1)));
 (((({((oo) |-> ((bfile$1 )(oo)))} )(oo) )(ii)) = (((file )(oo) )(ii)));
 ((oo) : (dom(buffer$1)));
 ((((buffer$1 )(oo) )(ii)) = (((file )(oo) )(ii)));
-((oo) : (NAT)) & ((oo) : (dom(file))) & ((ii) : (FIELD)) & ((vv) : (VALUE));
-((vv) : (VALUE));
+((oo) : (NAT)) & ((oo) : (dom(file))) & ((ii) : (((0) .. (4)))) & ((vv) : (((0) .. (10000))));
+((vv) : (((0) .. (10000))));
 ((((file) <+ ({((oo) |-> ((((file )(oo)) <+ ({((ii) |-> (vv))}))))}))) = (((((bfile$1) <+ (buffer$1))) <+ ((({((oo) |-> ((bfile$1 )(oo)))}) <+ ({((oo) |-> (((({((oo) |-> ((bfile$1 )(oo)))} )(oo)) <+ ({((ii) |-> (vv))}))))}))))));
 ((((file) <+ ({((oo) |-> ((((file )(oo)) <+ ({((ii) |-> (vv))}))))}))) = (((bfile$1) <+ (((buffer$1) <+ ({((oo) |-> ((((buffer$1 )(oo)) <+ ({((ii) |-> (vv))}))))}))))));
-((vv) : (VALUE)) & (size(file) +1 <= max_rec);
+((vv) : (((0) .. (10000)))) & (size(file) +1 <= max_rec);
 ((oo$1) = (oo));
 (size(file) +1 <= max_rec);
 not(size(bfile$1) = max_rec);
-((((file) <- ((FIELD * {vv})))) = (((((bfile$1) <- ((FIELD * {vv})))) <+ (buffer$1))));
+((((file) <- ((((0) .. (4)) * {vv})))) = (((((bfile$1) <- ((((0) .. (4)) * {vv})))) <+ (buffer$1))));
 (((size(bfile$1) + 1)) = ((size(file) + 1)));
 ((size(bfile$1)) = (size(file)));
 ((vv) : (dom({((oo) |-> ((bfile$1 )(oo)))})));
@@ -97,7 +97,7 @@ not(size(bfile$1) = max_rec);
 ((({((oo) |-> ((bfile$1 )(oo)))} )(ii)) : (((dom(({((oo) |-> ((bfile$1 )(oo)))} )(ii))) +-> (ran(({((oo) |-> ((bfile$1 )(oo)))} )(ii))))));
 ((ii) : (dom((buffer$1 )(ii))));
 (((buffer$1 )(ii)) : (((dom((buffer$1 )(ii))) +-> (ran((buffer$1 )(ii))))));
-((vv) : (VALUE)) & (size(file) +1 <= max_rec) & ((vv) : (VALUE)) & not(size(bfile$1) = max_rec)
+((vv) : (((0) .. (10000)))) & (size(file) +1 <= max_rec) & ((vv) : (((0) .. (10000)))) & not(size(bfile$1) = max_rec)
 END
 &
 THEORY EnumerateX

@@ -201,9 +201,9 @@ THEORY ListSubstitutionX IS
   Expanded_List_Substitution(Implementation(DATA_BASE_1),val_status)==(pp: PERSON & pp: person | @ss.((2: 1..4 & pp: 1..partial_object | ss:=partial_field(2)(pp));(ss: dom(decode_STATUS) | vv:=decode_STATUS(ss))));
   Expanded_List_Substitution(Implementation(DATA_BASE_1),has_mother)==(pp: PERSON & pp: person & 3: 1..4 & pp: 1..partial_object | report:=bool(pp: dom(partial_field(3))));
   Expanded_List_Substitution(Implementation(DATA_BASE_1),is_married)==(pp: PERSON & pp: person & 4: 1..4 & pp: 1..partial_object | report:=bool(pp: dom(partial_field(4))));
-  Expanded_List_Substitution(Implementation(DATA_BASE_1),is_woman)==(pp: PERSON & pp: person | @(ss,tt).((2: 1..4 & pp: 1..partial_object | ss:=partial_field(2)(pp));(woman: dom(code_SEX) | tt:=code_SEX(woman));report:=bool(ss = tt)));
+  Expanded_List_Substitution(Implementation(DATA_BASE_1),is_woman)==(pp: PERSON & pp: person | @(ss,tt).((1: 1..4 & pp: 1..partial_object | ss:=partial_field(1)(pp));(woman: dom(code_SEX) | tt:=code_SEX(woman));report:=bool(ss = tt)));
   Expanded_List_Substitution(Implementation(DATA_BASE_1),is_living)==(pp: PERSON & pp: person | @(ss,tt).((2: 1..4 & pp: 1..partial_object | ss:=partial_field(2)(pp));(living: dom(code_STATUS) | tt:=code_STATUS(living));report:=bool(ss = tt)));
-  Expanded_List_Substitution(Implementation(DATA_BASE_1),is_present)==(pp: PERSON | @nn.((btrue | nn:=partial_object);report:=bool(nn/=max_pers)));
+  Expanded_List_Substitution(Implementation(DATA_BASE_1),is_present)==(pp: PERSON | @nn.((btrue | nn:=partial_object);report:=bool(pp<=nn)));
   Expanded_List_Substitution(Implementation(DATA_BASE_1),new_born)==(PERSON-person/={} & ss: SEX & mm: PERSON & mm: dom(husband\/wife)/\sex~[{woman}] | (partial_object/=10000 | partial_object,baby:=partial_object+1,partial_object+1);(ss: dom(code_SEX) & 1: 1..4 & baby: 1..partial_object & code_SEX(ss): 0..10000 | partial_field:=partial_field<+{1|->(partial_field(1)<+{baby|->code_SEX(ss)})});(living: dom(code_STATUS) & 2: 1..4 & baby: 1..partial_object & code_STATUS(living): 0..10000 | partial_field:=partial_field<+{2|->(partial_field(2)<+{baby|->code_STATUS(living)})});(3: 1..4 & baby: 1..partial_object & mm: 0..10000 | partial_field:=partial_field<+{3|->(partial_field(3)<+{baby|->mm})}));
   Expanded_List_Substitution(Implementation(DATA_BASE_1),not_saturated)==(btrue | @nn.((btrue | nn:=partial_object);report:=bool(nn/=max_pers)));
   Expanded_List_Substitution(Implementation(DATA_BASE_1),first_human)==(PERSON-person/={} & ss: SEX | (partial_object/=10000 | partial_object,baby:=partial_object+1,partial_object+1);(ss: dom(code_SEX) & 1: 1..4 & baby: 1..partial_object & code_SEX(ss): 0..10000 | partial_field:=partial_field<+{1|->(partial_field(1)<+{baby|->code_SEX(ss)})});(living: dom(code_STATUS) & 2: 1..4 & baby: 1..partial_object & code_STATUS(living): 0..10000 | partial_field:=partial_field<+{2|->(partial_field(2)<+{baby|->code_STATUS(living)})}));
@@ -214,9 +214,9 @@ THEORY ListSubstitutionX IS
   List_Substitution(Implementation(DATA_BASE_1),first_human)==(baby <-- create_partial_object;mod_field(1,baby,code_SEX(ss));mod_field(2,baby,code_STATUS(living)));
   List_Substitution(Implementation(DATA_BASE_1),not_saturated)==(VAR nn IN nn <-- nbr_object;report:=bool(nn/=max_pers) END);
   List_Substitution(Implementation(DATA_BASE_1),new_born)==(baby <-- create_partial_object;mod_field(1,baby,code_SEX(ss));mod_field(2,baby,code_STATUS(living));mod_field(3,baby,mm));
-  List_Substitution(Implementation(DATA_BASE_1),is_present)==(VAR nn IN nn <-- nbr_object;report:=bool(nn/=max_pers) END);
+  List_Substitution(Implementation(DATA_BASE_1),is_present)==(VAR nn IN nn <-- nbr_object;report:=bool(pp<=nn) END);
   List_Substitution(Implementation(DATA_BASE_1),is_living)==(VAR ss,tt IN ss <-- val_field(2,pp);tt:=code_STATUS(living);report:=bool(ss = tt) END);
-  List_Substitution(Implementation(DATA_BASE_1),is_woman)==(VAR ss,tt IN ss <-- val_field(2,pp);tt:=code_SEX(woman);report:=bool(ss = tt) END);
+  List_Substitution(Implementation(DATA_BASE_1),is_woman)==(VAR ss,tt IN ss <-- val_field(1,pp);tt:=code_SEX(woman);report:=bool(ss = tt) END);
   List_Substitution(Implementation(DATA_BASE_1),is_married)==(report <-- def_field(4,pp));
   List_Substitution(Implementation(DATA_BASE_1),has_mother)==(report <-- def_field(3,pp));
   List_Substitution(Implementation(DATA_BASE_1),val_status)==(VAR ss IN ss <-- val_field(2,pp);vv:=decode_STATUS(ss) END);

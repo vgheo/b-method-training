@@ -19,7 +19,7 @@
 </Define>
 <Define merge="=" name="ctx"/>
 <Define merge="=" name="seext"/>
-<Define merge="-" name="inv">
+<Define merge="=" name="inv">
 <Nary_Pred op="&amp;" translate="buf_vrb : ((0) .. (4)) +-> ((0) .. (10000)) &amp; dom(buf_vrb) = ((0) .. (4)) &amp; ((buf_vrb) : (((((0) .. (4))) --> (((0) .. (10000)))))) &amp; file_vrb : NAT +-> ((((0) .. (4))) --> (((0) .. (10000)))) &amp; dom(file_vrb) = NAT &amp; ((file_vrb) : (((NAT) --> (((((0) .. (4))) --> (((0) .. (10000)))))))) &amp; file_vrb : NATURAL-{0} +-> ((((0) .. (4))) --> (((0) .. (10000)))) &amp; ((file_vrb) : (seq(((((0) .. (4))) --> (((0) .. (10000))))))) &amp; (size(file_vrb) +1 &lt;= max_rec)">
 <Exp_Comparison op=":" initialTag="((buf_vrb) : (((((0) .. (4))) --> (((0) .. (10000))))))">
 <Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\BASIC_FILE_VAR.bxml:1:4:1:1:1" typref="103245008" value="buf_vrb"/>
@@ -77,7 +77,7 @@
 <Define merge="=" name="lprp"/>
 <Define merge="=" name="inprp"/>
 <Define merge="=" name="inext"/>
-<Define merge="-" name="cst">
+<Define merge="=" name="cst">
 <Nary_Pred op="&amp;" translate="((max_rec) : ((NAT-{0})))">
 <Exp_Comparison op=":">
 <Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\BASIC_FILE_VAR.bxml:1:2:1:1:1" typref="2701647786" value="max_rec"/>
@@ -85,7 +85,7 @@
 </Exp_Comparison>
 </Nary_Pred>
 </Define>
-<Proof_Obligation merge="-">
+<Proof_Obligation merge="=">
 <Comment>Initialisation dans une machine abstraite</Comment>
 <Tag>Initialisation</Tag>
 <Tag>Invariant</Tag>
@@ -114,7 +114,7 @@
 </Binary_Exp>
 </Exp_Comparison>
 </Local_Hyp>
-<Simple_Goal merge="">
+<Simple_Goal merge="0">
 <Tag>Invariant is preserved</Tag>
 <Goal>
 <Binary_Pred op="=>">
@@ -140,9 +140,9 @@
 </Exp_Comparison>
 </Binary_Pred>
 </Goal>
-<Proof_State proofState="Unproved" methodList="pr" passList="Force(0),?"/>
+<Proof_State proofState="Unproved" methodList="pr" passList="Force(0),(?; 0; 1; 2)"/>
 </Simple_Goal>
-<Simple_Goal merge="">
+<Simple_Goal merge="1">
 <Tag>Invariant is preserved</Tag>
 <Goal>
 <Binary_Pred op="=>">
@@ -167,9 +167,9 @@
 </Exp_Comparison>
 </Binary_Pred>
 </Goal>
-<Proof_State proofState="Unproved" methodList="pr" passList="Force(0),?"/>
+<Proof_State proofState="Proved(0)" methodList="pr" passList="Force(0),?"/>
 </Simple_Goal>
-<Simple_Goal merge="">
+<Simple_Goal merge="2">
 <Tag>Invariant is preserved</Tag>
 <Goal>
 <Binary_Pred op="=>">
@@ -185,10 +185,10 @@
 </Exp_Comparison>
 </Binary_Pred>
 </Goal>
-<Proof_State proofState="Unproved" methodList="pr" passList="Force(0),?"/>
+<Proof_State proofState="Proved(0)" methodList="pr" passList="Force(0),?"/>
 </Simple_Goal>
 </Proof_Obligation>
-<Proof_Obligation merge="-">
+<Proof_Obligation merge="=">
 <Comment>Operations dans une machine abstraite</Comment>
 <Tag>READ_FILE</Tag>
 <Tag>INVARIANT</Tag>
@@ -241,10 +241,10 @@
 </Exp_Comparison>
 </Binary_Pred>
 </Goal>
-<Proof_State proofState="Unproved" methodList="pr" passList="Force(0),?"/>
+<Proof_State proofState="Proved(0)" methodList="pr" passList="Force(0),?"/>
 </Simple_Goal>
 </Proof_Obligation>
-<Proof_Obligation merge="-">
+<Proof_Obligation merge="=">
 <Comment>Operations dans une machine abstraite</Comment>
 <Tag>WRITE_FILE</Tag>
 <Tag>INVARIANT</Tag>
@@ -305,7 +305,7 @@
 </Exp_Comparison>
 </Binary_Pred>
 </Goal>
-<Proof_State proofState="Unproved" methodList="pr" passList="Force(0),?"/>
+<Proof_State proofState="Proved(0)" methodList="pr" passList="Force(0),?"/>
 </Simple_Goal>
 <Simple_Goal merge="">
 <Tag>Invariant is preserved</Tag>
@@ -337,7 +337,7 @@
 </Exp_Comparison>
 </Binary_Pred>
 </Goal>
-<Proof_State proofState="Unproved" methodList="pr" passList="Force(0),?"/>
+<Proof_State proofState="Proved(0)" methodList="pr" passList="Force(0),?"/>
 </Simple_Goal>
 <Simple_Goal merge="">
 <Tag>Invariant is preserved</Tag>
@@ -360,10 +360,10 @@
 </Exp_Comparison>
 </Binary_Pred>
 </Goal>
-<Proof_State proofState="Unproved" methodList="pr" passList="Force(0),?"/>
+<Proof_State proofState="Proved(0)" methodList="pr" passList="Force(0),?"/>
 </Simple_Goal>
 </Proof_Obligation>
-<Proof_Obligation merge="-">
+<Proof_Obligation merge="=">
 <Comment>Operations dans une machine abstraite</Comment>
 <Tag>NEW_RECORD</Tag>
 <Tag>INVARIANT</Tag>
@@ -430,7 +430,7 @@
 </Exp_Comparison>
 </Binary_Pred>
 </Goal>
-<Proof_State proofState="Unproved" methodList="pr" passList="Force(0),?"/>
+<Proof_State proofState="Unproved" methodList="pr" passList="Force(0),(?; 0; 1; 2)"/>
 </Simple_Goal>
 <Simple_Goal merge="">
 <Tag>Invariant is preserved</Tag>
@@ -465,7 +465,7 @@
 </Exp_Comparison>
 </Binary_Pred>
 </Goal>
-<Proof_State proofState="Unproved" methodList="pr" passList="Force(0),?"/>
+<Proof_State proofState="Proved(0)" methodList="pr" passList="Force(0),?"/>
 </Simple_Goal>
 <Simple_Goal merge="">
 <Tag>Invariant is preserved</Tag>
@@ -491,10 +491,10 @@
 </Exp_Comparison>
 </Binary_Pred>
 </Goal>
-<Proof_State proofState="Unproved" methodList="pr" passList="Force(0),?"/>
+<Proof_State proofState="Proved(0)" methodList="pr" passList="Force(0),?"/>
 </Simple_Goal>
 </Proof_Obligation>
-<Proof_Obligation merge="-">
+<Proof_Obligation merge="=">
 <Comment>Operations dans une machine abstraite</Comment>
 <Tag>SIZE_FILE</Tag>
 <Tag>INVARIANT</Tag>
@@ -512,7 +512,7 @@
 <Nary_Pred op="&amp;"/>
 </Local_Hyp>
 </Proof_Obligation>
-<Proof_Obligation merge="-">
+<Proof_Obligation merge="=">
 <Comment>Operations dans une machine abstraite</Comment>
 <Tag>RESET_FILE</Tag>
 <Tag>INVARIANT</Tag>
@@ -552,7 +552,7 @@
 </Exp_Comparison>
 </Binary_Pred>
 </Goal>
-<Proof_State proofState="Unproved" methodList="pr" passList="Force(0),?"/>
+<Proof_State proofState="Unproved" methodList="pr" passList="Force(0),(?; 0; 1; 2)"/>
 </Simple_Goal>
 <Simple_Goal merge="">
 <Tag>Invariant is preserved</Tag>
@@ -576,7 +576,7 @@
 </Exp_Comparison>
 </Binary_Pred>
 </Goal>
-<Proof_State proofState="Unproved" methodList="pr" passList="Force(0),?"/>
+<Proof_State proofState="Proved(0)" methodList="pr" passList="Force(0),?"/>
 </Simple_Goal>
 <Simple_Goal merge="">
 <Tag>Invariant is preserved</Tag>
@@ -591,60 +591,20 @@
 </Exp_Comparison>
 </Binary_Pred>
 </Goal>
-<Proof_State proofState="Unproved" methodList="pr" passList="Force(0),?"/>
-</Simple_Goal>
-</Proof_Obligation>
-<Proof_Obligation merge="-">
-<Comment>Operations dans une machine abstraite</Comment>
-<Tag>RESET_RECORD</Tag>
-<Tag>INVARIANT</Tag>
-<Definition name="B definitions"/>
-<Definition name="ctx"/>
-<Definition name="cst"/>
-<Definition name="lprp"/>
-<Definition name="inprp"/>
-<Definition name="inext"/>
-<Definition name="seext"/>
-<Definition name="inv"/>
-<Definition name="ass"/>
-<Hypothesis/>
-<Local_Hyp num="1">
-<Nary_Pred op="&amp;"/>
-</Local_Hyp>
-<Simple_Goal merge="">
-<Tag>Invariant is preserved</Tag>
-<Goal>
-<Binary_Pred op="=>">
-<Ref_Hyp num="1"/>
-<Exp_Comparison op=":" initialTag="((buf_vrb) : (((((0) .. (4))) --> (((0) .. (10000))))))" goalTag="Invariant is preserved">
-<EmptySet tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\BASIC_FILE_VAR.bxml:1:6:6:1:1:2:1,A:\b-method-training\atelierb\DatabaseSystem\bdp\BASIC_FILE_VAR.bxml:1:4:1:1:1,A:\b-method-training\atelierb\DatabaseSystem\bdp\BASIC_FILE_VAR.bxml:1:6:6:1:1:1:1" typref="103245008"/>
-<Binary_Exp op="-->" typref="3083833907">
-<Binary_Exp op=".." typref="3603043417">
-<Integer_Literal tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\BASIC_FILE_VAR.bxml:1:4:1:1:2:1:1" typref="2701647786" value="0"/>
-<Integer_Literal tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\BASIC_FILE_VAR.bxml:1:4:1:1:2:1:2" typref="2701647786" value="4"/>
-</Binary_Exp>
-<Binary_Exp op=".." typref="3603043417">
-<Integer_Literal tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\BASIC_FILE_VAR.bxml:1:4:1:1:2:2:1" typref="2701647786" value="0"/>
-<Integer_Literal tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\BASIC_FILE_VAR.bxml:1:4:1:1:2:2:2" typref="2701647786" value="10000"/>
-</Binary_Exp>
-</Binary_Exp>
-</Exp_Comparison>
-</Binary_Pred>
-</Goal>
-<Proof_State proofState="Unproved" methodList="pr" passList="Force(0),?"/>
+<Proof_State proofState="Proved(0)" methodList="pr" passList="Force(0),?"/>
 </Simple_Goal>
 </Proof_Obligation>
 <Proof_Obligation merge="=">
 <Tag>WellDefinednessConstraints</Tag>
 </Proof_Obligation>
-<Proof_Obligation merge="-">
+<Proof_Obligation merge="=">
 <Tag>WellDefinednessProperties</Tag>
 <Definition name="B definitions"/>
 <Definition name="ctx"/>
 <Definition name="cst"/>
 <Hypothesis/>
 </Proof_Obligation>
-<Proof_Obligation merge="-">
+<Proof_Obligation merge="=">
 <Tag>WellDefinednessInvariant</Tag>
 <Definition name="B definitions"/>
 <Definition name="ctx"/>
@@ -722,10 +682,10 @@
 </Exp_Comparison>
 </Binary_Pred>
 </Goal>
-<Proof_State proofState="Unproved" methodList="pr" passList="Force(0),?"/>
+<Proof_State proofState="Proved(Util)" methodList="ch &amp; pp" passList="Force(0),(?; 0; 1; 2)"/>
 </Simple_Goal>
 </Proof_Obligation>
-<Proof_Obligation merge="-">
+<Proof_Obligation merge="=">
 <Tag>WellDefinednessAssertions</Tag>
 <Definition name="B definitions"/>
 <Definition name="ctx"/>
@@ -736,7 +696,7 @@
 <Definition name="seext"/>
 <Definition name="inv"/>
 </Proof_Obligation>
-<Proof_Obligation merge="-">
+<Proof_Obligation merge="=">
 <Tag>WellDefinednessInitialisation</Tag>
 <Definition name="B definitions"/>
 <Definition name="ctx"/>
@@ -746,7 +706,7 @@
 <Definition name="inext"/>
 <Definition name="seext"/>
 </Proof_Obligation>
-<Proof_Obligation merge="-">
+<Proof_Obligation merge="=">
 <Comment>Operations dans une machine abstraite</Comment>
 <Tag>WellDefinedness_Precondition_READ_FILE</Tag>
 <Tag>INVARIANT</Tag>
@@ -766,7 +726,7 @@
 </Exp_Comparison>
 </Local_Hyp>
 </Proof_Obligation>
-<Proof_Obligation merge="-">
+<Proof_Obligation merge="=">
 <Comment>Operations dans une machine abstraite</Comment>
 <Tag>WellDefinedness_READ_FILE</Tag>
 <Tag>INVARIANT</Tag>
@@ -808,10 +768,10 @@
 </Binary_Exp>
 </Exp_Comparison>
 </Goal>
-<Proof_State proofState="Unproved" methodList="pr" passList="Force(0),?"/>
+<Proof_State proofState="Proved(0)" methodList="pr" passList="Force(0),?"/>
 </Simple_Goal>
 </Proof_Obligation>
-<Proof_Obligation merge="-">
+<Proof_Obligation merge="=">
 <Comment>Operations dans une machine abstraite</Comment>
 <Tag>WellDefinedness_Precondition_WRITE_FILE</Tag>
 <Tag>INVARIANT</Tag>
@@ -831,7 +791,7 @@
 </Exp_Comparison>
 </Local_Hyp>
 </Proof_Obligation>
-<Proof_Obligation merge="-">
+<Proof_Obligation merge="=">
 <Comment>Operations dans une machine abstraite</Comment>
 <Tag>WellDefinedness_WRITE_FILE</Tag>
 <Tag>INVARIANT</Tag>
@@ -859,7 +819,7 @@
 </Nary_Pred>
 </Hypothesis>
 </Proof_Obligation>
-<Proof_Obligation merge="-">
+<Proof_Obligation merge="=">
 <Comment>Operations dans une machine abstraite</Comment>
 <Tag>WellDefinedness_Precondition_NEW_RECORD</Tag>
 <Tag>INVARIANT</Tag>
@@ -896,10 +856,10 @@
 </Exp_Comparison>
 </Binary_Pred>
 </Goal>
-<Proof_State proofState="Unproved" methodList="mp &amp; ch &amp; pr &amp; pp" passList="Force(0),?"/>
+<Proof_State proofState="Proved(Util)" methodList="mp &amp; ch &amp; pr &amp; pp" passList="Force(0),?"/>
 </Simple_Goal>
 </Proof_Obligation>
-<Proof_Obligation merge="-">
+<Proof_Obligation merge="=">
 <Comment>Operations dans une machine abstraite</Comment>
 <Tag>WellDefinedness_NEW_RECORD</Tag>
 <Tag>INVARIANT</Tag>
@@ -941,10 +901,10 @@
 </Unary_Exp>
 </Exp_Comparison>
 </Goal>
-<Proof_State proofState="Unproved" methodList="pr" passList="Force(0),?"/>
+<Proof_State proofState="Proved(Util)" methodList="mp &amp; ch &amp; pp" passList="Force(0),(?; 0; 1; 2)"/>
 </Simple_Goal>
 </Proof_Obligation>
-<Proof_Obligation merge="-">
+<Proof_Obligation merge="=">
 <Comment>Operations dans une machine abstraite</Comment>
 <Tag>WellDefinedness_Precondition_SIZE_FILE</Tag>
 <Tag>INVARIANT</Tag>
@@ -958,7 +918,7 @@
 <Definition name="inv"/>
 <Definition name="ass"/>
 </Proof_Obligation>
-<Proof_Obligation merge="-">
+<Proof_Obligation merge="=">
 <Comment>Operations dans une machine abstraite</Comment>
 <Tag>WellDefinedness_SIZE_FILE</Tag>
 <Tag>INVARIANT</Tag>
@@ -984,10 +944,10 @@
 </Unary_Exp>
 </Exp_Comparison>
 </Goal>
-<Proof_State proofState="Unproved" methodList="mp &amp; ch &amp; pr &amp; pp" passList="Force(0),?"/>
+<Proof_State proofState="Proved(Util)" methodList="mp &amp; ch &amp; pr &amp; pp" passList="Force(0),?"/>
 </Simple_Goal>
 </Proof_Obligation>
-<Proof_Obligation merge="-">
+<Proof_Obligation merge="=">
 <Comment>Operations dans une machine abstraite</Comment>
 <Tag>WellDefinedness_Precondition_RESET_FILE</Tag>
 <Tag>INVARIANT</Tag>
@@ -1001,38 +961,9 @@
 <Definition name="inv"/>
 <Definition name="ass"/>
 </Proof_Obligation>
-<Proof_Obligation merge="-">
+<Proof_Obligation merge="=">
 <Comment>Operations dans une machine abstraite</Comment>
 <Tag>WellDefinedness_RESET_FILE</Tag>
-<Tag>INVARIANT</Tag>
-<Definition name="B definitions"/>
-<Definition name="ctx"/>
-<Definition name="cst"/>
-<Definition name="lprp"/>
-<Definition name="inprp"/>
-<Definition name="inext"/>
-<Definition name="seext"/>
-<Definition name="inv"/>
-<Definition name="ass"/>
-<Hypothesis/>
-</Proof_Obligation>
-<Proof_Obligation merge="-">
-<Comment>Operations dans une machine abstraite</Comment>
-<Tag>WellDefinedness_Precondition_RESET_RECORD</Tag>
-<Tag>INVARIANT</Tag>
-<Definition name="B definitions"/>
-<Definition name="ctx"/>
-<Definition name="cst"/>
-<Definition name="lprp"/>
-<Definition name="inprp"/>
-<Definition name="inext"/>
-<Definition name="seext"/>
-<Definition name="inv"/>
-<Definition name="ass"/>
-</Proof_Obligation>
-<Proof_Obligation merge="-">
-<Comment>Operations dans une machine abstraite</Comment>
-<Tag>WellDefinedness_RESET_RECORD</Tag>
 <Tag>INVARIANT</Tag>
 <Definition name="B definitions"/>
 <Definition name="ctx"/>
@@ -1115,11 +1046,6 @@
 </Unary_Exp>
 </Unary_Exp>
 </Binary_Exp>
-</Unary_Exp>
-</Type>
-<Type id="3817003670">
-<Unary_Exp op="POW">
-<Generic_Type tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\BASIC_FILE_VAR.bxml:1:7:8:1:1"/>
 </Unary_Exp>
 </Type>
 </TypeInfos>
