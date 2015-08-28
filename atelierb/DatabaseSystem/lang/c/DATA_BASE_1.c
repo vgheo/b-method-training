@@ -31,7 +31,7 @@ void DATA_BASE__death(DATA_BASE__PERSON pp)
 {
     int32_t tt;
     
-    tt = BASIC_STATUS__code_STATUS[BASIC_STATUS__dead];
+    tt = BASIC_STATUS__dead;
     PARTIAL_OBJECT__mod_field(2, pp, tt);
 }
 

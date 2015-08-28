@@ -71,10 +71,8 @@ void main(void)
                 
                 
                 printf("[INNER_INTERFACE__print_operation]\n");
-                INNER_INTERFACE__print_operation();
-                break;
-            }
-            default:{
+                //INNER_INTERFACE__print_operation();
+                {
             	int i,j;
             	for(i=1; i<=BASIC_FILE_VAR_size; i++)
             	{
@@ -91,7 +89,7 @@ void main(void)
 					printf(" living ");
 					else
 				if(FILE_ACCESS__buffer[i][2] == BASIC_STATUS__dead )
-					printf(" dead ");
+					printf("  dead  ");
 					else
 					printf("x%dx",FILE_ACCESS__buffer[i][2]);
 					
@@ -100,6 +98,9 @@ void main(void)
 				
 				printf("\n");
 				}
+                break;
+            }
+            default:
 				break;
 			}
         }
