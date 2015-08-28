@@ -1,0 +1,31 @@
+/**  \file TestDataChannelFunctionality.cpp
+ *
+ *  \brief Provides testsuite for:
+ *
+ *  \n \b System       :   ESTW L90 5
+ *  \n \b Module       :   
+ *  \n \b Component    :   
+ *  \n \b Full \b Name :   
+ *
+ *  \date:   
+ *  \author: 
+ *
+ *  \version  1 - 31.09.15 - Initial Version
+ */
+
+/* {{{ (c) ********************************************************************/
+/*                                                                            */
+/*                                  THALES                                    */
+/*                                                                            */
+/******************************************************************************/
+/*                                                                            */
+/*  This computer program contains proprietary information which is a         */
+/*  trade secret of Thales Transportation Systems GmbH and which is also      */
+/*  protected under applicable copyright laws. Recipient is to retain this    */
+/*  computer program in confidence and is not permitted to copy, use,         */
+/*  distribute, modify or translate it without express written authorization  */
+/*  from Thales Transportation Systems GmbH                                   */
+/*                                                                            */
+/* }}} ************************************************************************/
+
+//TODO: includes
