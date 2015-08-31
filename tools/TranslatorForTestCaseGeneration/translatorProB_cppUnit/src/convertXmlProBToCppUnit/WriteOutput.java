@@ -37,10 +37,25 @@ public class WriteOutput {
 		openFiles();
 		
 		//first comment
-		String line;
+		String line = commentFile.readLine();
+		outputFile.append(line + Const.testClassName + ".cpp\r\n");
+		
 		while((line = commentFile.readLine()) != null)
 			outputFile.append(line + "\r\n");
 
+		outputFile.append("\r\n");
+		outputFile.append("class " + Const.testClassName + ";\r\n\r\n");
+		outputFile.append("CPPUNIT_TEST_SUITE_REGISTRATION(" + Const.testClassName + ");\r\n\r\n");
+		outputFile.append("class " + Const.testClassName + ": public CppUnit::TestFixture {\r\n\r\n");
+		outputFile.append("\tCPPUNIT_TEST_SUITE(" + Const.testClassName + ");\r\n\r\n");
+		
+		// TODO: add: CPPUNIT_TEST(test_TCIM_UT_<number>);
+		// number belongs 1..testCases.size()
+		
+		outputFile.append("\tCPPUNIT_TEST_SUITE_END();\r\n\r\n");
+		
+		//TODO: add tearDown() and setUp() functions;
+		
 		// Compute result for each test case
 		for (int i = 0; i < testCases.size(); i++) {
 			TestCase itTest = testCases.get(i);
@@ -106,6 +121,8 @@ public class WriteOutput {
 			outputFile.append("}\r\n");
 			
 		}
+		
+		outputFile.append("};\r\n");
 		
 		//closing files
 		closeFiles();
