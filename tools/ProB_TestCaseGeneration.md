@@ -1,10 +1,10 @@
 # ProB Test Case Generation GUI
 
-###Initialization:
+### Initialization:
 In ProB:
 	- Preferences -> User Mode -> Normal -> restart ProB
 	
-###Test generation:
+### Test generation (constraint based checking):
 In ProB:
 	- Analyse -> Testing -> Constraint-based test case generation
 	- Write : -> test name
@@ -13,7 +13,7 @@ In ProB:
 	- Target event must be final only (don't check)
 	- Result an xml file
 	
-###Obs
+### Obs
 - Events/tests are not created in case of operations that are not called, but they are defined in machines which the base machine (mch or imp) has access to
 Ex. Machine M1.imp has SEES M2 and call op1 from M2. M2 has operation op1, op2, etc.
 	
@@ -68,21 +68,52 @@ http://stups.hhu.de/ProB/w/Tutorial_Model_Checking,_Proof_and_CBC
 
 # ProB Test Case Generation CLI
 
-###Generate test cases in cmd:
+### Generate test cases in cmd (constraint based):
 > probcli -cbc_tests <Depth> <EndPredicate> <xmlFile> -p <PREFERENCE> <VALUE> -card <SET> <nr> <machineName>
 
-Possible parameter (operation should be covered ):
--cbc_cover <operation>
+Possible parameter (operation should be covered):
+	- cbc_cover <operation>
 
-##### Configure cardinality of different sets:
-From the command-line, using probcli you can use the command-line switch:
- -card <GS> <VAL>
-Example: 
- probcli my.mch -card PID 5
 
 ##### Link:
 http://stups.hhu.de/ProB/w/Using_the_Command-Line_Version_of_ProB
 
 
-####Use translator (script/program in java, c, python) to convert .xml in cppunit:
-	- tbd
+### Result of research:
+
+##### 1.Set cardinal of different SET:
+- using GUI and model files
+```
+DEFINITIONS
+      scope_<SET_NAME> == <number>
+```
+ex.:
+     scope_PERSON == 10000
+
+- using cli
+```
+-card <SET> <nr>
+```
+ex.:
+	> probcli  test.mch -card PERSON 100 
+	
+
+##### 2.Set preferences
+- using GUI and model files
+```
+DEFINITIONS
+    SET_PREF_<PREF_NAME> == <number>
+```
+ex.
+   SET_PREF_MAXINT == 10000
+
+- using cli
+```
+-p <PREFERENCE> <VALUE>
+```
+ex.:
+	> probcli -cbc_tests <Depth> <EndPredicate> <xmlFile> -p MAXINT 101 -card PERSON 100 <machineName>
+
+
+# Use translator to convert .xml in cppunit:
+	- see: tools/TranslatorForTestCaseGeneration/UseTranslator.md
