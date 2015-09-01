@@ -23,14 +23,14 @@
 </Referenced_Machine>
 </Sees>
 <Values>
+<Valuation ident='max_pers' typref='2701647786'>
+<Integer_Literal value='10000' typref='2701647786'/>
+</Valuation>
 <Valuation ident='PERSON' typref='3603043417'>
 <Binary_Exp op='..' typref='3603043417'>
 <Integer_Literal value='1' typref='2701647786'/>
-<Integer_Literal value='10000' typref='2701647786'/>
+<Id value='max_pers' typref='2701647786'/>
 </Binary_Exp>
-</Valuation>
-<Valuation ident='max_pers' typref='2701647786'>
-<Integer_Literal value='10000' typref='2701647786'/>
 </Valuation>
 </Values>
 <Invariant>
