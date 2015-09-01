@@ -114,3 +114,7 @@ ex.
 ```
 ex.:
 	> probcli -cbc_tests <Depth> <EndPredicate> <xmlFile> -p MAXINT 101 -card PERSON 100 <machineName>
+
+##### Link for SET_PREF and scope_SET in UI:
+http://stups.hhu.de/ProB/w/Tutorial_Complete_Model_Checking#Deferred_Sets
+
