@@ -118,3 +118,6 @@ ex.:
 ##### Link for SET_PREF and scope_SET in UI:
 http://stups.hhu.de/ProB/w/Tutorial_Complete_Model_Checking#Deferred_Sets
 
+
+##### ProB Users:
+https://groups.google.com/forum/?hl=en-GB#!topic/prob-users/ZstyqkHPSrw
