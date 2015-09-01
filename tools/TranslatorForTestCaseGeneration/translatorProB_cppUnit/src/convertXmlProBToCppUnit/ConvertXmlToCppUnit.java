@@ -18,6 +18,7 @@ public class ConvertXmlToCppUnit {
 		
 		/*
 		 * Parsing xml and get a list of test cases
+		 * TODO: parse (B) values from initialisation
 		 */
 		TestCasesParser readXml = new TestCasesParser(Const.XMLTestFile);
 		testCases = readXml.getTestCases();
