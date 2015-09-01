@@ -1,17 +1,18 @@
 # ProB Test Case Generation GUI
 
 ### Initialization:
-In ProB:
-	- Preferences -> User Mode -> Normal -> restart ProB
+In ProB UI:
+- Preferences -> User Mode -> Normal -> restart ProB
 	
 ### Test generation (constraint based checking):
-In ProB:
-	- Analyse -> Testing -> Constraint-based test case generation
-	- Write : -> test name
-			  -> predicate in B or maximum search depth
-	- Select operations
-	- Target event must be final only (don't check)
-	- Result an xml file
+In ProB UI:
+- Analyse -> Testing -> Constraint-based test case generation
+- Write : 
+    - test name
+	- stop condition - predicate in B or maximum search depth
+- Select operations
+- Target event must be final only (don't check)
+- Result an xml file
 	
 ### Obs
 - Events/tests are not created in case of operations that are not called, but they are defined in machines which the base machine (mch or imp) has access to
@@ -36,8 +37,8 @@ END
 Before proceeding, please ensure that you have either set the CLPFD preference to TRUE or have set the MAXINT preference to at least 130.
 
 Note: 
-
-	NATURAL==MININT..MAXINT
+    INT==MININT..MAXINT
+    NAT==0..MAXINT
 	MININT==-1
 	MAXINT==130
 
