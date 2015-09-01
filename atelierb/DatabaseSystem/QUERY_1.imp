@@ -1,6 +1,9 @@
 /* QUERY_1
  * Author: T0164919
  * Creation date: 7/30/2015
+ 
+    Queries to the user.
+    
  */
 
 IMPLEMENTATION QUERY_1
@@ -12,7 +15,7 @@ SEES
 OPERATIONS
     pp,bb<--get_new_dead_person =
     BEGIN
-        STRING_WRITE("Mother Id:");
+        STRING_WRITE("Person Id:"); /*Modification from original model,improper message :"Mother Id"*/
         pp<--PERSON_read;
         bb<--is_present(pp);
         IF bb=FALSE THEN
@@ -42,7 +45,7 @@ OPERATIONS
     BEGIN
        STRING_WRITE("Sex: ");
        ss<--SEX_READ;
-       STRING_WRITE("Person Id: ");/*Mdofication from original model,improper message :"Mother Id"*/
+       STRING_WRITE("Mother Id: ");
        ww<--PERSON_read;
        bb<--is_present(ww);
        IF bb=FALSE THEN

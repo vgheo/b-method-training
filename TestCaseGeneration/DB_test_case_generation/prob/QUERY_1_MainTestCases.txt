@@ -27,4 +27,6 @@ Test 26. Covering DATA_BASE.has_mother. Trace = DATA_BASE.first_human DATA_BASE.
 Test 27. Covering DATA_BASE.val_status. Trace = DATA_BASE.first_human DATA_BASE.val_status 
 Test 28. Covering DATA_BASE.val_sex. Trace = DATA_BASE.first_human DATA_BASE.val_sex 
 Test 29. Covering DATA_BASE.marriage. Trace = DATA_BASE.first_human DATA_BASE.first_human DATA_BASE.marriage 
-Test 30. Covering DATA_BASE.val_spouse. Trace = DATA_BASE.first_human DATA_BASE.first_human DATA_BASE.marriage DATA_BASE.val_spouse 
+Test 30. Covering DATA_BASE.new_born. Trace = DATA_BASE.first_human DATA_BASE.first_human DATA_BASE.marriage DATA_BASE.new_born 
+Test 31. Covering DATA_BASE.val_spouse. Trace = DATA_BASE.first_human DATA_BASE.first_human DATA_BASE.marriage DATA_BASE.val_spouse 
+Test 32. Covering DATA_BASE.val_mother. Trace = DATA_BASE.first_human DATA_BASE.first_human DATA_BASE.marriage DATA_BASE.new_born DATA_BASE.val_mother 
