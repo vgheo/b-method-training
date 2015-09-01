@@ -113,7 +113,3 @@ ex.
 ```
 ex.:
 	> probcli -cbc_tests <Depth> <EndPredicate> <xmlFile> -p MAXINT 101 -card PERSON 100 <machineName>
-
-
-# Use translator to convert .xml in cppunit:
-	- see: tools/TranslatorForTestCaseGeneration/UseTranslator.md
