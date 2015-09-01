@@ -138,7 +138,7 @@ public class WriteOutput {
 			outputFile = new BufferedWriter(
 					new FileWriter(Const.outputUnitTest));
 		} catch (FileNotFoundException ex) {
-			System.out.println("Error file not found for read");
+			System.out.println("Error file not found for read/write");
 			ex.printStackTrace();
 		} catch (IOException ex) {
 			ex.printStackTrace();
