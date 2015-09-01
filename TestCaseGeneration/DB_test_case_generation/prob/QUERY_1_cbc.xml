@@ -6,7 +6,7 @@
       <value type="constant" name="decode_SEX">{(0|->man),(1|->woman)}</value>
       <value type="constant" name="code_STATUS">{(dead|->0),(living|->1)}</value>
       <value type="constant" name="decode_STATUS">{(0|->dead),(1|->living)}</value>
-      <value type="constant" name="max_pers">2</value>
+      <value type="constant" name="max_pers">100</value>
       <value type="variable" name="DATA_BASE.person">{}</value>
       <value type="variable" name="DATA_BASE.sex">{}</value>
       <value type="variable" name="DATA_BASE.status">{}</value>
@@ -22,7 +22,7 @@
       <value type="constant" name="decode_SEX">{(0|->man),(1|->woman)}</value>
       <value type="constant" name="code_STATUS">{(dead|->0),(living|->1)}</value>
       <value type="constant" name="decode_STATUS">{(0|->dead),(1|->living)}</value>
-      <value type="constant" name="max_pers">2</value>
+      <value type="constant" name="max_pers">100</value>
       <value type="variable" name="DATA_BASE.person">{}</value>
       <value type="variable" name="DATA_BASE.sex">{}</value>
       <value type="variable" name="DATA_BASE.status">{}</value>
@@ -38,7 +38,7 @@
       <value type="constant" name="decode_SEX">{(0|->man),(1|->woman)}</value>
       <value type="constant" name="code_STATUS">{(dead|->0),(living|->1)}</value>
       <value type="constant" name="decode_STATUS">{(0|->dead),(1|->living)}</value>
-      <value type="constant" name="max_pers">2</value>
+      <value type="constant" name="max_pers">100</value>
       <value type="variable" name="DATA_BASE.person">{}</value>
       <value type="variable" name="DATA_BASE.sex">{}</value>
       <value type="variable" name="DATA_BASE.status">{}</value>
@@ -54,7 +54,7 @@
       <value type="constant" name="decode_SEX">{(0|->man),(1|->woman)}</value>
       <value type="constant" name="code_STATUS">{(dead|->0),(living|->1)}</value>
       <value type="constant" name="decode_STATUS">{(0|->dead),(1|->living)}</value>
-      <value type="constant" name="max_pers">2</value>
+      <value type="constant" name="max_pers">100</value>
       <value type="variable" name="DATA_BASE.person">{}</value>
       <value type="variable" name="DATA_BASE.sex">{}</value>
       <value type="variable" name="DATA_BASE.status">{}</value>
@@ -70,7 +70,7 @@
       <value type="constant" name="decode_SEX">{(0|->man),(1|->woman)}</value>
       <value type="constant" name="code_STATUS">{(dead|->0),(living|->1)}</value>
       <value type="constant" name="decode_STATUS">{(0|->dead),(1|->living)}</value>
-      <value type="constant" name="max_pers">2</value>
+      <value type="constant" name="max_pers">100</value>
       <value type="variable" name="DATA_BASE.person">{}</value>
       <value type="variable" name="DATA_BASE.sex">{}</value>
       <value type="variable" name="DATA_BASE.status">{}</value>
@@ -86,7 +86,7 @@
       <value type="constant" name="decode_SEX">{(0|->man),(1|->woman)}</value>
       <value type="constant" name="code_STATUS">{(dead|->0),(living|->1)}</value>
       <value type="constant" name="decode_STATUS">{(0|->dead),(1|->living)}</value>
-      <value type="constant" name="max_pers">2</value>
+      <value type="constant" name="max_pers">100</value>
       <value type="variable" name="DATA_BASE.person">{}</value>
       <value type="variable" name="DATA_BASE.sex">{}</value>
       <value type="variable" name="DATA_BASE.status">{}</value>
@@ -95,8 +95,8 @@
       <value type="variable" name="DATA_BASE.wife">{}</value>
     </initialisation>
     <step name="BASIC_IO.INTERVAL_READ">
-      <value name="aa">-1</value>
-      <value name="bb">-1</value>
+      <value name="aa">0</value>
+      <value name="bb">0</value>
     </step>
   </test_case>
   <test_case>
@@ -105,7 +105,7 @@
       <value type="constant" name="decode_SEX">{(0|->man),(1|->woman)}</value>
       <value type="constant" name="code_STATUS">{(dead|->0),(living|->1)}</value>
       <value type="constant" name="decode_STATUS">{(0|->dead),(1|->living)}</value>
-      <value type="constant" name="max_pers">2</value>
+      <value type="constant" name="max_pers">100</value>
       <value type="variable" name="DATA_BASE.person">{}</value>
       <value type="variable" name="DATA_BASE.sex">{}</value>
       <value type="variable" name="DATA_BASE.status">{}</value>
@@ -114,7 +114,7 @@
       <value type="variable" name="DATA_BASE.wife">{}</value>
     </initialisation>
     <step name="BASIC_IO.INT_WRITE">
-      <value name="nn">-1</value>
+      <value name="nn">0</value>
     </step>
   </test_case>
   <test_case>
@@ -123,7 +123,7 @@
       <value type="constant" name="decode_SEX">{(0|->man),(1|->woman)}</value>
       <value type="constant" name="code_STATUS">{(dead|->0),(living|->1)}</value>
       <value type="constant" name="decode_STATUS">{(0|->dead),(1|->living)}</value>
-      <value type="constant" name="max_pers">2</value>
+      <value type="constant" name="max_pers">100</value>
       <value type="variable" name="DATA_BASE.person">{}</value>
       <value type="variable" name="DATA_BASE.sex">{}</value>
       <value type="variable" name="DATA_BASE.status">{}</value>
@@ -139,7 +139,7 @@
       <value type="constant" name="decode_SEX">{(0|->man),(1|->woman)}</value>
       <value type="constant" name="code_STATUS">{(dead|->0),(living|->1)}</value>
       <value type="constant" name="decode_STATUS">{(0|->dead),(1|->living)}</value>
-      <value type="constant" name="max_pers">2</value>
+      <value type="constant" name="max_pers">100</value>
       <value type="variable" name="DATA_BASE.person">{}</value>
       <value type="variable" name="DATA_BASE.sex">{}</value>
       <value type="variable" name="DATA_BASE.status">{}</value>
@@ -157,7 +157,7 @@
       <value type="constant" name="decode_SEX">{(0|->man),(1|->woman)}</value>
       <value type="constant" name="code_STATUS">{(dead|->0),(living|->1)}</value>
       <value type="constant" name="decode_STATUS">{(0|->dead),(1|->living)}</value>
-      <value type="constant" name="max_pers">2</value>
+      <value type="constant" name="max_pers">100</value>
       <value type="variable" name="DATA_BASE.person">{}</value>
       <value type="variable" name="DATA_BASE.sex">{}</value>
       <value type="variable" name="DATA_BASE.status">{}</value>
@@ -173,7 +173,7 @@
       <value type="constant" name="decode_SEX">{(0|->man),(1|->woman)}</value>
       <value type="constant" name="code_STATUS">{(dead|->0),(living|->1)}</value>
       <value type="constant" name="decode_STATUS">{(0|->dead),(1|->living)}</value>
-      <value type="constant" name="max_pers">2</value>
+      <value type="constant" name="max_pers">100</value>
       <value type="variable" name="DATA_BASE.person">{}</value>
       <value type="variable" name="DATA_BASE.sex">{}</value>
       <value type="variable" name="DATA_BASE.status">{}</value>
@@ -191,7 +191,7 @@
       <value type="constant" name="decode_SEX">{(0|->man),(1|->woman)}</value>
       <value type="constant" name="code_STATUS">{(dead|->0),(living|->1)}</value>
       <value type="constant" name="decode_STATUS">{(0|->dead),(1|->living)}</value>
-      <value type="constant" name="max_pers">2</value>
+      <value type="constant" name="max_pers">100</value>
       <value type="variable" name="DATA_BASE.person">{}</value>
       <value type="variable" name="DATA_BASE.sex">{}</value>
       <value type="variable" name="DATA_BASE.status">{}</value>
@@ -209,7 +209,7 @@
       <value type="constant" name="decode_SEX">{(0|->man),(1|->woman)}</value>
       <value type="constant" name="code_STATUS">{(dead|->0),(living|->1)}</value>
       <value type="constant" name="decode_STATUS">{(0|->dead),(1|->living)}</value>
-      <value type="constant" name="max_pers">2</value>
+      <value type="constant" name="max_pers">100</value>
       <value type="variable" name="DATA_BASE.person">{}</value>
       <value type="variable" name="DATA_BASE.sex">{}</value>
       <value type="variable" name="DATA_BASE.status">{}</value>
@@ -225,7 +225,7 @@
       <value type="constant" name="decode_SEX">{(0|->man),(1|->woman)}</value>
       <value type="constant" name="code_STATUS">{(dead|->0),(living|->1)}</value>
       <value type="constant" name="decode_STATUS">{(0|->dead),(1|->living)}</value>
-      <value type="constant" name="max_pers">2</value>
+      <value type="constant" name="max_pers">100</value>
       <value type="variable" name="DATA_BASE.person">{}</value>
       <value type="variable" name="DATA_BASE.sex">{}</value>
       <value type="variable" name="DATA_BASE.status">{}</value>
@@ -243,7 +243,7 @@
       <value type="constant" name="decode_SEX">{(0|->man),(1|->woman)}</value>
       <value type="constant" name="code_STATUS">{(dead|->0),(living|->1)}</value>
       <value type="constant" name="decode_STATUS">{(0|->dead),(1|->living)}</value>
-      <value type="constant" name="max_pers">2</value>
+      <value type="constant" name="max_pers">100</value>
       <value type="variable" name="DATA_BASE.person">{}</value>
       <value type="variable" name="DATA_BASE.sex">{}</value>
       <value type="variable" name="DATA_BASE.status">{}</value>
@@ -259,7 +259,7 @@
       <value type="constant" name="decode_SEX">{(0|->man),(1|->woman)}</value>
       <value type="constant" name="code_STATUS">{(dead|->0),(living|->1)}</value>
       <value type="constant" name="decode_STATUS">{(0|->dead),(1|->living)}</value>
-      <value type="constant" name="max_pers">2</value>
+      <value type="constant" name="max_pers">100</value>
       <value type="variable" name="DATA_BASE.person">{}</value>
       <value type="variable" name="DATA_BASE.sex">{}</value>
       <value type="variable" name="DATA_BASE.status">{}</value>
@@ -277,7 +277,7 @@
       <value type="constant" name="decode_SEX">{(0|->man),(1|->woman)}</value>
       <value type="constant" name="code_STATUS">{(dead|->0),(living|->1)}</value>
       <value type="constant" name="decode_STATUS">{(0|->dead),(1|->living)}</value>
-      <value type="constant" name="max_pers">2</value>
+      <value type="constant" name="max_pers">100</value>
       <value type="variable" name="DATA_BASE.person">{}</value>
       <value type="variable" name="DATA_BASE.sex">{}</value>
       <value type="variable" name="DATA_BASE.status">{}</value>
@@ -298,7 +298,7 @@
       <value type="constant" name="decode_SEX">{(0|->man),(1|->woman)}</value>
       <value type="constant" name="code_STATUS">{(dead|->0),(living|->1)}</value>
       <value type="constant" name="decode_STATUS">{(0|->dead),(1|->living)}</value>
-      <value type="constant" name="max_pers">2</value>
+      <value type="constant" name="max_pers">100</value>
       <value type="variable" name="DATA_BASE.person">{}</value>
       <value type="variable" name="DATA_BASE.sex">{}</value>
       <value type="variable" name="DATA_BASE.status">{}</value>
@@ -314,7 +314,7 @@
       <value type="constant" name="decode_SEX">{(0|->man),(1|->woman)}</value>
       <value type="constant" name="code_STATUS">{(dead|->0),(living|->1)}</value>
       <value type="constant" name="decode_STATUS">{(0|->dead),(1|->living)}</value>
-      <value type="constant" name="max_pers">2</value>
+      <value type="constant" name="max_pers">100</value>
       <value type="variable" name="DATA_BASE.person">{}</value>
       <value type="variable" name="DATA_BASE.sex">{}</value>
       <value type="variable" name="DATA_BASE.status">{}</value>
@@ -332,7 +332,7 @@
       <value type="constant" name="decode_SEX">{(0|->man),(1|->woman)}</value>
       <value type="constant" name="code_STATUS">{(dead|->0),(living|->1)}</value>
       <value type="constant" name="decode_STATUS">{(0|->dead),(1|->living)}</value>
-      <value type="constant" name="max_pers">2</value>
+      <value type="constant" name="max_pers">100</value>
       <value type="variable" name="DATA_BASE.person">{}</value>
       <value type="variable" name="DATA_BASE.sex">{}</value>
       <value type="variable" name="DATA_BASE.status">{}</value>
@@ -348,7 +348,7 @@
       <value type="constant" name="decode_SEX">{(0|->man),(1|->woman)}</value>
       <value type="constant" name="code_STATUS">{(dead|->0),(living|->1)}</value>
       <value type="constant" name="decode_STATUS">{(0|->dead),(1|->living)}</value>
-      <value type="constant" name="max_pers">2</value>
+      <value type="constant" name="max_pers">100</value>
       <value type="variable" name="DATA_BASE.person">{}</value>
       <value type="variable" name="DATA_BASE.sex">{}</value>
       <value type="variable" name="DATA_BASE.status">{}</value>
@@ -366,7 +366,7 @@
       <value type="constant" name="decode_SEX">{(0|->man),(1|->woman)}</value>
       <value type="constant" name="code_STATUS">{(dead|->0),(living|->1)}</value>
       <value type="constant" name="decode_STATUS">{(0|->dead),(1|->living)}</value>
-      <value type="constant" name="max_pers">2</value>
+      <value type="constant" name="max_pers">100</value>
       <value type="variable" name="DATA_BASE.person">{}</value>
       <value type="variable" name="DATA_BASE.sex">{}</value>
       <value type="variable" name="DATA_BASE.status">{}</value>
@@ -391,7 +391,7 @@
       <value type="constant" name="decode_SEX">{(0|->man),(1|->woman)}</value>
       <value type="constant" name="code_STATUS">{(dead|->0),(living|->1)}</value>
       <value type="constant" name="decode_STATUS">{(0|->dead),(1|->living)}</value>
-      <value type="constant" name="max_pers">2</value>
+      <value type="constant" name="max_pers">100</value>
       <value type="variable" name="DATA_BASE.person">{}</value>
       <value type="variable" name="DATA_BASE.sex">{}</value>
       <value type="variable" name="DATA_BASE.status">{}</value>
@@ -415,7 +415,7 @@
       <value type="constant" name="decode_SEX">{(0|->man),(1|->woman)}</value>
       <value type="constant" name="code_STATUS">{(dead|->0),(living|->1)}</value>
       <value type="constant" name="decode_STATUS">{(0|->dead),(1|->living)}</value>
-      <value type="constant" name="max_pers">2</value>
+      <value type="constant" name="max_pers">100</value>
       <value type="variable" name="DATA_BASE.person">{}</value>
       <value type="variable" name="DATA_BASE.sex">{}</value>
       <value type="variable" name="DATA_BASE.status">{}</value>
@@ -439,7 +439,7 @@
       <value type="constant" name="decode_SEX">{(0|->man),(1|->woman)}</value>
       <value type="constant" name="code_STATUS">{(dead|->0),(living|->1)}</value>
       <value type="constant" name="decode_STATUS">{(0|->dead),(1|->living)}</value>
-      <value type="constant" name="max_pers">2</value>
+      <value type="constant" name="max_pers">100</value>
       <value type="variable" name="DATA_BASE.person">{}</value>
       <value type="variable" name="DATA_BASE.sex">{}</value>
       <value type="variable" name="DATA_BASE.status">{}</value>
@@ -463,7 +463,7 @@
       <value type="constant" name="decode_SEX">{(0|->man),(1|->woman)}</value>
       <value type="constant" name="code_STATUS">{(dead|->0),(living|->1)}</value>
       <value type="constant" name="decode_STATUS">{(0|->dead),(1|->living)}</value>
-      <value type="constant" name="max_pers">2</value>
+      <value type="constant" name="max_pers">100</value>
       <value type="variable" name="DATA_BASE.person">{}</value>
       <value type="variable" name="DATA_BASE.sex">{}</value>
       <value type="variable" name="DATA_BASE.status">{}</value>
@@ -487,7 +487,7 @@
       <value type="constant" name="decode_SEX">{(0|->man),(1|->woman)}</value>
       <value type="constant" name="code_STATUS">{(dead|->0),(living|->1)}</value>
       <value type="constant" name="decode_STATUS">{(0|->dead),(1|->living)}</value>
-      <value type="constant" name="max_pers">2</value>
+      <value type="constant" name="max_pers">100</value>
       <value type="variable" name="DATA_BASE.person">{}</value>
       <value type="variable" name="DATA_BASE.sex">{}</value>
       <value type="variable" name="DATA_BASE.status">{}</value>
@@ -511,7 +511,7 @@
       <value type="constant" name="decode_SEX">{(0|->man),(1|->woman)}</value>
       <value type="constant" name="code_STATUS">{(dead|->0),(living|->1)}</value>
       <value type="constant" name="decode_STATUS">{(0|->dead),(1|->living)}</value>
-      <value type="constant" name="max_pers">2</value>
+      <value type="constant" name="max_pers">100</value>
       <value type="variable" name="DATA_BASE.person">{}</value>
       <value type="variable" name="DATA_BASE.sex">{}</value>
       <value type="variable" name="DATA_BASE.status">{}</value>
@@ -535,7 +535,7 @@
       <value type="constant" name="decode_SEX">{(0|->man),(1|->woman)}</value>
       <value type="constant" name="code_STATUS">{(dead|->0),(living|->1)}</value>
       <value type="constant" name="decode_STATUS">{(0|->dead),(1|->living)}</value>
-      <value type="constant" name="max_pers">2</value>
+      <value type="constant" name="max_pers">100</value>
       <value type="variable" name="DATA_BASE.person">{}</value>
       <value type="variable" name="DATA_BASE.sex">{}</value>
       <value type="variable" name="DATA_BASE.status">{}</value>
@@ -568,7 +568,48 @@
       <value type="constant" name="decode_SEX">{(0|->man),(1|->woman)}</value>
       <value type="constant" name="code_STATUS">{(dead|->0),(living|->1)}</value>
       <value type="constant" name="decode_STATUS">{(0|->dead),(1|->living)}</value>
-      <value type="constant" name="max_pers">2</value>
+      <value type="constant" name="max_pers">100</value>
+      <value type="variable" name="DATA_BASE.person">{}</value>
+      <value type="variable" name="DATA_BASE.sex">{}</value>
+      <value type="variable" name="DATA_BASE.status">{}</value>
+      <value type="variable" name="DATA_BASE.mother">{}</value>
+      <value type="variable" name="DATA_BASE.husband">{}</value>
+      <value type="variable" name="DATA_BASE.wife">{}</value>
+    </initialisation>
+    <step name="DATA_BASE.first_human">
+      <value name="ss">man</value>
+      <modified name="DATA_BASE.person">{PERSON2}</modified>
+      <modified name="DATA_BASE.sex">{(PERSON2|->man)}</modified>
+      <modified name="DATA_BASE.status">{(PERSON2|->living)}</modified>
+    </step>
+    <step name="DATA_BASE.first_human">
+      <value name="ss">woman</value>
+      <modified name="DATA_BASE.person">{PERSON1,PERSON2}</modified>
+      <modified name="DATA_BASE.sex">{(PERSON1|->woman),(PERSON2|->man)}</modified>
+      <modified name="DATA_BASE.status">{(PERSON1|->living),(PERSON2|->living)}</modified>
+    </step>
+    <step name="DATA_BASE.marriage">
+      <value name="bride">PERSON1</value>
+      <value name="groom">PERSON2</value>
+      <modified name="DATA_BASE.husband">{(PERSON1|->PERSON2)}</modified>
+      <modified name="DATA_BASE.wife">{(PERSON2|->PERSON1)}</modified>
+    </step>
+    <step name="DATA_BASE.new_born">
+      <value name="ss">man</value>
+      <value name="mm">PERSON1</value>
+      <modified name="DATA_BASE.person">{PERSON1,PERSON2,PERSON3}</modified>
+      <modified name="DATA_BASE.sex">{(PERSON1|->woman),(PERSON2|->man),(PERSON3|->man)}</modified>
+      <modified name="DATA_BASE.status">{(PERSON1|->living),(PERSON2|->living),(PERSON3|->living)}</modified>
+      <modified name="DATA_BASE.mother">{(PERSON3|->PERSON1)}</modified>
+    </step>
+  </test_case>
+  <test_case>
+    <initialisation>
+      <value type="constant" name="code_SEX">{(man|->0),(woman|->1)}</value>
+      <value type="constant" name="decode_SEX">{(0|->man),(1|->woman)}</value>
+      <value type="constant" name="code_STATUS">{(dead|->0),(living|->1)}</value>
+      <value type="constant" name="decode_STATUS">{(0|->dead),(1|->living)}</value>
+      <value type="constant" name="max_pers">100</value>
       <value type="variable" name="DATA_BASE.person">{}</value>
       <value type="variable" name="DATA_BASE.sex">{}</value>
       <value type="variable" name="DATA_BASE.status">{}</value>
@@ -596,6 +637,50 @@
     </step>
     <step name="DATA_BASE.val_spouse">
       <value name="pp">PERSON1</value>
+    </step>
+  </test_case>
+  <test_case>
+    <initialisation>
+      <value type="constant" name="code_SEX">{(man|->0),(woman|->1)}</value>
+      <value type="constant" name="decode_SEX">{(0|->man),(1|->woman)}</value>
+      <value type="constant" name="code_STATUS">{(dead|->0),(living|->1)}</value>
+      <value type="constant" name="decode_STATUS">{(0|->dead),(1|->living)}</value>
+      <value type="constant" name="max_pers">100</value>
+      <value type="variable" name="DATA_BASE.person">{}</value>
+      <value type="variable" name="DATA_BASE.sex">{}</value>
+      <value type="variable" name="DATA_BASE.status">{}</value>
+      <value type="variable" name="DATA_BASE.mother">{}</value>
+      <value type="variable" name="DATA_BASE.husband">{}</value>
+      <value type="variable" name="DATA_BASE.wife">{}</value>
+    </initialisation>
+    <step name="DATA_BASE.first_human">
+      <value name="ss">man</value>
+      <modified name="DATA_BASE.person">{PERSON2}</modified>
+      <modified name="DATA_BASE.sex">{(PERSON2|->man)}</modified>
+      <modified name="DATA_BASE.status">{(PERSON2|->living)}</modified>
+    </step>
+    <step name="DATA_BASE.first_human">
+      <value name="ss">woman</value>
+      <modified name="DATA_BASE.person">{PERSON1,PERSON2}</modified>
+      <modified name="DATA_BASE.sex">{(PERSON1|->woman),(PERSON2|->man)}</modified>
+      <modified name="DATA_BASE.status">{(PERSON1|->living),(PERSON2|->living)}</modified>
+    </step>
+    <step name="DATA_BASE.marriage">
+      <value name="bride">PERSON1</value>
+      <value name="groom">PERSON2</value>
+      <modified name="DATA_BASE.husband">{(PERSON1|->PERSON2)}</modified>
+      <modified name="DATA_BASE.wife">{(PERSON2|->PERSON1)}</modified>
+    </step>
+    <step name="DATA_BASE.new_born">
+      <value name="ss">man</value>
+      <value name="mm">PERSON1</value>
+      <modified name="DATA_BASE.person">{PERSON1,PERSON2,PERSON3}</modified>
+      <modified name="DATA_BASE.sex">{(PERSON1|->woman),(PERSON2|->man),(PERSON3|->man)}</modified>
+      <modified name="DATA_BASE.status">{(PERSON1|->living),(PERSON2|->living),(PERSON3|->living)}</modified>
+      <modified name="DATA_BASE.mother">{(PERSON3|->PERSON1)}</modified>
+    </step>
+    <step name="DATA_BASE.val_mother">
+      <value name="pp">PERSON3</value>
     </step>
   </test_case>
 </extended_test_suite>
