@@ -5,6 +5,7 @@
 #include <stdbool.h>
 /*declaration needed for printf and scanf functions*/
 #include <stdio.h> 
+#include <limits.h>
 #ifdef __cplusplus
 extern "C" {
 #endif /* __cplusplus */
