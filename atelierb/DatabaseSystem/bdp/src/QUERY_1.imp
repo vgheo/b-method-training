@@ -1,7 +1,10 @@
 ﻿/* QUERY_1
- * Author: T0164919
- * Creation date: 7/30/2015
- */
+* Author: T0164919
+* Creation date: 7/30/2015
+
+Queries to the user.
+
+*/
 
 IMPLEMENTATION QUERY_1
 REFINES QUERY
@@ -12,7 +15,7 @@ SEES
 OPERATIONS
     pp , bb <-- get_new_dead_person =
     BEGIN
-        STRING_WRITE ( "Mother Id:" ) ;
+        STRING_WRITE ( "Person Id:" ) ; /*Modification from original model,improper message :"Mother Id"*/
         pp <-- PERSON_read ;
         bb <-- is_present ( pp ) ;
         IF bb = FALSE THEN
@@ -25,7 +28,7 @@ OPERATIONS
 
             END
         END
-     END ;
+    END ;
 
     ss , bb <-- get_sex_of_new =
     BEGIN
@@ -40,34 +43,34 @@ OPERATIONS
 
     ss , ww , bb <-- get_sex_and_mother =
     BEGIN
-       STRING_WRITE ( "Sex: " ) ;
-       ss <-- SEX_READ ;
-       STRING_WRITE ( "Person Id: " ) ; /*Mdofication from original model,improper message :"Mother Id"*/
-       ww <-- PERSON_read ;
-       bb <-- is_present ( ww ) ;
-       IF bb = FALSE THEN
-           STRING_WRITE ( "Person does not exist\n" )
+        STRING_WRITE ( "Sex: " ) ;
+        ss <-- SEX_READ ;
+        STRING_WRITE ( "Mother Id: " ) ;
+        ww <-- PERSON_read ;
+        bb <-- is_present ( ww ) ;
+        IF bb = FALSE THEN
+            STRING_WRITE ( "Person does not exist\n" )
 
-       ELSE
-           bb <-- is_woman ( ww ) ;
-           IF bb = FALSE THEN
-               STRING_WRITE ( "Person must be a woman\n" )
+        ELSE
+            bb <-- is_woman ( ww ) ;
+            IF bb = FALSE THEN
+                STRING_WRITE ( "Person must be a woman\n" )
 
-           ELSE
-               bb <-- is_married ( ww ) ;
-               IF bb = FALSE THEN
-                   STRING_WRITE ( "Person must be married\n" )
+            ELSE
+                bb <-- is_married ( ww ) ;
+                IF bb = FALSE THEN
+                    STRING_WRITE ( "Person must be married\n" )
 
-               ELSE
-                   bb <-- not_saturated ;
-                   IF bb = FALSE THEN
-                       STRING_WRITE ( "System full\n" )
+                ELSE
+                    bb <-- not_saturated ;
+                    IF bb = FALSE THEN
+                        STRING_WRITE ( "System full\n" )
 
-                   END
-               END
-           END
-       END
-   END ;
+                    END
+                END
+            END
+        END
+    END ;
 
     mm , ww , bb <-- get_new_couple =
     VAR pm , pw , bm , bms , bw , bws IN

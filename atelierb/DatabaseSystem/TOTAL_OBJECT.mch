@@ -16,6 +16,9 @@ INVARIANT
     total_object : 0 .. max_obj &
     total_field : FIELD --> ( OBJECT --> VALUE )
     
+    /*moved Definitions from PARTIAL_OBJECT (where these sets are effectively valued and passed as paramaters) because  code generator does not translates SET formal paramteres of a machine.*/
+    
+    /*Sets' definitions modified so that they start from 0 beacause of translator requirement:"Lower bound of array must be 0"*/
 DEFINITIONS
     OBJECT == 1 .. total_object;
     FIELD == (0..4);

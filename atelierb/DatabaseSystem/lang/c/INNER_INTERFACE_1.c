@@ -27,7 +27,6 @@ void INNER_INTERFACE__death_operation(void)
     DATA_BASE__PERSON pp;
     bool bb;
     
-    //printf("[QUERY__get_new_dead_person]:\n");
     QUERY__get_new_dead_person(&pp, &bb);
     if(bb == true)
     {
@@ -40,7 +39,7 @@ void INNER_INTERFACE__marriage_operation(void)
     DATA_BASE__PERSON ww;
     DATA_BASE__PERSON mm;
     bool bb;
-    //printf("[QUERY__get_new_couple]:\n");
+    
     QUERY__get_new_couple(&mm, &ww, &bb);
     if(bb == true)
     {
@@ -53,10 +52,10 @@ void INNER_INTERFACE__first_operation(void)
     BASIC_SEX__SEX ss;
     bool bb;
     DATA_BASE__PERSON pp;
-    //printf("[QUERY__get_sex_of_new]:\n");
+    
     QUERY__get_sex_of_new(&ss, &bb);
     if(bb == true)
-    {   //printf("[DATA_BASE__first_human]:\n");
+    {
         DATA_BASE__first_human(ss, &pp);
     }
 }

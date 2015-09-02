@@ -24,7 +24,7 @@ typedef enum
 
 
 /* Array and record constants */
-extern const BASIC_STATUS__STATUS BASIC_STATUS__code_STATUS[2];
+
 extern const BASIC_STATUS__STATUS BASIC_STATUS__decode_STATUS[2];
 extern void BASIC_STATUS__INITIALISATION(void);
 

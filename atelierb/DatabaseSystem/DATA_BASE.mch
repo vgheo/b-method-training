@@ -1,7 +1,7 @@
 /* DATA_BASE
- * Author: T0164919
- * Creation date: 7/30/2015
- */
+* Author: T0164919
+* Creation date: 7/30/2015
+*/
 MACHINE
     DATA_BASE
 SETS
@@ -47,7 +47,7 @@ OPERATIONS
     THEN
         status ( pp ) := dead
     END ;
-
+    
     marriage ( bride , groom ) =
     PRE
         bride : PERSON & /* concrete typing*/
@@ -56,12 +56,12 @@ OPERATIONS
         groom : PERSON & /* concrete typing*/
         groom : person & /* concrete typing*/
         groom : SINGLE /\ MAN
-
+        
     THEN
         husband ( bride ) := groom ||
         wife ( groom ) := bride
     END ;
-
+    
     baby <-- first_human ( ss ) =
     PRE
         ANGEL /= {} &
@@ -103,7 +103,7 @@ OPERATIONS
     THEN
         report := bool ( pp : person )
     END ;
-
+    
     report <-- is_living ( pp ) =
     PRE
         pp : PERSON & /*Invalid ident type abstrat variable for identifier person(concrete data expected) */
@@ -118,7 +118,7 @@ OPERATIONS
     THEN
         report := bool ( pp : WOMAN )
     END ;
-
+    
     report <-- is_married ( pp ) =
     PRE
         pp : PERSON & /*Invalid ident type abstrat variable for identifier person(concrete data expected) */
@@ -126,7 +126,7 @@ OPERATIONS
     THEN
         report := bool ( pp : MARRIED )
     END ;
-
+    
     report <-- has_mother ( pp ) =
     PRE
         pp : PERSON & /*Invalid ident type abstrat variable for identifier person(concrete data expected) */
@@ -134,7 +134,7 @@ OPERATIONS
     THEN
         report := bool ( pp : dom ( mother ) )
     END ;
-
+    
     vv <-- val_status ( pp ) =
     PRE
         pp : PERSON & /*Invalid ident type abstrat variable for identifier person(concrete data expected) */
@@ -142,8 +142,8 @@ OPERATIONS
     THEN
         vv := status ( pp )
     END ;
-
-
+    
+    
     vv <-- val_sex ( pp ) =
     PRE
         pp : PERSON & /*Invalid ident type abstrat variable for identifier person(concrete data expected) */
@@ -151,7 +151,7 @@ OPERATIONS
     THEN
         vv := sex ( pp )
     END ;
-
+    
     vv <-- val_spouse ( pp ) =
     PRE
         pp : PERSON & /*Invalid ident type abstrat variable for identifier person(concrete data expected) */
@@ -161,7 +161,7 @@ OPERATIONS
     THEN
         vv := ( husband \/ wife ) ( pp )
     END ;
-
+    
     vv <-- val_mother ( pp ) =
     PRE
         pp : PERSON &
@@ -171,12 +171,12 @@ OPERATIONS
     THEN
         vv := ( mother ) ( pp )
     END ;
-
+    
     pp <-- PERSON_read =
     BEGIN
         pp :: PERSON
     END ;
-
+    
     PERSON_write ( pp ) =
     PRE
         pp : PERSON

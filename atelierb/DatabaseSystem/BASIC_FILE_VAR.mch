@@ -17,6 +17,9 @@ INVARIANT
     file_vrb : NAT -->(FIELD-->VALUE)&
     file_vrb : seq ( FIELD --> VALUE ) &
     size ( file_vrb ) < max_rec
+/*moved Definitions from PARTIAL_OBJECT (where these sets are effectively valued and passed as paramaters) because  code generator does not translates SET formal paramteres of a machine.*/
+
+/*Sets' definitions modified so that they start from 0 beacause of translator requirement:"Lower bound of array must be 0"*/
 DEFINITIONS
     FIELD == (0..4);
     VALUE == (0..10000)

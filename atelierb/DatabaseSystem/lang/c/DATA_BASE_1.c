@@ -31,7 +31,7 @@ void DATA_BASE__death(DATA_BASE__PERSON pp)
 {
     int32_t tt;
     
-    tt = BASIC_STATUS__dead;
+    tt = BASIC_STATUS__code_STATUS[BASIC_STATUS__dead];
     PARTIAL_OBJECT__mod_field(2, pp, tt);
 }
 
@@ -42,9 +42,8 @@ void DATA_BASE__marriage(DATA_BASE__PERSON bride, DATA_BASE__PERSON groom)
 }
 
 void DATA_BASE__first_human(BASIC_SEX__SEX ss, DATA_BASE__PERSON *baby)
-{	
-	PARTIAL_OBJECT__create_partial_object(baby);
-	printf("Person id :%d\n",*baby);
+{
+    PARTIAL_OBJECT__create_partial_object(baby);
     PARTIAL_OBJECT__mod_field(1, *baby, BASIC_SEX__code_SEX[ss]);
     PARTIAL_OBJECT__mod_field(2, *baby, BASIC_STATUS__code_STATUS[BASIC_STATUS__living]);
 }
