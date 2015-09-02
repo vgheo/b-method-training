@@ -82,7 +82,7 @@ http://stups.hhu.de/ProB/w/Using_the_Command-Line_Version_of_ProB
 
 ### Result of research:
 
-##### 1.Set cardinal of different SET:
+#### 1.Set cardinal of different SET:
 - using GUI and model files
 ```
 DEFINITIONS
@@ -99,7 +99,7 @@ ex.:
 	> probcli  test.mch -card PERSON 100 
 	
 
-##### 2.Set preferences
+#### 2.Set preferences
 - using GUI and model files
 ```
 DEFINITIONS
@@ -117,6 +117,31 @@ ex.:
 
 ##### Link for SET_PREF and scope_SET in UI:
 http://stups.hhu.de/ProB/w/Tutorial_Complete_Model_Checking#Deferred_Sets
+
+#### 3.MC/DC Coverage
+
+The UI of the MC/DC Analysis is still experimental.
+
+Currently MC/DC coverage is used in two ways:
+
+- for the coverage for the invariants, where the invariant is expected to be true (i.e., the analysis does not expect to find states where the invariant is false)
+- for the coverage for the event guards. Here it is expected that every event can be enabled or disabled.
+
+##### Link:
+http://stups.hhu.de/ProB/w/State_Space_Coverage_Analyses
+
+
+#### 4.MC local test case generation
+
+The purpose of the local test-case generation algorithm is to translate high-level testcases to a refinement model.
+
+The idea is to achieve full event coverage for a high-level global abstract model (which may have an event such as sendInvoice) and then translate these test-cases into "local" test cases for a refined model with different entities.
+E.g., a high-level event sendInvoice may have to be translated into startSendInvoice(Id,from,to), ReceiveInvoice(Id,from,to), SendAck ... .  
+Those low-level, "local" events can be interleaved with realizations of other events.
+
+
+##### Link:
+http://stups.hhu.de/mediawiki/images/3/35/Pub-WiKoRoLeBePlSc09_252.pdf
 
 
 ##### ProB Users:
