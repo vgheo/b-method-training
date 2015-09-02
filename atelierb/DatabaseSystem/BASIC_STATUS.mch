@@ -1,7 +1,7 @@
 /* BASIC_STATUS
- * Author: T0164919
- * Creation date: 7/30/2015
- */
+* Author: T0164919
+* Creation date: 7/30/2015
+*/
 MACHINE
     BASIC_STATUS
 SETS
@@ -23,5 +23,5 @@ OPERATIONS
     THEN
         skip
     END
-
+    
 END

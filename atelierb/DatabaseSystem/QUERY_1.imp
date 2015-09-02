@@ -1,17 +1,17 @@
 /* QUERY_1
- * Author: T0164919
- * Creation date: 7/30/2015
- 
-    Queries to the user.
-    
- */
+* Author: T0164919
+* Creation date: 7/30/2015
+
+Queries to the user.
+
+*/
 
 IMPLEMENTATION QUERY_1
 REFINES QUERY
-
+    
 SEES
     DATA_BASE,BASIC_IO,BASIC_SEX,BASIC_STATUS
-
+    
 OPERATIONS
     pp,bb<--get_new_dead_person =
     BEGIN
@@ -20,16 +20,16 @@ OPERATIONS
         bb<--is_present(pp);
         IF bb=FALSE THEN
             STRING_WRITE("Person does not exist\n")
-    
+            
         ELSE
             bb<--is_living(pp);
             IF bb= FALSE THEN
                 STRING_WRITE("Person must be alive\n")
-
+                
             END
         END
-     END;
-
+    END;
+    
     ss,bb<--get_sex_of_new =
     BEGIN
         STRING_WRITE("Sex: ");
@@ -43,34 +43,34 @@ OPERATIONS
     
     ss,ww,bb<--get_sex_and_mother =
     BEGIN
-       STRING_WRITE("Sex: ");
-       ss<--SEX_READ;
-       STRING_WRITE("Mother Id: ");
-       ww<--PERSON_read;
-       bb<--is_present(ww);
-       IF bb=FALSE THEN
-           STRING_WRITE("Person does not exist\n")
-           
-       ELSE
-           bb<--is_woman(ww);
-           IF bb =FALSE THEN
-               STRING_WRITE("Person must be a woman\n")
-
-           ELSE
-               bb<--is_married(ww);
-               IF bb=FALSE THEN
-                   STRING_WRITE("Person must be married\n")
-
-               ELSE
-                   bb<--not_saturated;
-                   IF bb=FALSE THEN
-                       STRING_WRITE("System full\n")
-
-                   END
-               END
-           END
-       END
-   END;
+        STRING_WRITE("Sex: ");
+        ss<--SEX_READ;
+        STRING_WRITE("Mother Id: ");
+        ww<--PERSON_read;
+        bb<--is_present(ww);
+        IF bb=FALSE THEN
+            STRING_WRITE("Person does not exist\n")
+            
+        ELSE
+            bb<--is_woman(ww);
+            IF bb =FALSE THEN
+                STRING_WRITE("Person must be a woman\n")
+                
+            ELSE
+                bb<--is_married(ww);
+                IF bb=FALSE THEN
+                    STRING_WRITE("Person must be married\n")
+                    
+                ELSE
+                    bb<--not_saturated;
+                    IF bb=FALSE THEN
+                        STRING_WRITE("System full\n")
+                        
+                    END
+                END
+            END
+        END
+    END;
     
     mm,ww,bb<--get_new_couple=
     VAR pm,pw,bm,bms,bw,bws IN
@@ -98,7 +98,7 @@ OPERATIONS
             bws<--is_married(ww);
             IF bm = TRUE THEN
                 bb:=FALSE;
-                 
+                
                 STRING_WRITE("First person must be a man\n")
             END;
             IF bms = TRUE THEN
@@ -118,7 +118,7 @@ OPERATIONS
             END
         END
     END;
-
+    
     get_and_print_person=
     VAR pp,bb,vv,uu,ww,tt IN
         STRING_WRITE("Person Id: ");
@@ -126,7 +126,7 @@ OPERATIONS
         bb<--is_present(pp);
         IF bb=FALSE THEN
             STRING_WRITE("Person does not exist \n")
-    
+            
         ELSE
             STRING_WRITE("\n Person: ");
             PERSON_write(pp);
@@ -150,5 +150,5 @@ OPERATIONS
             END
         END
     END
-             
+    
 END
