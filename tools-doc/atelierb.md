@@ -16,3 +16,24 @@ on all hosts where AtelierB is run to access the workspace and projects working 
 
 
 See details [here](atelierb-setup-tests\atelierb-setup.md#Variant B)
+
+
+Known Issues
+============
+
+## ISS1. cannot use record with sequence field
+
+```
+MACHINE ISS1_REC
+CONSTANTS
+    a
+PROPERTIES
+    a = rec(data:[FALSE], valid:FALSE) // CAUSES ATB UI NOT to display Outline 
+VARIABLES
+   x
+INVARIANT
+   x : struct(data:seq1(BOOL), valid:BOOL)    
+INITIALIZATION
+   x := rec(data:[FALSE], valid:FALSE) } // ATB - INTERNAL ERROR
+END 
+```
