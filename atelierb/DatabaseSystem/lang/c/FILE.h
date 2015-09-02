@@ -3,11 +3,6 @@
 
 #include <stdint.h>
 #include <stdbool.h>
-/* Clause IMPORTS */
-#include "FILE_BUFFER.h"
-#define FILE__create_record FILE_BUFFER__create_record
-#define FILE__size_file FILE_BUFFER__size_file
-
 #ifdef __cplusplus
 extern "C" {
 #endif /* __cplusplus */
@@ -27,6 +22,8 @@ extern void FILE__INITIALISATION(void);
 
 extern void FILE__val_file(int32_t oo, int32_t ii, int32_t *vv);
 extern void FILE__mod_file(int32_t oo, int32_t ii, int32_t vv);
+extern void FILE__create_record(int32_t vv, int32_t *oo);
+extern void FILE__size_file(int32_t *vv);
 
 #ifdef __cplusplus
 }
