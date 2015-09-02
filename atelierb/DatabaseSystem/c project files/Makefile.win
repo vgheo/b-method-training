@@ -1,0 +1,67 @@
+# Project: DB_SYS
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = DATA_BASE_1.o FILE_1.o FILE_ACCESS_2.o FILE_BUFFER_1.o INNER_INTERFACE_1.o MAIN_INTERFACE_1.o PARTIAL_OBJECT_1.o QUERY_1.o TOTAL_OBJECT_1.o BASIC_COMMAND.o BASIC_FILE_VAR.o BASIC_IO.o BASIC_SEX.o BASIC_STATUS.o
+LINKOBJ  = DATA_BASE_1.o FILE_1.o FILE_ACCESS_2.o FILE_BUFFER_1.o INNER_INTERFACE_1.o MAIN_INTERFACE_1.o PARTIAL_OBJECT_1.o QUERY_1.o TOTAL_OBJECT_1.o BASIC_COMMAND.o BASIC_FILE_VAR.o BASIC_IO.o BASIC_SEX.o BASIC_STATUS.o
+LIBS     = -L"D:/Users/T0164919/Desktop/documente/DevC/Dev-Cpp/MinGW64/lib" -L"D:/Users/T0164919/Desktop/documente/DevC/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc
+INCS     = -I"D:/Users/T0164919/Desktop/documente/DevC/Dev-Cpp/MinGW64/include" -I"D:/Users/T0164919/Desktop/documente/DevC/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"D:/Users/T0164919/Desktop/documente/DevC/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"D:/Users/T0164919/Desktop/documente/DevC/Dev-Cpp/MinGW64/include" -I"D:/Users/T0164919/Desktop/documente/DevC/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"D:/Users/T0164919/Desktop/documente/DevC/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"D:/Users/T0164919/Desktop/documente/DevC/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+BIN      = DB_SYS.exe
+CXXFLAGS = $(CXXINCS) 
+CFLAGS   = $(INCS) 
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CC) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+DATA_BASE_1.o: DATA_BASE_1.c
+	$(CC) -c DATA_BASE_1.c -o DATA_BASE_1.o $(CFLAGS)
+
+FILE_1.o: FILE_1.c
+	$(CC) -c FILE_1.c -o FILE_1.o $(CFLAGS)
+
+FILE_ACCESS_2.o: FILE_ACCESS_2.c
+	$(CC) -c FILE_ACCESS_2.c -o FILE_ACCESS_2.o $(CFLAGS)
+
+FILE_BUFFER_1.o: FILE_BUFFER_1.c
+	$(CC) -c FILE_BUFFER_1.c -o FILE_BUFFER_1.o $(CFLAGS)
+
+INNER_INTERFACE_1.o: INNER_INTERFACE_1.c
+	$(CC) -c INNER_INTERFACE_1.c -o INNER_INTERFACE_1.o $(CFLAGS)
+
+MAIN_INTERFACE_1.o: MAIN_INTERFACE_1.c
+	$(CC) -c MAIN_INTERFACE_1.c -o MAIN_INTERFACE_1.o $(CFLAGS)
+
+PARTIAL_OBJECT_1.o: PARTIAL_OBJECT_1.c
+	$(CC) -c PARTIAL_OBJECT_1.c -o PARTIAL_OBJECT_1.o $(CFLAGS)
+
+QUERY_1.o: QUERY_1.c
+	$(CC) -c QUERY_1.c -o QUERY_1.o $(CFLAGS)
+
+TOTAL_OBJECT_1.o: TOTAL_OBJECT_1.c
+	$(CC) -c TOTAL_OBJECT_1.c -o TOTAL_OBJECT_1.o $(CFLAGS)
+
+BASIC_COMMAND.o: BASIC_COMMAND.c
+	$(CC) -c BASIC_COMMAND.c -o BASIC_COMMAND.o $(CFLAGS)
+
+BASIC_FILE_VAR.o: BASIC_FILE_VAR.c
+	$(CC) -c BASIC_FILE_VAR.c -o BASIC_FILE_VAR.o $(CFLAGS)
+
+BASIC_IO.o: BASIC_IO.c
+	$(CC) -c BASIC_IO.c -o BASIC_IO.o $(CFLAGS)
+
+BASIC_SEX.o: BASIC_SEX.c
+	$(CC) -c BASIC_SEX.c -o BASIC_SEX.o $(CFLAGS)
+
+BASIC_STATUS.o: BASIC_STATUS.c
+	$(CC) -c BASIC_STATUS.c -o BASIC_STATUS.o $(CFLAGS)
