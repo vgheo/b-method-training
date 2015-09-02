@@ -11,8 +11,8 @@
 	 	printf("\n[COMMAND_READ]:Insert command :\n(new:0,birth:1,marriage:2,death:3,print:4,quit:5)\n");
 	 	scanf("%s",input);	
 	 	
-	 	*rr = *input - '0';
-	 	if((*rr) < 0 || (*rr)>5)
+	 	*rr = atoi(input);
+	 	if((( *rr) < 0 || (*rr)>5) && (strcmp(input,"0"))!=0)
 	 	{ 
 		  printf("[COMMAND_READ]:INVALID COMMAND!\nExpected value in [0,5] interval.\n") ;
 		  *rr = INT_MAX;
