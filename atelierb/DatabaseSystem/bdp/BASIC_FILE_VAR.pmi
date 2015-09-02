@@ -51,7 +51,7 @@ THEORY MethodList IS
   pr;
   pr;
   pr;
-  ch & pr
+  mp
 END
 &
 THEORY PassList IS
