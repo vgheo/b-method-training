@@ -1,7 +1,7 @@
 #include "BASIC_SEX.h" 
 
 const BASIC_SEX__SEX BASIC_SEX__code_SEX[2]={BASIC_SEX__man,BASIC_SEX__woman};
-	 const BASIC_SEX__SEX BASIC_SEX__decode_SEX[2]={BASIC_SEX__man,BASIC_SEX__woman};
+const BASIC_SEX__SEX BASIC_SEX__decode_SEX[2]={BASIC_SEX__man,BASIC_SEX__woman};
 
 void BASIC_SEX__INITIALISATION(void)
 {
