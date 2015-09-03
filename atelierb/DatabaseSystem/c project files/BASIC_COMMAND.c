@@ -12,7 +12,7 @@
 	 	printf("\n[COMMAND_READ]:Insert command :\n(new:0,birth:1,marriage:2,death:3,print:4,quit:5)\n");
 	 	scanf("%s",input);	
 		 	 	
-	 	*rr = atoi(input);
+	 	*rr =(BASIC_COMMAND__COMMAND)atoi(input);
 	 	 /*If command is a number it must be in[0,5] interval.*/
 	 	if( ( ( *rr) < 0 || (*rr)>5) )
 	 	{ 

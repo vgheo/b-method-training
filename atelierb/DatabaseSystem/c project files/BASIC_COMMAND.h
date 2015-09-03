@@ -5,6 +5,11 @@
 #include <stdbool.h>
 /*declaration needed for printf and scanf functions*/
 #include <stdio.h> 
+/*Declaration needed for atoi*/
+#include <stdlib.h>
+/*Declaration needed for string functions*/
+#include <string.h>
+
 #include <limits.h>
 #ifdef __cplusplus
 extern "C" {

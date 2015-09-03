@@ -9,11 +9,11 @@ void BASIC_STATUS__INITIALISATION(void)
 
 void BASIC_STATUS__STATUS_WRITE(BASIC_STATUS__STATUS ii)
 {
-	 	if(ii = BASIC_STATUS__dead)
+	 	if(ii == BASIC_STATUS__dead)
 		 //printf("[STATUS_WRITE]:DEAD\n");
 		 printf(" dead   ");
 		 else
-		 if(ii = BASIC_STATUS__living)
+		 if(ii == BASIC_STATUS__living)
 		 //printf("[STATUS_WRITE]:LIVING\n");
 		 printf("living  ");
 		 else

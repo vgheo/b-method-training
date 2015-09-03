@@ -12,7 +12,7 @@ void BASIC_SEX__SEX_READ(BASIC_SEX__SEX *rr)
 { 
  //printf("[BASIC_SEX_SEX_READ](man:%d,woman:%d)",BASIC_SEX__man,BASIC_SEX__woman);
  	printf("(man:%d,woman:%d)",BASIC_SEX__man,BASIC_SEX__woman);
- 	scanf("%d",rr);
+ 	scanf("%d",(int *)rr);
  
  	if((*rr)!=BASIC_SEX__man && (*rr)!=BASIC_SEX__woman)
  //printf("[SEX_READ]:INVALID VALUE!\nExpected value : 0 or 1.\n");

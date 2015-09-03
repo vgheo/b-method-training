@@ -29,7 +29,7 @@ void MAIN_INTERFACE__INITIALISATION(void)
 
 /* Clause OPERATIONS */
 
-void main(void)
+int main(void)
 {
     BASIC_COMMAND__COMMAND cc;
     int32_t xx;
@@ -73,7 +73,7 @@ void main(void)
                 printf("[INNER_INTERFACE__print_operation]\n");
                 //INNER_INTERFACE__print_operation();
                 {
-            	int i,j;
+            	int i;
             	for(i=1; i<=BASIC_FILE_VAR_size; i++)
             	{
 				printf("person[%d]:",i);
@@ -99,13 +99,15 @@ void main(void)
 				printf("\n");
 				}
                 break;
-            }
+            }}
             default:
 				break;
 			}
-        }
+        
         BASIC_COMMAND__COMMAND_READ(&cc);
         xx = xx-1;
     }
+	
+	return 0;
 }
 
