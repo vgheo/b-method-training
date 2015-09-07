@@ -1,29 +1,29 @@
 /* INNER_INTERFACE_1
- * Author: T0164919
- * Creation date: 7/30/2015
- */
+* Author: T0164919
+* Creation date: 7/30/2015
+*/
 
 IMPLEMENTATION INNER_INTERFACE_1
 REFINES INNER_INTERFACE
 IMPORTS
     DATA_BASE, QUERY
 DEFINITIONS
-     CHAR == 0..255
-
+    CHAR == 0..255
+    
 OPERATIONS
     death_operation=
     VAR pp,bb IN
         pp,bb <--get_new_dead_person;
         IF bb=TRUE THEN
-        death(pp)
+            death(pp)
         END
     END;
     marriage_operation=
     VAR ww,mm,bb IN
-           mm,ww,bb<--get_new_couple;
-           IF bb=TRUE THEN
-               marriage(ww,mm)
-           END
+        mm,ww,bb<--get_new_couple;
+        IF bb=TRUE THEN
+            marriage(ww,mm)
+        END
     END;
     
     first_operation=
@@ -41,9 +41,9 @@ OPERATIONS
             pp<--new_born(ss,ww)
         END
     END;
-
+    
     print_operation=
     BEGIN
-       get_and_print_person
+        get_and_print_person
     END
 END

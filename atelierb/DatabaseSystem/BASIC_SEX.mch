@@ -1,12 +1,12 @@
 /* BASIC_SEX
- * Author: T0164919
- * Creation date: 7/30/2015
- */
+* Author: T0164919
+* Creation date: 7/30/2015
+*/
 MACHINE
     BASIC_SEX
 SETS
     SEX = { man , woman }
-
+    
 CONCRETE_CONSTANTS
     code_SEX , decode_SEX
 PROPERTIES
@@ -18,7 +18,7 @@ OPERATIONS
     BEGIN
         rr :: SEX
     END ;
-
+    
     SEX_WRITE ( ii ) =
     PRE
         ii : SEX

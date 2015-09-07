@@ -266,8 +266,8 @@ END
 &
 THEORY ListValuesX IS
   Precond_Valued_Objects(Implementation(DATA_BASE_1))==(btrue);
-  Values_Subs(Implementation(DATA_BASE_1))==(PERSON,max_pers: 1..10000,10000);
-  List_Values(Implementation(DATA_BASE_1))==(PERSON = 1..10000;max_pers = 10000)
+  Values_Subs(Implementation(DATA_BASE_1))==(max_pers,PERSON: 10000,1..10000);
+  List_Values(Implementation(DATA_BASE_1))==(max_pers = 10000;PERSON = 1..10000)
 END
 &
 THEORY ListSeenInfoX IS

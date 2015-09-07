@@ -9,8 +9,9 @@ IMPORTS
 SEES
     BASIC_IO , BASIC_SEX , BASIC_STATUS
 VALUES
-    PERSON = 1 .. 10000 ;
-    max_pers = 10000
+    max_pers = 10000 ;
+    PERSON = 1 .. max_pers
+
 INVARIANT
     /*Warning:possible typo object(not present anywhere else) => rename to max_pers*/
     person = 1 .. max_pers &

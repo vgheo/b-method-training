@@ -1,2 +1,5 @@
 # ignore build temporaries
 *.o
+.exe
+.layout
+.dev

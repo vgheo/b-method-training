@@ -230,15 +230,15 @@
 </Define>
 <Define name="imlprp">
 <Exp_Comparison op="=">
-<Id value="PERSON" typref="3603043417"/>
-<Binary_Exp op=".." typref="3603043417">
-<Integer_Literal tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\DATA_BASE_1.bxml:1:4:1:1:1" typref="2701647786" value="1"/>
-<Integer_Literal tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\DATA_BASE_1.bxml:1:4:1:1:2" typref="2701647786" value="10000"/>
-</Binary_Exp>
+<Id value="max_pers" typref="2701647786"/>
+<Integer_Literal tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\DATA_BASE_1.bxml:1:4:1:1" typref="2701647786" value="10000"/>
 </Exp_Comparison>
 <Exp_Comparison op="=">
-<Id value="max_pers" typref="2701647786"/>
-<Integer_Literal tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\DATA_BASE_1.bxml:1:4:2:1" typref="2701647786" value="10000"/>
+<Id value="PERSON" typref="3603043417"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\DATA_BASE_1.bxml:1:4:2:1:1" typref="2701647786" value="1"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\DATA_BASE_1.bxml:1:4:2:1:2" typref="2701647786" value="max_pers"/>
+</Binary_Exp>
 </Exp_Comparison>
 </Define>
 <Define name="imprp"/>
@@ -324,21 +324,21 @@
 <Nary_Sub op=";">
 <Simple_Assignement_Sub>
 <Variables>
-<Id value="PERSON"/>
+<Id value="max_pers"/>
 </Variables>
 <Values>
-<Binary_Exp op=".." typref="3603043417">
-<Integer_Literal tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\DATA_BASE_1.bxml:1:4:1:1:1" typref="2701647786" value="1"/>
-<Integer_Literal tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\DATA_BASE_1.bxml:1:4:1:1:2" typref="2701647786" value="10000"/>
-</Binary_Exp>
+<Integer_Literal tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\DATA_BASE_1.bxml:1:4:1:1" typref="2701647786" value="10000"/>
 </Values>
 </Simple_Assignement_Sub>
 <Simple_Assignement_Sub>
 <Variables>
-<Id value="max_pers"/>
+<Id value="PERSON"/>
 </Variables>
 <Values>
-<Integer_Literal tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\DATA_BASE_1.bxml:1:4:2:1" typref="2701647786" value="10000"/>
+<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\DATA_BASE_1.bxml:1:4:2:1:1" typref="2701647786" value="1"/>
+<Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\DATA_BASE_1.bxml:1:4:2:1:2" typref="2701647786" value="max_pers"/>
+</Binary_Exp>
 </Values>
 </Simple_Assignement_Sub>
 </Nary_Sub>

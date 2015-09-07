@@ -1,7 +1,7 @@
 /* DATA_BASE_1
- * Author: T0164919
- * Creation date: 7/30/2015
- */
+* Author: T0164919
+* Creation date: 7/30/2015
+*/
 IMPLEMENTATION DATA_BASE_1
 REFINES DATA_BASE
 IMPORTS
@@ -9,8 +9,9 @@ IMPORTS
 SEES
     BASIC_IO,BASIC_SEX,BASIC_STATUS
 VALUES
-    PERSON = 1..10000;
-    max_pers = 10000
+    max_pers = 10000;
+    PERSON = 1..max_pers
+    
 INVARIANT
     /*Warning:possible typo object(not present anywhere else) => rename to max_pers*/
     person =1..max_pers &
@@ -52,7 +53,7 @@ OPERATIONS
         mod_field(2,baby,code_STATUS(living));
         mod_field(3,baby,mm)
     END;
-
+    
     report<--is_present(pp)=
     VAR nn IN
         nn<--nbr_object;
@@ -65,12 +66,12 @@ OPERATIONS
         tt:=code_STATUS(living);
         report:=bool(ss=tt)
         /*Workaround for "array item is not a simple term" error*/
-//        tt:=code_STATUS(living);
-//        IF ss=tt THEN
-//            report:=TRUE
-//        ELSE
-//            report:=FALSE
-//        END
+        //        tt:=code_STATUS(living);
+        //        IF ss=tt THEN
+        //            report:=TRUE
+        //        ELSE
+        //            report:=FALSE
+        //        END
     END;
     
     report<--is_woman(pp)=
@@ -84,7 +85,7 @@ OPERATIONS
     BEGIN
         report<--def_field(4,pp)
     END;
-
+    
     report<--has_mother(pp)=
     BEGIN
         report<--def_field(3,pp)    
@@ -95,7 +96,7 @@ OPERATIONS
         ss<--val_field(2,pp);
         vv:=decode_STATUS(ss)
     END;
-        
+    
     vv<--val_sex(pp)=
     VAR ss IN
         ss<--val_field(1,pp);
@@ -106,7 +107,7 @@ OPERATIONS
     BEGIN
         vv<--val_field(4,pp)
     END;
-
+    
     vv<--val_mother(pp)=
     BEGIN
         vv<--val_field(3,pp)       
@@ -114,7 +115,7 @@ OPERATIONS
     
     pp<--PERSON_read=
     BEGIN
-       pp<--INTERVAL_READ(1,max_pers)
+        pp<--INTERVAL_READ(1,max_pers)
     END;
     
     PERSON_write(pp)=

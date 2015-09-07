@@ -60,3 +60,48 @@ END
         pp::BBB
     END;
 ```
+5. Code generator does not translates SETS formal parameters of a machine
+
+ - initial  
+```  
+       MACHINE MA(SET1,SET2)
+           VARIABLES
+            var1
+       INTIALISATION
+           var1::SET1
+       INVARIANT
+           var1 : SET1
+.........
+
+       MACHINE MB
+       INCLUDES MA(VALUEofSET1, VALUEofSET2)
+/*or any other clause that implicates the instantation of MA with effective parameters*/
+
+       DEFINITIONS
+           VALUEofSET1 == something1
+           VALUEofSET2 == something2
+...
+```
+ - fix
+ 
+```  
+       MACHINE MA
+        VARIABLES
+           var1
+       INTIALISATION
+           var1::SET1
+       INVARIANT
+           var1 : SET1
+       DEFINITIONS
+           SET1 == VALUEofSET1
+           SET@ == VALUEofSET2
+.........
+
+        MACHINE MB
+I       INCLUDES MA
+/*or any other clause that implicates the instantation of MA with effective parameters*/
+
+        DEFINITIONS
+          VALUEofSET1 == something1
+          VALUEofSET2 == something2
+```

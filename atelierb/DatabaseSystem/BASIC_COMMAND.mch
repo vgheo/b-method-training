@@ -1,7 +1,7 @@
-﻿/* BASIC_COMMAND
- * Author: T0164919
- * Creation date: 7/30/2015
- */
+/* BASIC_COMMAND
+* Author: T0164919
+* Creation date: 7/30/2015
+*/
 MACHINE
     BASIC_COMMAND
 SETS
@@ -16,12 +16,12 @@ OPERATIONS
     BEGIN
         rr :: COMMAND
     END ;
-
+    
     COMMAND_WRITE ( ii ) =
     PRE
         ii : COMMAND
     THEN
         skip
     END
-
+    
 END

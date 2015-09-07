@@ -3,12 +3,11 @@
 
 #include <stdint.h>
 #include <stdbool.h>
-#include <stdio.h>
 /* Clause SEES */
 #include "BASIC_IO.h"
 #include "BASIC_SEX.h"
 #include "BASIC_STATUS.h"
-#include "BASIC_FILE_VAR.h"
+
 /* Clause IMPORTS */
 #include "PARTIAL_OBJECT.h"
 
@@ -17,7 +16,7 @@ extern "C" {
 #endif /* __cplusplus */
 
 
-#define DATA_BASE__PERSON__max 10000
+#define DATA_BASE__PERSON__max DATA_BASE__max_pers
 /* Clause SETS */
 typedef int DATA_BASE__PERSON;
 

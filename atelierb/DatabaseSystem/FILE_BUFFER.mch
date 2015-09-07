@@ -1,10 +1,10 @@
 /* FILE_BUFFER
- * Author: T0164919
- * Creation date: 7/29/2015
- */
- /*
- The buffer is a part of the file that resides in the core for further processing.Therefore all changes or acceses of the file are made through the buffer
- */
+* Author: T0164919
+* Creation date: 7/29/2015
+*/
+/*
+The buffer is a part of the file that resides in the core for further processing.Therefore all changes or acceses of the file are made through the buffer
+*/
 MACHINE
     FILE_BUFFER ( max_rec )
 CONSTRAINTS
@@ -17,6 +17,10 @@ INITIALISATION
 INVARIANT
     bfile : seq ( FIELD --> VALUE ) &
     buffer : dom ( bfile ) +-> ( FIELD --> VALUE )
+    
+    /*moved Definitions from PARTIAL_OBJECT (where these sets are effectively valued and passed as paramaters) because  code generator does not translates SET formal paramteres of a machine.*/
+    
+    /*Sets' definitions modified so that they start from 0 beacause of translator requirement:"Lower bound of array must be 0"*/
 DEFINITIONS
     FIELD == (0..4);
     VALUE == (0..10000)
@@ -30,7 +34,7 @@ OPERATIONS
         bfile := bfile <- ( FIELD * { vv } ) ||
         oo := size ( bfile ) + 1
     END ;
-
+    
     load_buffer ( oo ) =
     PRE
         oo : NAT & /*concrete typing B0*/
@@ -40,12 +44,12 @@ OPERATIONS
         bfile := bfile <+ buffer ||
         buffer := { oo |-> bfile ( oo ) }
     END ;
-
+    
     vv <-- size_file =
     BEGIN
         vv := size ( bfile )
     END ;
-
+    
     vv <-- not_in_buffer ( oo ) =
     PRE
         oo : NAT1 & /*concrete typing B0*/
@@ -53,7 +57,7 @@ OPERATIONS
     THEN
         vv := bool ( oo /: dom ( buffer ) )
     END ;
-
+    
     mod_buffer ( oo , ii , vv ) =
     PRE
         /*possible typo=>renamed bfile in buffer because model would have been false -- bfile not included in bfile so it possible to apply buufer on something out of his domaine*/
@@ -64,7 +68,7 @@ OPERATIONS
     THEN
         buffer ( oo ) ( ii ) := vv
     END ;
-
+    
     vv <-- val_buffer ( oo , ii ) =
     PRE
         oo : NAT & /*concrete typing B0*/
