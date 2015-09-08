@@ -40,8 +40,9 @@ Differences from generated files:
  - BASIC_COMMAND_INITIALISATION 
  	-  no functionality neccesary from this function
  - BASIC_COMMAND_COMMAND_READ : 
- 	- it reads an integer from the console and if it is a invalid command it will generate an error message.In this case the read value will remain stored in the 
- 	rr paramater.
+ 	- it reads an integer from the console and if it is an invalid command it will discard the input value and enter an loop until a valid command is inserted.
+ 	In order to prevent an endless loop, in case of inserting an non-integer value(in wich case the scanf will generate an endless loop) the function will discard the string 
+ 	from input through "scanf("%*s")" call.For more details see: http://stackoverflow.com/questions/15456140/using-while-scanf-0-properly.
  - BASIC_COMMAND_COMMAND_WRITE
  	- no functionality implemented  
  	
