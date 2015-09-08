@@ -99,11 +99,11 @@ int main(void)
 				printf("\n");
 				}
                 break;
-            }}
+            	}
+			}
             default:
 				break;
-			}
-        
+		}
         BASIC_COMMAND__COMMAND_READ(&cc);
         xx = xx-1;
     }
