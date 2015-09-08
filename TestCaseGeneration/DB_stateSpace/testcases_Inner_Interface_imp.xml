@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extended_test_suite>
+  <test_case>
+    <initialisation>
+      <value type="constant" name="max_pers">2</value>
+      <value type="constant" name="code_SEX">{(man|->0),(woman|->1)}</value>
+      <value type="constant" name="decode_SEX">{(0|->man),(1|->woman)}</value>
+      <value type="constant" name="code_STATUS">{(dead|->0),(living|->1)}</value>
+      <value type="constant" name="decode_STATUS">{(0|->dead),(1|->living)}</value>
+      <value type="variable" name="person">{}</value>
+      <value type="variable" name="sex">{}</value>
+      <value type="variable" name="status">{}</value>
+      <value type="variable" name="mother">{}</value>
+      <value type="variable" name="husband">{}</value>
+      <value type="variable" name="wife">{}</value>
+    </initialisation>
+    <step name="print_operation" />
+  </test_case>
+  <test_case>
+    <initialisation>
+      <value type="constant" name="max_pers">2</value>
+      <value type="constant" name="code_SEX">{(man|->0),(woman|->1)}</value>
+      <value type="constant" name="decode_SEX">{(0|->man),(1|->woman)}</value>
+      <value type="constant" name="code_STATUS">{(dead|->0),(living|->1)}</value>
+      <value type="constant" name="decode_STATUS">{(0|->dead),(1|->living)}</value>
+      <value type="variable" name="person">{}</value>
+      <value type="variable" name="sex">{}</value>
+      <value type="variable" name="status">{}</value>
+      <value type="variable" name="mother">{}</value>
+      <value type="variable" name="husband">{}</value>
+      <value type="variable" name="wife">{}</value>
+    </initialisation>
+    <step name="birth_operation" />
+  </test_case>
+  <test_case>
+    <initialisation>
+      <value type="constant" name="max_pers">2</value>
+      <value type="constant" name="code_SEX">{(man|->0),(woman|->1)}</value>
+      <value type="constant" name="decode_SEX">{(0|->man),(1|->woman)}</value>
+      <value type="constant" name="code_STATUS">{(dead|->0),(living|->1)}</value>
+      <value type="constant" name="decode_STATUS">{(0|->dead),(1|->living)}</value>
+      <value type="variable" name="person">{}</value>
+      <value type="variable" name="sex">{}</value>
+      <value type="variable" name="status">{}</value>
+      <value type="variable" name="mother">{}</value>
+      <value type="variable" name="husband">{}</value>
+      <value type="variable" name="wife">{}</value>
+    </initialisation>
+    <step name="first_operation" />
+  </test_case>
+  <test_case>
+    <initialisation>
+      <value type="constant" name="max_pers">2</value>
+      <value type="constant" name="code_SEX">{(man|->0),(woman|->1)}</value>
+      <value type="constant" name="decode_SEX">{(0|->man),(1|->woman)}</value>
+      <value type="constant" name="code_STATUS">{(dead|->0),(living|->1)}</value>
+      <value type="constant" name="decode_STATUS">{(0|->dead),(1|->living)}</value>
+      <value type="variable" name="person">{}</value>
+      <value type="variable" name="sex">{}</value>
+      <value type="variable" name="status">{}</value>
+      <value type="variable" name="mother">{}</value>
+      <value type="variable" name="husband">{}</value>
+      <value type="variable" name="wife">{}</value>
+    </initialisation>
+    <step name="marriage_operation" />
+  </test_case>
+  <test_case>
+    <initialisation>
+      <value type="constant" name="max_pers">2</value>
+      <value type="constant" name="code_SEX">{(man|->0),(woman|->1)}</value>
+      <value type="constant" name="decode_SEX">{(0|->man),(1|->woman)}</value>
+      <value type="constant" name="code_STATUS">{(dead|->0),(living|->1)}</value>
+      <value type="constant" name="decode_STATUS">{(0|->dead),(1|->living)}</value>
+      <value type="variable" name="person">{}</value>
+      <value type="variable" name="sex">{}</value>
+      <value type="variable" name="status">{}</value>
+      <value type="variable" name="mother">{}</value>
+      <value type="variable" name="husband">{}</value>
+      <value type="variable" name="wife">{}</value>
+    </initialisation>
+    <step name="death_operation" />
+  </test_case>
+  <test_case>
+    <initialisation>
+      <value type="constant" name="max_pers">2</value>
+      <value type="constant" name="code_SEX">{(man|->0),(woman|->1)}</value>
+      <value type="constant" name="decode_SEX">{(0|->man),(1|->woman)}</value>
+      <value type="constant" name="code_STATUS">{(dead|->0),(living|->1)}</value>
+      <value type="constant" name="decode_STATUS">{(0|->dead),(1|->living)}</value>
+      <value type="variable" name="person">{}</value>
+      <value type="variable" name="sex">{}</value>
+      <value type="variable" name="status">{}</value>
+      <value type="variable" name="mother">{}</value>
+      <value type="variable" name="husband">{}</value>
+      <value type="variable" name="wife">{}</value>
+    </initialisation>
+    <step name="BASIC_SEX.SEX_READ" />
+  </test_case>
+  <test_case>
+    <initialisation>
+      <value type="constant" name="max_pers">2</value>
+      <value type="constant" name="code_SEX">{(man|->0),(woman|->1)}</value>
+      <value type="constant" name="decode_SEX">{(0|->man),(1|->woman)}</value>
+      <value type="constant" name="code_STATUS">{(dead|->0),(living|->1)}</value>
+      <value type="constant" name="decode_STATUS">{(0|->dead),(1|->living)}</value>
+      <value type="variable" name="person">{}</value>
+      <value type="variable" name="sex">{}</value>
+      <value type="variable" name="status">{}</value>
+      <value type="variable" name="mother">{}</value>
+      <value type="variable" name="husband">{}</value>
+      <value type="variable" name="wife">{}</value>
+    </initialisation>
+    <step name="BASIC_SEX.SEX_WRITE">
+      <value name="ii">man</value>
+    </step>
+  </test_case>
+  <test_case>
+    <initialisation>
+      <value type="constant" name="max_pers">2</value>
+      <value type="constant" name="code_SEX">{(man|->0),(woman|->1)}</value>
+      <value type="constant" name="decode_SEX">{(0|->man),(1|->woman)}</value>
+      <value type="constant" name="code_STATUS">{(dead|->0),(living|->1)}</value>
+      <value type="constant" name="decode_STATUS">{(0|->dead),(1|->living)}</value>
+      <value type="variable" name="person">{}</value>
+      <value type="variable" name="sex">{}</value>
+      <value type="variable" name="status">{}</value>
+      <value type="variable" name="mother">{}</value>
+      <value type="variable" name="husband">{}</value>
+      <value type="variable" name="wife">{}</value>
+    </initialisation>
+    <step name="BASIC_STATUS.STATUS_READ" />
+  </test_case>
+  <test_case>
+    <initialisation>
+      <value type="constant" name="max_pers">2</value>
+      <value type="constant" name="code_SEX">{(man|->0),(woman|->1)}</value>
+      <value type="constant" name="decode_SEX">{(0|->man),(1|->woman)}</value>
+      <value type="constant" name="code_STATUS">{(dead|->0),(living|->1)}</value>
+      <value type="constant" name="decode_STATUS">{(0|->dead),(1|->living)}</value>
+      <value type="variable" name="person">{}</value>
+      <value type="variable" name="sex">{}</value>
+      <value type="variable" name="status">{}</value>
+      <value type="variable" name="mother">{}</value>
+      <value type="variable" name="husband">{}</value>
+      <value type="variable" name="wife">{}</value>
+    </initialisation>
+    <step name="BASIC_STATUS.STATUS_WRITE">
+      <value name="ii">dead</value>
+    </step>
+  </test_case>
+</extended_test_suite>

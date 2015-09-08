@@ -1,0 +1,19 @@
+spec_trans(root,'$initialise_machine',1).
+spec_trans(0,'$initialise_machine',1).
+spec_trans(1,print_operation,1).
+spec_trans(1,birth_operation,1).
+spec_trans(1,first_operation,2).
+spec_trans(1,marriage_operation,1).
+spec_trans(1,death_operation,1).
+spec_trans(1,'BASIC_SEX.SEX_READ-->man',1).
+spec_trans(1,'BASIC_SEX.SEX_WRITE(man)',1).
+spec_trans(1,'BASIC_STATUS.STATUS_READ-->dead',1).
+spec_trans(1,'BASIC_STATUS.STATUS_WRITE(dead)',1).
+spec_not_all_transitions_added(2).
+spec_not_all_transitions_added(1).
+spec_not_all_transitions_added(0).
+spec_not_all_transitions_added(root).
+spec_max_reached_for_node(_) :-
+        fail.
+spec_completely_explored :-
+        fail.
