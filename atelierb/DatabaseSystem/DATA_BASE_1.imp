@@ -11,9 +11,14 @@ SEES
 VALUES
     max_pers = 10000;
     PERSON = 1..max_pers
-    
+/*ProB paramters:DEFINITIONS clause.*/
+DEFINITIONS   
+scope_PERSON == 10000 
+
 INVARIANT
-    /*Warning:possible typo object(not present anywhere else) => rename to max_pers*/
+    /*!!! Warning !!!
+    Possible typo "object" (not present anywhere else) => rename to max_pers
+    */
     person =1..max_pers &
     partial_field(1) = (sex;code_SEX)&
     partial_field(2)=(status;code_STATUS) &
@@ -65,13 +70,6 @@ OPERATIONS
         ss<--val_field(2,pp);
         tt:=code_STATUS(living);
         report:=bool(ss=tt)
-        /*Workaround for "array item is not a simple term" error*/
-        //        tt:=code_STATUS(living);
-        //        IF ss=tt THEN
-        //            report:=TRUE
-        //        ELSE
-        //            report:=FALSE
-        //        END
     END;
     
     report<--is_woman(pp)=

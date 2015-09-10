@@ -591,7 +591,7 @@
 </Exp_Comparison>
 </Binary_Pred>
 </Goal>
-<Proof_State proofState="Unproved" methodList="?" passList="Force(0),?"/>
+<Proof_State proofState="Unproved" methodList="pr" passList="Force(0),?"/>
 </Simple_Goal>
 <Simple_Goal merge="2">
 <Tag>Precondition predicate</Tag>
@@ -644,7 +644,7 @@
 </Exp_Comparison>
 </Binary_Pred>
 </Goal>
-<Proof_State proofState="Unproved" methodList="pr" passList="Force(0),?"/>
+<Proof_State proofState="Unproved" methodList="pr" passList="Force(0),(?; 0; 1; 2)"/>
 </Simple_Goal>
 <Simple_Goal merge="4">
 <Tag>Precondition predicate</Tag>
@@ -662,7 +662,7 @@
 </Exp_Comparison>
 </Binary_Pred>
 </Goal>
-<Proof_State proofState="Unproved" methodList="pr" passList="Force(0),?"/>
+<Proof_State proofState="Unproved" methodList="?" passList="Force(0),(?; 0; 1; 2)"/>
 </Simple_Goal>
 <Simple_Goal merge="5">
 <Tag>Precondition predicate</Tag>
@@ -716,7 +716,7 @@
 </Exp_Comparison>
 </Binary_Pred>
 </Goal>
-<Proof_State proofState="Unproved" methodList="?" passList="Force(0),?"/>
+<Proof_State proofState="Unproved" methodList="?" passList="Force(0),(?; 0; 1; 2)"/>
 </Simple_Goal>
 <Simple_Goal merge="7">
 <Tag>Precondition predicate</Tag>
@@ -771,7 +771,7 @@
 </Exp_Comparison>
 </Binary_Pred>
 </Goal>
-<Proof_State proofState="Unproved" methodList="pr" passList="Force(0),?"/>
+<Proof_State proofState="Unproved" methodList="?" passList="Force(0),(?; 0; 1; 2)"/>
 </Simple_Goal>
 <Simple_Goal merge="5">
 <Tag>Precondition predicate</Tag>
@@ -1060,7 +1060,7 @@
 </Exp_Comparison>
 </Binary_Pred>
 </Goal>
-<Proof_State proofState="Unproved" methodList="pr" passList="Force(0),(?; 0; 1; 2; 3)"/>
+<Proof_State proofState="Unproved" methodList="pr" passList="Force(0),?"/>
 </Simple_Goal>
 <Simple_Goal merge="2">
 <Tag>Precondition predicate</Tag>

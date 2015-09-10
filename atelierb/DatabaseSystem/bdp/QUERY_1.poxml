@@ -1422,7 +1422,7 @@
 <Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\QUERY_1.bxml:1:4:5:1:1:2:1:4:3:1:12:2:1:1:1:1" value="STRING_WRITE"/>
 </Name>
 <Input_Parameters>
-<STRING_Literal tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\QUERY_1.bxml:1:4:5:1:1:2:1:4:3:1:12:2:1:1:2:1" typref="3239339507" value="\n Spu=ouse: "/>
+<STRING_Literal tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\QUERY_1.bxml:1:4:5:1:1:2:1:4:3:1:12:2:1:1:2:1" typref="3239339507" value="\n Spouse: "/>
 </Input_Parameters>
 <Operation name="STRING_WRITE">
 <Input_Parameters>
@@ -8247,7 +8247,7 @@
 <Id tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\QUERY_1.bxml:1:4:5:1:1:2:1:4:3:1:12:2:1:1:1:1" value="STRING_WRITE"/>
 </Name>
 <Input_Parameters>
-<STRING_Literal tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\QUERY_1.bxml:1:4:5:1:1:2:1:4:3:1:12:2:1:1:2:1" typref="3239339507" value="\n Spu=ouse: "/>
+<STRING_Literal tag="A:\b-method-training\atelierb\DatabaseSystem\bdp\QUERY_1.bxml:1:4:5:1:1:2:1:4:3:1:12:2:1:1:2:1" typref="3239339507" value="\n Spouse: "/>
 </Input_Parameters>
 <Operation name="STRING_WRITE">
 <Input_Parameters>

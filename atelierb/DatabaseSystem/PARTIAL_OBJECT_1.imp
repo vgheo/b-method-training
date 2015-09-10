@@ -23,7 +23,7 @@ DEFINITIONS
 OPERATIONS
     oo<--create_partial_object=
     BEGIN
-        oo<--create_total_object(2147483647) /*unknown value MAXINT*/
+        oo<--create_total_object(2147483647) /*[B0 Check Requirement]:Unknown value MAXINT=> replaced with value.*/
     END;
     
     

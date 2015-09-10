@@ -12,15 +12,20 @@ CONSTRAINTS
 ABSTRACT_VARIABLES
     buffer , bfile
 INITIALISATION
-    /*WARNING: typo in pag614: sfile renamed to bfile*/
+    /*[Possible typo]: pag614, sfile renamed to bfile.*/
     bfile , buffer := [] , {}
 INVARIANT
     bfile : seq ( FIELD --> VALUE ) &
     buffer : dom ( bfile ) +-> ( FIELD --> VALUE )
+   /*
+    [Translator Requirement]:
+    Moved Definitions from PARTIAL_OBJECT (where these sets are effectively valued and passed as paramaters) because  code generator does not translates SET formal paramteres of a machine.
+    */
     
-    /*moved Definitions from PARTIAL_OBJECT (where these sets are effectively valued and passed as paramaters) because  code generator does not translates SET formal paramteres of a machine.*/
-    
-    /*Sets' definitions modified so that they start from 0 beacause of translator requirement:"Lower bound of array must be 0"*/
+    /*
+    [Translator Requirement]:
+    Sets' definitions modified so that they start from 0 beacause of translator requirement:"Lower bound of array must be 0".
+    */
 DEFINITIONS
     FIELD == (0..4);
     VALUE == (0..10000)
@@ -30,14 +35,14 @@ OPERATIONS
         vv : VALUE &
         size ( bfile ) /= max_rec
     THEN
-        /*Warning: possible typo: renamed INDEX to FIELD*/
+        /*[Possible typo]: renamed INDEX to FIELD.*/
         bfile := bfile <- ( FIELD * { vv } ) ||
         oo := size ( bfile ) + 1
     END ;
     
     load_buffer ( oo ) =
     PRE
-        oo : NAT & /*concrete typing B0*/
+        oo : NAT & /*[B0Check Requirement]: Invalid ident type abstract variable for identifier (concrete data expected) */
         oo : dom ( bfile ) &
         oo /: dom ( buffer )
     THEN
@@ -52,7 +57,7 @@ OPERATIONS
     
     vv <-- not_in_buffer ( oo ) =
     PRE
-        oo : NAT1 & /*concrete typing B0*/
+        oo : NAT1 & /*[B0Check Requirement]: Invalid ident type abstract variable for identifier (concrete data expected) */
         oo : 1 .. size ( bfile )
     THEN
         vv := bool ( oo /: dom ( buffer ) )
@@ -60,8 +65,8 @@ OPERATIONS
     
     mod_buffer ( oo , ii , vv ) =
     PRE
-        /*possible typo=>renamed bfile in buffer because model would have been false -- bfile not included in bfile so it possible to apply buufer on something out of his domaine*/
-        oo : NAT & /*concrete typing B0*/
+        /*[Possible typo]: renamed bfile in buffer because model would have been false -- bfile not included in bfile so it possible to apply buufer on something out of his domaine*/
+        oo : NAT & /*[B0Check Requirement]: Invalid ident type abstract variable for identifier (concrete data expected) */
         oo : dom ( buffer ) &
         ii : FIELD &
         vv : VALUE
@@ -71,7 +76,7 @@ OPERATIONS
     
     vv <-- val_buffer ( oo , ii ) =
     PRE
-        oo : NAT & /*concrete typing B0*/
+        oo : NAT & /*[B0Check Requirement]: Invalid ident type abstract variable for identifier (concrete data expected) */
         oo : dom ( buffer ) &
         ii : FIELD
     THEN

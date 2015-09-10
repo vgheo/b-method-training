@@ -50,11 +50,11 @@ OPERATIONS
     
     marriage ( bride , groom ) =
     PRE
-        bride : PERSON & /* concrete typing*/
-        bride : person & /* concrete typing*/
+        bride : PERSON & /*[B0Check Requirement]: Invalid ident type abstrat variable for identifier person(concrete data expected) */
+        bride : person & /*[B0Check Requirement]: Invalid ident type abstrat variable for identifier person(concrete data expected) */
         bride : SINGLE /\ WOMAN &
-        groom : PERSON & /* concrete typing*/
-        groom : person & /* concrete typing*/
+        groom : PERSON & /*[B0Check Requirement]: Invalid ident type abstrat variable for identifier person(concrete data expected) */
+        groom : person & /*[B0Check Requirement]: Invalid ident type abstrat variable for identifier person(concrete data expected) */
         groom : SINGLE /\ MAN
         
     THEN
@@ -80,7 +80,7 @@ OPERATIONS
     PRE
         ANGEL /= {} &
         ss : SEX &
-        mm : PERSON & /*Invalid ident type abstrat variable for identifier person(concrete data expected) */
+        mm : PERSON & /*[B0Check Requirement]: Invalid ident type abstrat variable for identifier person(concrete data expected) */
         mm : MARRIED /\ WOMAN
     THEN
         ANY angel WHERE
@@ -106,14 +106,14 @@ OPERATIONS
     
     report <-- is_living ( pp ) =
     PRE
-        pp : PERSON & /*Invalid ident type abstrat variable for identifier person(concrete data expected) */
+        pp : PERSON & /*[B0Check Requirement]: Invalid ident type abstrat variable for identifier person(concrete data expected). */
         pp : person
     THEN
         report := bool ( pp : LIVING )
     END ;
     report <-- is_woman ( pp ) =
     PRE
-        pp : PERSON & /*Invalid ident type abstrat variable for identifier person(concrete data expected) */
+        pp : PERSON & /*[B0Check Requirement]: Invalid ident type abstrat variable for identifier person(concrete data expected). */
         pp : person
     THEN
         report := bool ( pp : WOMAN )
@@ -121,7 +121,7 @@ OPERATIONS
     
     report <-- is_married ( pp ) =
     PRE
-        pp : PERSON & /*Invalid ident type abstrat variable for identifier person(concrete data expected) */
+        pp : PERSON & /*[B0Check Requirement]: Invalid ident type abstrat variable for identifier person(concrete data expected). */
         pp : person
     THEN
         report := bool ( pp : MARRIED )
@@ -129,7 +129,7 @@ OPERATIONS
     
     report <-- has_mother ( pp ) =
     PRE
-        pp : PERSON & /*Invalid ident type abstrat variable for identifier person(concrete data expected) */
+        pp : PERSON & /*[B0Check Requirement]: Invalid ident type abstrat variable for identifier person(concrete data expected). */
         pp : person
     THEN
         report := bool ( pp : dom ( mother ) )
@@ -137,7 +137,7 @@ OPERATIONS
     
     vv <-- val_status ( pp ) =
     PRE
-        pp : PERSON & /*Invalid ident type abstrat variable for identifier person(concrete data expected) */
+        pp : PERSON & /*[B0Check Requirement]: Invalid ident type abstrat variable for identifier person(concrete data expected). */
         pp : person
     THEN
         vv := status ( pp )
@@ -146,7 +146,7 @@ OPERATIONS
     
     vv <-- val_sex ( pp ) =
     PRE
-        pp : PERSON & /*Invalid ident type abstrat variable for identifier person(concrete data expected) */
+        pp : PERSON & /*[B0Check Requirement]: Invalid ident type abstrat variable for identifier person(concrete data expected). */
         pp : person
     THEN
         vv := sex ( pp )
@@ -154,8 +154,8 @@ OPERATIONS
     
     vv <-- val_spouse ( pp ) =
     PRE
-        pp : PERSON & /*Invalid ident type abstrat variable for identifier person(concrete data expected) */
-        pp : person & /* concrete typing*/
+        pp : PERSON & /*[B0Check Requirement]: Invalid ident type abstrat variable for identifier person(concrete data expected). */
+        pp : person & /*[B0Check Requirement]: Invalid ident type abstrat variable for identifier person(concrete data expected). */
         pp : MARRIED &
         vv : PERSON
     THEN

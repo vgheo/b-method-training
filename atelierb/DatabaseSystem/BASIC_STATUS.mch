@@ -10,7 +10,7 @@ CONCRETE_CONSTANTS
     code_STATUS , decode_STATUS
 PROPERTIES
     code_STATUS :  STATUS >->> ( 0 .. 1 ) &
-    decode_STATUS : ( 0 .. 1 ) >->> STATUS
+    decode_STATUS : ( 0 .. 1 ) >->> STATUS /*[B0Check Requirement]: concrete typing.*/
     &    decode_STATUS = code_STATUS ~
 OPERATIONS
     rr <-- STATUS_READ =
