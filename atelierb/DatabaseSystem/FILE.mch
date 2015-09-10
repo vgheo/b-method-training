@@ -18,9 +18,15 @@ INVARIANT
     file : seq ( FIELD --> VALUE ) &
     size ( file ) <= max_rec
     
-    /*moved Definitions from PARTIAL_OBJECT (where these sets are effectively valued and passed as paramaters) because  code generator does not translates SET formal paramteres of a machine.*/
+    /*
+    [Translator Requirement]:
+    Moved Definitions from PARTIAL_OBJECT (where these sets are effectively valued and passed as paramaters) because  code generator does not translates SET formal paramteres of a machine.
+    */
     
-    /*Sets' definitions modified so that they start from 0 beacause of translator requirement:"Lower bound of array must be 0"*/
+    /*
+    [Translator Requirement]:
+    Sets' definitions modified so that they start from 0 beacause of translator requirement:"Lower bound of array must be 0".
+    */
 DEFINITIONS
     FIELD == (0..4);
     VALUE == (0..10000)
@@ -30,7 +36,7 @@ OPERATIONS
     */
     vv <-- val_file ( oo , ii ) =
     PRE
-        oo : NAT & /*concrete typing*/
+        oo : NAT & /*[B0Check Requirement]: Invalid ident type abstrat variable for identifier (concrete data expected) */
         oo : dom ( file ) &
         ii : FIELD
     THEN
@@ -42,7 +48,7 @@ OPERATIONS
     */
     mod_file ( oo , ii , vv ) =
     PRE
-        oo : NAT & /*concrete typing*/
+        oo : NAT & /*[B0Check Requirement]: Invalid ident type abstrat variable for identifier person(concrete data expected) */
         oo : dom ( file ) &
         ii : FIELD &
         vv : VALUE
@@ -55,7 +61,7 @@ OPERATIONS
         vv : VALUE &
         size ( file ) < max_rec
     THEN
-        file := file <- ( FIELD * { vv } ) || /* /INDEX in page 613, probably typo*/
+        file := file <- ( FIELD * { vv } ) || /*[Possible typo]:INDEX in page 613.*/
         oo := size ( file ) + 1
     END ;
     /*returns the size of file*/

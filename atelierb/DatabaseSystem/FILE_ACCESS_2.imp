@@ -17,20 +17,24 @@ INITIALISATION
     name:=0;
     buffer:=file_vrb;
     bfile:=file_vrb;
-    record:=buf_vrb/* neccessary modifications in order to pass typecheck */
-    /* buffer,bfile := {},[]; *//*Simultaneous affectation is not implementable*/
+    record:=buf_vrb/*[TypeCheck Requirement]: Necessary modifications in order to pass typecheck. */
+    /* buffer,bfile := {},[]; */ /*[B0 CheckRequirement]: Simultaneous affectation is not implementable.*/
+   
+   /*
+    [Translator Requirement]:
+    Moved Definitions from PARTIAL_OBJECT (where these sets are effectively valued and passed as paramaters) because  code generator does not translates SET formal paramteres of a machine.
+    */
     
-    /*moved Definitions from PARTIAL_OBJECT (where these sets are effectively valued and passed as paramaters) because  code generator does not translates SET formal paramteres of a machine.*/
-    
-    /*Sets' definitions modified so that they start from 0 beacause of translator requirement:"Lower bound of array must be 0"*/
-DEFINITIONS
+    /*
+    [Translator Requirement]:
+    Sets' definitions modified so that they start from 0 beacause of translator requirement:"Lower bound of array must be 0".
+    */DEFINITIONS
     FIELD == (0..4);
     VALUE == (0..10000)
 OPERATIONS    
     get_record(oo)=
     BEGIN
-        /*corection name:=1 instead of 0 because 0 /: dom(file_vrb(N)) as requested in then PRECONDITION clause of READ_FILE*/
-        name:=1;
+        name:=1; /*[Proof Obligation Requirement]: corection name:=1 instead of 0 because 0 /: dom(file_vrb(N)) as requested in then PRECONDITION clause of READ_FILE*/
         READ_FILE(name);
         updated:=FALSE
     END;
@@ -48,10 +52,8 @@ OPERATIONS
     
     mod_buffer(oo,ii,vv)=
     BEGIN
-        /*STR_BUFFER(ii,vv);
-        No reference to STR_BUFFER anywhere else but this file
-        */
-        record(ii):=vv ;
+        /*STR_BUFFER(ii,vv);*/ /* No reference to STR_BUFFER anywhere else but this file .*/
+        record(ii):=vv ; /*[Functional requirement]: Added from FILE_ACCES_1 file.*/
         updated:=TRUE
     END;
     

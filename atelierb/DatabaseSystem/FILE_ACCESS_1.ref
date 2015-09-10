@@ -7,25 +7,28 @@ REFINEMENT FILE_ACCESS_1(max_rec)
 REFINES FILE_ACCESS
     
 CONCRETE_VARIABLES
-    name,record
-    /*
-    can not have variables with the same name as in specification,because refinement variables with the same name as in the specification can not refine specification variables*/
+    name,record /*[Error]:Can not have variables with the same name as in specification,because refinement variables with the same name as in the specification can not refine specification variables*/
     
 INITIALISATION
     name := 0 ||
     record :: FIELD-->VALUE ||
     bfile,updated := [],FALSE ||
-    buffer := {} /*added because of TypeChecke error :"buffer should be initialised."*/
+    buffer := {} /*[TypeChecke error]:buffer should be initialised.*/
     
 INVARIANT
     name : NAT & /*concrete typing*/
     name : 0..size(bfile) &
     record : FIELD --> VALUE &
     buffer = {0} <<|{name|->record}
+    /*
+    [Translator Requirement]:
+    Moved Definitions from PARTIAL_OBJECT (where these sets are effectively valued and passed as paramaters) because  code generator does not translates SET formal paramteres of a machine.
+    */
     
-    /*moved Definitions from PARTIAL_OBJECT (where these sets are effectively valued and passed as paramaters) because  code generator does not translates SET formal paramteres of a machine.*/
-    
-    /*Sets' definitions modified so that they start from 0 beacause of translator requirement:"Lower bound of array must be 0"*/
+    /*
+    [Translator Requirement]:
+    Sets' definitions modified so that they start from 0 beacause of translator requirement:"Lower bound of array must be 0".
+    */
 DEFINITIONS
     FIELD == (0..4);
     VALUE == (0..10000)
@@ -43,7 +46,7 @@ OPERATIONS
     
     oo<--create_record(vv)=
     BEGIN
-        /*Renamed INDEX to FIELD ,typo*/
+        /*[Possible typo]: Renamed INDEX to FIELD.*/
         bfile:=bfile<-(FIELD * {vv}) ||
         oo:=size(bfile)+1
     END;

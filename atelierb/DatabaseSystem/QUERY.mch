@@ -6,7 +6,7 @@ MACHINE
     QUERY
 SEES
     DATA_BASE , BASIC_SEX , BASIC_STATUS
-    /*Definition clause not mentioned in SEES visibility table => manually imported definition clause*/
+    /*[Error]: Definition clause not mentioned in SEES visibility table => manually imported definition clause*/
 DEFINITIONS
     MAN == sex ~ [ { man } ] ;
     WOMAN == sex ~ [ { woman } ] ;
@@ -18,7 +18,7 @@ DEFINITIONS
 OPERATIONS
     pp , bb <-- get_new_dead_person =
     CHOICE
-        pp :: PERSON /\ LIVING || /*parameter is not implementable(typed with abstract variable person)*/
+        pp :: PERSON /\ LIVING || /*[B0Check]:parameter is not implementable(typed with abstract variable person)*/
         bb := TRUE
     OR
         pp :: PERSON ||
@@ -35,8 +35,8 @@ OPERATIONS
     
     mm , ww , bb <-- get_new_couple =
     CHOICE
-        mm :: PERSON /\ ( SINGLE /\ MAN ) || /*parameter is not implementable(typed with abstract variable person)*/
-        ww :: PERSON /\ ( SINGLE /\ WOMAN ) || /*parameter is not implementable(typed with abstract variable person)*/
+        mm :: PERSON /\ ( SINGLE /\ MAN ) || /*[B0Check]:parameter is not implementable(typed with abstract variable person)*/
+        ww :: PERSON /\ ( SINGLE /\ WOMAN ) || /*[B0Check]:parameter is not implementable(typed with abstract variable person)*/
         bb := TRUE
     OR
         mm :: PERSON ||
@@ -47,7 +47,7 @@ OPERATIONS
     ss , ww , bb <-- get_sex_and_mother =
     CHOICE
         ss :: SEX ||
-        ww :: PERSON /\ ( MARRIED /\ WOMAN ) || /*parameter is not implementable(typed with abstract variable person)*/
+        ww :: PERSON /\ ( MARRIED /\ WOMAN ) || /*[B0Check]:parameter is not implementable(typed with abstract variable person)*/
         bb := bool ( ANGEL /= {} )
     OR
         ss :: SEX ||

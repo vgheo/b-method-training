@@ -144,7 +144,7 @@ OPERATIONS
             END;
             bb<--is_married(pp);
             IF bb=TRUE THEN
-                STRING_WRITE("\n Spu=ouse: ");
+                STRING_WRITE("\n Spouse: ");
                 tt<--val_spouse(pp);
                 PERSON_write(tt)
             END

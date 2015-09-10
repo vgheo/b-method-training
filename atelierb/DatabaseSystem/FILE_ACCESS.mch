@@ -11,9 +11,9 @@ CONCRETE_VARIABLES
     bfile , buffer , updated
     
 INVARIANT
-    bfile : NAT --> ( FIELD --> VALUE ) & /*concrete typing for B0 check*/
+    bfile : NAT --> ( FIELD --> VALUE ) & /*[B0Check Requirement]: Invalid ident type abstract variable for identifier (concrete data expected) */
     bfile : seq ( FIELD --> VALUE ) &
-    buffer : NAT --> ( FIELD --> VALUE ) & /*Valid relation type for concrete type(total function expected) & concrete typing  */
+    buffer : NAT --> ( FIELD --> VALUE ) & /*[B0Check Requirement]: Invalid ident type abstract variable for identifier (concrete data expected) */
     buffer : dom ( bfile ) +-> ( FIELD --> VALUE ) &
     updated : BOOL &
     ( updated = FALSE => buffer <: bfile ) &
@@ -21,17 +21,22 @@ INVARIANT
     
 INITIALISATION
     bfile , buffer , updated := [] , {} , FALSE
+    /*
+    [Translator Requirement]:
+    Moved Definitions from PARTIAL_OBJECT (where these sets are effectively valued and passed as paramaters) because  code generator does not translates SET formal paramteres of a machine.
+    */
     
-    /*moved Definitions from PARTIAL_OBJECT (where these sets are effectively valued and passed as paramaters) because  code generator does not translates SET formal paramteres of a machine.*/
-    
-    /*Sets' definitions modified so that they start from 0 beacause of translator requirement:"Lower bound of array must be 0"*/
+    /*
+    [Translator Requirement]:
+    Sets' definitions modified so that they start from 0 beacause of translator requirement:"Lower bound of array must be 0".
+    */
 DEFINITIONS
     FIELD == (0..4);
     VALUE == (0..10000)
 OPERATIONS
     get_record ( oo ) =
     PRE
-        oo : NAT1 & /*concrete typing for B0 check*/
+        oo : NAT1 & /*[B0Check Requirement]: Invalid ident type abstract variable for identifier (concrete data expected) */
         oo : dom ( bfile )
     THEN
         buffer := { oo |-> bfile ( oo ) } ||
@@ -50,14 +55,14 @@ OPERATIONS
         vv : VALUE &
         size ( bfile ) /= max_rec
     THEN
-        /*Warning possible typo => renamed INDEX to FIELD*/
-        bfile := bfile <- ( FIELD * { vv } ) ||
+        
+        bfile := bfile <- ( FIELD * { vv } ) ||/*[Possible typo]:renamed INDEX to FIELD*/
         oo := size ( bfile ) + 1
     END ;
     
     vv <-- not_in_buffer ( oo ) =
     PRE
-        oo : NAT1 & /*concrete typing for B0 check*/
+        oo : NAT1 & /*[B0Check Requirement]: Invalid ident type abstract variable for identifier (concrete data expected) */
         oo : 1 .. size ( bfile )
     THEN
         vv := bool ( oo /: dom ( buffer ) )
@@ -65,7 +70,7 @@ OPERATIONS
     
     mod_buffer ( oo , ii , vv ) =
     PRE
-        oo : NAT1 & /*concrete typing for B0 check*/
+        oo : NAT1 & /*[B0Check Requirement]: Invalid ident type abstract variable for identifier (concrete data expected) */
         oo : dom ( buffer ) &
         ii : FIELD &
         vv : VALUE
@@ -80,7 +85,7 @@ OPERATIONS
     
     vv <-- val_buffer ( oo , ii ) =
     PRE
-        oo : NAT1 & /*concrete typing for B0 check*/
+        oo : NAT1 & /*[B0Check Requirement]: Invalid ident type abstract variable for identifier (concrete data expected) */
         oo : dom ( buffer ) &
         ii : FIELD
     THEN
