@@ -839,7 +839,7 @@
 <Id value='STRING_WRITE'/>
 </Name>
 <Input_Parameters>
-<STRING_Literal value='\n Spu=ouse: ' typref='3239339507'/>
+<STRING_Literal value='\n Spouse: ' typref='3239339507'/>
 </Input_Parameters>
 </Operation_Call>
 <Operation_Call>

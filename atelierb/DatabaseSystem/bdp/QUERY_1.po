@@ -445,7 +445,7 @@ not(((bool(((pp$1) : (person)))) = (FALSE)));
 (("\n Mother: ") : (STRING));
 ((ww) : (PERSON));
 (((mother )(pp$1)) : (PERSON));
-(("\n Spu=ouse: ") : (STRING));
+(("\n Spouse: ") : (STRING));
 ((tt) : (PERSON));
 (((((husband) \/ (wife)) )(pp$1)) : (PERSON));
 ((mm$1) = (mm)) & ((ww$1) = (ww)) & ((bb$1) = (bb));

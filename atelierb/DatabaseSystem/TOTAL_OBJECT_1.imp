@@ -10,10 +10,15 @@ IMPORTS
     FILE(max_obj)
 INVARIANT
     file=%oo.(oo:OBJECT | %ii.(ii:FIELD | total_field(ii)(oo)))
-    /*Added DEFINITINS clause because visibility rules  do not exist for definitions clause in an implementation*/
-    /*moved Definitions from PARTIAL_OBJECT (where these sets are effectively valued and passed as paramaters) because  code generator does not translates SET formal paramteres of a machine.*/
+    /*
+    [Translator Requirement]:
+    Moved Definitions from PARTIAL_OBJECT (where these sets are effectively valued and passed as paramaters) because  code generator does not translates SET formal paramteres of a machine.
+    */
     
-    /*Sets' definitions modified so that they start from 0 beacause of translator requirement:"Lower bound of array must be 0"*/
+    /*
+    [Translator Requirement]:
+    Sets' definitions modified so that they start from 0 beacause of translator requirement:"Lower bound of array must be 0".
+    */
 DEFINITIONS
     OBJECT == 1..total_object;
     FIELD == (0..4);
