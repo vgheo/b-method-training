@@ -33,3 +33,11 @@ CONFIRMED by ClearSy - email.
 >A workaround is to use a constant with this property "one_false = [FALSE]". And you use this constant in sequence.
 
 Work-around: define a constant for the list expression.
+
+## ISS_inc_prefix. ATB unable to process model using prefixed includes.
+
+B model : ./ISS_inc_prefix
+
+ATB gives invalid error.
+
+TODO - report ATB bug

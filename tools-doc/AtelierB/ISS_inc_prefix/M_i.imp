@@ -1,0 +1,16 @@
+IMPLEMENTATION M_i REFINES M
+
+IMPORTS 
+    a1.A1,
+    a2.A2,
+    b1.B1,
+    b2.B2
+
+OPERATIONS
+    op1 = BEGIN
+        a1.opx1;
+        a2.opx2;
+        b1.opx1;
+        b2.opx2;
+    END        
+END
