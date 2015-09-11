@@ -6,11 +6,27 @@ IMPORTS
     b1.B1,
     b2.B2
 
+//PROMOTES
+//    a1.opx1 /* PR1 */
+//    
+
+   
 OPERATIONS
+
     op1 = BEGIN
-        a1.opx1;
-        a2.opx2;
-        b1.opx1;
-        b2.opx2
-    END        
+        a1.opx1
+    END;
+    
+    vv<--op2 = BEGIN 
+        vv:=a2.opx2 
+    END;
+    
+    op3 = BEGIN 
+        b1.opx1 
+    END;
+    
+    vv<--op4 = BEGIN 
+        vv:=b2.opx2 
+    END
+    
 END

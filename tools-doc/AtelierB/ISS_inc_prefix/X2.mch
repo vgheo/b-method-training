@@ -3,6 +3,8 @@ MACHINE X2
 
 OPERATIONS
 
-    opx2 = BEGIN skip END
+    vv<--opx2 = BEGIN 
+        vv :: INTEGER
+    END
 
 END

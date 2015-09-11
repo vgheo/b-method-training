@@ -7,6 +7,13 @@ INCLUDES
     b2.B2
     
 OPERATIONS
-    op1 = BEGIN skip END
+
+    op1 = BEGIN skip END;
+    
+    vv<--op2 = BEGIN vv::INTEGER END;
+    
+    op3 = BEGIN skip END;
+    
+    vv<--op4 = BEGIN vv::INTEGER END
 
 END
