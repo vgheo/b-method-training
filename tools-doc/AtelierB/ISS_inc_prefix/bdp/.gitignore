@@ -1,0 +1,22 @@
+# Atelier-B lock files
+.usedby_*
+*.lock
+aaaa*
+
+# ATB preprocessing results
+/expand_src/
+/src/
+
+# ATB - derived files : checksums, dependencies
+*.chk
+*.dep
+
+# ATB - derived files 
+# nf - "normalized form" ?
+*.nf
+ 
+# ATB - project diagram
+*.dot
+
+# ProB intermediate files
+/.*prob
