@@ -1,4 +1,4 @@
-MACHINE M
+MACHINE MM
 
 INCLUDES 
     a1.A1,
