@@ -1,0 +1,28 @@
+/* MM_i2
+ * Author: vgheorgh
+ * Creation date: 9/11/2015
+ */
+
+IMPLEMENTATION MM_i2
+REFINES MM
+
+IMPORTS 
+    a1.A1,
+    a2.A2,
+    b1.B1,
+    b2.B2
+    
+PROMOTES
+    a1.opx1 /* ERR2 */
+
+OPERATIONS
+    op1 = BEGIN skip END;
+    
+    vv<--op2 = BEGIN vv:=0 END;
+    
+    op3 = BEGIN skip END;
+  
+  
+    vv<--op4 = BEGIN vv:=0 END
+
+ END

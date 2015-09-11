@@ -40,4 +40,15 @@ B model : ./ISS_inc_prefix
 
 ATB gives invalid error.
 
-TODO - report ATB bug
+### ERR1
+
+Location: MM_i - 
+
+    ERR1a: "Error: Left hand side and right hand side of vv:=a2.opx2 have incompatible type"
+    ERR1b: "Error: Left hand side and right hand side of vv:=b2.opx2 have incompatible type"
+
+### ERR2
+
+Location: MM_i2 - 
+ERR2: "Error: Operation a1.opx1 does not exist in Machine MM"
+

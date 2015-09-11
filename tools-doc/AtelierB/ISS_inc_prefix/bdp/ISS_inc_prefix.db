@@ -23,6 +23,9 @@
         <component_file path="A:\b-method-training\tools-doc\AtelierB\ISS_inc_prefix" name="MM_i" suffix="imp" user="vgheorgh">
             <component name="MM_i" type="implementation" />
         </component_file>
+        <component_file path="A:/b-method-training/tools-doc/AtelierB/ISS_inc_prefix" name="MM_i2" suffix="imp" user="vgheorgh">
+            <component name="MM_i2" type="implementation" />
+        </component_file>
         <component_file path="A:\b-method-training\tools-doc\AtelierB\ISS_inc_prefix" name="X1" suffix="mch" user="vgheorgh">
             <component name="X1" type="specification" />
         </component_file>
