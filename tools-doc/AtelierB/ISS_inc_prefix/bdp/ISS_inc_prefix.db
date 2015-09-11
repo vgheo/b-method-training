@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<db_xml>
+    <atelierb version="3_7_ubuntu-cvs" />
+    <project decomp_dir="A:\b-method-training\tools-doc\AtelierB\ISS_inc_prefix\bdp\expand_src" old_decomp_dir="A:\b-method-training\tools-doc\AtelierB\ISS_inc_prefix\bdp\src">
+        <!-- Definition directory list -->
+        <definition_dir path="A:\b-method-training\tools-doc\AtelierB\ISS_inc_prefix" />
+        <!-- Component file list -->
+        <component_file path="A:\b-method-training\tools-doc\AtelierB\ISS_inc_prefix" name="A1" suffix="mch" user="vgheorgh">
+            <component name="A1" type="specification" />
+        </component_file>
+        <component_file path="A:\b-method-training\tools-doc\AtelierB\ISS_inc_prefix" name="A2" suffix="mch" user="vgheorgh">
+            <component name="A2" type="specification" />
+        </component_file>
+        <component_file path="A:\b-method-training\tools-doc\AtelierB\ISS_inc_prefix" name="B1" suffix="mch" user="vgheorgh">
+            <component name="B1" type="specification" />
+        </component_file>
+        <component_file path="A:\b-method-training\tools-doc\AtelierB\ISS_inc_prefix" name="B2" suffix="mch" user="vgheorgh">
+            <component name="B2" type="specification" />
+        </component_file>
+        <component_file path="A:\b-method-training\tools-doc\AtelierB\ISS_inc_prefix" name="MM" suffix="mch" user="vgheorgh">
+            <component name="MM" type="specification" />
+        </component_file>
+        <component_file path="A:\b-method-training\tools-doc\AtelierB\ISS_inc_prefix" name="MM_i" suffix="imp" user="vgheorgh">
+            <component name="MM_i" type="implementation" />
+        </component_file>
+        <component_file path="A:\b-method-training\tools-doc\AtelierB\ISS_inc_prefix" name="X1" suffix="mch" user="vgheorgh">
+            <component name="X1" type="specification" />
+        </component_file>
+        <component_file path="A:\b-method-training\tools-doc\AtelierB\ISS_inc_prefix" name="X2" suffix="mch" user="vgheorgh">
+            <component name="X2" type="specification" />
+        </component_file>
+    </project>
+</db_xml>
