@@ -42,7 +42,7 @@ Applies for: AtelierB 4.2.1
 
 B model : [ISS_inc_prefix](./ISS_inc_prefix)
 
-ATB gives invalid error.
+ATB syntax/type checks results in invalid errors.
 
 ### ERR1
 
