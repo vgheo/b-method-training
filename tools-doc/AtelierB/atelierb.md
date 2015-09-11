@@ -26,6 +26,8 @@ Known Issues
 
 ## ISS1. cannot use record with sequence field
 
+Applies for: AtelierB  4.2.1
+
 Sample :ISS1_REC.mch
 
 CONFIRMED by ClearSy - email.
@@ -35,6 +37,8 @@ CONFIRMED by ClearSy - email.
 Work-around: define a constant for the list expression.
 
 ## ISS_inc_prefix. ATB unable to process model using prefixed includes.
+
+Applies for: AtelierB 4.2.1
 
 B model : ./ISS_inc_prefix
 
