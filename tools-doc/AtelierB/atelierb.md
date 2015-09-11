@@ -40,7 +40,7 @@ Work-around: define a constant for the list expression.
 
 Applies for: AtelierB 4.2.1
 
-B model : ./ISS_inc_prefix
+B model : [ISS_inc_prefix](./ISS_inc_prefix)
 
 ATB gives invalid error.
 
