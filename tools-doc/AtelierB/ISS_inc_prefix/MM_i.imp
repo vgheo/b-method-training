@@ -11,6 +11,6 @@ OPERATIONS
         a1.opx1;
         a2.opx2;
         b1.opx1;
-        b2.opx2;
+        b2.opx2
     END        
 END
