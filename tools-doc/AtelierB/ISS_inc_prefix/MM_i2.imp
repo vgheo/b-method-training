@@ -13,7 +13,10 @@ IMPORTS
     b2.B2
     
 PROMOTES
-    a1.opx1 /* ERR2 */
+    /* REQUIRED:
+       operations with the same name are defined in the abstract machine    
+    */  
+    a1.opx1
 
 OPERATIONS
     op1 = BEGIN skip END;

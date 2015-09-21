@@ -1,10 +1,13 @@
 MACHINE MM
 
-INCLUDES 
+INCLUDES
     a1.A1,
     a2.A2,
     b1.B1,
     b2.B2
+
+PROMOTES
+    a1.opx1
     
 OPERATIONS
 

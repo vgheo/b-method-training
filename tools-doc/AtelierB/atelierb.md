@@ -20,6 +20,19 @@ NOTE2. This can be achieved by using a drive mapping on windows (see net use com
 
 See details [here](atelierb-setup-tests\atelierb-setup.md#Variant B)
 
+## Using multiple machine instantiation - INCLUDES/IMPORTS with prefix
+
+Sample model: [ISS_inc_prefix](ISS_inc_prefix)
+
+
+Rules
+- All operations of abstract machine, declared or from INCLUDED machines, must be implemented in the implementation
+    - e.g. MM:a1.opx1
+- An operation defined by the abstract machine by INCLUDES/PROMOTES m:op can be implemented by IMPORT/PROMOTES m:op  
+    - e.g. MM:a1.opx1, MM_i2
+
+Note : This was a reported as an ATB issue - that later proved to be invalid).
+Thanks to Prun Etienne <etienne.prun@clearsy.com> for the support on this topic. 
 
 Known Issues
 ============
@@ -35,25 +48,3 @@ CONFIRMED by ClearSy - email.
 >A workaround is to use a constant with this property "one_false = [FALSE]". And you use this constant in sequence.
 
 Work-around: define a constant for the list expression.
-
-## ISS_inc_prefix. ATB unable to process model using prefixed includes.
-
-Applies for: AtelierB 4.2.1
-
-B model : [ISS_inc_prefix](./ISS_inc_prefix)
-
-ATB syntax/type checks results in invalid errors.
-
-### ERR1
-
-Location: MM_i
-```
-  ERR1a: "Error: Left hand side and right hand side of vv:=a2.opx2 have incompatible type"
-  ERR1b: "Error: Left hand side and right hand side of vv:=b2.opx2 have incompatible type"
-```
-### ERR2
-
-Location: MM_i2
-```
-  ERR2: "Error: Operation a1.opx1 does not exist in Machine MM"
-```
