@@ -14,7 +14,8 @@ OPERATIONS
     END;
     
     vv<--op2 = BEGIN 
-        vv:=a2.opx2     /* ERR1a */
+        /* vv:=a2.opx2      ERR1a */
+        vv<--a2.opx2
     END;
     
     op3 = BEGIN 
@@ -22,7 +23,8 @@ OPERATIONS
     END;
     
     vv<--op4 = BEGIN 
-        vv:=b2.opx2   /* ERR1b */
+        /* vv:=b2.opx2   ERR1b */
+        vv<--b2.opx2
     END
     
 END
