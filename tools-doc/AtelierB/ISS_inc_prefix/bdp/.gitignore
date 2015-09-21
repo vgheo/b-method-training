@@ -1,22 +1,26 @@
-# Atelier-B lock files
+#### Atelier-B derived files
+
+# lock files
 .usedby_*
 *.lock
 aaaa*
 
-# ATB preprocessing results
+# preprocessing results
 /expand_src/
 /src/
 
-# ATB - derived files : checksums, dependencies
+# checksums, dependencies
 *.chk
 *.dep
-
-# ATB - derived files 
+ 
 # nf - "normalized form" ?
 *.nf
- 
-# ATB - project diagram
+
+# project diagram
 *.dot
 
-# ProB intermediate files
+# semantic models
+*.bxml
+
+#### ProB derived files
 /.*prob
