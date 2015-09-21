@@ -31,8 +31,8 @@ Rules
 - An operation defined by the abstract machine by INCLUDES/PROMOTES m:op can be implemented by IMPORT/PROMOTES m:op  
     - e.g. MM:a1.opx1, MM_i2
 
-Note : This was a reported as an ATB issue - that later proved to be invalid).
-Thanks to Prun Etienne <etienne.prun@clearsy.com> for the support on this topic. 
+Note : This was a reported as an ATB issue - that later proved to be invalid.
+Thanks to ClearSy/Etienne Prun <etienne.prun@clearsy.com> for the support on this topic. 
 
 Known Issues
 ============
