@@ -1,0 +1,533 @@
+<Proof_Obligations>
+<Define name="B definitions">
+<Nary_Pred op="&amp;">
+<Exp_Comparison op="=">
+<Id value="NAT"/>
+<Binary_Exp op="..">
+<Integer_Literal value="0"/>
+<Id value="MAXINT"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="=">
+<Id value="INT"/>
+<Binary_Exp op="..">
+<Id value="MININT"/>
+<Id value="MAXINT"/>
+</Binary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Define>
+<Define name="ctx"/>
+<Define name="seext"/>
+<Define name="inv"/>
+<Define name="ass"/>
+<Define name="lprp"/>
+<Define name="inprp"/>
+<Define name="inext"/>
+<Define name="cst"/>
+<Proof_Obligation>
+<Comment>Inclusion dans une machine abstraite</Comment>
+<Tag>InstanciatedConstraintsLemmas</Tag>
+<Tag>CONSTRAINTS</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Goal>
+<Nary_Pred op="&amp;"/>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Inclusion dans une machine abstraite</Comment>
+<Tag>InstanciatedConstraintsLemmas</Tag>
+<Tag>CONSTRAINTS</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Goal>
+<Nary_Pred op="&amp;"/>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Inclusion dans une machine abstraite</Comment>
+<Tag>InstanciatedConstraintsLemmas</Tag>
+<Tag>CONSTRAINTS</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Goal>
+<Nary_Pred op="&amp;"/>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Inclusion dans une machine abstraite</Comment>
+<Tag>InstanciatedConstraintsLemmas</Tag>
+<Tag>CONSTRAINTS</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Goal>
+<Nary_Pred op="&amp;"/>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Inclusion dans une machine abstraite</Comment>
+<Tag>InstanciatedConstraintsLemmas</Tag>
+<Tag>CONSTRAINTS</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Goal>
+<Nary_Pred op="&amp;"/>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Inclusion dans une machine abstraite</Comment>
+<Tag>InstanciatedConstraintsLemmas</Tag>
+<Tag>CONSTRAINTS</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Goal>
+<Nary_Pred op="&amp;"/>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Inclusion dans une machine abstraite</Comment>
+<Tag>InstanciatedConstraintsLemmas</Tag>
+<Tag>CONSTRAINTS</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Goal>
+<Nary_Pred op="&amp;"/>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Inclusion dans une machine abstraite</Comment>
+<Tag>InstanciatedConstraintsLemmas</Tag>
+<Tag>CONSTRAINTS</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Goal>
+<Nary_Pred op="&amp;"/>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Initialisation dans une machine abstraite</Comment>
+<Tag>Initialisation</Tag>
+<Tag>Invariant</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Goal>
+<Sub_Calculus>
+<Nary_Sub op=";">
+<Skip tag="A:/b-method-training/tools-doc/AtelierB/ISS_inc_prefix/bdp\X1.bxml:1:1:1"/>
+<Skip tag="A:/b-method-training/tools-doc/AtelierB/ISS_inc_prefix/bdp\A1.bxml:1:2:1"/>
+<Skip tag="A:/b-method-training/tools-doc/AtelierB/ISS_inc_prefix/bdp\X2.bxml:1:1:1"/>
+<Skip tag="A:/b-method-training/tools-doc/AtelierB/ISS_inc_prefix/bdp\A2.bxml:1:2:1"/>
+<Skip tag="A:/b-method-training/tools-doc/AtelierB/ISS_inc_prefix/bdp\X1.bxml:1:1:1"/>
+<Skip tag="A:/b-method-training/tools-doc/AtelierB/ISS_inc_prefix/bdp\B1.bxml:1:2:1"/>
+<Skip tag="A:/b-method-training/tools-doc/AtelierB/ISS_inc_prefix/bdp\X2.bxml:1:1:1"/>
+<Skip tag="A:/b-method-training/tools-doc/AtelierB/ISS_inc_prefix/bdp\B2.bxml:1:2:1"/>
+<Skip tag="A:\b-method-training\tools-doc\AtelierB\ISS_inc_prefix\bdp\MM.bxml:1:3:1"/>
+</Nary_Sub>
+<Binary_Pred op="=&gt;">
+<Nary_Pred op="&amp;"/>
+<Tag goalTag="Invariant is preserved">
+<Nary_Pred op="&amp;"/>
+</Tag>
+</Binary_Pred>
+</Sub_Calculus>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>op1</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis/>
+<Goal>
+<Sub_Calculus>
+<Skip tag="A:\b-method-training\tools-doc\AtelierB\ISS_inc_prefix\bdp\MM.bxml:1:4:1:1:1"/>
+<Binary_Pred op="=&gt;">
+<Nary_Pred op="&amp;"/>
+<Tag goalTag="Invariant is preserved">
+<Nary_Pred op="&amp;"/>
+</Tag>
+</Binary_Pred>
+</Sub_Calculus>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>op2</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis/>
+<Goal>
+<Sub_Calculus>
+<Becomes_In>
+<Variables>
+<Id tag="A:\b-method-training\tools-doc\AtelierB\ISS_inc_prefix\bdp\MM.bxml:1:4:2:2:1:1:1" typref="2701647786" value="vv"/>
+</Variables>
+<Value>
+<Id tag="A:\b-method-training\tools-doc\AtelierB\ISS_inc_prefix\bdp\MM.bxml:1:4:2:2:1:2:1" typref="3603043417" value="INTEGER"/>
+</Value>
+</Becomes_In>
+<Binary_Pred op="=&gt;">
+<Nary_Pred op="&amp;"/>
+<Tag goalTag="Invariant is preserved">
+<Nary_Pred op="&amp;"/>
+</Tag>
+</Binary_Pred>
+</Sub_Calculus>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>op3</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis/>
+<Goal>
+<Sub_Calculus>
+<Skip tag="A:\b-method-training\tools-doc\AtelierB\ISS_inc_prefix\bdp\MM.bxml:1:4:3:1:1"/>
+<Binary_Pred op="=&gt;">
+<Nary_Pred op="&amp;"/>
+<Tag goalTag="Invariant is preserved">
+<Nary_Pred op="&amp;"/>
+</Tag>
+</Binary_Pred>
+</Sub_Calculus>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>op4</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis/>
+<Goal>
+<Sub_Calculus>
+<Becomes_In>
+<Variables>
+<Id tag="A:\b-method-training\tools-doc\AtelierB\ISS_inc_prefix\bdp\MM.bxml:1:4:4:2:1:1:1" typref="2701647786" value="vv"/>
+</Variables>
+<Value>
+<Id tag="A:\b-method-training\tools-doc\AtelierB\ISS_inc_prefix\bdp\MM.bxml:1:4:4:2:1:2:1" typref="3603043417" value="INTEGER"/>
+</Value>
+</Becomes_In>
+<Binary_Pred op="=&gt;">
+<Nary_Pred op="&amp;"/>
+<Tag goalTag="Invariant is preserved">
+<Nary_Pred op="&amp;"/>
+</Tag>
+</Binary_Pred>
+</Sub_Calculus>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Tag>WellDefinednessConstraints</Tag>
+<Goal>
+<Tag goalTag="Well definedness">
+<Nary_Pred op="&amp;"/>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Tag>WellDefinednessProperties</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Hypothesis/>
+<Goal>
+<Tag goalTag="Well definedness">
+<Nary_Pred op="&amp;"/>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Tag>WellDefinednessInvariant</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Goal>
+<Tag goalTag="Well definedness">
+<Nary_Pred op="&amp;"/>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Tag>WellDefinednessAssertions</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Goal>
+<Tag goalTag="Well definedness">
+<Nary_Pred op="&amp;"/>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Tag>WellDefinednessInitialisation</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Goal>
+<Tag goalTag="Well definedness">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+</Nary_Pred>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_Precondition_op1</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Goal>
+<Tag goalTag="Well definedness">
+<Nary_Pred op="&amp;"/>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_op1</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis/>
+<Goal>
+<Tag goalTag="Well definedness">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+</Nary_Pred>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_Precondition_op2</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Goal>
+<Tag goalTag="Well definedness">
+<Nary_Pred op="&amp;"/>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_op2</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis/>
+<Goal>
+<Tag goalTag="Well definedness">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+</Nary_Pred>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_Precondition_op3</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Goal>
+<Tag goalTag="Well definedness">
+<Nary_Pred op="&amp;"/>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_op3</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis/>
+<Goal>
+<Tag goalTag="Well definedness">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+</Nary_Pred>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_Precondition_op4</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Goal>
+<Tag goalTag="Well definedness">
+<Nary_Pred op="&amp;"/>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_op4</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis/>
+<Goal>
+<Tag goalTag="Well definedness">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+</Nary_Pred>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<TypeInfos>
+<Type id="2701647786">
+<Id tag="A:\b-method-training\tools-doc\AtelierB\ISS_inc_prefix\bdp\MM.bxml:1:5:1:1" value="INTEGER"/>
+</Type>
+<Type id="3603043417">
+<Unary_Exp op="POW">
+<Id tag="A:\b-method-training\tools-doc\AtelierB\ISS_inc_prefix\bdp\MM.bxml:1:5:2:1:1" value="INTEGER"/>
+</Unary_Exp>
+</Type>
+<Type id="2701647786">
+<Id tag="A:/b-method-training/tools-doc/AtelierB/ISS_inc_prefix/bdp\X2.bxml:1:3:1:1" value="INTEGER"/>
+</Type>
+<Type id="3603043417">
+<Unary_Exp op="POW">
+<Id tag="A:/b-method-training/tools-doc/AtelierB/ISS_inc_prefix/bdp\X2.bxml:1:3:2:1:1" value="INTEGER"/>
+</Unary_Exp>
+</Type>
+<Type id="2701647786">
+<Id tag="A:/b-method-training/tools-doc/AtelierB/ISS_inc_prefix/bdp\X2.bxml:1:3:1:1" value="INTEGER"/>
+</Type>
+<Type id="3603043417">
+<Unary_Exp op="POW">
+<Id tag="A:/b-method-training/tools-doc/AtelierB/ISS_inc_prefix/bdp\X2.bxml:1:3:2:1:1" value="INTEGER"/>
+</Unary_Exp>
+</Type>
+</TypeInfos>
+</Proof_Obligations>
