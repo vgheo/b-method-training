@@ -48,3 +48,10 @@ CONFIRMED by ClearSy - email.
 >A workaround is to use a constant with this property "one_false = [FALSE]". And you use this constant in sequence.
 
 Work-around: define a constant for the list expression.
+
+## ISS_inc_prefix2
+
+Sample model: [ISS_inc_prefix](ISS_inc_prefix)
+
+Invalid error on accessing operation from and INLCUDES chain with mixed prefix/non-prefix. (NOT CONFIRMED)
+
