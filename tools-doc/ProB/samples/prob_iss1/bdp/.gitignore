@@ -1,0 +1,26 @@
+#### Atelier-B derived files
+
+# lock files
+.usedby_*
+*.lock
+aaaa*
+
+# preprocessing results
+/expand_src/
+/src/
+
+# checksums, dependencies
+*.chk
+*.dep
+ 
+# nf - "normalized form" ?
+*.nf
+
+# project diagram
+*.dot
+
+# semantic models
+*.bxml
+
+#### ProB derived files
+/.*prob

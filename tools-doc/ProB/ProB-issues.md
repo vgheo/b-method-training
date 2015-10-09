@@ -12,6 +12,16 @@ ProB tools:
 Valid for: `ProB 1.5.0-final 3bc086f2be4b309869fcab31325ede65f8d27277`
 
 
+### JIRA Tracker
+[Open issues - JIRA tracker](https://probjira.atlassian.net/projects/PROB/issues?filter=allopenissues)
+
+#### PROB-403
+
+[PROB-403](https://probjira.atlassian.net/browse/PROB-403)
+
+* [Local test case](samples/prob_iss1)
+
+
 ### Documented on ProB wiki
 http://stups.hhu.de/ProB/w/Current_Limitations
 

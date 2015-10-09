@@ -1,6 +1,6 @@
 # Notes on ProB and related tools
 
-For currently knonwn limitations see [ProB-issues.md](ProB-issues.md).
+For currently known issues and limitations see [ProB-issues.md](ProB-issues.md).
 
 ## ProB - core
 

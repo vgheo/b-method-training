@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<db_xml>
+    <atelierb version="3_7_ubuntu-cvs" />
+    <project decomp_dir="A:\b-method-training\tools-doc\ProB\samples\prob_iss1\bdp\expand_src" old_decomp_dir="A:\b-method-training\tools-doc\ProB\samples\prob_iss1\bdp\src">
+        <!-- Definition directory list -->
+        <definition_dir path="A:\b-method-training\tools-doc\ProB\samples\prob_iss1" />
+        <!-- Component file list -->
+        <component_file path="A:\b-method-training\tools-doc\ProB\samples\prob_iss1" name="CONTEXT" suffix="mch" user="vgheorgh">
+            <component name="CONTEXT" type="specification" />
+        </component_file>
+        <component_file path="A:\b-method-training\tools-doc\ProB\samples\prob_iss1" name="REF_APP" suffix="mch" user="vgheorgh">
+            <component name="REF_APP" type="specification" />
+        </component_file>
+    </project>
+</db_xml>
