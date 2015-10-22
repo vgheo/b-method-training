@@ -1,0 +1,18 @@
+MACHINE X1
+
+EXTENDS y1.Y1
+
+VARIABLES
+    v1
+    
+INVARIANT
+    v1 : INT
+
+INITIALISATION
+    v1:=0
+
+OPERATIONS
+
+    opx1 = BEGIN skip END
+
+END

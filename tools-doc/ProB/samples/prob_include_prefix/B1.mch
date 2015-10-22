@@ -1,0 +1,8 @@
+MACHINE B1
+
+EXTENDS x1.X1
+
+OPERATIONS
+    opb1 = BEGIN skip END
+    
+END
