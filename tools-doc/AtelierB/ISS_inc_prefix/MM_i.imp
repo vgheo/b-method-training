@@ -7,7 +7,7 @@ IMPORTS
     b2.B2
 
 PROMOTES
-    a1.opx1,    // required implementation - resolved by promoting operation of imported machine
+    a1.opx1,    /* required implementation - resolved by promoting operation of imported machine */
     b1.opx1
   
 OPERATIONS

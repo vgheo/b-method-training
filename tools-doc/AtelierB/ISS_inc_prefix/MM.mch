@@ -8,7 +8,7 @@ INCLUDES
 
 PROMOTES
     a1.opx1,
-    b1.opx1 // ATB4.2.1 : INVALID TypeCheck ERROR (?)
+    b1.opx1 /* ATB4.2.1 : INVALID TypeCheck ERROR (?) */
     
 OPERATIONS
 
