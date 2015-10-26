@@ -56,3 +56,16 @@ Sample model: [ISS_inc_prefix](ISS_inc_prefix)
 Invalid error on accessing operation from and INLCUDES chain with mixed prefix/non-prefix. (NOT CONFIRMED)
 > Error: b1.opx1 does not exist or is not a visible operation
 
+## ISS_formal_params
+
+Sets formal parameters shall NOT contain
+* lowercase letters
+* numbers
+
+Allowed:
+* uppercase letters
+* '_'
+
+Note: The Brefmanual only states 'no lowercase'.
+
+
