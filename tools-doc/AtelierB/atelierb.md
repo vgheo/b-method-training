@@ -51,9 +51,14 @@ Work-around: define a constant for the list expression.
 
 ## ISS_inc_prefix2
 
+Notified by email.
+
+Status: NOT CONFIRMED by ClearSy
+
 Sample model: [ISS_inc_prefix](ISS_inc_prefix)
 
-Invalid error on accessing operation from and INLCUDES chain with mixed prefix/non-prefix. (NOT CONFIRMED)
+
+Invalid error on accessing operation from and INLCUDES chain with mixed prefix/non-prefix. 
 > Error: b1.opx1 does not exist or is not a visible operation
 
 ## ISS_formal_params
