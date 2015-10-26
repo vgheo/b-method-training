@@ -8,9 +8,9 @@ INCLUDES
 
 PROMOTES
     a1.x1.opx1,
-    a2.opx2,
-    b1.x1.opx1, /* ATB4.2.1 : INVALID TypeCheck ERROR (?) */
-    b2.opx2
+    a2.opx2 /*,
+    b1.x1.opx1, */ /* ATB4.2.1 : INVALID TypeCheck ERROR  - OTHER ISSUE*/
+/*    b2.opx2 */  /* ATB4.2.1 : INVALID TypeCheck ERROR  - OTHER ISSUE*/
     
 INITIALISATION
     skip

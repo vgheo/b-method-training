@@ -1,11 +1,16 @@
-MACHINE X1(T, init)
+/*
+
+    ATB constraints:
+    - formal param names shall not contain numbers, lowercase
+    - names shall have length of AT LEAST 2
+*/
+
+MACHINE X1(T_, init)
 
 CONSTRAINTS
-    init : T
+    init : T_
     
-EXTENDS y1.Y1(T, init)
-
-
+EXTENDS y1.Y1(T_, init)
 
 VARIABLES
     v1
