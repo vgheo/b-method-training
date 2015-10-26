@@ -1,6 +1,11 @@
-MACHINE X1
+MACHINE X1(T, init)
 
-EXTENDS y1.Y1
+CONSTRAINTS
+    init : T
+    
+EXTENDS y1.Y1(T, init)
+
+
 
 VARIABLES
     v1

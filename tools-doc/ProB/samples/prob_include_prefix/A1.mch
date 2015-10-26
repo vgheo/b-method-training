@@ -1,6 +1,6 @@
 MACHINE A1
 
-EXTENDS x1.X1
+EXTENDS x1.X1({0,1}, 0)
 
 OPERATIONS
     opa1 = BEGIN skip END

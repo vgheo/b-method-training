@@ -1,13 +1,16 @@
-MACHINE Y1
+MACHINE Y1(T, init)
+
+CONSTRAINTS
+    init : T
 
 VARIABLES
     vy1
     
 INVARIANT
-    vy1 : INT
+    vy1 : T
 
 INITIALISATION
-    vy1:=0
+    vy1:=init
 
 OPERATIONS
 

@@ -23,26 +23,33 @@ MM
     
 MM_i
     REFINES MM
-A1 
-    EXTENDS x1.X1   /* prefixed first level inclusion */ 
+A1
+    EXTENDS x1.X1({0,1},0)   /* prefixed first level inclusion */ 
     opa1
 A2 
     EXTENDS X2      /* non-prefixed */
     opa2
 B1 
-    EXTENDS x1.X1   /* prefixed first level inclusion */
+    EXTENDS x1.X1({2,3},2)   /* prefixed first level inclusion */
     opb1
 B2 
     EXTENDS X2      /* non-prefixed */
     opb2
-X1
-    EXTENDS y1.Y1
+X1(T,init)
+    EXTENDS y1.Y1(T,init)
     v1
     opx1
 X2
     EXTENDS Y2
     v2
     opx2
+Y1(T,init)
+    vy1
+    opy1
+Y2 
+    vy2
+    opy2
+
 ```
 # Test 1 
 
@@ -50,6 +57,18 @@ Load MM.mch
 
 * Expected results
 We expect the following symbols in ProB:
+
+* Actual Parameters
+```
+a1.x1.T
+a1.x1.init
+a1.x1.y1.T
+a1.x1.y1.init
+b1.x1.T
+b1.x1.init
+b1.x1.y1.T
+b1.x1.y1.init
+```
 * Operations 
 ```
 op1
@@ -83,6 +102,13 @@ Load MM_i.imp
 
 ProB version 1.5.0-final
 
-Test1 : PASS
-Test2 : PASS
+### Test1 : FAIL
+Observed: 
+* error regarding inconsistent SETUP_CONSTATNS
+* actual parameters do not have appropriate prefixes
+    * names are duplicate
+    * e.g. `x1.y1.T` appears twice
+
+
+### Test2 : (not executed)
 
