@@ -14,4 +14,11 @@ INCLUDES  aa.AA, bb.BB
      
 PROMOTES bb.op // ATB: Error: bb.op does not exist or is not a visible operation
 
+
+OPERATIONS
+    
+    use_aa = BEGIN aa.op END;
+    
+    use_bb = BEGIN bb.op END // No error. NOTE : this proves that bb.op is actually visible
+
 END

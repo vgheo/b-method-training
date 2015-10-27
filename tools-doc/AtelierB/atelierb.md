@@ -77,13 +77,22 @@ Notified by email.
 
 Status: NOT CONFIRMED by ClearSy
 
-Sample models:
-* [ISS_inc_prefix](ISS_inc_prefix)
-* [ISS_inc_prefix_b](ISS_inc_prefix_b)  - simpler model
-
+Sample model: [ISS_inc_prefix](ISS_inc_prefix)
 
 Invalid error on accessing operation from and INLCUDES chain with mixed prefix/non-prefix. 
 > Error: b1.opx1 does not exist or is not a visible operation
+
+Simpler sample model: [ISS_inc_prefix_b](ISS_inc_prefix_b)
+
+NOTES: 
+* Problem occurs on PROMOTES clause
+* operation of included machine (BB.op) is accessible for use in operations of including machine - eg. MM:use_bb
+
+### Work-Around
+Do NOT use PROMOTES. Replace with wrapper operations defined by the including machine.
+
+
+
 
 # References
 
