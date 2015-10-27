@@ -34,6 +34,28 @@ Rules
 Note : This was a reported as an ATB issue - that later proved to be invalid.
 Thanks to ClearSy/Etienne Prun <etienne.prun@clearsy.com> for the support on this topic. 
 
+B Langauage Constraints and Limitations
+---------------------------------------
+This section groups constraints and limitations specified in the [BRefMan].
+
+
+
+### LIM_formal_params
+
+Limitations on formal parameters.
+
+Sets formal parameters shall NOT contain
+* lowercase letters
+* numbers
+
+Allowed:
+* uppercase letters
+* '_'
+
+Note: The Brefmanual only states 'no lowercase'.
+
+
+
 Known Issues
 ============
 
@@ -61,16 +83,9 @@ Sample model: [ISS_inc_prefix](ISS_inc_prefix)
 Invalid error on accessing operation from and INLCUDES chain with mixed prefix/non-prefix. 
 > Error: b1.opx1 does not exist or is not a visible operation
 
-## ISS_formal_params
+# References
 
-Sets formal parameters shall NOT contain
-* lowercase letters
-* numbers
-
-Allowed:
-* uppercase letters
-* '_'
-
-Note: The Brefmanual only states 'no lowercase'.
-
+ID          | Title                         | Location 
+:-----------|:--------------                |:---------
+[BRefMan]   | B Langauge Reference Manual   | AtelierB 4.2.1 > Help 
 
