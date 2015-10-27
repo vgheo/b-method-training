@@ -15,7 +15,7 @@ Valid for: `ProB 1.5.0-final 3bc086f2be4b309869fcab31325ede65f8d27277`
 ### JIRA Tracker
 [Open issues - JIRA tracker](https://probjira.atlassian.net/projects/PROB/issues?filter=allopenissues)
 
-#### PROB-403
+#### PROB-403 incorrect error reported for constant defined in machine with multiple instances
 
 [PROB-403](https://probjira.atlassian.net/browse/PROB-403)
 
@@ -70,13 +70,12 @@ NOT SUPPORTED:
 ### Cannot access features of renamed included/imported machines
 
 
-
-
 ### Operations calling other operations are not accessible   
 - Tooltip doesn't display values 
     -  see [ProB group post](https://groups.google.com/forum/?hl=en-GB#!topic/prob-users/aK23vH5kjUk)     
     
-### BMS does not provide a UI label for Events
+### BMSPROB-2 BMS does not provide a UI label for Events [FIXED]
+https://probjira.atlassian.net/projects/BMSPROB/issues/BMSPROB-2
 
 - Very large predicates cannot be substituted by a tag
     -  see [ProB group post](https://groups.google.com/forum/?hl=en-GB#!topic/prob-users/aK23vH5kjUk) 
