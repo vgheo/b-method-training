@@ -55,5 +55,6 @@ TODO - copy task " MD - control table column width" [story](http://robucsweb:808
 
 Related links
 =============
+- [Standad Markdown](http://daringfireball.net/projects/markdown/)
 - [stackoverflow](http://stackoverflow.com/questions/9843609/view-markdown-files-offline)
 - [Markdown basics](https://help.github.com/articles/markdown-basics/)
