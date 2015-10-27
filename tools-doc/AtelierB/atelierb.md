@@ -77,7 +77,9 @@ Notified by email.
 
 Status: NOT CONFIRMED by ClearSy
 
-Sample model: [ISS_inc_prefix](ISS_inc_prefix)
+Sample models:
+* [ISS_inc_prefix](ISS_inc_prefix)
+* [ISS_inc_prefix_b](ISS_inc_prefix_b)  - simpler model
 
 
 Invalid error on accessing operation from and INLCUDES chain with mixed prefix/non-prefix. 

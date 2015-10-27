@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<db_xml>
+    <atelierb version="3_7_ubuntu-cvs" />
+    <project decomp_dir="A:\b-method-training\tools-doc\AtelierB\ISS_inc_prefix_b\bdp\expand_src" old_decomp_dir="A:\b-method-training\tools-doc\AtelierB\ISS_inc_prefix_b\bdp\src">
+        <!-- Definition directory list -->
+        <definition_dir path="A:\b-method-training\tools-doc\AtelierB\ISS_inc_prefix_b" />
+        <!-- Component file list -->
+        <component_file path="A:\b-method-training\tools-doc\AtelierB\ISS_inc_prefix_b" name="AA" suffix="mch" user="vgheorgh">
+            <component name="AA" type="specification" />
+        </component_file>
+        <component_file path="A:\b-method-training\tools-doc\AtelierB\ISS_inc_prefix_b" name="BB" suffix="mch" user="vgheorgh">
+            <component name="BB" type="specification" />
+        </component_file>
+        <component_file path="A:\b-method-training\tools-doc\AtelierB\ISS_inc_prefix_b" name="MM" suffix="mch" user="vgheorgh">
+            <component name="MM" type="specification" />
+        </component_file>
+    </project>
+</db_xml>
